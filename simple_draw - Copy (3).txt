@@ -1,0 +1,20 @@
+TCanvas *c = new TCanvas("c1", "c2", 1000 * 1.25, 750 * 1.25); // normal res
+
+c->cd()->SetGrid();
+c->cd()->SetBottomMargin(0.14), c->cd()->SetLeftMargin(0.16), c->cd()->SetRightMargin(0.16), c->cd()->SetTopMargin(0.12);
+c->cd();
+
+TH1D *h = (TH1D *) _file0->Get("Multiplicity of FD neutrons by redef. APID&AV (nFDpCD, FD)");
+
+
+TH1D *hUpper = (TH1D *) h->Clone("hUpper");
+hUpper->GetXaxis()->SetRangeUser(2.,10.);
+TH1D *hUpperClone = (TH1D *) hUpper->Clone("hUpperClone");
+
+double p = ((hUpper->Integral())/(h->Integral()))*100;
+
+std::cout << "\n\n\nTotal number of events:\t" << h->Integral() << "\n";
+std::cout << "\nTotal number of events (upper):\t" << hUpper->Integral() << "\n";
+std::cout << "\nUpper percentage:\t" << p << "\n\n";
+std::cout << "\n";
+
