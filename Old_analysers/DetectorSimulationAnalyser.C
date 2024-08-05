@@ -12,30 +12,30 @@ scp -r asportes@ftp.jlab.org:/w/hallb-scshelf2102/clas12/asportes/recon_c12_6gev
 
  */
 
-#include "setup/codeSetup.h"
+#include "../setup/codeSetup.h"
 //#include "TempInclude/DetectorSimulationAnalyser_Histograms_Temp.C" //TODO: move to a class!
-#include "source/classes/AMaps/AMaps.cpp"
-#include "source/classes/clas12ana/clas12ana.h"
-#include "source/classes/DEfficiency/DEfficiency.cpp"
-#include "source/classes/DSCuts/DSCuts.h"
-#include "source/classes/hPlots/hPlot1D.cpp"
-#include "source/classes/hPlots/hPlot2D.cpp"
-#include "source/classes/MomentumResolution/MomentumResolution.cpp"
-#include "source/classes/ParticleID/ParticleID.cpp"
-#include "source/classes/Settings/Settings.cpp"
-#include "source/classes/TLCuts/TLCuts.cpp"
-#include "source/functions/AngleCalc/GetBinFromAng.h"
-#include "source/functions/FitFunctions/BetaFit.h"
-#include "source/functions/FitFunctions/BetaFitApprax.h"
-#include "source/functions/DrawAndSaveFunctions/DrawAndSaveACorrPlots.h"
-#include "source/functions/DrawAndSaveFunctions/DrawAndSaveEfficiencyPlots.h"
-#include "source/functions/DrawAndSaveFunctions/DrawAndSaveFSRatio.h"
-#include "source/functions/FillByInt.h"
-#include "source/functions/GetPi0MomTh.h"
-#include "source/functions/AngleCalc/CalcdPhi.h"
-#include "source/functions/StackPlot3.h"
-#include "source/functions/StackPlot4.h"
-#include "source/functions/TLKinCutsCheck.h"
+#include "../source/classes/AMaps/AMaps.cpp"
+#include "../source/classes/clas12ana/clas12ana.h"
+#include "../source/classes/DEfficiency/DEfficiency.cpp"
+#include "../source/classes/DSCuts/DSCuts.h"
+#include "../source/classes/hPlots/hPlot1D.cpp"
+#include "../source/classes/hPlots/hPlot2D.cpp"
+#include "../source/classes/MomentumResolution/MomentumResolution.cpp"
+#include "../source/classes/ParticleID/ParticleID.cpp"
+#include "../source/classes/Settings/Settings.cpp"
+#include "../source/classes/TLCuts/TLCuts.cpp"
+#include "../source/functions/AngleCalc/GetBinFromAng.h"
+#include "../source/functions/FitFunctions/BetaFit.h"
+#include "../source/functions/FitFunctions/BetaFitApprax.h"
+#include "../source/functions/DrawAndSaveFunctions/DrawAndSaveACorrPlots.h"
+#include "../source/functions/DrawAndSaveFunctions/DrawAndSaveEfficiencyPlots.h"
+#include "../source/functions/DrawAndSaveFunctions/DrawAndSaveFSRatio.h"
+#include "../source/functions/FillByInt.h"
+#include "../source/functions/GetPi0MomTh.h"
+#include "../source/functions/AngleCalc/CalcdPhi.h"
+#include "../source/functions/StackPlot3.h"
+#include "../source/functions/StackPlot4.h"
+#include "../source/functions/TLKinCutsCheck.h"
 
 #include "HipoChain.h"
 #include "clas12reader.h"
@@ -195,9 +195,9 @@ void EventAnalyser() {
     //TODO: automate adding upper mom. th. to nucleon cuts (for nRes calc)
     bool apply_nBeta_fit_cuts = true; // apply neutron upper mom. th.
     bool apply_fiducial_cuts = false;
-    bool apply_kinematical_cuts = true;
-    bool apply_kinematical_weights = true;
-    bool apply_nucleon_SmearAndCorr = true;
+    bool apply_kinematical_cuts = false;
+    bool apply_kinematical_weights = false;
+    bool apply_nucleon_SmearAndCorr = false;
 
     //<editor-fold desc="Custom cuts naming & print out execution variables">
 

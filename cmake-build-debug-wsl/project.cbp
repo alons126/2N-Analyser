@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/alon/project/cmake-build-debug-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/alon/project/cmake-build-debug-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/alon/project/cmake-build-debug-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="project">
+				<Option output="/home/alon/project/cmake-build-debug-wsl/project" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/project/cmake-build-debug-wsl"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/alon/project/."/>
+					<Add directory="/home/alon/project/macros"/>
+					<Add directory="/home/alon/project/setup"/>
+					<Add directory="/home/alon/project/setup/CLAS12DAnalysis"/>
+					<Add directory="/home/alon/project/setup/CLAS12DAnalysis/CLAS12DAnalyser"/>
+					<Add directory="/home/alon/project/setup/CLAS12DAnalysis/CLAS12DASettings"/>
+					<Add directory="/home/alon/project/setup/CLAS12DAnalysis/CLAS12DHistograms"/>
+					<Add directory="/home/alon/project/source"/>
+					<Add directory="/home/alon/project/source/classes"/>
+					<Add directory="/home/alon/project/source/classes/AMaps"/>
+					<Add directory="/home/alon/project/source/classes/clas12ana"/>
+					<Add directory="/home/alon/project/source/classes/clas12ana/clas12ana_ver_1_myedit"/>
+					<Add directory="/home/alon/project/source/classes/clas12ana/other"/>
+					<Add directory="/home/alon/project/source/classes/DEfficiency"/>
+					<Add directory="/home/alon/project/source/classes/Directories"/>
+					<Add directory="/home/alon/project/source/classes/DSCuts"/>
+					<Add directory="/home/alon/project/source/classes/ExperimentParameters"/>
+					<Add directory="/home/alon/project/source/classes/hData"/>
+					<Add directory="/home/alon/project/source/classes/hPlots"/>
+					<Add directory="/home/alon/project/source/classes/MomentumResolution"/>
+					<Add directory="/home/alon/project/source/classes/TargetParameters"/>
+					<Add directory="/home/alon/project/source/classes/TLCuts"/>
+					<Add directory="/home/alon/project/source/data"/>
+					<Add directory="/home/alon/project/source/functions"/>
+					<Add directory="/home/alon/project/source/functions/AngleCalc"/>
+					<Add directory="/home/alon/project/source/functions/DrawAndSaveFunctions"/>
+					<Add directory="/home/alon/project/source/functions/EventProperties"/>
+					<Add directory="/home/alon/project/source/functions/FitFunctions"/>
+					<Add directory="/home/alon/project/source/functions/Math_func"/>
+					<Add directory="/home/alon/project/source/functions/other"/>
+					<Add directory="/home/alon/project/source/functions/PID_functions"/>
+					<Add directory="/home/alon/project/source/other"/>
+					<Add directory="/home/alon/project/source/Structures_beta"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 project"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="project/fast">
+				<Option output="/home/alon/project/cmake-build-debug-wsl/project" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/project/cmake-build-debug-wsl"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/alon/project/."/>
+					<Add directory="/home/alon/project/macros"/>
+					<Add directory="/home/alon/project/setup"/>
+					<Add directory="/home/alon/project/setup/CLAS12DAnalysis"/>
+					<Add directory="/home/alon/project/setup/CLAS12DAnalysis/CLAS12DAnalyser"/>
+					<Add directory="/home/alon/project/setup/CLAS12DAnalysis/CLAS12DASettings"/>
+					<Add directory="/home/alon/project/setup/CLAS12DAnalysis/CLAS12DHistograms"/>
+					<Add directory="/home/alon/project/source"/>
+					<Add directory="/home/alon/project/source/classes"/>
+					<Add directory="/home/alon/project/source/classes/AMaps"/>
+					<Add directory="/home/alon/project/source/classes/clas12ana"/>
+					<Add directory="/home/alon/project/source/classes/clas12ana/clas12ana_ver_1_myedit"/>
+					<Add directory="/home/alon/project/source/classes/clas12ana/other"/>
+					<Add directory="/home/alon/project/source/classes/DEfficiency"/>
+					<Add directory="/home/alon/project/source/classes/Directories"/>
+					<Add directory="/home/alon/project/source/classes/DSCuts"/>
+					<Add directory="/home/alon/project/source/classes/ExperimentParameters"/>
+					<Add directory="/home/alon/project/source/classes/hData"/>
+					<Add directory="/home/alon/project/source/classes/hPlots"/>
+					<Add directory="/home/alon/project/source/classes/MomentumResolution"/>
+					<Add directory="/home/alon/project/source/classes/TargetParameters"/>
+					<Add directory="/home/alon/project/source/classes/TLCuts"/>
+					<Add directory="/home/alon/project/source/data"/>
+					<Add directory="/home/alon/project/source/functions"/>
+					<Add directory="/home/alon/project/source/functions/AngleCalc"/>
+					<Add directory="/home/alon/project/source/functions/DrawAndSaveFunctions"/>
+					<Add directory="/home/alon/project/source/functions/EventProperties"/>
+					<Add directory="/home/alon/project/source/functions/FitFunctions"/>
+					<Add directory="/home/alon/project/source/functions/Math_func"/>
+					<Add directory="/home/alon/project/source/functions/other"/>
+					<Add directory="/home/alon/project/source/functions/PID_functions"/>
+					<Add directory="/home/alon/project/source/other"/>
+					<Add directory="/home/alon/project/source/Structures_beta"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 project/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/alon/project/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/alon/project/Old_analysers/DetectorSimulationAnalyser.C">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/Old_analysers/TruthLevelAnalyser.c">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/TempInclude/Classes/HistogramsTemp/HistogramsTemp.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/TempInclude/Classes/HistogramsTemp/HistogramsTemp.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/git_handle.sh">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/AMapsDiveTest.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/BetaFitAndSave.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/BetaFitAndSaveApprax.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/MCtoDATAcomp - Copy (2).cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/MCtoDATAcomp - Copy.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/MCtoDATAcomp.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/Other/db_script.txt">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/Other/process_events.C">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/PlotsBeta4x4.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/PlotsEffAndACorr2x3.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Electron.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Nucleon.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/PlotsEffAndACorr2x3/PlotsEff2x3.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/PlotsEffAndACorr2x3/PlotsEff2x3Electron.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/PlotsEffAndACorr2x3/PlotsEff2x3Nucleon.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/PoliFitter - Copy.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/PoliFitter.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/plots4x4.txt">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/plotter_1x1.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/plotter_1x2.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/plotter_2x2.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/process_events.C">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/macros/zoomed_in_histogram.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/main.c">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/run.sh">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/setup/CLAS12DAnalysis/CLAS12DASettings/CLAS12DASettings.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/setup/CLAS12DAnalysis/CLAS12DASettings/CLAS12DASettings.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/setup/CLAS12DAnalysis/CLAS12DAnalyser/CLAS12DAnalyser.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/setup/CLAS12DAnalysis/CLAS12DAnalyser/CLAS12DAnalyser.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/setup/CLAS12DAnalysis/CLAS12DHistograms/CLAS12DHistograms.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/setup/CLAS12DAnalysis/CLAS12DHistograms/CLAS12DHistograms.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/setup/TruthLevelAnalyser.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/setup/codeSetup.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/Structures_beta/Histogram1D.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/AMaps/AMaps.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/AMaps/AMaps.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/AMaps/CustomSliceLimits.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/DEfficiency/DEfficiency.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/DEfficiency/DEfficiency.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/DSCuts/DSCuts.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/DataAnalyser/DataAnalyser.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/DataAnalyser/DataAnalyser.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/Directories/Directories.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/Directories/Directories.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/ExperimentParameters/ExperimentParameters.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/ExperimentParameters/ExperimentParameters.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/MomentumResolution/MomentumResolution.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/MomentumResolution/MomentumResolution.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/ParticleID/ParticleID.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/ParticleID/ParticleID.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/RecoAnalyser/RecoAnalyser.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/RecoAnalyser/RecoAnalyser.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/Settings/CustomPlotsDirectory.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/Settings/CustomPlotsDirectory.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/Settings/Settings.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/Settings/Settings.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/TLCuts/TLCuts.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/TLCuts/TLCuts.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/TargetParameters/TargetParameters.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/clas12ana/clas12ana.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/clas12ana/clas12ana_ver_1_myedit.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/clas12ana/clas12ana_ver_1_myedit/clas12ana.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/clas12ana/clas12ana_ver_1_myedit/example_ana.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/clas12ana/example_ana - Copy.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/clas12ana/example_ana.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/clas12ana/other/clas12ana - Copy (2).h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/clas12ana/other/clas12ana - Copy.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/clas12ana/skim_events.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/hData/hData.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/hData/hData.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/hPlots/hPlot1D.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/hPlots/hPlot1D.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/hPlots/hPlot1DStack.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/hPlots/hPlot1DStack.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/hPlots/hPlot2D.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/classes/hPlots/hPlot2D.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/constants.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/AcceptanceCorrections/C12_simulation_6GeV_T5/ACorr_data_-_C12_simulation_6GeV_T5.root">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/AcceptanceCorrections/C12_simulation_6GeV_T5_first_10/ACorr_data_-_C12_simulation_6GeV_T5_first_10.root">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/AcceptanceCorrections/C12_simulation_6GeV_T5_first_100/ACorr_data_-_C12_simulation_6GeV_T5_first_100.root">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/AcceptanceCorrections/C12_simulation_6GeV_T5_first_250/ACorr_data_-_C12_simulation_6GeV_T5_first_250.root">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/AcceptanceCorrections/C12_simulation_G18_2GeV/ACorr_data_-_C12_simulation_G18_2GeV.root">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/AcceptanceCorrections/C12_simulation_G18_Q208_6GeV/ACorr_data_-_C12_simulation_G18_Q208_6GeV.root">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/AcceptanceCorrections/Ca48_simulation_G18_10a_02_11b_6GeV/ACorr_data_-_Ca48_simulation_G18_10a_02_11b_6GeV.root">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/PIDCuts/ana.par">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/PIDCuts/clas12ana_ver_1_myedit/Fitted_PID_Cuts__C12_simulation_6GeV_T5.par">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/PIDCuts/clas12ana_ver_1_myedit/Fitted_PID_Cuts__C12_simulation_6GeV_T5_first_10.par">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/PIDCuts/clas12ana_ver_1_myedit/Fitted_PID_Cuts__C12_simulation_6GeV_T5_first_100.par">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/PIDCuts/clas12ana_ver_1_myedit/Fitted_PID_Cuts__Ca48_data_6GeV_run_015832.par">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/PIDCuts/clas12ana_ver_1_myedit/Fitted_PID_Cuts__Ca48_simulation_G18_10a_02_11b_6GeV.par">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/PIDCuts/clas12ana_ver_1_myedit/Fitted_PID_Cuts__LH2_data_6GeV_run_015032.par">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/PIDCuts/clas12ana_ver_1_myedit/ana.par">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/PIDCuts/clas12ana_ver_1_myedit/ecal.par">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/PIDCuts/ecal.par">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/PIDCuts/paramsPI_40Ca_x2.dat">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/PIDCuts/paramsPI_LD2_x2.dat">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/PIDCuts/paramsSF_40Ca_x2.dat">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/data/PIDCuts/paramsSF_LD2_x2.dat">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/AngleCalc/CalcdPhi.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/AngleCalc/GetBinFromAng.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/DrawAndSaveFunctions/DrawAndSaveACorrPlots.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/DrawAndSaveFunctions/DrawAndSaveEfficiencyPlots.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/DrawAndSaveFunctions/DrawAndSaveFSRatio.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/EventProperties/GetParticleName.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/EventProperties/GetParticleNameLC.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/EventProperties/GetParticleNameShort.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/EventProperties/SetDRegion.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/EventProperties/SetFSRatioSaveDir.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/EventProperties/SetSaveDir.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/EventProperties/SetStatsTitle.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/EventProperties/SetTitle.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/EventProperties/SetType.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/EventProperties/SetXAxisTitle.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/EventProperties/SetYAxisTitle.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/EventProperties/SettingSaveNames.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/FillByInt.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/FitFunctions/BetaFit.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/FitFunctions/BetaFitApprax.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/FitFunctions/FitFunction.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/GeneralFunctions.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/GetPi0MomTh.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/GetTruthLevelCuts.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/HistogramPlottingFunctions.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/Math_func/poly34.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/Math_func/poly34.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/NeutronECAL_Cut_Veto.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/PID_functions/ChargedParticleID.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/PID_functions/FDNeutralParticle.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/PID_functions/FDNeutralParticleID.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/PID_functions/GetFDNeutronP.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/PID_functions/GetFDNeutrons.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/PID_functions/GetFDPhotons.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/PID_functions/GetGoodParticles.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/PID_functions/GetGoodProtons.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/PID_functions/NeutralParticleID.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/PID_functions/nParticleID.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/PlotsEff2x3.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/StackPlot3.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/StackPlot4.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/TLKinCutsCheck.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/drawtext.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/findSubstring.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/neutron_veto.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/other/NeutronECAL_Cut_Veto.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/other/neutron_veto.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/quit.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/functions/to_string_with_precision.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/other/fitexample - Copy.c">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/other/fitexample.c">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/source/other/hPlot1D_example.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/project/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,33 +1,19 @@
-#include "TruthLevelAnalyser.c"
-#include "DetectorSimulationAnalyser.C"
+#include "source/classes/DataAnalyser/DataAnalyser.cpp"
+
+using namespace std;
 
 int main() {
     auto start = std::chrono::system_clock::now(); // Start counting running time
 
-    std::string AnalyserMode;
     string FileType = AnalyseFile.substr(AnalyseFile.find_last_of(".") + 1);
 
     cout << "\n" << "AnalyseFile:\t" << AnalyseFile << "\n";
     cout << "FileType:\t" << FileType << "\n";
 
-    //<editor-fold desc="AnalyserMode selector">
-    if (FileType == "root") {
-        AnalyserMode = "Truth level";
-    } else if (FileType == "hipo") {
-        AnalyserMode = "Detector Simulation";
-    } else {
-        cout << "\nCould not find file type!" << "\n\n";
-    }
-    //</editor-fold>
+    DataAnalyser Analysis(FileType);
+    std::string AnalyserMode = Analysis.ConfigureAnalyserMode(FileType);
 
     cout << "Analyser mode:\t'" << AnalyserMode << "'\n";
-
-    if (AnalyserMode == "Truth level") {
-        gst g;
-        g.Loop();
-    } else if (AnalyserMode == "Detector Simulation") {
-        EventAnalyser();
-    }
 
     cout << "\n---------------------------------------------------------------------------\n\n";
     cout << "Analysis mode:\t'" << AnalyserMode << "'" << "\n";
