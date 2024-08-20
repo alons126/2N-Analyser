@@ -5,7 +5,7 @@
 		<Option title="project"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\mnt\;CMake Files\..\..\..\mnt\c\;CMake Files\..\..\..\mnt\c\root_v6.26.10\;CMake Files\..\..\..\mnt\c\root_v6.26.10\cmake\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/alon/project/cmake-build-debug-wsl"/>
@@ -44,6 +44,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/mnt/c/root_v6.26.10/include"/>
+					<Add directory="/home/alon/clas12root/Clas12Root"/>
+					<Add directory="/home/alon/clas12root/Clas12Banks"/>
+					<Add directory="/home/alon/clas12root/hipo4"/>
 					<Add directory="/home/alon/project/."/>
 					<Add directory="/home/alon/project/macros"/>
 					<Add directory="/home/alon/project/setup"/>
@@ -99,6 +103,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/mnt/c/root_v6.26.10/include"/>
+					<Add directory="/home/alon/clas12root/Clas12Root"/>
+					<Add directory="/home/alon/clas12root/Clas12Banks"/>
+					<Add directory="/home/alon/clas12root/hipo4"/>
 					<Add directory="/home/alon/project/."/>
 					<Add directory="/home/alon/project/macros"/>
 					<Add directory="/home/alon/project/setup"/>
@@ -148,6 +156,381 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/calorimeter.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/calorimeter.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/ccdb_reader.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/ccdb_reader.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/cherenkov.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/cherenkov.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/clas12databases.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/clas12databases.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/clas12reader.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/clas12reader.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/clas12writer.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/clas12writer.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/covmatrix.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/covmatrix.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/detector.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/detector.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/event.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/event.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/forwardtagger.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/forwardtagger.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/ftbevent.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/ftbevent.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/ftbparticle.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/ftbparticle.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/helflip.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/helflip.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/helonline.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/helonline.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/jsonFileMerger.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/mcevent.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/mcevent.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/mcmatch.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/mcmatch.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/mcparticle.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/mcparticle.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/mesonex_trigger.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/particle.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/particle.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/particle_detector.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/particle_detector.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/qadb_reader.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/qadb_reader.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/rcdb_reader.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/rcdb_reader.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/region_band.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/region_band.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/region_cdet.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/region_cdet.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/region_fdet.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/region_fdet.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/region_ft.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/region_ft.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/region_particle.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/region_particle.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/runconfig.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/runconfig.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/scaler.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/scaler.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/scaler_reader.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/scaler_reader.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/scintextras.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/scintextras.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/scintillator.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/scintillator.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/tracker.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/tracker.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/traj.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/traj.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/vertdoca.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/vertdoca.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/vtp.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Banks/vtp.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/BankHist.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/BankHist.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/HipoChain.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/HipoChain.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/HipoChainWriter.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/HipoChainWriter.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/HipoFileSelector.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/HipoFileSelector.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/HipoHist.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/HipoHist.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/HipoROOTOut.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/HipoROOTOut.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/HipoRootAction.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/HipoRootAction.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/HipoSelector.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/HipoSelector.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/HipoTreeMaker.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/ParticleHist.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/ParticleHist.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/ParticleTree.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/ParticleTree.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/tempHipoSelector.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/Clas12Root/tempHipoSelector.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/bank.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/bank.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/datastream.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/datastream.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/dictionary.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/dictionary.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/event.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/event.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/fusion.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/fusion.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/ntuple_reader.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/ntuple_reader.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/ntuple_writer.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/ntuple_writer.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/reader.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/reader.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/record.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/record.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/recordbuilder.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/recordbuilder.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/tuple.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/tuple.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/utils.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/utils.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/wrapper.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/writer.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/alon/clas12root/hipo4/writer.h">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="/home/alon/project/Old_analysers/DetectorSimulationAnalyser.C">
 			<Option target="project"/>
 		</Unit>
@@ -615,6 +998,21 @@
 		</Unit>
 		<Unit filename="/home/alon/project/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/alon/project/../../../mnt/c/root_v6.26.10/cmake/ROOTConfig-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\mnt\c\root_v6.26.10\cmake\"/>
+		</Unit>
+		<Unit filename="/home/alon/project/../../../mnt/c/root_v6.26.10/cmake/ROOTConfig-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\mnt\c\root_v6.26.10\cmake\"/>
+		</Unit>
+		<Unit filename="/home/alon/project/../../../mnt/c/root_v6.26.10/cmake/ROOTConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\mnt\c\root_v6.26.10\cmake\"/>
+		</Unit>
+		<Unit filename="/home/alon/project/../../../mnt/c/root_v6.26.10/cmake/ROOTConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\mnt\c\root_v6.26.10\cmake\"/>
+		</Unit>
+		<Unit filename="/home/alon/project/../../../mnt/c/root_v6.26.10/cmake/RootMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\mnt\c\root_v6.26.10\cmake\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

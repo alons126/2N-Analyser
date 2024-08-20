@@ -57,9 +57,828 @@ include CMakeFiles/project.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/project.dir/flags.make
 
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/BankHist.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/BankHist.cpp.o: /home/alon/clas12root/Clas12Root/BankHist.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/BankHist.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/BankHist.cpp.o -c /home/alon/clas12root/Clas12Root/BankHist.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/BankHist.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/BankHist.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Root/BankHist.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/BankHist.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/BankHist.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/BankHist.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Root/BankHist.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/BankHist.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChain.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChain.cpp.o: /home/alon/clas12root/Clas12Root/HipoChain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChain.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChain.cpp.o -c /home/alon/clas12root/Clas12Root/HipoChain.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChain.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Root/HipoChain.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChain.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChain.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Root/HipoChain.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChain.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChainWriter.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChainWriter.cpp.o: /home/alon/clas12root/Clas12Root/HipoChainWriter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChainWriter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChainWriter.cpp.o -c /home/alon/clas12root/Clas12Root/HipoChainWriter.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChainWriter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChainWriter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Root/HipoChainWriter.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChainWriter.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChainWriter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChainWriter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Root/HipoChainWriter.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChainWriter.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoFileSelector.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoFileSelector.cpp.o: /home/alon/clas12root/Clas12Root/HipoFileSelector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoFileSelector.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoFileSelector.cpp.o -c /home/alon/clas12root/Clas12Root/HipoFileSelector.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoFileSelector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoFileSelector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Root/HipoFileSelector.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoFileSelector.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoFileSelector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoFileSelector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Root/HipoFileSelector.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoFileSelector.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoHist.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoHist.cpp.o: /home/alon/clas12root/Clas12Root/HipoHist.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoHist.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoHist.cpp.o -c /home/alon/clas12root/Clas12Root/HipoHist.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoHist.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoHist.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Root/HipoHist.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoHist.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoHist.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoHist.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Root/HipoHist.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoHist.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoROOTOut.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoROOTOut.cpp.o: /home/alon/clas12root/Clas12Root/HipoROOTOut.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoROOTOut.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoROOTOut.cpp.o -c /home/alon/clas12root/Clas12Root/HipoROOTOut.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoROOTOut.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoROOTOut.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Root/HipoROOTOut.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoROOTOut.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoROOTOut.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoROOTOut.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Root/HipoROOTOut.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoROOTOut.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoRootAction.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoRootAction.cpp.o: /home/alon/clas12root/Clas12Root/HipoRootAction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoRootAction.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoRootAction.cpp.o -c /home/alon/clas12root/Clas12Root/HipoRootAction.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoRootAction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoRootAction.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Root/HipoRootAction.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoRootAction.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoRootAction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoRootAction.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Root/HipoRootAction.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoRootAction.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoSelector.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoSelector.cpp.o: /home/alon/clas12root/Clas12Root/HipoSelector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoSelector.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoSelector.cpp.o -c /home/alon/clas12root/Clas12Root/HipoSelector.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoSelector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoSelector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Root/HipoSelector.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoSelector.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoSelector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoSelector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Root/HipoSelector.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoSelector.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp.o: /home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp.o -c /home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleHist.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleHist.cpp.o: /home/alon/clas12root/Clas12Root/ParticleHist.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleHist.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleHist.cpp.o -c /home/alon/clas12root/Clas12Root/ParticleHist.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleHist.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleHist.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Root/ParticleHist.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleHist.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleHist.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleHist.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Root/ParticleHist.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleHist.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleTree.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleTree.cpp.o: /home/alon/clas12root/Clas12Root/ParticleTree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleTree.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleTree.cpp.o -c /home/alon/clas12root/Clas12Root/ParticleTree.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleTree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleTree.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Root/ParticleTree.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleTree.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleTree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleTree.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Root/ParticleTree.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleTree.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/tempHipoSelector.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/tempHipoSelector.cpp.o: /home/alon/clas12root/Clas12Root/tempHipoSelector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/tempHipoSelector.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/tempHipoSelector.cpp.o -c /home/alon/clas12root/Clas12Root/tempHipoSelector.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/tempHipoSelector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/tempHipoSelector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Root/tempHipoSelector.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/tempHipoSelector.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/tempHipoSelector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/tempHipoSelector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Root/tempHipoSelector.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/tempHipoSelector.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/calorimeter.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/calorimeter.cpp.o: /home/alon/clas12root/Clas12Banks/calorimeter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/calorimeter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/calorimeter.cpp.o -c /home/alon/clas12root/Clas12Banks/calorimeter.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/calorimeter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/calorimeter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/calorimeter.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/calorimeter.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/calorimeter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/calorimeter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/calorimeter.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/calorimeter.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ccdb_reader.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ccdb_reader.cpp.o: /home/alon/clas12root/Clas12Banks/ccdb_reader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ccdb_reader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ccdb_reader.cpp.o -c /home/alon/clas12root/Clas12Banks/ccdb_reader.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ccdb_reader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ccdb_reader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/ccdb_reader.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ccdb_reader.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ccdb_reader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ccdb_reader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/ccdb_reader.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ccdb_reader.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/cherenkov.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/cherenkov.cpp.o: /home/alon/clas12root/Clas12Banks/cherenkov.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/cherenkov.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/cherenkov.cpp.o -c /home/alon/clas12root/Clas12Banks/cherenkov.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/cherenkov.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/cherenkov.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/cherenkov.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/cherenkov.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/cherenkov.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/cherenkov.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/cherenkov.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/cherenkov.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12databases.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12databases.cpp.o: /home/alon/clas12root/Clas12Banks/clas12databases.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12databases.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12databases.cpp.o -c /home/alon/clas12root/Clas12Banks/clas12databases.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12databases.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12databases.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/clas12databases.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12databases.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12databases.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12databases.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/clas12databases.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12databases.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12reader.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12reader.cpp.o: /home/alon/clas12root/Clas12Banks/clas12reader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12reader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12reader.cpp.o -c /home/alon/clas12root/Clas12Banks/clas12reader.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12reader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12reader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/clas12reader.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12reader.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12reader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12reader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/clas12reader.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12reader.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12writer.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12writer.cpp.o: /home/alon/clas12root/Clas12Banks/clas12writer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12writer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12writer.cpp.o -c /home/alon/clas12root/Clas12Banks/clas12writer.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12writer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12writer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/clas12writer.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12writer.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12writer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12writer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/clas12writer.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12writer.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/covmatrix.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/covmatrix.cpp.o: /home/alon/clas12root/Clas12Banks/covmatrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/covmatrix.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/covmatrix.cpp.o -c /home/alon/clas12root/Clas12Banks/covmatrix.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/covmatrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/covmatrix.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/covmatrix.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/covmatrix.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/covmatrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/covmatrix.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/covmatrix.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/covmatrix.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/detector.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/detector.cpp.o: /home/alon/clas12root/Clas12Banks/detector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/detector.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/detector.cpp.o -c /home/alon/clas12root/Clas12Banks/detector.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/detector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/detector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/detector.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/detector.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/detector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/detector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/detector.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/detector.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/event.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/event.cpp.o: /home/alon/clas12root/Clas12Banks/event.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/event.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/event.cpp.o -c /home/alon/clas12root/Clas12Banks/event.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/event.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/event.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/event.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/event.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/event.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/event.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/event.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/event.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/forwardtagger.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/forwardtagger.cpp.o: /home/alon/clas12root/Clas12Banks/forwardtagger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/forwardtagger.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/forwardtagger.cpp.o -c /home/alon/clas12root/Clas12Banks/forwardtagger.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/forwardtagger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/forwardtagger.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/forwardtagger.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/forwardtagger.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/forwardtagger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/forwardtagger.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/forwardtagger.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/forwardtagger.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbevent.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbevent.cpp.o: /home/alon/clas12root/Clas12Banks/ftbevent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbevent.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbevent.cpp.o -c /home/alon/clas12root/Clas12Banks/ftbevent.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbevent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbevent.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/ftbevent.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbevent.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbevent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbevent.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/ftbevent.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbevent.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbparticle.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbparticle.cpp.o: /home/alon/clas12root/Clas12Banks/ftbparticle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbparticle.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbparticle.cpp.o -c /home/alon/clas12root/Clas12Banks/ftbparticle.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbparticle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbparticle.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/ftbparticle.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbparticle.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbparticle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbparticle.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/ftbparticle.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbparticle.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helflip.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helflip.cpp.o: /home/alon/clas12root/Clas12Banks/helflip.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helflip.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helflip.cpp.o -c /home/alon/clas12root/Clas12Banks/helflip.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helflip.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helflip.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/helflip.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helflip.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helflip.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helflip.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/helflip.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helflip.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helonline.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helonline.cpp.o: /home/alon/clas12root/Clas12Banks/helonline.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helonline.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helonline.cpp.o -c /home/alon/clas12root/Clas12Banks/helonline.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helonline.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helonline.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/helonline.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helonline.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helonline.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helonline.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/helonline.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helonline.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp.o: /home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp.o -c /home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcevent.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcevent.cpp.o: /home/alon/clas12root/Clas12Banks/mcevent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcevent.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcevent.cpp.o -c /home/alon/clas12root/Clas12Banks/mcevent.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcevent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcevent.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/mcevent.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcevent.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcevent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcevent.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/mcevent.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcevent.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcmatch.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcmatch.cpp.o: /home/alon/clas12root/Clas12Banks/mcmatch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcmatch.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcmatch.cpp.o -c /home/alon/clas12root/Clas12Banks/mcmatch.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcmatch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcmatch.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/mcmatch.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcmatch.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcmatch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcmatch.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/mcmatch.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcmatch.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcparticle.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcparticle.cpp.o: /home/alon/clas12root/Clas12Banks/mcparticle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcparticle.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcparticle.cpp.o -c /home/alon/clas12root/Clas12Banks/mcparticle.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcparticle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcparticle.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/mcparticle.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcparticle.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcparticle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcparticle.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/mcparticle.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcparticle.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp.o: /home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp.o -c /home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle.cpp.o: /home/alon/clas12root/Clas12Banks/particle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle.cpp.o -c /home/alon/clas12root/Clas12Banks/particle.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/particle.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/particle.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle_detector.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle_detector.cpp.o: /home/alon/clas12root/Clas12Banks/particle_detector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle_detector.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle_detector.cpp.o -c /home/alon/clas12root/Clas12Banks/particle_detector.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle_detector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle_detector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/particle_detector.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle_detector.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle_detector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle_detector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/particle_detector.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle_detector.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/qadb_reader.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/qadb_reader.cpp.o: /home/alon/clas12root/Clas12Banks/qadb_reader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/qadb_reader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/qadb_reader.cpp.o -c /home/alon/clas12root/Clas12Banks/qadb_reader.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/qadb_reader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/qadb_reader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/qadb_reader.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/qadb_reader.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/qadb_reader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/qadb_reader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/qadb_reader.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/qadb_reader.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/rcdb_reader.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/rcdb_reader.cpp.o: /home/alon/clas12root/Clas12Banks/rcdb_reader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/rcdb_reader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/rcdb_reader.cpp.o -c /home/alon/clas12root/Clas12Banks/rcdb_reader.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/rcdb_reader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/rcdb_reader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/rcdb_reader.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/rcdb_reader.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/rcdb_reader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/rcdb_reader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/rcdb_reader.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/rcdb_reader.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_band.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_band.cpp.o: /home/alon/clas12root/Clas12Banks/region_band.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_band.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_band.cpp.o -c /home/alon/clas12root/Clas12Banks/region_band.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_band.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_band.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/region_band.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_band.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_band.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_band.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/region_band.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_band.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_cdet.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_cdet.cpp.o: /home/alon/clas12root/Clas12Banks/region_cdet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_cdet.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_cdet.cpp.o -c /home/alon/clas12root/Clas12Banks/region_cdet.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_cdet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_cdet.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/region_cdet.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_cdet.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_cdet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_cdet.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/region_cdet.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_cdet.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_fdet.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_fdet.cpp.o: /home/alon/clas12root/Clas12Banks/region_fdet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_fdet.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_fdet.cpp.o -c /home/alon/clas12root/Clas12Banks/region_fdet.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_fdet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_fdet.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/region_fdet.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_fdet.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_fdet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_fdet.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/region_fdet.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_fdet.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_ft.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_ft.cpp.o: /home/alon/clas12root/Clas12Banks/region_ft.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_ft.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_ft.cpp.o -c /home/alon/clas12root/Clas12Banks/region_ft.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_ft.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_ft.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/region_ft.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_ft.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_ft.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_ft.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/region_ft.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_ft.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_particle.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_particle.cpp.o: /home/alon/clas12root/Clas12Banks/region_particle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_particle.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_particle.cpp.o -c /home/alon/clas12root/Clas12Banks/region_particle.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_particle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_particle.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/region_particle.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_particle.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_particle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_particle.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/region_particle.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_particle.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/runconfig.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/runconfig.cpp.o: /home/alon/clas12root/Clas12Banks/runconfig.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/runconfig.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/runconfig.cpp.o -c /home/alon/clas12root/Clas12Banks/runconfig.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/runconfig.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/runconfig.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/runconfig.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/runconfig.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/runconfig.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/runconfig.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/runconfig.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/runconfig.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler.cpp.o: /home/alon/clas12root/Clas12Banks/scaler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler.cpp.o -c /home/alon/clas12root/Clas12Banks/scaler.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/scaler.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/scaler.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler_reader.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler_reader.cpp.o: /home/alon/clas12root/Clas12Banks/scaler_reader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler_reader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler_reader.cpp.o -c /home/alon/clas12root/Clas12Banks/scaler_reader.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler_reader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler_reader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/scaler_reader.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler_reader.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler_reader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler_reader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/scaler_reader.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler_reader.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintextras.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintextras.cpp.o: /home/alon/clas12root/Clas12Banks/scintextras.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintextras.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintextras.cpp.o -c /home/alon/clas12root/Clas12Banks/scintextras.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintextras.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintextras.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/scintextras.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintextras.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintextras.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintextras.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/scintextras.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintextras.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintillator.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintillator.cpp.o: /home/alon/clas12root/Clas12Banks/scintillator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintillator.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintillator.cpp.o -c /home/alon/clas12root/Clas12Banks/scintillator.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintillator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintillator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/scintillator.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintillator.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintillator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintillator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/scintillator.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintillator.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/tracker.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/tracker.cpp.o: /home/alon/clas12root/Clas12Banks/tracker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/tracker.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/tracker.cpp.o -c /home/alon/clas12root/Clas12Banks/tracker.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/tracker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/tracker.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/tracker.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/tracker.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/tracker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/tracker.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/tracker.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/tracker.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/traj.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/traj.cpp.o: /home/alon/clas12root/Clas12Banks/traj.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/traj.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/traj.cpp.o -c /home/alon/clas12root/Clas12Banks/traj.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/traj.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/traj.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/traj.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/traj.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/traj.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/traj.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/traj.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/traj.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vertdoca.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vertdoca.cpp.o: /home/alon/clas12root/Clas12Banks/vertdoca.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vertdoca.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vertdoca.cpp.o -c /home/alon/clas12root/Clas12Banks/vertdoca.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vertdoca.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vertdoca.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/vertdoca.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vertdoca.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vertdoca.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vertdoca.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/vertdoca.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vertdoca.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vtp.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vtp.cpp.o: /home/alon/clas12root/Clas12Banks/vtp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vtp.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vtp.cpp.o -c /home/alon/clas12root/Clas12Banks/vtp.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vtp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vtp.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/Clas12Banks/vtp.cpp > CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vtp.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vtp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vtp.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/Clas12Banks/vtp.cpp -o CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vtp.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/bank.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/bank.cpp.o: /home/alon/clas12root/hipo4/bank.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/hipo4/bank.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/bank.cpp.o -c /home/alon/clas12root/hipo4/bank.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/bank.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/hipo4/bank.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/hipo4/bank.cpp > CMakeFiles/project.dir/home/alon/clas12root/hipo4/bank.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/bank.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/hipo4/bank.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/hipo4/bank.cpp -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/bank.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/datastream.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/datastream.cpp.o: /home/alon/clas12root/hipo4/datastream.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/hipo4/datastream.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/datastream.cpp.o -c /home/alon/clas12root/hipo4/datastream.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/datastream.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/hipo4/datastream.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/hipo4/datastream.cpp > CMakeFiles/project.dir/home/alon/clas12root/hipo4/datastream.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/datastream.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/hipo4/datastream.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/hipo4/datastream.cpp -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/datastream.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/dictionary.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/dictionary.cpp.o: /home/alon/clas12root/hipo4/dictionary.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/hipo4/dictionary.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/dictionary.cpp.o -c /home/alon/clas12root/hipo4/dictionary.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/dictionary.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/hipo4/dictionary.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/hipo4/dictionary.cpp > CMakeFiles/project.dir/home/alon/clas12root/hipo4/dictionary.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/dictionary.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/hipo4/dictionary.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/hipo4/dictionary.cpp -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/dictionary.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/event.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/event.cpp.o: /home/alon/clas12root/hipo4/event.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/hipo4/event.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/event.cpp.o -c /home/alon/clas12root/hipo4/event.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/event.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/hipo4/event.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/hipo4/event.cpp > CMakeFiles/project.dir/home/alon/clas12root/hipo4/event.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/event.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/hipo4/event.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/hipo4/event.cpp -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/event.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/fusion.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/fusion.cpp.o: /home/alon/clas12root/hipo4/fusion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/hipo4/fusion.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/fusion.cpp.o -c /home/alon/clas12root/hipo4/fusion.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/fusion.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/hipo4/fusion.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/hipo4/fusion.cpp > CMakeFiles/project.dir/home/alon/clas12root/hipo4/fusion.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/fusion.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/hipo4/fusion.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/hipo4/fusion.cpp -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/fusion.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_reader.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_reader.cpp.o: /home/alon/clas12root/hipo4/ntuple_reader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_reader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_reader.cpp.o -c /home/alon/clas12root/hipo4/ntuple_reader.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_reader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_reader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/hipo4/ntuple_reader.cpp > CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_reader.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_reader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_reader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/hipo4/ntuple_reader.cpp -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_reader.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_writer.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_writer.cpp.o: /home/alon/clas12root/hipo4/ntuple_writer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_writer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_writer.cpp.o -c /home/alon/clas12root/hipo4/ntuple_writer.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_writer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_writer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/hipo4/ntuple_writer.cpp > CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_writer.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_writer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_writer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/hipo4/ntuple_writer.cpp -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_writer.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/reader.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/reader.cpp.o: /home/alon/clas12root/hipo4/reader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/hipo4/reader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/reader.cpp.o -c /home/alon/clas12root/hipo4/reader.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/reader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/hipo4/reader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/hipo4/reader.cpp > CMakeFiles/project.dir/home/alon/clas12root/hipo4/reader.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/reader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/hipo4/reader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/hipo4/reader.cpp -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/reader.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/record.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/record.cpp.o: /home/alon/clas12root/hipo4/record.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/hipo4/record.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/record.cpp.o -c /home/alon/clas12root/hipo4/record.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/record.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/hipo4/record.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/hipo4/record.cpp > CMakeFiles/project.dir/home/alon/clas12root/hipo4/record.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/record.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/hipo4/record.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/hipo4/record.cpp -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/record.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/recordbuilder.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/recordbuilder.cpp.o: /home/alon/clas12root/hipo4/recordbuilder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/hipo4/recordbuilder.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/recordbuilder.cpp.o -c /home/alon/clas12root/hipo4/recordbuilder.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/recordbuilder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/hipo4/recordbuilder.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/hipo4/recordbuilder.cpp > CMakeFiles/project.dir/home/alon/clas12root/hipo4/recordbuilder.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/recordbuilder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/hipo4/recordbuilder.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/hipo4/recordbuilder.cpp -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/recordbuilder.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/tuple.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/tuple.cpp.o: /home/alon/clas12root/hipo4/tuple.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/hipo4/tuple.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/tuple.cpp.o -c /home/alon/clas12root/hipo4/tuple.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/tuple.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/hipo4/tuple.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/hipo4/tuple.cpp > CMakeFiles/project.dir/home/alon/clas12root/hipo4/tuple.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/tuple.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/hipo4/tuple.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/hipo4/tuple.cpp -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/tuple.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/utils.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/utils.cpp.o: /home/alon/clas12root/hipo4/utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/hipo4/utils.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/utils.cpp.o -c /home/alon/clas12root/hipo4/utils.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/hipo4/utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/hipo4/utils.cpp > CMakeFiles/project.dir/home/alon/clas12root/hipo4/utils.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/hipo4/utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/hipo4/utils.cpp -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/utils.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/wrapper.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/wrapper.cpp.o: /home/alon/clas12root/hipo4/wrapper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/hipo4/wrapper.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/wrapper.cpp.o -c /home/alon/clas12root/hipo4/wrapper.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/wrapper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/hipo4/wrapper.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/hipo4/wrapper.cpp > CMakeFiles/project.dir/home/alon/clas12root/hipo4/wrapper.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/wrapper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/hipo4/wrapper.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/hipo4/wrapper.cpp -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/wrapper.cpp.s
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/writer.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/writer.cpp.o: /home/alon/clas12root/hipo4/writer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/project.dir/home/alon/clas12root/hipo4/writer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/writer.cpp.o -c /home/alon/clas12root/hipo4/writer.cpp
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/writer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/home/alon/clas12root/hipo4/writer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/clas12root/hipo4/writer.cpp > CMakeFiles/project.dir/home/alon/clas12root/hipo4/writer.cpp.i
+
+CMakeFiles/project.dir/home/alon/clas12root/hipo4/writer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/home/alon/clas12root/hipo4/writer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/clas12root/hipo4/writer.cpp -o CMakeFiles/project.dir/home/alon/clas12root/hipo4/writer.cpp.s
+
 CMakeFiles/project.dir/macros/Other/process_events.C.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/Other/process_events.C.o: ../macros/Other/process_events.C
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/project.dir/macros/Other/process_events.C.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/project.dir/macros/Other/process_events.C.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/Other/process_events.C.o -c /home/alon/project/macros/Other/process_events.C
 
 CMakeFiles/project.dir/macros/Other/process_events.C.i: cmake_force
@@ -72,7 +891,7 @@ CMakeFiles/project.dir/macros/Other/process_events.C.s: cmake_force
 
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Electron.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Electron.cpp.o: ../macros/PlotsEffAndACorr2x3/PlotsACorr2x3Electron.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Electron.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Electron.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Electron.cpp.o -c /home/alon/project/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Electron.cpp
 
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Electron.cpp.i: cmake_force
@@ -85,7 +904,7 @@ CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Electron.cpp.s: c
 
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Nucleon.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Nucleon.cpp.o: ../macros/PlotsEffAndACorr2x3/PlotsACorr2x3Nucleon.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Nucleon.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Nucleon.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Nucleon.cpp.o -c /home/alon/project/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Nucleon.cpp
 
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Nucleon.cpp.i: cmake_force
@@ -98,7 +917,7 @@ CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Nucleon.cpp.s: cm
 
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3.cpp.o: ../macros/PlotsEffAndACorr2x3/PlotsEff2x3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3.cpp.o -c /home/alon/project/macros/PlotsEffAndACorr2x3/PlotsEff2x3.cpp
 
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3.cpp.i: cmake_force
@@ -111,7 +930,7 @@ CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3.cpp.s: cmake_force
 
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3Electron.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3Electron.cpp.o: ../macros/PlotsEffAndACorr2x3/PlotsEff2x3Electron.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3Electron.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3Electron.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3Electron.cpp.o -c /home/alon/project/macros/PlotsEffAndACorr2x3/PlotsEff2x3Electron.cpp
 
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3Electron.cpp.i: cmake_force
@@ -124,7 +943,7 @@ CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3Electron.cpp.s: cma
 
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3Nucleon.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3Nucleon.cpp.o: ../macros/PlotsEffAndACorr2x3/PlotsEff2x3Nucleon.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3Nucleon.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3Nucleon.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3Nucleon.cpp.o -c /home/alon/project/macros/PlotsEffAndACorr2x3/PlotsEff2x3Nucleon.cpp
 
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3Nucleon.cpp.i: cmake_force
@@ -137,7 +956,7 @@ CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsEff2x3Nucleon.cpp.s: cmak
 
 CMakeFiles/project.dir/macros/AMapsDiveTest.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/AMapsDiveTest.cpp.o: ../macros/AMapsDiveTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/project.dir/macros/AMapsDiveTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/project.dir/macros/AMapsDiveTest.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/AMapsDiveTest.cpp.o -c /home/alon/project/macros/AMapsDiveTest.cpp
 
 CMakeFiles/project.dir/macros/AMapsDiveTest.cpp.i: cmake_force
@@ -150,7 +969,7 @@ CMakeFiles/project.dir/macros/AMapsDiveTest.cpp.s: cmake_force
 
 CMakeFiles/project.dir/macros/BetaFitAndSave.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/BetaFitAndSave.cpp.o: ../macros/BetaFitAndSave.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/project.dir/macros/BetaFitAndSave.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CMakeFiles/project.dir/macros/BetaFitAndSave.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/BetaFitAndSave.cpp.o -c /home/alon/project/macros/BetaFitAndSave.cpp
 
 CMakeFiles/project.dir/macros/BetaFitAndSave.cpp.i: cmake_force
@@ -163,7 +982,7 @@ CMakeFiles/project.dir/macros/BetaFitAndSave.cpp.s: cmake_force
 
 CMakeFiles/project.dir/macros/BetaFitAndSaveApprax.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/BetaFitAndSaveApprax.cpp.o: ../macros/BetaFitAndSaveApprax.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/project.dir/macros/BetaFitAndSaveApprax.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/project.dir/macros/BetaFitAndSaveApprax.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/BetaFitAndSaveApprax.cpp.o -c /home/alon/project/macros/BetaFitAndSaveApprax.cpp
 
 CMakeFiles/project.dir/macros/BetaFitAndSaveApprax.cpp.i: cmake_force
@@ -176,7 +995,7 @@ CMakeFiles/project.dir/macros/BetaFitAndSaveApprax.cpp.s: cmake_force
 
 CMakeFiles/project.dir/macros/MCtoDATAcomp_-_Copy_(2).cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/MCtoDATAcomp_-_Copy_(2).cpp.o: ../macros/MCtoDATAcomp\ -\ Copy\ (2).cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/project.dir/macros/MCtoDATAcomp_-_Copy_(2).cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/project.dir/macros/MCtoDATAcomp_-_Copy_(2).cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o "CMakeFiles/project.dir/macros/MCtoDATAcomp_-_Copy_(2).cpp.o" -c "/home/alon/project/macros/MCtoDATAcomp - Copy (2).cpp"
 
 CMakeFiles/project.dir/macros/MCtoDATAcomp_-_Copy_(2).cpp.i: cmake_force
@@ -189,7 +1008,7 @@ CMakeFiles/project.dir/macros/MCtoDATAcomp_-_Copy_(2).cpp.s: cmake_force
 
 CMakeFiles/project.dir/macros/MCtoDATAcomp_-_Copy.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/MCtoDATAcomp_-_Copy.cpp.o: ../macros/MCtoDATAcomp\ -\ Copy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/project.dir/macros/MCtoDATAcomp_-_Copy.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CMakeFiles/project.dir/macros/MCtoDATAcomp_-_Copy.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/MCtoDATAcomp_-_Copy.cpp.o -c "/home/alon/project/macros/MCtoDATAcomp - Copy.cpp"
 
 CMakeFiles/project.dir/macros/MCtoDATAcomp_-_Copy.cpp.i: cmake_force
@@ -202,7 +1021,7 @@ CMakeFiles/project.dir/macros/MCtoDATAcomp_-_Copy.cpp.s: cmake_force
 
 CMakeFiles/project.dir/macros/MCtoDATAcomp.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/MCtoDATAcomp.cpp.o: ../macros/MCtoDATAcomp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/project.dir/macros/MCtoDATAcomp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object CMakeFiles/project.dir/macros/MCtoDATAcomp.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/MCtoDATAcomp.cpp.o -c /home/alon/project/macros/MCtoDATAcomp.cpp
 
 CMakeFiles/project.dir/macros/MCtoDATAcomp.cpp.i: cmake_force
@@ -215,7 +1034,7 @@ CMakeFiles/project.dir/macros/MCtoDATAcomp.cpp.s: cmake_force
 
 CMakeFiles/project.dir/macros/PlotsBeta4x4.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/PlotsBeta4x4.cpp.o: ../macros/PlotsBeta4x4.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/project.dir/macros/PlotsBeta4x4.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object CMakeFiles/project.dir/macros/PlotsBeta4x4.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/PlotsBeta4x4.cpp.o -c /home/alon/project/macros/PlotsBeta4x4.cpp
 
 CMakeFiles/project.dir/macros/PlotsBeta4x4.cpp.i: cmake_force
@@ -228,7 +1047,7 @@ CMakeFiles/project.dir/macros/PlotsBeta4x4.cpp.s: cmake_force
 
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3.cpp.o: ../macros/PlotsEffAndACorr2x3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3.cpp.o -c /home/alon/project/macros/PlotsEffAndACorr2x3.cpp
 
 CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3.cpp.i: cmake_force
@@ -241,7 +1060,7 @@ CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3.cpp.s: cmake_force
 
 CMakeFiles/project.dir/macros/plotter_1x1.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/plotter_1x1.cpp.o: ../macros/plotter_1x1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/project.dir/macros/plotter_1x1.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object CMakeFiles/project.dir/macros/plotter_1x1.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/plotter_1x1.cpp.o -c /home/alon/project/macros/plotter_1x1.cpp
 
 CMakeFiles/project.dir/macros/plotter_1x1.cpp.i: cmake_force
@@ -254,7 +1073,7 @@ CMakeFiles/project.dir/macros/plotter_1x1.cpp.s: cmake_force
 
 CMakeFiles/project.dir/macros/plotter_1x2.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/plotter_1x2.cpp.o: ../macros/plotter_1x2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/project.dir/macros/plotter_1x2.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object CMakeFiles/project.dir/macros/plotter_1x2.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/plotter_1x2.cpp.o -c /home/alon/project/macros/plotter_1x2.cpp
 
 CMakeFiles/project.dir/macros/plotter_1x2.cpp.i: cmake_force
@@ -267,7 +1086,7 @@ CMakeFiles/project.dir/macros/plotter_1x2.cpp.s: cmake_force
 
 CMakeFiles/project.dir/macros/plotter_2x2.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/plotter_2x2.cpp.o: ../macros/plotter_2x2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/project.dir/macros/plotter_2x2.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object CMakeFiles/project.dir/macros/plotter_2x2.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/plotter_2x2.cpp.o -c /home/alon/project/macros/plotter_2x2.cpp
 
 CMakeFiles/project.dir/macros/plotter_2x2.cpp.i: cmake_force
@@ -280,7 +1099,7 @@ CMakeFiles/project.dir/macros/plotter_2x2.cpp.s: cmake_force
 
 CMakeFiles/project.dir/macros/PoliFitter_-_Copy.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/PoliFitter_-_Copy.cpp.o: ../macros/PoliFitter\ -\ Copy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/project.dir/macros/PoliFitter_-_Copy.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object CMakeFiles/project.dir/macros/PoliFitter_-_Copy.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/PoliFitter_-_Copy.cpp.o -c "/home/alon/project/macros/PoliFitter - Copy.cpp"
 
 CMakeFiles/project.dir/macros/PoliFitter_-_Copy.cpp.i: cmake_force
@@ -293,7 +1112,7 @@ CMakeFiles/project.dir/macros/PoliFitter_-_Copy.cpp.s: cmake_force
 
 CMakeFiles/project.dir/macros/PoliFitter.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/PoliFitter.cpp.o: ../macros/PoliFitter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/project.dir/macros/PoliFitter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object CMakeFiles/project.dir/macros/PoliFitter.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/PoliFitter.cpp.o -c /home/alon/project/macros/PoliFitter.cpp
 
 CMakeFiles/project.dir/macros/PoliFitter.cpp.i: cmake_force
@@ -306,7 +1125,7 @@ CMakeFiles/project.dir/macros/PoliFitter.cpp.s: cmake_force
 
 CMakeFiles/project.dir/macros/process_events.C.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/process_events.C.o: ../macros/process_events.C
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/project.dir/macros/process_events.C.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object CMakeFiles/project.dir/macros/process_events.C.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/process_events.C.o -c /home/alon/project/macros/process_events.C
 
 CMakeFiles/project.dir/macros/process_events.C.i: cmake_force
@@ -319,7 +1138,7 @@ CMakeFiles/project.dir/macros/process_events.C.s: cmake_force
 
 CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DAnalyser/CLAS12DAnalyser.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DAnalyser/CLAS12DAnalyser.cpp.o: ../setup/CLAS12DAnalysis/CLAS12DAnalyser/CLAS12DAnalyser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DAnalyser/CLAS12DAnalyser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DAnalyser/CLAS12DAnalyser.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DAnalyser/CLAS12DAnalyser.cpp.o -c /home/alon/project/setup/CLAS12DAnalysis/CLAS12DAnalyser/CLAS12DAnalyser.cpp
 
 CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DAnalyser/CLAS12DAnalyser.cpp.i: cmake_force
@@ -332,7 +1151,7 @@ CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DAnalyser/CLAS12DAnalyser.cpp
 
 CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DASettings/CLAS12DASettings.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DASettings/CLAS12DASettings.cpp.o: ../setup/CLAS12DAnalysis/CLAS12DASettings/CLAS12DASettings.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DASettings/CLAS12DASettings.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DASettings/CLAS12DASettings.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DASettings/CLAS12DASettings.cpp.o -c /home/alon/project/setup/CLAS12DAnalysis/CLAS12DASettings/CLAS12DASettings.cpp
 
 CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DASettings/CLAS12DASettings.cpp.i: cmake_force
@@ -345,7 +1164,7 @@ CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DASettings/CLAS12DASettings.c
 
 CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DHistograms/CLAS12DHistograms.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DHistograms/CLAS12DHistograms.cpp.o: ../setup/CLAS12DAnalysis/CLAS12DHistograms/CLAS12DHistograms.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DHistograms/CLAS12DHistograms.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DHistograms/CLAS12DHistograms.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DHistograms/CLAS12DHistograms.cpp.o -c /home/alon/project/setup/CLAS12DAnalysis/CLAS12DHistograms/CLAS12DHistograms.cpp
 
 CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DHistograms/CLAS12DHistograms.cpp.i: cmake_force
@@ -358,7 +1177,7 @@ CMakeFiles/project.dir/setup/CLAS12DAnalysis/CLAS12DHistograms/CLAS12DHistograms
 
 CMakeFiles/project.dir/source/classes/AMaps/AMaps.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/AMaps/AMaps.cpp.o: ../source/classes/AMaps/AMaps.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/project.dir/source/classes/AMaps/AMaps.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object CMakeFiles/project.dir/source/classes/AMaps/AMaps.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/AMaps/AMaps.cpp.o -c /home/alon/project/source/classes/AMaps/AMaps.cpp
 
 CMakeFiles/project.dir/source/classes/AMaps/AMaps.cpp.i: cmake_force
@@ -371,7 +1190,7 @@ CMakeFiles/project.dir/source/classes/AMaps/AMaps.cpp.s: cmake_force
 
 CMakeFiles/project.dir/source/classes/clas12ana/clas12ana_ver_1_myedit/example_ana.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/clas12ana/clas12ana_ver_1_myedit/example_ana.cpp.o: ../source/classes/clas12ana/clas12ana_ver_1_myedit/example_ana.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/project.dir/source/classes/clas12ana/clas12ana_ver_1_myedit/example_ana.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object CMakeFiles/project.dir/source/classes/clas12ana/clas12ana_ver_1_myedit/example_ana.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/clas12ana/clas12ana_ver_1_myedit/example_ana.cpp.o -c /home/alon/project/source/classes/clas12ana/clas12ana_ver_1_myedit/example_ana.cpp
 
 CMakeFiles/project.dir/source/classes/clas12ana/clas12ana_ver_1_myedit/example_ana.cpp.i: cmake_force
@@ -384,7 +1203,7 @@ CMakeFiles/project.dir/source/classes/clas12ana/clas12ana_ver_1_myedit/example_a
 
 CMakeFiles/project.dir/source/classes/clas12ana/example_ana_-_Copy.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/clas12ana/example_ana_-_Copy.cpp.o: ../source/classes/clas12ana/example_ana\ -\ Copy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/project.dir/source/classes/clas12ana/example_ana_-_Copy.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object CMakeFiles/project.dir/source/classes/clas12ana/example_ana_-_Copy.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/clas12ana/example_ana_-_Copy.cpp.o -c "/home/alon/project/source/classes/clas12ana/example_ana - Copy.cpp"
 
 CMakeFiles/project.dir/source/classes/clas12ana/example_ana_-_Copy.cpp.i: cmake_force
@@ -397,7 +1216,7 @@ CMakeFiles/project.dir/source/classes/clas12ana/example_ana_-_Copy.cpp.s: cmake_
 
 CMakeFiles/project.dir/source/classes/clas12ana/example_ana.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/clas12ana/example_ana.cpp.o: ../source/classes/clas12ana/example_ana.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/project.dir/source/classes/clas12ana/example_ana.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object CMakeFiles/project.dir/source/classes/clas12ana/example_ana.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/clas12ana/example_ana.cpp.o -c /home/alon/project/source/classes/clas12ana/example_ana.cpp
 
 CMakeFiles/project.dir/source/classes/clas12ana/example_ana.cpp.i: cmake_force
@@ -410,7 +1229,7 @@ CMakeFiles/project.dir/source/classes/clas12ana/example_ana.cpp.s: cmake_force
 
 CMakeFiles/project.dir/source/classes/clas12ana/skim_events.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/clas12ana/skim_events.cpp.o: ../source/classes/clas12ana/skim_events.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/project.dir/source/classes/clas12ana/skim_events.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object CMakeFiles/project.dir/source/classes/clas12ana/skim_events.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/clas12ana/skim_events.cpp.o -c /home/alon/project/source/classes/clas12ana/skim_events.cpp
 
 CMakeFiles/project.dir/source/classes/clas12ana/skim_events.cpp.i: cmake_force
@@ -423,7 +1242,7 @@ CMakeFiles/project.dir/source/classes/clas12ana/skim_events.cpp.s: cmake_force
 
 CMakeFiles/project.dir/source/classes/DEfficiency/DEfficiency.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/DEfficiency/DEfficiency.cpp.o: ../source/classes/DEfficiency/DEfficiency.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/project.dir/source/classes/DEfficiency/DEfficiency.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object CMakeFiles/project.dir/source/classes/DEfficiency/DEfficiency.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/DEfficiency/DEfficiency.cpp.o -c /home/alon/project/source/classes/DEfficiency/DEfficiency.cpp
 
 CMakeFiles/project.dir/source/classes/DEfficiency/DEfficiency.cpp.i: cmake_force
@@ -436,7 +1255,7 @@ CMakeFiles/project.dir/source/classes/DEfficiency/DEfficiency.cpp.s: cmake_force
 
 CMakeFiles/project.dir/source/classes/Directories/Directories.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/Directories/Directories.cpp.o: ../source/classes/Directories/Directories.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/project.dir/source/classes/Directories/Directories.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object CMakeFiles/project.dir/source/classes/Directories/Directories.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/Directories/Directories.cpp.o -c /home/alon/project/source/classes/Directories/Directories.cpp
 
 CMakeFiles/project.dir/source/classes/Directories/Directories.cpp.i: cmake_force
@@ -449,7 +1268,7 @@ CMakeFiles/project.dir/source/classes/Directories/Directories.cpp.s: cmake_force
 
 CMakeFiles/project.dir/source/classes/ExperimentParameters/ExperimentParameters.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/ExperimentParameters/ExperimentParameters.cpp.o: ../source/classes/ExperimentParameters/ExperimentParameters.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/project.dir/source/classes/ExperimentParameters/ExperimentParameters.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object CMakeFiles/project.dir/source/classes/ExperimentParameters/ExperimentParameters.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/ExperimentParameters/ExperimentParameters.cpp.o -c /home/alon/project/source/classes/ExperimentParameters/ExperimentParameters.cpp
 
 CMakeFiles/project.dir/source/classes/ExperimentParameters/ExperimentParameters.cpp.i: cmake_force
@@ -462,7 +1281,7 @@ CMakeFiles/project.dir/source/classes/ExperimentParameters/ExperimentParameters.
 
 CMakeFiles/project.dir/source/classes/hData/hData.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/hData/hData.cpp.o: ../source/classes/hData/hData.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/project.dir/source/classes/hData/hData.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object CMakeFiles/project.dir/source/classes/hData/hData.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/hData/hData.cpp.o -c /home/alon/project/source/classes/hData/hData.cpp
 
 CMakeFiles/project.dir/source/classes/hData/hData.cpp.i: cmake_force
@@ -475,7 +1294,7 @@ CMakeFiles/project.dir/source/classes/hData/hData.cpp.s: cmake_force
 
 CMakeFiles/project.dir/source/classes/hPlots/hPlot1D.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/hPlots/hPlot1D.cpp.o: ../source/classes/hPlots/hPlot1D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/project.dir/source/classes/hPlots/hPlot1D.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object CMakeFiles/project.dir/source/classes/hPlots/hPlot1D.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/hPlots/hPlot1D.cpp.o -c /home/alon/project/source/classes/hPlots/hPlot1D.cpp
 
 CMakeFiles/project.dir/source/classes/hPlots/hPlot1D.cpp.i: cmake_force
@@ -488,7 +1307,7 @@ CMakeFiles/project.dir/source/classes/hPlots/hPlot1D.cpp.s: cmake_force
 
 CMakeFiles/project.dir/source/classes/hPlots/hPlot1DStack.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/hPlots/hPlot1DStack.cpp.o: ../source/classes/hPlots/hPlot1DStack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/project.dir/source/classes/hPlots/hPlot1DStack.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object CMakeFiles/project.dir/source/classes/hPlots/hPlot1DStack.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/hPlots/hPlot1DStack.cpp.o -c /home/alon/project/source/classes/hPlots/hPlot1DStack.cpp
 
 CMakeFiles/project.dir/source/classes/hPlots/hPlot1DStack.cpp.i: cmake_force
@@ -501,7 +1320,7 @@ CMakeFiles/project.dir/source/classes/hPlots/hPlot1DStack.cpp.s: cmake_force
 
 CMakeFiles/project.dir/source/classes/hPlots/hPlot2D.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/hPlots/hPlot2D.cpp.o: ../source/classes/hPlots/hPlot2D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/project.dir/source/classes/hPlots/hPlot2D.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object CMakeFiles/project.dir/source/classes/hPlots/hPlot2D.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/hPlots/hPlot2D.cpp.o -c /home/alon/project/source/classes/hPlots/hPlot2D.cpp
 
 CMakeFiles/project.dir/source/classes/hPlots/hPlot2D.cpp.i: cmake_force
@@ -514,7 +1333,7 @@ CMakeFiles/project.dir/source/classes/hPlots/hPlot2D.cpp.s: cmake_force
 
 CMakeFiles/project.dir/source/classes/MomentumResolution/MomentumResolution.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/MomentumResolution/MomentumResolution.cpp.o: ../source/classes/MomentumResolution/MomentumResolution.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/project.dir/source/classes/MomentumResolution/MomentumResolution.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object CMakeFiles/project.dir/source/classes/MomentumResolution/MomentumResolution.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/MomentumResolution/MomentumResolution.cpp.o -c /home/alon/project/source/classes/MomentumResolution/MomentumResolution.cpp
 
 CMakeFiles/project.dir/source/classes/MomentumResolution/MomentumResolution.cpp.i: cmake_force
@@ -527,7 +1346,7 @@ CMakeFiles/project.dir/source/classes/MomentumResolution/MomentumResolution.cpp.
 
 CMakeFiles/project.dir/source/classes/TLCuts/TLCuts.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/TLCuts/TLCuts.cpp.o: ../source/classes/TLCuts/TLCuts.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/project.dir/source/classes/TLCuts/TLCuts.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object CMakeFiles/project.dir/source/classes/TLCuts/TLCuts.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/TLCuts/TLCuts.cpp.o -c /home/alon/project/source/classes/TLCuts/TLCuts.cpp
 
 CMakeFiles/project.dir/source/classes/TLCuts/TLCuts.cpp.i: cmake_force
@@ -540,7 +1359,7 @@ CMakeFiles/project.dir/source/classes/TLCuts/TLCuts.cpp.s: cmake_force
 
 CMakeFiles/project.dir/source/functions/Math_func/poly34.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/functions/Math_func/poly34.cpp.o: ../source/functions/Math_func/poly34.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/project.dir/source/functions/Math_func/poly34.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object CMakeFiles/project.dir/source/functions/Math_func/poly34.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/functions/Math_func/poly34.cpp.o -c /home/alon/project/source/functions/Math_func/poly34.cpp
 
 CMakeFiles/project.dir/source/functions/Math_func/poly34.cpp.i: cmake_force
@@ -553,7 +1372,7 @@ CMakeFiles/project.dir/source/functions/Math_func/poly34.cpp.s: cmake_force
 
 CMakeFiles/project.dir/source/other/fitexample_-_Copy.c.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/other/fitexample_-_Copy.c.o: ../source/other/fitexample\ -\ Copy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/project.dir/source/other/fitexample_-_Copy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/project.dir/source/other/fitexample_-_Copy.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/project.dir/source/other/fitexample_-_Copy.c.o   -c "/home/alon/project/source/other/fitexample - Copy.c"
 
 CMakeFiles/project.dir/source/other/fitexample_-_Copy.c.i: cmake_force
@@ -566,7 +1385,7 @@ CMakeFiles/project.dir/source/other/fitexample_-_Copy.c.s: cmake_force
 
 CMakeFiles/project.dir/source/other/fitexample.c.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/other/fitexample.c.o: ../source/other/fitexample.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/project.dir/source/other/fitexample.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/project.dir/source/other/fitexample.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/project.dir/source/other/fitexample.c.o   -c /home/alon/project/source/other/fitexample.c
 
 CMakeFiles/project.dir/source/other/fitexample.c.i: cmake_force
@@ -579,7 +1398,7 @@ CMakeFiles/project.dir/source/other/fitexample.c.s: cmake_force
 
 CMakeFiles/project.dir/source/other/hPlot1D_example.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/other/hPlot1D_example.cpp.o: ../source/other/hPlot1D_example.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/project.dir/source/other/hPlot1D_example.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object CMakeFiles/project.dir/source/other/hPlot1D_example.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/other/hPlot1D_example.cpp.o -c /home/alon/project/source/other/hPlot1D_example.cpp
 
 CMakeFiles/project.dir/source/other/hPlot1D_example.cpp.i: cmake_force
@@ -592,7 +1411,7 @@ CMakeFiles/project.dir/source/other/hPlot1D_example.cpp.s: cmake_force
 
 CMakeFiles/project.dir/source/Structures_beta/Histogram1D.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/Structures_beta/Histogram1D.cpp.o: ../source/Structures_beta/Histogram1D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/project.dir/source/Structures_beta/Histogram1D.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object CMakeFiles/project.dir/source/Structures_beta/Histogram1D.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/Structures_beta/Histogram1D.cpp.o -c /home/alon/project/source/Structures_beta/Histogram1D.cpp
 
 CMakeFiles/project.dir/source/Structures_beta/Histogram1D.cpp.i: cmake_force
@@ -605,7 +1424,7 @@ CMakeFiles/project.dir/source/Structures_beta/Histogram1D.cpp.s: cmake_force
 
 CMakeFiles/project.dir/Old_analysers/DetectorSimulationAnalyser.C.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/Old_analysers/DetectorSimulationAnalyser.C.o: ../Old_analysers/DetectorSimulationAnalyser.C
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/project.dir/Old_analysers/DetectorSimulationAnalyser.C.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object CMakeFiles/project.dir/Old_analysers/DetectorSimulationAnalyser.C.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/Old_analysers/DetectorSimulationAnalyser.C.o -c /home/alon/project/Old_analysers/DetectorSimulationAnalyser.C
 
 CMakeFiles/project.dir/Old_analysers/DetectorSimulationAnalyser.C.i: cmake_force
@@ -618,7 +1437,7 @@ CMakeFiles/project.dir/Old_analysers/DetectorSimulationAnalyser.C.s: cmake_force
 
 CMakeFiles/project.dir/main.c.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/project.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/project.dir/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/project.dir/main.c.o   -c /home/alon/project/main.c
 
 CMakeFiles/project.dir/main.c.i: cmake_force
@@ -631,7 +1450,7 @@ CMakeFiles/project.dir/main.c.s: cmake_force
 
 CMakeFiles/project.dir/Old_analysers/TruthLevelAnalyser.c.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/Old_analysers/TruthLevelAnalyser.c.o: ../Old_analysers/TruthLevelAnalyser.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/project.dir/Old_analysers/TruthLevelAnalyser.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/project.dir/Old_analysers/TruthLevelAnalyser.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/project.dir/Old_analysers/TruthLevelAnalyser.c.o   -c /home/alon/project/Old_analysers/TruthLevelAnalyser.c
 
 CMakeFiles/project.dir/Old_analysers/TruthLevelAnalyser.c.i: cmake_force
@@ -644,7 +1463,7 @@ CMakeFiles/project.dir/Old_analysers/TruthLevelAnalyser.c.s: cmake_force
 
 CMakeFiles/project.dir/TempInclude/Classes/HistogramsTemp/HistogramsTemp.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/TempInclude/Classes/HistogramsTemp/HistogramsTemp.cpp.o: ../TempInclude/Classes/HistogramsTemp/HistogramsTemp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/project.dir/TempInclude/Classes/HistogramsTemp/HistogramsTemp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object CMakeFiles/project.dir/TempInclude/Classes/HistogramsTemp/HistogramsTemp.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/TempInclude/Classes/HistogramsTemp/HistogramsTemp.cpp.o -c /home/alon/project/TempInclude/Classes/HistogramsTemp/HistogramsTemp.cpp
 
 CMakeFiles/project.dir/TempInclude/Classes/HistogramsTemp/HistogramsTemp.cpp.i: cmake_force
@@ -657,7 +1476,7 @@ CMakeFiles/project.dir/TempInclude/Classes/HistogramsTemp/HistogramsTemp.cpp.s: 
 
 CMakeFiles/project.dir/source/classes/Settings/Settings.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/Settings/Settings.cpp.o: ../source/classes/Settings/Settings.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/project.dir/source/classes/Settings/Settings.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object CMakeFiles/project.dir/source/classes/Settings/Settings.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/Settings/Settings.cpp.o -c /home/alon/project/source/classes/Settings/Settings.cpp
 
 CMakeFiles/project.dir/source/classes/Settings/Settings.cpp.i: cmake_force
@@ -670,7 +1489,7 @@ CMakeFiles/project.dir/source/classes/Settings/Settings.cpp.s: cmake_force
 
 CMakeFiles/project.dir/source/classes/Settings/CustomPlotsDirectory.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/Settings/CustomPlotsDirectory.cpp.o: ../source/classes/Settings/CustomPlotsDirectory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/project.dir/source/classes/Settings/CustomPlotsDirectory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object CMakeFiles/project.dir/source/classes/Settings/CustomPlotsDirectory.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/Settings/CustomPlotsDirectory.cpp.o -c /home/alon/project/source/classes/Settings/CustomPlotsDirectory.cpp
 
 CMakeFiles/project.dir/source/classes/Settings/CustomPlotsDirectory.cpp.i: cmake_force
@@ -683,7 +1502,7 @@ CMakeFiles/project.dir/source/classes/Settings/CustomPlotsDirectory.cpp.s: cmake
 
 CMakeFiles/project.dir/source/classes/ParticleID/ParticleID.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/ParticleID/ParticleID.cpp.o: ../source/classes/ParticleID/ParticleID.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/project.dir/source/classes/ParticleID/ParticleID.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object CMakeFiles/project.dir/source/classes/ParticleID/ParticleID.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/ParticleID/ParticleID.cpp.o -c /home/alon/project/source/classes/ParticleID/ParticleID.cpp
 
 CMakeFiles/project.dir/source/classes/ParticleID/ParticleID.cpp.i: cmake_force
@@ -696,7 +1515,7 @@ CMakeFiles/project.dir/source/classes/ParticleID/ParticleID.cpp.s: cmake_force
 
 CMakeFiles/project.dir/source/classes/RecoAnalyser/RecoAnalyser.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/RecoAnalyser/RecoAnalyser.cpp.o: ../source/classes/RecoAnalyser/RecoAnalyser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/project.dir/source/classes/RecoAnalyser/RecoAnalyser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object CMakeFiles/project.dir/source/classes/RecoAnalyser/RecoAnalyser.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/RecoAnalyser/RecoAnalyser.cpp.o -c /home/alon/project/source/classes/RecoAnalyser/RecoAnalyser.cpp
 
 CMakeFiles/project.dir/source/classes/RecoAnalyser/RecoAnalyser.cpp.i: cmake_force
@@ -709,7 +1528,7 @@ CMakeFiles/project.dir/source/classes/RecoAnalyser/RecoAnalyser.cpp.s: cmake_for
 
 CMakeFiles/project.dir/macros/zoomed_in_histogram.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/macros/zoomed_in_histogram.cpp.o: ../macros/zoomed_in_histogram.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/project.dir/macros/zoomed_in_histogram.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object CMakeFiles/project.dir/macros/zoomed_in_histogram.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/macros/zoomed_in_histogram.cpp.o -c /home/alon/project/macros/zoomed_in_histogram.cpp
 
 CMakeFiles/project.dir/macros/zoomed_in_histogram.cpp.i: cmake_force
@@ -722,7 +1541,7 @@ CMakeFiles/project.dir/macros/zoomed_in_histogram.cpp.s: cmake_force
 
 CMakeFiles/project.dir/source/classes/DataAnalyser/DataAnalyser.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/source/classes/DataAnalyser/DataAnalyser.cpp.o: ../source/classes/DataAnalyser/DataAnalyser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/project.dir/source/classes/DataAnalyser/DataAnalyser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object CMakeFiles/project.dir/source/classes/DataAnalyser/DataAnalyser.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/source/classes/DataAnalyser/DataAnalyser.cpp.o -c /home/alon/project/source/classes/DataAnalyser/DataAnalyser.cpp
 
 CMakeFiles/project.dir/source/classes/DataAnalyser/DataAnalyser.cpp.i: cmake_force
@@ -735,6 +1554,69 @@ CMakeFiles/project.dir/source/classes/DataAnalyser/DataAnalyser.cpp.s: cmake_for
 
 # Object files for target project
 project_OBJECTS = \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/BankHist.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChain.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChainWriter.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoFileSelector.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoHist.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoROOTOut.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoRootAction.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoSelector.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleHist.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleTree.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/tempHipoSelector.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/calorimeter.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ccdb_reader.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/cherenkov.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12databases.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12reader.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12writer.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/covmatrix.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/detector.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/event.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/forwardtagger.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbevent.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbparticle.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helflip.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helonline.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcevent.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcmatch.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcparticle.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle_detector.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/qadb_reader.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/rcdb_reader.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_band.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_cdet.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_fdet.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_ft.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_particle.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/runconfig.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler_reader.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintextras.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintillator.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/tracker.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/traj.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vertdoca.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vtp.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/hipo4/bank.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/hipo4/datastream.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/hipo4/dictionary.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/hipo4/event.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/hipo4/fusion.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_reader.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_writer.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/hipo4/reader.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/hipo4/record.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/hipo4/recordbuilder.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/hipo4/tuple.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/hipo4/utils.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/hipo4/wrapper.cpp.o" \
+"CMakeFiles/project.dir/home/alon/clas12root/hipo4/writer.cpp.o" \
 "CMakeFiles/project.dir/macros/Other/process_events.C.o" \
 "CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Electron.cpp.o" \
 "CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Nucleon.cpp.o" \
@@ -791,6 +1673,69 @@ project_OBJECTS = \
 # External object files for target project
 project_EXTERNAL_OBJECTS =
 
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/BankHist.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChain.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoChainWriter.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoFileSelector.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoHist.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoROOTOut.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoRootAction.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoSelector.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/HipoTreeMaker.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleHist.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/ParticleTree.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Root/tempHipoSelector.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/calorimeter.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ccdb_reader.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/cherenkov.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12databases.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12reader.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/clas12writer.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/covmatrix.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/detector.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/event.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/forwardtagger.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbevent.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/ftbparticle.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helflip.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/helonline.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/jsonFileMerger.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcevent.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcmatch.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mcparticle.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/mesonex_trigger.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/particle_detector.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/qadb_reader.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/rcdb_reader.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_band.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_cdet.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_fdet.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_ft.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/region_particle.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/runconfig.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scaler_reader.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintextras.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/scintillator.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/tracker.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/traj.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vertdoca.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/Clas12Banks/vtp.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/hipo4/bank.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/hipo4/datastream.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/hipo4/dictionary.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/hipo4/event.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/hipo4/fusion.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_reader.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/hipo4/ntuple_writer.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/hipo4/reader.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/hipo4/record.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/hipo4/recordbuilder.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/hipo4/tuple.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/hipo4/utils.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/hipo4/wrapper.cpp.o
+project: CMakeFiles/project.dir/home/alon/clas12root/hipo4/writer.cpp.o
 project: CMakeFiles/project.dir/macros/Other/process_events.C.o
 project: CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Electron.cpp.o
 project: CMakeFiles/project.dir/macros/PlotsEffAndACorr2x3/PlotsACorr2x3Nucleon.cpp.o
@@ -844,8 +1789,11 @@ project: CMakeFiles/project.dir/source/classes/RecoAnalyser/RecoAnalyser.cpp.o
 project: CMakeFiles/project.dir/macros/zoomed_in_histogram.cpp.o
 project: CMakeFiles/project.dir/source/classes/DataAnalyser/DataAnalyser.cpp.o
 project: CMakeFiles/project.dir/build.make
+project: /home/alon/clas12root/lib/libClas12Root.so
+project: /home/alon/clas12root/lib/libClas12Banks.so
+project: /home/alon/clas12root/lib/libHipo4.so
 project: CMakeFiles/project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Linking CXX executable project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alon/project/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Linking CXX executable project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

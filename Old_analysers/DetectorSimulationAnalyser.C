@@ -764,7 +764,7 @@ void EventAnalyser() {
     const bool delete_png_files = true, delete_root_files = true, delete_txt_files = true;
 
     /* Delete existing .txt files */
-    if (delete_txt_files) { system(("find " + plots_path + " -type f -iname '*.txt' -delete").c_str()); }
+    if (delete_txt_files) {   system(("find " + plots_path + " -type f -iname '*.txt' -delete").c_str()); }
 
     //<editor-fold desc="Deleting files by cases">
     if (delete_png_files && !delete_root_files) {
