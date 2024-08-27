@@ -262,7 +262,8 @@ void ExperimentParameters::ConfigureVaryingSampleName(const string &sn) {
     if (findSubstring(sn, "sim") ||
       (findSubstring(sn, "Uniform") || findSubstring(sn, "iniform") ||
        findSubstring(sn, "Isotrop") || findSubstring(sn, "isotrop"))) { // Sample is simulation
-        VaryingSampleName = SampleName;
+//        VaryingSampleName = SampleName;
+        VaryingSampleName = "C12x4_simulation_G18_Q204_6GeV";
     } else if (findSubstring(sn, "data")) { // Sample is data
         if (findSubstring(sn, "C12") && BeamAt6GeV) {
             VaryingSampleName = "C12x4_simulation_G18_Q204_6GeV";
