@@ -135,6 +135,11 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                 BeamAt6GeV = SimulationSample = true;
                 sName = "C_simulation_Justin_6GeV";
             }
+        } else if (AnalyseFilePath == "volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/598636MeV") { // C, simulation, 6GeV, ifarm
+            if (AnalyseFileSample == "reconhipo") {
+                BeamAt6GeV = SimulationSample = true;
+                sName = "Uniform_sample_598636MeV";
+            }
         } else if (AnalyseFilePath == "volatile/clas12/rg-m/48Ca/dst/recon") { // Ca48, data, 6GeV, ifarm
             if (AnalyseFileSample == "015832") {
                 BeamAt6GeV = DataSample = true;
@@ -331,12 +336,15 @@ double ExperimentParameters::ConfigureBeanEnergy(const string &sn) {
     double be;
 
     if (findSubstring(sn, "598636MeV") || findSubstring(sn, "598636mev") || findSubstring(sn, "598636")
+        ||findSubstring(sn, "5986MeV") || findSubstring(sn, "5986mev") || findSubstring(sn, "5986")
         || findSubstring(sn, "6GeV") || findSubstring(sn, "6Gev") || findSubstring(sn, "6gev")) {
         be = 5.98636;
     } else if (findSubstring(sn, "402962MeV") || findSubstring(sn, "402962mev") || findSubstring(sn, "402962")
+               || findSubstring(sn, "4029MeV") || findSubstring(sn, "4029mev") || findSubstring(sn, "4029")
                || findSubstring(sn, "4GeV") || findSubstring(sn, "4Gev") || findSubstring(sn, "4gev")) {
         be = 4.02962;
     } else if (findSubstring(sn, "207052MeV") || findSubstring(sn, "207052mev") || findSubstring(sn, "207052")
+               ||findSubstring(sn, "2070MeV") || findSubstring(sn, "2070mev") || findSubstring(sn, "2070")
                || findSubstring(sn, "2GeV") || findSubstring(sn, "2Gev") || findSubstring(sn, "2gev")) {
         be = 2.07052;
     }
