@@ -200,13 +200,51 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
     }
 
     //<editor-fold desc="Safety checks">
-    if (!BeamAt2GeV && !BeamAt4GeV && !BeamAt6GeV) { cout << "\n\nConfigureSampleName: beam energy unknown! Exiting...\n", exit(0); }
+    if (!BeamAt2GeV && !BeamAt4GeV && !BeamAt6GeV) {
+        cout << "\n\nConfigureSampleName: beam energy unknown! Configured variables are:\n";
+        cout << "AnalyseFilePath = " << AnalyseFilePath << "\n";
+        cout << "sName = " << sName << "\n";
+        cout << "BeamAt2GeV = " << BeamAt2GeV << "\n";
+        cout << "BeamAt4GeV = " << BeamAt4GeV << "\n";
+        cout << "BeamAt6GeV = " << BeamAt6GeV << "\n";
+        cout << "Exiting...\n", exit(0);
+    }
 
-    if (BeamAt2GeV && BeamAt4GeV && BeamAt6GeV) { cout << "\n\nConfigureSampleName: beam energy configuration error! Exiting...\n", exit(0); }
+    if (BeamAt2GeV && BeamAt4GeV && BeamAt6GeV) {
+        cout << "\n\nConfigureSampleName: beam energy configuration error! Configured variables are:\n";
+        cout << "AnalyseFilePath = " << AnalyseFilePath << "\n";
+        cout << "sName = " << sName << "\n";
+        cout << "BeamAt2GeV = " << BeamAt2GeV << "\n";
+        cout << "BeamAt4GeV = " << BeamAt4GeV << "\n";
+        cout << "BeamAt6GeV = " << BeamAt6GeV << "\n";
+        cout << "SimulationSample = " << SimulationSample << "\n";
+        cout << "DataSample = " << DataSample << "\n";
+        cout << "Exiting...\n", exit(0);
+    }
 
-    if (SimulationSample && DataSample) { cout << "\n\nConfigureSampleName: sample type unknown! Exiting...\n", exit(0); }
+    if (SimulationSample && DataSample) {
+        cout << "\n\nConfigureSampleName: sample type unknown! Configured variables are:\n";
+        cout << "AnalyseFilePath = " << AnalyseFilePath << "\n";
+        cout << "sName = " << sName << "\n";
+        cout << "BeamAt2GeV = " << BeamAt2GeV << "\n";
+        cout << "BeamAt4GeV = " << BeamAt4GeV << "\n";
+        cout << "BeamAt6GeV = " << BeamAt6GeV << "\n";
+        cout << "SimulationSample = " << SimulationSample << "\n";
+        cout << "DataSample = " << DataSample << "\n";
+        cout << "Exiting...\n", exit(0);
+    }
 
-    if (!SimulationSample && !DataSample) { cout << "\n\nConfigureSampleName: sample type configuration error! Exiting...\n", exit(0); }
+    if (!SimulationSample && !DataSample) {
+        cout << "\n\nConfigureSampleName: sample type configuration error! Configured variables are:\n";
+        cout << "AnalyseFilePath = " << AnalyseFilePath << "\n";
+        cout << "sName = " << sName << "\n";
+        cout << "BeamAt2GeV = " << BeamAt2GeV << "\n";
+        cout << "BeamAt4GeV = " << BeamAt4GeV << "\n";
+        cout << "BeamAt6GeV = " << BeamAt6GeV << "\n";
+        cout << "SimulationSample = " << SimulationSample << "\n";
+        cout << "DataSample = " << DataSample << "\n";
+        cout << "Exiting...\n", exit(0);
+    }
     //</editor-fold>
 
     ConfigureVaryingSampleName(sName);
