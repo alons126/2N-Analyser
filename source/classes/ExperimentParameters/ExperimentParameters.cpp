@@ -259,7 +259,9 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
 
 //<editor-fold desc="ConfigureVaryingSampleName function">
 void ExperimentParameters::ConfigureVaryingSampleName(const string &sn) {
-    if (findSubstring(sn, "sim")) { // Sample is simulation
+    if (findSubstring(sn, "sim") ||
+      (findSubstring(sn, "Uniform") || findSubstring(sn, "iniform") ||
+       findSubstring(sn, "Isotrop") || findSubstring(sn, "isotrop"))) { // Sample is simulation
         VaryingSampleName = SampleName;
     } else if (findSubstring(sn, "data")) { // Sample is data
         if (findSubstring(sn, "C12") && BeamAt6GeV) {
