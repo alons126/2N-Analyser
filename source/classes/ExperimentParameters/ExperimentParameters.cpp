@@ -135,7 +135,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                 BeamAt6GeV = SimulationSample = true;
                 sName = "C_simulation_Justin_6GeV";
             }
-        } else if (AnalyseFilePath == "volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/598636MeV") { // C, simulation, 6GeV, ifarm
+        } else if (AnalyseFilePath == "/lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/598636MeV") { // C, simulation, 6GeV, ifarm
             if (AnalyseFileSample == "reconhipo") {
                 BeamAt6GeV = SimulationSample = true;
                 sName = "Uniform_sample_598636MeV";
