@@ -11,10 +11,10 @@
 
 // TODO: change vertex cuts loading to be from .txt file.
 
-class CLAS12Analysis : public clas12ana
-{
-private:
-    // My Vz and dVz cuts ----------------------------------------------------------------------------------------------------------------------------------------------------
+class CLAS12Analysis : public clas12ana {
+   private:
+    // My Vz and dVz cuts
+    // ----------------------------------------------------------------------------------------------------------------------------------------------------
 
     vector<double> vertex_x_cuts_FD = {-99, 99};
     vector<double> vertex_x_cuts_CD = {-99, 99};
@@ -25,14 +25,20 @@ private:
     vector<double> vertex_z_cuts_FD = {-99, 99};
     vector<double> vertex_z_cuts_CD = {-99, 99};
 
-    vector<double> vertex_corr_cuts_FD = {-99, 99}; // electron vertex <-> particle vertex correlation cuts (FD only)
-    vector<double> vertex_corr_cuts_CD = {-99, 99}; // electron vertex <-> particle vertex correlation cuts (CD only)
+    vector<double> vertex_corr_cuts_FD = {
+        -99,
+        99};  // electron vertex <-> particle vertex correlation cuts (FD only)
+    vector<double> vertex_corr_cuts_CD = {
+        -99,
+        99};  // electron vertex <-> particle vertex correlation cuts (CD only)
 
-    // My all particles vector -----------------------------------------------------------------------------------------------------------------------------------------------
+    // My all particles vector
+    // -----------------------------------------------------------------------------------------------------------------------------------------------
 
     std::vector<region_part_ptr> allparticles;
 
-    // My attributs ----------------------------------------------------------------------------------------------------------------------------------------------------------
+    // My attributs
+    // ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
     bool f_NpheCuts = false;
 
@@ -43,67 +49,94 @@ private:
     double dPhi_p1_p2_Mean = 9999.;
 
     // TODO: ME: in the old clas12ana version, SF cuts where:
-    double SF_max_cut = .28, SF_min_cut = .2;
+    double SF_max_cut = .28;
+    double SF_min_cut = .2;
 
-    double dc_edge_cut = 10; // My addition (from Larry)
+    double dc_edge_cut = 10;  // My addition (from Larry)
 
-    // My debugging plots ----------------------------------------------------------------------------------------------------------------------------------------------------
+    // My debugging plots
+    // ----------------------------------------------------------------------------------------------------------------------------------------------------
 
-    TH2D *multi_p_vs_cpi_BC_debug = new TH2D("multi_p_vs_cpi_BC_debug",
-                                             "#font[12]{#p} vs. #font[12]{##pi^{#pm}} BC (no #e cuts, CD & FD);#font[12]{#p};#font[12]{##pi^{#pm}}",
-                                             10, 0, 10, 10, 0, 10);
-    TH1D *multi_p_BC_debug = new TH1D("multi_p_BC_debug", "#font[12]{#p} BC (no #e cuts, CD & FD);#font[12]{#p}", 10, 0, 10);
-    TH1D *multi_cpi_BC_debug = new TH1D("multi_cpi_BC_debug", "#font[12]{##pi^{#pm}} BC (no #e cuts, CD & FD);#font[12]{##pi^{#pm}}", 10, 0, 10);
+    TH2D *multi_p_vs_cpi_BC_debug =
+        new TH2D("multi_p_vs_cpi_BC_debug",
+                 "#font[12]{#p} vs. #font[12]{##pi^{#pm}} BC (no #e cuts, CD & "
+                 "FD);#font[12]{#p};#font[12]{##pi^{#pm}}",
+                 10, 0, 10, 10, 0, 10);
+    TH1D *multi_p_BC_debug = new TH1D(
+        "multi_p_BC_debug",
+        "#font[12]{#p} BC (no #e cuts, CD & FD);#font[12]{#p}", 10, 0, 10);
+    TH1D *multi_cpi_BC_debug = new TH1D(
+        "multi_cpi_BC_debug",
+        "#font[12]{##pi^{#pm}} BC (no #e cuts, CD & FD);#font[12]{##pi^{#pm}}",
+        10, 0, 10);
 
-    TH2D *multi_p_vs_cpi_AC_debug = new TH2D("multi_p_vs_cpi_AC_debug",
-                                             "#font[12]{#p} vs. #font[12]{##pi^{#pm}} AC (no #e cuts, CD & FD);#font[12]{#p};#font[12]{##pi^{#pm}}",
-                                             10, 0, 10, 10, 0, 10);
-    TH1D *multi_p_AC_debug = new TH1D("multi_p_AC_debug", "#font[12]{#p} AC (no #e cuts, CD & FD);#font[12]{#p}", 10, 0, 10);
-    TH1D *multi_cpi_AC_debug = new TH1D("multi_cpi_AC_debug", "#font[12]{##pi^{#pm}} AC (no #e cuts, CD & FD);#font[12]{##pi^{#pm}}", 10, 0, 10);
+    TH2D *multi_p_vs_cpi_AC_debug =
+        new TH2D("multi_p_vs_cpi_AC_debug",
+                 "#font[12]{#p} vs. #font[12]{##pi^{#pm}} AC (no #e cuts, CD & "
+                 "FD);#font[12]{#p};#font[12]{##pi^{#pm}}",
+                 10, 0, 10, 10, 0, 10);
+    TH1D *multi_p_AC_debug = new TH1D(
+        "multi_p_AC_debug",
+        "#font[12]{#p} AC (no #e cuts, CD & FD);#font[12]{#p}", 10, 0, 10);
+    TH1D *multi_cpi_AC_debug = new TH1D(
+        "multi_cpi_AC_debug",
+        "#font[12]{##pi^{#pm}} AC (no #e cuts, CD & FD);#font[12]{##pi^{#pm}}",
+        10, 0, 10);
 
-    TH2D *multi_p_vs_cpi_1e_cut_BC_debug = new TH2D("multi_p_vs_cpi_1e_cut_BC_debug",
-                                                    "#font[12]{#p} vs. #font[12]{##pi^{#pm}} BC (1e cut, CD & FD);#font[12]{#p};#font[12]{##pi^{#pm}}",
-                                                    10, 0, 10, 10, 0, 10);
-    TH1D *multi_p_1e_cut_BC_debug = new TH1D("multi_p_1e_cut_BC_debug", "#font[12]{#p} BC (1e cut, CD & FD);#font[12]{#p}", 10, 0, 10);
-    TH1D *multi_cpi_1e_cut_BC_debug = new TH1D("multi_cpi_1e_cut_BC_debug", "#font[12]{##pi^{#pm}} BC (1e cut, CD & FD);#font[12]{##pi^{#pm}}", 10, 0, 10);
+    TH2D *multi_p_vs_cpi_1e_cut_BC_debug =
+        new TH2D("multi_p_vs_cpi_1e_cut_BC_debug",
+                 "#font[12]{#p} vs. #font[12]{##pi^{#pm}} BC (1e cut, CD & "
+                 "FD);#font[12]{#p};#font[12]{##pi^{#pm}}",
+                 10, 0, 10, 10, 0, 10);
+    TH1D *multi_p_1e_cut_BC_debug =
+        new TH1D("multi_p_1e_cut_BC_debug",
+                 "#font[12]{#p} BC (1e cut, CD & FD);#font[12]{#p}", 10, 0, 10);
+    TH1D *multi_cpi_1e_cut_BC_debug = new TH1D(
+        "multi_cpi_1e_cut_BC_debug",
+        "#font[12]{##pi^{#pm}} BC (1e cut, CD & FD);#font[12]{##pi^{#pm}}", 10,
+        0, 10);
 
-    TH2D *multi_p_vs_cpi_1e_cut_AC_debug = new TH2D("multi_p_vs_cpi_1e_cut_AC_debug",
-                                                    "#font[12]{#p} vs. #font[12]{##pi^{#pm}} AC (1e cut, CD & FD);#font[12]{#p};#font[12]{##pi^{#pm}}",
-                                                    10, 0, 10, 10, 0, 10);
-    TH1D *multi_p_1e_cut_AC_debug = new TH1D("multi_p_1e_cut_AC_debug", "#font[12]{#p} AC (1e cut, CD & FD);#font[12]{#p}", 10, 0, 10);
-    TH1D *multi_cpi_1e_cut_AC_debug = new TH1D("multi_cpi_1e_cut_AC_debug", "#font[12]{##pi^{#pm}} AC (1e cut, CD & FD);#font[12]{##pi^{#pm}}", 10, 0, 10);
+    TH2D *multi_p_vs_cpi_1e_cut_AC_debug =
+        new TH2D("multi_p_vs_cpi_1e_cut_AC_debug",
+                 "#font[12]{#p} vs. #font[12]{##pi^{#pm}} AC (1e cut, CD & "
+                 "FD);#font[12]{#p};#font[12]{##pi^{#pm}}",
+                 10, 0, 10, 10, 0, 10);
+    TH1D *multi_p_1e_cut_AC_debug =
+        new TH1D("multi_p_1e_cut_AC_debug",
+                 "#font[12]{#p} AC (1e cut, CD & FD);#font[12]{#p}", 10, 0, 10);
+    TH1D *multi_cpi_1e_cut_AC_debug = new TH1D(
+        "multi_cpi_1e_cut_AC_debug",
+        "#font[12]{##pi^{#pm}} AC (1e cut, CD & FD);#font[12]{##pi^{#pm}}", 10,
+        0, 10);
 
-    // My private functions --------------------------------------------------------------------------------------------------------------------------------------------------
+    // My private functions
+    // --------------------------------------------------------------------------------------------------------------------------------------------------
 
-    void MyClear()
-    {
+    void MyClear() {
         allparticles.clear();
         Clear();
     }
 
-public:
-    // My public functions ---------------------------------------------------------------------------------------------------------------------------------------------------
+   public:
+    // My public functions
+    // ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-    void setVzcutsFD(double min, double max)
-    {
+    void setVzcutsFD(double min, double max) {
         vertex_z_cuts_FD.at(0) = min;
         vertex_z_cuts_FD.at(1) = max;
     }
 
-    void setVzcutsCD(double min, double max)
-    {
+    void setVzcutsCD(double min, double max) {
         vertex_z_cuts_CD.at(0) = min;
         vertex_z_cuts_CD.at(1) = max;
     }
 
-    void setVertexCorrCutsLimFD(double min, double max)
-    {
+    void setVertexCorrCutsLimFD(double min, double max) {
         vertex_corr_cuts_FD.at(0) = min;
         vertex_corr_cuts_FD.at(1) = max;
     }
 
-    void setVertexCorrCutsLimCD(double min, double max)
-    {
+    void setVertexCorrCutsLimCD(double min, double max) {
         vertex_corr_cuts_CD.at(0) = min;
         vertex_corr_cuts_CD.at(1) = max;
     }
@@ -126,14 +159,10 @@ public:
 
     double getNeutralBetaCutMean() { return FD_Neutral_Beta_Mean; }
 
-    double getdPhiCutMean()
-    {
-        if (dPhi_p1_p2_Mean == 9999.)
-        {
+    double getdPhiCutMean() {
+        if (dPhi_p1_p2_Mean == 9999.) {
             return 0;
-        }
-        else
-        {
+        } else {
             return dPhi_p1_p2_Mean;
         }
     };
@@ -144,49 +173,37 @@ public:
 
     bool HTCCNpheCuts(region_part_ptr p);
 
-    double GetPidCutSigma(int Pid, string region)
-    {
+    double GetPidCutSigma(int Pid, string region) {
         // TODO: My addition?
-        if (region == "CD")
-        {
+        if (region == "CD") {
             auto itter_CD = pid_cuts_cd.find(Pid);
 
             return itter_CD->second.at(1);
-        }
-        else if (region == "FD")
-        {
+        } else if (region == "FD") {
             auto itter_FD = pid_cuts_fd.find(Pid);
 
             return itter_FD->second.at(1);
-        }
-        else
-        {
+        } else {
             // TODO: figure out what to do in this case
             return -9999;
         }
     }
 
-    double GetPidCutMean(int Pid, string region)
-    {
+    double GetPidCutMean(int Pid, string region) {
         // TODO: My addition?
-        if (region == "CD")
-        {
+        if (region == "CD") {
             auto itter_CD = pid_cuts_cd.find(Pid);
 
             return itter_CD->second.at(0);
-        }
-        else if (region == "FD")
-        {
+        } else if (region == "FD") {
             auto itter_FD = pid_cuts_fd.find(Pid);
 
             return itter_FD->second.at(0);
-        }
-        else
-        {
+        } else {
             // TODO: figure out what to do in this case
             return -9999;
         }
     }
 };
 
-#endif // CLAS12ANALYSIS_H
+#endif  // CLAS12ANALYSIS_H
