@@ -26,7 +26,7 @@ private:
 
     string Added_PreStatuses, Added_Statuses;
 
-    string Global_Run_Status = "updated_th_test1_1";
+    string Global_Run_Status = "updated_clas12ana_test1_1";
 
 public:
 

@@ -1,20 +1,7 @@
-/*
-
- git pull && clas12root -b -q main.c
-
- * Copy commend (local -> JLab):
-scp -r /home/alon/project/temp/BankHist/Analyser.C -J asportes@ftp.jlab.org:/u/home/asportes/clas12project/
-
- * Copy commend (JLab -> local):
-scp -r asportes@ftp.jlab.org:/u/home/asportes/Analyser/plots -J /home/alon/project/temp/
-scp -r asportes@ftp.jlab.org:/w/hallb-scshelf2102/clas12/asportes/recon_c12_6gev.hipo -J /home/alon/project/temp/
-
- */
-
 #include "../setup/codeSetup.h"
 //#include "TempInclude/DetectorSimulationAnalyser_Histograms_Temp.C" //TODO: move to a class!
 #include "../source/classes/AMaps/AMaps.cpp"
-#include "../source/classes/clas12ana/clas12ana.h"
+#include "../source/classes/clas12ana/clas12ana.cpp"
 #include "../source/classes/DEfficiency/DEfficiency.cpp"
 #include "../source/classes/DSCuts/DSCuts.h"
 #include "../source/classes/hPlots/hPlot1D.cpp"
@@ -41,6 +28,8 @@ scp -r asportes@ftp.jlab.org:/w/hallb-scshelf2102/clas12/asportes/recon_c12_6gev
 
 using namespace std;
 using namespace clas12;
+
+/* source run.sh */
 
 void EventAnalyser()
 {

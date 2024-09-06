@@ -115,11 +115,11 @@ add_executable(project ${CLAS12ROOT_SOURCES} ${CLAS12BANKS_SOURCES} ${HIPO4_SOUR
         source/classes/clas12ana/clas12ana_ver_1_myedit/example_ana.cpp
         "source/classes/clas12ana/other/clas12ana - Copy (2).h"
         "source/classes/clas12ana/other/clas12ana - Copy.h"
-        source/classes/clas12ana/clas12ana.h
-        source/classes/clas12ana/clas12ana_ver_1_myedit.h
-        "source/classes/clas12ana/example_ana - Copy.cpp"
-        source/classes/clas12ana/example_ana.cpp
-        source/classes/clas12ana/skim_events.cpp
+        source/classes/clas12ana/clas12ana_ver_2_myedit_LatestMSc/clas12ana.h
+        source/classes/clas12ana/clas12ana_ver_2_myedit_LatestMSc/clas12ana_ver_1_myedit.h
+        "source/classes/clas12ana/clas12ana_ver_2_myedit_LatestMSc/example_ana - Copy.cpp"
+        source/classes/clas12ana/clas12ana_ver_2_myedit_LatestMSc/example_ana.cpp
+        source/classes/clas12ana/clas12ana_ver_2_myedit_LatestMSc/skim_events.cpp
         source/classes/DEfficiency/DEfficiency.cpp
         source/classes/DEfficiency/DEfficiency.h
         source/classes/Directories/Directories.cpp
@@ -235,7 +235,11 @@ add_executable(project ${CLAS12ROOT_SOURCES} ${CLAS12BANKS_SOURCES} ${HIPO4_SOUR
         source/classes/AMaps/CustomSliceLimits.h
         macros/zoomed_in_histogram.cpp
         source/classes/DataAnalyser/DataAnalyser.cpp
-        source/classes/DataAnalyser/DataAnalyser.h)
+        source/classes/DataAnalyser/DataAnalyser.h
+        source/classes/clas12ana/clas12ana.cpp
+        source/classes/clas12ana/clas12ana_ver_3_original/clas12ana.cpp
+        source/classes/CLAS12Analysis/CLAS12Analysis.cpp
+        source/classes/CLAS12Analysis/CLAS12Analysis.h)
 
 ## Link against ROOT and CLAS12ROOT libraries
 #target_link_libraries(project ${ROOT_LIBRARIES})

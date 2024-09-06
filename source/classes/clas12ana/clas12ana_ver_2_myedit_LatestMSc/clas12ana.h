@@ -164,12 +164,12 @@ public:
         vertex_z_cuts.at(1) = max;
     };
 
-    void setVzcutsFD(double min, double max) { // My addition!
+    void setVzcutsFD(double min, double max) { //My addition!
         vertex_z_cuts_FD.at(0) = min;
         vertex_z_cuts_FD.at(1) = max;
     };
 
-    void setVzcutsCD(double min, double max) { // My addition!
+    void setVzcutsCD(double min, double max) { //My addition!
         vertex_z_cuts_CD.at(0) = min;
         vertex_z_cuts_CD.at(1) = max;
     };
@@ -179,12 +179,12 @@ public:
         vertex_corr_cuts.at(1) = max;
     };
 
-    void setVertexCorrCutsLimFD(double min, double max) { // My addition!
+    void setVertexCorrCutsLimFD(double min, double max) { //My addition!
         vertex_corr_cuts_FD.at(0) = min;
         vertex_corr_cuts_FD.at(1) = max;
     };
 
-    void setVertexCorrCutsLimCD(double min, double max) { // My addition!
+    void setVertexCorrCutsLimCD(double min, double max) { //My addition!
         vertex_corr_cuts_CD.at(0) = min;
         vertex_corr_cuts_CD.at(1) = max;
     };
@@ -202,23 +202,23 @@ public:
     //  std::vector<region_part_ptr> getByPidChi2(int pid, double chi2);
 
     //<editor-fold desc="My addition (methods)">
-    double getEcalSFUpperCut() { return SF_max_cut; }; // My addition
+    double getEcalSFUpperCut() { return SF_max_cut; }; //My addition
 
-    double getEcalSFLowerCut() { return SF_min_cut; }; // My addition
+    double getEcalSFLowerCut() { return SF_min_cut; }; //My addition
 
-    double getDCEdgeCuts() { return dc_edge_cut; }; // My addition
+    double getDCEdgeCuts() { return dc_edge_cut; }; //My addition
 
-    double getEcalEdgeCuts() { return ecal_edge_cut; }; // My addition
+    double getEcalEdgeCuts() { return ecal_edge_cut; }; //My addition
 
-    void setNpheCuts(bool flag = true) { f_NpheCuts = flag; }; // My addition
+    void setNpheCuts(bool flag = true) { f_NpheCuts = flag; }; //My addition
 
-    double getNpheCuts() { return htcc_Nphe_cut; }; // My addition
+    double getNpheCuts() { return htcc_Nphe_cut; }; //My addition
 
-    double getNeutronMomentumCut() { return Neutron_Momentum_cut; }; // My addition
+    double getNeutronMomentumCut() { return Neutron_Momentum_cut; }; //My addition
 
-    double getNeutralBetaCut() { return FD_Neutral_Beta_cut; }; // My addition
+    double getNeutralBetaCut() { return FD_Neutral_Beta_cut; }; //My addition
 
-    double getNeutralBetaCutMean() { return FD_Neutral_Beta_Mean; }; // My addition
+    double getNeutralBetaCutMean() { return FD_Neutral_Beta_Mean; }; //My addition
 
     double getdPhiCutMean() {
         if (dPhi_p1_p2_Mean == 9999.) {
@@ -226,15 +226,15 @@ public:
         } else {
             return dPhi_p1_p2_Mean;
         }
-    }; // My addition
+    }; //My addition
 
-    std::vector <region_part_ptr> getParticles() { return allparticles; } // My addition
+    std::vector <region_part_ptr> getParticles() { return allparticles; } //My addition
 
-    void addToAllParticles(region_part_ptr p) { allparticles.push_back(p); } // My addition
+    void addToAllParticles(region_part_ptr p) { allparticles.push_back(p); } //My addition
 
-    bool HTCCNpheCuts(region_part_ptr p); // My addition
+    bool HTCCNpheCuts(region_part_ptr p); //My addition
 
-    double GetPidCutSigma(int Pid, string region) { // My addition?
+    double GetPidCutSigma(int Pid, string region) { //My addition?
         if (region == "CD") {
             auto itter_CD = pid_cuts_cd.find(Pid);
 
@@ -249,7 +249,7 @@ public:
         }
     }
 
-    double GetPidCutMean(int Pid, string region) { // My addition?
+    double GetPidCutMean(int Pid, string region) { //My addition?
         if (region == "CD") {
             auto itter_CD = pid_cuts_cd.find(Pid);
 
@@ -264,7 +264,7 @@ public:
         }
     }
 
-    void FillECALHitMap(region_part_ptr p); // My addition
+    void FillECALHitMap(region_part_ptr p); //My addition
     //</editor-fold>
 
 private:
@@ -311,14 +311,14 @@ private:
     map<int, vector<double> > pid_cuts_fd; // map<pid, {min,max cut}> Forward Detector (FD)
 
     vector<double> vertex_x_cuts = {-99, 99};
-    vector<double> vertex_x_cuts_FD = {-99, 99}; // My addition!
-    vector<double> vertex_x_cuts_CD = {-99, 99}; // My addition!
+    vector<double> vertex_x_cuts_FD = {-99, 99}; //My addition!
+    vector<double> vertex_x_cuts_CD = {-99, 99}; //My addition!
     vector<double> vertex_y_cuts = {-99, 99};
-    vector<double> vertex_y_cuts_FD = {-99, 99}; // My addition!
-    vector<double> vertex_y_cuts_CD = {-99, 99}; // My addition!
+    vector<double> vertex_y_cuts_FD = {-99, 99}; //My addition!
+    vector<double> vertex_y_cuts_CD = {-99, 99}; //My addition!
     vector<double> vertex_z_cuts = {-99, 99};
-    vector<double> vertex_z_cuts_FD = {-99, 99}; // My addition!
-    vector<double> vertex_z_cuts_CD = {-99, 99}; // My addition!
+    vector<double> vertex_z_cuts_FD = {-99, 99}; //My addition!
+    vector<double> vertex_z_cuts_CD = {-99, 99}; //My addition!
     map <string, vector<double>> vertex_cuts; //map< x,y,z, {min,max}>
     vector<double> vertex_corr_cuts = {-99, 99}; //electron vertex <-> particle vertex correlation cuts
     vector<double> vertex_corr_cuts_FD = {-99, 99}; //electron vertex <-> particle vertex correlation cuts (FD only, my addition!)
@@ -428,7 +428,6 @@ private:
     double dPhi_p1_p2_Mean = 9999.; // My addition
 
     // ME: in the old version, SF cuts where:
-    //TODO: CHECK WITH JUSTIN WHAT TO DO WITH THEM!
     double SF_max_cut = .28;
     double SF_min_cut = .2;
 
@@ -436,6 +435,7 @@ private:
 
     //<editor-fold desc="my debugging - multiplicity plots before cuts (= BC) - no #e cuts">
     /* my debugging - multiplicity plots before cuts (= BC) - no #e cuts */
+    //my addition - all of this folded code
 //    TH2D *multi_p_vs_cpi_fd_BC_debug = new TH2D("multi_p_vs_cpi_fd_BC_debug",
 //                                                "#font[12]{#p} vs. #font[12]{##pi^{#pm}} BC (no #e cuts, FD);#font[12]{#p};#font[12]{##pi^{#pm}}", 10, 0, 10, 10, 0, 10);
 //    TH2D *multi_p_vs_cpi_cd_BC_debug = new TH2D("multi_p_vs_cpi_cd_BC_debug",
@@ -509,7 +509,7 @@ private:
     //<editor-fold desc="Hit maps for efficiency plots (My addition)">
 
     //<editor-fold desc="Original">
-    //TODO: delete these plots
+    // delete these plots - removed!
     TH2D *hTheta_e_vs_Phi_e_fiducial_cuts_map_ECAL = new TH2D("Electron_fiducial_cuts_map_ECAL", "#theta_{e} vs. #phi_{e};#phi_{e} [Deg];#theta_{e} [Deg]",
                                                               250, -180, 180, 250, 0, 50);  // My addition
 
@@ -562,7 +562,7 @@ void clas12ana::Run(const std::unique_ptr <clas12::clas12reader> &c12) {
     auto particles = c12->getDetParticles(); //particles is now a std::vector of particles for this event
     auto electrons_det = c12->getByID(11);
 
-    //<editor-fold desc="My addition">
+    //<editor-fold desc=" TODO: My addition">
     auto protons_det = c12->getByID(2212);
     auto piplus_det = c12->getByID(211);
     auto piminus_det = c12->getByID(-211);
@@ -640,7 +640,7 @@ void clas12ana::Run(const std::unique_ptr <clas12::clas12reader> &c12) {
             el = electrons_det.erase(el);
         } else if (!EcalEdgeCuts(*el) && f_ecalEdgeCuts) { // ECAL edge cuts
             el = electrons_det.erase(el);
-        } else if (!HTCCNpheCuts(*el) && f_NpheCuts) { // HTCC Nphe cuts (my addition)
+        } else if (!HTCCNpheCuts(*el) && f_NpheCuts) { // TODO:  HTCC Nphe cuts (my addition)
             el = electrons_det.erase(el);
         } else if (!checkVertex(*el) && f_vertexCuts) { // Vertex cut
             el = electrons_det.erase(el);
@@ -688,15 +688,15 @@ void clas12ana::Run(const std::unique_ptr <clas12::clas12reader> &c12) {
 
         if (debug_plots) {
             fillDCdebug(electrons_det[0], dc_hit_map_a); //electron DC hit debug maps
-            hTheta_e_vs_Phi_e_fiducial_cuts_map_ECAL->Fill(electrons_det[0]->getPhi() * 180.0 / pi, electrons_det[0]->getTheta() * 180.0 / pi); // My addition
-            hAng_hit_map_electrons->Fill(electrons_det[0]->getPhi() * 180.0 / pi, electrons_det[0]->getTheta() * 180.0 / pi); // My addition
+            hTheta_e_vs_Phi_e_fiducial_cuts_map_ECAL->Fill(electrons_det[0]->getPhi() * 180.0 / pi, electrons_det[0]->getTheta() * 180.0 / pi); // TODO:  My addition
+            hAng_hit_map_electrons->Fill(electrons_det[0]->getPhi() * 180.0 / pi, electrons_det[0]->getTheta() * 180.0 / pi); //  TODO:  My addition
         }
 
         //DON'T FORGET TO ADD ++p ITTERATOR in this loop, it's not added in the for statement for a reason
         for (auto p = particles.begin(); p != particles.end();) {
 
             if (debug_plots) {
-                FillECALHitMap(*p); // My addition
+                FillECALHitMap(*p); //  TODO:  My addition
 
                 if ((*p)->par()->getPid() == 2212)
                     fillDCdebug(*p, dc_hit_map_b_proton);
@@ -707,7 +707,7 @@ void clas12ana::Run(const std::unique_ptr <clas12::clas12reader> &c12) {
             //neutrals and electrons don't follow cuts below, skip them
             if ((*p)->par()->getCharge() == 0 || (*p)->par()->getPid() == 11) {
                 setByPid(*p);
-                addToAllParticles(*p); // add neutrals and electrons to allparticles (My addition)
+                addToAllParticles(*p); //  TODO: add neutrals and electrons to allparticles (My addition)
                 ++p; //itterate
                 continue;
                 // ME: the continue (line above) will skip the rest of the cuts. Apparently, it was added here to allow the log of event_mult (recheck!)
@@ -745,10 +745,10 @@ void clas12ana::Run(const std::unique_ptr <clas12::clas12reader> &c12) {
                 p = particles.erase(p);
             } else { //itterate
                 setByPid(*p);
-                addToAllParticles(*p); // add all particles surviving the cuts in event to allparticles (My addition)
+                addToAllParticles(*p); // TODO:  add all particles surviving the cuts in event to allparticles (My addition)
 
                 if (debug_plots) {
-                    if ((*p)->par()->getPid() == 2212 && (*p)->getRegion() == FD) { // My addition!!
+                    if ((*p)->par()->getPid() == 2212 && (*p)->getRegion() == FD) { // TODO:  My addition!!
                         hTheta_p_vs_Phi_p_AMap_DC_WITH_CUTS->Fill((*p)->getPhi() * 180.0 / pi, (*p)->getTheta() * 180.0 / pi);
                         hAng_hit_map_protons->Fill((*p)->getPhi() * 180.0 / pi, (*p)->getTheta() * 180.0 / pi);
                     }
@@ -900,7 +900,7 @@ bool clas12ana::EcalEdgeCuts(region_part_ptr p) {
         return true;
 }
 
-bool clas12ana::HTCCNpheCuts(region_part_ptr p) { // My addition
+bool clas12ana::HTCCNpheCuts(region_part_ptr p) { //  TODO:  My addition
     //true if inside cut
     double Nphe = p->che(HTCC)->getNphe();
 
@@ -915,7 +915,7 @@ bool clas12ana::HTCCNpheCuts(region_part_ptr p) { // My addition
     }
 }
 
-bool clas12ana::checkEcalSFCuts(region_part_ptr p) { // ME: used to be checkEcalCuts
+bool clas12ana::checkEcalSFCuts(region_part_ptr p) { // TODO:  ME: used to be checkEcalCuts
     //true if inside cut
 
 //    //<editor-fold desc="Justin's original">
@@ -943,7 +943,7 @@ bool clas12ana::checkEcalSFCuts(region_part_ptr p) { // ME: used to be checkEcal
 //        return false;
 //    //</editor-fold>
 
-    //<editor-fold desc="My addition">
+    //<editor-fold desc=" TODO: My addition">
     if (p->par()->getPid() == 11) {
         double sampling_frac = getSF(p);
 
@@ -990,7 +990,7 @@ double clas12ana::getSF(region_part_ptr p) {
 
 bool clas12ana::checkVertex(region_part_ptr p) {
     //true if inside cut
-    if (p->getRegion() == FD) { // My addition!
+    if (p->getRegion() == FD) { // TODO:  My addition!
         return ((p->par()->getVx() > vertex_x_cuts_FD.at(0) && p->par()->getVx() < vertex_x_cuts_FD.at(1))
                 && (p->par()->getVy() > vertex_y_cuts_FD.at(0) && p->par()->getVy() < vertex_y_cuts_FD.at(1))
                 && (p->par()->getVz() > vertex_z_cuts_FD.at(0) && p->par()->getVz() < vertex_z_cuts_FD.at(1)));
@@ -1016,7 +1016,7 @@ bool clas12ana::checkVertex(region_part_ptr p) {
 bool clas12ana::checkVertexCorrelation(region_part_ptr el, region_part_ptr p) {
     //true if inside cut
 
-    if (p->getRegion() == FD) { // My addition!
+    if (p->getRegion() == FD) { //  TODO:  My addition!
         return ((p->par()->getVz() - el->par()->getVz()) > vertex_corr_cuts_FD.at(0) && (p->par()->getVz() - el->par()->getVz()) < vertex_corr_cuts_FD.at(1));
     } else if (p->getRegion() == CD) {
         return ((p->par()->getVz() - el->par()->getVz()) > vertex_corr_cuts_CD.at(0) && (p->par()->getVz() - el->par()->getVz()) < vertex_corr_cuts_CD.at(1));
@@ -1211,8 +1211,8 @@ void clas12ana::readInputParam(const char *filename) {
 
                 if (pid != "")
                     vertex_cuts.insert(pair < string, vector < double > > (pid, par));
-            } else if (parameter == "Momentum_cuts_ECAL") { // My addition
-//            else if (parameter == "Momentum_cuts") { // My addition
+            } else if (parameter == "Momentum_cuts_ECAL") { // TODO:  My addition
+//            else if (parameter == "Momentum_cuts") { // TODO:  My addition
                 //TODO: organize this properly with a map for each pdg.
                 ss >> parameter2;
                 stringstream ss2(parameter2);
@@ -1231,7 +1231,7 @@ void clas12ana::readInputParam(const char *filename) {
                 }
 
                 if (pid != "") { Neutron_Momentum_cut = par.at(1); }
-            } else if (parameter == "Beta_cut_ECAL") { // My addition
+            } else if (parameter == "Beta_cut_ECAL") { //  TODO:  My addition
                 //TODO: organize this properly with a map for each pdg.
                 ss >> parameter2;
                 stringstream ss2(parameter2);
@@ -1253,8 +1253,8 @@ void clas12ana::readInputParam(const char *filename) {
                     FD_Neutral_Beta_Mean = par.at(0);
                     FD_Neutral_Beta_cut = par.at(1);
                 }
-            } else if (parameter == "dPhi_pFD_pCD") { // My addition
-//            } else if (parameter == "dPhi_p1_p2") { // My addition
+            } else if (parameter == "dPhi_pFD_pCD") { //  TODO:  My addition
+//            } else if (parameter == "dPhi_p1_p2") { // TODO:  My addition
                 //TODO: organize this properly with a map for each pdg.
                 ss >> parameter2;
                 stringstream ss2(parameter2);
@@ -1541,12 +1541,12 @@ void clas12ana::InitDebugPlots() {
 void clas12ana::WriteDebugPlots() {
     TFile *f_debugOut = new TFile(debug_fileName, "RECREATE");
 
-    //<editor-fold desc="My addition">
-    hTheta_e_vs_Phi_e_fiducial_cuts_map_ECAL->Write();  // My addition
-    hTheta_p_vs_Phi_p_AMap_DC_NO_CUTS->Write();  // My addition
-    hTheta_p_vs_Phi_p_AMap_DC_WITH_CUTS->Write();  // My addition
-    hTheta_vs_Phi_hit_map_ECAL_no_fiducial_cuts->Write();  // My addition
-    hTheta_vs_Phi_hit_map_ECAL_w_fiducial_cuts->Write();  // My addition
+    //<editor-fold desc=" TODO: My addition">
+    hTheta_e_vs_Phi_e_fiducial_cuts_map_ECAL->Write();  // TODO:  My addition
+    hTheta_p_vs_Phi_p_AMap_DC_NO_CUTS->Write();  // TODO:  My addition
+    hTheta_p_vs_Phi_p_AMap_DC_WITH_CUTS->Write();  // TODO:  My addition
+    hTheta_vs_Phi_hit_map_ECAL_no_fiducial_cuts->Write();  // TODO:  My addition
+    hTheta_vs_Phi_hit_map_ECAL_w_fiducial_cuts->Write();  // TODO:  My addition
     //</editor-fold>
 
     for (int i = 1; i <= 6; i++) {
@@ -1617,7 +1617,7 @@ void clas12ana::WriteDebugPlots() {
     el_vz_debug->Write();
     el_vz_p_debug->Write();
 
-    //<editor-fold desc="my debugging - multiplicity plots before and after cuts (no #e cuts)">
+    //<editor-fold desc=" TODO: my debugging - multiplicity plots before and after cuts (no #e cuts)">
 //    multi_p_vs_cpi_fd_BC_debug->Write();
 //    multi_p_vs_cpi_fd_AC_debug->Write();
 //    multi_p_vs_cpi_cd_BC_debug->Write();
@@ -1638,7 +1638,7 @@ void clas12ana::WriteDebugPlots() {
     multi_cpi_AC_debug->Write();
     //</editor-fold>
 
-    //<editor-fold desc="my debugging - multiplicity plots before and after cuts (1e cut)">
+    //<editor-fold desc=" TODO: my debugging - multiplicity plots before and after cuts (1e cut)">
 //    multi_p_vs_cpi_1e_cut_fd_BC_debug->Write();
 //    multi_p_vs_cpi_1e_cut_fd_AC_debug->Write();
 //    multi_p_vs_cpi_1e_cut_cd_BC_debug->Write();
@@ -1661,18 +1661,18 @@ void clas12ana::WriteDebugPlots() {
 
     f_debugOut->Close();
 
-    //<editor-fold desc="write hit_map_ref file (my addition)">
+    //<editor-fold desc="write hit_map_ref file ( TODO: my addition)">
     TFile *hit_map_ref_Out = new TFile(hit_map_ref_Out_filename, "RECREATE");
-    hAng_hit_map_electrons->Write();  // My addition
-    hAng_hit_map_protons->Write();  // My addition
-    hAng_hit_map_neutrons->Write();  // My addition
+    hAng_hit_map_electrons->Write();  // TODO:  My addition
+    hAng_hit_map_protons->Write();  //  TODO: My addition
+    hAng_hit_map_neutrons->Write();  //  TODO: My addition
 
     hit_map_ref_Out->Close();
     //</editor-fold>
 
 }
 
-void clas12ana::FillECALHitMap(region_part_ptr p) { // My addition
+void clas12ana::FillECALHitMap(region_part_ptr p) { // TODO:  My addition
     if (p->getRegion() == FD) {
         if (p->par()->getCharge() == 0) {
             double fiducial_cut = dc_edge_cut;
