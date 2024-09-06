@@ -26,7 +26,7 @@ private:
 
     string Added_PreStatuses, Added_Statuses;
 
-    string Global_Run_Status = "11";
+    string Global_Run_Status = "Original_code_1";
 
 public:
 
