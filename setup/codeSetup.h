@@ -88,8 +88,8 @@ std::string file_name = "general_file";
 ////<editor-fold desc="Local hipo files - C12x4 @ 6GeV Q204 (24M, 4-foil)">
 // std::string AnalyseFilePath = "mnt/d/e4nu/hipo_data_files"; // Storage (D:)
 ////std::string AnalyseFilePath = "mnt/h/e4nu/hipo_data_files"; // Alon's
-///Passport (F:) /std::string AnalyseFilePath = "mnt/g/e4nu/hipo_data_files"; //
-///Alon's Portable (G:)
+/// Passport (F:) /std::string AnalyseFilePath = "mnt/g/e4nu/hipo_data_files";
+/// // Alon's Portable (G:)
 // std::string AnalyseFileSample = "C12x4_G18_02a_00_000_Q204_598636MeV"; // my
 // test with Justin's code; all particle data saved std::string AnalyseFileDir =
 // "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
@@ -105,7 +105,7 @@ std::string file_name = "general_file";
 ////</editor-fold>
 
 //<editor-fold desc="C12x4 5.98636GeV - run 015188 (ifarm DATA files - C12x4
-//DATA files)">
+// DATA files)">
 /* C12x4 5.98636GeV DATA file on ifarm */
 std::string AnalyseFilePath =
     "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon";
@@ -120,7 +120,7 @@ std::string AnalyseFile =
 //<editor-fold desc="Other">
 
 ////<editor-fold desc="C12x4 5.98636GeV - FULL (ifarm DATA files - C12x4 DATA
-///files)">
+/// files)">
 ///* C12x4 5.98636GeV DATA file on ifarm */
 // std::string AnalyseFilePath =
 // "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon"; std::string
@@ -134,7 +134,7 @@ std::string AnalyseFile =
 // std::string AnalyseFilePath = "mnt/h/e4nu/hipo_data_files"; // Alon's
 // Passport (F:)
 ////std::string AnalyseFilePath = "mnt/g/e4nu/hipo_data_files"; // Alon's
-///Portable (G:)
+/// Portable (G:)
 // std::string AnalyseFileSample = "C12_G18_02a_00_000_Q204_598636MeV"; // my
 // test with Justin's code; all particle data saved std::string AnalyseFileDir =
 // "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/"; std::string
@@ -152,15 +152,15 @@ std::string AnalyseFile =
 //
 ////std::string AnalyseFileSample =
 ///"recon_qe_GENIE_C_598636MeV_Q2_0_5_test_5_first_10"; // my test with Justin's
-///code; all particle data saved
+/// code; all particle data saved
 // std::string AnalyseFileSample =
 // "recon_qe_GENIE_C_598636MeV_Q2_0_5_test_5_first_100"; // my test with
 // Justin's code; all particle data saved
 ////std::string AnalyseFileSample =
 ///"recon_qe_GENIE_C_598636MeV_Q2_0_5_test_5_first_250"; // my test with
-///Justin's code; all particle data saved /std::string AnalyseFileSample =
+/// Justin's code; all particle data saved /std::string AnalyseFileSample =
 ///"recon_qe_GENIE_C_598636MeV_Q2_0_5_test_5";            // my test with
-///Justin's code; all particle data saved
+/// Justin's code; all particle data saved
 //
 // std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample
 // + "/"; std::string AnalyseFile = AnalyseFileDir + "*.hipo";
@@ -171,7 +171,7 @@ std::string AnalyseFile =
 //<editor-fold desc="Other C12x4 5.98636GeV runs">
 
 ////<editor-fold desc="C12x4 5.98636GeV - run 015186 (ifarm DATA files - C12x4
-///DATA files)">
+/// DATA files)">
 ///* C12x4 5.98636GeV DATA file on ifarm */
 // std::string AnalyseFilePath =
 // "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon"; std::string
@@ -181,7 +181,7 @@ std::string AnalyseFile =
 ////</editor-fold>
 
 ////<editor-fold desc="C12x4 5.98636GeV - run 015187 (ifarm DATA files - C12x4
-///DATA files)">
+/// DATA files)">
 ///* C12x4 5.98636GeV DATA file on ifarm */
 // std::string AnalyseFilePath =
 // "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon"; std::string
@@ -191,7 +191,7 @@ std::string AnalyseFile =
 ////</editor-fold>
 
 ////<editor-fold desc="C12x4 5.98636GeV - run 015189 (ifarm DATA files - C12x4
-///DATA files)">
+/// DATA files)">
 ///* C12x4 5.98636GeV DATA file on ifarm */
 // std::string AnalyseFilePath =
 // "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon"; std::string
@@ -201,7 +201,7 @@ std::string AnalyseFile =
 ////</editor-fold>
 
 ////<editor-fold desc="C12x4 5.98636GeV - run 015190 (ifarm DATA files - C12x4
-///DATA files)">
+/// DATA files)">
 ///* C12x4 5.98636GeV DATA file on ifarm */
 // std::string AnalyseFilePath =
 // "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon"; std::string
@@ -211,7 +211,7 @@ std::string AnalyseFile =
 ////</editor-fold>
 
 ////<editor-fold desc="C12x4 5.98636GeV - run 015191 (ifarm DATA files - C12x4
-///DATA files)">
+/// DATA files)">
 ///* C12x4 5.98636GeV DATA file on ifarm */
 // std::string AnalyseFilePath =
 // "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon"; std::string
@@ -221,7 +221,7 @@ std::string AnalyseFile =
 ////</editor-fold>
 
 ////<editor-fold desc="C12x4 5.98636GeV - run 015192 (ifarm DATA files - C12x4
-///DATA files)">
+/// DATA files)">
 ///* C12x4 5.98636GeV DATA file on ifarm */
 // std::string AnalyseFilePath =
 // "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon"; std::string
@@ -231,7 +231,7 @@ std::string AnalyseFile =
 ////</editor-fold>
 
 ////<editor-fold desc="C12x4 5.98636GeV - run 015193 (ifarm DATA files - C12x4
-///DATA files)">
+/// DATA files)">
 ///* C12x4 5.98636GeV DATA file on ifarm */
 // std::string AnalyseFilePath =
 // "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon"; std::string
@@ -241,7 +241,7 @@ std::string AnalyseFile =
 ////</editor-fold>
 
 ////<editor-fold desc="C12x4 5.98636GeV - run 015194 (ifarm DATA files - C12x4
-///DATA files)">
+/// DATA files)">
 ///* C12x4 5.98636GeV DATA file on ifarm */
 // std::string AnalyseFilePath =
 // "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon"; std::string
@@ -251,7 +251,7 @@ std::string AnalyseFile =
 ////</editor-fold>
 
 ////<editor-fold desc="C12x4 5.98636GeV - run 015195 (ifarm DATA files - C12x4
-///DATA files)">
+/// DATA files)">
 ///* C12x4 5.98636GeV DATA file on ifarm */
 // std::string AnalyseFilePath =
 // "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon"; std::string
@@ -323,7 +323,7 @@ std::string AnalyseFile =
 ////</editor-fold>
 
 ////<editor-fold desc="C12 5.98636GeV Q208 (ifarm MC files - Justin's MC
-///files)">
+/// files)">
 ///* C12 5.98636GeV (My MC files) */
 // std::string AnalyseFilePath =
 // "volatile/clas12/asportes/simulationFiles/C12_G18_02a_00_000_Q208_598636MeV";

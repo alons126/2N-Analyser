@@ -2648,7 +2648,7 @@ void EventAnalyser() {
     //</editor-fold>
 
     //<editor-fold desc="ECAL coordinates vs. SF plots vs. SF plots (pFDpCD,
-    //FD)">
+    // FD)">
     hPlot2D hVcal_VS_EoP_pFDpCD_PCAL = hPlot2D(
         "pFDpCD", "PCAL", "Vcal vs. SF", "ECAL V coordinate vs. SF",
         "ECAL V coordinate [cm]", "Sampling Fraction (SF)",
@@ -2664,7 +2664,7 @@ void EventAnalyser() {
     //</editor-fold>
 
     //<editor-fold desc="ECAL coordinates vs. SF plots vs. SF plots (nFDpCD,
-    //FD)">
+    // FD)">
     hPlot2D hVcal_VS_EoP_nFDpCD_PCAL = hPlot2D(
         "nFDpCD", "PCAL", "Vcal vs. SF", "ECAL V coordinate vs. SF",
         "ECAL V coordinate [cm]", "Sampling Fraction (SF)",
@@ -7755,7 +7755,7 @@ void EventAnalyser() {
     // ---------------------------------------------------------------------------------------------------------
 
     //<editor-fold desc="Theta_pFD_vs_Theta_pCD for every Theta_pFD_pCD (CD &
-    //FD)">
+    // FD)">
     TH2D *hTheta_pFD_vs_Theta_pCD_forall_Theta_pFD_pCD_2p = new TH2D(
         "#theta_{pFD} vs. #theta_{pCD} #forall#theta_{pFD,pCD} (All Int., 2p)",
         "#theta_{pFD} vs. #theta_{pCD} #forall#theta_{pFD,pCD} (All Int., "
@@ -8481,7 +8481,7 @@ void EventAnalyser() {
     //</editor-fold>
 
     //<editor-fold desc="Theta_P_pL_minus_q_pR and Theta_q_p_R (pFDpCD, CD &
-    //FD)">
+    // FD)">
     THStack *sTheta_P_pL_minus_q_pR_pFDpCD = new THStack(
         "#theta_{#vec{P}_{pL}-#vec{q},#vec{P}_{pR}} (All Int., pFDpCD)",
         "#theta_{#vec{P}_{pL}-#vec{q},#vec{P}_{pR}} - Opening Angle Between "
@@ -8742,7 +8742,7 @@ void EventAnalyser() {
     // ------------------------------------------------------------------------------------------------------
 
     //<editor-fold desc="Theta_pFD_vs_Theta_pCD for Theta_pFD_pCD < 20 (CD &
-    //FD)">
+    // FD)">
     TH2D *hTheta_pFD_vs_theta_pCD_for_Theta_pFD_pCD_20_pFDpCD = new TH2D(
         "#theta_{pFD} vs. #theta_{pCD} for #theta_{pFD,pCD}<20#circ (All Int., "
         "pFDpCD)",
@@ -8779,7 +8779,7 @@ void EventAnalyser() {
     // -----------------------------------------------------------------------------------------------------
 
     //<editor-fold desc="Theta_pFD_vs_Theta_pCD for every Theta_pFD_pCD (CD &
-    //FD)">
+    // FD)">
     TH2D *hTheta_pFD_vs_theta_pCD_forall_Theta_pFD_pCD_pFDpCD = new TH2D(
         "#theta_{pFD} vs. #theta_{pFD} #forall#theta_{pFD,pCD} (All Int., "
         "pFDpCD)",
@@ -9457,7 +9457,7 @@ void EventAnalyser() {
     //</editor-fold>
 
     //<editor-fold desc="Theta_P_nL_minus_q_nR and Theta_q_p_R (nFDpCD, CD &
-    //FD)">
+    // FD)">
     THStack *sTheta_P_nL_minus_q_nR_nFDpCD = new THStack(
         "#theta_{#vec{P}_{nL}-#vec{q},#vec{P}_{nR}} (All Int., nFDpCD)",
         "#theta_{#vec{P}_{nL}-#vec{q},#vec{P}_{nR}} - Opening Angle Between "
@@ -9715,7 +9715,7 @@ void EventAnalyser() {
     // ------------------------------------------------------------------------------------------------------
 
     //<editor-fold desc="Theta_nFD_vs_theta_pCD for Theta_nFD_pCD < 20 (CD &
-    //FD)">
+    // FD)">
     TH2D *hTheta_nFD_vs_theta_pCD_for_Theta_nFD_pCD_20_nFDpCD = new TH2D(
         "#theta_{nFD} vs. #theta_{pCD} for #theta_{nFD,pCD}<20#circ (All Int., "
         "nFDpCD)",
@@ -9767,7 +9767,7 @@ void EventAnalyser() {
     // -----------------------------------------------------------------------------------------------------------------------
 
     //<editor-fold desc="Theta_nFD_vs_theta_pCD for every Theta_nFD_pCD (CD &
-    //FD)">
+    // FD)">
     TH1D *hdphi_nFD_pCD_for_all_Theta_nFD_pCD_nFDpCD =
         new TH1D("#Delta#phi #forall#theta_{nFD,pCD} (All Int., nFDpCD)",
                  "#Delta#phi for every #theta_{nFD,pCD} (All Int., nFDpCD);"
@@ -18703,7 +18703,7 @@ void EventAnalyser() {
         //<editor-fold desc="Safety checks for leading FD neutron">
         if (ES_by_leading_FDneutron) {
             //<editor-fold desc="Safety checks that leading nFD is neutron by
-            //definition">
+            // definition">
             if (NeutronsFD_ind_mom_max != -1) {
                 bool LeadingnFDPCAL = (allParticles[NeutronsFD_ind_mom_max]
                                            ->cal(clas12::PCAL)
@@ -20942,7 +20942,7 @@ void EventAnalyser() {
                     // if id. TL leading neutron
 
                     //<editor-fold desc="Safety checks for TL neutrons (AMaps &
-                    //WMaps)">
+                    // WMaps)">
                     if (particlePDGtmp != 2112) {
                         cout << "\n\nTL neutrons check (AMaps & WMaps): TL "
                                 "neutron PGD is invalid ("
@@ -21068,7 +21068,7 @@ void EventAnalyser() {
         //<editor-fold desc="Other particles plots">
 
         //<editor-fold desc="All particles Beta vs. P plots (no #(electron) cut,
-        //CD & FD)">
+        // CD & FD)">
         for (int i = 0; i < allParticles_det.size(); i++) {
             if (allParticles_det[i]->getRegion() == FD) {
                 hBeta_vs_P_FD.hFill(allParticles_det[i]->getP(),
@@ -21083,7 +21083,7 @@ void EventAnalyser() {
         //</editor-fold>
 
         //<editor-fold desc="Neutrons Beta vs. P plots (no #(electron) cut, CD &
-        //FD)">
+        // FD)">
         for (int i = 0; i < neutrons.size(); i++) {
             if (neutrons[i]->getRegion() == FD) {
                 hBeta_vs_P_Neutrons_Only_FD.hFill(
@@ -21124,7 +21124,7 @@ void EventAnalyser() {
         //</editor-fold>
 
         //<editor-fold desc="Kplus Beta vs. P plots (no #(electron) cut, CD &
-        //FD)">
+        // FD)">
         for (int i = 0; i < Kplus.size(); i++) {
             if (Kplus[i]->getRegion() == CD) {
                 hBeta_vs_P_positive_part_All_e_CD.hFill(
@@ -21137,7 +21137,7 @@ void EventAnalyser() {
         //</editor-fold>
 
         //<editor-fold desc="Kminus Beta vs. P plots (no #(electron) cut, CD &
-        //FD)">
+        // FD)">
         for (int i = 0; i < Kminus.size(); i++) {
             if (Kminus[i]->getRegion() == CD) {
                 hBeta_vs_P_negative_part_All_e_CD.hFill(
@@ -21150,7 +21150,7 @@ void EventAnalyser() {
         //</editor-fold>
 
         //<editor-fold desc="piplus Beta vs. P plots (no #(electron) cut, CD &
-        //FD)">
+        // FD)">
         for (int i = 0; i < piplus.size(); i++) {
             if (piplus[i]->getRegion() == CD) {
                 hBeta_vs_P_positive_part_All_e_CD.hFill(
@@ -21163,7 +21163,7 @@ void EventAnalyser() {
         //</editor-fold>
 
         //<editor-fold desc="piminus Beta vs. P plots (no #(electron) cut, CD &
-        //FD)">
+        // FD)">
         for (int i = 0; i < piminus.size(); i++) {
             if (piminus[i]->getRegion() == CD) {
                 hBeta_vs_P_negative_part_All_e_CD.hFill(
@@ -21579,7 +21579,7 @@ void EventAnalyser() {
         //</editor-fold>
 
         //<editor-fold desc="FD Neutron and photon detection probability (1e
-        //cut, CD & FD)">
+        // cut, CD & FD)">
         if (Count_FD_neurton_and_photon_hits) {
             for (auto &n : neutrons) {
                 if (n->getRegion() == FD) {
@@ -21962,10 +21962,10 @@ void EventAnalyser() {
         //</editor-fold>
 
         //<editor-fold desc="Fill Beta vs. P for other particles (1e cut, CD &
-        //FD)">
+        // FD)">
 
         //<editor-fold desc="All particles Beta vs. P plots (no #(electron) cut,
-        //CD & FD)">
+        // CD & FD)">
         for (int i = 0; i < allParticles.size(); i++) {
             if (allParticles[i]->getRegion() == FD) {
                 hBeta_vs_P_1e_cut_FD.hFill(allParticles[i]->getP(),
@@ -22034,7 +22034,7 @@ void EventAnalyser() {
         //</editor-fold>
 
         //<editor-fold desc="Neutrons from clas12 Beta vs. P plots (1e cut, CD &
-        //FD)">
+        // FD)">
         for (int i = 0; i < neutrons.size(); i++) {
             if (neutrons[i]->getRegion() == CD) {
                 hBeta_vs_P_1e_cut_Neutrons_Only_CD_CLAS12.hFill(
@@ -22984,7 +22984,7 @@ void EventAnalyser() {
                             : clas12::ECOUT;  // find first layer of hit
 
                     //<editor-fold desc="Safety checks that leading nFD is
-                    //neutron by definition (AMaps & WMaps)">
+                    // neutron by definition (AMaps & WMaps)">
                     if (allParticles[NeutronsFD_ind_mom_max]->getRegion() !=
                         FD) {
                         cout << "\n\nLeading reco nFD check (AMaps & WMaps): "
@@ -23232,7 +23232,7 @@ void EventAnalyser() {
             // for 1p calculations (with any number of neutrals)
 
             //<editor-fold desc="Setting particle vectors & SaS variable (for
-            //code organization)">
+            // code organization)">
             /* Defining initial particle vectors: */
             region_part_ptr e_1p = electrons[Electron_ind.at(0)];
             region_part_ptr p_1p = protons[Protons_ind.at(0)];
@@ -24071,7 +24071,7 @@ void EventAnalyser() {
                                       // theta_n cuts
 
             //<editor-fold desc="Setting particle vectors & SaS variable (for
-            //code organization)">
+            // code organization)">
             /* Defining initial particle vectors: */
 
             //<editor-fold desc="Setting FD neutron index (1n)">
@@ -24405,7 +24405,7 @@ void EventAnalyser() {
             // -----------------------------------------------------------------------------------------------------------------------------------
 
             //<editor-fold desc="Applying neutron veto and Fillings 1n
-            //histograms">
+            // histograms">
 
             if (NeutronPassVeto_1n && Pass_Kin_Cuts_1n) {
                 ++num_of_events_1n_inFD_AV;
@@ -24689,7 +24689,7 @@ void EventAnalyser() {
                 //<editor-fold desc="Fill Beta plots (1n, FD only)">
 
                 //<editor-fold desc="Beta plots for neutrons from 'photons' (1n,
-                //FD)">
+                // FD)">
                 if (!ES_by_leading_FDneutron) {
                     for (int &i : NeutronsFD_ind) {
                         int PDGtmp = allParticles[i]->par()->getPid();
@@ -24741,7 +24741,7 @@ void EventAnalyser() {
                             //</editor-fold>
 
                             //<editor-fold desc="Beta_n_from_ph - !PCAL &&
-                            //ECIN">
+                            // ECIN">
                             if (!inPCALtmp && inECINtmp) {
                                 hBeta_n_from_ph_03_1n_FD.hFill(
                                     allParticles[i]->par()->getBeta());
@@ -24820,7 +24820,7 @@ void EventAnalyser() {
                         //</editor-fold>
 
                         //<editor-fold desc="Beta_n_from_ph - !PCAL && !ECIN &&
-                        //ECOUT">
+                        // ECOUT">
                         if (!inPCALtmp && !inECINtmp && inECOUTtmp) {
                             hBeta_n_from_ph_04_1n_FD.hFill(
                                 allParticles[n_ind_1n]->par()->getBeta());
@@ -24839,7 +24839,7 @@ void EventAnalyser() {
                 //<editor-fold desc="Beta vs. P from identified particles">
 
                 //<editor-fold desc="Beta vs. P from identified electrons (1n,
-                //FD)">
+                // FD)">
                 /* loop over Electron_ind, so that, is Electron_ind.size() != 1,
                  * you'll see what thw other electrons have */
                 for (int &i : Electron_ind) {
@@ -24860,7 +24860,7 @@ void EventAnalyser() {
                 //</editor-fold>
 
                 //<editor-fold desc="Beta vs. P from identified neutrons (1n,
-                //FD)">
+                // FD)">
                 for (int &i : NeutronsFD_ind) {
                     double P_n_temp =
                         pid.GetFDNeutronP(allParticles[i], apply_nucleon_cuts);
@@ -24893,7 +24893,7 @@ void EventAnalyser() {
                 //</editor-fold>
 
                 //<editor-fold desc="Beta vs. P from identified photons (1n,
-                //FD)">
+                // FD)">
                 for (int &i : PhotonsFD_ind) {
                     double P_ph_temp = allParticles[i]->getP();
 
@@ -24922,7 +24922,7 @@ void EventAnalyser() {
                 //</editor-fold>
 
                 //<editor-fold desc="Beta vs. P from identified protons (1n,
-                //FD)">
+                // FD)">
                 for (int &i : Protons_ind) {
                     double P_p_temp = protons[i]->getP();
 
@@ -24945,7 +24945,7 @@ void EventAnalyser() {
                 //</editor-fold>
 
                 //<editor-fold desc="Beta vs. P from identified piplus (1n,
-                //FD)">
+                // FD)">
                 for (int &i : Piplus_ind) {
                     double P_pip_temp = piplus[i]->getP();
 
@@ -24968,7 +24968,7 @@ void EventAnalyser() {
                 //</editor-fold>
 
                 //<editor-fold desc="Beta vs. P from identified piminus (1n,
-                //FD)">
+                // FD)">
                 for (int &i : Piminus_ind) {
                     double P_pim_temp = piminus[i]->getP();
 
@@ -25529,7 +25529,7 @@ void EventAnalyser() {
                                         TLNeutronP, RecoNeutronP, Weight);
 
                                     //<editor-fold desc="Linear fit
-                                    //justification plots">
+                                    // justification plots">
 
                                     //<editor-fold desc="basic variables">
                                     hReco_L_1n.hFill(Reco_L, Weight);
@@ -25873,7 +25873,7 @@ void EventAnalyser() {
                 Ecal_2p;
 
             //<editor-fold desc="Determining leading, recoil protons and their
-            //angles (2p)">
+            // angles (2p)">
             int lead_p_2p_ind,
                 recoil_p_2p_ind;  // indices of leading and recoil protons
 
@@ -26606,7 +26606,7 @@ void EventAnalyser() {
             ++num_of_events_with_1epFDpCD;  // logging #(events) w/ 1epFDpCD
 
             //<editor-fold desc="Setting particle vectors (for code
-            //organization) (pFDpCD)">
+            // organization) (pFDpCD)">
             /* Defining initial particle vectors. NOTE:
              * p_first corresponds to protons[Protons_ind.at(0)] & p_second
              * corresponds to protons[Protons_ind.at(1)] P_1 corresponds to
@@ -26763,7 +26763,7 @@ void EventAnalyser() {
                  omega_pFDpCD);  // TODO: ask Adi which mass should I use here
 
             //<editor-fold desc="Determining leading, recoil protons and their
-            //angles (pFDpCD)">
+            // angles (pFDpCD)">
             /* Determining leading and recoil particles (leading = particle with
              * greater momentum) */
             if (P_pFD_pFDpCD_3v.Mag() >= P_pCD_pFDpCD_3v.Mag()) {
@@ -27079,7 +27079,7 @@ void EventAnalyser() {
                 //<editor-fold desc="Filling Beta vs. P plots (pFDpCD)">
 
                 //<editor-fold desc="Beta vs. P from electrons (pFDpCD, CD &
-                //FD)">
+                // FD)">
                 if (e_pFDpCD->getRegion() == FD) {
                     hBeta_vs_P_pFDpCD_FD.hFill(e_pFDpCD->getP(),
                                                e_pFDpCD->par()->getBeta(),
@@ -27921,7 +27921,7 @@ void EventAnalyser() {
             ++num_of_events_nFDpCD;  // logging #(events) w/ 1enFDpCD
 
             //<editor-fold desc="Setting particle vectors (for code
-            //organization) (nFDpCD)">
+            // organization) (nFDpCD)">
             /* Defining initial particle vectors: */
 
             //<editor-fold desc="Setting FD neutron index (nFDpCD)">
@@ -28098,7 +28098,7 @@ void EventAnalyser() {
                  omega_nFDpCD);  // TODO: ask Adi which mass should I use here
 
             //<editor-fold desc="Determining leading, recoil protons and their
-            //angles (nFDpCD)">
+            // angles (nFDpCD)">
             double m_L, m_R;  // Leading and recoil nucleon masses
 
             /* Determining leading and recoil particles (leading = particle with
@@ -28596,7 +28596,7 @@ void EventAnalyser() {
                 //</editor-fold>
 
                 //<editor-fold desc="Beta vs. P from identified photons (nFDpCD,
-                //FD)">
+                // FD)">
                 for (int &i : PhotonsFD_ind) {
                     double P_ph_temp = allParticles[i]->getP();
 
@@ -28625,7 +28625,7 @@ void EventAnalyser() {
                 //</editor-fold>
 
                 //<editor-fold desc="Beta vs. P from identified protons (nFDpCD,
-                //FD)">
+                // FD)">
                 for (int &i : Protons_ind) {
                     double P_p_temp = protons[i]->getP();
 
@@ -28654,7 +28654,7 @@ void EventAnalyser() {
                 //</editor-fold>
 
                 //<editor-fold desc="Beta vs. P from identified piplus (nFDpCD,
-                //FD)">
+                // FD)">
                 for (int &i : Piplus_ind) {
                     double P_pip_temp = piplus[i]->getP();
 
@@ -28683,7 +28683,7 @@ void EventAnalyser() {
                 //</editor-fold>
 
                 //<editor-fold desc="Beta vs. P from identified piminus (nFDpCD,
-                //FD)">
+                // FD)">
                 for (int &i : Piminus_ind) {
                     double P_pim_temp = piminus[i]->getP();
 
@@ -28714,7 +28714,7 @@ void EventAnalyser() {
                 //</editor-fold>
 
                 //<editor-fold desc="Beta vs. P from other particles (nFDpCD,
-                //FD)">
+                // FD)">
                 /* This is for self-consistency. Contributions from other
                  * particles should be zero */
 
@@ -30478,7 +30478,7 @@ void EventAnalyser() {
         //</editor-fold>
 
         //<editor-fold desc="Reco momentum plots for momentum thresholds (1e
-        //cut)">
+        // cut)">
         hP_e_reco_1e_cut_FD.hDrawAndSave(SampleName, c1, plots,
                                          norm_Momentum_plots, true, 1., -9999,
                                          9999, 0, false);
@@ -33262,14 +33262,14 @@ void EventAnalyser() {
         // --------------------------------------------------------------------------------------------------------------
 
         //<editor-fold desc="Theta_p1_vs_Theta_p2 for Theta_p1_p2 < 20 (2p, CD &
-        //FD)">
+        // FD)">
         histPlotter2D(c1, hTheta_p1_vs_theta_p2_for_Theta_p1_p2_20_2p, 0.06,
                       true, 0.0425, 0.0425, 0.0425, plots, false,
                       hTheta_p1_vs_theta_p2_for_Theta_p1_p2_20_2p_Dir,
                       "01a_Theta_p1_vs_theta_p2_for_Theta_p1_p2_20_2p");
 
         //<editor-fold desc="Theta_p1_vs_Theta_p2 for Theta_p1_p2 monitoring
-        //plots">
+        // plots">
         if (apply_nucleon_cuts && GoodProtonsMonitorPlots) {
             histPlotter2D(
                 c1, pid.hTheta_pi_vs_theta_pj_for_Theta_pi_pj_20_BC_2idp_2p,
@@ -33310,7 +33310,7 @@ void EventAnalyser() {
         // ----------------------------------------------------------------------------------------------------------
 
         //<editor-fold desc="Theta_pFD_vs_Theta_pCD for Theta_pFD_pCD < 20 (2p,
-        //CD & FD)">
+        // CD & FD)">
         histPlotter2D(
             c1, hTheta_pFD_vs_Theta_pCD_for_Theta_pFD_pCD_20_2p, 0.06, true,
             0.0425, 0.0425, 0.0425, plots, false,
@@ -33385,7 +33385,7 @@ void EventAnalyser() {
                       "01b_Theta_p1_vs_theta_p2_for_every_Theta_p1_p2_2p");
 
         //<editor-fold desc="Theta_p1_vs_Theta_p2 for every Theta_p1_p2
-        //monitoring plots">
+        // monitoring plots">
         if (apply_nucleon_cuts && GoodProtonsMonitorPlots) {
             histPlotter2D(
                 c1, pid.hTheta_pi_vs_theta_pj_forall_Theta_pi_pj_BC_2idp_2p,
@@ -33426,7 +33426,7 @@ void EventAnalyser() {
         // ---------------------------------------------------------------------------------------------------------
 
         //<editor-fold desc="Theta_pFD_vs_Theta_pCD for every Theta_pFD_pCD (2p,
-        //CD & FD)">
+        // CD & FD)">
         histPlotter2D(c1, hTheta_pFD_vs_Theta_pCD_forall_Theta_pFD_pCD_2p, 0.06,
                       true, 0.0425, 0.0425, 0.0425, plots, false,
                       hTheta_pFD_vs_Theta_pCD_forall_Theta_pFD_pCD_2p_Dir,
@@ -33576,7 +33576,7 @@ void EventAnalyser() {
         //</editor-fold>
 
         //<editor-fold desc="Theta_p1_p2 vs. position1-position2 plots (2p,
-        //CD)">
+        // CD)">
         pid.hTheta_pi_pj_VS_Posi_Posj_BC_2idp_2p.hDrawAndSave(SampleName, c1,
                                                               plots, true);
         pid.hTheta_pi_pj_VS_Posi_Posj_RE_2idp_2p.hDrawAndSave(SampleName, c1,
@@ -34393,7 +34393,7 @@ void EventAnalyser() {
         // --------------------------------------------------------------------------------------------------------------------
 
         //<editor-fold desc="dPhi_pFD_pCD for Theta_pFD_pCD < 20 (pFDpCD, CD &
-        //FD)">
+        // FD)">
         double hdPhi_pFD_pCD_for_Theta_pFD_pCD_20_pFDpCD_integral =
             hdPhi_pFD_pCD_for_Theta_pFD_pCD_20_pFDpCD->Integral();
         double hdPhi_pFD_pCD_for_Theta_pFD_pCD_20_ZOOMIN_pFDpCD_integral =
@@ -35332,7 +35332,7 @@ void EventAnalyser() {
         //  --------------------------------------------------------------------------------------------------------------------
 
         //<editor-fold desc="dphi_nFD_pCD for Theta_nFD_pCD < 20 (nFDpCD, CD &
-        //FD)">
+        // FD)">
         double hdphi_nFD_pCD_for_Theta_nFD_pCD_20_nFDpCD_integral =
             hdphi_nFD_pCD_for_Theta_nFD_pCD_20_nFDpCD->Integral();
         double hdphi_nFD_pCD_for_Theta_nFD_pCD_20_ZOOMIN_nFDpCD_integral =
