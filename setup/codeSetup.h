@@ -67,12 +67,12 @@ std::string file_name = "general_file";
 
 // hipo files -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-//<editor-fold desc="Local hipo files - Uniform sample @ 6GeV">
-std::string AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/598636MeV";                                              // Storage (D:)
-std::string AnalyseFileSample = "reconhipo";                                                               // my test with Justin's code; all particle data saved
-std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-std::string AnalyseFile = AnalyseFileDir + "recon_Uniform_sample_598636MeV_*.hipo";                        // 11 files
-//</editor-fold>
+////<editor-fold desc="Local hipo files - Uniform sample @ 6GeV">
+//std::string AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/598636MeV";                                              // Storage (D:)
+//std::string AnalyseFileSample = "reconhipo";                                                               // my test with Justin's code; all particle data saved
+//std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+//std::string AnalyseFile = AnalyseFileDir + "recon_Uniform_sample_598636MeV_*.hipo";                        // 11 files
+////</editor-fold>
 
 ////<editor-fold desc="Local hipo files - C12x4 @ 6GeV Q204 (24M, 4-foil)">
 //std::string AnalyseFilePath = "mnt/d/e4nu/hipo_data_files";                                              // Storage (D:)
@@ -87,14 +87,14 @@ std::string AnalyseFile = AnalyseFileDir + "recon_Uniform_sample_598636MeV_*.hip
 ////std::string AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_2*.hipo";          // 512 files
 ////</editor-fold>
 
-////<editor-fold desc="C12x4 5.98636GeV - run 015188 (ifarm DATA files - C12x4 DATA files)">
-///* C12x4 5.98636GeV DATA file on ifarm */
-//std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon";
-//std::string AnalyseFileSample = "015188";
-//std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-////std::string AnalyseFile = AnalyseFileDir + "rec_clas_015188.evio.01685-01689.hipo";
-//std::string AnalyseFile = AnalyseFileDir + "*.hipo";
-////</editor-fold>
+//<editor-fold desc="C12x4 5.98636GeV - run 015188 (ifarm DATA files - C12x4 DATA files)">
+/* C12x4 5.98636GeV DATA file on ifarm */
+std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon";
+std::string AnalyseFileSample = "015188";
+std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+std::string AnalyseFile = AnalyseFileDir + "rec_clas_015188.evio.01685-01689.hipo"; // One run file
+//std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // All run files
+//</editor-fold>
 
 //<editor-fold desc="Other">
 
