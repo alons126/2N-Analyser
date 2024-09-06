@@ -112,6 +112,7 @@ public:
 // ChargedParticleID function --------------------------------------------------------------------------------------------------------------------
 
     vector<int> ChargedParticleID(vector <region_part_ptr> &Particle, const DSCuts &Momentum_th);
+    vector<int> ChargedParticleID(vector <region_part_ptr> &Particle, const DSCuts &FD_momentum_th, const DSCuts &CD_momentum_th);
 
 // FDNeutralParticle function --------------------------------------------------------------------------------------------------------------------
 
