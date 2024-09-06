@@ -9,38 +9,38 @@ find_package(ROOT REQUIRED)
 # Include ROOT
 include_directories(${ROOT_INCLUDE_DIRS})
 
-# Set the path to CLAS12ROOT includes and libraries
-set(CLAS12ROOT_INCLUDE_DIR /home/alon/clas12root/Clas12Root)
-set(CLAS12BANKS_INCLUDE_DIR /home/alon/clas12root/Clas12Banks)
-set(HIPO4_INCLUDE_DIR /home/alon/clas12root/hipo4)
-
-# Include directories for CLAS12ROOT
-include_directories(${CLAS12ROOT_INCLUDE_DIR})
-include_directories(${CLAS12BANKS_INCLUDE_DIR})
-include_directories(${HIPO4_INCLUDE_DIR})
-
-# Set library paths
-set(CLAS12ROOT_LIBRARY /home/alon/clas12root/lib/libClas12Root.so)
-set(CLAS12BANKS_LIBRARY /home/alon/clas12root/lib/libClas12Banks.so)
-set(HIPO4_LIBRARY /home/alon/clas12root/lib/libHipo4.so)
-
-# Check if the library files exist
-if (NOT EXISTS ${CLAS12ROOT_LIBRARY})
-    message(FATAL_ERROR "CLAS12ROOT_LIBRARY does not exist at ${CLAS12ROOT_LIBRARY}")
-endif()
-
-if (NOT EXISTS ${CLAS12BANKS_LIBRARY})
-    message(FATAL_ERROR "CLAS12BANKS_LIBRARY does not exist at ${CLAS12BANKS_LIBRARY}")
-endif()
-
-if (NOT EXISTS ${HIPO4_LIBRARY})
-    message(FATAL_ERROR "HIPO4_LIBRARY does not exist at ${HIPO4_LIBRARY}")
-endif()
-
-# Collect all .cpp files in the src directory
-file(GLOB CLAS12ROOT_SOURCES "${CLAS12ROOT_INCLUDE_DIR}/*.cpp")
-file(GLOB CLAS12BANKS_SOURCES "${CLAS12BANKS_INCLUDE_DIR}/*.cpp")
-file(GLOB HIPO4_SOURCES "${HIPO4_INCLUDE_DIR}/*.cpp")
+## Set the path to CLAS12ROOT includes and libraries
+#set(CLAS12ROOT_INCLUDE_DIR /home/alon/clas12root/Clas12Root)
+#set(CLAS12BANKS_INCLUDE_DIR /home/alon/clas12root/Clas12Banks)
+#set(HIPO4_INCLUDE_DIR /home/alon/clas12root/hipo4)
+#
+## Include directories for CLAS12ROOT
+#include_directories(${CLAS12ROOT_INCLUDE_DIR})
+#include_directories(${CLAS12BANKS_INCLUDE_DIR})
+#include_directories(${HIPO4_INCLUDE_DIR})
+#
+## Set library paths
+#set(CLAS12ROOT_LIBRARY /home/alon/clas12root/lib/libClas12Root.so)
+#set(CLAS12BANKS_LIBRARY /home/alon/clas12root/lib/libClas12Banks.so)
+#set(HIPO4_LIBRARY /home/alon/clas12root/lib/libHipo4.so)
+#
+## Check if the library files exist
+#if (NOT EXISTS ${CLAS12ROOT_LIBRARY})
+#    message(FATAL_ERROR "CLAS12ROOT_LIBRARY does not exist at ${CLAS12ROOT_LIBRARY}")
+#endif()
+#
+#if (NOT EXISTS ${CLAS12BANKS_LIBRARY})
+#    message(FATAL_ERROR "CLAS12BANKS_LIBRARY does not exist at ${CLAS12BANKS_LIBRARY}")
+#endif()
+#
+#if (NOT EXISTS ${HIPO4_LIBRARY})
+#    message(FATAL_ERROR "HIPO4_LIBRARY does not exist at ${HIPO4_LIBRARY}")
+#endif()
+#
+## Collect all .cpp files in the src directory
+#file(GLOB CLAS12ROOT_SOURCES "${CLAS12ROOT_INCLUDE_DIR}/*.cpp")
+#file(GLOB CLAS12BANKS_SOURCES "${CLAS12BANKS_INCLUDE_DIR}/*.cpp")
+#file(GLOB HIPO4_SOURCES "${HIPO4_INCLUDE_DIR}/*.cpp")
 
 # Add executable
 #add_executable(project ${CLAS12ROOT_SOURCES} ${CLAS12BANKS_SOURCES} ${HIPO4_SOURCES})
@@ -240,4 +240,5 @@ add_executable(project ${CLAS12ROOT_SOURCES} ${CLAS12BANKS_SOURCES} ${HIPO4_SOUR
 ## Link against ROOT and CLAS12ROOT libraries
 #target_link_libraries(project ${ROOT_LIBRARIES})
 
-target_link_libraries(project ${ROOT_LIBRARIES} ${CLAS12ROOT_LIBRARY} ${CLAS12BANKS_LIBRARY} ${HIPO4_LIBRARY})
+target_link_libraries(project ${ROOT_LIBRARIES})
+#target_link_libraries(project ${ROOT_LIBRARIES} ${CLAS12ROOT_LIBRARY} ${CLAS12BANKS_LIBRARY} ${HIPO4_LIBRARY})
