@@ -43,8 +43,7 @@ private:
     double dPhi_p1_p2_Mean = 9999.;
 
     // TODO: ME: in the old clas12ana version, SF cuts where:
-    double SF_max_cut = .28;
-    double SF_min_cut = .2;
+    double SF_max_cut = .28, SF_min_cut = .2;
 
     double dc_edge_cut = 10; // My addition (from Larry)
 
