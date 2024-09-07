@@ -66,5 +66,7 @@
         "stack": "cpp",
         "unordered_set": "cpp",
         "valarray": "cpp"
-    }
+    },
+    "editor.wordWrapColumn": 160,
+    "editor.wordWrap": "wordWrapColumn"
 }

@@ -432,3 +432,237 @@ void CLAS12Analysis::RunAnalysisCuts(
     }  // good electron loop
     /* My edit - end */
 }
+
+// ConfigureElectronCuts function -----------------------------------------
+
+/*
+This function configures electron quality cuts.
+*/
+void CLAS12Analysis::ConfigureElectronCuts(
+    const bool apply_cuts,  // master
+    const bool apply_Nphe_cut, DSCuts &Nphe_cuts_FD,
+    const bool apply_ECAL_SF_cuts, const char *filename_SF_cuts,
+    DSCuts &SF_cuts, const bool apply_ECAL_P_cuts, const char *filename_P_cuts,
+    const bool apply_ECAL_diag_cut, const bool apply_ECAL_fiducial_cuts,
+    DSCuts &PCAL_edge_cuts) {
+    if (apply_cuts) {
+        // Cuts on electrons only:
+        if (apply_Nphe_cut) {
+            // making f_NpheCuts = ture (HTCC cuts)
+            Nphe_cuts_FD =
+                DSCuts("Nphe", "FD", "Electron", "1e cut", 0, getNpheCuts());
+            setNpheCuts();
+        }
+
+        if (apply_ECAL_SF_cuts) {
+            // making f_ecalSFCuts = ture
+            // TODO: ask justin what are these cuts:
+            // TODO: ask justin for these cuts for LH2 and C12 (and other
+            // elements)
+            readEcalSFPar(filename_SF_cuts);
+            // TODO: RECHECK WHAT ARE THE CUTS HERE:
+            SF_cuts = DSCuts("SF", "FD", "Electron", "1e cut", 0.24865,
+                             getEcalSFLowerCut(), getEcalSFUpperCut());
+
+            setEcalSFCuts();
+        }
+
+        if (apply_ECAL_P_cuts) {
+            // making f_ecalPCuts = ture
+            // TODO: ask justin what are these cuts:
+            // TODO: ask justin for these cuts for LH2 and C12 (and other
+            // elements)
+            readEcalPPar(filename_P_cuts);
+
+            setEcalPCuts();
+        }
+
+        if (apply_ECAL_diag_cut) {
+            // making f_ecalDiagCuts = ture
+            setEcalDiagCuts();
+        }
+
+        if (apply_ECAL_fiducial_cuts) {
+            // making f_ecalEdgeCuts = ture (ECAL fiducial cuts)
+            PCAL_edge_cuts = DSCuts("PCAL edge", "FD", "Electron", "1e cut", 0,
+                                    getEcalEdgeCuts());
+            setEcalEdgeCuts();
+        }
+    }
+}
+
+// ConfigureChargedHadronCuts function ------------------------------------
+
+/*
+This function configures charged hadron cuts.
+*/
+void CLAS12Analysis::ConfigureChargedHadronCuts(
+    const bool apply_cuts,  // master
+    const bool apply_chi2_cuts_1e_cut, const char *filename_PIDCuts_1,
+    const char *filename_PIDCuts_2, DSCuts &Chi2_Proton_cuts_CD,
+    DSCuts &Chi2_Proton_cuts_FD, DSCuts &Chi2_piplus_cuts_CD,
+    DSCuts &Chi2_piplus_cuts_FD, DSCuts &Chi2_piminus_cuts_CD,
+    DSCuts &Chi2_piminus_cuts_FD, const bool apply_CD_edge_cuts,
+    const bool apply_CD_region_cuts) {
+    if (apply_cuts) {
+        // Cuts on all charged hadrons:
+        if (!apply_chi2_cuts_1e_cut) {
+            readInputParam(filename_PIDCuts_1);
+        } else if (apply_chi2_cuts_1e_cut) {
+            cout << "\nLoading fitted pid cuts...\n\n";
+            readInputParam(filename_PIDCuts_2);  // load sample-appropreate cuts
+                                                 // file from CutsDirectory
+
+            /* Overwriting PID cuts according to SampleName */
+            Chi2_Proton_cuts_CD.SetCutPram(GetPidCutMean(2212, "CD"),
+                                           -GetPidCutSigma(2212, "CD"),
+                                           GetPidCutSigma(2212, "CD"));
+            Chi2_Proton_cuts_FD.SetCutPram(GetPidCutMean(2212, "FD"),
+                                           -GetPidCutSigma(2212, "FD"),
+                                           GetPidCutSigma(2212, "FD"));
+            Chi2_piplus_cuts_CD.SetCutPram(GetPidCutMean(211, "CD"),
+                                           -GetPidCutSigma(211, "CD"),
+                                           GetPidCutSigma(211, "CD"));
+            Chi2_piplus_cuts_FD.SetCutPram(GetPidCutMean(211, "FD"),
+                                           -GetPidCutSigma(211, "FD"),
+                                           GetPidCutSigma(211, "FD"));
+            Chi2_piminus_cuts_CD.SetCutPram(GetPidCutMean(-211, "CD"),
+                                            -GetPidCutSigma(-211, "CD"),
+                                            GetPidCutSigma(-211, "CD"));
+            Chi2_piminus_cuts_FD.SetCutPram(GetPidCutMean(-211, "FD"),
+                                            -GetPidCutSigma(-211, "FD"),
+                                            GetPidCutSigma(-211, "FD"));
+
+            setProtonPidCuts();  // making f_protonpidCuts = true
+            setPidCuts();        // making f_pidCuts = true
+        }
+
+        if (apply_CD_edge_cuts) {
+            // making f_CDEdgeCuts = true
+            setCDEdgeCuts();
+        }
+
+        if (apply_CD_region_cuts) {
+            // making f_CDRegionCuts = true
+            setCDRegionCuts();
+        }
+    }
+}
+
+// ConfigureChargedParticleCuts function ----------------------------------
+
+/*
+This function configures charged particle cuts that are not included in
+either ConfigureElectronCuts and ConfigureChargedHadronCuts.
+*/
+void CLAS12Analysis::ConfigureChargedParticleCuts(
+    const bool apply_cuts,  // master
+    const bool apply_Vz_cuts, DSCuts Vz_cut, DSCuts Vz_cut_FD, DSCuts Vz_cut_CD,
+    const bool apply_dVz_cuts, DSCuts dVz_cuts, DSCuts dVz_cuts_FD,
+    DSCuts dVz_cuts_CD, const bool apply_DC_fiducial_cuts,
+    DSCuts DC_edge_cuts) {
+    if (apply_cuts) {  // Cuts on all charged particles:
+        if (apply_Vz_cuts) {
+            setVertexCuts();  // making f_vertexCuts = ture
+            setVzcuts(Vz_cut.GetLowerCut(),
+                      Vz_cut.GetUpperCut());  // setting Vz cuts for all
+                                              // (charged?) particles
+            setVzcutsFD(
+                Vz_cut_FD.GetLowerCut(),
+                Vz_cut_FD.GetUpperCut());  // setting Vz cuts for all charged
+                                           // particles (FD only)
+            setVzcutsCD(
+                Vz_cut_CD.GetLowerCut(),
+                Vz_cut_CD.GetUpperCut());  // setting Vz cuts for all charged
+                                           // particles (CD only)
+        }
+
+        if (apply_dVz_cuts) {
+            setVertexCorrCuts();  // making f_corr_vertexCuts = ture
+            setVertexCorrCutsLim(
+                dVz_cuts.GetLowerCut(),
+                dVz_cuts.GetUpperCut());  // setting dVz cuts (general)
+            setVertexCorrCutsLimFD(
+                dVz_cuts_FD.GetLowerCut(),
+                dVz_cuts_FD.GetUpperCut());  // setting dVz cuts (FD only)
+            setVertexCorrCutsLimCD(
+                dVz_cuts_CD.GetLowerCut(),
+                dVz_cuts_CD.GetUpperCut());  // setting dVz cuts (CD only)
+        }
+
+        if (apply_DC_fiducial_cuts) {
+            // making f_DCEdgeCuts = ture (DC fiducial cuts?)
+            DC_edge_cuts = DSCuts("DC edge", "FD", "Electron", "1e cut", 0,
+                                  getDCEdgeCuts());
+            setDCEdgeCuts();
+        }
+    }
+}
+
+// ConfigureNucleonCuts function ------------------------------------------
+
+/*
+This function configures nucleon cuts.
+*/
+void CLAS12Analysis::ConfigureNucleonCuts(
+    const bool apply_cuts,  // master
+    const bool apply_nucleon_cuts, DSCuts &n_momentum_cuts_ABF_FD_n_from_ph,
+    DSCuts &n_momentum_cuts_ABF_FD_n_from_ph_apprax,
+    DSCuts &Beta_max_cut_ABF_FD_n_from_ph,
+    DSCuts &Beta_max_cut_ABF_FD_n_from_ph_apprax,
+    const char *filename_NucleonCuts, const bool limless_mom_eff_plots,
+    const bool is2GeVSample, DSCuts &n_mom_th, DSCuts &TL_n_mom_cuts,
+    double beamE, const bool apply_nBeta_fit_cuts, DSCuts &Beta_cut,
+    DSCuts &dphi_p1_p2_2p, DSCuts &dphi_pFD_pCD_2p,
+    DSCuts &dphi_pFD_pCD_pFDpCD) {
+    if (apply_cuts) {
+        if (!apply_nucleon_cuts) {
+            /* Setting neutron momentum cut before beta fit (i.e., no cut!) */
+            n_momentum_cuts_ABF_FD_n_from_ph =
+                DSCuts("Momentum_cuts_ECAL", "FD-ECAL", "Neutron", "", 0,
+                       n_mom_th.GetLowerCut(), 9999);
+            n_momentum_cuts_ABF_FD_n_from_ph_apprax =
+                DSCuts("Momentum_cuts_ECAL_apprax", "FD-ECAL_apprax", "Neutron",
+                       "", 0, n_mom_th.GetLowerCut(), 9999);
+
+            /* Setting variables to log beta fit parameters into (i.e., no cut!)
+             */
+            Beta_max_cut_ABF_FD_n_from_ph = DSCuts(
+                "Beta_cut_ECAL", "FD-ECAL", "", "nFDpCD", 1, -9999, 9999);
+            Beta_max_cut_ABF_FD_n_from_ph_apprax =
+                DSCuts("Beta_cut_ECAL_apprax", "FD-ECAL_apprax", "", "1n", 1,
+                       -9999, 9999);
+        } else {
+            cout << "\n\nLoading fitted Beta cuts...\n\n";
+            readInputParam(
+                filename_NucleonCuts);  // load sample-appropreate cuts file
+                                        // from CutsDirectory
+
+            /* Setting nucleon cuts - only if NOT plotting efficiency plots! */
+            if (limless_mom_eff_plots || is2GeVSample) {
+                /* If sample is with 2GeV beam energy, no fit is needed. */
+                n_mom_th.SetUpperCut(beamE);
+                TL_n_mom_cuts.SetUpperCut(beamE);
+            } else {
+                /* Else, load values from fit. */
+                if (apply_nBeta_fit_cuts) {
+                    n_mom_th.SetUpperCut(getNeutronMomentumCut());
+                    TL_n_mom_cuts.SetUpperCut(getNeutronMomentumCut());
+                    Beta_cut.SetUpperCut(
+                        getNeutralBetaCut());  // Log values of beta fit
+                                               // cut (for monitoring)
+                    Beta_cut.SetMean(
+                        getNeutralBetaCutMean());  // Log values of beta
+                                                   // fit cut (for
+                                                   // monitoring)
+                }
+            }
+
+            dphi_p1_p2_2p.SetMean(getdPhiCutMean());
+            dphi_pFD_pCD_2p.SetMean(getdPhiCutMean());
+            dphi_pFD_pCD_pFDpCD.SetMean(getdPhiCutMean());
+        }
+
+        printParams();
+    }
+}
