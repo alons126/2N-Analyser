@@ -52,6 +52,19 @@
         "unordered_map": "cpp",
         "variant": "cpp",
         "vector": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "condition_variable": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "future": "cpp",
+        "list": "cpp",
+        "queue": "cpp",
+        "regex": "cpp",
+        "set": "cpp",
+        "shared_mutex": "cpp",
+        "span": "cpp",
+        "stack": "cpp",
+        "unordered_set": "cpp",
+        "valarray": "cpp"
     }
 }

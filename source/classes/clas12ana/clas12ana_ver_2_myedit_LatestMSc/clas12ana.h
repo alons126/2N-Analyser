@@ -518,7 +518,7 @@ private:
     TH2D *hTheta_p_vs_Phi_p_AMap_DC_WITH_CUTS = new TH2D("Proton_AMap_DC_WITH_CUTS", "#theta_{p} vs. #phi_{p} - WITH DC edge cuts;#phi_{p} [Deg];#theta_{p} [Deg]",
                                                          150, -180, 180, 150, 0, 50);  // My addition
 
-    TH2D *hTheta_vs_Phi_hit_map_ECAL_no_fiducial_cuts = new TH2D("hit_map_ECAL_no_fiducial_cuts", "ECAL #theta vs. #phi - no fiducial cuts;#phi [Deg];#theta [Deg]",
+    TH2D *hTheta_vs_Phi_hit_map_ECAL_no_fiducial_åcuts = new TH2D("hit_map_ECAL_no_fiducial_cuts", "ECAL #theta vs. #phi - no fiducial cuts;#phi [Deg];#theta [Deg]",
                                                                  250, -180, 180, 250, 0, 50);  // My addition
     TH2D *hTheta_vs_Phi_hit_map_ECAL_w_fiducial_cuts = new TH2D("hit_map_ECAL_w_fiducial_cuts", "ECAL #theta vs. #phi - with fiducial cuts;#phi [Deg];#theta [Deg]",
                                                                 250, -180, 180, 250, 0, 50);  // My addition

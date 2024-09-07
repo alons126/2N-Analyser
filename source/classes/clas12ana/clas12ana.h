@@ -15,7 +15,7 @@
 #include "TH2D.h"
 #include "TLorentzVector.h"
 #include "TVector3.h"
-#include "clas12debug.h"
+#include "clas12debug.cpp" // My edit
 #include "clas12reader.h"
 #include "region_particle.h"
 
