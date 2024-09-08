@@ -157,7 +157,6 @@ public:
 
     double GetPidCutSigma(int Pid, string region)
     {
-        // TODO: My addition?
         if (region == "CD")
         {
             auto itter_CD = getpid_cuts_cd().find(Pid);
@@ -181,16 +180,15 @@ public:
 
     double GetPidCutMean(int Pid, string region)
     {
-        // TODO: My addition?
         if (region == "CD")
         {
-            auto itter_CD = pid_cuts_cd.find(Pid);
+            auto itter_CD = getpid_cuts_cd().find(Pid);
 
             return itter_CD->second.at(0);
         }
         else if (region == "FD")
         {
-            auto itter_FD = pid_cuts_fd.find(Pid);
+            auto itter_FD = getpid_cuts_fd().find(Pid);
 
             return itter_FD->second.at(0);
         }
