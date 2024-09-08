@@ -371,17 +371,17 @@ void CLAS12Analysis::RunAnalysisCuts(
                 // Photo-electron min cut (my edit):
                 (!HTCCNpheCuts(el) && f_NpheCuts) ||
                 // ECAL SF cuts (my edit):
-                (!CheckEcalSFCuts(el) && f_ecalSFCuts) ||
+                (!CheckEcalSFCuts(el) && getf_ecalSFCuts()) ||
                 // ECAL SF cuts:
-                (!checkEcalPCuts(el) && f_ecalPCuts) ||
+                (!checkEcalPCuts(el) && getf_ecalPCuts()) ||
                 // ECAL Diagonoal SF cuts:
-                (!checkEcalDiagCuts(el) && f_ecalDiagCuts) ||
+                (!checkEcalDiagCuts(el) && getf_ecalDiagCuts()) ||
                 // ECAL edge cuts:
-                (!EcalEdgeCuts(el) && f_ecalEdgeCuts) ||
+                (!EcalEdgeCuts(el) && getf_ecalEdgeCuts()) ||
                 // Vertex cuts:
-                (!checkVertex(el) && f_vertexCuts) ||
+                (!checkVertex(el) && getf_vertexCuts()) ||
                 // DC edge cuts:
-                (!DCEdgeCuts(el) && f_DCEdgeCuts) ||
+                (!DCEdgeCuts(el) && getf_DCEdgeCuts()) ||
                 // minium 800 MeV/c cut for electrons in class:
                 (el->par()->getP() < 0.8)))
             setByPid(el); });
@@ -436,29 +436,29 @@ void CLAS12Analysis::RunAnalysisCuts(
 
                     bool check_pid_cuts = (
                         // Check if in proton PID:
-                        (f_protonpidCuts && checkProtonPidCut(p)) ||
+                        (getf_protonpidCuts() && checkProtonPidCut(p)) ||
                         // Cuts or chi2pid cuts:
                         // If proton pid cuts is off but pid cuts on just use
                         // chi2pid
-                        (f_pidCuts && checkPidCut(p)) ||
+                        (getf_pidCuts() && checkPidCut(p)) ||
                         // if no pid cuts are specified let all particles pass
                         // pid cuts
-                        (!f_protonpidCuts && !f_pidCuts));
+                        (!getf_protonpidCuts() && !getf_pidCuts()));
 
                     if (!(
                             // PID cuts:
                             (!check_pid_cuts) ||
                             // Vertex cuts:
-                            (!checkVertex(p) && f_vertexCuts) ||
+                            (!checkVertex(p) && getf_vertexCuts()) ||
                             // CD edge cuts:
-                            (!CDEdgeCuts(p) && f_CDEdgeCuts) ||
+                            (!CDEdgeCuts(p) && getf_CDEdgeCuts()) ||
                             // CD edge cuts:
-                            (!CDRegionCuts(p) && f_CDRegionCuts) ||
+                            (!CDRegionCuts(p) && getf_CDRegionCuts()) ||
                             // DC edge cuts:
-                            (!DCEdgeCuts(p) && f_DCEdgeCuts) ||
+                            (!DCEdgeCuts(p) && getf_DCEdgeCuts()) ||
                             // Vertex correlation with electron cuts:
                             (!checkVertexCorrelation(electrons_det[0], p) &&
-                             f_corr_vertexCuts))) {
+                             getf_corr_vertexCuts()))) {
                         setByPid(p);
                         // Add all particles surviving the cuts in event to
                         // allparticles:
@@ -478,9 +478,9 @@ void CLAS12Analysis::RunAnalysisCuts(
             for (auto el : electrons)
                 debug_c.fillAfterEl(el);
         }
-        multi_p_1e_cut_AC_debug->Fill(protons.size());
-        multi_cpi_1e_cut_AC_debug->Fill(piplus.size() + piminus.size());
-        multi_p_vs_cpi_1e_cut_AC_debug->Fill(protons.size(),
+        Debug_c.multi_p_1e_cut_AC_debug->Fill(protons.size());
+        Debug_c.multi_cpi_1e_cut_AC_debug->Fill(piplus.size() + piminus.size());
+        Debug_c.multi_p_vs_cpi_1e_cut_AC_debug->Fill(protons.size(),
                                              piplus.size() + piminus.size());
 
     } // good electron loop

@@ -228,9 +228,15 @@ public:
     int getcurrent_run() { return current_run; }                // My addition
     bool getf_ecalSFCuts() { return f_ecalSFCuts; }             // My addition
     bool getf_ecalPCuts() { return f_ecalPCuts; }               // My addition
+    bool getf_ecalDiagCuts() { return f_ecalDiagCuts; }         // My addition
     bool getf_ecalEdgeCuts() { return f_ecalEdgeCuts; }         // My addition
     bool getf_vertexCuts() { return f_vertexCuts; }             // My addition
     bool getf_DCEdgeCuts() { return f_DCEdgeCuts; }             // My addition
+    bool getf_protonpidCuts() { return f_protonpidCuts; }       // My addition
+    bool getf_pidCuts() { return f_pidCuts; }                   // My addition
+    bool getf_CDEdgeCuts() { return f_CDEdgeCuts; }             // My addition
+    bool getf_CDRegionCuts() { return f_CDRegionCuts; }         // My addition
+    bool getf_corr_vertexCuts() { return f_corr_vertexCuts; }   // My addition
 
 private:
     clas12debug debug_c; // debug class for plotting general plots
