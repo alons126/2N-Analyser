@@ -7,7 +7,7 @@
 
 #include "../CLAS1212Debugger/CLAS1212Debugger.cpp"
 #include "../DSCuts/DSCuts.h"
-#include "../clas12Ana/clas12Ana.cpp"
+#include "../clas12ana/clas12ana.cpp"
 
 /* This is my edit of the RG-M analysis code */
 
