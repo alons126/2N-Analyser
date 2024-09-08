@@ -35,6 +35,7 @@ private:
 
     vector<double> vertex_corr_cuts_FD = {-99, 99}; // electron vertex <-> particle vertex correlation cuts (FD only)
     vector<double> vertex_corr_cuts_CD = {-99, 99}; // electron vertex <-> particle vertex correlation cuts (CD only)
+    vector<double> vertex_corr_cuts = {-99, 99}; // electron vertex <-> particle vertex correlation cuts (CD only)
 
     // My all particles vector
     // -----------------------------------------------------------------------------------------------------------------------------------------------

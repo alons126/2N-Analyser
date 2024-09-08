@@ -1,62 +1,27 @@
 #include "../clas12ana/clas12debug.h"
 
-class CLAS1212Debugger : public clas12debug {
-   private:
+class CLAS1212Debugger : public clas12debug
+{
+public:
     // My debugging plots -----------------------------------------------------
 
-    TH2D *multi_p_vs_cpi_BC_debug =
-        new TH2D("multi_p_vs_cpi_BC_debug",
-                 "#font[12]{#p} vs. #font[12]{##pi^{#pm}} BC (no #e cuts, CD & "
-                 "FD);#font[12]{#p};#font[12]{##pi^{#pm}}",
-                 10, 0, 10, 10, 0, 10);
-    TH1D *multi_p_BC_debug = new TH1D(
-        "multi_p_BC_debug",
-        "#font[12]{#p} BC (no #e cuts, CD & FD);#font[12]{#p}", 10, 0, 10);
-    TH1D *multi_cpi_BC_debug = new TH1D(
-        "multi_cpi_BC_debug",
-        "#font[12]{##pi^{#pm}} BC (no #e cuts, CD & FD);#font[12]{##pi^{#pm}}",
-        10, 0, 10);
+    // TODO: move these plots into private
+    TH2D *multi_p_vs_cpi_BC_debug = new TH2D("multi_p_vs_cpi_BC_debug", "#font[12]{#p} vs. #font[12]{##pi^{#pm}} BC (no #e cuts, CD & FD);#font[12]{#p};#font[12]{##pi^{#pm}}", 10, 0, 10, 10, 0, 10);
+    TH1D *multi_p_BC_debug = new TH1D("multi_p_BC_debug", "#font[12]{#p} BC (no #e cuts, CD & FD);#font[12]{#p}", 10, 0, 10);
+    TH1D *multi_cpi_BC_debug = new TH1D("multi_cpi_BC_debug", "#font[12]{##pi^{#pm}} BC (no #e cuts, CD & FD);#font[12]{##pi^{#pm}}", 10, 0, 10);
 
-    TH2D *multi_p_vs_cpi_AC_debug =
-        new TH2D("multi_p_vs_cpi_AC_debug",
-                 "#font[12]{#p} vs. #font[12]{##pi^{#pm}} AC (no #e cuts, CD & "
-                 "FD);#font[12]{#p};#font[12]{##pi^{#pm}}",
-                 10, 0, 10, 10, 0, 10);
-    TH1D *multi_p_AC_debug = new TH1D(
-        "multi_p_AC_debug",
-        "#font[12]{#p} AC (no #e cuts, CD & FD);#font[12]{#p}", 10, 0, 10);
-    TH1D *multi_cpi_AC_debug = new TH1D(
-        "multi_cpi_AC_debug",
-        "#font[12]{##pi^{#pm}} AC (no #e cuts, CD & FD);#font[12]{##pi^{#pm}}",
-        10, 0, 10);
+    TH2D *multi_p_vs_cpi_AC_debug = new TH2D("multi_p_vs_cpi_AC_debug", "#font[12]{#p} vs. #font[12]{##pi^{#pm}} AC (no #e cuts, CD & FD);#font[12]{#p};#font[12]{##pi^{#pm}}", 10, 0, 10, 10, 0, 10);
+    TH1D *multi_p_AC_debug = new TH1D("multi_p_AC_debug", "#font[12]{#p} AC (no #e cuts, CD & FD);#font[12]{#p}", 10, 0, 10);
+    TH1D *multi_cpi_AC_debug = new TH1D("multi_cpi_AC_debug", "#font[12]{##pi^{#pm}} AC (no #e cuts, CD & FD);#font[12]{##pi^{#pm}}", 10, 0, 10);
 
-    TH2D *multi_p_vs_cpi_1e_cut_BC_debug =
-        new TH2D("multi_p_vs_cpi_1e_cut_BC_debug",
-                 "#font[12]{#p} vs. #font[12]{##pi^{#pm}} BC (1e cut, CD & "
-                 "FD);#font[12]{#p};#font[12]{##pi^{#pm}}",
-                 10, 0, 10, 10, 0, 10);
-    TH1D *multi_p_1e_cut_BC_debug =
-        new TH1D("multi_p_1e_cut_BC_debug",
-                 "#font[12]{#p} BC (1e cut, CD & FD);#font[12]{#p}", 10, 0, 10);
-    TH1D *multi_cpi_1e_cut_BC_debug = new TH1D(
-        "multi_cpi_1e_cut_BC_debug",
-        "#font[12]{##pi^{#pm}} BC (1e cut, CD & FD);#font[12]{##pi^{#pm}}", 10,
-        0, 10);
+    TH2D *multi_p_vs_cpi_1e_cut_BC_debug = new TH2D("multi_p_vs_cpi_1e_cut_BC_debug", "#font[12]{#p} vs. #font[12]{##pi^{#pm}} BC (1e cut, CD & FD);#font[12]{#p};#font[12]{##pi^{#pm}}", 10, 0, 10, 10, 0, 10);
+    TH1D *multi_p_1e_cut_BC_debug = new TH1D("multi_p_1e_cut_BC_debug", "#font[12]{#p} BC (1e cut, CD & FD);#font[12]{#p}", 10, 0, 10);
+    TH1D *multi_cpi_1e_cut_BC_debug = new TH1D("multi_cpi_1e_cut_BC_debug", "#font[12]{##pi^{#pm}} BC (1e cut, CD & FD);#font[12]{##pi^{#pm}}", 10, 0, 10);
 
-    TH2D *multi_p_vs_cpi_1e_cut_AC_debug =
-        new TH2D("multi_p_vs_cpi_1e_cut_AC_debug",
-                 "#font[12]{#p} vs. #font[12]{##pi^{#pm}} AC (1e cut, CD & "
-                 "FD);#font[12]{#p};#font[12]{##pi^{#pm}}",
-                 10, 0, 10, 10, 0, 10);
-    TH1D *multi_p_1e_cut_AC_debug =
-        new TH1D("multi_p_1e_cut_AC_debug",
-                 "#font[12]{#p} AC (1e cut, CD & FD);#font[12]{#p}", 10, 0, 10);
-    TH1D *multi_cpi_1e_cut_AC_debug = new TH1D(
-        "multi_cpi_1e_cut_AC_debug",
-        "#font[12]{##pi^{#pm}} AC (1e cut, CD & FD);#font[12]{##pi^{#pm}}", 10,
-        0, 10);
+    TH2D *multi_p_vs_cpi_1e_cut_AC_debug = new TH2D("multi_p_vs_cpi_1e_cut_AC_debug", "#font[12]{#p} vs. #font[12]{##pi^{#pm}} AC (1e cut, CD & FD);#font[12]{#p};#font[12]{##pi^{#pm}}", 10, 0, 10, 10, 0, 10);
+    TH1D *multi_p_1e_cut_AC_debug = new TH1D("multi_p_1e_cut_AC_debug", "#font[12]{#p} AC (1e cut, CD & FD);#font[12]{#p}", 10, 0, 10);
+    TH1D *multi_cpi_1e_cut_AC_debug = new TH1D("multi_cpi_1e_cut_AC_debug", "#font[12]{##pi^{#pm}} AC (1e cut, CD & FD);#font[12]{##pi^{#pm}}", 10, 0, 10);
 
-   public:
     // WriteMyDebugPlots function ---------------------------------------------
 
     /*

@@ -219,12 +219,18 @@ public:
     }
     void Insertvertex_cuts(string pid, vector<double> par) // My addition
     {
-        vertex_cuts.insert(pair<int, vector<double>>(pid, par));
+        vertex_cuts.insert(pair<string, vector<double>>(pid, par));
     }
 
     vector<double> getvertex_x_cuts() { return vertex_x_cuts; } // My addition
     vector<double> getvertex_y_cuts() { return vertex_y_cuts; } // My addition
     vector<double> getvertex_z_cuts() { return vertex_z_cuts; } // My addition
+    int getcurrent_run() { return current_run; }                // My addition
+    bool getf_ecalSFCuts() { return f_ecalSFCuts; }             // My addition
+    bool getf_ecalPCuts() { return f_ecalPCuts; }               // My addition
+    bool getf_ecalEdgeCuts() { return f_ecalEdgeCuts; }         // My addition
+    bool getf_vertexCuts() { return f_vertexCuts; }             // My addition
+    bool getf_DCEdgeCuts() { return f_DCEdgeCuts; }             // My addition
 
 private:
     clas12debug debug_c; // debug class for plotting general plots

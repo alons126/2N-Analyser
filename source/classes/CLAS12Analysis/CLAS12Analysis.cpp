@@ -288,8 +288,7 @@ This is my edit based on the clas12ana function:
 It allows the user to choose between the old implementation of vertex
 correlation cuts from the MSc analysis and the implementation from clas12ana
 */
-bool CLAS12Analysis::CheckVertexCorrelation(const region_part_ptr &el,
-                                            const region_part_ptr &p)
+bool CLAS12Analysis::CheckVertexCorrelation(const region_part_ptr &el, const region_part_ptr &p)
 {
     if (f_old_VertexCorrCuts)
     {
@@ -298,24 +297,18 @@ bool CLAS12Analysis::CheckVertexCorrelation(const region_part_ptr &el,
         // true if inside cut
         if (p->getRegion() == FD)
         { //  TODO:  My addition!
-            return ((p->par()->getVz() - el->par()->getVz()) >
-                        vertex_corr_cuts_FD.at(0) &&
-                    (p->par()->getVz() - el->par()->getVz()) <
-                        vertex_corr_cuts_FD.at(1));
+            return ((p->par()->getVz() - el->par()->getVz()) > vertex_corr_cuts_FD.at(0) &&
+                    (p->par()->getVz() - el->par()->getVz()) < vertex_corr_cuts_FD.at(1));
         }
         else if (p->getRegion() == CD)
         {
-            return ((p->par()->getVz() - el->par()->getVz()) >
-                        vertex_corr_cuts_CD.at(0) &&
-                    (p->par()->getVz() - el->par()->getVz()) <
-                        vertex_corr_cuts_CD.at(1));
+            return ((p->par()->getVz() - el->par()->getVz()) > vertex_corr_cuts_CD.at(0) &&
+                    (p->par()->getVz() - el->par()->getVz()) < vertex_corr_cuts_CD.at(1));
         }
         else
         {
-            return ((p->par()->getVz() - el->par()->getVz()) >
-                        vertex_corr_cuts.at(0) &&
-                    (p->par()->getVz() - el->par()->getVz()) <
-                        vertex_corr_cuts.at(1));
+            return ((p->par()->getVz() - el->par()->getVz()) > vertex_corr_cuts.at(0) &&
+                    (p->par()->getVz() - el->par()->getVz()) < vertex_corr_cuts.at(1));
         }
     }
     else
@@ -347,25 +340,23 @@ void CLAS12Analysis::RunAnalysisCuts(
     auto piminus_det = c12->getByID(-211);
 
     // Filling multiplicity plots before cuts (BC) - no #e cuts:
-    multi_p_BC_debug->Fill(protons_det.size());
-    multi_cpi_BC_debug->Fill(piplus_det.size() + piminus_det.size());
-    multi_p_vs_cpi_BC_debug->Fill(protons_det.size(),
-                                  piplus_det.size() + piminus_det.size());
+    Debug_c.multi_p_BC_debug->Fill(protons_det.size());
+    Debug_c.multi_cpi_BC_debug->Fill(piplus_det.size() + piminus_det.size());
+    Debug_c.multi_p_vs_cpi_BC_debug->Fill(protons_det.size(), piplus_det.size() + piminus_det.size());
 
     // Filling multiplicity plots before cuts (BC) - 1e cut
     if (electrons_det.size() == 1)
     {
-        multi_p_1e_cut_BC_debug->Fill(protons_det.size());
-        multi_cpi_1e_cut_BC_debug->Fill(piplus_det.size() + piminus_det.size());
-        multi_p_vs_cpi_1e_cut_BC_debug->Fill(
-            protons_det.size(), piplus_det.size() + piminus_det.size());
+        Debug_c.multi_p_1e_cut_BC_debug->Fill(protons_det.size());
+        Debug_c.multi_cpi_1e_cut_BC_debug->Fill(piplus_det.size() + piminus_det.size());
+        Debug_c.multi_p_vs_cpi_1e_cut_BC_debug->Fill(protons_det.size(), piplus_det.size() + piminus_det.size());
     }
 
     int nf_initial = particles.size();
     /* My edit - end */
 
     // DEBUG plots
-    if (debug_plots)
+    if (getdebug_plots())
     {
         for (auto el : electrons_det)
             debug_c.fillBeforeEl(el);
