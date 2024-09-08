@@ -254,9 +254,7 @@ public:
 
     clas12debug debug_c; // debug class for plotting general plots (my edit - moved to public!)
 
-private:
-    TString debug_out_file = "debugPlots.root";
-
+    // My edit - these particles vectors were moved to public!
     std::vector<region_part_ptr> electrons;
     std::vector<region_part_ptr> protons;
     std::vector<region_part_ptr> deuterons;
@@ -267,6 +265,9 @@ private:
     std::vector<region_part_ptr> kplus;
     std::vector<region_part_ptr> kminus;
     std::vector<region_part_ptr> otherpart;
+
+private:
+    TString debug_out_file = "debugPlots.root";
 
     // SRC
     std::vector<region_part_ptr> lead_proton;
