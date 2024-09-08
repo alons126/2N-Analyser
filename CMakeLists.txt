@@ -9,6 +9,8 @@ find_package(ROOT REQUIRED)
 # Include ROOT
 include_directories(${ROOT_INCLUDE_DIRS})
 
+add_definitions(-D_CLAS12ANA_DIR="${CMAKE_SOURCE_DIR}/source/classes/clas12ana")
+
 ## Set the path to CLAS12ROOT includes and libraries
 #set(CLAS12ROOT_INCLUDE_DIR /home/alon/clas12root/Clas12Root)
 #set(CLAS12BANKS_INCLUDE_DIR /home/alon/clas12root/Clas12Banks)

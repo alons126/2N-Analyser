@@ -12,6 +12,7 @@
 		[
 			"add_executable",
 			"target_link_libraries",
+			"add_definitions",
 			"include_directories"
 		],
 		"files" : 
@@ -26,217 +27,223 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 82,
+				"line" : 84,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 247,
+				"line" : 249,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
+				"file" : 0,
+				"line" : 12,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
 				"file" : 0,
 				"line" : 10,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 48,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 49,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 50,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 51,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 52,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 53,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 54,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 55,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 56,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 57,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 58,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 59,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 60,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 61,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 62,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 63,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 64,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 65,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 66,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 67,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 68,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 69,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 70,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 71,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 72,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 73,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 74,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 75,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 76,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 77,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 78,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 79,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 80,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 81,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 82,
 				"parent" : 0
 			}
 		]
@@ -250,142 +257,149 @@
 					"fragment" : "-g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
 				}
 			],
-			"includes" : 
+			"defines" : 
 			[
 				{
 					"backtrace" : 3,
+					"define" : "_CLAS12ANA_DIR=\"/Users/alon/Projects/2N-Analyser/source/classes/clas12ana\""
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
 					"path" : "/Users/alon/Software/root_cern/root_install/include"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"path" : "/Users/alon/Projects/2N-Analyser/."
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"path" : "/Users/alon/Projects/2N-Analyser/macros"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 7,
 					"path" : "/Users/alon/Projects/2N-Analyser/setup"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 8,
 					"path" : "/Users/alon/Projects/2N-Analyser/setup/CLAS12DAnalysis"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"path" : "/Users/alon/Projects/2N-Analyser/setup/CLAS12DAnalysis/CLAS12DAnalyser"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 10,
 					"path" : "/Users/alon/Projects/2N-Analyser/setup/CLAS12DAnalysis/CLAS12DASettings"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "/Users/alon/Projects/2N-Analyser/setup/CLAS12DAnalysis/CLAS12DHistograms"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 12,
 					"path" : "/Users/alon/Projects/2N-Analyser/source"
 				},
 				{
-					"backtrace" : 12,
+					"backtrace" : 13,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes"
 				},
 				{
-					"backtrace" : 13,
+					"backtrace" : 14,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/AMaps"
 				},
 				{
-					"backtrace" : 14,
+					"backtrace" : 15,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/clas12ana"
 				},
 				{
-					"backtrace" : 15,
+					"backtrace" : 16,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/clas12ana/clas12ana_ver_1_myedit"
 				},
 				{
-					"backtrace" : 16,
+					"backtrace" : 17,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/clas12ana/other"
 				},
 				{
-					"backtrace" : 17,
+					"backtrace" : 18,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/DEfficiency"
 				},
 				{
-					"backtrace" : 18,
+					"backtrace" : 19,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/Directories"
 				},
 				{
-					"backtrace" : 19,
+					"backtrace" : 20,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/DSCuts"
 				},
 				{
-					"backtrace" : 20,
+					"backtrace" : 21,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/ExperimentParameters"
 				},
 				{
-					"backtrace" : 21,
+					"backtrace" : 22,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/hData"
 				},
 				{
-					"backtrace" : 22,
+					"backtrace" : 23,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/hPlots"
 				},
 				{
-					"backtrace" : 23,
+					"backtrace" : 24,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/MomentumResolution"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 25,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/TargetParameters"
 				},
 				{
-					"backtrace" : 25,
+					"backtrace" : 26,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/TLCuts"
 				},
 				{
-					"backtrace" : 26,
+					"backtrace" : 27,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/data"
 				},
 				{
-					"backtrace" : 27,
+					"backtrace" : 28,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/functions"
 				},
 				{
-					"backtrace" : 28,
+					"backtrace" : 29,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/functions/AngleCalc"
 				},
 				{
-					"backtrace" : 29,
+					"backtrace" : 30,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/functions/DrawAndSaveFunctions"
 				},
 				{
-					"backtrace" : 30,
+					"backtrace" : 31,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/functions/EventProperties"
 				},
 				{
-					"backtrace" : 31,
+					"backtrace" : 32,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/functions/FitFunctions"
 				},
 				{
-					"backtrace" : 32,
+					"backtrace" : 33,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/functions/Math_func"
 				},
 				{
-					"backtrace" : 33,
+					"backtrace" : 34,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/functions/other"
 				},
 				{
-					"backtrace" : 34,
+					"backtrace" : 35,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/functions/PID_functions"
 				},
 				{
-					"backtrace" : 35,
+					"backtrace" : 36,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/other"
 				},
 				{
-					"backtrace" : 36,
+					"backtrace" : 37,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/Structures_beta"
 				}
 			],
@@ -460,142 +474,149 @@
 					"fragment" : "-g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
 				}
 			],
-			"includes" : 
+			"defines" : 
 			[
 				{
 					"backtrace" : 3,
+					"define" : "_CLAS12ANA_DIR=\"/Users/alon/Projects/2N-Analyser/source/classes/clas12ana\""
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
 					"path" : "/Users/alon/Software/root_cern/root_install/include"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"path" : "/Users/alon/Projects/2N-Analyser/."
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"path" : "/Users/alon/Projects/2N-Analyser/macros"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 7,
 					"path" : "/Users/alon/Projects/2N-Analyser/setup"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 8,
 					"path" : "/Users/alon/Projects/2N-Analyser/setup/CLAS12DAnalysis"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"path" : "/Users/alon/Projects/2N-Analyser/setup/CLAS12DAnalysis/CLAS12DAnalyser"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 10,
 					"path" : "/Users/alon/Projects/2N-Analyser/setup/CLAS12DAnalysis/CLAS12DASettings"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "/Users/alon/Projects/2N-Analyser/setup/CLAS12DAnalysis/CLAS12DHistograms"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 12,
 					"path" : "/Users/alon/Projects/2N-Analyser/source"
 				},
 				{
-					"backtrace" : 12,
+					"backtrace" : 13,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes"
 				},
 				{
-					"backtrace" : 13,
+					"backtrace" : 14,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/AMaps"
 				},
 				{
-					"backtrace" : 14,
+					"backtrace" : 15,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/clas12ana"
 				},
 				{
-					"backtrace" : 15,
+					"backtrace" : 16,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/clas12ana/clas12ana_ver_1_myedit"
 				},
 				{
-					"backtrace" : 16,
+					"backtrace" : 17,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/clas12ana/other"
 				},
 				{
-					"backtrace" : 17,
+					"backtrace" : 18,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/DEfficiency"
 				},
 				{
-					"backtrace" : 18,
+					"backtrace" : 19,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/Directories"
 				},
 				{
-					"backtrace" : 19,
+					"backtrace" : 20,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/DSCuts"
 				},
 				{
-					"backtrace" : 20,
+					"backtrace" : 21,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/ExperimentParameters"
 				},
 				{
-					"backtrace" : 21,
+					"backtrace" : 22,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/hData"
 				},
 				{
-					"backtrace" : 22,
+					"backtrace" : 23,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/hPlots"
 				},
 				{
-					"backtrace" : 23,
+					"backtrace" : 24,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/MomentumResolution"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 25,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/TargetParameters"
 				},
 				{
-					"backtrace" : 25,
+					"backtrace" : 26,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/classes/TLCuts"
 				},
 				{
-					"backtrace" : 26,
+					"backtrace" : 27,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/data"
 				},
 				{
-					"backtrace" : 27,
+					"backtrace" : 28,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/functions"
 				},
 				{
-					"backtrace" : 28,
+					"backtrace" : 29,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/functions/AngleCalc"
 				},
 				{
-					"backtrace" : 29,
+					"backtrace" : 30,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/functions/DrawAndSaveFunctions"
 				},
 				{
-					"backtrace" : 30,
+					"backtrace" : 31,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/functions/EventProperties"
 				},
 				{
-					"backtrace" : 31,
+					"backtrace" : 32,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/functions/FitFunctions"
 				},
 				{
-					"backtrace" : 32,
+					"backtrace" : 33,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/functions/Math_func"
 				},
 				{
-					"backtrace" : 33,
+					"backtrace" : 34,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/functions/other"
 				},
 				{
-					"backtrace" : 34,
+					"backtrace" : 35,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/functions/PID_functions"
 				},
 				{
-					"backtrace" : 35,
+					"backtrace" : 36,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/other"
 				},
 				{
-					"backtrace" : 36,
+					"backtrace" : 37,
 					"path" : "/Users/alon/Projects/2N-Analyser/source/Structures_beta"
 				}
 			],

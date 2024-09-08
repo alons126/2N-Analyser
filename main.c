@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     auto start = std::chrono::system_clock::now(); // Start counting running time
-
+    
     string FileType = AnalyseFile.substr(AnalyseFile.find_last_of(".") + 1);
 
     cout << "\n" << "AnalyseFile:\t" << AnalyseFile << "\n";
