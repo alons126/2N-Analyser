@@ -119,10 +119,10 @@ public:
         vertex_corr_cuts_CD.at(1) = max;
     }
 
-    void setVertexCorrCutsLimCD(double min, double max)
+    void setVertexCorrCutsLim(double min, double max)
     {
-        vertex_corr_cuts_CD.at(0) = min;
-        vertex_corr_cuts_CD.at(1) = max;
+        vertex_corr_cuts.at(0) = min;
+        vertex_corr_cuts.at(1) = max;
     }
 
     double getEcalSFUpperCut() { return SF_max_cut; }
@@ -344,10 +344,10 @@ public:
 
     // WriteMyDBPlots function ------------------------------------------
 
-    void WriteMyDBPlots()
+    void WriteMyDBPlots(TString filename)
     {
-        debug_c.WriteDebugPlots();
-        Debug_c.WriteDebugPlots();
+        debug_c.WriteDebugPlots(filename);
+        Debug_c.WriteMyDebugPlots(filename);
     }
 };
 

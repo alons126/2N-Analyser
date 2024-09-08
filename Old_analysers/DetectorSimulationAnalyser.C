@@ -42702,7 +42702,7 @@ void EventAnalyser()
 
         TString debug_filePath = plots_path + "/" + "DebugOutputFile.root";
         clasAna.setdebug_fileName(debug_filePath);
-        clasAna.WriteMyDBPlots();
+        clasAna.WriteMyDBPlots(clas12ana.getdebug_fileName());
     }
     else
     {
