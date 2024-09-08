@@ -60,9 +60,9 @@ void CLAS12Analysis::ReadInputParam(const char *filename)
                 if (pid != -99) // if pid cut exists in file
                 {
                     if (detector == "FD")
-                        Insertpid_cuts_fd(pair<int, vector<double>>(pid, par));
+                        Insertpid_cuts_fd(pid, par);
                     else if (detector == "CD")
-                        Insertpid_cuts_cd(pair<int, vector<double>>(pid, par));
+                        Insertpid_cuts_cd(pid, par);
                 }
             } // end PID cuts section
 
