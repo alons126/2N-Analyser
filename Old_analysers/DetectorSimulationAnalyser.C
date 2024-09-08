@@ -951,7 +951,7 @@ void EventAnalyser()
 
     /* Other setup variables */
     bool wider_margin = true;
-    bool debug_plots = true; // Print out CLAS12Analysis debugging plots
+    bool debug_plots = false; // Print out CLAS12Analysis debugging plots
 
     bool Log_scale_Vx_plots = false, Log_scale_Vy_plots = false,
          Log_scale_Vz_plots = true;
@@ -18551,8 +18551,9 @@ void EventAnalyser()
         //<editor-fold desc="Safety checks">
 
         //<editor-fold desc="Safety check for CLAS12Analysis particles">
-        /* Safety check that allParticles.size(), Nf are the same */
-        if ((CLAS12Analysis_particles) && (allParticles.size() != Nf))
+        /* Safety check that allParticles.size(), Nf are the same.
+           The check has a constraint of Ne == 1, since all particle vectors in clas12ana are filled only when there is a good electron. */
+        if ((CLAS12Analysis_particles) && (Ne == 1) && (allParticles.size() != Nf))
         {
             cout << "\n\nallParticles.size() is different than Nf! We have:\nallParticles.size() = " << allParticles.size() << "; Nf = " << Nf << "\n";
             cout << "Nn = " << Nn << "\n";
@@ -42657,10 +42658,11 @@ void EventAnalyser()
 
     if (debug_plots == true)
     {
-        cout << "\n\nSaving debugging plots...\n\n";
-        TString debug_filePath = plots_path + "/" + "DebugOutputFile.root";
-        clasAna.setdebug_fileName(debug_filePath);
-        clasAna.WriteMyDBPlots(clasAna.getdebug_fileName());
+        //TODO: these cause a crash - work on fix!
+        // cout << "\n\nSaving debugging plots...\n\n";
+        // TString debug_filePath = plots_path + "/" + "DebugOutputFile.root";
+        // clasAna.setdebug_fileName(debug_filePath);
+        // clasAna.WriteMyDBPlots(clasAna.getdebug_fileName());
     }
     else
     {
