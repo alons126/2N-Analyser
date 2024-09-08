@@ -1,0 +1,3 @@
+/Users/alon/Projects/2N-Analyser/cmake-build-debug/CMakeFiles/project.dir
+/Users/alon/Projects/2N-Analyser/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/alon/Projects/2N-Analyser/cmake-build-debug/CMakeFiles/rebuild_cache.dir

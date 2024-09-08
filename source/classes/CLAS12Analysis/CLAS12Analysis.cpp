@@ -507,10 +507,10 @@ void CLAS12Analysis::ConfigureChargedHadronCuts(
     if (apply_cuts) {
         // Cuts on all charged hadrons:
         if (!apply_chi2_cuts_1e_cut) {
-            readInputParam(filename_PIDCuts_1);
+            ReadInputParam(filename_PIDCuts_1);
         } else if (apply_chi2_cuts_1e_cut) {
             cout << "\nLoading fitted pid cuts...\n\n";
-            readInputParam(filename_PIDCuts_2);  // load sample-appropreate cuts
+            ReadInputParam(filename_PIDCuts_2);  // load sample-appropreate cuts
                                                  // file from CutsDirectory
 
             /* Overwriting PID cuts according to SampleName */
@@ -634,7 +634,7 @@ void CLAS12Analysis::ConfigureNucleonCuts(
                        -9999, 9999);
         } else {
             cout << "\n\nLoading fitted Beta cuts...\n\n";
-            readInputParam(
+            ReadInputParam(
                 filename_NucleonCuts);  // load sample-appropreate cuts file
                                         // from CutsDirectory
 

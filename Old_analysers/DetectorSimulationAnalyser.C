@@ -345,10 +345,10 @@ void EventAnalyser()
      */
     const bool custom_cuts_naming = true;
     settings.SetCustomCutsNaming(custom_cuts_naming);
-    settings.ConfigureStatuses(        apply_cuts, CLAS12Analysis_particles, only_preselection_cuts,        apply_chi2_cuts_1e_cut, only_electron_quality_cuts, apply_nucleon_cuts,        Enable_FD_photons, apply_nucleon_SmearAndCorr, apply_kinematical_cuts,
-        apply_kinematical_weights, apply_fiducial_cuts, Generate_AMaps,
-        plot_and_fit_MomRes, VaryingDelta, Calculate_momResS2,
-        Run_with_momResS2, momRes_test, Rec_wTL_ES, ZoomIn_On_mom_th_plots);
+    settings.ConfigureStatuses(apply_cuts, CLAS12Analysis_particles, only_preselection_cuts, apply_chi2_cuts_1e_cut, only_electron_quality_cuts, apply_nucleon_cuts, Enable_FD_photons, apply_nucleon_SmearAndCorr, apply_kinematical_cuts,
+                               apply_kinematical_weights, apply_fiducial_cuts, Generate_AMaps,
+                               plot_and_fit_MomRes, VaryingDelta, Calculate_momResS2,
+                               Run_with_momResS2, momRes_test, Rec_wTL_ES, ZoomIn_On_mom_th_plots);
     settings.SetPaths(WorkingDirectory, SampleName, plots_path, apply_cuts,
                       apply_chi2_cuts_1e_cut, apply_nucleon_cuts);
     settings.GetPlotsPath(plots_path);
@@ -18335,7 +18335,7 @@ void EventAnalyser()
         auto allParticles_det = c12->getDetParticles();
         auto electrons_det = c12->getByID(11);
 
-        clasAna.Run(c12);
+        clasAna.RunAnalysisCuts(c12);
 
         /* allParticles vector from CLAS12Analysis (my addition). Used mostly
          * for 1n & nFDpCD.  */

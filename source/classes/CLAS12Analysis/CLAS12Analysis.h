@@ -13,12 +13,13 @@
 
 // TODO: change vertex cuts loading to be from .txt file.
 
-class CLAS12Analysis : public clas12ana {
-   private:
+class CLAS12Analysis : public clas12ana
+{
+private:
     // My Vz and dVz cuts
     // ----------------------------------------------------------------------------------------------------------------------------------------------------
 
-    CLAS1212Debugger Debug_c;  // debug class for plotting general plots
+    CLAS1212Debugger Debug_c; // debug class for plotting general plots
     // My Vz and dVz cuts
     // ----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -31,12 +32,8 @@ class CLAS12Analysis : public clas12ana {
     vector<double> vertex_z_cuts_FD = {-99, 99};
     vector<double> vertex_z_cuts_CD = {-99, 99};
 
-    vector<double> vertex_corr_cuts_FD = {
-        -99,
-        99};  // electron vertex <-> particle vertex correlation cuts (FD only)
-    vector<double> vertex_corr_cuts_CD = {
-        -99,
-        99};  // electron vertex <-> particle vertex correlation cuts (CD only)
+    vector<double> vertex_corr_cuts_FD = {-99, 99}; // electron vertex <-> particle vertex correlation cuts (FD only)
+    vector<double> vertex_corr_cuts_CD = {-99, 99}; // electron vertex <-> particle vertex correlation cuts (CD only)
 
     // My all particles vector
     // -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -47,9 +44,9 @@ class CLAS12Analysis : public clas12ana {
     // ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
     bool f_NpheCuts = false;
-    bool f_old_ecalSFCut = false;      // Old constant cuts from MSc analysis
-    bool f_old_VertexCuts = true;      // Old vetex cuts from MSc analysis
-    bool f_old_VertexCorrCuts = true;  // Old vetex cuts from MSc analysis
+    bool f_old_ecalSFCut = false;     // Old constant cuts from MSc analysis
+    bool f_old_VertexCuts = true;     // Old vetex cuts from MSc analysis
+    bool f_old_VertexCorrCuts = true; // Old vetex cuts from MSc analysis
 
     double htcc_Nphe_cut = 2;
     double Neutron_Momentum_cut = 9999.;
@@ -61,23 +58,26 @@ class CLAS12Analysis : public clas12ana {
     double SF_max_cut = .28;
     double SF_min_cut = .2;
 
-    double dc_edge_cut = 10;  // My addition (from Larry)
+    double dc_edge_cut = 10; // My addition (from Larry)
 
     // My private functions
     // --------------------------------------------------------------------------------------------------------------------------------------------------
 
-    void ClearParticles() {
+    void ClearParticles()
+    {
         allparticles.clear();
-        Clear();  // This is the clas12ana function
+        Clear(); // This is the clas12ana function
     }
 
-   public:
+public:
     CLAS12Analysis() { Init(); };
 
     CLAS12Analysis(bool debug) : debug_plots{debug} { Init(); };
 
-    ~CLAS12Analysis() {
-        if (debug_plots) {
+    ~CLAS12Analysis()
+    {
+        if (debug_plots)
+        {
             debug_c.WriteDebugPlots(debug_out_file);
             Debug_c.WriteMyDebugPlots(debug_out_file);
         }
@@ -86,22 +86,26 @@ class CLAS12Analysis : public clas12ana {
     // My public functions
     // ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-    void setVzcutsFD(double min, double max) {
+    void setVzcutsFD(double min, double max)
+    {
         vertex_z_cuts_FD.at(0) = min;
         vertex_z_cuts_FD.at(1) = max;
     }
 
-    void setVzcutsCD(double min, double max) {
+    void setVzcutsCD(double min, double max)
+    {
         vertex_z_cuts_CD.at(0) = min;
         vertex_z_cuts_CD.at(1) = max;
     }
 
-    void setVertexCorrCutsLimFD(double min, double max) {
+    void setVertexCorrCutsLimFD(double min, double max)
+    {
         vertex_corr_cuts_FD.at(0) = min;
         vertex_corr_cuts_FD.at(1) = max;
     }
 
-    void setVertexCorrCutsLimCD(double min, double max) {
+    void setVertexCorrCutsLimCD(double min, double max)
+    {
         vertex_corr_cuts_CD.at(0) = min;
         vertex_corr_cuts_CD.at(1) = max;
     }
@@ -124,10 +128,14 @@ class CLAS12Analysis : public clas12ana {
 
     double getNeutralBetaCutMean() { return FD_Neutral_Beta_Mean; }
 
-    double getdPhiCutMean() {
-        if (dPhi_p1_p2_Mean == 9999.) {
+    double getdPhiCutMean()
+    {
+        if (dPhi_p1_p2_Mean == 9999.)
+        {
             return 0;
-        } else {
+        }
+        else
+        {
             return dPhi_p1_p2_Mean;
         }
     }
@@ -140,17 +148,23 @@ class CLAS12Analysis : public clas12ana {
 
     // GetPidCutSigma function ------------------------------------------------
 
-    double GetPidCutSigma(int Pid, string region) {
+    double GetPidCutSigma(int Pid, string region)
+    {
         // TODO: My addition?
-        if (region == "CD") {
+        if (region == "CD")
+        {
             auto itter_CD = pid_cuts_cd.find(Pid);
 
             return itter_CD->second.at(1);
-        } else if (region == "FD") {
+        }
+        else if (region == "FD")
+        {
             auto itter_FD = pid_cuts_fd.find(Pid);
 
             return itter_FD->second.at(1);
-        } else {
+        }
+        else
+        {
             // TODO: figure out what to do in this case
             return -9999;
         }
@@ -158,17 +172,23 @@ class CLAS12Analysis : public clas12ana {
 
     // GetPidCutMean function -------------------------------------------------
 
-    double GetPidCutMean(int Pid, string region) {
+    double GetPidCutMean(int Pid, string region)
+    {
         // TODO: My addition?
-        if (region == "CD") {
+        if (region == "CD")
+        {
             auto itter_CD = pid_cuts_cd.find(Pid);
 
             return itter_CD->second.at(0);
-        } else if (region == "FD") {
+        }
+        else if (region == "FD")
+        {
             auto itter_FD = pid_cuts_fd.find(Pid);
 
             return itter_FD->second.at(0);
-        } else {
+        }
+        else
+        {
             // TODO: figure out what to do in this case
             return -9999;
         }
@@ -241,7 +261,7 @@ class CLAS12Analysis : public clas12ana {
     /*
     This function configures electron quality cuts.
     */
-    void ConfigureElectronCuts(const bool apply_cuts,  // master
+    void ConfigureElectronCuts(const bool apply_cuts, // master
                                const bool apply_Nphe_cut, DSCuts &Nphe_cuts_FD,
                                const bool apply_ECAL_SF_cuts,
                                const char *filename_SF_cuts, DSCuts &SF_cuts,
@@ -257,7 +277,7 @@ class CLAS12Analysis : public clas12ana {
     This function configures charged hadron cuts.
     */
     void ConfigureChargedHadronCuts(
-        const bool apply_cuts,  // master
+        const bool apply_cuts, // master
         const bool apply_chi2_cuts_1e_cut, const char *filename_PIDCuts_1,
         const char *filename_PIDCuts_2, DSCuts &Chi2_Proton_cuts_CD,
         DSCuts &Chi2_Proton_cuts_FD, DSCuts &Chi2_piplus_cuts_CD,
@@ -271,7 +291,7 @@ class CLAS12Analysis : public clas12ana {
     This function configures charged particle cuts that are not included in
     either ConfigureElectronCuts and ConfigureChargedHadronCuts.
     */
-    void ConfigureChargedParticleCuts(const bool apply_cuts,  // master
+    void ConfigureChargedParticleCuts(const bool apply_cuts, // master
                                       const bool apply_Vz_cuts, DSCuts Vz_cut,
                                       DSCuts Vz_cut_FD, DSCuts Vz_cut_CD,
                                       const bool apply_dVz_cuts,
@@ -285,7 +305,7 @@ class CLAS12Analysis : public clas12ana {
     /*
     This function configures nucleon cuts.
     */
-    void ConfigureNucleonCuts(const bool apply_cuts,  // master
+    void ConfigureNucleonCuts(const bool apply_cuts, // master
                               const bool apply_nucleon_cuts,
                               DSCuts &n_momentum_cuts_ABF_FD_n_from_ph,
                               DSCuts &n_momentum_cuts_ABF_FD_n_from_ph_apprax,
@@ -300,4 +320,4 @@ class CLAS12Analysis : public clas12ana {
                               DSCuts &dphi_pFD_pCD_pFDpCD);
 };
 
-#endif  // CLAS12ANALYSIS_H
+#endif // CLAS12ANALYSIS_H
