@@ -243,8 +243,10 @@ public:
     std::vector<region_part_ptr> getpiplus() { return piplus; }       // My addition
     std::vector<region_part_ptr> getpiminus() { return piminus; }     // My addition
     void increaseevent_mult() {++event_mult;}    // My addition
+
+    clas12debug debug_c; // debug class for plotting general plots (my edit - moved to public!)
+
 private:
-    clas12debug debug_c; // debug class for plotting general plots
     TString debug_out_file = "debugPlots.root";
 
     std::vector<region_part_ptr> electrons;
