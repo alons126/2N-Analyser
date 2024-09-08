@@ -325,7 +325,6 @@ void CLAS12Analysis::SetByPid(const region_part_ptr &p)
     if (pid == 11)
     {
         electrons.push_back(p);
-        // allparticles.push_back(p);
     }
     else if (pid == 2212)
     {
@@ -334,48 +333,39 @@ void CLAS12Analysis::SetByPid(const region_part_ptr &p)
         if (!(checkGhostTrackCD(p) && getf_ghostTrackCuts()))
         {
             protons.push_back(p);
-            // allparticles.push_back(p);
         }
     }
     else if (pid == 2112)
     {
         neutrons.push_back(p);
-        // allparticles.push_back(p);
     }
     else if (pid == 45)
     {
         deuterons.push_back(p);
-        // allparticles.push_back(p);
     }
     else if (pid == 211)
     {
         piplus.push_back(p);
-        // allparticles.push_back(p);
     }
     else if (pid == -211)
     {
         piminus.push_back(p);
-        // allparticles.push_back(p);
     }
     else if (pid == 321)
     {
         kplus.push_back(p);
-        // allparticles.push_back(p);
     }
     else if (pid == -321)
     {
         kminus.push_back(p);
-        // allparticles.push_back(p);
     }
     else if (pid == 0)
     {
         neutrals.push_back(p);
-        // allparticles.push_back(p);
     }
     else
     {
         otherpart.push_back(p);
-        // allparticles.push_back(p);
     }
 }
 
@@ -443,19 +433,20 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
                 // DC edge cuts:
                 (!DCEdgeCuts(el) && getf_DCEdgeCuts()) ||
                 // minium 800 MeV/c cut for electrons in class:
-                (el->par()->getP() < 0.8)))
-            SetByPid(el); });
+                (el->par()->getP() < 0.8))) {
+                    setByPid(el);
+                } });
     /* My edit - end */
 
     if (getdebug_plots())
     {
-        for (auto el : getelectrons())
+        for (auto el : electrons)
             debug_c.fillAfterEl(el);
     }
 
     /* My edit - start */
     // Applying cuts on other particles is there is a good trigger electron:
-    if (getelectrons().size() == 1)
+    if (electrons.size() == 1)
     {
         if (getdebug_plots())
         {
@@ -484,9 +475,9 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
                       {
                 if (p->par()->getCharge() == 0 && p->par()->getPid() != 11) {
                     // neutrals and electrons don't follow cuts below, skip them
-                    SetByPid(p);
+                    setByPid(p);
                     return;
-                } else if (p->par()->getPid() != 11 && getelectrons().size() > 0) {
+                } else if (p->par()->getPid() != 11 && electrons.size() > 0) {
                     // Charged particles
                     increaseevent_mult();
 
@@ -515,26 +506,26 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
                             // Vertex correlation with electron cuts:
                             (!checkVertexCorrelation(electrons_det[0], p) &&
                              getf_corr_vertexCuts()))) {
-                        SetByPid(p);
+                        setByPid(p);
                     }
                 } });
 
         if (getdebug_plots())
         {
-            for (auto p : getprotons())
+            for (auto p : protons)
                 debug_c.fillAfterPart(p);
-            for (auto p : getpiplus())
+            for (auto p : piplus)
                 debug_c.fillAfterPart(p);
-            for (auto p : getpiminus())
+            for (auto p : piminus)
                 debug_c.fillAfterPart(p);
 
-            for (auto el : getelectrons())
+            for (auto el : electrons)
                 debug_c.fillAfterEl(el);
         }
 
-        Debug_c.multi_p_1e_cut_AC_debug->Fill(getprotons().size());
-        Debug_c.multi_cpi_1e_cut_AC_debug->Fill(getpiplus().size() + getpiminus().size());
-        Debug_c.multi_p_vs_cpi_1e_cut_AC_debug->Fill(getprotons().size(), getpiplus().size() + getpiminus().size());
+        Debug_c.multi_p_1e_cut_AC_debug->Fill(protons.size());
+        Debug_c.multi_cpi_1e_cut_AC_debug->Fill(piplus.size() + piminus.size());
+        Debug_c.multi_p_vs_cpi_1e_cut_AC_debug->Fill(protons.size(), piplus.size() + piminus.size());
 
         // Add all particles after PID (and one reco electron) in the allparticles vector
         for (auto el : electrons)
