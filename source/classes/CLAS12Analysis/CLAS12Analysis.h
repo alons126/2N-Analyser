@@ -258,6 +258,18 @@ public:
     */
     bool CheckVertex(const region_part_ptr &p);
 
+    // CheckVertexCorrelation function --------------------------------------------
+
+    /*
+    This is my edit based on the clas12ana function:
+        bool checkVertexCorrelation(const region_part_ptr &el,
+                                    const region_part_ptr &p);
+
+    It allows the user to choose between the old implementation of vertex
+    correlation cuts from the MSc analysis and the implementation from clas12ana
+    */
+    bool CheckVertexCorrelation(const region_part_ptr &el, const region_part_ptr &p);
+
     // SetByPid function ------------------------------------------------------
 
     /*
@@ -267,14 +279,6 @@ public:
     it provids the same functionality, only that is filles allparticle vector in addition to each particles species
     */
     void SetByPid(const region_part_ptr &p);
-
-    // RunAnalysisCuts function -----------------------------------------------
-
-    /*
-    This is my edit based on the clas12ana function:
-        void Run(const std::unique_ptr<clas12::clas12reader> &c12);
-    */
-    void RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader> &c12);
 
     // RunAnalysisCuts function -----------------------------------------------
 

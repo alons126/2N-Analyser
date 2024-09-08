@@ -304,80 +304,80 @@ bool CLAS12Analysis::CheckVertexCorrelation(const region_part_ptr &el, const reg
         return checkVertexCorrelation(el, p);
     }
 }
-    // SetByPid function ------------------------------------------------------
+// SetByPid function ------------------------------------------------------
 
-    /*
-    This is my edit based on the clas12ana function:
-        void setByPid(const region_part_ptr &p);
+/*
+This is my edit based on the clas12ana function:
+    void setByPid(const region_part_ptr &p);
 
-    it provids the same functionality, only that is filles allparticle vector in addition to each particles species
-    */
-    void CLAS12Analysis::SetByPid(const region_part_ptr &p)
+it provids the same functionality, only that is filles allparticle vector in addition to each particles species
+*/
+void CLAS12Analysis::SetByPid(const region_part_ptr &p)
+{
+    int pid = p->par()->getPid();
+
+    if (checkProtonPidCut(p) && getf_protonpidCuts())
+        pid = 2212;
+
+    if (!checkProtonPidCut(p) && getf_protonpidCuts() && getf_pidCuts() && p->getRegion() == clas12::CD && pid == 2212)
+        pid = 9999;
+
+    if (pid == 11)
     {
-        int pid = p->par()->getPid();
-
-        if (checkProtonPidCut(p) && getf_protonpidCuts())
-            pid = 2212;
-
-        if (!checkProtonPidCut(p) && getf_protonpidCuts() && getf_pidCuts() && p->getRegion() == clas12::CD && pid == 2212)
-            pid = 9999;
-
-        if (pid == 11)
+        electrons.push_back(p);
+        allparticles.push_back(p);
+    }
+    else if (pid == 2212)
+    {
+        // is a proton if not a ghost track and check for PID by TOF vs
+        // momentum assignment
+        if (!(checkGhostTrackCD(p) && getf_ghostTrackCuts()))
         {
-            electrons.push_back(p);
-            allparticles.push_back(p);
-        }
-        else if (pid == 2212)
-        {
-            // is a proton if not a ghost track and check for PID by TOF vs
-            // momentum assignment
-            if (!(checkGhostTrackCD(p) && getf_ghostTrackCuts()))
-            {
-                protons.push_back(p);
-                allparticles.push_back(p);
-            }
-        }
-        else if (pid == 2112)
-        {
-            neutrons.push_back(p);
-            allparticles.push_back(p);
-        }
-        else if (pid == 45)
-        {
-            deuterons.push_back(p);
-            allparticles.push_back(p);
-        }
-        else if (pid == 211)
-        {
-            piplus.push_back(p);
-            allparticles.push_back(p);
-        }
-        else if (pid == -211)
-        {
-            piminus.push_back(p);
-            allparticles.push_back(p);
-        }
-        else if (pid == 321)
-        {
-            kplus.push_back(p);
-            allparticles.push_back(p);
-        }
-        else if (pid == -321)
-        {
-            kminus.push_back(p);
-            allparticles.push_back(p);
-        }
-        else if (pid == 0)
-        {
-            neutrals.push_back(p);
-            allparticles.push_back(p);
-        }
-        else
-        {
-            otherpart.push_back(p);
+            protons.push_back(p);
             allparticles.push_back(p);
         }
     }
+    else if (pid == 2112)
+    {
+        neutrons.push_back(p);
+        allparticles.push_back(p);
+    }
+    else if (pid == 45)
+    {
+        deuterons.push_back(p);
+        allparticles.push_back(p);
+    }
+    else if (pid == 211)
+    {
+        piplus.push_back(p);
+        allparticles.push_back(p);
+    }
+    else if (pid == -211)
+    {
+        piminus.push_back(p);
+        allparticles.push_back(p);
+    }
+    else if (pid == 321)
+    {
+        kplus.push_back(p);
+        allparticles.push_back(p);
+    }
+    else if (pid == -321)
+    {
+        kminus.push_back(p);
+        allparticles.push_back(p);
+    }
+    else if (pid == 0)
+    {
+        neutrals.push_back(p);
+        allparticles.push_back(p);
+    }
+    else
+    {
+        otherpart.push_back(p);
+        allparticles.push_back(p);
+    }
+}
 
 // RunAnalysisCuts function ---------------------------------------------------
 
