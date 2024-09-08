@@ -8,8 +8,8 @@ This is my addition based on the clas12debug function:
 
 It comes to add my debugging plots to the clas12ana debugging plots
 */
-void WriteMyDebugPlots(TString file) {
-    TFile f_debugOut(filename, "UPDATE");
+void CLAS1212Debugger::WriteMyDebugPlots(TString file) {
+    TFile f_debugOut(file, "UPDATE");
 
     // Multiplicity plots before and after cuts (no #e cuts):
     multi_p_vs_cpi_BC_debug->Write();
