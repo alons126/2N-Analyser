@@ -325,7 +325,7 @@ void CLAS12Analysis::SetByPid(const region_part_ptr &p)
     if (pid == 11)
     {
         electrons.push_back(p);
-        allparticles.push_back(p);
+        // allparticles.push_back(p);
     }
     else if (pid == 2212)
     {
@@ -334,48 +334,48 @@ void CLAS12Analysis::SetByPid(const region_part_ptr &p)
         if (!(checkGhostTrackCD(p) && getf_ghostTrackCuts()))
         {
             protons.push_back(p);
-            allparticles.push_back(p);
+            // allparticles.push_back(p);
         }
     }
     else if (pid == 2112)
     {
         neutrons.push_back(p);
-        allparticles.push_back(p);
+        // allparticles.push_back(p);
     }
     else if (pid == 45)
     {
         deuterons.push_back(p);
-        allparticles.push_back(p);
+        // allparticles.push_back(p);
     }
     else if (pid == 211)
     {
         piplus.push_back(p);
-        allparticles.push_back(p);
+        // allparticles.push_back(p);
     }
     else if (pid == -211)
     {
         piminus.push_back(p);
-        allparticles.push_back(p);
+        // allparticles.push_back(p);
     }
     else if (pid == 321)
     {
         kplus.push_back(p);
-        allparticles.push_back(p);
+        // allparticles.push_back(p);
     }
     else if (pid == -321)
     {
         kminus.push_back(p);
-        allparticles.push_back(p);
+        // allparticles.push_back(p);
     }
     else if (pid == 0)
     {
         neutrals.push_back(p);
-        allparticles.push_back(p);
+        // allparticles.push_back(p);
     }
     else
     {
         otherpart.push_back(p);
-        allparticles.push_back(p);
+        // allparticles.push_back(p);
     }
 }
 
@@ -536,6 +536,26 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
         Debug_c.multi_cpi_1e_cut_AC_debug->Fill(getpiplus().size() + getpiminus().size());
         Debug_c.multi_p_vs_cpi_1e_cut_AC_debug->Fill(getprotons().size(), getpiplus().size() + getpiminus().size());
 
+        for (auto el : getelectrons())
+            allparticles.push_back(el);
+        for (auto p : getprotons())
+            allparticles.push_back(p);
+        for (auto d : getdeuterons())
+            allparticles.push_back(d);
+        for (auto neut : getneutrals())
+            allparticles.push_back(neut);
+        for (auto n : getneutrons())
+            allparticles.push_back(n);
+        for (auto pip : getpiplus())
+            allparticles.push_back(pip);
+        for (auto pim : getpiminus())
+            allparticles.push_back(pim);
+        for (auto kp : getkplus())
+            allparticles.push_back(kp);
+        for (auto km : getkminus())
+            allparticles.push_back(km);
+        for (auto o : getotherpart())
+            allparticles.push_back(o);
     } // good electron loop
     /* My edit - end */
 }
@@ -668,7 +688,8 @@ void CLAS12Analysis::ConfigureChargedHadronCuts(
             setCDRegionCuts();
         }
 
-        if (apply_ghostTrackCuts) {
+        if (apply_ghostTrackCuts)
+        {
             // making f_ghostTrackCuts = true
             setGhostTrackCuts();
         }
