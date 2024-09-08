@@ -200,12 +200,12 @@ bool CLAS12Analysis::HTCCNpheCuts(region_part_ptr p)
 
 /*
 This is my edit based on the clas12ana function:
-    void checkEcalSFCuts(const region_part_ptr &p);
+    bool checkEcalSFCuts(const region_part_ptr &p);
 
 It allows the user to choose between the constant SF cuts
 {SF_max_cut,SF_min_cut}, and the new SF cuts from clas12ana
 */
-void CLAS12Analysis::CheckEcalSFCuts(const region_part_ptr &p)
+bool CLAS12Analysis::CheckEcalSFCuts(const region_part_ptr &p)
 {
     if (f_old_ecalSFCut)
     {
@@ -232,12 +232,12 @@ void CLAS12Analysis::CheckEcalSFCuts(const region_part_ptr &p)
 
 /*
 This is my edit based on the clas12ana function:
-    void checkVertex(const region_part_ptr &p)
+    bool checkVertex(const region_part_ptr &p)
 
 It allows the user to choose between the old implementation of vertex cuts
 from the MSc analysis and the implementation from clas12ana
 */
-void CLAS12Analysis::CheckVertex(const region_part_ptr &p)
+bool CLAS12Analysis::CheckVertex(const region_part_ptr &p)
 {
     if (f_old_VertexCuts)
     {
@@ -264,12 +264,12 @@ void CLAS12Analysis::CheckVertex(const region_part_ptr &p)
         }
         else
         {
-            return ((p->par()->getVx() > vertex_x_cuts.at(0) &&
-                     p->par()->getVx() < vertex_x_cuts.at(1)) &&
-                    (p->par()->getVy() > vertex_y_cuts.at(0) &&
-                     p->par()->getVy() < vertex_y_cuts.at(1)) &&
-                    (p->par()->getVz() > vertex_z_cuts.at(0) &&
-                     p->par()->getVz() < vertex_z_cuts.at(1)));
+            return ((p->par()->getVx() > getvertex_x_cuts().at(0) &&
+                     p->par()->getVx() < getvertex_x_cuts().at(1)) &&
+                    (p->par()->getVy() > getvertex_y_cuts().at(0) &&
+                     p->par()->getVy() < getvertex_y_cuts().at(1)) &&
+                    (p->par()->getVz() > getvertex_z_cuts().at(0) &&
+                     p->par()->getVz() < getvertex_z_cuts().at(1)));
         }
     }
     else

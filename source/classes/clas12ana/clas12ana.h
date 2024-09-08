@@ -201,6 +201,8 @@ public:
     std::vector<region_part_ptr> getByPid(std::vector<region_part_ptr> particles, int pid);
 
     // clas12debug getdebug_c() { return std::move(debug_c); } // My addition
+    map<string, vector<double>> vertex_cuts;                          // map< x,y,z, {min,max}>// My addition
+    vector<double> vertex_z_cuts = {-99, 99};                         // My addition
     double getEcalEdgeCuts() { return ecal_edge_cut; }                // My addition
     bool getdebug_plots() { return debug_plots; }                     // My addition
     TString getdebug_out_file() { return debug_out_file; }            // My addition
@@ -219,6 +221,10 @@ public:
     {
         vertex_cuts.insert(pair<int, vector<double>>(pid, par));
     }
+
+    vector<double> getvertex_x_cuts() { return vertex_x_cuts; } // My addition
+    vector<double> getvertex_y_cuts() { return vertex_y_cuts; } // My addition
+    vector<double> getvertex_z_cuts() { return vertex_z_cuts; } // My addition
 
 private:
     clas12debug debug_c; // debug class for plotting general plots

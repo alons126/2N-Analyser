@@ -226,23 +226,23 @@ public:
 
     /*
     This is my edit based on the clas12ana function:
-        void checkEcalSFCuts(const region_part_ptr &p);
+        bool checkEcalSFCuts(const region_part_ptr &p);
 
     It allows the user to choose between the constant SF cuts
     {SF_max_cut,SF_min_cut}, and the new SF cuts from clas12ana
     */
-    void CheckEcalSFCuts(const region_part_ptr &p);
+    bool CheckEcalSFCuts(const region_part_ptr &p);
 
     // CheckVertex function ---------------------------------------------------
 
     /*
     This is my edit based on the clas12ana function:
-        void checkVertex(const region_part_ptr &p)
+        bool checkVertex(const region_part_ptr &p)
 
     It allows the user to choose between the old implementation of vertex cuts
     from the MSc analysis and the implementation from clas12ana
     */
-    void CheckVertex(const region_part_ptr &p);
+    bool CheckVertex(const region_part_ptr &p);
 
     // CheckVertexCorrelation function ----------------------------------------
 
