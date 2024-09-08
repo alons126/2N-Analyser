@@ -304,6 +304,80 @@ bool CLAS12Analysis::CheckVertexCorrelation(const region_part_ptr &el, const reg
         return checkVertexCorrelation(el, p);
     }
 }
+    // SetByPid function ------------------------------------------------------
+
+    /*
+    This is my edit based on the clas12ana function:
+        void setByPid(const region_part_ptr &p);
+
+    it provids the same functionality, only that is filles allparticle vector in addition to each particles species
+    */
+    void CLAS12Analysis::SetByPid(const region_part_ptr &p)
+    {
+        int pid = p->par()->getPid();
+
+        if (checkProtonPidCut(p) && getf_protonpidCuts())
+            pid = 2212;
+
+        if (!checkProtonPidCut(p) && getf_protonpidCuts() && getf_pidCuts() && p->getRegion() == clas12::CD && pid == 2212)
+            pid = 9999;
+
+        if (pid == 11)
+        {
+            electrons.push_back(p);
+            allparticles.push_back(p);
+        }
+        else if (pid == 2212)
+        {
+            // is a proton if not a ghost track and check for PID by TOF vs
+            // momentum assignment
+            if (!(checkGhostTrackCD(p) && getf_ghostTrackCuts()))
+            {
+                protons.push_back(p);
+                allparticles.push_back(p);
+            }
+        }
+        else if (pid == 2112)
+        {
+            neutrons.push_back(p);
+            allparticles.push_back(p);
+        }
+        else if (pid == 45)
+        {
+            deuterons.push_back(p);
+            allparticles.push_back(p);
+        }
+        else if (pid == 211)
+        {
+            piplus.push_back(p);
+            allparticles.push_back(p);
+        }
+        else if (pid == -211)
+        {
+            piminus.push_back(p);
+            allparticles.push_back(p);
+        }
+        else if (pid == 321)
+        {
+            kplus.push_back(p);
+            allparticles.push_back(p);
+        }
+        else if (pid == -321)
+        {
+            kminus.push_back(p);
+            allparticles.push_back(p);
+        }
+        else if (pid == 0)
+        {
+            neutrals.push_back(p);
+            allparticles.push_back(p);
+        }
+        else
+        {
+            otherpart.push_back(p);
+            allparticles.push_back(p);
+        }
+    }
 
 // RunAnalysisCuts function ---------------------------------------------------
 
@@ -370,7 +444,7 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
                 (!DCEdgeCuts(el) && getf_DCEdgeCuts()) ||
                 // minium 800 MeV/c cut for electrons in class:
                 (el->par()->getP() < 0.8)))
-            setByPid(el); });
+            SetByPid(el); });
     /* My edit - end */
 
     if (getdebug_plots())
@@ -410,7 +484,7 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
                       {
                 if (p->par()->getCharge() == 0 && p->par()->getPid() != 11) {
                     // neutrals and electrons don't follow cuts below, skip them
-                    setByPid(p);
+                    SetByPid(p);
                     return;
                 } else if (p->par()->getPid() != 11 && getelectrons().size() > 0) {
                     // Charged particles
@@ -441,7 +515,7 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
                             // Vertex correlation with electron cuts:
                             (!checkVertexCorrelation(electrons_det[0], p) &&
                              getf_corr_vertexCuts()))) {
-                        setByPid(p);
+                        SetByPid(p);
                     }
                 } });
 
@@ -462,17 +536,6 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
         Debug_c.multi_cpi_1e_cut_AC_debug->Fill(getpiplus().size() + getpiminus().size());
         Debug_c.multi_p_vs_cpi_1e_cut_AC_debug->Fill(getprotons().size(), getpiplus().size() + getpiminus().size());
 
-        // Add all particles after PID (with a single electron) to allparticles vector
-        allparticles.push_back(getelectrons());
-        allparticles.push_back(getprotons());
-        allparticles.push_back(getdeuterons());
-        allparticles.push_back(getneutrals());
-        allparticles.push_back(getneutrons());
-        allparticles.push_back(getpiplus());
-        allparticles.push_back(getpiminus());
-        allparticles.push_back(getkplus());
-        allparticles.push_back(getkminus());
-        allparticles.push_back(getotherpart());
     } // good electron loop
     /* My edit - end */
 }
