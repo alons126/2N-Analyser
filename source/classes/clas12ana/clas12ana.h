@@ -200,10 +200,12 @@ public:
     std::vector<region_part_ptr> getRecoilSRC() { return recoil_proton; };
     std::vector<region_part_ptr> getByPid(std::vector<region_part_ptr> particles, int pid);
 
-    double getEcalEdgeCuts() { return ecal_edge_cut; } // My addition
-    bool getdebug_plots() { return debug_plots; }      // My addition
     // clas12debug getdebug_c() { return std::move(debug_c); } // My addition
-    TString getdebug_out_file() { return debug_out_file; } // My addition
+    double getEcalEdgeCuts() { return ecal_edge_cut; }                // My addition
+    bool getdebug_plots() { return debug_plots; }                     // My addition
+    TString getdebug_out_file() { return debug_out_file; }            // My addition
+    map<int, vector<double>> getpid_cuts_cd() { return pid_cuts_cd; } // My addition
+    map<int, vector<double>> getpid_cuts_fd() { return pid_cuts_fd; } // My addition
 
 private:
     clas12debug debug_c; // debug class for plotting general plots
