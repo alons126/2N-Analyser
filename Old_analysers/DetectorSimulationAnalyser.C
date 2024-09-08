@@ -18565,7 +18565,7 @@ void EventAnalyser()
             cout << "Nd = " << Nd << "\n";
             cout << "Nneut = " << Nneut << "\n";
             cout << "No = " << No << "\n";
-            cout << "\nallParticles[0]]->getPid() = " << allParticles[0]->getPid() << "\n";
+            cout << "\nallParticles[0]->getPid() = " << allParticles[0]->getPid() << "\n";
             cout << "Exiting...\n\n", exit(0);
         }
         //</editor-fold>
