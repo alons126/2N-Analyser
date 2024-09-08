@@ -73,7 +73,7 @@ private:
 public:
     CLAS12Analysis() { Init(); };
 
-    CLAS12Analysis(bool debug) : debug_plots{debug} { Init(); };
+    CLAS12Analysis(bool debug) : clas12ana(debug) { Init(); };
 
     ~CLAS12Analysis()
     {
