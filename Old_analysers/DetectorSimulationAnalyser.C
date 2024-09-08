@@ -42699,7 +42699,7 @@ void EventAnalyser()
         cout << "\n\nSaving debugging plots...\n\n";
         TString debug_filePath = plots_path + "/" + "DebugOutputFile.root";
         clasAna.setdebug_fileName(debug_filePath);
-        clasAna.WriteMyDBPlots(clas12ana.getdebug_fileName());
+        clasAna.WriteMyDBPlots(clasAna.getdebug_fileName());
     }
     else
     {
