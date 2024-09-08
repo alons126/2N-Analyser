@@ -9,9 +9,15 @@
 #include "../CLAS1212Debugger/CLAS1212Debugger.cpp"
 #include "../DSCuts/DSCuts.h"
 
+// In another file, after including the first
+#undef CLAS12ANA_DIR
+#define CLAS12ANA_DIR "../clas12ana"
+
 /* This is my edit of the RG-M analysis code */
 
 // TODO: change vertex cuts loading to be from .txt file.
+
+
 
 class CLAS12Analysis : public clas12ana
 {
