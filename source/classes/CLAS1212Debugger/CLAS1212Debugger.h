@@ -1,4 +1,4 @@
-#include "../clas12ana/clas12debug.cpp"
+#include "../clas12ana/clas12debug.h"
 
 class CLAS1212Debugger : public clas12debug {
    private:
