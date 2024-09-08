@@ -77,10 +77,10 @@ public:
 
     ~CLAS12Analysis()
     {
-        if (debug_plots)
+        if (getdebug_plots())
         {
-            debug_c.WriteDebugPlots(debug_out_file);
-            Debug_c.WriteMyDebugPlots(debug_out_file);
+            getdebug_c().WriteDebugPlots(getdebug_out_file());
+            Debug_c.WriteMyDebugPlots(getdebug_out_file());
         }
     }
 
@@ -128,6 +128,12 @@ public:
     double getNeutralBetaCut() { return FD_Neutral_Beta_cut; }
 
     double getNeutralBetaCutMean() { return FD_Neutral_Beta_Mean; }
+
+    bool getdebug_plots() { return debug_plots; }
+
+    clas12debug getdebug_c() { return debug_c; }
+
+    TString getdebug_out_file() { return debug_out_file; }
 
     double getdPhiCutMean()
     {
