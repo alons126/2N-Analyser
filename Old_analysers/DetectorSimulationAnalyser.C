@@ -18587,9 +18587,8 @@ void EventAnalyser()
         /* Safety check that allParticles.size(), Nf are the same */
         if ((CLAS12Analysis_particles) && (allParticles.size() != Nf))
         {
-            cout << "\n\nallParticles.size() is different than Nf! "
-                    "Exiting...\n\n",
-                exit(0);
+            cout << "\n\nallParticles.size() is different than Nf! We have:\nallParticles.size() = " << allParticles.size() << "; Nf = " << Nf << "\n"
+                    "Exiting...\n\n",                exit(0);
         }
         //</editor-fold>
 
