@@ -117,7 +117,7 @@ public:
 
     double getDCEdgeCuts() { return dc_edge_cut; }
 
-    double getEcalEdgeCuts() { return ecal_edge_cut; }
+    // double getEcalEdgeCuts() { return ecal_edge_cut; }
 
     void setNpheCuts(bool flag = true) { f_NpheCuts = flag; }
 
@@ -129,11 +129,11 @@ public:
 
     double getNeutralBetaCutMean() { return FD_Neutral_Beta_Mean; }
 
-    bool getdebug_plots() { return debug_plots; }
+    // bool getdebug_plots() { return debug_plots; }
 
-    clas12debug getdebug_c() { return debug_c; }
+    // clas12debug getdebug_c() { return debug_c; }
 
-    TString getdebug_out_file() { return debug_out_file; }
+    // TString getdebug_out_file() { return debug_out_file; }
 
     double getdPhiCutMean()
     {
