@@ -18552,7 +18552,7 @@ void EventAnalyser()
 
         //<editor-fold desc="Safety check for CLAS12Analysis particles">
         /* Safety check that allParticles.size(), Nf are the same */
-        if ((CLAS12Analysis_particles) && (Ne == 1) && (allParticles.size() != Nf))
+        if ((CLAS12Analysis_particles) && (allParticles.size() != Nf))
         {
             cout << "\n\nallParticles.size() is different than Nf! We have:\nallParticles.size() = " << allParticles.size() << "; Nf = " << Nf << "\n";
             cout << "Nn = " << Nn << "\n";
