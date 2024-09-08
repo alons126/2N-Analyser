@@ -6,12 +6,14 @@
 #define CLAS12ANALYSIS_H
 
 #include "../clas12ana/clas12ana.cpp"
-#include "../CLAS1212Debugger/CLAS1212Debugger.cpp"
-#include "../DSCuts/DSCuts.h"
 
 // In another file, after including the first
 #undef CLAS12ANA_DIR
 #define CLAS12ANA_DIR "../clas12ana"
+
+#include "../CLAS1212Debugger/CLAS1212Debugger.cpp"
+#include "../DSCuts/DSCuts.h"
+
 
 /* This is my edit of the RG-M analysis code */
 
