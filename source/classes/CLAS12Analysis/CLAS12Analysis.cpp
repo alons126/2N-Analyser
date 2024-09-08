@@ -224,7 +224,7 @@ bool CLAS12Analysis::CheckEcalSFCuts(const region_part_ptr &p)
     }
     else
     {
-        checkEcalSFCuts(p);
+        return checkEcalSFCuts(p);
     }
 }
 
@@ -274,7 +274,7 @@ bool CLAS12Analysis::CheckVertex(const region_part_ptr &p)
     }
     else
     {
-        checkVertex(p);
+        return checkVertex(p);
     }
 }
 
@@ -313,7 +313,7 @@ bool CLAS12Analysis::CheckVertexCorrelation(const region_part_ptr &el, const reg
     }
     else
     {
-        checkVertexCorrelation(el, p);
+        return checkVertexCorrelation(el, p);
     }
 }
 
@@ -327,7 +327,7 @@ void CLAS12Analysis::RunAnalysisCuts(
     const std::unique_ptr<clas12::clas12reader> &c12)
 {
     Clear();
-    current_run = c12->runconfig()->getRun();
+    setcurrent_run(c12->runconfig()->getRun());
     checkCutParameters(); // check run number has the right cuts
 
     auto particles = c12->getDetParticles(); // particles is now a std::vector
@@ -387,17 +387,17 @@ void CLAS12Analysis::RunAnalysisCuts(
             setByPid(el); });
     /* My edit - end */
 
-    if (debug_plots)
+    if (getdebug_plots())
     {
-        for (auto el : electrons)
+        for (auto el : getelectrons())
             debug_c.fillAfterEl(el);
     }
 
     /* My edit - start */
     // Applying cuts on other particles is there is a good trigger electron:
-    if (electrons.size() == 1)
+    if (getelectrons().size() == 1)
     {
-        if (debug_plots)
+        if (getdebug_plots())
         {
             for (auto p : particles)
                 if (p->par()->getPid() == 2212 || p->par()->getPid() == -211 ||
@@ -430,9 +430,9 @@ void CLAS12Analysis::RunAnalysisCuts(
                     // Add neutrals and electrons to allparticles:
                     addToAllParticles(p);
                     return;
-                } else if (p->par()->getPid() != 11 && electrons.size() > 0) {
+                } else if (p->par()->getPid() != 11 && getelectrons().size() > 0) {
                     // Charged particles
-                    ++event_mult;
+                    increaseevent_mult();
 
                     bool check_pid_cuts = (
                         // Check if in proton PID:
@@ -466,22 +466,21 @@ void CLAS12Analysis::RunAnalysisCuts(
                     }
                 } });
 
-        if (debug_plots)
+        if (getdebug_plots())
         {
-            for (auto p : protons)
+            for (auto p : getprotons())
                 debug_c.fillAfterPart(p);
-            for (auto p : piplus)
+            for (auto p : getpiplus())
                 debug_c.fillAfterPart(p);
-            for (auto p : piminus)
+            for (auto p : getpiminus())
                 debug_c.fillAfterPart(p);
 
-            for (auto el : electrons)
+            for (auto el : getelectrons())
                 debug_c.fillAfterEl(el);
         }
-        Debug_c.multi_p_1e_cut_AC_debug->Fill(protons.size());
-        Debug_c.multi_cpi_1e_cut_AC_debug->Fill(piplus.size() + piminus.size());
-        Debug_c.multi_p_vs_cpi_1e_cut_AC_debug->Fill(protons.size(),
-                                             piplus.size() + piminus.size());
+        Debug_c.multi_p_1e_cut_AC_debug->Fill(getprotons().size());
+        Debug_c.multi_cpi_1e_cut_AC_debug->Fill(getpiplus().size() + getpiminus().size());
+        Debug_c.multi_p_vs_cpi_1e_cut_AC_debug->Fill(getprotons().size(), getpiplus().size() + getpiminus().size());
 
     } // good electron loop
     /* My edit - end */

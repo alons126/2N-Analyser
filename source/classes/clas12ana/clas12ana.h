@@ -222,22 +222,27 @@ public:
         vertex_cuts.insert(pair<string, vector<double>>(pid, par));
     }
 
-    vector<double> getvertex_x_cuts() { return vertex_x_cuts; } // My addition
-    vector<double> getvertex_y_cuts() { return vertex_y_cuts; } // My addition
-    vector<double> getvertex_z_cuts() { return vertex_z_cuts; } // My addition
-    int getcurrent_run() { return current_run; }                // My addition
-    bool getf_ecalSFCuts() { return f_ecalSFCuts; }             // My addition
-    bool getf_ecalPCuts() { return f_ecalPCuts; }               // My addition
-    bool getf_ecalDiagCuts() { return f_ecalDiagCuts; }         // My addition
-    bool getf_ecalEdgeCuts() { return f_ecalEdgeCuts; }         // My addition
-    bool getf_vertexCuts() { return f_vertexCuts; }             // My addition
-    bool getf_DCEdgeCuts() { return f_DCEdgeCuts; }             // My addition
-    bool getf_protonpidCuts() { return f_protonpidCuts; }       // My addition
-    bool getf_pidCuts() { return f_pidCuts; }                   // My addition
-    bool getf_CDEdgeCuts() { return f_CDEdgeCuts; }             // My addition
-    bool getf_CDRegionCuts() { return f_CDRegionCuts; }         // My addition
-    bool getf_corr_vertexCuts() { return f_corr_vertexCuts; }   // My addition
-
+    vector<double> getvertex_x_cuts() { return vertex_x_cuts; }       // My addition
+    vector<double> getvertex_y_cuts() { return vertex_y_cuts; }       // My addition
+    vector<double> getvertex_z_cuts() { return vertex_z_cuts; }       // My addition
+    int getcurrent_run() { return current_run; }                      // My addition
+    void setcurrent_run(int crun) { current_run = crun; }             // My addition
+    bool getf_ecalSFCuts() { return f_ecalSFCuts; }                   // My addition
+    bool getf_ecalPCuts() { return f_ecalPCuts; }                     // My addition
+    bool getf_ecalDiagCuts() { return f_ecalDiagCuts; }               // My addition
+    bool getf_ecalEdgeCuts() { return f_ecalEdgeCuts; }               // My addition
+    bool getf_vertexCuts() { return f_vertexCuts; }                   // My addition
+    bool getf_DCEdgeCuts() { return f_DCEdgeCuts; }                   // My addition
+    bool getf_protonpidCuts() { return f_protonpidCuts; }             // My addition
+    bool getf_pidCuts() { return f_pidCuts; }                         // My addition
+    bool getf_CDEdgeCuts() { return f_CDEdgeCuts; }                   // My addition
+    bool getf_CDRegionCuts() { return f_CDRegionCuts; }               // My addition
+    bool getf_corr_vertexCuts() { return f_corr_vertexCuts; }         // My addition
+    std::vector<region_part_ptr> getelectrons() { return electrons; } // My addition
+    std::vector<region_part_ptr> getprotons() { return protons; }     // My addition
+    std::vector<region_part_ptr> getpiplus() { return piplus; }       // My addition
+    std::vector<region_part_ptr> getpiminus() { return piminus; }     // My addition
+    void increaseevent_mult() {++event_mult;}    // My addition
 private:
     clas12debug debug_c; // debug class for plotting general plots
     TString debug_out_file = "debugPlots.root";
