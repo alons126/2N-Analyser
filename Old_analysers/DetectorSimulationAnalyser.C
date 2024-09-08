@@ -42697,9 +42697,6 @@ void EventAnalyser()
     if (debug_plots == true)
     {
         cout << "\n\nSaving debugging plots...\n\n";
-        TString hit_map_ref_filePath = plots_path + "/" + "hit_map_ref.root";
-        clasAna.set_hit_map_ref_fileName(hit_map_ref_filePath);
-
         TString debug_filePath = plots_path + "/" + "DebugOutputFile.root";
         clasAna.setdebug_fileName(debug_filePath);
         clasAna.WriteMyDBPlots(clas12ana.getdebug_fileName());
