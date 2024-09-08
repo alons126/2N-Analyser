@@ -238,6 +238,7 @@ public:
     bool getf_CDEdgeCuts() { return f_CDEdgeCuts; }                               // My addition
     bool getf_CDRegionCuts() { return f_CDRegionCuts; }                           // My addition
     bool getf_corr_vertexCuts() { return f_corr_vertexCuts; }                     // My addition
+    bool getf_ghostTrackCuts() { return f_ghostTrackCuts; }                     // My addition
     std::vector<region_part_ptr> getelectrons() { return electrons; }             // My addition
     std::vector<region_part_ptr> getprotons() { return protons; }                 // My addition
     std::vector<region_part_ptr> getdeuterons() { return deuterons; }             // My addition

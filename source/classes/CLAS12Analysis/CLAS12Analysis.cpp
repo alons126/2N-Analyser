@@ -617,7 +617,7 @@ void CLAS12Analysis::ConfigureChargedHadronCuts(
     DSCuts &Chi2_Proton_cuts_FD, DSCuts &Chi2_piplus_cuts_CD,
     DSCuts &Chi2_piplus_cuts_FD, DSCuts &Chi2_piminus_cuts_CD,
     DSCuts &Chi2_piminus_cuts_FD, const bool apply_CD_edge_cuts,
-    const bool apply_CD_region_cuts)
+    const bool apply_CD_region_cuts, const bool apply_ghostTrackCuts)
 {
     if (apply_cuts)
     {
@@ -666,6 +666,11 @@ void CLAS12Analysis::ConfigureChargedHadronCuts(
         {
             // making f_CDRegionCuts = true
             setCDRegionCuts();
+        }
+
+        if (apply_ghostTrackCuts) {
+            // making f_ghostTrackCuts = true
+            setGhostTrackCuts();
         }
     }
 }

@@ -304,7 +304,7 @@ public:
     void ConfigureChargedHadronCuts(const bool apply_cuts, // master
                                     const bool apply_chi2_cuts_1e_cut, const char *filename_PIDCuts_1, const char *filename_PIDCuts_2,
                                     DSCuts &Chi2_Proton_cuts_CD, DSCuts &Chi2_Proton_cuts_FD, DSCuts &Chi2_piplus_cuts_CD, DSCuts &Chi2_piplus_cuts_FD,
-                                    DSCuts &Chi2_piminus_cuts_CD, DSCuts &Chi2_piminus_cuts_FD, const bool apply_CD_edge_cuts, const bool apply_CD_region_cuts);
+                                    DSCuts &Chi2_piminus_cuts_CD, DSCuts &Chi2_piminus_cuts_FD, const bool apply_CD_edge_cuts, const bool apply_CD_region_cuts, const bool apply_ghostTrackCuts);
 
     // ConfigureChargedParticleCuts function ----------------------------------
 

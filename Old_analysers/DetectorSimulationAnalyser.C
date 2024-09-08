@@ -210,6 +210,7 @@ void EventAnalyser()
     bool apply_chi2_cuts_1e_cut = true;
     bool apply_CD_edge_cuts = true;
     bool apply_CD_region_cuts = true;
+    bool apply_ghostTrackCuts = true;
 
     // My analysis cuts
     // ---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -246,7 +247,7 @@ void EventAnalyser()
         }
 
         apply_chi2_cuts_1e_cut = apply_nucleon_cuts = false;
-        apply_CD_edge_cuts = apply_CD_region_cuts = false;
+        apply_CD_edge_cuts = apply_CD_region_cuts = apply_ghostTrackCuts= false;
     }
 
     if (!apply_preselection_cuts)
@@ -418,6 +419,8 @@ void EventAnalyser()
     cout << "apply_CD_edge_cuts:\t\t" << BoolToString(apply_CD_edge_cuts)
          << "\n";
     cout << "apply_CD_region_cuts:\t\t" << BoolToString(apply_CD_region_cuts)
+         << "\n";
+    cout << "apply_ghostTrackCuts:\t\t" << BoolToString(apply_ghostTrackCuts)
          << "\n";
 
     cout << "apply_nucleon_cuts:\t\t" << BoolToString(apply_nucleon_cuts)
@@ -18185,7 +18188,7 @@ void EventAnalyser()
         (PIDCutsDirectory + "Fitted_PID_Cuts_-_" + SampleName + ".par").c_str(),
         Chi2_Proton_cuts_CD, Chi2_Proton_cuts_FD, Chi2_piplus_cuts_CD,
         Chi2_piplus_cuts_FD, Chi2_piminus_cuts_CD, Chi2_piminus_cuts_FD,
-        apply_CD_edge_cuts, apply_CD_region_cuts);
+        apply_CD_edge_cuts, apply_CD_region_cuts, apply_ghostTrackCuts);
 
     // Cuts on all charged particles:
     clasAna.ConfigureChargedParticleCuts(apply_cuts, apply_Vz_cuts, Vz_cut,
@@ -43048,6 +43051,8 @@ void EventAnalyser()
     myLogFile << "apply_CD_edge_cuts = " << BoolToString(apply_CD_edge_cuts)
               << "\n";
     myLogFile << "apply_CD_region_cuts = " << BoolToString(apply_CD_region_cuts)
+              << "\n";
+    myLogFile << "apply_ghostTrackCuts = " << BoolToString(apply_ghostTrackCuts)
               << "\n";
 
     myLogFile << "-- My analysis cuts "
