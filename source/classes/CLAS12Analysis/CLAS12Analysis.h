@@ -79,7 +79,7 @@ public:
     {
         if (getdebug_plots())
         {
-            getdebug_c().WriteDebugPlots(getdebug_out_file());
+            // getdebug_c().WriteDebugPlots(getdebug_out_file());
             Debug_c.WriteMyDebugPlots(getdebug_out_file());
         }
     }
