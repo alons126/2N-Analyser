@@ -18555,6 +18555,16 @@ void EventAnalyser()
         if ((CLAS12Analysis_particles) && (allParticles.size() != Nf))
         {
             cout << "\n\nallParticles.size() is different than Nf! We have:\nallParticles.size() = " << allParticles.size() << "; Nf = " << Nf << "\n";
+            cout << "Nn = " << Nn << "\n";
+            cout << "Np = " << Np << "\n";
+            cout << "Nkp = " << Nkp << "\n";
+            cout << "Nkm = " << Nkm << "\n";
+            cout << "Npip = " << Npip << "\n";
+            cout << "Npim = " << Npim << "\n";
+            cout << "Ne = " << Ne << "\n";
+            cout << "Nd = " << Nd << "\n";
+            cout << "Nneut = " << Nneut << "\n";
+            cout << "No = " << No << "\n";
             cout << "\nallParticles[0]]->getPid() = " << allParticles[0]->getPid() << "\n";
             cout << "Exiting...\n\n", exit(0);
         }

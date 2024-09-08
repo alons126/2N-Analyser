@@ -627,8 +627,8 @@ This function configures charged hadron cuts.
 void CLAS12Analysis::ConfigureChargedHadronCuts(
     const bool apply_cuts, // master
     const bool apply_chi2_cuts_1e_cut, const char *filename_PIDCuts_1, const char *filename_PIDCuts_2, DSCuts &Chi2_Proton_cuts_CD,
-    DSCuts &Chi2_Proton_cuts_FD, DSCuts &Chi2_piplus_cuts_CD, DSCuts &Chi2_piplus_cuts_FD, DSCuts &Chi2_piminus_cuts_CD,
-    DSCuts &Chi2_piminus_cuts_FD, const bool apply_CD_edge_cuts, const bool apply_CD_region_cuts, const bool apply_ghostTrackCuts)
+    DSCuts &Chi2_Proton_cuts_FD, DSCuts &Chi2_piplus_cuts_CD, DSCuts &Chi2_piplus_cuts_FD, DSCuts &Chi2_piminus_cuts_CD, DSCuts &Chi2_piminus_cuts_FD,
+    const bool apply_CD_edge_cuts, const bool apply_CD_region_cuts, const bool apply_ghostTrackCuts)
 {
     if (apply_cuts)
     {
@@ -688,39 +688,24 @@ void CLAS12Analysis::ConfigureChargedParticleCuts(const bool apply_cuts, // mast
     { // Cuts on all charged particles:
         if (apply_Vz_cuts)
         {
-            setVertexCuts(); // making f_vertexCuts = ture
-            setVzcuts(Vz_cut.GetLowerCut(),
-                      Vz_cut.GetUpperCut()); // setting Vz cuts for all
-                                             // (charged?) particles
-            setVzcutsFD(
-                Vz_cut_FD.GetLowerCut(),
-                Vz_cut_FD.GetUpperCut()); // setting Vz cuts for all charged
-                                          // particles (FD only)
-            setVzcutsCD(
-                Vz_cut_CD.GetLowerCut(),
-                Vz_cut_CD.GetUpperCut()); // setting Vz cuts for all charged
-                                          // particles (CD only)
+            setVertexCuts();                                               // making f_vertexCuts = ture
+            setVzcuts(Vz_cut.GetLowerCut(), Vz_cut.GetUpperCut());         // setting Vz cuts for all (charged?) particles
+            setVzcutsFD(Vz_cut_FD.GetLowerCut(), Vz_cut_FD.GetUpperCut()); // setting Vz cuts for all charged particles (FD only)
+            setVzcutsCD(Vz_cut_CD.GetLowerCut(), Vz_cut_CD.GetUpperCut()); // setting Vz cuts for all charged particles (CD only)
         }
 
         if (apply_dVz_cuts)
         {
-            setVertexCorrCuts(); // making f_corr_vertexCuts = ture
-            setVertexCorrCutsLim(
-                dVz_cuts.GetLowerCut(),
-                dVz_cuts.GetUpperCut()); // setting dVz cuts (general)
-            setVertexCorrCutsLimFD(
-                dVz_cuts_FD.GetLowerCut(),
-                dVz_cuts_FD.GetUpperCut()); // setting dVz cuts (FD only)
-            setVertexCorrCutsLimCD(
-                dVz_cuts_CD.GetLowerCut(),
-                dVz_cuts_CD.GetUpperCut()); // setting dVz cuts (CD only)
+            setVertexCorrCuts();                                                          // making f_corr_vertexCuts = ture
+            setVertexCorrCutsLim(dVz_cuts.GetLowerCut(), dVz_cuts.GetUpperCut());         // setting dVz cuts (general)
+            setVertexCorrCutsLimFD(dVz_cuts_FD.GetLowerCut(), dVz_cuts_FD.GetUpperCut()); // setting dVz cuts (FD only)
+            setVertexCorrCutsLimCD(dVz_cuts_CD.GetLowerCut(), dVz_cuts_CD.GetUpperCut()); // setting dVz cuts (CD only)
         }
 
         if (apply_DC_fiducial_cuts)
         {
             // making f_DCEdgeCuts = ture (DC fiducial cuts?)
-            DC_edge_cuts = DSCuts("DC edge", "FD", "Electron", "1e cut", 0,
-                                  getDCEdgeCuts());
+            DC_edge_cuts = DSCuts("DC edge", "FD", "Electron", "1e cut", 0, getDCEdgeCuts());
             setDCEdgeCuts();
         }
     }
@@ -731,17 +716,11 @@ void CLAS12Analysis::ConfigureChargedParticleCuts(const bool apply_cuts, // mast
 /*
 This function configures nucleon cuts.
 */
-void CLAS12Analysis::ConfigureNucleonCuts(
-    const bool apply_cuts, // master
-    const bool apply_nucleon_cuts, DSCuts &n_momentum_cuts_ABF_FD_n_from_ph,
-    DSCuts &n_momentum_cuts_ABF_FD_n_from_ph_apprax,
-    DSCuts &Beta_max_cut_ABF_FD_n_from_ph,
-    DSCuts &Beta_max_cut_ABF_FD_n_from_ph_apprax,
-    const char *filename_NucleonCuts, const bool limless_mom_eff_plots,
-    const bool is2GeVSample, DSCuts &n_mom_th, DSCuts &TL_n_mom_cuts,
-    double beamE, const bool apply_nBeta_fit_cuts, DSCuts &Beta_cut,
-    DSCuts &dphi_p1_p2_2p, DSCuts &dphi_pFD_pCD_2p,
-    DSCuts &dphi_pFD_pCD_pFDpCD)
+void CLAS12Analysis::ConfigureNucleonCuts(const bool apply_cuts, // master
+                                          const bool apply_nucleon_cuts, DSCuts &n_momentum_cuts_ABF_FD_n_from_ph,
+                                          DSCuts &n_momentum_cuts_ABF_FD_n_from_ph_apprax, DSCuts &Beta_max_cut_ABF_FD_n_from_ph,
+                                          DSCuts &Beta_max_cut_ABF_FD_n_from_ph_apprax, const char *filename_NucleonCuts, const bool limless_mom_eff_plots,
+                                          const bool is2GeVSample, DSCuts &n_mom_th, DSCuts &TL_n_mom_cuts, double beamE, const bool apply_nBeta_fit_cuts, DSCuts &Beta_cut, DSCuts &dphi_p1_p2_2p, DSCuts &dphi_pFD_pCD_2p, DSCuts &dphi_pFD_pCD_pFDpCD)
 {
     if (apply_cuts)
     {
