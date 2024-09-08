@@ -247,7 +247,7 @@ void EventAnalyser()
         }
 
         apply_chi2_cuts_1e_cut = apply_nucleon_cuts = false;
-        apply_CD_edge_cuts = apply_CD_region_cuts = apply_ghostTrackCuts= false;
+        apply_CD_edge_cuts = apply_CD_region_cuts = apply_ghostTrackCuts = false;
     }
 
     if (!apply_preselection_cuts)
@@ -18175,36 +18175,15 @@ void EventAnalyser()
     CLAS12Analysis clasAna;
 
     // Cuts on electrons only:
-    clasAna.ConfigureElectronCuts(
-        apply_cuts, apply_Nphe_cut, Nphe_cuts_FD, apply_ECAL_SF_cuts,
-        (PIDCutsDirectory + "paramsSF_40Ca_x2.dat").c_str(), SF_cuts,
-        apply_ECAL_P_cuts, (PIDCutsDirectory + "paramsPI_40Ca_x2.dat").c_str(),
-        apply_ECAL_diag_cut, apply_ECAL_fiducial_cuts, PCAL_edge_cuts);
+    clasAna.ConfigureElectronCuts(apply_cuts, apply_Nphe_cut, Nphe_cuts_FD, apply_ECAL_SF_cuts, (PIDCutsDirectory + "paramsSF_40Ca_x2.dat").c_str(), SF_cuts, apply_ECAL_P_cuts, (PIDCutsDirectory + "paramsPI_40Ca_x2.dat").c_str(), apply_ECAL_diag_cut, apply_ECAL_fiducial_cuts, CAL_edge_cuts);
 
     // Cuts on charged hadrons:
-    clasAna.ConfigureChargedHadronCuts(
-        apply_cuts, apply_chi2_cuts_1e_cut,
-        (PIDCutsDirectory + "ana.par").c_str(),
-        (PIDCutsDirectory + "Fitted_PID_Cuts_-_" + SampleName + ".par").c_str(),
-        Chi2_Proton_cuts_CD, Chi2_Proton_cuts_FD, Chi2_piplus_cuts_CD,
-        Chi2_piplus_cuts_FD, Chi2_piminus_cuts_CD, Chi2_piminus_cuts_FD,
-        apply_CD_edge_cuts, apply_CD_region_cuts, apply_ghostTrackCuts);
+    clasAna.ConfigureChargedHadronCuts(apply_cuts, apply_chi2_cuts_1e_cut, (PIDCutsDirectory + "ana.par").c_str(), (PIDCutsDirectory + "Fitted_PID_Cuts_-_" + SampleName + ".par").c_str(), Chi2_Proton_cuts_CD, Chi2_Proton_cuts_FD, Chi2_piplus_cuts_CD, Chi2_piplus_cuts_FD, hi2_piminus_cuts_CD, Chi2_piminus_cuts_FD, apply_CD_edge_cuts, apply_CD_region_cuts, apply_ghostTrackCuts);
 
     // Cuts on all charged particles:
-    clasAna.ConfigureChargedParticleCuts(apply_cuts, apply_Vz_cuts, Vz_cut,
-                                         Vz_cut_FD, Vz_cut_CD, apply_dVz_cuts,
-                                         dVz_cuts, dVz_cuts_FD, dVz_cuts_CD,
-                                         apply_DC_fiducial_cuts, DC_edge_cuts);
+    clasAna.ConfigureChargedParticleCuts(apply_cuts, apply_Vz_cuts, Vz_cut, Vz_cut_FD, Vz_cut_CD, apply_dVz_cuts, dVz_cuts, dVz_cuts_FD, dVz_cuts_CD, apply_DC_fiducial_cuts, DC_edge_cuts);
 
-    clasAna.ConfigureNucleonCuts(
-        apply_cuts, apply_nucleon_cuts, n_momentum_cuts_ABF_FD_n_from_ph,
-        n_momentum_cuts_ABF_FD_n_from_ph_apprax, Beta_max_cut_ABF_FD_n_from_ph,
-        Beta_max_cut_ABF_FD_n_from_ph_apprax,
-        (NucleonCutsDirectory + "Nucleon_Cuts_-_" + SampleName + ".par")
-            .c_str(),
-        limless_mom_eff_plots, is2GeVSample, n_mom_th, TL_n_mom_cuts, beamE,
-        apply_nBeta_fit_cuts, Beta_cut, dphi_p1_p2_2p, dphi_pFD_pCD_2p,
-        dphi_pFD_pCD_pFDpCD);
+    clasAna.ConfigureNucleonCuts(apply_cuts, apply_nucleon_cuts, n_momentum_cuts_ABF_FD_n_from_ph, n_momentum_cuts_ABF_FD_n_from_ph_apprax, eta_max_cut_ABF_FD_n_from_ph, Beta_max_cut_ABF_FD_n_from_ph_apprax, (NucleonCutsDirectory + "Nucleon_Cuts_-_" + SampleName + ".par").c_str(), limless_mom_eff_plots, is2GeVSample, n_mom_th, TL_n_mom_cuts, beamE, apply_nBeta_fit_cuts, Beta_cut, phi_p1_p2_2p, dphi_pFD_pCD_2p, dphi_pFD_pCD_pFDpCD);
 
     if (!apply_cuts && (only_preselection_cuts || only_electron_quality_cuts))
     {
@@ -18212,21 +18191,13 @@ void EventAnalyser()
         if (only_preselection_cuts)
         {
             // Cuts on all charged particles:
-            clasAna.ConfigureChargedParticleCuts(
-                true, apply_Vz_cuts, Vz_cut, Vz_cut_FD, Vz_cut_CD,
-                apply_dVz_cuts, dVz_cuts, dVz_cuts_FD, dVz_cuts_CD,
-                apply_DC_fiducial_cuts, DC_edge_cuts);
+            clasAna.ConfigureChargedParticleCuts(true, apply_Vz_cuts, Vz_cut, Vz_cut_FD, Vz_cut_CD, apply_dVz_cuts, dVz_cuts, Vz_cuts_FD, dVz_cuts_CD, apply_DC_fiducial_cuts, DC_edge_cuts);
         }
 
         // Cuts on electrons only:
         if (only_electron_quality_cuts)
         {
-            clasAna.ConfigureElectronCuts(
-                true, apply_Nphe_cut, Nphe_cuts_FD, apply_ECAL_SF_cuts,
-                (PIDCutsDirectory + "paramsSF_40Ca_x2.dat").c_str(), SF_cuts,
-                apply_ECAL_P_cuts,
-                (PIDCutsDirectory + "paramsPI_40Ca_x2.dat").c_str(),
-                apply_ECAL_diag_cut, apply_ECAL_fiducial_cuts, PCAL_edge_cuts);
+            clasAna.ConfigureElectronCuts(true, apply_Nphe_cut, Nphe_cuts_FD, apply_ECAL_SF_cuts, (PIDCutsDirectory + "paramsSF_40Ca_x2.dat").c_str(), SF_cuts, apply_ECAL_P_cuts, (PIDCutsDirectory + "paramsPI_40Ca_x2.dat").c_str(), apply_ECAL_diag_cut, apply_ECAL_fiducial_cuts, PCAL_edge_cuts);
         }
     }
     //</editor-fold>
@@ -18587,8 +18558,9 @@ void EventAnalyser()
         /* Safety check that allParticles.size(), Nf are the same */
         if ((CLAS12Analysis_particles) && (allParticles.size() != Nf))
         {
-            cout << "\n\nallParticles.size() is different than Nf! We have:\nallParticles.size() = " << allParticles.size() << "; Nf = " << Nf << "\n"
-                    "Exiting...\n\n",                exit(0);
+            cout << "\n\nallParticles.size() is different than Nf! We have:\nallParticles.size() = " << allParticles.size() << "; Nf = " << Nf << "\n";
+            cout << "\nallParticles[0]]->getPid() = " << allParticles[0]->getPid() << "\n";
+            cout << "Exiting...\n\n", exit(0);
         }
         //</editor-fold>
 
