@@ -537,25 +537,25 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
         Debug_c.multi_p_vs_cpi_1e_cut_AC_debug->Fill(getprotons().size(), getpiplus().size() + getpiminus().size());
 
         // Add all particles after PID (and one reco electron) in the allparticles vector
-        for (auto el : getelectrons())
+        for (auto el : electrons)
             allparticles.push_back(el);
-        for (auto p : getprotons())
+        for (auto p : protons)
             allparticles.push_back(p);
-        for (auto d : getdeuterons())
+        for (auto d : deuterons)
             allparticles.push_back(d);
-        for (auto neut : getneutrals())
+        for (auto neut : neutrals)
             allparticles.push_back(neut);
-        for (auto n : getneutrons())
+        for (auto n : neutrons)
             allparticles.push_back(n);
-        for (auto pip : getpiplus())
+        for (auto pip : piplus)
             allparticles.push_back(pip);
-        for (auto pim : getpiminus())
+        for (auto pim : piminus)
             allparticles.push_back(pim);
-        for (auto kp : getkplus())
+        for (auto kp : kplus)
             allparticles.push_back(kp);
-        for (auto km : getkminus())
+        for (auto km : kminus)
             allparticles.push_back(km);
-        for (auto o : getotherpart())
+        for (auto o : otherpart)
             allparticles.push_back(o);
 
     } // good electron loop
@@ -568,9 +568,7 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
 This function configures electron quality cuts.
 */
 void CLAS12Analysis::ConfigureElectronCuts(const bool apply_cuts, // master
-                                           const bool apply_Nphe_cut, DSCuts &Nphe_cuts_FD, const bool apply_ECAL_SF_cuts, const char *filename_SF_cuts, DSCuts &SF_cuts, const bool apply_ECAL_P_cuts, const char *filename_P_cuts,
-                                           const bool apply_ECAL_diag_cut, const bool apply_ECAL_fiducial_cuts,
-                                           DSCuts &PCAL_edge_cuts)
+                                           const bool apply_Nphe_cut, DSCuts &Nphe_cuts_FD, const bool apply_ECAL_SF_cuts, const char *filename_SF_cuts, DSCuts &SF_cuts, const bool apply_ECAL_P_cuts, const char *filename_P_cuts, const bool apply_ECAL_diag_cut, const bool apply_ECAL_fiducial_cuts, DSCuts &PCAL_edge_cuts)
 {
     if (apply_cuts)
     {
@@ -578,8 +576,7 @@ void CLAS12Analysis::ConfigureElectronCuts(const bool apply_cuts, // master
         if (apply_Nphe_cut)
         {
             // making f_NpheCuts = ture (HTCC cuts)
-            Nphe_cuts_FD =
-                DSCuts("Nphe", "FD", "Electron", "1e cut", 0, getNpheCuts());
+            Nphe_cuts_FD = DSCuts("Nphe", "FD", "Electron", "1e cut", 0, getNpheCuts());
             setNpheCuts();
         }
 
@@ -591,8 +588,7 @@ void CLAS12Analysis::ConfigureElectronCuts(const bool apply_cuts, // master
             // elements)
             readEcalSFPar(filename_SF_cuts);
             // TODO: RECHECK WHAT ARE THE CUTS HERE:
-            SF_cuts = DSCuts("SF", "FD", "Electron", "1e cut", 0.24865,
-                             getEcalSFLowerCut(), getEcalSFUpperCut());
+            SF_cuts = DSCuts("SF", "FD", "Electron", "1e cut", 0.24865, getEcalSFLowerCut(), getEcalSFUpperCut());
 
             setEcalSFCuts();
         }
@@ -617,8 +613,7 @@ void CLAS12Analysis::ConfigureElectronCuts(const bool apply_cuts, // master
         if (apply_ECAL_fiducial_cuts)
         {
             // making f_ecalEdgeCuts = ture (ECAL fiducial cuts)
-            PCAL_edge_cuts = DSCuts("PCAL edge", "FD", "Electron", "1e cut", 0,
-                                    getEcalEdgeCuts());
+            PCAL_edge_cuts = DSCuts("PCAL edge", "FD", "Electron", "1e cut", 0, getEcalEdgeCuts());
             setEcalEdgeCuts();
         }
     }
@@ -631,12 +626,9 @@ This function configures charged hadron cuts.
 */
 void CLAS12Analysis::ConfigureChargedHadronCuts(
     const bool apply_cuts, // master
-    const bool apply_chi2_cuts_1e_cut, const char *filename_PIDCuts_1,
-    const char *filename_PIDCuts_2, DSCuts &Chi2_Proton_cuts_CD,
-    DSCuts &Chi2_Proton_cuts_FD, DSCuts &Chi2_piplus_cuts_CD,
-    DSCuts &Chi2_piplus_cuts_FD, DSCuts &Chi2_piminus_cuts_CD,
-    DSCuts &Chi2_piminus_cuts_FD, const bool apply_CD_edge_cuts,
-    const bool apply_CD_region_cuts, const bool apply_ghostTrackCuts)
+    const bool apply_chi2_cuts_1e_cut, const char *filename_PIDCuts_1, const char *filename_PIDCuts_2, DSCuts &Chi2_Proton_cuts_CD,
+    DSCuts &Chi2_Proton_cuts_FD, DSCuts &Chi2_piplus_cuts_CD, DSCuts &Chi2_piplus_cuts_FD, DSCuts &Chi2_piminus_cuts_CD,
+    DSCuts &Chi2_piminus_cuts_FD, const bool apply_CD_edge_cuts, const bool apply_CD_region_cuts, const bool apply_ghostTrackCuts)
 {
     if (apply_cuts)
     {
@@ -648,28 +640,15 @@ void CLAS12Analysis::ConfigureChargedHadronCuts(
         else if (apply_chi2_cuts_1e_cut)
         {
             cout << "\nLoading fitted pid cuts...\n\n";
-            ReadInputParam(filename_PIDCuts_2); // load sample-appropreate cuts
-                                                // file from CutsDirectory
+            ReadInputParam(filename_PIDCuts_2); // load sample-appropreate cuts file from CutsDirectory
 
             /* Overwriting PID cuts according to SampleName */
-            Chi2_Proton_cuts_CD.SetCutPram(GetPidCutMean(2212, "CD"),
-                                           -GetPidCutSigma(2212, "CD"),
-                                           GetPidCutSigma(2212, "CD"));
-            Chi2_Proton_cuts_FD.SetCutPram(GetPidCutMean(2212, "FD"),
-                                           -GetPidCutSigma(2212, "FD"),
-                                           GetPidCutSigma(2212, "FD"));
-            Chi2_piplus_cuts_CD.SetCutPram(GetPidCutMean(211, "CD"),
-                                           -GetPidCutSigma(211, "CD"),
-                                           GetPidCutSigma(211, "CD"));
-            Chi2_piplus_cuts_FD.SetCutPram(GetPidCutMean(211, "FD"),
-                                           -GetPidCutSigma(211, "FD"),
-                                           GetPidCutSigma(211, "FD"));
-            Chi2_piminus_cuts_CD.SetCutPram(GetPidCutMean(-211, "CD"),
-                                            -GetPidCutSigma(-211, "CD"),
-                                            GetPidCutSigma(-211, "CD"));
-            Chi2_piminus_cuts_FD.SetCutPram(GetPidCutMean(-211, "FD"),
-                                            -GetPidCutSigma(-211, "FD"),
-                                            GetPidCutSigma(-211, "FD"));
+            Chi2_Proton_cuts_CD.SetCutPram(GetPidCutMean(2212, "CD"), -GetPidCutSigma(2212, "CD"), GetPidCutSigma(2212, "CD"));
+            Chi2_Proton_cuts_FD.SetCutPram(GetPidCutMean(2212, "FD"), -GetPidCutSigma(2212, "FD"), GetPidCutSigma(2212, "FD"));
+            Chi2_piplus_cuts_CD.SetCutPram(GetPidCutMean(211, "CD"), -GetPidCutSigma(211, "CD"), GetPidCutSigma(211, "CD"));
+            Chi2_piplus_cuts_FD.SetCutPram(GetPidCutMean(211, "FD"), -GetPidCutSigma(211, "FD"), GetPidCutSigma(211, "FD"));
+            Chi2_piminus_cuts_CD.SetCutPram(GetPidCutMean(-211, "CD"), -GetPidCutSigma(-211, "CD"), GetPidCutSigma(-211, "CD"));
+            Chi2_piminus_cuts_FD.SetCutPram(GetPidCutMean(-211, "FD"), -GetPidCutSigma(-211, "FD"), GetPidCutSigma(-211, "FD"));
 
             setProtonPidCuts(); // making f_protonpidCuts = true
             setPidCuts();       // making f_pidCuts = true
@@ -701,12 +680,9 @@ void CLAS12Analysis::ConfigureChargedHadronCuts(
 This function configures charged particle cuts that are not included in
 either ConfigureElectronCuts and ConfigureChargedHadronCuts.
 */
-void CLAS12Analysis::ConfigureChargedParticleCuts(
-    const bool apply_cuts, // master
-    const bool apply_Vz_cuts, DSCuts Vz_cut, DSCuts Vz_cut_FD, DSCuts Vz_cut_CD,
-    const bool apply_dVz_cuts, DSCuts dVz_cuts, DSCuts dVz_cuts_FD,
-    DSCuts dVz_cuts_CD, const bool apply_DC_fiducial_cuts,
-    DSCuts DC_edge_cuts)
+void CLAS12Analysis::ConfigureChargedParticleCuts(const bool apply_cuts, // master
+                                                  const bool apply_Vz_cuts, DSCuts Vz_cut, DSCuts Vz_cut_FD, DSCuts Vz_cut_CD, const bool apply_dVz_cuts, DSCuts dVz_cuts, DSCuts dVz_cuts_FD, DSCuts dVz_cuts_CD, const bool apply_DC_fiducial_cuts,
+                                                  DSCuts DC_edge_cuts)
 {
     if (apply_cuts)
     { // Cuts on all charged particles:
