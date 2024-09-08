@@ -159,13 +159,15 @@ public:
     {
         if (region == "CD")
         {
-            auto itter_CD = getpid_cuts_cd().find(Pid);
+            auto pid_cuts_CD = getpid_cuts_cd();
+            auto itter_CD = pid_cuts_CD.find(Pid);
 
             return itter_CD->second.at(1);
         }
         else if (region == "FD")
         {
-            auto itter_FD = getpid_cuts_fd().find(Pid);
+            auto pid_cuts_FD = getpid_cuts_fd();
+            auto itter_FD = pid_cuts_FD.find(Pid);
 
             return itter_FD->second.at(1);
         }
