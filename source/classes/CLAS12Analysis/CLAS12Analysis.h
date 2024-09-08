@@ -7,7 +7,7 @@
 
 #include "../CLAS1212Debugger/CLAS1212Debugger.cpp"
 #include "../DSCuts/DSCuts.h"
-#include "../clas12Ana/clas12ana.cpp"
+#include "../clas12Ana/clas12Ana.cpp"
 
 /* This is my edit of the RG-M analysis code */
 
@@ -16,10 +16,11 @@
 class CLAS12Analysis : public clas12ana
 {
 private:
-    // My Vz and dVz cuts
+    // My clas12 debug clas
     // ----------------------------------------------------------------------------------------------------------------------------------------------------
 
     CLAS1212Debugger Debug_c; // debug class for plotting general plots
+
     // My Vz and dVz cuts
     // ----------------------------------------------------------------------------------------------------------------------------------------------------
 
