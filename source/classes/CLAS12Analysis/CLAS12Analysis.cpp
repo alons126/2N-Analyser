@@ -86,7 +86,7 @@ void CLAS12Analysis::ReadInputParam(const char *filename)
                 }
 
                 if (pid != "")
-                    vertex_cuts.insert(pair<string, vector<double>>(pid, par));
+                    Insertvertex_cuts(pid, par);
             }
             else if (parameter == "Momentum_cuts_ECAL")
             { // My addition

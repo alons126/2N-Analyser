@@ -206,13 +206,18 @@ public:
     TString getdebug_out_file() { return debug_out_file; }            // My addition
     map<int, vector<double>> getpid_cuts_cd() { return pid_cuts_cd; } // My addition
     map<int, vector<double>> getpid_cuts_fd() { return pid_cuts_fd; } // My addition
-    void Insertpid_cuts_fd(int pid, vector<double> par)
+
+    void Insertpid_cuts_fd(int pid, vector<double> par) // My addition
     {
         pid_cuts_fd.insert(pair<int, vector<double>>(pid, par));
     }
-    void Insertpid_cuts_cd(int pid, vector<double> par)
+    void Insertpid_cuts_cd(int pid, vector<double> par) // My addition
     {
         pid_cuts_cd.insert(pair<int, vector<double>>(pid, par));
+    }
+    void Insertvertex_cuts(string pid, vector<double> par) // My addition
+    {
+        vertex_cuts.insert(pair<int, vector<double>>(pid, par));
     }
 
 private:
