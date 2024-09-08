@@ -13,35 +13,41 @@ This is my edit based on the clas12ana function:
 It comes as a custemized version of readInputParam, that reads my
 CLAS12Analysis additions from file
 */
-void CLAS12Analysis::ReadInputParam(const char *filename) {
+void CLAS12Analysis::ReadInputParam(const char *filename)
+{
     ifstream infile;
     infile.open(filename);
 
-    if (infile.is_open()) {
+    if (infile.is_open())
+    {
         string tp;
 
         // remove 3 lines of header
-        for (int i = 0; i < 3; i++) getline(infile, tp);
+        for (int i = 0; i < 3; i++)
+            getline(infile, tp);
 
         while (
             // read data from file object and put it into string:
-            getline(infile, tp)) {
+            getline(infile, tp))
+        {
             stringstream ss(tp);
             string parameter, parameter2;
             double value;
             // get cut identifier
             ss >> parameter;
-            if (parameter == "pid_cuts") {
+            if (parameter == "pid_cuts")
+            {
                 // get cut values
                 ss >> parameter2;
                 stringstream ss2(parameter2);
                 string pid_v;
                 string detector;
-                int count = 0;  // parameter number
+                int count = 0; // parameter number
                 int pid = -99;
                 vector<double> par;
 
-                while (getline(ss2, pid_v, ':')) {
+                while (getline(ss2, pid_v, ':'))
+                {
                     if (count == 0)
                         pid = stoi(pid_v);
                     else if (count < 3)
@@ -51,18 +57,17 @@ void CLAS12Analysis::ReadInputParam(const char *filename) {
 
                     count++;
                 }
-                if (pid != -99)  // if pid cut exists in file
+                if (pid != -99) // if pid cut exists in file
                 {
                     if (detector == "FD")
-                        pid_cuts_fd.insert(
-                            pair<int, vector<double> >(pid, par));
+                        Insertpid_cuts_fd(pair<int, vector<double>>(pid, par));
                     else if (detector == "CD")
-                        pid_cuts_cd.insert(
-                            pair<int, vector<double> >(pid, par));
+                        Insertpid_cuts_cd(pair<int, vector<double>>(pid, par));
                 }
-            }  // end PID cuts section
+            } // end PID cuts section
 
-            else if (parameter == "vertex_cut") {
+            else if (parameter == "vertex_cut")
+            {
                 ss >> parameter2;
                 stringstream ss2(parameter2);
                 string pid_v;
@@ -70,7 +75,8 @@ void CLAS12Analysis::ReadInputParam(const char *filename) {
                 string pid = "";
                 vector<double> par;
 
-                while (getline(ss2, pid_v, ':')) {
+                while (getline(ss2, pid_v, ':'))
+                {
                     if (count == 0)
                         pid = pid_v;
                     else
@@ -80,8 +86,10 @@ void CLAS12Analysis::ReadInputParam(const char *filename) {
                 }
 
                 if (pid != "")
-                    vertex_cuts.insert(pair<string, vector<double> >(pid, par));
-            } else if (parameter == "Momentum_cuts_ECAL") {  // My addition
+                    vertex_cuts.insert(pair<string, vector<double>>(pid, par));
+            }
+            else if (parameter == "Momentum_cuts_ECAL")
+            { // My addition
                 ss >> parameter2;
                 stringstream ss2(parameter2);
                 string pid_v;
@@ -89,7 +97,8 @@ void CLAS12Analysis::ReadInputParam(const char *filename) {
                 string pid = "";
                 vector<double> par;
 
-                while (getline(ss2, pid_v, ':')) {
+                while (getline(ss2, pid_v, ':'))
+                {
                     if (count == 0)
                         pid = pid_v;
                     else
@@ -98,10 +107,13 @@ void CLAS12Analysis::ReadInputParam(const char *filename) {
                     count++;
                 }
 
-                if (pid != "") {
+                if (pid != "")
+                {
                     Neutron_Momentum_cut = par.at(1);
                 }
-            } else if (parameter == "Beta_cut_ECAL") {  // My addition
+            }
+            else if (parameter == "Beta_cut_ECAL")
+            { // My addition
                 ss >> parameter2;
                 stringstream ss2(parameter2);
                 string pid_v;
@@ -109,7 +121,8 @@ void CLAS12Analysis::ReadInputParam(const char *filename) {
                 string pid = "";
                 vector<double> par;
 
-                while (getline(ss2, pid_v, ':')) {
+                while (getline(ss2, pid_v, ':'))
+                {
                     if (count == 0)
                         pid = pid_v;
                     else
@@ -118,11 +131,14 @@ void CLAS12Analysis::ReadInputParam(const char *filename) {
                     count++;
                 }
 
-                if (pid != "") {
+                if (pid != "")
+                {
                     FD_Neutral_Beta_Mean = par.at(0);
                     FD_Neutral_Beta_cut = par.at(1);
                 }
-            } else if (parameter == "dPhi_pFD_pCD") {  // My addition
+            }
+            else if (parameter == "dPhi_pFD_pCD")
+            { // My addition
                 ss >> parameter2;
                 stringstream ss2(parameter2);
                 string pid_v;
@@ -130,7 +146,8 @@ void CLAS12Analysis::ReadInputParam(const char *filename) {
                 string pid = "";
                 vector<double> par;
 
-                while (getline(ss2, pid_v, ':')) {
+                while (getline(ss2, pid_v, ':'))
+                {
                     if (count == 0)
                         pid = pid_v;
                     else
@@ -139,12 +156,14 @@ void CLAS12Analysis::ReadInputParam(const char *filename) {
                     count++;
                 }
 
-                if (pid != "") {
+                if (pid != "")
+                {
                     dPhi_p1_p2_Mean = par.at(0);
                 }
             }
         }
-    } else
+    }
+    else
         cout << "Parameter file didn't read in " << endl;
     return;
 }
@@ -155,17 +174,24 @@ void CLAS12Analysis::ReadInputParam(const char *filename) {
 This function is my addition. It comes to add the ability to cusomize and
 disable the cut on the number of photo-electrons in the HTCC.
 */
-bool CLAS12Analysis::HTCCNpheCuts(region_part_ptr p) {
+bool CLAS12Analysis::HTCCNpheCuts(region_part_ptr p)
+{
     // true if inside cut
     double Nphe = p->che(HTCC)->getNphe();
 
-    if (p->par()->getPid() == 11) {
-        if (Nphe > htcc_Nphe_cut) {
+    if (p->par()->getPid() == 11)
+    {
+        if (Nphe > htcc_Nphe_cut)
+        {
             return true;
-        } else {
+        }
+        else
+        {
             return false;
         }
-    } else {
+    }
+    else
+    {
         return true;
     }
 }
@@ -179,19 +205,25 @@ This is my edit based on the clas12ana function:
 It allows the user to choose between the constant SF cuts
 {SF_max_cut,SF_min_cut}, and the new SF cuts from clas12ana
 */
-void CLAS12Analysis::CheckEcalSFCuts(const region_part_ptr &p) {
-    if (f_old_ecalSFCut) {
+void CLAS12Analysis::CheckEcalSFCuts(const region_part_ptr &p)
+{
+    if (f_old_ecalSFCut)
+    {
         // If user wants constant SF cuts:
-        if (p->par()->getPid() == 11) {
+        if (p->par()->getPid() == 11)
+        {
             double sampling_frac = getSF(p);
 
             if (sampling_frac < SF_max_cut && sampling_frac > SF_min_cut)
                 return true;
             else
                 return false;
-        } else
+        }
+        else
             return false;
-    } else {
+    }
+    else
+    {
         checkEcalSFCuts(p);
     }
 }
@@ -205,26 +237,33 @@ This is my edit based on the clas12ana function:
 It allows the user to choose between the old implementation of vertex cuts
 from the MSc analysis and the implementation from clas12ana
 */
-void CLAS12Analysis::CheckVertex(const region_part_ptr &p) {
-    if (f_old_VertexCuts) {
+void CLAS12Analysis::CheckVertex(const region_part_ptr &p)
+{
+    if (f_old_VertexCuts)
+    {
         // If user wants MSc implementation of vertex cuts:
 
         // true if inside cut
-        if (p->getRegion() == FD) {
+        if (p->getRegion() == FD)
+        {
             return ((p->par()->getVx() > vertex_x_cuts_FD.at(0) &&
                      p->par()->getVx() < vertex_x_cuts_FD.at(1)) &&
                     (p->par()->getVy() > vertex_y_cuts_FD.at(0) &&
                      p->par()->getVy() < vertex_y_cuts_FD.at(1)) &&
                     (p->par()->getVz() > vertex_z_cuts_FD.at(0) &&
                      p->par()->getVz() < vertex_z_cuts_FD.at(1)));
-        } else if (p->getRegion() == CD) {
+        }
+        else if (p->getRegion() == CD)
+        {
             return ((p->par()->getVx() > vertex_x_cuts_CD.at(0) &&
                      p->par()->getVx() < vertex_x_cuts_CD.at(1)) &&
                     (p->par()->getVy() > vertex_y_cuts_CD.at(0) &&
                      p->par()->getVy() < vertex_y_cuts_CD.at(1)) &&
                     (p->par()->getVz() > vertex_z_cuts_CD.at(0) &&
                      p->par()->getVz() < vertex_z_cuts_CD.at(1)));
-        } else {
+        }
+        else
+        {
             return ((p->par()->getVx() > vertex_x_cuts.at(0) &&
                      p->par()->getVx() < vertex_x_cuts.at(1)) &&
                     (p->par()->getVy() > vertex_y_cuts.at(0) &&
@@ -232,7 +271,9 @@ void CLAS12Analysis::CheckVertex(const region_part_ptr &p) {
                     (p->par()->getVz() > vertex_z_cuts.at(0) &&
                      p->par()->getVz() < vertex_z_cuts.at(1)));
         }
-    } else {
+    }
+    else
+    {
         checkVertex(p);
     }
 }
@@ -248,28 +289,37 @@ It allows the user to choose between the old implementation of vertex
 correlation cuts from the MSc analysis and the implementation from clas12ana
 */
 bool CLAS12Analysis::CheckVertexCorrelation(const region_part_ptr &el,
-                                            const region_part_ptr &p) {
-    if (f_old_VertexCorrCuts) {
+                                            const region_part_ptr &p)
+{
+    if (f_old_VertexCorrCuts)
+    {
         // If user wants MSc implementation of vertex correlation cuts:
 
         // true if inside cut
-        if (p->getRegion() == FD) {  //  TODO:  My addition!
+        if (p->getRegion() == FD)
+        { //  TODO:  My addition!
             return ((p->par()->getVz() - el->par()->getVz()) >
                         vertex_corr_cuts_FD.at(0) &&
                     (p->par()->getVz() - el->par()->getVz()) <
                         vertex_corr_cuts_FD.at(1));
-        } else if (p->getRegion() == CD) {
+        }
+        else if (p->getRegion() == CD)
+        {
             return ((p->par()->getVz() - el->par()->getVz()) >
                         vertex_corr_cuts_CD.at(0) &&
                     (p->par()->getVz() - el->par()->getVz()) <
                         vertex_corr_cuts_CD.at(1));
-        } else {
+        }
+        else
+        {
             return ((p->par()->getVz() - el->par()->getVz()) >
                         vertex_corr_cuts.at(0) &&
                     (p->par()->getVz() - el->par()->getVz()) <
                         vertex_corr_cuts.at(1));
         }
-    } else {
+    }
+    else
+    {
         checkVertexCorrelation(el, p);
     }
 }
@@ -281,13 +331,14 @@ This is my edit based on the clas12ana function:
     void Run(const std::unique_ptr<clas12::clas12reader> &c12);
 */
 void CLAS12Analysis::RunAnalysisCuts(
-    const std::unique_ptr<clas12::clas12reader> &c12) {
+    const std::unique_ptr<clas12::clas12reader> &c12)
+{
     Clear();
     current_run = c12->runconfig()->getRun();
-    checkCutParameters();  // check run number has the right cuts
+    checkCutParameters(); // check run number has the right cuts
 
-    auto particles = c12->getDetParticles();  // particles is now a std::vector
-                                              // of particles for this event
+    auto particles = c12->getDetParticles(); // particles is now a std::vector
+                                             // of particles for this event
     auto electrons_det = c12->getByID(11);
 
     /* My edit - start */
@@ -302,7 +353,8 @@ void CLAS12Analysis::RunAnalysisCuts(
                                   piplus_det.size() + piminus_det.size());
 
     // Filling multiplicity plots before cuts (BC) - 1e cut
-    if (electrons_det.size() == 1) {
+    if (electrons_det.size() == 1)
+    {
         multi_p_1e_cut_BC_debug->Fill(protons_det.size());
         multi_cpi_1e_cut_BC_debug->Fill(piplus_det.size() + piminus_det.size());
         multi_p_vs_cpi_1e_cut_BC_debug->Fill(
@@ -313,14 +365,17 @@ void CLAS12Analysis::RunAnalysisCuts(
     /* My edit - end */
 
     // DEBUG plots
-    if (debug_plots) {
-        for (auto el : electrons_det) debug_c.fillBeforeEl(el);
+    if (debug_plots)
+    {
+        for (auto el : electrons_det)
+            debug_c.fillBeforeEl(el);
     }
 
     /* My edit - start */
     // Applying electron quality cuts.
     // Loop runs all electrons in the event. */
-    std::for_each(electrons_det.begin(), electrons_det.end(), [this](auto el) {
+    std::for_each(electrons_det.begin(), electrons_det.end(), [this](auto el)
+                  {
         if (!(
                 // Photo-electron min cut (my edit):
                 (!HTCCNpheCuts(el) && f_NpheCuts) ||
@@ -338,18 +393,21 @@ void CLAS12Analysis::RunAnalysisCuts(
                 (!DCEdgeCuts(el) && f_DCEdgeCuts) ||
                 // minium 800 MeV/c cut for electrons in class:
                 (el->par()->getP() < 0.8)))
-            setByPid(el);
-    });
+            setByPid(el); });
     /* My edit - end */
 
-    if (debug_plots) {
-        for (auto el : electrons) debug_c.fillAfterEl(el);
+    if (debug_plots)
+    {
+        for (auto el : electrons)
+            debug_c.fillAfterEl(el);
     }
 
     /* My edit - start */
     // Applying cuts on other particles is there is a good trigger electron:
-    if (electrons.size() == 1) {
-        if (debug_plots) {
+    if (electrons.size() == 1)
+    {
+        if (debug_plots)
+        {
             for (auto p : particles)
                 if (p->par()->getPid() == 2212 || p->par()->getPid() == -211 ||
                     p->par()->getPid() == 211)
@@ -373,7 +431,8 @@ void CLAS12Analysis::RunAnalysisCuts(
         */
 
         std::for_each(
-            particles.begin(), particles.end(), [this, electrons_det](auto p) {
+            particles.begin(), particles.end(), [this, electrons_det](auto p)
+            {
                 if (p->par()->getCharge() == 0 && p->par()->getPid() != 11) {
                     // neutrals and electrons don't follow cuts below, skip them
                     setByPid(p);
@@ -414,22 +473,26 @@ void CLAS12Analysis::RunAnalysisCuts(
                         // allparticles:
                         addToAllParticles(p);
                     }
-                }
-            });
+                } });
 
-        if (debug_plots) {
-            for (auto p : protons) debug_c.fillAfterPart(p);
-            for (auto p : piplus) debug_c.fillAfterPart(p);
-            for (auto p : piminus) debug_c.fillAfterPart(p);
+        if (debug_plots)
+        {
+            for (auto p : protons)
+                debug_c.fillAfterPart(p);
+            for (auto p : piplus)
+                debug_c.fillAfterPart(p);
+            for (auto p : piminus)
+                debug_c.fillAfterPart(p);
 
-            for (auto el : electrons) debug_c.fillAfterEl(el);
+            for (auto el : electrons)
+                debug_c.fillAfterEl(el);
         }
         multi_p_1e_cut_AC_debug->Fill(protons.size());
         multi_cpi_1e_cut_AC_debug->Fill(piplus.size() + piminus.size());
         multi_p_vs_cpi_1e_cut_AC_debug->Fill(protons.size(),
                                              piplus.size() + piminus.size());
 
-    }  // good electron loop
+    } // good electron loop
     /* My edit - end */
 }
 
@@ -439,22 +502,26 @@ void CLAS12Analysis::RunAnalysisCuts(
 This function configures electron quality cuts.
 */
 void CLAS12Analysis::ConfigureElectronCuts(
-    const bool apply_cuts,  // master
+    const bool apply_cuts, // master
     const bool apply_Nphe_cut, DSCuts &Nphe_cuts_FD,
     const bool apply_ECAL_SF_cuts, const char *filename_SF_cuts,
     DSCuts &SF_cuts, const bool apply_ECAL_P_cuts, const char *filename_P_cuts,
     const bool apply_ECAL_diag_cut, const bool apply_ECAL_fiducial_cuts,
-    DSCuts &PCAL_edge_cuts) {
-    if (apply_cuts) {
+    DSCuts &PCAL_edge_cuts)
+{
+    if (apply_cuts)
+    {
         // Cuts on electrons only:
-        if (apply_Nphe_cut) {
+        if (apply_Nphe_cut)
+        {
             // making f_NpheCuts = ture (HTCC cuts)
             Nphe_cuts_FD =
                 DSCuts("Nphe", "FD", "Electron", "1e cut", 0, getNpheCuts());
             setNpheCuts();
         }
 
-        if (apply_ECAL_SF_cuts) {
+        if (apply_ECAL_SF_cuts)
+        {
             // making f_ecalSFCuts = ture
             // TODO: ask justin what are these cuts:
             // TODO: ask justin for these cuts for LH2 and C12 (and other
@@ -467,7 +534,8 @@ void CLAS12Analysis::ConfigureElectronCuts(
             setEcalSFCuts();
         }
 
-        if (apply_ECAL_P_cuts) {
+        if (apply_ECAL_P_cuts)
+        {
             // making f_ecalPCuts = ture
             // TODO: ask justin what are these cuts:
             // TODO: ask justin for these cuts for LH2 and C12 (and other
@@ -477,12 +545,14 @@ void CLAS12Analysis::ConfigureElectronCuts(
             setEcalPCuts();
         }
 
-        if (apply_ECAL_diag_cut) {
+        if (apply_ECAL_diag_cut)
+        {
             // making f_ecalDiagCuts = ture
             setEcalDiagCuts();
         }
 
-        if (apply_ECAL_fiducial_cuts) {
+        if (apply_ECAL_fiducial_cuts)
+        {
             // making f_ecalEdgeCuts = ture (ECAL fiducial cuts)
             PCAL_edge_cuts = DSCuts("PCAL edge", "FD", "Electron", "1e cut", 0,
                                     getEcalEdgeCuts());
@@ -497,21 +567,26 @@ void CLAS12Analysis::ConfigureElectronCuts(
 This function configures charged hadron cuts.
 */
 void CLAS12Analysis::ConfigureChargedHadronCuts(
-    const bool apply_cuts,  // master
+    const bool apply_cuts, // master
     const bool apply_chi2_cuts_1e_cut, const char *filename_PIDCuts_1,
     const char *filename_PIDCuts_2, DSCuts &Chi2_Proton_cuts_CD,
     DSCuts &Chi2_Proton_cuts_FD, DSCuts &Chi2_piplus_cuts_CD,
     DSCuts &Chi2_piplus_cuts_FD, DSCuts &Chi2_piminus_cuts_CD,
     DSCuts &Chi2_piminus_cuts_FD, const bool apply_CD_edge_cuts,
-    const bool apply_CD_region_cuts) {
-    if (apply_cuts) {
+    const bool apply_CD_region_cuts)
+{
+    if (apply_cuts)
+    {
         // Cuts on all charged hadrons:
-        if (!apply_chi2_cuts_1e_cut) {
+        if (!apply_chi2_cuts_1e_cut)
+        {
             ReadInputParam(filename_PIDCuts_1);
-        } else if (apply_chi2_cuts_1e_cut) {
+        }
+        else if (apply_chi2_cuts_1e_cut)
+        {
             cout << "\nLoading fitted pid cuts...\n\n";
-            ReadInputParam(filename_PIDCuts_2);  // load sample-appropreate cuts
-                                                 // file from CutsDirectory
+            ReadInputParam(filename_PIDCuts_2); // load sample-appropreate cuts
+                                                // file from CutsDirectory
 
             /* Overwriting PID cuts according to SampleName */
             Chi2_Proton_cuts_CD.SetCutPram(GetPidCutMean(2212, "CD"),
@@ -533,16 +608,18 @@ void CLAS12Analysis::ConfigureChargedHadronCuts(
                                             -GetPidCutSigma(-211, "FD"),
                                             GetPidCutSigma(-211, "FD"));
 
-            setProtonPidCuts();  // making f_protonpidCuts = true
-            setPidCuts();        // making f_pidCuts = true
+            setProtonPidCuts(); // making f_protonpidCuts = true
+            setPidCuts();       // making f_pidCuts = true
         }
 
-        if (apply_CD_edge_cuts) {
+        if (apply_CD_edge_cuts)
+        {
             // making f_CDEdgeCuts = true
             setCDEdgeCuts();
         }
 
-        if (apply_CD_region_cuts) {
+        if (apply_CD_region_cuts)
+        {
             // making f_CDRegionCuts = true
             setCDRegionCuts();
         }
@@ -556,41 +633,46 @@ This function configures charged particle cuts that are not included in
 either ConfigureElectronCuts and ConfigureChargedHadronCuts.
 */
 void CLAS12Analysis::ConfigureChargedParticleCuts(
-    const bool apply_cuts,  // master
+    const bool apply_cuts, // master
     const bool apply_Vz_cuts, DSCuts Vz_cut, DSCuts Vz_cut_FD, DSCuts Vz_cut_CD,
     const bool apply_dVz_cuts, DSCuts dVz_cuts, DSCuts dVz_cuts_FD,
     DSCuts dVz_cuts_CD, const bool apply_DC_fiducial_cuts,
-    DSCuts DC_edge_cuts) {
-    if (apply_cuts) {  // Cuts on all charged particles:
-        if (apply_Vz_cuts) {
-            setVertexCuts();  // making f_vertexCuts = ture
+    DSCuts DC_edge_cuts)
+{
+    if (apply_cuts)
+    { // Cuts on all charged particles:
+        if (apply_Vz_cuts)
+        {
+            setVertexCuts(); // making f_vertexCuts = ture
             setVzcuts(Vz_cut.GetLowerCut(),
-                      Vz_cut.GetUpperCut());  // setting Vz cuts for all
-                                              // (charged?) particles
+                      Vz_cut.GetUpperCut()); // setting Vz cuts for all
+                                             // (charged?) particles
             setVzcutsFD(
                 Vz_cut_FD.GetLowerCut(),
-                Vz_cut_FD.GetUpperCut());  // setting Vz cuts for all charged
-                                           // particles (FD only)
+                Vz_cut_FD.GetUpperCut()); // setting Vz cuts for all charged
+                                          // particles (FD only)
             setVzcutsCD(
                 Vz_cut_CD.GetLowerCut(),
-                Vz_cut_CD.GetUpperCut());  // setting Vz cuts for all charged
-                                           // particles (CD only)
+                Vz_cut_CD.GetUpperCut()); // setting Vz cuts for all charged
+                                          // particles (CD only)
         }
 
-        if (apply_dVz_cuts) {
-            setVertexCorrCuts();  // making f_corr_vertexCuts = ture
+        if (apply_dVz_cuts)
+        {
+            setVertexCorrCuts(); // making f_corr_vertexCuts = ture
             setVertexCorrCutsLim(
                 dVz_cuts.GetLowerCut(),
-                dVz_cuts.GetUpperCut());  // setting dVz cuts (general)
+                dVz_cuts.GetUpperCut()); // setting dVz cuts (general)
             setVertexCorrCutsLimFD(
                 dVz_cuts_FD.GetLowerCut(),
-                dVz_cuts_FD.GetUpperCut());  // setting dVz cuts (FD only)
+                dVz_cuts_FD.GetUpperCut()); // setting dVz cuts (FD only)
             setVertexCorrCutsLimCD(
                 dVz_cuts_CD.GetLowerCut(),
-                dVz_cuts_CD.GetUpperCut());  // setting dVz cuts (CD only)
+                dVz_cuts_CD.GetUpperCut()); // setting dVz cuts (CD only)
         }
 
-        if (apply_DC_fiducial_cuts) {
+        if (apply_DC_fiducial_cuts)
+        {
             // making f_DCEdgeCuts = ture (DC fiducial cuts?)
             DC_edge_cuts = DSCuts("DC edge", "FD", "Electron", "1e cut", 0,
                                   getDCEdgeCuts());
@@ -605,7 +687,7 @@ void CLAS12Analysis::ConfigureChargedParticleCuts(
 This function configures nucleon cuts.
 */
 void CLAS12Analysis::ConfigureNucleonCuts(
-    const bool apply_cuts,  // master
+    const bool apply_cuts, // master
     const bool apply_nucleon_cuts, DSCuts &n_momentum_cuts_ABF_FD_n_from_ph,
     DSCuts &n_momentum_cuts_ABF_FD_n_from_ph_apprax,
     DSCuts &Beta_max_cut_ABF_FD_n_from_ph,
@@ -614,9 +696,12 @@ void CLAS12Analysis::ConfigureNucleonCuts(
     const bool is2GeVSample, DSCuts &n_mom_th, DSCuts &TL_n_mom_cuts,
     double beamE, const bool apply_nBeta_fit_cuts, DSCuts &Beta_cut,
     DSCuts &dphi_p1_p2_2p, DSCuts &dphi_pFD_pCD_2p,
-    DSCuts &dphi_pFD_pCD_pFDpCD) {
-    if (apply_cuts) {
-        if (!apply_nucleon_cuts) {
+    DSCuts &dphi_pFD_pCD_pFDpCD)
+{
+    if (apply_cuts)
+    {
+        if (!apply_nucleon_cuts)
+        {
             /* Setting neutron momentum cut before beta fit (i.e., no cut!) */
             n_momentum_cuts_ABF_FD_n_from_ph =
                 DSCuts("Momentum_cuts_ECAL", "FD-ECAL", "Neutron", "", 0,
@@ -632,29 +717,35 @@ void CLAS12Analysis::ConfigureNucleonCuts(
             Beta_max_cut_ABF_FD_n_from_ph_apprax =
                 DSCuts("Beta_cut_ECAL_apprax", "FD-ECAL_apprax", "", "1n", 1,
                        -9999, 9999);
-        } else {
+        }
+        else
+        {
             cout << "\n\nLoading fitted Beta cuts...\n\n";
             ReadInputParam(
-                filename_NucleonCuts);  // load sample-appropreate cuts file
-                                        // from CutsDirectory
+                filename_NucleonCuts); // load sample-appropreate cuts file
+                                       // from CutsDirectory
 
             /* Setting nucleon cuts - only if NOT plotting efficiency plots! */
-            if (limless_mom_eff_plots || is2GeVSample) {
+            if (limless_mom_eff_plots || is2GeVSample)
+            {
                 /* If sample is with 2GeV beam energy, no fit is needed. */
                 n_mom_th.SetUpperCut(beamE);
                 TL_n_mom_cuts.SetUpperCut(beamE);
-            } else {
+            }
+            else
+            {
                 /* Else, load values from fit. */
-                if (apply_nBeta_fit_cuts) {
+                if (apply_nBeta_fit_cuts)
+                {
                     n_mom_th.SetUpperCut(getNeutronMomentumCut());
                     TL_n_mom_cuts.SetUpperCut(getNeutronMomentumCut());
                     Beta_cut.SetUpperCut(
-                        getNeutralBetaCut());  // Log values of beta fit
-                                               // cut (for monitoring)
+                        getNeutralBetaCut()); // Log values of beta fit
+                                              // cut (for monitoring)
                     Beta_cut.SetMean(
-                        getNeutralBetaCutMean());  // Log values of beta
-                                                   // fit cut (for
-                                                   // monitoring)
+                        getNeutralBetaCutMean()); // Log values of beta
+                                                  // fit cut (for
+                                                  // monitoring)
                 }
             }
 
