@@ -385,7 +385,7 @@ void EventAnalyser()
     }
 
     cout << "apply_cuts:\t\t\t" << BoolToString(apply_cuts) << "\n";
-    cout << "CLAS12Analysis_particles:\t\t"
+    cout << "CLAS12Analysis_particles:\t"
          << BoolToString(CLAS12Analysis_particles)
          << "\n"; // TODO: move form here!
     cout << "only_preselection_cuts:\t\t"
@@ -18377,11 +18377,9 @@ void EventAnalyser()
             otherpart = c12->getByID(311); // Other particles
         }
 
-        int Nn = neutrons.size(), Np = protons.size(), Nkp = Kplus.size(),
-            Nkm = Kminus.size(), Npip = piplus.size(), Npim = piminus.size(),
+        int Nn = neutrons.size(), Np = protons.size(), Nkp = Kplus.size(), Nkm = Kminus.size(), Npip = piplus.size(), Npim = piminus.size(),
             Ne = electrons.size();
-        int Nd = deuterons.size(), Nneut = neutrals.size(),
-            No = otherpart.size();
+        int Nd = deuterons.size(), Nneut = neutrals.size(), No = otherpart.size();
 
         /* Total number of particles in event (= Nf) */
         int Nf = Nn + Np + Nkp + Nkm + Npip + Npim + Ne + Nd + Nneut + No;
@@ -18514,9 +18512,7 @@ void EventAnalyser()
 
             if (!(NeutronInECIN_test || NeutronInECOUT_test))
             {
-                cout << "\n\nReDef_neutrons_FD test: a neutron have been found "
-                        "without either ECIN or ECOUT hit! Exiting...\n\n",
-                    exit(0);
+                cout << "\n\nReDef_neutrons_FD test: a neutron have been found without either ECIN or ECOUT hit! Exiting...\n\n", exit(0);
             }
         }
 
@@ -18524,15 +18520,10 @@ void EventAnalyser()
         {
             if (allParticles[i]->par()->getPid() != 22)
             {
-                cout << "\n\nReDef_photons_FD test: A photon PDG is not 2112 "
-                        "or 22 ("
-                     << allParticles[i]->par()->getPid() << ")! Exiting...\n\n",
-                    exit(0);
+                cout << "\n\nReDef_photons_FD test: A photon PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(0);
             }
 
-            bool PhotonInPCAL_test =
-                (allParticles[i]->cal(clas12::PCAL)->getDetector() ==
-                 7); // PCAL hit
+            bool PhotonInPCAL_test = (allParticles[i]->cal(clas12::PCAL)->getDetector() == 7); // PCAL hit
 
             if (!PhotonInPCAL_test)
             {
@@ -18547,20 +18538,12 @@ void EventAnalyser()
 
         //<editor-fold desc="Setting up event selection">
         /* set up basic event selection: */
-        bool single_electron = (Electron_ind.size() ==
-                                1); // one electron above momentum threshold
-        bool no_carged_Kaons =
-            ((Nkp == 0) && (Nkm == 0)); // no charged Kaons whatsoever
-        bool no_carged_pions =
-            ((Piplus_ind.size() == 0) &&
-             (Piminus_ind.size() ==
-              0));                     // no charged Pions above momentum threshold
-        bool no_deuterons = (Nd == 0); // no Deuterons whatsoever
+        bool single_electron = (Electron_ind.size() == 1);                              // one electron above momentum threshold
+        bool no_carged_Kaons = ((Nkp == 0) && (Nkm == 0));                              // no charged Kaons whatsoever
+        bool no_carged_pions = ((Piplus_ind.size() == 0) && (Piminus_ind.size() == 0)); // no charged Pions above momentum threshold
+        bool no_deuterons = (Nd == 0);                                                  // no Deuterons whatsoever
 
-        bool basic_event_selection =
-            (single_electron && no_carged_Kaons && no_carged_pions &&
-             no_deuterons &&
-             (Enable_FD_photons || (PhotonsFD_ind.size() == 0)));
+        bool basic_event_selection = (single_electron && no_carged_Kaons && no_carged_pions && no_deuterons && (Enable_FD_photons || (PhotonsFD_ind.size() == 0)));
         //</editor-fold>
 
         //</editor-fold>
@@ -18569,9 +18552,7 @@ void EventAnalyser()
 
         //<editor-fold desc="Process ID">
         bool qel = false, mec = false, res = false, dis = false;
-        double processID =
-            c12->mcevent()->getWeight(); // code = 1.,2.,3.,4. = type = qel,
-                                         // mec, res, dis
+        double processID = c12->mcevent()->getWeight(); // code = 1.,2.,3.,4. = type = qel, mec, res, dis
 
         if (processID == 1.)
         {

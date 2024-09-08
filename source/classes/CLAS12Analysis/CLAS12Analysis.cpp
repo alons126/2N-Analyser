@@ -246,30 +246,21 @@ bool CLAS12Analysis::CheckVertex(const region_part_ptr &p)
         // true if inside cut
         if (p->getRegion() == FD)
         {
-            return ((p->par()->getVx() > vertex_x_cuts_FD.at(0) &&
-                     p->par()->getVx() < vertex_x_cuts_FD.at(1)) &&
-                    (p->par()->getVy() > vertex_y_cuts_FD.at(0) &&
-                     p->par()->getVy() < vertex_y_cuts_FD.at(1)) &&
-                    (p->par()->getVz() > vertex_z_cuts_FD.at(0) &&
-                     p->par()->getVz() < vertex_z_cuts_FD.at(1)));
+            return ((p->par()->getVx() > vertex_x_cuts_FD.at(0) && p->par()->getVx() < vertex_x_cuts_FD.at(1)) &&
+                    (p->par()->getVy() > vertex_y_cuts_FD.at(0) && p->par()->getVy() < vertex_y_cuts_FD.at(1)) &&
+                    (p->par()->getVz() > vertex_z_cuts_FD.at(0) && p->par()->getVz() < vertex_z_cuts_FD.at(1)));
         }
         else if (p->getRegion() == CD)
         {
-            return ((p->par()->getVx() > vertex_x_cuts_CD.at(0) &&
-                     p->par()->getVx() < vertex_x_cuts_CD.at(1)) &&
-                    (p->par()->getVy() > vertex_y_cuts_CD.at(0) &&
-                     p->par()->getVy() < vertex_y_cuts_CD.at(1)) &&
-                    (p->par()->getVz() > vertex_z_cuts_CD.at(0) &&
-                     p->par()->getVz() < vertex_z_cuts_CD.at(1)));
+            return ((p->par()->getVx() > vertex_x_cuts_CD.at(0) && p->par()->getVx() < vertex_x_cuts_CD.at(1)) &&
+                    (p->par()->getVy() > vertex_y_cuts_CD.at(0) && p->par()->getVy() < vertex_y_cuts_CD.at(1)) &&
+                    (p->par()->getVz() > vertex_z_cuts_CD.at(0) && p->par()->getVz() < vertex_z_cuts_CD.at(1)));
         }
         else
         {
-            return ((p->par()->getVx() > getvertex_x_cuts().at(0) &&
-                     p->par()->getVx() < getvertex_x_cuts().at(1)) &&
-                    (p->par()->getVy() > getvertex_y_cuts().at(0) &&
-                     p->par()->getVy() < getvertex_y_cuts().at(1)) &&
-                    (p->par()->getVz() > getvertex_z_cuts().at(0) &&
-                     p->par()->getVz() < getvertex_z_cuts().at(1)));
+            return ((p->par()->getVx() > getvertex_x_cuts().at(0) && p->par()->getVx() < getvertex_x_cuts().at(1)) &&
+                    (p->par()->getVy() > getvertex_y_cuts().at(0) && p->par()->getVy() < getvertex_y_cuts().at(1)) &&
+                    (p->par()->getVz() > getvertex_z_cuts().at(0) && p->par()->getVz() < getvertex_z_cuts().at(1)));
         }
     }
     else
@@ -297,18 +288,15 @@ bool CLAS12Analysis::CheckVertexCorrelation(const region_part_ptr &el, const reg
         // true if inside cut
         if (p->getRegion() == FD)
         { //  TODO:  My addition!
-            return ((p->par()->getVz() - el->par()->getVz()) > vertex_corr_cuts_FD.at(0) &&
-                    (p->par()->getVz() - el->par()->getVz()) < vertex_corr_cuts_FD.at(1));
+            return ((p->par()->getVz() - el->par()->getVz()) > vertex_corr_cuts_FD.at(0) && (p->par()->getVz() - el->par()->getVz()) < vertex_corr_cuts_FD.at(1));
         }
         else if (p->getRegion() == CD)
         {
-            return ((p->par()->getVz() - el->par()->getVz()) > vertex_corr_cuts_CD.at(0) &&
-                    (p->par()->getVz() - el->par()->getVz()) < vertex_corr_cuts_CD.at(1));
+            return ((p->par()->getVz() - el->par()->getVz()) > vertex_corr_cuts_CD.at(0) && (p->par()->getVz() - el->par()->getVz()) < vertex_corr_cuts_CD.at(1));
         }
         else
         {
-            return ((p->par()->getVz() - el->par()->getVz()) > vertex_corr_cuts.at(0) &&
-                    (p->par()->getVz() - el->par()->getVz()) < vertex_corr_cuts.at(1));
+            return ((p->par()->getVz() - el->par()->getVz()) > vertex_corr_cuts.at(0) && (p->par()->getVz() - el->par()->getVz()) < vertex_corr_cuts.at(1));
         }
     }
     else
@@ -323,15 +311,13 @@ bool CLAS12Analysis::CheckVertexCorrelation(const region_part_ptr &el, const reg
 This is my edit based on the clas12ana function:
     void Run(const std::unique_ptr<clas12::clas12reader> &c12);
 */
-void CLAS12Analysis::RunAnalysisCuts(
-    const std::unique_ptr<clas12::clas12reader> &c12)
+void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader> &c12)
 {
     Clear();
     setcurrent_run(c12->runconfig()->getRun());
     checkCutParameters(); // check run number has the right cuts
 
-    auto particles = c12->getDetParticles(); // particles is now a std::vector
-                                             // of particles for this event
+    auto particles = c12->getDetParticles(); // particles is now a std::vector of particles for this event
     auto electrons_det = c12->getByID(11);
 
     /* My edit - start */
@@ -400,8 +386,7 @@ void CLAS12Analysis::RunAnalysisCuts(
         if (getdebug_plots())
         {
             for (auto p : particles)
-                if (p->par()->getPid() == 2212 || p->par()->getPid() == -211 ||
-                    p->par()->getPid() == 211)
+                if (p->par()->getPid() == 2212 || p->par()->getPid() == -211 || p->par()->getPid() == 211)
                     debug_c.fillBeforePart(p);
         }
 
@@ -421,14 +406,11 @@ void CLAS12Analysis::RunAnalysisCuts(
           //Vertex correlation cut between electron
         */
 
-        std::for_each(
-            particles.begin(), particles.end(), [this, electrons_det](auto p)
-            {
+        std::for_each(particles.begin(), particles.end(), [this, electrons_det](auto p)
+                      {
                 if (p->par()->getCharge() == 0 && p->par()->getPid() != 11) {
                     // neutrals and electrons don't follow cuts below, skip them
                     setByPid(p);
-                    // Add neutrals and electrons to allparticles:
-                    addToAllParticles(p);
                     return;
                 } else if (p->par()->getPid() != 11 && getelectrons().size() > 0) {
                     // Charged particles
@@ -460,9 +442,6 @@ void CLAS12Analysis::RunAnalysisCuts(
                             (!checkVertexCorrelation(electrons_det[0], p) &&
                              getf_corr_vertexCuts()))) {
                         setByPid(p);
-                        // Add all particles surviving the cuts in event to
-                        // allparticles:
-                        addToAllParticles(p);
                     }
                 } });
 
@@ -478,10 +457,22 @@ void CLAS12Analysis::RunAnalysisCuts(
             for (auto el : getelectrons())
                 debug_c.fillAfterEl(el);
         }
+
         Debug_c.multi_p_1e_cut_AC_debug->Fill(getprotons().size());
         Debug_c.multi_cpi_1e_cut_AC_debug->Fill(getpiplus().size() + getpiminus().size());
         Debug_c.multi_p_vs_cpi_1e_cut_AC_debug->Fill(getprotons().size(), getpiplus().size() + getpiminus().size());
 
+        // Add all particles after PID (with a single electron) to allparticles vector
+        allparticles.push_back(getelectrons());
+        allparticles.push_back(getprotons());
+        allparticles.push_back(getdeuterons());
+        allparticles.push_back(getneutrals());
+        allparticles.push_back(getneutrons());
+        allparticles.push_back(getpiplus());
+        allparticles.push_back(getpiminus());
+        allparticles.push_back(getkplus());
+        allparticles.push_back(getkminus());
+        allparticles.push_back(getotherpart());
     } // good electron loop
     /* My edit - end */
 }

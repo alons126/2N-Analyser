@@ -240,8 +240,14 @@ public:
     bool getf_corr_vertexCuts() { return f_corr_vertexCuts; }                     // My addition
     std::vector<region_part_ptr> getelectrons() { return electrons; }             // My addition
     std::vector<region_part_ptr> getprotons() { return protons; }                 // My addition
+    std::vector<region_part_ptr> getdeuterons() { return deuterons; }             // My addition
+    std::vector<region_part_ptr> getneutrals() { return neutrals; }               // My addition
+    std::vector<region_part_ptr> getneutrons() { return neutrons; }               // My addition
     std::vector<region_part_ptr> getpiplus() { return piplus; }                   // My addition
     std::vector<region_part_ptr> getpiminus() { return piminus; }                 // My addition
+    std::vector<region_part_ptr> getkplus() { return kplus; }                     // My addition
+    std::vector<region_part_ptr> getkminus() { return kminus; }                   // My addition
+    std::vector<region_part_ptr> getotherpart() { return otherpart; }             // My addition
     void increaseevent_mult() { ++event_mult; }                                   // My addition
     void setdebug_fileName(TString db_fileName) { debug_out_file = db_fileName; } // My addition
     TString getdebug_fileName() { return debug_out_file; }                        // My addition

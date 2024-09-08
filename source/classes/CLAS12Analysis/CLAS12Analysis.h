@@ -268,8 +268,7 @@ public:
     It allows the user to choose between the old implementation of vertex
     correlation cuts from the MSc analysis and the implementation from clas12ana
     */
-    bool CheckVertexCorrelation(const region_part_ptr &el,
-                                const region_part_ptr &p);
+    bool CheckVertexCorrelation(const region_part_ptr &el, const region_part_ptr &p);
 
     // RunAnalysisCuts function -----------------------------------------------
 
@@ -285,28 +284,17 @@ public:
     This function configures electron quality cuts.
     */
     void ConfigureElectronCuts(const bool apply_cuts, // master
-                               const bool apply_Nphe_cut, DSCuts &Nphe_cuts_FD,
-                               const bool apply_ECAL_SF_cuts,
-                               const char *filename_SF_cuts, DSCuts &SF_cuts,
-                               const bool apply_ECAL_P_cuts,
-                               const char *filename_P_cuts,
-                               const bool apply_ECAL_diag_cut,
-                               const bool apply_ECAL_fiducial_cuts,
-                               DSCuts &PCAL_edge_cuts);
+                               const bool apply_Nphe_cut, DSCuts &Nphe_cuts_FD, const bool apply_ECAL_SF_cuts, const char *filename_SF_cuts, DSCuts &SF_cuts, const bool apply_ECAL_P_cuts, const char *filename_P_cuts, const bool apply_ECAL_diag_cut, const bool apply_ECAL_fiducial_cuts, DSCuts &PCAL_edge_cuts);
 
     // ConfigureChargedHadronCuts function ------------------------------------
 
     /*
     This function configures charged hadron cuts.
     */
-    void ConfigureChargedHadronCuts(
-        const bool apply_cuts, // master
-        const bool apply_chi2_cuts_1e_cut, const char *filename_PIDCuts_1,
-        const char *filename_PIDCuts_2, DSCuts &Chi2_Proton_cuts_CD,
-        DSCuts &Chi2_Proton_cuts_FD, DSCuts &Chi2_piplus_cuts_CD,
-        DSCuts &Chi2_piplus_cuts_FD, DSCuts &Chi2_piminus_cuts_CD,
-        DSCuts &Chi2_piminus_cuts_FD, const bool apply_CD_edge_cuts,
-        const bool apply_CD_region_cuts);
+    void ConfigureChargedHadronCuts(const bool apply_cuts, // master
+                                    const bool apply_chi2_cuts_1e_cut, const char *filename_PIDCuts_1, const char *filename_PIDCuts_2,
+                                    DSCuts &Chi2_Proton_cuts_CD, DSCuts &Chi2_Proton_cuts_FD, DSCuts &Chi2_piplus_cuts_CD, DSCuts &Chi2_piplus_cuts_FD,
+                                    DSCuts &Chi2_piminus_cuts_CD, DSCuts &Chi2_piminus_cuts_FD, const bool apply_CD_edge_cuts, const bool apply_CD_region_cuts);
 
     // ConfigureChargedParticleCuts function ----------------------------------
 
@@ -315,13 +303,7 @@ public:
     either ConfigureElectronCuts and ConfigureChargedHadronCuts.
     */
     void ConfigureChargedParticleCuts(const bool apply_cuts, // master
-                                      const bool apply_Vz_cuts, DSCuts Vz_cut,
-                                      DSCuts Vz_cut_FD, DSCuts Vz_cut_CD,
-                                      const bool apply_dVz_cuts,
-                                      DSCuts dVz_cuts, DSCuts dVz_cuts_FD,
-                                      DSCuts dVz_cuts_CD,
-                                      const bool apply_DC_fiducial_cuts,
-                                      DSCuts DC_edge_cuts);
+                                      const bool apply_Vz_cuts, DSCuts Vz_cut, DSCuts Vz_cut_FD, DSCuts Vz_cut_CD, const bool apply_dVz_cuts, DSCuts dVz_cuts, DSCuts dVz_cuts_FD, DSCuts dVz_cuts_CD, const bool apply_DC_fiducial_cuts, DSCuts DC_edge_cuts);
 
     // ConfigureNucleonCuts function ------------------------------------------
 
@@ -329,18 +311,10 @@ public:
     This function configures nucleon cuts.
     */
     void ConfigureNucleonCuts(const bool apply_cuts, // master
-                              const bool apply_nucleon_cuts,
-                              DSCuts &n_momentum_cuts_ABF_FD_n_from_ph,
-                              DSCuts &n_momentum_cuts_ABF_FD_n_from_ph_apprax,
-                              DSCuts &Beta_max_cut_ABF_FD_n_from_ph,
-                              DSCuts &Beta_max_cut_ABF_FD_n_from_ph_apprax,
-                              const char *filename_NucleonCuts,
-                              const bool limless_mom_eff_plots,
-                              const bool is2GeVSample, DSCuts &n_mom_th,
-                              DSCuts &TL_n_mom_cuts, double beamE,
-                              const bool apply_nBeta_fit_cuts, DSCuts &Beta_cut,
-                              DSCuts &dphi_p1_p2_2p, DSCuts &dphi_pFD_pCD_2p,
-                              DSCuts &dphi_pFD_pCD_pFDpCD);
+                              const bool apply_nucleon_cuts, DSCuts &n_momentum_cuts_ABF_FD_n_from_ph, DSCuts &n_momentum_cuts_ABF_FD_n_from_ph_apprax,
+                              DSCuts &Beta_max_cut_ABF_FD_n_from_ph, DSCuts &Beta_max_cut_ABF_FD_n_from_ph_apprax, const char *filename_NucleonCuts,
+                              const bool limless_mom_eff_plots, const bool is2GeVSample, DSCuts &n_mom_th, DSCuts &TL_n_mom_cuts, double beamE,
+                              const bool apply_nBeta_fit_cuts, DSCuts &Beta_cut, DSCuts &dphi_p1_p2_2p, DSCuts &dphi_pFD_pCD_2p, DSCuts &dphi_pFD_pCD_pFDpCD);
 
     // WriteMyDBPlots function ------------------------------------------
 
