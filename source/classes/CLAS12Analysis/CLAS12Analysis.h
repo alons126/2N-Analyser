@@ -35,7 +35,7 @@ private:
 
     vector<double> vertex_corr_cuts_FD = {-99, 99}; // electron vertex <-> particle vertex correlation cuts (FD only)
     vector<double> vertex_corr_cuts_CD = {-99, 99}; // electron vertex <-> particle vertex correlation cuts (CD only)
-    vector<double> vertex_corr_cuts = {-99, 99}; // electron vertex <-> particle vertex correlation cuts (CD only)
+    vector<double> vertex_corr_cuts = {-99, 99};    // electron vertex <-> particle vertex correlation cuts (CD only)
 
     // My all particles vector
     // -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -88,6 +88,7 @@ public:
     // My public functions
     // ---------------------------------------------------------------------------------------------------------------------------------------------------
 
+    // TODO: check if some of these can be removed
     void setVzcutsFD(double min, double max)
     {
         vertex_z_cuts_FD.at(0) = min;
@@ -100,10 +101,22 @@ public:
         vertex_z_cuts_CD.at(1) = max;
     }
 
+    void setVzcuts(double min, double max)
+    {
+        vertex_z_cuts.at(0) = min;
+        vertex_z_cuts.at(1) = max;
+    }
+
     void setVertexCorrCutsLimFD(double min, double max)
     {
         vertex_corr_cuts_FD.at(0) = min;
         vertex_corr_cuts_FD.at(1) = max;
+    }
+
+    void setVertexCorrCutsLimCD(double min, double max)
+    {
+        vertex_corr_cuts_CD.at(0) = min;
+        vertex_corr_cuts_CD.at(1) = max;
     }
 
     void setVertexCorrCutsLimCD(double min, double max)
@@ -328,6 +341,14 @@ public:
                               const bool apply_nBeta_fit_cuts, DSCuts &Beta_cut,
                               DSCuts &dphi_p1_p2_2p, DSCuts &dphi_pFD_pCD_2p,
                               DSCuts &dphi_pFD_pCD_pFDpCD);
+
+    // WriteMyDBPlots function ------------------------------------------
+
+    void WriteMyDBPlots()
+    {
+        debug_c.WriteDebugPlots();
+        Debug_c.WriteDebugPlots();
+    }
 };
 
 #endif // CLAS12ANALYSIS_H

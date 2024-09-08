@@ -18193,7 +18193,7 @@ void EventAnalyser()
                                          dVz_cuts, dVz_cuts_FD, dVz_cuts_CD,
                                          apply_DC_fiducial_cuts, DC_edge_cuts);
 
-    ConfigureNucleonCuts(
+    clasAna.ConfigureNucleonCuts(
         apply_cuts, apply_nucleon_cuts, n_momentum_cuts_ABF_FD_n_from_ph,
         n_momentum_cuts_ABF_FD_n_from_ph_apprax, Beta_max_cut_ABF_FD_n_from_ph,
         Beta_max_cut_ABF_FD_n_from_ph_apprax,
@@ -42702,7 +42702,7 @@ void EventAnalyser()
 
         TString debug_filePath = plots_path + "/" + "DebugOutputFile.root";
         clasAna.setdebug_fileName(debug_filePath);
-        clasAna.WriteDebugPlots();
+        clasAna.WriteMyDBPlots();
     }
     else
     {

@@ -243,6 +243,7 @@ public:
     std::vector<region_part_ptr> getpiplus() { return piplus; }       // My addition
     std::vector<region_part_ptr> getpiminus() { return piminus; }     // My addition
     void increaseevent_mult() {++event_mult;}    // My addition
+    void setdebug_fileName(TString db_fileName) { debug_out_file = db_fileName; }
 
     clas12debug debug_c; // debug class for plotting general plots (my edit - moved to public!)
 
