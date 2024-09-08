@@ -536,6 +536,7 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
         Debug_c.multi_cpi_1e_cut_AC_debug->Fill(getpiplus().size() + getpiminus().size());
         Debug_c.multi_p_vs_cpi_1e_cut_AC_debug->Fill(getprotons().size(), getpiplus().size() + getpiminus().size());
 
+        // Add all particles after PID (and one reco electron) in the allparticles vector
         for (auto el : getelectrons())
             allparticles.push_back(el);
         for (auto p : getprotons())
@@ -556,6 +557,7 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
             allparticles.push_back(km);
         for (auto o : getotherpart())
             allparticles.push_back(o);
+        
     } // good electron loop
     /* My edit - end */
 }
