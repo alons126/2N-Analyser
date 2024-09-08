@@ -387,7 +387,7 @@ This is my edit based on the clas12ana function:
 */
 void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader> &c12)
 {
-    Clear();
+    ClearParticles();
     setcurrent_run(c12->runconfig()->getRun());
     checkCutParameters(); // check run number has the right cuts
 

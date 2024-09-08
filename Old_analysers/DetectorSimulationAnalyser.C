@@ -18178,7 +18178,7 @@ void EventAnalyser()
     clasAna.ConfigureElectronCuts(apply_cuts, apply_Nphe_cut, Nphe_cuts_FD, apply_ECAL_SF_cuts, (PIDCutsDirectory + "paramsSF_40Ca_x2.dat").c_str(), SF_cuts, apply_ECAL_P_cuts, (PIDCutsDirectory + "paramsPI_40Ca_x2.dat").c_str(), apply_ECAL_diag_cut, apply_ECAL_fiducial_cuts, PCAL_edge_cuts);
 
     // Cuts on charged hadrons:
-    clasAna.ConfigureChargedHadronCuts(apply_cuts, apply_chi2_cuts_1e_cut, (PIDCutsDirectory + "ana.par").c_str(), (PIDCutsDirectory + "Fitted_PID_Cuts_-_" + SampleName + ".par").c_str(), Chi2_Proton_cuts_CD, Chi2_Proton_cuts_FD, Chi2_piplus_cuts_CD, Chi2_piplus_cuts_FD,Chi2_piminus_cuts_CD, Chi2_piminus_cuts_FD, apply_CD_edge_cuts, apply_CD_region_cuts, apply_ghostTrackCuts);
+    clasAna.ConfigureChargedHadronCuts(apply_cuts, apply_chi2_cuts_1e_cut, (PIDCutsDirectory + "ana.par").c_str(), (PIDCutsDirectory + "Fitted_PID_Cuts_-_" + SampleName + ".par").c_str(), Chi2_Proton_cuts_CD, Chi2_Proton_cuts_FD, Chi2_piplus_cuts_CD, Chi2_piplus_cuts_FD, Chi2_piminus_cuts_CD, Chi2_piminus_cuts_FD, apply_CD_edge_cuts, apply_CD_region_cuts, apply_ghostTrackCuts);
 
     // Cuts on all charged particles:
     clasAna.ConfigureChargedParticleCuts(apply_cuts, apply_Vz_cuts, Vz_cut, Vz_cut_FD, Vz_cut_CD, apply_dVz_cuts, dVz_cuts, dVz_cuts_FD, dVz_cuts_CD, apply_DC_fiducial_cuts, DC_edge_cuts);
@@ -18365,15 +18365,11 @@ void EventAnalyser()
         //<editor-fold desc="Charged particles' identification">
         vector<int> Electron_ind = pid.ChargedParticleID(electrons, e_mom_th);
 
-        vector<int> IDed_Protons_ind = pid.ChargedParticleID(
-            protons, pFD_mom_th,
-            pCD_mom_th); // indices of identified protons (i.e., within P_pFD
-                         // and P_pCD th.)
-        vector<int> Protons_ind =
-            pid.GetGoodProtons(apply_nucleon_cuts, protons, IDed_Protons_ind,
-                               Theta_p1_cuts_2p, Theta_p2_cuts_2p,
-                               dphi_pFD_pCD_2p); // good identified protons (no
-                                                 // sCTOFhp and no dCDaFDd)
+        vector<int> IDed_Protons_ind = pid.ChargedParticleID(protons, pFD_mom_th, pCD_mom_th); // indices of identified protons (i.e., within P_pFD
+                                                                                               // and P_pCD th.)
+        vector<int> Protons_ind = pid.GetGoodProtons(apply_nucleon_cuts,
+                                                     protons, IDed_Protons_ind, Theta_p1_cuts_2p, Theta_p2_cuts_2p, dphi_pFD_pCD_2p); // good identified protons (no
+                                                                                                                                      // sCTOFhp and no dCDaFDd)
 
         vector<int> Piplus_ind =
             pid.ChargedParticleID(piplus, pipFD_mom_th, pipCD_mom_th);
