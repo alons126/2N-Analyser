@@ -539,24 +539,24 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
         // Add all particles after PID (and one reco electron) in the allparticles vector
         for (auto el : getelectrons())
             allparticles.push_back(el);
-        for (auto p : getprotons())
-            allparticles.push_back(p);
-        for (auto d : getdeuterons())
-            allparticles.push_back(d);
-        for (auto neut : getneutrals())
-            allparticles.push_back(neut);
-        for (auto n : getneutrons())
-            allparticles.push_back(n);
-        for (auto pip : getpiplus())
-            allparticles.push_back(pip);
-        for (auto pim : getpiminus())
-            allparticles.push_back(pim);
-        for (auto kp : getkplus())
-            allparticles.push_back(kp);
-        for (auto km : getkminus())
-            allparticles.push_back(km);
-        for (auto o : getotherpart())
-            allparticles.push_back(o);
+        // for (auto p : getprotons())
+        //     allparticles.push_back(p);
+        // for (auto d : getdeuterons())
+        //     allparticles.push_back(d);
+        // for (auto neut : getneutrals())
+        //     allparticles.push_back(neut);
+        // for (auto n : getneutrons())
+        //     allparticles.push_back(n);
+        // for (auto pip : getpiplus())
+        //     allparticles.push_back(pip);
+        // for (auto pim : getpiminus())
+        //     allparticles.push_back(pim);
+        // for (auto kp : getkplus())
+        //     allparticles.push_back(kp);
+        // for (auto km : getkminus())
+        //     allparticles.push_back(km);
+        // for (auto o : getotherpart())
+        //     allparticles.push_back(o);
         
     } // good electron loop
     /* My edit - end */
