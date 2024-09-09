@@ -46,6 +46,7 @@ private:
     // ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
     bool f_NpheCuts = false;
+
     bool f_old_ecalSFCut = false;     // Old constant cuts from MSc analysis
     bool f_old_VertexCuts = true;     // Old vetex cuts from MSc analysis
     bool f_old_VertexCorrCuts = true; // Old vetex cuts from MSc analysis
@@ -134,6 +135,19 @@ public:
     // double getEcalEdgeCuts() { return ecal_edge_cut; }
 
     void setNpheCuts(bool flag = true) { f_NpheCuts = flag; }
+
+    void setf_old_ecalSFCut(bool flag = true) { f_old_ecalSFCut = flag; }
+
+    void setf_old_VertexCuts(bool flag = true) { f_old_VertexCuts = flag; }
+
+    void setf_old_VertexCorrCuts(bool flag = true) { f_old_VertexCorrCuts = flag; }
+
+    void ConfigureOldMScCutsImplementation(bool apply_old_MSc_SF_cuts = true, bool apply_old_MSc_Vz_cuts = true, bool apply_old_MSc_dVz_cuts = true)
+    {
+        f_old_ecalSFCut = apply_old_MSc_SF_cuts;
+        f_old_VertexCuts = apply_old_MSc_Vz_cuts;
+        f_old_VertexCorrCuts = apply_old_MSc_dVz_cuts;
+    }
 
     double getNpheCuts() { return htcc_Nphe_cut; }
 

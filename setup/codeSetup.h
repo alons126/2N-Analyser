@@ -19,7 +19,7 @@
 std::string Ver = "DetSim testings";
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                                    File & path definitions 
+//                                                                    File & path definitions
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
@@ -58,7 +58,7 @@ std::string log_file_name = "Run_log.txt";
 std::string plots_log_save_Directory = plots_path + "/" + log_file_name;
 //</editor-fold>
 
-std::string _CLAS12ANA_DIR = WorkingDirectory + "/source/classes/clas12ana";
+std::string _CLAS12ANA_DIR = WorkingDirectory + "source/classes/clas12ana";
 
 // ======================================================================================================================================================================
 // file_name definitions and selection
@@ -104,13 +104,10 @@ std::string file_name = "general_file";
 //<editor-fold desc="C12x4 5.98636GeV - run 015188 (ifarm DATA files - C12x4
 // DATA files)">
 /* C12x4 5.98636GeV DATA file on ifarm */
-std::string AnalyseFilePath =
-    "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon";
+std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon";
 std::string AnalyseFileSample = "015188";
-std::string AnalyseFileDir =
-    "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-std::string AnalyseFile =
-    AnalyseFileDir + "rec_clas_015188.evio.01685-01689.hipo";  // One run file
+std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+std::string AnalyseFile = AnalyseFileDir + "rec_clas_015188.evio.01685-01689.hipo"; // One run file
 // std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // All run files
 //</editor-fold>
 
@@ -772,4 +769,4 @@ double P_L_hist_upper_lim, P_L_hist_lower_lim, P_R_hist_upper_lim,
 
 //</editor-fold>
 
-#endif  // ANALYSER_CODESETUP_H
+#endif // ANALYSER_CODESETUP_H

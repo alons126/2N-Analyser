@@ -48,13 +48,6 @@ void EventAnalyser()
     Settings settings;
     ParticleID pid;
 
-
-    cout << "_CLAS12ANA_DIR = " << _CLAS12ANA_DIR << "\n";
-    cout << "CLAS12ANA_DIR = " << CLAS12ANA_DIR << "\n";
-    cout << "CLAS12ANA_DIR + XXX = " << CLAS12ANA_DIR << "/Ana/cutFiles/paramsSF_40Ca_x2.dat" << "\n";
-    exit(0);
-
-
     // ======================================================================================================================================================================    // Input processing
     // ======================================================================================================================================================================
     //<editor-fold desc="Input processing">
@@ -202,9 +195,19 @@ void EventAnalyser()
     bool apply_kinematical_weights = false;
     bool apply_nucleon_SmearAndCorr = false;
 
+    /* Implementation of old MSc cuts */
+    bool apply_old_MSc_SF_cuts = false;
+    bool apply_old_MSc_Vz_cuts = true;
+    bool apply_old_MSc_dVz_cuts = true;
+
     //<editor-fold desc="Custom cuts naming & print out execution variables">
 
     //<editor-fold desc="Auto-disable variables">
+    if (apply_old_MSc_SF_cuts)
+    { // apply_ECAL_P_cuts wasn't used during MSc analysis
+        apply_ECAL_P_cuts = false;
+    }
+
     if (only_preselection_cuts || only_electron_quality_cuts)
     {
         apply_cuts = false;
@@ -380,6 +383,10 @@ void EventAnalyser()
     cout << "apply_kinematical_cuts:\t\t" << BoolToString(apply_kinematical_cuts) << "\n";
     cout << "apply_kinematical_weights:\t" << BoolToString(apply_kinematical_weights) << "\n";
     cout << "apply_nucleon_SmearAndCorr:\t" << BoolToString(apply_nucleon_SmearAndCorr) << "\n\n";
+
+    cout << "apply_old_MSc_SF_cuts:\t\t" << BoolToString(apply_old_MSc_SF_cuts) << "\n";
+    cout << "apply_old_MSc_Vz_cuts:\t" << BoolToString(apply_old_MSc_Vz_cuts) << "\n";
+    cout << "apply_old_MSc_dVz_cuts:\t" << BoolToString(apply_old_MSc_dVz_cuts) << "\n\n";
     //</editor-fold>
 
     //</editor-fold>
@@ -7985,6 +7992,9 @@ void EventAnalyser()
 
     //<editor-fold desc="Setting and loading cuts (via CLAS12Analysis)">
     CLAS12Analysis clasAna;
+
+    // Configure if to implement old MSc cuts or not:
+    clasAna.ConfigureOldMScCutsImplementation(apply_old_MSc_SF_cuts, apply_old_MSc_Vz_cuts, apply_old_MSc_dVz_cuts);
 
     // Cuts on electrons only:
     clasAna.ConfigureElectronCuts(apply_cuts, apply_Nphe_cut, Nphe_cuts_FD, apply_ECAL_SF_cuts, (PIDCutsDirectory + "paramsSF_40Ca_x2.dat").c_str(), SF_cuts, apply_ECAL_P_cuts, (PIDCutsDirectory + "paramsPI_40Ca_x2.dat").c_str(), apply_ECAL_diag_cut, apply_ECAL_fiducial_cuts, PCAL_edge_cuts);
@@ -23272,6 +23282,10 @@ void EventAnalyser()
     myLogFile << "apply_kinematical_cuts = " << BoolToString(apply_kinematical_cuts) << "\n";
     myLogFile << "apply_kinematical_weights = " << BoolToString(apply_kinematical_weights) << "\n";
     myLogFile << "apply_nucleon_SmearAndCorr = " << BoolToString(apply_nucleon_SmearAndCorr) << "\n\n";
+
+    myLogFile << "apply_old_MSc_SF_cuts = " << BoolToString(apply_old_MSc_SF_cuts) << "\n";
+    myLogFile << "apply_old_MSc_Vz_cuts = " << BoolToString(apply_old_MSc_Vz_cuts) << "\n";
+    myLogFile << "apply_old_MSc_dVz_cuts = " << BoolToString(apply_old_MSc_dVz_cuts) << "\n\n";
     //</editor-fold>
 
     //</editor-fold>
