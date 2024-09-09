@@ -443,6 +443,16 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
     auto electrons_det = c12->getByID(11);
 
     /* My edit - start */
+
+
+    cout << "getf_ecalSFCuts() = " << getf_ecalSFCuts() << "\n";
+    cout << "getf_ecalPCuts() = " << getf_ecalPCuts() << "\n";
+    exit(0);
+
+
+
+
+
     auto protons_det = c12->getByID(2212);
     auto piplus_det = c12->getByID(211);
     auto piminus_det = c12->getByID(-211);
