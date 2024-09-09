@@ -52,6 +52,108 @@ Directories::Directories(const string &plots_path, const bool Clear_Old_Director
             "/"; // nFDpCD - i.e. plots after Nphe and all other cuts
     //</editor-fold>
 
+    //<editor-fold desc="Sampling Fraction (SF) plots directories">
+    for (string folders_name: SF_Daughter_Folders) {
+        MakeDirectory(create_SF_Dir, SF_Parent_Directory, folders_name, false, Plots_Folder);
+    }
+
+    SF_Directory_map["SF_1e_cut_BC_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                                 Find(SF_Daughter_Folders, "01_1e_cut/01_SF_plots") + "/";
+    SF_Directory_map["SF_VS_Epcal_1e_cut_BC_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                                        Find(SF_Daughter_Folders, "01_1e_cut/02_SF_VS_Epcal_plots_plots") + "/";
+    SF_Directory_map["SF_VS_P_e_1e_cut_BC_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                                        Find(SF_Daughter_Folders, "01_1e_cut/03_SF_VS_P_e_plots") + "/";
+    SF_Directory_map["SF_1e_cut_AC_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                                 Find(SF_Daughter_Folders, "01_1e_cut/01_SF_plots") + "/";
+    SF_Directory_map["SF_VS_Epcal_1e_cut_AC_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                                        Find(SF_Daughter_Folders, "01_1e_cut/02_SF_VS_Epcal_plots_plots") + "/";
+    SF_Directory_map["SF_VS_P_e_1e_cut_AC_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                                        Find(SF_Daughter_Folders, "01_1e_cut/03_SF_VS_P_e_plots") + "/";
+
+    SF_Directory_map["SF_1p_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                          Find(SF_Daughter_Folders, "02_1p/01_SF_plots") + "/";
+    SF_Directory_map["SF_VS_Epcal_1p_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                                 Find(SF_Daughter_Folders, "02_1p/02_SF_VS_Epcal_plots_plots") + "/";
+    SF_Directory_map["SF_VS_P_e_1p_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                                 Find(SF_Daughter_Folders, "02_1p/03_SF_VS_P_e_plots") + "/";
+
+    SF_Directory_map["SF_1n_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                          Find(SF_Daughter_Folders, "03_1n/01_SF_plots") + "/";
+    SF_Directory_map["SF_VS_Epcal_1n_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                                 Find(SF_Daughter_Folders, "03_1n/02_SF_VS_Epcal_plots_plots") + "/";
+    SF_Directory_map["SF_VS_P_e_1n_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                                 Find(SF_Daughter_Folders, "03_1n/03_SF_VS_P_e_plots") + "/";
+
+    SF_Directory_map["SF_2p_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                          Find(SF_Daughter_Folders, "04_2p/01_SF_plots") + "/";
+    SF_Directory_map["SF_VS_Epcal_2p_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                                 Find(SF_Daughter_Folders, "04_2p/02_SF_VS_Epcal_plots_plots") + "/";
+    SF_Directory_map["SF_VS_P_e_2p_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                                 Find(SF_Daughter_Folders, "04_2p/03_SF_VS_P_e_plots") + "/";
+
+    SF_Directory_map["SF_pFDpCD_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                              Find(SF_Daughter_Folders, "05_pFDpCD/01_SF_plots") + "/";
+    SF_Directory_map["SF_VS_Epcal_pFDpCD_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                                     Find(SF_Daughter_Folders, "05_pFDpCD/02_SF_VS_Epcal_plots_plots") + "/";
+    SF_Directory_map["SF_VS_P_e_pFDpCD_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                                     Find(SF_Daughter_Folders, "05_pFDpCD/03_SF_VS_P_e_plots") + "/";
+
+    SF_Directory_map["SF_nFDpCD_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                              Find(SF_Daughter_Folders, "06_nFDpCD/01_SF_plots") + "/";
+    SF_Directory_map["SF_VS_Epcal_nFDpCD_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                                     Find(SF_Daughter_Folders, "06_nFDpCD/02_SF_VS_Epcal_plots_plots") + "/";
+    SF_Directory_map["SF_VS_P_e_nFDpCD_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
+                                                     Find(SF_Daughter_Folders, "06_nFDpCD/03_SF_VS_P_e_plots") + "/";
+    //</editor-fold>
+
+    //<editor-fold desc="Sampling Fraction (Edep_ECAL) plots directories">
+    for (string folders_name: Edep_ECAL_Daughter_Folders) {
+        MakeDirectory(create_Edep_ECAL_Dir, Edep_ECAL_Parent_Directory, folders_name, false, Plots_Folder);
+    }
+
+    Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1e_cut_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                        Find(Edep_ECAL_Daughter_Folders, "01_1e_cut/01_tot_ECAL_plots") + "/";
+    Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1e_cut_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                        Find(Edep_ECAL_Daughter_Folders, "01_1e_cut/02_Epcal_plots") + "/";
+    Edep_ECAL_Directory_map["Edep_ECAL_Eec_1e_cut_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                        Find(Edep_ECAL_Daughter_Folders, "01_1e_cut/03_Eec_plots") + "/";
+
+    Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1p_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                 Find(Edep_ECAL_Daughter_Folders, "02_1p/01_tot_ECAL_plots") + "/";
+    Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1p_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                 Find(Edep_ECAL_Daughter_Folders, "02_1p/02_Epcal_plots") + "/";
+    Edep_ECAL_Directory_map["Edep_ECAL_Eec_1p_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                 Find(Edep_ECAL_Daughter_Folders, "02_1p/03_Eec_plots") + "/";
+
+    Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1n_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                 Find(Edep_ECAL_Daughter_Folders, "03_1n/01_tot_ECAL_plots") + "/";
+    Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1n_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                 Find(Edep_ECAL_Daughter_Folders, "03_1n/02_Epcal_plots") + "/";
+    Edep_ECAL_Directory_map["Edep_ECAL_Eec_1n_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                 Find(Edep_ECAL_Daughter_Folders, "03_1n/03_Eec_plots") + "/";
+
+    Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_2p_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                 Find(Edep_ECAL_Daughter_Folders, "04_2p/01_tot_ECAL_plots") + "/";
+    Edep_ECAL_Directory_map["Edep_ECAL_Epcal_2p_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                 Find(Edep_ECAL_Daughter_Folders, "04_2p/02_Epcal_plots") + "/";
+    Edep_ECAL_Directory_map["Edep_ECAL_Eec_2p_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                 Find(Edep_ECAL_Daughter_Folders, "04_2p/03_Eec_plots") + "/";
+
+    Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_pFDpCD_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                     Find(Edep_ECAL_Daughter_Folders, "05_pFDpCD/01_tot_ECAL_plots") + "/";
+    Edep_ECAL_Directory_map["Edep_ECAL_Epcal_pFDpCD_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                     Find(Edep_ECAL_Daughter_Folders, "05_pFDpCD/02_Epcal_plots") + "/";
+    Edep_ECAL_Directory_map["Edep_ECAL_Eec_pFDpCD_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                     Find(Edep_ECAL_Daughter_Folders, "05_pFDpCD/03_Eec_plots") + "/";
+
+    Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_nFDpCD_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                     Find(Edep_ECAL_Daughter_Folders, "06_nFDpCD/01_tot_ECAL_plots") + "/";
+    Edep_ECAL_Directory_map["Edep_ECAL_Epcal_nFDpCD_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                     Find(Edep_ECAL_Daughter_Folders, "06_nFDpCD/02_Epcal_plots") + "/";
+    Edep_ECAL_Directory_map["Edep_ECAL_Eec_nFDpCD_Directory"] = Plots_Folder + "/" + Edep_ECAL_Parent_Directory + "/" +
+                                                     Find(Edep_ECAL_Daughter_Folders, "06_nFDpCD/03_Eec_plots") + "/";
+    //</editor-fold>
+
     //<editor-fold desc="Chi2 plots directories">
     for (string folders_name: Chi2_Daughter_Folders) {
         MakeDirectory(create_chi2_Dir, Chi2_Parent_Directory, folders_name, false, Plots_Folder);
@@ -143,47 +245,6 @@ Directories::Directories(const string &plots_path, const bool Clear_Old_Director
 
     Vertex_Directory_map["Vertex_dV_nFDpCD_Directory"] = Plots_Folder + "/" + Vertex_Parent_Directory + "/" +
                                                          Find(Vertex_Daughter_Folders, "06_nFDpCD/01_dV_plots") + "/";
-    //</editor-fold>
-
-    //<editor-fold desc="Sampling Fraction (SF) plots directories">
-    for (string folders_name: SF_Daughter_Folders) {
-        MakeDirectory(create_SF_Dir, SF_Parent_Directory, folders_name, false, Plots_Folder);
-    }
-
-    SF_Directory_map["SF_1e_cut_BC_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
-                                                 Find(SF_Daughter_Folders, "01_1e_cut/01_SF_plots") + "/";
-    SF_Directory_map["SF_VS_P_e_1e_cut_BC_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
-                                                        Find(SF_Daughter_Folders, "01_1e_cut/02_SF_VS_P_e_plots") + "/";
-    SF_Directory_map["SF_1e_cut_AC_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
-                                                 Find(SF_Daughter_Folders, "01_1e_cut/01_SF_plots") + "/";
-    SF_Directory_map["SF_VS_P_e_1e_cut_AC_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
-                                                        Find(SF_Daughter_Folders, "01_1e_cut/02_SF_VS_P_e_plots") + "/";
-
-    SF_Directory_map["SF_1p_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
-                                          Find(SF_Daughter_Folders, "02_1p/01_SF_plots") + "/";
-
-    SF_Directory_map["SF_VS_P_e_1p_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
-                                                 Find(SF_Daughter_Folders, "02_1p/02_SF_VS_P_e_plots") + "/";
-
-    SF_Directory_map["SF_1n_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
-                                          Find(SF_Daughter_Folders, "03_1n/01_SF_plots") + "/";
-    SF_Directory_map["SF_VS_P_e_1n_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
-                                                 Find(SF_Daughter_Folders, "03_1n/02_SF_VS_P_e_plots") + "/";
-
-    SF_Directory_map["SF_2p_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
-                                          Find(SF_Daughter_Folders, "04_2p/01_SF_plots") + "/";
-    SF_Directory_map["SF_VS_P_e_2p_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
-                                                 Find(SF_Daughter_Folders, "04_2p/02_SF_VS_P_e_plots") + "/";
-
-    SF_Directory_map["SF_pFDpCD_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
-                                              Find(SF_Daughter_Folders, "05_pFDpCD/01_SF_plots") + "/";
-    SF_Directory_map["SF_VS_P_e_pFDpCD_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
-                                                     Find(SF_Daughter_Folders, "05_pFDpCD/02_SF_VS_P_e_plots") + "/";
-
-    SF_Directory_map["SF_nFDpCD_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
-                                              Find(SF_Daughter_Folders, "06_nFDpCD/01_SF_plots") + "/";
-    SF_Directory_map["SF_VS_P_e_nFDpCD_Directory"] = Plots_Folder + "/" + SF_Parent_Directory + "/" +
-                                                     Find(SF_Daughter_Folders, "06_nFDpCD/02_SF_VS_P_e_plots") + "/";
     //</editor-fold>
 
     //<editor-fold desc="Edge cuts histograms plots directories">
