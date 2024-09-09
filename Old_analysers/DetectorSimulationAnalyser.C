@@ -1571,87 +1571,87 @@ void EventAnalyser()
 
     /* Deposited energies in the ECAL (1e cut, FD) */
     // Total deposited energy in the ECAL
-    hPlot1D hEecal_1e_cut_FD = hPlot1D("1e cut", "FD", "E_{ECAL}", "Total deposited energy in the ECAL E_{ECAL}", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1e_cut_Directory"], "01_Eecal_1e_cut", 0, beamE * 1.1, numTH1Dbins);
-    hPlot2D hEecal_VS_Epcal_1e_cut_FD = hPlot2D("1e cut", "FD", "E_{ECAL} vs. E_{PCAL}", "E_{ECAL} vs. E_{PCAL}", "E_{PCAL} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1e_cut_Directory"], "02_Eecal_VS_Epcal_1e_cut_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
-    hPlot2D hEecal_VS_Eec_1e_cut_FD = hPlot2D("1e cut", "FD", "E_{ECAL} vs. E_{EC}", "E_{ECAL} vs. E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1e_cut_Directory"], "02_Eecal_VS_Eec_1e_cut_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
+    hPlot1D hEecal_1e_cut_FD = hPlot1D("1e cut", "FD", "E_{ECAL}", "Total deposited energy in the ECAL E_{ECAL}", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1e_cut_Directory"], "01_Eecal_1e_cut", 0, beamE * 1.1 * 0.25, numTH1Dbins);
+    hPlot2D hEecal_VS_Epcal_1e_cut_FD = hPlot2D("1e cut", "FD", "E_{ECAL} vs. E_{PCAL}", "E_{ECAL} vs. E_{PCAL}", "E_{PCAL} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1e_cut_Directory"], "02_Eecal_VS_Epcal_1e_cut_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
+    hPlot2D hEecal_VS_Eec_1e_cut_FD = hPlot2D("1e cut", "FD", "E_{ECAL} vs. E_{EC}", "E_{ECAL} vs. E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1e_cut_Directory"], "02_Eecal_VS_Eec_1e_cut_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
 
     // Total deposited energy in the PCAL
-    hPlot1D hEpcal_1e_cut_FD = hPlot1D("1e cut", "FD", "E_{PCAL}", "Deposited energy in the PCAL E_{PCAL}", "E_{PCAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1e_cut_Directory"], "01_Epcal_1e_cut", 0, beamE * 1.1, numTH1Dbins);
-    hPlot2D hEpcal_VS_Eec_1e_cut_FD = hPlot2D("1e cut", "FD", "E_{PCAL} vs. E_{EC}", "E_{PCAL} vs. E_{EC}", "E_{PCAL} [GeV]", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1e_cut_Directory"], "02_Epcal_VS_Eec_1e_cut_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
-    hPlot2D hEpcal_VS_Eecin_1e_cut_FD = hPlot2D("1e cut", "FD", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} [GeV]", "E_{ECIN} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1e_cut_Directory"], "03_Epcal_VS_Eecin_1e_cut_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
+    hPlot1D hEpcal_1e_cut_FD = hPlot1D("1e cut", "FD", "E_{PCAL}", "Deposited energy in the PCAL E_{PCAL}", "E_{PCAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1e_cut_Directory"], "01_Epcal_1e_cut", 0, beamE * 1.1 * 0.25, numTH1Dbins);
+    hPlot2D hEpcal_VS_Eec_1e_cut_FD = hPlot2D("1e cut", "FD", "E_{PCAL} vs. E_{EC}", "E_{PCAL} vs. E_{EC}", "E_{PCAL} [GeV]", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1e_cut_Directory"], "02_Epcal_VS_Eec_1e_cut_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
+    hPlot2D hEpcal_VS_Eecin_1e_cut_FD = hPlot2D("1e cut", "FD", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} [GeV]", "E_{ECIN} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1e_cut_Directory"], "03_Epcal_VS_Eecin_1e_cut_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
 
     // Total deposited energy in the EC
-    hPlot1D hEec_1e_cut_FD = hPlot1D("1e cut", "FD", "E_{PCAL}", "Deposited energy in the EC E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Eec_1e_cut_Directory"], "01_Eec_1e_cut", 0, beamE * 1.1, numTH1Dbins);
+    hPlot1D hEec_1e_cut_FD = hPlot1D("1e cut", "FD", "E_{PCAL}", "Deposited energy in the EC E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Eec_1e_cut_Directory"], "01_Eec_1e_cut", 0, beamE * 1.1 * 0.25, numTH1Dbins);
 
     /* Deposited energies in the ECAL (1p, FD) */
     // Total deposited energy in the ECAL
-    hPlot1D hEecal_1p_FD = hPlot1D("1p", "FD", "E_{ECAL}", "Total deposited energy in the ECAL E_{ECAL}", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1p_Directory"], "01_Eecal_1p", 0, beamE * 1.1, numTH1Dbins);
-    hPlot2D hEecal_VS_Epcal_1p_FD = hPlot2D("1p", "FD", "E_{ECAL} vs. E_{PCAL}", "E_{ECAL} vs. E_{PCAL}", "E_{PCAL} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1p_Directory"], "02_Eecal_VS_Epcal_1p_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
-    hPlot2D hEecal_VS_Eec_1p_FD = hPlot2D("1p", "FD", "E_{ECAL} vs. E_{EC}", "E_{ECAL} vs. E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1p_Directory"], "02_Eecal_VS_Eec_1p_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
+    hPlot1D hEecal_1p_FD = hPlot1D("1p", "FD", "E_{ECAL}", "Total deposited energy in the ECAL E_{ECAL}", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1p_Directory"], "01_Eecal_1p", 0, beamE * 1.1 * 0.25, numTH1Dbins);
+    hPlot2D hEecal_VS_Epcal_1p_FD = hPlot2D("1p", "FD", "E_{ECAL} vs. E_{PCAL}", "E_{ECAL} vs. E_{PCAL}", "E_{PCAL} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1p_Directory"], "02_Eecal_VS_Epcal_1p_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
+    hPlot2D hEecal_VS_Eec_1p_FD = hPlot2D("1p", "FD", "E_{ECAL} vs. E_{EC}", "E_{ECAL} vs. E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1p_Directory"], "02_Eecal_VS_Eec_1p_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
 
     // Total deposited energy in the PCAL
-    hPlot1D hEpcal_1p_FD = hPlot1D("1p", "FD", "E_{PCAL}", "Deposited energy in the PCAL E_{PCAL}", "E_{PCAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1p_Directory"], "01_Epcal_1p", 0, beamE * 1.1, numTH1Dbins);
-    hPlot2D hEpcal_VS_Eec_1p_FD = hPlot2D("1p", "FD", "E_{PCAL} vs. E_{EC}", "E_{PCAL} vs. E_{EC}", "E_{PCAL} [GeV]", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1p_Directory"], "02_Epcal_VS_Eec_1p_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
-    hPlot2D hEpcal_VS_Eecin_1p_FD = hPlot2D("1p", "FD", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} [GeV]", "E_{ECIN} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1e_cut_Directory"], "03_Epcal_VS_Eecin_1p_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
+    hPlot1D hEpcal_1p_FD = hPlot1D("1p", "FD", "E_{PCAL}", "Deposited energy in the PCAL E_{PCAL}", "E_{PCAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1p_Directory"], "01_Epcal_1p", 0, beamE * 1.1 * 0.25, numTH1Dbins);
+    hPlot2D hEpcal_VS_Eec_1p_FD = hPlot2D("1p", "FD", "E_{PCAL} vs. E_{EC}", "E_{PCAL} vs. E_{EC}", "E_{PCAL} [GeV]", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1p_Directory"], "02_Epcal_VS_Eec_1p_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
+    hPlot2D hEpcal_VS_Eecin_1p_FD = hPlot2D("1p", "FD", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} [GeV]", "E_{ECIN} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1p_Directory"], "03_Epcal_VS_Eecin_1p_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
 
     // Total deposited energy in the EC
-    hPlot1D hEec_1p_FD = hPlot1D("1p", "FD", "E_{PCAL}", "Deposited energy in the EC E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Eec_1p_Directory"], "01_Eec_1p", 0, beamE * 1.1, numTH1Dbins);
+    hPlot1D hEec_1p_FD = hPlot1D("1p", "FD", "E_{PCAL}", "Deposited energy in the EC E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Eec_1p_Directory"], "01_Eec_1p", 0, beamE * 1.1 * 0.25, numTH1Dbins);
 
     /* Deposited energies in the ECAL (1n, FD) */
     // Total deposited energy in the ECAL
-    hPlot1D hEecal_1n_FD = hPlot1D("1n", "FD", "E_{ECAL}", "Total deposited energy in the ECAL E_{ECAL}", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1n_Directory"], "01_Eecal_1n", 0, beamE * 1.1, numTH1Dbins);
-    hPlot2D hEecal_VS_Epcal_1n_FD = hPlot2D("1n", "FD", "E_{ECAL} vs. E_{PCAL}", "E_{ECAL} vs. E_{PCAL}", "E_{PCAL} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1n_Directory"], "02_Eecal_VS_Epcal_1n_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
-    hPlot2D hEecal_VS_Eec_1n_FD = hPlot2D("1n", "FD", "E_{ECAL} vs. E_{EC}", "E_{ECAL} vs. E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1n_Directory"], "02_Eecal_VS_Eec_1n_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
+    hPlot1D hEecal_1n_FD = hPlot1D("1n", "FD", "E_{ECAL}", "Total deposited energy in the ECAL E_{ECAL}", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1n_Directory"], "01_Eecal_1n", 0, beamE * 1.1 * 0.25, numTH1Dbins);
+    hPlot2D hEecal_VS_Epcal_1n_FD = hPlot2D("1n", "FD", "E_{ECAL} vs. E_{PCAL}", "E_{ECAL} vs. E_{PCAL}", "E_{PCAL} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1n_Directory"], "02_Eecal_VS_Epcal_1n_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
+    hPlot2D hEecal_VS_Eec_1n_FD = hPlot2D("1n", "FD", "E_{ECAL} vs. E_{EC}", "E_{ECAL} vs. E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_1n_Directory"], "02_Eecal_VS_Eec_1n_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
 
     // Total deposited energy in the PCAL
-    hPlot1D hEpcal_1n_FD = hPlot1D("1n", "FD", "E_{PCAL}", "Deposited energy in the PCAL E_{PCAL}", "E_{PCAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1n_Directory"], "01_Epcal_1n", 0, beamE * 1.1, numTH1Dbins);
-    hPlot2D hEpcal_VS_Eec_1n_FD = hPlot2D("1n", "FD", "E_{PCAL} vs. E_{EC}", "E_{PCAL} vs. E_{EC}", "E_{PCAL} [GeV]", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1n_Directory"], "02_Epcal_VS_Eec_1n_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
-    hPlot2D hEpcal_VS_Eecin_1n_FD = hPlot2D("1n", "FD", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} [GeV]", "E_{ECIN} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1e_cut_Directory"], "03_Epcal_VS_Eecin_1n_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
+    hPlot1D hEpcal_1n_FD = hPlot1D("1n", "FD", "E_{PCAL}", "Deposited energy in the PCAL E_{PCAL}", "E_{PCAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1n_Directory"], "01_Epcal_1n", 0, beamE * 1.1 * 0.25, numTH1Dbins);
+    hPlot2D hEpcal_VS_Eec_1n_FD = hPlot2D("1n", "FD", "E_{PCAL} vs. E_{EC}", "E_{PCAL} vs. E_{EC}", "E_{PCAL} [GeV]", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1n_Directory"], "02_Epcal_VS_Eec_1n_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
+    hPlot2D hEpcal_VS_Eecin_1n_FD = hPlot2D("1n", "FD", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} [GeV]", "E_{ECIN} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1n_Directory"], "03_Epcal_VS_Eecin_1n_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
 
     // Total deposited energy in the EC
-    hPlot1D hEec_1n_FD = hPlot1D("1n", "FD", "E_{PCAL}", "Deposited energy in the EC E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Eec_1n_Directory"], "01_Eec_1n", 0, beamE * 1.1, numTH1Dbins);
+    hPlot1D hEec_1n_FD = hPlot1D("1n", "FD", "E_{PCAL}", "Deposited energy in the EC E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Eec_1n_Directory"], "01_Eec_1n", 0, beamE * 1.1 * 0.25, numTH1Dbins);
 
     /* Deposited energies in the ECAL (2p, FD) */
     // Total deposited energy in the ECAL
-    hPlot1D hEecal_2p_FD = hPlot1D("2p", "FD", "E_{ECAL}", "Total deposited energy in the ECAL E_{ECAL}", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_2p_Directory"], "01_Eecal_2p", 0, beamE * 1.1, numTH1Dbins);
-    hPlot2D hEecal_VS_Epcal_2p_FD = hPlot2D("2p", "FD", "E_{ECAL} vs. E_{PCAL}", "E_{ECAL} vs. E_{PCAL}", "E_{PCAL} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_2p_Directory"], "02_Eecal_VS_Epcal_2p_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
-    hPlot2D hEecal_VS_Eec_2p_FD = hPlot2D("2p", "FD", "E_{ECAL} vs. E_{EC}", "E_{ECAL} vs. E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_2p_Directory"], "02_Eecal_VS_Eec_2p_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
+    hPlot1D hEecal_2p_FD = hPlot1D("2p", "FD", "E_{ECAL}", "Total deposited energy in the ECAL E_{ECAL}", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_2p_Directory"], "01_Eecal_2p", 0, beamE * 1.1 * 0.25, numTH1Dbins);
+    hPlot2D hEecal_VS_Epcal_2p_FD = hPlot2D("2p", "FD", "E_{ECAL} vs. E_{PCAL}", "E_{ECAL} vs. E_{PCAL}", "E_{PCAL} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_2p_Directory"], "02_Eecal_VS_Epcal_2p_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
+    hPlot2D hEecal_VS_Eec_2p_FD = hPlot2D("2p", "FD", "E_{ECAL} vs. E_{EC}", "E_{ECAL} vs. E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_2p_Directory"], "02_Eecal_VS_Eec_2p_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
 
     // Total deposited energy in the PCAL
-    hPlot1D hEpcal_2p_FD = hPlot1D("2p", "FD", "E_{PCAL}", "Deposited energy in the PCAL E_{PCAL}", "E_{PCAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_2p_Directory"], "01_Epcal_2p", 0, beamE * 1.1, numTH1Dbins);
-    hPlot2D hEpcal_VS_Eec_2p_FD = hPlot2D("2p", "FD", "E_{PCAL} vs. E_{EC}", "E_{PCAL} vs. E_{EC}", "E_{PCAL} [GeV]", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_2p_Directory"], "02_Epcal_VS_Eec_2p_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
-    hPlot2D hEpcal_VS_Eecin_2p_FD = hPlot2D("2p", "FD", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} [GeV]", "E_{ECIN} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1e_cut_Directory"], "03_Epcal_VS_Eecin_2p_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
+    hPlot1D hEpcal_2p_FD = hPlot1D("2p", "FD", "E_{PCAL}", "Deposited energy in the PCAL E_{PCAL}", "E_{PCAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_2p_Directory"], "01_Epcal_2p", 0, beamE * 1.1 * 0.25, numTH1Dbins);
+    hPlot2D hEpcal_VS_Eec_2p_FD = hPlot2D("2p", "FD", "E_{PCAL} vs. E_{EC}", "E_{PCAL} vs. E_{EC}", "E_{PCAL} [GeV]", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_2p_Directory"], "02_Epcal_VS_Eec_2p_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
+    hPlot2D hEpcal_VS_Eecin_2p_FD = hPlot2D("2p", "FD", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} [GeV]", "E_{ECIN} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_2p_Directory"], "03_Epcal_VS_Eecin_2p_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
 
     // Total deposited energy in the EC
-    hPlot1D hEec_2p_FD = hPlot1D("2p", "FD", "E_{PCAL}", "Deposited energy in the EC E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Eec_2p_Directory"], "01_Eec_2p", 0, beamE * 1.1, numTH1Dbins);
+    hPlot1D hEec_2p_FD = hPlot1D("2p", "FD", "E_{PCAL}", "Deposited energy in the EC E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Eec_2p_Directory"], "01_Eec_2p", 0, beamE * 1.1 * 0.25, numTH1Dbins);
 
     /* Deposited energies in the ECAL (pFDpCD, FD) */
     // Total deposited energy in the ECAL
-    hPlot1D hEecal_pFDpCD_FD = hPlot1D("pFDpCD", "FD", "E_{ECAL}", "Total deposited energy in the ECAL E_{ECAL}", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_pFDpCD_Directory"], "01_Eecal_pFDpCD", 0, beamE * 1.1, numTH1Dbins);
-    hPlot2D hEecal_VS_Epcal_pFDpCD_FD = hPlot2D("pFDpCD", "FD", "E_{ECAL} vs. E_{PCAL}", "E_{ECAL} vs. E_{PCAL}", "E_{PCAL} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_pFDpCD_Directory"], "02_Eecal_VS_Epcal_pFDpCD_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
-    hPlot2D hEecal_VS_Eec_pFDpCD_FD = hPlot2D("pFDpCD", "FD", "E_{ECAL} vs. E_{EC}", "E_{ECAL} vs. E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_pFDpCD_Directory"], "02_Eecal_VS_Eec_pFDpCD_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
+    hPlot1D hEecal_pFDpCD_FD = hPlot1D("pFDpCD", "FD", "E_{ECAL}", "Total deposited energy in the ECAL E_{ECAL}", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_pFDpCD_Directory"], "01_Eecal_pFDpCD", 0, beamE * 1.1 * 0.25, numTH1Dbins);
+    hPlot2D hEecal_VS_Epcal_pFDpCD_FD = hPlot2D("pFDpCD", "FD", "E_{ECAL} vs. E_{PCAL}", "E_{ECAL} vs. E_{PCAL}", "E_{PCAL} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_pFDpCD_Directory"], "02_Eecal_VS_Epcal_pFDpCD_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
+    hPlot2D hEecal_VS_Eec_pFDpCD_FD = hPlot2D("pFDpCD", "FD", "E_{ECAL} vs. E_{EC}", "E_{ECAL} vs. E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_pFDpCD_Directory"], "02_Eecal_VS_Eec_pFDpCD_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
 
     // Total deposited energy in the PCAL
-    hPlot1D hEpcal_pFDpCD_FD = hPlot1D("pFDpCD", "FD", "E_{PCAL}", "Deposited energy in the PCAL E_{PCAL}", "E_{PCAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_pFDpCD_Directory"], "01_Epcal_pFDpCD", 0, beamE * 1.1, numTH1Dbins);
-    hPlot2D hEpcal_VS_Eec_pFDpCD_FD = hPlot2D("pFDpCD", "FD", "E_{PCAL} vs. E_{EC}", "E_{PCAL} vs. E_{EC}", "E_{PCAL} [GeV]", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_pFDpCD_Directory"], "02_Epcal_VS_Eec_pFDpCD_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
-    hPlot2D hEpcal_VS_Eecin_pFDpCD_FD = hPlot2D("pFDpCD", "FD", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} [GeV]", "E_{ECIN} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1e_cut_Directory"], "03_Epcal_VS_Eecin_pFDpCD_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
+    hPlot1D hEpcal_pFDpCD_FD = hPlot1D("pFDpCD", "FD", "E_{PCAL}", "Deposited energy in the PCAL E_{PCAL}", "E_{PCAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_pFDpCD_Directory"], "01_Epcal_pFDpCD", 0, beamE * 1.1 * 0.25, numTH1Dbins);
+    hPlot2D hEpcal_VS_Eec_pFDpCD_FD = hPlot2D("pFDpCD", "FD", "E_{PCAL} vs. E_{EC}", "E_{PCAL} vs. E_{EC}", "E_{PCAL} [GeV]", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_pFDpCD_Directory"], "02_Epcal_VS_Eec_pFDpCD_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
+    hPlot2D hEpcal_VS_Eecin_pFDpCD_FD = hPlot2D("pFDpCD", "FD", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} [GeV]", "E_{ECIN} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_pFDpCD_Directory"], "03_Epcal_VS_Eecin_pFDpCD_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
 
     // Total deposited energy in the EC
-    hPlot1D hEec_pFDpCD_FD = hPlot1D("pFDpCD", "FD", "E_{PCAL}", "Deposited energy in the EC E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Eec_pFDpCD_Directory"], "01_Eec_pFDpCD", 0, beamE * 1.1, numTH1Dbins);
+    hPlot1D hEec_pFDpCD_FD = hPlot1D("pFDpCD", "FD", "E_{PCAL}", "Deposited energy in the EC E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Eec_pFDpCD_Directory"], "01_Eec_pFDpCD", 0, beamE * 1.1 * 0.25, numTH1Dbins);
 
     /* Deposited energies in the ECAL (nFDpCD, FD) */
     // Total deposited energy in the ECAL
-    hPlot1D hEecal_nFDpCD_FD = hPlot1D("nFDpCD", "FD", "E_{ECAL}", "Total deposited energy in the ECAL E_{ECAL}", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_nFDpCD_Directory"], "01_Eecal_nFDpCD", 0, beamE * 1.1, numTH1Dbins);
-    hPlot2D hEecal_VS_Epcal_nFDpCD_FD = hPlot2D("nFDpCD", "FD", "E_{ECAL} vs. E_{PCAL}", "E_{ECAL} vs. E_{PCAL}", "E_{PCAL} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_nFDpCD_Directory"], "02_Eecal_VS_Epcal_nFDpCD_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
-    hPlot2D hEecal_VS_Eec_nFDpCD_FD = hPlot2D("nFDpCD", "FD", "E_{ECAL} vs. E_{EC}", "E_{ECAL} vs. E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_nFDpCD_Directory"], "02_Eecal_VS_Eec_nFDpCD_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
+    hPlot1D hEecal_nFDpCD_FD = hPlot1D("nFDpCD", "FD", "E_{ECAL}", "Total deposited energy in the ECAL E_{ECAL}", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_nFDpCD_Directory"], "01_Eecal_nFDpCD", 0, beamE * 1.1 * 0.25, numTH1Dbins);
+    hPlot2D hEecal_VS_Epcal_nFDpCD_FD = hPlot2D("nFDpCD", "FD", "E_{ECAL} vs. E_{PCAL}", "E_{ECAL} vs. E_{PCAL}", "E_{PCAL} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_nFDpCD_Directory"], "02_Eecal_VS_Epcal_nFDpCD_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
+    hPlot2D hEecal_VS_Eec_nFDpCD_FD = hPlot2D("nFDpCD", "FD", "E_{ECAL} vs. E_{EC}", "E_{ECAL} vs. E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", "E_{ECAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_tot_ECAL_nFDpCD_Directory"], "02_Eecal_VS_Eec_nFDpCD_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
 
     // Total deposited energy in the PCAL
-    hPlot1D hEpcal_nFDpCD_FD = hPlot1D("nFDpCD", "FD", "E_{PCAL}", "Deposited energy in the PCAL E_{PCAL}", "E_{PCAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_nFDpCD_Directory"], "01_Epcal_nFDpCD", 0, beamE * 1.1, numTH1Dbins);
-    hPlot2D hEpcal_VS_Eec_nFDpCD_FD = hPlot2D("nFDpCD", "FD", "E_{PCAL} vs. E_{EC}", "E_{PCAL} vs. E_{EC}", "E_{PCAL} [GeV]", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_nFDpCD_Directory"], "02_Epcal_VS_Eec_nFDpCD_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
-    hPlot2D hEpcal_VS_Eecin_nFDpCD_FD = hPlot2D("nFDpCD", "FD", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} [GeV]", "E_{ECIN} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_1e_cut_Directory"], "03_Epcal_VS_Eecin_nFDpCD_FD", 0, beamE * 1.1, 0, beamE * 1.1, numTH2Dbins, numTH2Dbins);
+    hPlot1D hEpcal_nFDpCD_FD = hPlot1D("nFDpCD", "FD", "E_{PCAL}", "Deposited energy in the PCAL E_{PCAL}", "E_{PCAL} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_nFDpCD_Directory"], "01_Epcal_nFDpCD", 0, beamE * 1.1 * 0.25, numTH1Dbins);
+    hPlot2D hEpcal_VS_Eec_nFDpCD_FD = hPlot2D("nFDpCD", "FD", "E_{PCAL} vs. E_{EC}", "E_{PCAL} vs. E_{EC}", "E_{PCAL} [GeV]", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_nFDpCD_Directory"], "02_Epcal_VS_Eec_nFDpCD_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
+    hPlot2D hEpcal_VS_Eecin_nFDpCD_FD = hPlot2D("nFDpCD", "FD", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} vs. E_{ECIN}", "E_{PCAL} [GeV]", "E_{ECIN} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Epcal_nFDpCD_Directory"], "03_Epcal_VS_Eecin_nFDpCD_FD", 0, beamE * 1.1 * 0.25, 0, beamE * 1.1 * 0.25, numTH2Dbins, numTH2Dbins);
 
     // Total deposited energy in the EC
-    hPlot1D hEec_nFDpCD_FD = hPlot1D("nFDpCD", "FD", "E_{PCAL}", "Deposited energy in the EC E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Eec_nFDpCD_Directory"], "01_Eec_nFDpCD", 0, beamE * 1.1, numTH1Dbins);
+    hPlot1D hEec_nFDpCD_FD = hPlot1D("nFDpCD", "FD", "E_{PCAL}", "Deposited energy in the EC E_{EC}", "E_{EC} = E_{ECIN} + E_{ECOUT} [GeV]", directories.Edep_ECAL_Directory_map["Edep_ECAL_Eec_nFDpCD_Directory"], "01_Eec_nFDpCD", 0, beamE * 1.1 * 0.25, numTH1Dbins);
 
     // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // Sampling Fraction (SF) histograms (FD only)
@@ -1680,14 +1680,14 @@ void EventAnalyser()
 
     if (!apply_cuts)
     {
-        hSF_VS_Epcal_1e_cut_BC_FD = hPlot2D("1e cut", "FD", "SF vs. E_{PCAL} BC", "Sampling fraction f_{e} vs. E_{PCAL} - before cuts", "E_{PCAL} [GeV]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_Epcal_1e_cut_BC_Directory"], "01_SF_VS_Epcal_1e_cut_BC_FD", 0, beamE * 1.1, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
-        hSF_VS_Epcal_1e_cut_AC_FD = hPlot2D("1e cut", "FD", "SF vs. E_{PCAL} AC", "Sampling fraction f_{e} vs. E_{PCAL} - after cuts", "E_{PCAL} [GeV]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_Epcal_1e_cut_AC_Directory"], "01_SF_VS_Epcal_1e_cut_AC_FD", 0, beamE * 1.1, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
+        hSF_VS_Epcal_1e_cut_BC_FD = hPlot2D("1e cut", "FD", "SF vs. E_{PCAL} BC", "Sampling fraction f_{e} vs. E_{PCAL} - before cuts", "E_{PCAL} [GeV]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_Epcal_1e_cut_BC_Directory"], "01_SF_VS_Epcal_1e_cut_BC_FD", 0, beamE * 1.1 * 0.25, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
+        hSF_VS_Epcal_1e_cut_AC_FD = hPlot2D("1e cut", "FD", "SF vs. E_{PCAL} AC", "Sampling fraction f_{e} vs. E_{PCAL} - after cuts", "E_{PCAL} [GeV]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_Epcal_1e_cut_AC_Directory"], "01_SF_VS_Epcal_1e_cut_AC_FD", 0, beamE * 1.1 * 0.25, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
         hSF_VS_P_e_1e_cut_BC_FD = hPlot2D("1e cut", "FD", "SF vs. P_{e} BC", "Sampling fraction f_{e} vs. P_{e} - before cuts", "P_{e} [GeV/c]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_P_e_1e_cut_BC_Directory"], "01_SF_VS_P_e_1e_cut_BC_FD", 0, beamE * 1.1, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
         hSF_VS_P_e_1e_cut_AC_FD = hPlot2D("1e cut", "FD", "SF vs. P_{e} AC", "Sampling fraction f_{e} vs. P_{e} - after cuts", "P_{e} [GeV/c]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_P_e_1e_cut_AC_Directory"], "01_SF_VS_P_e_1e_cut_AC_FD", 0, beamE * 1.1, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
     }
     else
     {
-        hSF_VS_Epcal_1e_cut_BC_FD = hPlot2D("1e cut", "FD", "SF vs. E_{PCAL}", "Sampling fraction f_{e} vs. E_{PCAL}", "E_{PCAL} [GeV]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_Epcal_1e_cut_BC_Directory"], "01_SF_VS_Epcal_1e_cut_FD", 0, beamE * 1.1, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
+        hSF_VS_Epcal_1e_cut_BC_FD = hPlot2D("1e cut", "FD", "SF vs. E_{PCAL}", "Sampling fraction f_{e} vs. E_{PCAL}", "E_{PCAL} [GeV]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_Epcal_1e_cut_BC_Directory"], "01_SF_VS_Epcal_1e_cut_FD", 0, beamE * 1.1 * 0.25, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
         hSF_VS_P_e_1e_cut_BC_FD = hPlot2D("1e cut", "FD", "SF vs. P_{e}", "Sampling fraction f_{e} vs. P_{e}", "P_{e} [GeV/c]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_P_e_1e_cut_BC_Directory"], "01_SF_VS_P_e_1e_cut_FD", 0, beamE * 1.1, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
     }
     //</editor-fold>
@@ -1701,7 +1701,7 @@ void EventAnalyser()
     //</editor-fold>
 
     //<editor-fold desc="SF vs. P plots (1p, FD)">
-    hPlot2D hSF_VS_Epcal_1p_FD = hPlot2D("1p", "FD", "SF vs. E_{PCAL}", "Sampling fraction f_{e} vs. E_{PCAL}", "E_{PCAL} [GeV]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_P_e_1p_Directory"], "01_SF_VS_P_e_1p_FD", 0, beamE * 1.1, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
+    hPlot2D hSF_VS_Epcal_1p_FD = hPlot2D("1p", "FD", "SF vs. E_{PCAL}", "Sampling fraction f_{e} vs. E_{PCAL}", "E_{PCAL} [GeV]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_P_e_1p_Directory"], "01_SF_VS_P_e_1p_FD", 0, beamE * 1.1 * 0.25, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
     hPlot2D hSF_VS_P_e_1p_FD = hPlot2D("1p", "FD", "SF vs. P_{e}", "Sampling fraction f_{e} vs. P_{e}", "P_{e} [GeV/c]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_P_e_1p_Directory"], "01_SF_VS_P_e_1p_FD", 0, beamE * 1.1, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
     //</editor-fold>
 
@@ -1714,7 +1714,7 @@ void EventAnalyser()
     //</editor-fold>
 
     //<editor-fold desc="SF vs. P plots (1n, FD)">
-    hPlot2D hSF_VS_Epcal_1n_FD = hPlot2D("1n", "FD", "SF vs. E_{PCAL}", "Sampling fraction f_{e} vs. E_{PCAL}", "E_{PCAL} [GeV]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_Epcal_1n_Directory"], "01_SF_VS_Epcal_1n_FD", 0, beamE * 1.1, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
+    hPlot2D hSF_VS_Epcal_1n_FD = hPlot2D("1n", "FD", "SF vs. E_{PCAL}", "Sampling fraction f_{e} vs. E_{PCAL}", "E_{PCAL} [GeV]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_Epcal_1n_Directory"], "01_SF_VS_Epcal_1n_FD", 0, beamE * 1.1 * 0.25, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
     hPlot2D hSF_VS_P_e_1n_FD = hPlot2D("1n", "FD", "SF vs. P_{e}", "Sampling fraction f_{e} vs. P_{e}", "P_{e} [GeV/c]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_P_e_1n_Directory"], "01_SF_VS_P_e_1n_FD", 0, beamE * 1.1, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
     //</editor-fold>
 
@@ -1727,7 +1727,7 @@ void EventAnalyser()
     //</editor-fold>
 
     //<editor-fold desc="SF vs. P plots (2p, FD)">
-    hPlot2D hSF_VS_Epcal_2p_FD = hPlot2D("2p", "FD", "SF vs. E_{PCAL}", "Sampling fraction f_{e} vs. E_{PCAL}", "E_{PCAL} [GeV]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_Epcal_2p_Directory"], "01_SF_VS_Epcal_2p_FD", 0, beamE * 1.1, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
+    hPlot2D hSF_VS_Epcal_2p_FD = hPlot2D("2p", "FD", "SF vs. E_{PCAL}", "Sampling fraction f_{e} vs. E_{PCAL}", "E_{PCAL} [GeV]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_Epcal_2p_Directory"], "01_SF_VS_Epcal_2p_FD", 0, beamE * 1.1 * 0.25, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
     hPlot2D hSF_VS_P_e_2p_FD = hPlot2D("2p", "FD", "SF vs. P_{e}", "Sampling fraction f_{e} vs. P_{e}", "P_{e} [GeV/c]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_P_e_2p_Directory"], "01_SF_VS_P_e_2p_FD", 0, beamE * 1.1, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
     //</editor-fold>
 
@@ -1740,7 +1740,7 @@ void EventAnalyser()
     //</editor-fold>
 
     //<editor-fold desc="SF vs. P plots (pFDpCD, FD)">
-    hPlot2D hSF_VS_Epcal_pFDpCD_FD = hPlot2D("pFDpCD", "FD", "SF vs. E_{PCAL}", "Sampling fraction f_{e} vs. E_{PCAL}", "E_{PCAL} [GeV]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_Epcal_pFDpCD_Directory"], "01_SF_VS_Epcal_pFDpCD_FD", 0, beamE * 1.1, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
+    hPlot2D hSF_VS_Epcal_pFDpCD_FD = hPlot2D("pFDpCD", "FD", "SF vs. E_{PCAL}", "Sampling fraction f_{e} vs. E_{PCAL}", "E_{PCAL} [GeV]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_Epcal_pFDpCD_Directory"], "01_SF_VS_Epcal_pFDpCD_FD", 0, beamE * 1.1 * 0.25, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
     hPlot2D hSF_VS_P_e_pFDpCD_FD = hPlot2D("pFDpCD", "FD", "SF vs. P_{e}", "Sampling fraction f_{e} vs. P_{e}", "P_{e} [GeV/c]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_P_e_pFDpCD_Directory"], "01_SF_VS_P_e_pFDpCD_FD", 0, beamE * 1.1, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
     //</editor-fold>
 
@@ -1753,7 +1753,7 @@ void EventAnalyser()
     //</editor-fold>
 
     //<editor-fold desc="SF vs. P plots (nFDpCD, FD)">
-    hPlot2D hSF_VS_Epcal_nFDpCD_FD = hPlot2D("nFDpCD", "FD", "SF vs. E_{PCAL}", "Sampling fraction f_{e} vs. E_{PCAL}", "E_{PCAL} [GeV]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_Epcal_nFDpCD_Directory"], "01_SF_VS_Epcal_nFDpCD_FD", 0, beamE * 1.1, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
+    hPlot2D hSF_VS_Epcal_nFDpCD_FD = hPlot2D("nFDpCD", "FD", "SF vs. E_{PCAL}", "Sampling fraction f_{e} vs. E_{PCAL}", "E_{PCAL} [GeV]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_Epcal_nFDpCD_Directory"], "01_SF_VS_Epcal_nFDpCD_FD", 0, beamE * 1.1 * 0.25, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
     hPlot2D hSF_VS_P_e_nFDpCD_FD = hPlot2D("nFDpCD", "FD", "SF vs. P_{e}", "Sampling fraction f_{e} vs. P_{e}", "P_{e} [GeV/c]", "f_{e} = (E_{PCAL} + E_{IN} + E_{OUT})/P_{e}", directories.SF_Directory_map["SF_VS_P_e_nFDpCD_Directory"], "01_SF_VS_P_e_nFDpCD_FD", 0, beamE * 1.1, SF_lboundary, SF_uboundary, numTH2Dbins, numTH2Dbins);
     //</editor-fold>
 
