@@ -36,54 +36,30 @@ private:
     //<editor-fold desc="Deposited energies in the ECAL plots directories">
     bool create_Edep_ECAL_Dir = true;
     string Edep_ECAL_Parent_Directory = "01_Cuts_plots/02_Edep_ECAL_plots";
-    vector<string> Edep_ECAL_Daughter_Folders = {
-        "",
-        "01_1e_cut/01_tot_ECAL_plots", "01_1e_cut/02_Epcal_plots", "01_1e_cut/03_Eec_plots",
-
-        "02_1p/01_tot_ECAL_plots", "02_1p/02_Epcal_plots", "02_1p/03_Eec_plots",
-
-        "03_1n/01_tot_ECAL_plots", "03_1n/02_Epcal_plots", "03_1n/03_Eec_plots",
-
-        "04_2p/01_tot_ECAL_plots", "04_2p/02_Epcal_plots", "04_2p/03_Eec_plots",
-
-        "05_pFDpCD/01_tot_ECAL_plots", "05_pFDpCD/02_Epcal_plots", "05_pFDpCD/03_Eec_plots",
-
-        "06_nFDpCD/01_tot_ECAL_plots", "06_nFDpCD/02_Epcal_plots", "06_nFDpCD/03_Eec_plots"};
+    vector<string> Edep_ECAL_Daughter_Folders = {"",
+                                                 "01_1e_cut/01_tot_ECAL_plots", "01_1e_cut/02_Epcal_plots", "01_1e_cut/03_Eec_plots",
+                                                 "02_1p/01_tot_ECAL_plots", "02_1p/02_Epcal_plots", "02_1p/03_Eec_plots",
+                                                 "03_1n/01_tot_ECAL_plots", "03_1n/02_Epcal_plots", "03_1n/03_Eec_plots",
+                                                 "04_2p/01_tot_ECAL_plots", "04_2p/02_Epcal_plots", "04_2p/03_Eec_plots",
+                                                 "05_pFDpCD/01_tot_ECAL_plots", "05_pFDpCD/02_Epcal_plots", "05_pFDpCD/03_Eec_plots",
+                                                 "06_nFDpCD/01_tot_ECAL_plots", "06_nFDpCD/02_Epcal_plots", "06_nFDpCD/03_Eec_plots"};
     //</editor-fold>
 
     //<editor-fold desc="Sampling Fraction (SF) plots directories">
     bool create_SF_Dir = true;
     string SF_Parent_Directory = "01_Cuts_plots/03_SF_plots";
-    vector<string> SF_Daughter_Folders = {
-        "",
-        "01_1e_cut/01_SF_plots",
-        "01_1e_cut/02_SF_VS_Epcal_plots",
-        "01_1e_cut/03_SF_VS_P_e_plots",
-
-        "02_1p/01_SF_plots",
-        "02_1p/02_SF_VS_Epcal_plots",
-        "02_1p/03_SF_VS_P_e_plots",
-
-        "03_1n/01_SF_plots",
-        "03_1n/02_SF_VS_Epcal_plots",
-        "03_1n/03_SF_VS_P_e_plots",
-
-        "04_2p/01_SF_plots",
-        "04_2p/02_SF_VS_Epcal_plots",
-        "04_2p/03_SF_VS_P_e_plots",
-
-        "05_pFDpCD/01_SF_plots",
-        "05_pFDpCD/02_SF_VS_Epcal_plots",
-        "05_pFDpCD/03_SF_VS_P_e_plots",
-
-        "06_nFDpCD/01_SF_plots",
-        "06_nFDpCD/02_SF_VS_Epcal_plots",
-        "06_nFDpCD/03_SF_VS_P_e_plots"};
+    vector<string> SF_Daughter_Folders = {"",
+                                          "01_1e_cut/01_SF_plots", "01_1e_cut/02_SF_VS_Epcal_plots", "01_1e_cut/03_SF_VS_P_e_plots",
+                                          "02_1p/01_SF_plots", "02_1p/02_SF_VS_Epcal_plots", "02_1p/03_SF_VS_P_e_plots",
+                                          "03_1n/01_SF_plots", "03_1n/02_SF_VS_Epcal_plots", "03_1n/03_SF_VS_P_e_plots",
+                                          "04_2p/01_SF_plots", "04_2p/02_SF_VS_Epcal_plots", "04_2p/03_SF_VS_P_e_plots",
+                                          "05_pFDpCD/01_SF_plots", "05_pFDpCD/02_SF_VS_Epcal_plots", "05_pFDpCD/03_SF_VS_P_e_plots",
+                                          "06_nFDpCD/01_SF_plots", "06_nFDpCD/02_SF_VS_Epcal_plots", "06_nFDpCD/03_SF_VS_P_e_plots"};
     //</editor-fold>
 
     //<editor-fold desc="Chi2 plots directories">
     bool create_chi2_Dir = true;
-    string Chi2_Parent_Directory = "01_Cuts_plots/02_Chi2_plots";
+    string Chi2_Parent_Directory = "01_Cuts_plots/04_Chi2_plots";
     vector<string> Chi2_Daughter_Folders = {"",
                                             "00_All_e",
                                             "01_1e_cut",
@@ -96,7 +72,7 @@ private:
 
     //<editor-fold desc="Vertex plots directories">
     bool create_Vertex_Dir = true;
-    string Vertex_Parent_Directory = "01_Cuts_plots/03_Vertex_plots";
+    string Vertex_Parent_Directory = "01_Cuts_plots/05_Vertex_plots";
     vector<string> Vertex_Daughter_Folders = {"",
                                               "01_1e_cut/01_cParticles_Vtx_comp_plots/01_Electrons",
                                               "01_1e_cut/01_cParticles_Vtx_comp_plots/02_Protons",
@@ -121,30 +97,19 @@ private:
 
     //<editor-fold desc="Edge cuts histograms plots directories">
     bool create_fiducial_Dir = true;
-    string fiducial_Parent_Directory = "01_Cuts_plots/05_Edge_cuts_plots";
+    string fiducial_Parent_Directory = "01_Cuts_plots/06_Edge_cuts_plots";
     vector<string> fiducial_Daughter_Folders = {"",
-                                                //                                                     "01_1e_cut",
                                                 "01_1e_cut/01_PCAL",
-
-                                                //                                                     "02_1p",
                                                 "02_1p/01_PCAL",
-
-                                                //                                                     "03_1n",
                                                 "03_1n/01_PCAL",
-
-                                                //                                                     "04_2p",
                                                 "04_2p/01_PCAL",
-
-                                                //                                                     "05_pFDpCD",
                                                 "05_pFDpCD/01_PCAL",
-
-                                                //                                                     "06_nFDpCD",
                                                 "06_nFDpCD/01_PCAL"};
     //</editor-fold>
 
     //<editor-fold desc="Momentum threshold plots directories">
     bool create_Momentum_Dir = true;
-    string Momentum_Parent_Directory = "01_Cuts_plots/06_Momentum_plots";
+    string Momentum_Parent_Directory = "01_Cuts_plots/07_Momentum_plots";
     vector<string> Momentum_Daughter_Folders = {"",
                                                 "01_1e_cut", "01_1e_cut/01_Momentum_th_plots_1e_cut",
                                                 "02_1p", "02_1p/Analysis_plots_1p",
@@ -182,20 +147,12 @@ private:
                                             "01_Beta_fit_plots/03_1n/04_Beta_vs_other_variables_plots_1n",
 
                                             "01_Beta_fit_plots/06_nFDpCD",
-
-                                            //                                                 "02_Beta_VS_P_plots",
                                             "02_Beta_VS_P_plots/00_All_e", "02_Beta_VS_P_plots/00_All_e/By_charge",
-
                                             "02_Beta_VS_P_plots/01_1e_cut", "02_Beta_VS_P_plots/01_1e_cut/By_charge",
-
                                             "02_Beta_VS_P_plots/02_1p", "02_Beta_VS_P_plots/02_1p/By_charge",
-
                                             "02_Beta_VS_P_plots/03_1n", "02_Beta_VS_P_plots/03_1n/By_charge",
-
                                             "02_Beta_VS_P_plots/04_2p", "02_Beta_VS_P_plots/04_2p/By_charge",
-
                                             "02_Beta_VS_P_plots/05_pFDpCD", "02_Beta_VS_P_plots/05_pFDpCD/By_charge",
-
                                             "02_Beta_VS_P_plots/06_nFDpCD", "02_Beta_VS_P_plots/06_nFDpCD/By_charge"};
     //</editor-fold>
 
@@ -203,29 +160,20 @@ private:
     bool create_Angle_Dir = true;
     string Angle_Parent_Directory = "04_Angle_plots";
     vector<string> Angle_Daughter_Folders = {"",
-                                             //                                                  "00_All_e",
                                              "00_All_e/01_Theta_e_All_e_plots", "00_All_e/02_Phi_e_All_e_plots",
                                              "00_All_e/03_Theta_e_VS_Phi_e_All_e_plots",
-                                             //                                                  "00_All_e/03_Theta_neut_VS_Phi_neut_All_e_plots",
 
-                                             //                                                  "01_1e_cut",
                                              "01_1e_cut/01_Theta_e_1e_cut_plots", "01_1e_cut/02_Phi_e_1e_cut_plots",
                                              "01_1e_cut/03_Theta_e_VS_Phi_e_1e_cut_plots", "01_1e_cut/04_Neutron_veto_1e_cut_plots",
 
-                                             //                                                  "02_1p",
                                              "02_1p/01_Theta_e_1p_plots", "02_1p/02_Phi_e_1p_plots", "02_1p/03_Theta_e_VS_Phi_e_1p_plots",
                                              "02_1p/04_Theta_p_1p",
                                              "02_1p/05_Phi_p_1p", "02_1p/06_Theta_p_VS_Phi_p_1p_plots", "02_1p/07_Opening_angles_1p_plots",
 
-                                             //                                                  "03_1n",
                                              "03_1n/01_Theta_e_1n_plots", "03_1n/02_Phi_e_1n_plots", "03_1n/03_Theta_e_VS_Phi_e_1n_plots",
                                              "03_1n/04_Theta_n_1n", "03_1n/05_Phi_n_1n", "03_1n/06_Theta_n_VS_Phi_n_1n_plots",
                                              "03_1n/07_Opening_angles_1n_plots", "03_1n/08_Neutron_veto_1n_plots",
 
-                                             //                                                  "05_1e2p",
-                                             //                                                  "05_1e2p/01_Theta_e_1e2p_plots", "05_1e2p/02_Phi_e_1e2p_plots", "05_1e2p/03_Theta_e_VS_Phi_e_1e2p_plots",
-
-                                             //                                                  "04_2p",
                                              "04_2p/01_Theta_e_2p_plots", "04_2p/02_Phi_e_2p_plots", "04_2p/03_Theta_e_VS_Phi_e_2p_plots",
                                              "04_2p/04_Opening_angles_2p_plots",
                                              "04_2p/04_Opening_angles_2p_plots/00_Theta_p1_p2_by_interaction",
@@ -235,7 +183,6 @@ private:
                                              "04_2p/05_Ghost_tracks_handling_2p_plots/02_Double_detection_2p_plots",
                                              "04_2p/05_Ghost_tracks_handling_2p_plots/02_Double_detection_2p_plots/00_Double_detection_monitoring_2p_plots",
 
-                                             //                                                  "05_pFDpCD",
                                              "05_pFDpCD/01_Theta_e_pFDpCD_plots", "05_pFDpCD/02_Phi_e_pFDpCD_plots",
                                              "05_pFDpCD/03_Theta_e_VS_Phi_e_pFDpCD_plots",
                                              "05_pFDpCD/04_Theta_pFD_pFDpCD_plots", "05_pFDpCD/05_Phi_pFD_pFDpCD_plots",
@@ -253,7 +200,6 @@ private:
                                              "05_pFDpCD/17_Ghost_tracks_handling_pFDpCD_plots/02_Double_detection_pFDpCD_plots",
                                              "05_pFDpCD/17_Ghost_tracks_handling_pFDpCD_plots/02_Double_detection_pFDpCD_plots/00_Double_detection_monitoring_pFDpCD_plots",
 
-                                             //                                                  "06_nFDpCD",
                                              "06_nFDpCD/01_Theta_e_nFDpCD_plots", "06_nFDpCD/02_Phi_e_nFDpCD_plots",
                                              "06_nFDpCD/03_Theta_e_VS_Phi_e_nFDpCD_plots",
                                              "06_nFDpCD/04_Theta_nFD_nFDpCD_plots", "06_nFDpCD/05_Phi_nFD_nFDpCD_plots",
@@ -269,7 +215,6 @@ private:
                                              "06_nFDpCD/17_Ghost_tracks_handling_nFDpCD_plots/02_Double_detection_nFDpCD_plots/00_Double_detection_monitoring_nFDpCD_plots",
                                              "06_nFDpCD/18_Neutron_veto_nFDpCD_plots",
 
-                                             //                                                  "07_1e2pXy",
                                              "07_1e2pXy/01_Theta_e_1e2pXy_plots", "07_1e2pXy/02_Phi_e_1e2pXy_plots",
                                              "07_1e2pXy/03_Theta_e_VS_Phi_e_1e2pXy_plots",
                                              "07_1e2pXy/04_Phi_Proton_1e2pXy_plots"};
