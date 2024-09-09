@@ -349,11 +349,6 @@ void clas12ana::Init()
 
     this->readInputSRCParam((std::string(CLAS12ANA_DIR) + "/Ana/cutFiles/src_cuts.par").c_str());
     //  this -> printParams();
-
-
-    cout << "\n" << 'std::string(CLAS12ANA_DIR) + "/Ana/cutFiles/paramsSF_LD2_x2.dat"' << std::string(CLAS12ANA_DIR) << "/Ana/cutFiles/paramsSF_LD2_x2.dat\n";
-    cout << "\n" << 'std::string(CLAS12ANA_DIR) + "/Ana/cutFiles/paramsPI_LD2_x2.dat"' << std::string(CLAS12ANA_DIR) << "/Ana/cutFiles/paramsPI_LD2_x2.dat\n";
-    exit(0);
 }
 
 bool clas12ana::DCEdgeCuts(const region_part_ptr &p)

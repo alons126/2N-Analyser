@@ -196,7 +196,7 @@ void EventAnalyser()
     bool apply_nucleon_SmearAndCorr = false;
 
     /* Implementation of old MSc cuts */
-    bool apply_old_MSc_SF_cuts = false;
+    bool apply_old_MSc_SF_cuts = true;
     bool apply_old_MSc_Vz_cuts = true;
     bool apply_old_MSc_dVz_cuts = true;
 
