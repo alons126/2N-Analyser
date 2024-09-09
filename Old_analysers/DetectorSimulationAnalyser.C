@@ -17421,7 +17421,7 @@ void EventAnalyser()
     }
     else
     {
-        cout << "\n\deposited energy in the ECAL plots are disabled by user.\n\n";
+        cout << "\n\ndeposited energy in the ECAL plots are disabled by user.\n\n";
     }
     //</editor-fold>
 
