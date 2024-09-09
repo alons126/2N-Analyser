@@ -169,7 +169,7 @@ void EventAnalyser()
     bool apply_electron_quality_cuts = true; // master ON/OFF switch for eQC
     bool apply_Nphe_cut = true;              // Number of photo-electrons in HTCC cut
     bool apply_ECAL_SF_cuts = true;          // SF cut on both E_deb AND P_e
-    bool apply_ECAL_P_cuts = true;          // SF cut on P_e (keep as false for now!)
+    bool apply_ECAL_P_cuts = true;           // SF cut on P_e (keep as false for now!)
     bool apply_ECAL_diag_cut = true;
     bool apply_ECAL_fiducial_cuts = true; // ECAL edge cuts for other charged particles
     bool apply_Electron_beta_cut = true;  // Electron beta cut
@@ -8103,11 +8103,14 @@ void EventAnalyser()
         vector<region_part_ptr> neutrons, protons, Kplus, Kminus, piplus, piminus, electrons, deuterons, neutrals, otherpart;
 
         if (CLAS12Analysis_particles)
-        {                                      // Get particle outside from CLAS12Analysis:
+        {                                      
+            // Get particle outside from CLAS12Analysis:
             neutrons = clasAna.getByPid(2112); // Neutrons
             protons = clasAna.getByPid(2212);  // Protons
-            Kplus = clasAna.getByPid(321);     // K+            Kminus = clasAna.getByPid(-321);   // K-
-            piplus = clasAna.getByPid(211);    // pi+            piminus = clasAna.getByPid(-211);  // pi-
+            Kplus = clasAna.getByPid(321);     // K+
+            Kminus = clasAna.getByPid(-321);   // K-
+            piplus = clasAna.getByPid(211);    // pi+
+            piminus = clasAna.getByPid(-211);  // pi-
             electrons = clasAna.getByPid(11);  // Electrons
 
             deuterons = clasAna.getByPid(45);  // Deuterons
@@ -8115,11 +8118,14 @@ void EventAnalyser()
             otherpart = clasAna.getByPid(311); // Other particles
         }
         else
-        {                                  // Get particle outside of CLAS12Analysis:
+        {                                  
+            // Get particle outside of CLAS12Analysis:
             neutrons = c12->getByID(2112); // Neutrons
             protons = c12->getByID(2212);  // Protons
-            Kplus = c12->getByID(321);     // K+            Kminus = c12->getByID(-321);   // K-
-            piplus = c12->getByID(211);    // pi+            piminus = c12->getByID(-211);  // pi-
+            Kplus = c12->getByID(321);     // K+
+            Kminus = c12->getByID(-321);   // K-
+            piplus = c12->getByID(211);    // pi+
+            piminus = c12->getByID(-211);  // pi-
             electrons = c12->getByID(11);  // Electrons
 
             deuterons = c12->getByID(45);  // Deuterons
@@ -8140,10 +8146,12 @@ void EventAnalyser()
         //<editor-fold desc="Charged particles' identification">
         vector<int> Electron_ind = pid.ChargedParticleID(electrons, e_mom_th);
 
-        vector<int> IDed_Protons_ind = pid.ChargedParticleID(protons, pFD_mom_th, pCD_mom_th);                                                            // indices of identified protons (i.e., within P_pFD
-                                                                                                                                                          // and P_pCD th.)
-        vector<int> Protons_ind = pid.GetGoodProtons(apply_nucleon_cuts, protons, IDed_Protons_ind, Theta_p1_cuts_2p, Theta_p2_cuts_2p, dphi_pFD_pCD_2p); // good identified protons (no
-                                                                                                                                                          // sCTOFhp and no dCDaFDd)
+        vector<int> IDed_Protons_ind = pid.ChargedParticleID(protons, pFD_mom_th, pCD_mom_th);
+        // indices of identified protons (i.e., within P_pFD
+        // and P_pCD th.)
+        vector<int> Protons_ind = pid.GetGoodProtons(apply_nucleon_cuts,
+                                                     protons, IDed_Protons_ind, Theta_p1_cuts_2p, Theta_p2_cuts_2p, dphi_pFD_pCD_2p); // good identified protons (no
+                                                                                                                                      // sCTOFhp and no dCDaFDd)
 
         vector<int> Piplus_ind = pid.ChargedParticleID(piplus, pipFD_mom_th, pipCD_mom_th);
         vector<int> Piminus_ind = pid.ChargedParticleID(piminus, pimFD_mom_th, pimCD_mom_th);
