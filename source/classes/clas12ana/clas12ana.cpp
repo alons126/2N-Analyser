@@ -232,11 +232,6 @@ void clas12ana::checkCutParameters()
         if (previous_run < 15542) // default; do nothing already been set to >=15542
         {
             // Set new SF cuts, new run range
-
-            cout << "\n\nI'M HERE!!!!\n\n";
-            exit(0);
-
-
             this->readEcalSFPar((std::string(CLAS12ANA_DIR) + "/Ana/cutFiles/paramsSF_40Ca_x2.dat").c_str());
             this->readEcalPPar((std::string(CLAS12ANA_DIR) + "/Ana/cutFiles/paramsPI_40Ca_x2.dat").c_str());
             std::cerr << "WARNING:: Run number changed to " << current_run << ". The SF cuts are changed to reflect this new run range" << std::endl;
@@ -313,6 +308,14 @@ void clas12ana::checkCutParameters()
 
 void clas12ana::Init()
 {
+
+    
+    
+    cout << "\n\n\nI'M here!!!\n\n\n\n";
+    exit(0);
+
+
+
     if (debug_plots)
         debug_c.InitDebugPlots();
 
