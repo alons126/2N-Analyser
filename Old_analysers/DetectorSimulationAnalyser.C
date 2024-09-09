@@ -953,8 +953,7 @@ void EventAnalyser()
     bool wider_margin = true;
     bool debug_plots = false; // Print out CLAS12Analysis debugging plots
 
-    bool Log_scale_Vx_plots = false, Log_scale_Vy_plots = false,
-         Log_scale_Vz_plots = true;
+    bool Log_scale_Vx_plots = false, Log_scale_Vy_plots = false,Log_scale_Vz_plots = true;
     bool Log_scale_dVx_plots = false, Log_scale_dVy_plots = false,
          Log_scale_dVz_plots = true;
 
