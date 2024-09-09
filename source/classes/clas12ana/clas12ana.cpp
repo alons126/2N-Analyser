@@ -309,13 +309,6 @@ void clas12ana::checkCutParameters()
 void clas12ana::Init()
 {
 
-    
-    
-    cout << "\n\n\nI'M here!!!\n\n\n\n";
-    exit(0);
-
-
-
     if (debug_plots)
         debug_c.InitDebugPlots();
 
