@@ -589,15 +589,13 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
     /* My edit - end */
 }
 
-void CLAS12Analysis::SetAllParticles()
+// ConfigureElectronCuts function -----------------------------------------
 
-    // ConfigureElectronCuts function -----------------------------------------
-
-    /*
-    This function configures electron quality cuts.
-    */
-    void CLAS12Analysis::ConfigureElectronCuts(const bool apply_cuts, // master
-                                               const bool apply_Nphe_cut, DSCuts &Nphe_cuts_FD, const bool apply_ECAL_SF_cuts, const char *filename_SF_cuts, DSCuts &SF_cuts, const bool apply_ECAL_P_cuts, const char *filename_P_cuts, const bool apply_ECAL_diag_cut, const bool apply_ECAL_fiducial_cuts, DSCuts &PCAL_edge_cuts)
+/*
+This function configures electron quality cuts.
+*/
+void CLAS12Analysis::ConfigureElectronCuts(const bool apply_cuts, // master
+                                           const bool apply_Nphe_cut, DSCuts &Nphe_cuts_FD, const bool apply_ECAL_SF_cuts, const char *filename_SF_cuts, DSCuts &SF_cuts, const bool apply_ECAL_P_cuts, const char *filename_P_cuts, const bool apply_ECAL_diag_cut, const bool apply_ECAL_fiducial_cuts, DSCuts &PCAL_edge_cuts)
 {
     if (apply_cuts)
     {
