@@ -497,7 +497,7 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
                 // ECAL edge cuts:
                 (!EcalEdgeCuts(el) && getf_ecalEdgeCuts()) ||
                 // Vertex cuts:
-                (!checkVertex(el) && getf_vertexCuts()) ||
+                (!CheckVertex(el) && getf_vertexCuts()) ||
                 // DC edge cuts:
                 (!DCEdgeCuts(el) && getf_DCEdgeCuts()) ||
                 // minium 800 MeV/c cut for electrons in class:
@@ -564,7 +564,7 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
                             // PID cuts:
                             (!check_pid_cuts) ||
                             // Vertex cuts:
-                            (!checkVertex(p) && getf_vertexCuts()) ||
+                            (!CheckVertex(p) && getf_vertexCuts()) ||
                             // CD edge cuts:
                             (!CDEdgeCuts(p) && getf_CDEdgeCuts()) ||
                             // CD edge cuts:
@@ -572,7 +572,7 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
                             // DC edge cuts:
                             (!DCEdgeCuts(p) && getf_DCEdgeCuts()) ||
                             // Vertex correlation with electron cuts:
-                            (!checkVertexCorrelation(electrons_det[0], p) &&
+                            (!CheckVertexCorrelation(electrons_det[0], p) &&
                              getf_corr_vertexCuts()))) {
                         setByPid(p);
                     }
