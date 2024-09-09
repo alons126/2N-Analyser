@@ -196,7 +196,7 @@ void EventAnalyser()
     bool apply_nucleon_SmearAndCorr = false;
 
     /* Implementation of old MSc cuts */
-    bool apply_old_MSc_SF_cuts = true;
+    bool apply_old_MSc_SF_cuts = false;
     bool apply_old_MSc_Vz_cuts = true;
     bool apply_old_MSc_dVz_cuts = true;
 
@@ -715,7 +715,7 @@ void EventAnalyser()
         /* Cut variable plots */
         Cut_plots_master = true; // Master cut plots selector
         //     Nphe_plots = true, Chi2_plots = true, Vertex_plots = true,        //     SF_plots = true, fiducial_plots = true;
-        Nphe_plots = true, Edep_ECAL_plots = true, SF_plots = true, Chi2_plots = true, Vertex_plots = true, fiducial_plots = true;
+        Nphe_plots = false, Edep_ECAL_plots = true, SF_plots = true, Chi2_plots = false, Vertex_plots = false, fiducial_plots = false;
 
         Momentum_plots = true;
         //        Momentum_plots = false;
@@ -745,8 +745,8 @@ void EventAnalyser()
         E_e_plots = false;
 
         /* ET plots */
-        ETrans_plots_master = true; // Master ET plots selector
-        // ETrans_plots_master = false; // Master ET plots selector
+        // ETrans_plots_master = true; // Master ET plots selector
+        ETrans_plots_master = false; // Master ET plots selector
         ETrans_all_plots = true, ETrans_All_Int_plots = true, ETrans_QEL_plots = true, ETrans_MEC_plots = true, ETrans_RES_plots = true, ETrans_DIS_plots = true;
 
         /* Ecal plots */
