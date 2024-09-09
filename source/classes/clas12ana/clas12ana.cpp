@@ -351,7 +351,8 @@ void clas12ana::Init()
     //  this -> printParams();
 
 
-    cout << "\n" << std::string(CLAS12ANA_DIR) << "/Ana/cutFiles/ana_he4.par\n";
+    cout << "\n" << 'std::string(CLAS12ANA_DIR) + "/Ana/cutFiles/paramsSF_LD2_x2.dat"' << std::string(CLAS12ANA_DIR) << "/Ana/cutFiles/paramsSF_LD2_x2.dat\n";
+    cout << "\n" << 'std::string(CLAS12ANA_DIR) + "/Ana/cutFiles/paramsPI_LD2_x2.dat"' << std::string(CLAS12ANA_DIR) << "/Ana/cutFiles/paramsPI_LD2_x2.dat\n";
     exit(0);
 }
 
