@@ -8084,8 +8084,8 @@ void EventAnalyser()
 
     cout << "\n\nLooping over chain files...\n\n";
 
-    while (chain.Next())
-    {                    // loop over events
+    while (chain.Next()) // loop over events
+    {
         ++num_of_events; // logging Total #(events) in sample
 
         /* Particles outside CLAS12Analysis */
@@ -8103,7 +8103,7 @@ void EventAnalyser()
         vector<region_part_ptr> neutrons, protons, Kplus, Kminus, piplus, piminus, electrons, deuterons, neutrals, otherpart;
 
         if (CLAS12Analysis_particles)
-        {                                      
+        {
             // Get particle outside from CLAS12Analysis:
             neutrons = clasAna.getByPid(2112); // Neutrons
             protons = clasAna.getByPid(2212);  // Protons
@@ -8118,7 +8118,7 @@ void EventAnalyser()
             otherpart = clasAna.getByPid(311); // Other particles
         }
         else
-        {                                  
+        {
             // Get particle outside of CLAS12Analysis:
             neutrons = c12->getByID(2112); // Neutrons
             protons = c12->getByID(2212);  // Protons
@@ -8133,42 +8133,38 @@ void EventAnalyser()
             otherpart = c12->getByID(311); // Other particles
         }
 
-        int Nn = neutrons.size(), Np = protons.size(), Nkp = Kplus.size(), Nkm = Kminus.size(), Npip = piplus.size(), Npim = piminus.size(), Ne = electrons.size();
+        int Ne = electrons.size();
+        int Nn = neutrons.size(), Np = protons.size();
+        int Nkp = Kplus.size(), Nkm = Kminus.size();
+        int Npip = piplus.size(), Npim = piminus.size();
         int Nd = deuterons.size(), Nneut = neutrals.size(), No = otherpart.size();
 
         /* Total number of particles in event (= Nf) */
-        int Nf = Nn + Np + Nkp + Nkm + Npip + Npim + Ne + Nd + Nneut + No;
+        int Nf = Ne + Nn + Np + Nkp + Nkm + Npip + Npim + Nd + Nneut + No;
 
         //<editor-fold desc="Configure good particles & basic event selection">
-        /* Configure particles within general momentum cuts (i.e. "identified
-         * particles") */
+        /* Configure particles within general momentum cuts (i.e. "identified particles") */
 
-        //<editor-fold desc="Charged particles' identification">
+        /* Charged particles' identification */
         vector<int> Electron_ind = pid.ChargedParticleID(electrons, e_mom_th);
 
+        // indices of identified protons (i.e., within P_pFD and P_pCD th.):
         vector<int> IDed_Protons_ind = pid.ChargedParticleID(protons, pFD_mom_th, pCD_mom_th);
-        // indices of identified protons (i.e., within P_pFD
-        // and P_pCD th.)
-        vector<int> Protons_ind = pid.GetGoodProtons(apply_nucleon_cuts,
-                                                     protons, IDed_Protons_ind, Theta_p1_cuts_2p, Theta_p2_cuts_2p, dphi_pFD_pCD_2p); // good identified protons (no
-                                                                                                                                      // sCTOFhp and no dCDaFDd)
+        // good identified protons (no sCTOFhp and no dCDaFDd):
+        vector<int> Protons_ind = pid.GetGoodProtons(apply_nucleon_cuts, protons, IDed_Protons_ind, Theta_p1_cuts_2p, Theta_p2_cuts_2p, dphi_pFD_pCD_2p);
 
         vector<int> Piplus_ind = pid.ChargedParticleID(piplus, pipFD_mom_th, pipCD_mom_th);
         vector<int> Piminus_ind = pid.ChargedParticleID(piminus, pimFD_mom_th, pimCD_mom_th);
 
-        //<editor-fold desc="Charged particles for inclusive efficiency">
-        // Proton vectors for (e,e'Xp)Y efficiency
-        vector<int> All_Protons_ind = pid.ChargedParticleID(protons, no_p_mom_th);                                                                            // indices of all protons (i.e., without P_p th.)
-        vector<int> All_gProtons_ind = pid.GetGoodProtons(apply_nucleon_cuts, protons, All_Protons_ind, Theta_p1_cuts_2p, Theta_p2_cuts_2p, dphi_pFD_pCD_2p); // good protons (no sCTOFhp and no dCDaFDd) -
-                                                                                                                                                              // WITHOUT mom. th.
-        //</editor-fold>
-
-        //</editor-fold>
+        /* Proton vectors for (e,e'Xp)Y efficiency */
+        // indices of all protons (i.e., without P_p th.):
+        vector<int> All_Protons_ind = pid.ChargedParticleID(protons, no_p_mom_th);
+        // good protons (no sCTOFhp and no dCDaFDd) - WITHOUT mom. th.
+        vector<int> All_gProtons_ind = pid.GetGoodProtons(apply_nucleon_cuts, protons, All_Protons_ind, Theta_p1_cuts_2p, Theta_p2_cuts_2p, dphi_pFD_pCD_2p);
 
         //<editor-fold desc="Neutral particles' identification (FD only)">
         /* Get FD neutrons and photons, according to the definitions: */
-        // FD neutrons and photons to be set by definition - before momentum th.
-        // & any cuts:
+        // FD neutrons and photons to be set by definition - before momentum th. & any cuts:
         vector<int> ReDef_neutrons_FD, ReDef_photons_FD;
         // Get FD neutrons and photons, according to the definitions
         // (ORIGINAL!):
@@ -8189,8 +8185,6 @@ void EventAnalyser()
         // edge cuts):
         vector<int> NeutronsFD_ind, PhotonsFD_ind;
         pid.FDNeutralParticleID(allParticles, electrons, NeutronsFD_ind, ReDef_neutrons_FD, n_mom_th, PhotonsFD_ind, ReDef_photons_FD, ph_mom_th, Neutron_veto_cut, beamE, clasAna.getEcalEdgeCuts(), clasAna.getEcalEdgeCuts(), apply_nucleon_cuts);
-        //        pid.FDNeutralParticleID(allParticles, NeutronsFD_ind,        //        ReDef_neutrons_FD, n_mom_th, PhotonsFD_ind, ReDef_photons_FD,        //        ph_mom_th,        //                                apply_nucleon_cuts);
-        // FD neutron (with momentum th.) with maximal momentum:
         int NeutronsFD_ind_mom_max = pid.GetLnFDIndex(allParticles, NeutronsFD_ind, apply_nucleon_cuts);
 
         //<editor-fold desc="Counting events with good FD neutrons">
@@ -8215,11 +8209,9 @@ void EventAnalyser()
         //<editor-fold desc="Safety checks">
         for (int &i : ReDef_neutrons_FD)
         {
-            if (!((allParticles[i]->par()->getPid() == 2112) ||
-                  (allParticles[i]->par()->getPid() == 22)))
+            if (!((allParticles[i]->par()->getPid() == 2112) || (allParticles[i]->par()->getPid() == 22)))
             {
-                cout << "\n\nReDef_neutrons_FD: A neutron PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n",
-                    exit(0);
+                cout << "\n\nReDef_neutrons_FD: A neutron PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(0);
             }
 
             bool NeutronInPCAL_test = (allParticles[i]->cal(clas12::PCAL)->getDetector() == 7);   // PCAL hit
@@ -8228,8 +8220,7 @@ void EventAnalyser()
 
             if (NeutronInPCAL_test)
             {
-                cout << "\n\nReDef_neutrons_FD test: a neutron have been found with a PCAL hit! Exiting...\n\n",
-                    exit(0);
+                cout << "\n\nReDef_neutrons_FD test: a neutron have been found with a PCAL hit! Exiting...\n\n", exit(0);
             }
 
             if (!(NeutronInECIN_test || NeutronInECOUT_test))
@@ -8249,8 +8240,7 @@ void EventAnalyser()
 
             if (!PhotonInPCAL_test)
             {
-                cout << "\n\n1n: a photon have been found without a PCAL hit! Exiting...\n\n",
-                    exit(0);
+                cout << "\n\n1n: a photon have been found without a PCAL hit! Exiting...\n\n", exit(0);
             }
         }
         //</editor-fold>
@@ -8264,7 +8254,8 @@ void EventAnalyser()
         bool no_carged_pions = ((Piplus_ind.size() == 0) && (Piminus_ind.size() == 0)); // no charged Pions above momentum threshold
         bool no_deuterons = (Nd == 0);                                                  // no Deuterons whatsoever
 
-        bool basic_event_selection = (single_electron && no_carged_Kaons && no_carged_pions && no_deuterons && (Enable_FD_photons || (PhotonsFD_ind.size() == 0)));
+        bool basic_event_selection = (single_electron && no_carged_Kaons && no_carged_pions && no_deuterons &&
+                                      (Enable_FD_photons || (PhotonsFD_ind.size() == 0)));
         //</editor-fold>
 
         //</editor-fold>
@@ -8363,25 +8354,16 @@ void EventAnalyser()
             // definition">
             if (NeutronsFD_ind_mom_max != -1)
             {
-                bool LeadingnFDPCAL = (allParticles[NeutronsFD_ind_mom_max]
-                                           ->cal(clas12::PCAL)
-                                           ->getDetector() == 7); // PCAL hit
-                bool LeadingnFDECIN = (allParticles[NeutronsFD_ind_mom_max]
-                                           ->cal(clas12::ECIN)
-                                           ->getDetector() == 7); // ECIN hit
-                bool LeadingnFDECOUT = (allParticles[NeutronsFD_ind_mom_max]
-                                            ->cal(clas12::ECOUT)
-                                            ->getDetector() == 7); // ECOUT hit
+                bool LeadingnFDPCAL = (allParticles[NeutronsFD_ind_mom_max]->cal(clas12::PCAL)->getDetector() == 7);   // PCAL hit
+                bool LeadingnFDECIN = (allParticles[NeutronsFD_ind_mom_max]->cal(clas12::ECIN)->getDetector() == 7);   // ECIN hit
+                bool LeadingnFDECOUT = (allParticles[NeutronsFD_ind_mom_max]->cal(clas12::ECOUT)->getDetector() == 7); // ECOUT hit
 
                 if (allParticles[NeutronsFD_ind_mom_max]->getRegion() != FD)
                 {
-                    cout << "\n\nLeading reco nFD check: Leading nFD is not in "
-                            "the FD! Exiting...\n\n",
-                        exit(0);
+                    cout << "\n\nLeading reco nFD check: Leading nFD is not in the FD! Exiting...\n\n", exit(0);
                 }
 
-                if (!((allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 2112) ||
-                      (allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 22)))
+                if (!((allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 2112) || (allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 22)))
                 {
                     cout
                         << "\n\nLeading reco nFD check: A neutron PDG is not "
