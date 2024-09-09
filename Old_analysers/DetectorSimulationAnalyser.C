@@ -169,7 +169,7 @@ void EventAnalyser()
     bool apply_electron_quality_cuts = true; // master ON/OFF switch for eQC
     bool apply_Nphe_cut = true;              // Number of photo-electrons in HTCC cut
     bool apply_ECAL_SF_cuts = true;          // SF cut on both E_deb AND P_e
-    bool apply_ECAL_P_cuts = false;          // SF cut on P_e (keep as false for now!)
+    bool apply_ECAL_P_cuts = true;          // SF cut on P_e (keep as false for now!)
     bool apply_ECAL_diag_cut = true;
     bool apply_ECAL_fiducial_cuts = true; // ECAL edge cuts for other charged particles
     bool apply_Electron_beta_cut = true;  // Electron beta cut
@@ -8309,7 +8309,10 @@ void EventAnalyser()
             cout << "Nd = " << Nd << "\n";
             cout << "Nneut = " << Nneut << "\n";
             cout << "No = " << No << "\n";
-            cout << "\nallParticles[0]->getPid() = " << allParticles[0]->getPid() << "\n";
+
+            for (auto part : allParticles)
+                cout << "\part->getPid() = " << part->getPid() << "\n";
+
             cout << "Exiting...\n\n", exit(0);
         }
         //</editor-fold>
