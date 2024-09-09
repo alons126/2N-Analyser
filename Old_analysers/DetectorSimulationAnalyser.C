@@ -490,12 +490,10 @@ void EventAnalyser()
     DSCuts Beta_max_cut_ABF_FD_n_from_ph, Beta_max_cut_ABF_FD_n_from_ph_apprax;
 
     /* Neutron momentum cuts (1n & nFDpCD, FD only) */
-    DSCuts n_momentum_cuts_ABF_FD_n_from_ph; // ABF = After Beta Fit. These are
-                                             // momentum cuts to logged to the
-                                             // fitted cuts file.
-    DSCuts
-        n_momentum_cuts_ABF_FD_n_from_ph_apprax; // Approximated max. momentum,                                                 // obtained by taking Beta=1,                                                 // such that
-                                                 // deltaBeta/Beta=deltaBeta.
+    DSCuts n_momentum_cuts_ABF_FD_n_from_ph;        // ABF = After Beta Fit. These are
+                                                    // momentum cuts to logged to the
+                                                    // fitted cuts file.
+    DSCuts n_momentum_cuts_ABF_FD_n_from_ph_apprax; // Approximated max. momentum, obtained by taking Beta=1, such that deltaBeta/Beta=deltaBeta.
 
     /* Truth-level momentum cuts */
     // TODO: remove pion mom. th. separation by CD and FD. It's useless
@@ -649,7 +647,7 @@ void EventAnalyser()
                                      // HipoChainLength is 2 or lower
     //</editor-fold>
 
-    bool TestRun = false; // set as false for a full run
+    bool TestRun = true; // set as false for a full run
 
     //<editor-fold desc="Set enabled plots">
     if (!TestRun)
@@ -717,7 +715,7 @@ void EventAnalyser()
         /* Cut variable plots */
         Cut_plots_master = true; // Master cut plots selector
         //     Nphe_plots = true, Chi2_plots = true, Vertex_plots = true,        //     SF_plots = true, fiducial_plots = true;
-        Nphe_plots = false, Edep_ECAL_plots = false, SF_plots = false, Chi2_plots = false, Vertex_plots = false, fiducial_plots = false;
+        Nphe_plots = true, Edep_ECAL_plots = true, SF_plots = true, Chi2_plots = true, Vertex_plots = true, fiducial_plots = true;
 
         Momentum_plots = true;
         //        Momentum_plots = false;
@@ -747,8 +745,8 @@ void EventAnalyser()
         E_e_plots = false;
 
         /* ET plots */
-        //     ETrans_plots_master = true; // Master ET plots selector
-        ETrans_plots_master = false; // Master ET plots selector
+        ETrans_plots_master = true; // Master ET plots selector
+        // ETrans_plots_master = false; // Master ET plots selector
         ETrans_all_plots = true, ETrans_All_Int_plots = true, ETrans_QEL_plots = true, ETrans_MEC_plots = true, ETrans_RES_plots = true, ETrans_DIS_plots = true;
 
         /* Ecal plots */
@@ -764,10 +762,10 @@ void EventAnalyser()
         ToF_plots = false;
 
         /* Efficiency plots */
-        Efficiency_plots = true;
-        //        Efficiency_plots = false;
-        TL_after_Acceptance_Maps_plots = true;
-        //        TL_after_Acceptance_Maps_plots = false;
+        // Efficiency_plots = true;
+        Efficiency_plots = false;
+        // TL_after_Acceptance_Maps_plots = true;
+        TL_after_Acceptance_Maps_plots = false;
 
         /* Resolution plots */
         //        AMaps_plots = true;
