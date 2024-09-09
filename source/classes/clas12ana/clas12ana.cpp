@@ -348,8 +348,11 @@ void clas12ana::Init()
     this->readEcalPPar((std::string(CLAS12ANA_DIR) + "/Ana/cutFiles/paramsPI_LD2_x2.dat").c_str());
 
     this->readInputSRCParam((std::string(CLAS12ANA_DIR) + "/Ana/cutFiles/src_cuts.par").c_str());
-     this -> printParams();
-     exit(0);
+    //  this -> printParams();
+
+
+    cout << "\n" << std::string(CLAS12ANA_DIR) << "/Ana/cutFiles/ana_he4.par\n";
+    exit(0);
 }
 
 bool clas12ana::DCEdgeCuts(const region_part_ptr &p)
