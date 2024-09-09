@@ -4,6 +4,64 @@
 
 #include "CLAS12Analysis.h"
 
+// getParticles function ------------------------------------------------------
+
+std::vector<region_part_ptr> CLAS12Analysis::getParticles()
+{
+    // Add all particles after PID (and one reco electron) in the allparticles vector
+    for (auto el : electrons)
+    {
+        allparticles.push_back(el);
+    }
+
+    for (auto p : protons)
+    {
+        allparticles.push_back(p);
+    }
+
+    for (auto d : deuterons)
+    {
+        allparticles.push_back(d);
+    }
+
+    for (auto neut : neutrals)
+    {
+        allparticles.push_back(neut);
+    }
+
+    for (auto n : neutrons)
+    {
+        allparticles.push_back(n);
+    }
+
+    for (auto pip : piplus)
+    {
+        allparticles.push_back(pip);
+    }
+
+    for (auto pim : piminus)
+    {
+        allparticles.push_back(pim);
+    }
+
+    for (auto kp : kplus)
+    {
+        allparticles.push_back(kp);
+    }
+
+    for (auto km : kminus)
+    {
+        allparticles.push_back(km);
+    }
+
+    for (auto o : otherpart)
+    {
+        allparticles.push_back(o);
+    }
+
+    return allparticles;
+}
+
 // ReadInputParam function ----------------------------------------------------
 
 /*
@@ -527,39 +585,19 @@ void CLAS12Analysis::RunAnalysisCuts(const std::unique_ptr<clas12::clas12reader>
         Debug_c.multi_cpi_1e_cut_AC_debug->Fill(piplus.size() + piminus.size());
         Debug_c.multi_p_vs_cpi_1e_cut_AC_debug->Fill(protons.size(), piplus.size() + piminus.size());
 
-        // Add all particles after PID (and one reco electron) in the allparticles vector
-        for (auto el : electrons)
-            allparticles.push_back(el);
-        for (auto p : protons)
-            allparticles.push_back(p);
-        for (auto d : deuterons)
-            allparticles.push_back(d);
-        for (auto neut : neutrals)
-            allparticles.push_back(neut);
-        for (auto n : neutrons)
-            allparticles.push_back(n);
-        for (auto pip : piplus)
-            allparticles.push_back(pip);
-        for (auto pim : piminus)
-            allparticles.push_back(pim);
-        for (auto kp : kplus)
-            allparticles.push_back(kp);
-        for (auto km : kminus)
-            allparticles.push_back(km);
-        for (auto o : otherpart)
-            allparticles.push_back(o);
-
     } // good electron loop
     /* My edit - end */
 }
 
-// ConfigureElectronCuts function -----------------------------------------
+void CLAS12Analysis::SetAllParticles()
 
-/*
-This function configures electron quality cuts.
-*/
-void CLAS12Analysis::ConfigureElectronCuts(const bool apply_cuts, // master
-                                           const bool apply_Nphe_cut, DSCuts &Nphe_cuts_FD, const bool apply_ECAL_SF_cuts, const char *filename_SF_cuts, DSCuts &SF_cuts, const bool apply_ECAL_P_cuts, const char *filename_P_cuts, const bool apply_ECAL_diag_cut, const bool apply_ECAL_fiducial_cuts, DSCuts &PCAL_edge_cuts)
+    // ConfigureElectronCuts function -----------------------------------------
+
+    /*
+    This function configures electron quality cuts.
+    */
+    void CLAS12Analysis::ConfigureElectronCuts(const bool apply_cuts, // master
+                                               const bool apply_Nphe_cut, DSCuts &Nphe_cuts_FD, const bool apply_ECAL_SF_cuts, const char *filename_SF_cuts, DSCuts &SF_cuts, const bool apply_ECAL_P_cuts, const char *filename_P_cuts, const bool apply_ECAL_diag_cut, const bool apply_ECAL_fiducial_cuts, DSCuts &PCAL_edge_cuts)
 {
     if (apply_cuts)
     {

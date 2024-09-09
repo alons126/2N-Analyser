@@ -161,7 +161,9 @@ public:
         }
     }
 
-    std::vector<region_part_ptr> getParticles() { return allparticles; }
+    // getParticles function --------------------------------------------------
+
+    std::vector<region_part_ptr> getParticles();
 
     // addToAllParticles function ---------------------------------------------
 
