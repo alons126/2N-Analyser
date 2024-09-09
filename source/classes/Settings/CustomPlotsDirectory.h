@@ -33,7 +33,7 @@ class CustomPlotsDirectory {
 
     string Added_PreStatuses, Added_Statuses;
 
-    string Global_Run_Status = "updated_clas12ana_test2_1";
+    string Global_Run_Status = "updated_clas12ana_test3_1";
 
    public:
     // Default constructor
