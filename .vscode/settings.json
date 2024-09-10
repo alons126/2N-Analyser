@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "DetectorSimulationAnalyser.C": "cpp"
+        "DetectorSimulationAnalyser.C": "cpp",
+        "new": "cpp"
     }
 }

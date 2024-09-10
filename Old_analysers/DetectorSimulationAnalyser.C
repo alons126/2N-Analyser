@@ -794,10 +794,10 @@ void EventAnalyser() {
 
     //<editor-fold desc="Number of histogram bins">
     /* Default */
-    int numTH1Dbins = 30;
-    int numTH2Dbins = 25;
-//    int numTH1Dbins = 50;
-//    int numTH2Dbins = 65;
+    // int numTH1Dbins = 30;
+    // int numTH2Dbins = 25;
+   int numTH1Dbins = 50;
+   int numTH2Dbins = 65;
 
     if (isData) { numTH2Dbins = numTH2Dbins * 2; }
 

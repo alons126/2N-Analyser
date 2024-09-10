@@ -64,6 +64,71 @@
 					"label": "Out folder name extension"
 				}
 			]
+		},
+		{
+			"path": "source/classes/clas12ana/clas12ana.h",
+			"bookmarks": [
+				{
+					"line": 32,
+					"column": 39,
+					"label": "clas12ana"
+				}
+			]
+		},
+		{
+			"path": "source/classes/ExperimentParameters/ExperimentParameters.cpp",
+			"bookmarks": [
+				{
+					"line": 47,
+					"column": 1,
+					"label": "Config new samples - sample name"
+				},
+				{
+					"line": 260,
+					"column": 4,
+					"label": "Config new samples - varing sample name"
+				},
+				{
+					"line": 281,
+					"column": 2,
+					"label": "Config new samples - Vz cuts"
+				},
+				{
+					"line": 329,
+					"column": 6,
+					"label": "Config new samples - dVz cuts"
+				}
+			]
+		},
+		{
+			"path": "macros/MScThesisPlotter/MScThesisPlotter.cpp",
+			"bookmarks": [
+				{
+					"line": 52,
+					"column": 25,
+					"label": "MScThesisPlotter"
+				}
+			]
+		},
+		{
+			"path": "macros/MScThesisPlotter/HistPlotter1D.cpp",
+			"bookmarks": [
+				{
+					"line": 105,
+					"column": 5,
+					"label": "HistPlotter1D"
+				}
+			]
+		},
+		{
+			"path": "macros/MScThesisPlotter/HistPlotter2D.cpp",
+			"bookmarks": [
+				{
+					"line": 71,
+					"column": 13,
+					"label": "HistPlotter2D"
+				}
+			]
 		}
 	]
 }
