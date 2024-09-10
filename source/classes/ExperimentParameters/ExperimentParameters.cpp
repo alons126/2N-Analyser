@@ -231,10 +231,10 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
         }
         else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/C/dst/recon")
         { // C, data, 2GeV, ifarm
-            if (AnalyseFileSample == "015670")
+            if (AnalyseFileSample == "015664")
             {
                 BeamAt2GeV = DataSample = true;
-                sName = "C12_data_2GeV_run_015670";
+                sName = "C12_data_2GeV_run_015664";
             }
         }
         else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon")

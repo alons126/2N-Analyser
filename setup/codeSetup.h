@@ -69,7 +69,7 @@ std::string file_name = "general_file";
 
 /* C12 2.07052GeV - run 015664 (ifarm DATA files - C12 DATA files) */
 std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/C/dst/recon";
-std::string AnalyseFileSample = "015670";
+std::string AnalyseFileSample = "015664";
 std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
 std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 
