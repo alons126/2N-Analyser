@@ -67,17 +67,23 @@ std::string file_name = "general_file";
 
 // HIPO files for Q2 study ----------------------------------------------------------------------------------------------------------------------------------------------
 
+/* Ar40 2.07052GeV - run 015672 (ifarm DATA files - Ar40 DATA files) */
+std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/Ar/dst/recon";
+std::string AnalyseFileSample = "015672";
+std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+
 // /* C12 2.07052GeV - run 015664 (ifarm DATA files - C12 DATA files) */
 // std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/C/dst/recon";
 // std::string AnalyseFileSample = "015664";
 // std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
 // std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 
-/* C12 4.02962GeV - run 015778 (ifarm DATA files - C12 DATA files) */
-std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/4gev/C/dst/recon";
-std::string AnalyseFileSample = "015778";
-std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+// /* C12 4.02962GeV - run 015778 (ifarm DATA files - C12 DATA files) */
+// std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/4gev/C/dst/recon";
+// std::string AnalyseFileSample = "015778";
+// std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+// std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 
 // /* C12x4 5.98636GeV - run 015188 (ifarm DATA files - C12x4 DATA files) */
 // std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon";

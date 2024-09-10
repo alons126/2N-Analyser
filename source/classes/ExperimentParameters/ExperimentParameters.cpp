@@ -229,6 +229,15 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                 sName = "LH2_data_6GeV_run_015032";
             }
         }
+        //
+        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/Ar/dst/recon")
+        { // Ar40, data, 2GeV, ifarm (Q2 study)
+            if (AnalyseFileSample == "015672")
+            {
+                BeamAt2GeV = DataSample = true;
+                sName = "Ar40_data_2GeV_run_015672";
+            }
+        }
         else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/C/dst/recon")
         { // C, data, 2GeV, ifarm (Q2 study)
             if (AnalyseFileSample == "015664")
@@ -246,7 +255,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
             }
         }
         else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon")
-        { // Cx4, data, 6GeV, ifarm
+        {                                      // Cx4, data, 6GeV, ifarm
             if (AnalyseFileSample == "015186") // (Q2 study)
             {
                 BeamAt6GeV = DataSample = true;
@@ -374,7 +383,7 @@ void ExperimentParameters::ConfigureVaryingSampleName(const string &sn)
     if (findSubstring(sn, "sim") ||
         (findSubstring(sn, "Uniform") || findSubstring(sn, "iniform") ||
          findSubstring(sn, "Isotrop") || findSubstring(sn, "isotrop")))
-    {   // Sample is simulation
+    { // Sample is simulation
         //        VaryingSampleName = SampleName;
         VaryingSampleName = "C12x4_simulation_G18_Q204_6GeV";
     }

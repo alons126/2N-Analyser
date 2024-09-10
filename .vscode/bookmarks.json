@@ -84,17 +84,17 @@
 					"label": "Config new samples - sample name"
 				},
 				{
-					"line": 371,
+					"line": 380,
 					"column": 4,
 					"label": "Config new samples - varing sample name"
 				},
 				{
-					"line": 404,
+					"line": 413,
 					"column": 2,
 					"label": "Config new samples - Vz cuts"
 				},
 				{
-					"line": 471,
+					"line": 480,
 					"column": 6,
 					"label": "Config new samples - dVz cuts"
 				}
