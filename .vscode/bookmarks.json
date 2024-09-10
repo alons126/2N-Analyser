@@ -84,19 +84,24 @@
 					"label": "Config new samples - sample name"
 				},
 				{
-					"line": 389,
+					"line": 413,
 					"column": 4,
 					"label": "Config new samples - varing sample name"
 				},
 				{
-					"line": 422,
+					"line": 446,
 					"column": 2,
 					"label": "Config new samples - Vz cuts"
 				},
 				{
-					"line": 489,
+					"line": 513,
 					"column": 6,
 					"label": "Config new samples - dVz cuts"
+				},
+				{
+					"line": 608,
+					"column": 0,
+					"label": "Config new samples - AddToHipoChain"
 				}
 			]
 		},

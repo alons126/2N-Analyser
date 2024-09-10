@@ -230,6 +230,30 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
             }
         }
         //
+        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/D/dst/recon")
+        { // D2, data, 2GeV, ifarm (Q2 study)
+            if (AnalyseFileSample == "")
+            {
+                BeamAt2GeV = DataSample = true;
+                sName = "D2_data_2GeV";
+            }
+        }
+        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon")
+        { // D2, data, 4GeV, ifarm (Q2 study)
+            if (AnalyseFileSample == "015743")
+            {
+                BeamAt4GeV = DataSample = true;
+                sName = "D2_data_4GeV_run_015743";
+            }
+        }
+        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon")
+        { // D2, data, 6GeV, ifarm (Q2 study)
+            if (AnalyseFileSample == "015743")
+            {
+                BeamAt6GeV = DataSample = true;
+                sName = "D2_data_6GeV_run_015743";
+            }
+        }
         else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/Ar/dst/recon")
         { // Ar40, data, 2GeV, ifarm (Q2 study)
             if (AnalyseFileSample == "015672")
@@ -601,6 +625,35 @@ void ExperimentParameters::AddToHipoChain(HipoChain &chain, const string &sn, co
                                        "015273", "015274", "015275", "015278", "015279", "015280", "015282", "015283", "015284", "015286", "015287", "015288", "015289",
                                        "015290", "015291", "015292", "015293", "015294", "015295", "015296", "015298", "015300", "015301", "015302", "015303", "015304",
                                        "015305", "015306", "015307", "015308", "015309", "015310", "015311", "015312", "015313", "015314", "015316", "015317"};
+
+                for (int i = 0; i < Runs.size(); i++)
+                {
+                    string TempAnalyseFile = "/" + AnalyseFilePath + "/" + Runs.at(i) + "/*.hipo";
+                    chain.Add(TempAnalyseFile.c_str());
+
+                    if (PrintOut)
+                    {
+                        cout << TempAnalyseFile << " directory added to HipoChain!\n";
+                    }
+                }
+
+                if (PrintOut)
+                {
+                    cout << "\n";
+                }
+            }
+        }
+        else if (sn == "D2_data_2GeV")
+        {
+            if (AnalyseFileSample == "")
+            {
+                /* Data in cache/clas12/rg-m/production/pass1/2gev/D/dst/recon */
+                vector<string> Runs = {
+                    "015567", "015573", "015578", "015583", "015590", "015595", "015602", "015608", "015613", "015618", "015624",
+                    "015568", "015574", "015579", "015586", "015591", "015598", "015603", "015609", "015614", "015619", "015625",
+                    "015569", "015575", "015580", "015587", "015592", "015599", "015604", "015610", "015615", "015620", "015626",
+                    "015570", "015576", "015581", "015588", "015593", "015600", "015606", "015611", "015616", "015622", "015627",
+                    "015572", "015577", "015582", "015589", "015594", "015601", "015607", "015612", "015617", "015623"};
 
                 for (int i = 0; i < Runs.size(); i++)
                 {
