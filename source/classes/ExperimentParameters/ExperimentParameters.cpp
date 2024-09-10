@@ -159,6 +159,11 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                 BeamAt6GeV = DataSample = true;
                 sName = "LH2_data_6GeV_run_015032";
             }
+        } else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/C/dst/recon") { // C, data, 2GeV, ifarm
+            if (AnalyseFileSample == "015670") {
+                BeamAt2GeV = DataSample = true;
+                sName = "C12_data_2GeV_run_015670";
+            }
         } else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon") { // Cx4, data, 6GeV, ifarm
             if (AnalyseFileSample == "015186") {
                 BeamAt6GeV = DataSample = true;
@@ -258,7 +263,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
 // ConfigureVaryingSampleName function -----------------------------------------------------------------------------------------------------------------------------------------
 
 //<editor-fold desc="ConfigureVaryingSampleName function">
-void ExperimentParameters::ConfigureVaryingSampleName(const string &sn) {
+void ExperimentParameters::ConfigureVaryingSampleName(const string &sn) { //TODO: change this to VaryingSampleName of the appropriate data. currently the same for all data.
     if (findSubstring(sn, "sim") ||
       (findSubstring(sn, "Uniform") || findSubstring(sn, "iniform") ||
        findSubstring(sn, "Isotrop") || findSubstring(sn, "isotrop"))) { // Sample is simulation

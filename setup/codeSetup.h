@@ -67,12 +67,18 @@ std::string file_name = "general_file";
 
 // HIPO files for Q2 study ----------------------------------------------------------------------------------------------------------------------------------------------
 
-/* C12x4 5.98636GeV - run 015188 (ifarm DATA files - C12x4 DATA files) */
-std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon";
-std::string AnalyseFileSample = "015188";
+/* C12 2.07052GeV - run 015664 (ifarm DATA files - C12 DATA files) */
+std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/C/dst/recon";
+std::string AnalyseFileSample = "015670";
 std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-// std::string AnalyseFile = AnalyseFileDir + "rec_clas_015188.evio.01685-01689.hipo"; // 1 run file
-std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // 1 run files
+std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+
+// /* C12x4 5.98636GeV - run 015188 (ifarm DATA files - C12x4 DATA files) */
+// std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon";
+// std::string AnalyseFileSample = "015188";
+// std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+// // std::string AnalyseFile = AnalyseFileDir + "rec_clas_015188.evio.01685-01689.hipo"; // 1 run file
+// std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 
 // HIPO files for uniform samples ---------------------------------------------------------------------------------------------------------------------------------------
 
