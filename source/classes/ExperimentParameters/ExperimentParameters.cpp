@@ -230,16 +230,24 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
             }
         }
         else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/C/dst/recon")
-        { // C, data, 2GeV, ifarm
+        { // C, data, 2GeV, ifarm (Q2 study)
             if (AnalyseFileSample == "015664")
             {
                 BeamAt2GeV = DataSample = true;
                 sName = "C12_data_2GeV_run_015664";
             }
         }
+        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/4gev/C/dst/recon")
+        { // C, data, 4GeV, ifarm (Q2 study)
+            if (AnalyseFileSample == "015778")
+            {
+                BeamAt4GeV = DataSample = true;
+                sName = "C12_data_4GeV_run_015778";
+            }
+        }
         else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon")
         { // Cx4, data, 6GeV, ifarm
-            if (AnalyseFileSample == "015186")
+            if (AnalyseFileSample == "015186") // (Q2 study)
             {
                 BeamAt6GeV = DataSample = true;
                 sName = "C12x4_data_6GeV_run_015186";
@@ -373,6 +381,11 @@ void ExperimentParameters::ConfigureVaryingSampleName(const string &sn)
     else if (findSubstring(sn, "data"))
     { // Sample is data
         VaryingSampleName = "C12x4_simulation_G18_Q204_6GeV";
+
+        cout << "\n====================================================================\n";
+        cout << "\t\t\t\tVaryingSampleName is unifor to all samples!!!\n";
+        cout << "\n====================================================================\n";
+
         // if (findSubstring(sn, "C12") && BeamAt6GeV) {
         //     VaryingSampleName = "C12x4_simulation_G18_Q204_6GeV";
         // } else {
