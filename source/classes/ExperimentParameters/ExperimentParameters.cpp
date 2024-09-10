@@ -238,20 +238,20 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                 sName = "D2_data_2GeV";
             }
         }
-        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon")
-        { // D2, data, 4GeV, ifarm (Q2 study)
-            if (AnalyseFileSample == "015743")
-            {
-                BeamAt4GeV = DataSample = true;
-                sName = "D2_data_4GeV_run_015743";
-            }
-        }
-        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon")
+        // else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon")
+        // { // D2, data, 4GeV, ifarm (Q2 study)
+        //     if (AnalyseFileSample == "015743")
+        //     {
+        //         BeamAt4GeV = DataSample = true;
+        //         sName = "D2_data_4GeV_run_015743";
+        //     }
+        // }
+        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/6gev/D/dst/recon")
         { // D2, data, 6GeV, ifarm (Q2 study)
-            if (AnalyseFileSample == "015743")
+            if (AnalyseFileSample == "015443")
             {
                 BeamAt6GeV = DataSample = true;
-                sName = "D2_data_6GeV_run_015743";
+                sName = "D2_data_6GeV_run_015443";
             }
         }
         else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/Ar/dst/recon")
@@ -270,6 +270,14 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                 sName = "Ar40_data_4GeV_run_015743";
             }
         }
+        // else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/6gev/Ar/dst/recon")
+        // { // Ar40, data, 6GeV, ifarm (Q2 study)
+        //     if (AnalyseFileSample == "015743")
+        //     {
+        //         BeamAt6GeV = DataSample = true;
+        //         sName = "Ar40_data_6GeV_run_015743";
+        //     }
+        // }
         else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/C/dst/recon")
         { // C, data, 2GeV, ifarm (Q2 study)
             if (AnalyseFileSample == "015664")
