@@ -7,7 +7,8 @@
 
 using namespace std;
 
-class CustomPlotsDirectory {
+class CustomPlotsDirectory
+{
 private:
     string Plots_path;
     string Plots_log_save_Directory;
@@ -29,12 +30,11 @@ private:
     string Global_Run_Status = "";
 
 public:
-
-// Default constructor ---------------------------------------------------------------------------------------------------------------------------------------------
+    // Default constructor ---------------------------------------------------------------------------------------------------------------------------------------------
 
     CustomPlotsDirectory() = default;
 
-// ConfigureStatuses function ------------------------------------------------------------------------------------------------------------------------------------
+    // ConfigureStatuses function ------------------------------------------------------------------------------------------------------------------------------------
 
     void ConfigureStatuses(const bool &apply_cuts, const bool &clas12ana_particles, const bool &only_preselection_cuts, const bool &apply_chi2_cuts_1e_cut,
                            const bool &only_electron_quality_cuts, const bool &apply_nucleon_cuts, const bool &Enable_FD_photons, const bool &apply_nucleon_SmearAndCorr,
@@ -42,22 +42,34 @@ public:
                            const bool &plot_and_fit_MomRes, const bool &VaryingDelta, const bool &Calculate_momResS2, const bool &Run_in_momResS2, const bool &nRes_test,
                            const bool &Rec_wTL_ES, const bool &ZoomIn_On_mom_th_plots);
 
-// SetPaths function -----------------------------------------------------------------------------------------------------------------------------------------------
+    // SetPaths function -----------------------------------------------------------------------------------------------------------------------------------------------
 
     void SetPaths(const string &WorkingDirectory, const string &SampleName, const string &plots_path, const bool &apply_cuts, const bool &apply_chi2_cuts_1e_cut,
                   const bool &apply_nucleon_cuts);
 
-// Set functions ---------------------------------------------------------------------------------------------------------------------------------------------------
+    // Set functions ---------------------------------------------------------------------------------------------------------------------------------------------------
 
     void SetCustomCutsNaming(const bool &custom_cuts_naming) { Custom_cuts_naming = custom_cuts_naming; }
 
-// Get functions ---------------------------------------------------------------------------------------------------------------------------------------------------
+    // Get functions ---------------------------------------------------------------------------------------------------------------------------------------------------
 
     bool GetCustomCutsNaming() { return Custom_cuts_naming; }
 
-    void GetPlotsPath(string &plots_path) { if (Custom_cuts_naming) { plots_path = Plots_path; }}
+    void GetPlotsPath(string &plots_path)
+    {
+        if (Custom_cuts_naming)
+        {
+            plots_path = Plots_path;
+        }
+    }
 
-    void GetPlotsLogSaveDirectory(string &plots_log_save_Directory) { if (Custom_cuts_naming) { plots_log_save_Directory = Plots_log_save_Directory; }}
+    void GetPlotsLogSaveDirectory(string &plots_log_save_Directory)
+    {
+        if (Custom_cuts_naming)
+        {
+            plots_log_save_Directory = Plots_log_save_Directory;
+        }
+    }
 
     string GetPreselection_Cuts_Status() { return Preselection_Cuts_Status; }
 
@@ -78,5 +90,4 @@ public:
     string GetEfficiency_Status() { return Efficiency_Status; }
 };
 
-
-#endif //CUSTOMPLOTSDIRECTORY_H
+#endif // CUSTOMPLOTSDIRECTORY_H
