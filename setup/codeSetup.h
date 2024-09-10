@@ -68,7 +68,7 @@ std::string file_name = "general_file";
 // hipo files -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //<editor-fold desc="Local hipo files - Uniform sample @ 6GeV">
-std::string AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/598636MeV";                                              // Storage (D:)
+std::string AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/598636MeV"; // Storage (D:)
 std::string AnalyseFileSample = "reconhipo";                                                               // my test with Justin's code; all particle data saved
 std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
 std::string AnalyseFile = AnalyseFileDir + "recon_Uniform_sample_598636MeV_*.hipo";                        // 11 files
