@@ -67,6 +67,25 @@ std::string file_name = "general_file";
 
 // HIPO files for Q2 study ----------------------------------------------------------------------------------------------------------------------------------------------
 
+/* H1 2.07052GeV - all runs (ifarm DATA files - H1 DATA files) */
+std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/H/dst/recon";
+std::string AnalyseFileSample = "015634";
+std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all data files
+
+// /* H1 4.02962GeV - run 015743 (ifarm DATA files - H1 DATA files) */
+// std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon";
+// std::string AnalyseFileSample = "015743";
+// std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+// std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+
+// /* H1 5.98636GeV - run 015443 (ifarm DATA files - H1 DATA files) */
+// std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/D/dst/recon";
+// std::string AnalyseFileSample = "015443";
+// std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+// std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+
+
 // /* D2 2.07052GeV - all runs (ifarm DATA files - D2 DATA files) */
 // std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/D/dst/recon";
 // std::string AnalyseFileSample = "";
@@ -79,11 +98,11 @@ std::string file_name = "general_file";
 // std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
 // std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 
-/* D2 5.98636GeV - run 015443 (ifarm DATA files - D2 DATA files) */
-std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/D/dst/recon";
-std::string AnalyseFileSample = "015443";
-std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+// /* D2 5.98636GeV - run 015443 (ifarm DATA files - D2 DATA files) */
+// std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/D/dst/recon";
+// std::string AnalyseFileSample = "015443";
+// std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+// std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 
 
 // /* Ar40 2.07052GeV - run 015672 (ifarm DATA files - Ar40 DATA files) */

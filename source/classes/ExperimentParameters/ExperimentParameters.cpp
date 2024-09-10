@@ -230,6 +230,30 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
             }
         }
         //
+        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/H/dst/recon")
+        { // H1, data, 2GeV, ifarm (Q2 study)
+            if (AnalyseFileSample == "015634")
+            {
+                BeamAt2GeV = DataSample = true;
+                sName = "H1_data_2GeV_run_015634";
+            }
+        }
+        // else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon")
+        // { // H1, data, 4GeV, ifarm (Q2 study)
+        //     if (AnalyseFileSample == "015743")
+        //     {
+        //         BeamAt4GeV = DataSample = true;
+        //         sName = "H1_data_4GeV_run_015743";
+        //     }
+        // }
+        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/6gev/D/dst/recon")
+        { // H1, data, 6GeV, ifarm (Q2 study)
+            if (AnalyseFileSample == "015443")
+            {
+                BeamAt6GeV = DataSample = true;
+                sName = "H1_data_6GeV_run_015443";
+            }
+        }
         else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/D/dst/recon")
         { // D2, data, 2GeV, ifarm (Q2 study)
             if (AnalyseFileSample == "")
