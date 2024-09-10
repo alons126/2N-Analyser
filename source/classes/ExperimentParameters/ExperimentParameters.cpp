@@ -238,6 +238,14 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                 sName = "Ar40_data_2GeV_run_015672";
             }
         }
+        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon")
+        { // Ar40, data, 4GeV, ifarm (Q2 study)
+            if (AnalyseFileSample == "015743")
+            {
+                BeamAt4GeV = DataSample = true;
+                sName = "Ar40_data_4GeV_run_015743";
+            }
+        }
         else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/C/dst/recon")
         { // C, data, 2GeV, ifarm (Q2 study)
             if (AnalyseFileSample == "015664")
@@ -254,6 +262,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                 sName = "C12_data_4GeV_run_015778";
             }
         }
+
         else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon")
         {                                      // Cx4, data, 6GeV, ifarm
             if (AnalyseFileSample == "015186") // (Q2 study)
