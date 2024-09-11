@@ -257,7 +257,7 @@ void CustomPlotsDirectory::SetPaths(const string &WorkingDirectory, const string
         Global_Run_Status_Local = "_" + Global_Run_Status;
     }
 
-    if (plots_path == WorkingDirectory + "00_plots")
+    if (plots_path == WorkingDirectory + "00_plots") // If default output folder
     {
         if (!apply_cuts)
         { // Stage 0 - no cuts
@@ -286,11 +286,13 @@ void CustomPlotsDirectory::SetPaths(const string &WorkingDirectory, const string
                 }
             }
         }
-    } else {
-                if (!apply_cuts)
+    }
+    else // Else, custom output folder
+    {
+        if (!apply_cuts)
         { // Stage 0 - no cuts
             run = SampleName + Stage0_prefix + Added_PreStatuses + Global_Run_Status_Local;
-            Plots_path = Plots_path + "/"  + run;
+            Plots_path = Plots_path + "/" + run;
             Plots_log_save_Directory = Plots_path + "/" + "Run_log_" + run + ".txt";
         }
         else
@@ -298,22 +300,22 @@ void CustomPlotsDirectory::SetPaths(const string &WorkingDirectory, const string
             if (!apply_chi2_cuts_1e_cut)
             { // Stage 1 - with cuts except PID (chi2) cuts
                 run = SampleName + Stage1_prefix + Added_PreStatuses + Global_Run_Status_Local;
-                Plots_path = Plots_path + "/"  + run;
-                 Plots_log_save_Directory = Plots_path + "/" + "Run_log_" + run + ".txt";
+                Plots_path = Plots_path + "/" + run;
+                Plots_log_save_Directory = Plots_path + "/" + "Run_log_" + run + ".txt";
             }
             else if (apply_chi2_cuts_1e_cut)
             {
                 if (!apply_nucleon_cuts)
                 { // Stage 2 - set nucleon cuts (neutron beta fit & proton double detection cuts)
                     run = SampleName + Stage2_prefix + Added_Statuses + Global_Run_Status_Local;
-                    Plots_path = Plots_path + "/"  + run;
-                     Plots_log_save_Directory = Plots_path + "/" + "Run_log_" + run + ".txt";
+                    Plots_path = Plots_path + "/" + run;
+                    Plots_log_save_Directory = Plots_path + "/" + "Run_log_" + run + ".txt";
                 }
                 else
                 { // Stage 3 - other runs
                     run = SampleName + Stage3_prefix + Added_Statuses + Global_Run_Status_Local;
-                    Plots_path = Plots_path + "/"  + run;
-                     Plots_log_save_Directory = Plots_path + "/" + "Run_log_" + run + ".txt";
+                    Plots_path = Plots_path + "/" + run;
+                    Plots_log_save_Directory = Plots_path + "/" + "Run_log_" + run + ".txt";
                 }
             }
         }

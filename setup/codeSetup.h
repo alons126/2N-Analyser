@@ -36,8 +36,8 @@ std::string Ver = "DetSim testings";
 //<editor-fold desc="path definitions">
 /* Histogram plots output directory */
 std::string WorkingDirectory = GetCurrentDirectory() + "/";
-// std::string plots_path = "/lustre24/expphy/volatile/clas12/asportes/Analysis_output";
-std::string plots_path = WorkingDirectory + "00_plots";
+std::string plots_path = "/lustre24/expphy/volatile/clas12/asportes/Analysis_output";
+// std::string plots_path = WorkingDirectory + "00_plots";
 
 /* setup directory and directories */
 std::string SettingsDirectory = WorkingDirectory + "setup" + "/";
