@@ -2,6 +2,7 @@
     "files.associations": {
         "DetectorSimulationAnalyser.C": "cpp",
         "new": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "DetectorSimulationAnalyser_Histograms_Temp.C": "cpp"
     }
 }
