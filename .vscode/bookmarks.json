@@ -4,44 +4,44 @@
 			"path": "Old_analysers/DetectorSimulationAnalyser.C",
 			"bookmarks": [
 				{
-					"line": 99,
-					"column": 39,
-					"label": "Truth level calculation setup"
+					"line": 100,
+					"column": 1,
+					"label": ""
 				},
 				{
-					"line": 120,
-					"column": 28,
-					"label": "Acceptance maps setup"
+					"line": 121,
+					"column": 2,
+					"label": ""
 				},
 				{
-					"line": 131,
-					"column": 31,
-					"label": "Neutron resolution setup"
+					"line": 132,
+					"column": 18,
+					"label": ""
 				},
 				{
-					"line": 166,
-					"column": 21,
-					"label": "clas12ana cuts"
+					"line": 170,
+					"column": 12,
+					"label": ""
 				},
 				{
-					"line": 188,
+					"line": 192,
 					"column": 23,
-					"label": "My analysis cuts"
+					"label": ""
 				},
 				{
-					"line": 560,
-					"column": 16,
-					"label": "Test run switch"
+					"line": 626,
+					"column": 21,
+					"label": ""
 				},
 				{
-					"line": 793,
-					"column": 0,
-					"label": "#Histogram bins"
+					"line": 891,
+					"column": 51,
+					"label": ""
 				},
 				{
-					"line": 860,
-					"column": 0,
-					"label": "Histogram limits"
+					"line": 961,
+					"column": 43,
+					"label": ""
 				}
 			]
 		},
@@ -94,12 +94,12 @@
 					"label": "Config new samples - Vz cuts"
 				},
 				{
-					"line": 545,
+					"line": 593,
 					"column": 6,
 					"label": "Config new samples - dVz cuts"
 				},
 				{
-					"line": 640,
+					"line": 736,
 					"column": 0,
 					"label": "Config new samples - AddToHipoChain"
 				}
