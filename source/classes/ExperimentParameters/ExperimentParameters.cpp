@@ -484,6 +484,12 @@ void ExperimentParameters::ConfigureVz_cuts(const string &sn)
         Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -12., -3.);
         Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., -4.);
     }
+    else if (sn == "Ar40_data_4GeV_run_015743")
+    {
+        Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+        Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -9., -2.);
+        Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., -4.);
+    }
     else if (sn == "Ar40_data_6GeV_run_015792")
     {
         Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
@@ -598,6 +604,12 @@ void ExperimentParameters::ConfiguredVz_cuts(const string &sn)
         dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
         dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -4, 8);
         dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -2, 6);
+    }
+    else if (sn == "Ar40_data_4GeV_run_015743")
+    {
+        dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+        dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -8, 4);
+        dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -4, 2);
     }
     else if (sn == "Ar40_data_6GeV_run_015792")
     {
