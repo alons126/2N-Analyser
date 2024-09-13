@@ -87,6 +87,7 @@ std::string file_name = "general_file";
 // std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
 // std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 
+
 /* D2 2.07052GeV - all runs (ifarm DATA files - D2 DATA files) */
 std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/D/dst/recon";
 std::string AnalyseFileSample = "";
