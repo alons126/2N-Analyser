@@ -247,7 +247,7 @@ void RecoAnalyser::InitSettings(){
 
     /* General plots TList */
     TList *plots = new TList();
-    string listName = plots_path + "/" + SampleName + plots_file_type;
+    string listName = plots_path + "/" + SampleName + plots_TList_FileType;
     const char *TListName = listName.c_str();
     //</editor-fold>
 

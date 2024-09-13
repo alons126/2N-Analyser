@@ -33,7 +33,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas, //The canvas
                    double titleSize,
                    double labelSizex,
                    double labelSizey,
-                   TList *Histogram_list,
+                   TList *Histogram_list, TFile *Histogram_OutPDF,
                    int lineWidth,
                    bool LogScalePlot,
                    bool LinearScalePlot,
@@ -217,7 +217,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas, //The canvas
         Histogram1DStack->Add(Histogram1D);
     }
 
-    Histogram1DCanvas->Clear();
+    Histogram1D->Write(); Histogram1DCanvas->Clear();
 
 }
 //</editor-fold>
@@ -233,7 +233,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas, //The canvas
                    double titleSize,
                    double labelSizex,
                    double labelSizey,
-                   TList *Histogram_list,
+                   TList *Histogram_list, TFile *Histogram_OutPDF,
                    int lineWidth,
                    bool LogScalePlot,
                    bool LinearScalePlot,
@@ -387,7 +387,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas, //The canvas
         Histogram1DCanvas->SaveAs(SaveDir);
     }
 
-    Histogram1DCanvas->Clear();
+    Histogram1D->Write(); Histogram1DCanvas->Clear();
 
 }
 //</editor-fold>
@@ -402,7 +402,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas, //The canvas
                    double custom_normalization_factor, //Normalize histogram or not
                    string Histogram1DTitle,
                    string Histogram1DTitleReactions,
-                   TList *Histogram_list,
+                   TList *Histogram_list, TFile *Histogram_OutPDF,
                    int lineWidth,
                    bool LogScalePlot,
                    bool LinearScalePlot,
@@ -588,7 +588,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas, //The canvas
         Histogram1DStack->Add(Histogram1D);
     }
 
-    Histogram1DCanvas->Clear();
+    Histogram1D->Write(); Histogram1DCanvas->Clear();
 
 }
 //</editor-fold>
@@ -601,7 +601,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas, //The canvas
                    double custom_normalization_factor, //Normalize histogram or not
                    string Histogram1DTitle,
                    string Histogram1DTitleReactions,
-                   TList *Histogram_list,
+                   TList *Histogram_list, TFile *Histogram_OutPDF,
                    int lineWidth,
                    bool LogScalePlot,
                    bool LinearScalePlot,
@@ -757,7 +757,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas, //The canvas
         Histogram1DCanvas->SaveAs(SaveDir);
     }
 
-    Histogram1DCanvas->Clear();
+    Histogram1D->Write(); Histogram1DCanvas->Clear();
 }
 //</editor-fold>
 
@@ -771,7 +771,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas, //The canvas
                    double custom_normalization_factor, //Normalize histogram or not
                    string Histogram1DTitle,
                    string Histogram1DTitleReactions,
-                   TList *Histogram_list,
+                   TList *Histogram_list, TFile *Histogram_OutPDF,
                    int lineWidth,
                    bool LogScalePlot,
                    bool LinearScalePlot,
@@ -940,7 +940,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas, //The canvas
         Histogram1DStack->Add(Histogram1D);
     }
 
-    Histogram1DCanvas->Clear();
+    Histogram1D->Write(); Histogram1DCanvas->Clear();
 
 }
 //</editor-fold>
@@ -953,7 +953,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas, //The canvas
                    double custom_normalization_factor, //Normalize histogram or not
                    string Histogram1DTitle,
                    string Histogram1DTitleReactions,
-                   TList *Histogram_list,
+                   TList *Histogram_list, TFile *Histogram_OutPDF,
                    int lineWidth,
                    bool LogScalePlot,
                    bool LinearScalePlot,
@@ -1093,7 +1093,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas, //The canvas
         }
     }
 
-    Histogram1DCanvas->Clear();
+    Histogram1D->Write(); Histogram1DCanvas->Clear();
 }
 //</editor-fold>
 
@@ -1113,7 +1113,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas1, // canvas c1 of other histograms
                    double titleSize,
                    double labelSizex,
                    double labelSizey,
-                   TList *Histogram_list,
+                   TList *Histogram_list, TFile *Histogram_OutPDF,
                    int lineWidth,
                    bool LogScalePlot,
                    bool LinearScalePlot,
@@ -1267,7 +1267,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas1, // canvas c1 of other histograms
         Histogram1DStack->Add(Histogram1D);
     }
 
-    Histogram1DCanvas2->Clear();
+    Histogram1D->Write(); Histogram1DCanvas2->Clear();
     gStyle->SetTitleFontSize(TitleFontSize);
     gROOT->ForceStyle();
 
@@ -1290,7 +1290,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas1, // canvas c1 of other histograms
                    double titleSize,
                    double labelSizex,
                    double labelSizey,
-                   TList *Histogram_list,
+                   TList *Histogram_list, TFile *Histogram_OutPDF,
                    int lineWidth,
                    bool LogScalePlot,
                    bool LinearScalePlot,
@@ -1429,7 +1429,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas1, // canvas c1 of other histograms
         Histogram1DCanvas2->SaveAs(SaveDir);
     }
 
-    Histogram1DCanvas2->Clear();
+    Histogram1D->Write(); Histogram1DCanvas2->Clear();
     gStyle->SetTitleFontSize(TitleFontSize);
     gROOT->ForceStyle();
 
@@ -1454,7 +1454,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas1, // canvas c1 of other histograms
                    double titleSize,
                    double labelSizex,
                    double labelSizey,
-                   TList *Histogram_list,
+                   TList *Histogram_list, TFile *Histogram_OutPDF,
                    int lineWidth,
                    bool LogScalePlot,
                    bool LinearScalePlot,
@@ -1626,7 +1626,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas1, // canvas c1 of other histograms
         Histogram1DStack->Add(Histogram1D);
     }
 
-    Histogram1DCanvas2->Clear();
+    Histogram1D->Write(); Histogram1DCanvas2->Clear();
     gStyle->SetTitleFontSize(TitleFontSize);
     gROOT->ForceStyle();
 
@@ -1649,7 +1649,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas1, // canvas c1 of other histograms
                    double titleSize,
                    double labelSizex,
                    double labelSizey,
-                   TList *Histogram_list,
+                   TList *Histogram_list, TFile *Histogram_OutPDF,
                    int lineWidth,
                    bool LogScalePlot,
                    bool LinearScalePlot,
@@ -1791,7 +1791,7 @@ void histPlotter1D(TCanvas *Histogram1DCanvas1, // canvas c1 of other histograms
         Histogram1DCanvas2->SaveAs(SaveDir);
     }
 
-    Histogram1DCanvas2->Clear();
+    Histogram1D->Write(); Histogram1DCanvas2->Clear();
     gStyle->SetTitleFontSize(TitleFontSize);
     gROOT->ForceStyle();
 
@@ -1826,7 +1826,7 @@ void histPlotter1DwFit(TCanvas *Histogram1DCanvas,
                        double custom_normalization_factor,
                        string Histogram1DTitle,
                        string Histogram1DTitleReactions,
-                       TList *Histogram_list,
+                       TList *Histogram_list, TFile *Histogram_OutPDF,
                        string Histogram1DSaveName,
                        const string &Histogram1DSaveNamePath,
                        string finalState,
@@ -2013,7 +2013,7 @@ void histPlotter1DwFit(TCanvas *Histogram1DCanvas,
         Histogram1DCanvas->SaveAs(SaveDir);
     }
 
-    Histogram1DCanvas->Clear();
+    Histogram1D->Write(); Histogram1DCanvas->Clear();
 }
 //</editor-fold>
 
@@ -2029,7 +2029,7 @@ void stackPlotter1D(TCanvas *Histogram1DCanvas,
                     bool normalize_Histogram,
                     string Histogram1DTitle,
                     string Histogram1DTitleReactions,
-                    TList *Histogram_list,
+                    TList *Histogram_list, TFile *Histogram_OutPDF,
                     TH1D *H1D_All_Int,
                     TH1D *H1D_QEL,
                     TH1D *H1D_MEC,
@@ -2136,7 +2136,7 @@ void stackPlotter1D(TCanvas *Histogram1DCanvas,
         Histogram1DCanvas->SaveAs((Histogram1DStackSaveNamePath + Histogram1DStackSaveName + "_" + Histogram1DTitleReactions + "_" + finalState + ".png").c_str());
     }
 
-    Histogram1DCanvas->Clear();
+    Histogram1DStack->Write(); Histogram1DCanvas->Clear();
 }
 //</editor-fold>
 
@@ -2154,7 +2154,7 @@ void histPlotter2D(TCanvas *Histogram1DCanvas,
                    double labelSizex,
                    double labelSizey,
                    double labelSizez,
-                   TList *Histogram_list,
+                   TList *Histogram_list, TFile *Histogram_OutPDF,
                    bool zLogScalePlot,
                    string Histogram1DSaveNameDir,
                    string Histogram1DSaveName,
@@ -2198,7 +2198,7 @@ void histPlotter2D(TCanvas *Histogram1DCanvas,
     Histogram1DCanvas->SaveAs((Histogram1DSaveNameDir + Histogram1DSaveName + ".png").c_str());
     gStyle->SetStatX(DefStatX);
     gStyle->SetStatY(DefStatY);
-    Histogram1DCanvas->Clear();
+    Histogram2D->Write(); Histogram1DCanvas->Clear();
 }
 //</editor-fold>
 
@@ -2212,7 +2212,7 @@ void histPlotter2D(TCanvas *Histogram1DCanvas,
                    double labelSizex,
                    double labelSizey,
                    double labelSizez,
-                   TList *Histogram_list,
+                   TList *Histogram_list, TFile *Histogram_OutPDF,
                    bool zLogScalePlot,
                    string Histogram1DSaveNameDir,
                    string Histogram1DSaveName,
@@ -2267,7 +2267,7 @@ void histPlotter2D(TCanvas *Histogram1DCanvas,
     Histogram1DCanvas->SaveAs((Histogram1DSaveNameDir + Histogram1DSaveName).c_str());
     gStyle->SetStatX(DefStatX);
     gStyle->SetStatY(DefStatY);
-    Histogram1DCanvas->Clear();
+    Histogram2D->Write(); Histogram1DCanvas->Clear();
 }
 //</editor-fold>
 
@@ -2281,7 +2281,7 @@ void histPlotter2D(TCanvas *Histogram1DCanvas,
                    double labelSizex,
                    double labelSizey,
                    double labelSizez,
-                   TList *Histogram_list,
+                   TList *Histogram_list, TFile *Histogram_OutPDF,
                    bool zLogScalePlot,
                    string Histogram1DSaveNameDir,
                    string Histogram1DSaveName,
@@ -2333,7 +2333,7 @@ void histPlotter2D(TCanvas *Histogram1DCanvas,
     Histogram1DCanvas->SaveAs((Histogram1DSaveNameDir + Histogram1DSaveName).c_str());
     gStyle->SetStatX(DefStatX);
     gStyle->SetStatY(DefStatY);
-    Histogram1DCanvas->Clear();
+    Histogram2D->Write(); Histogram1DCanvas->Clear();
 }
 //</editor-fold>
 
@@ -2347,7 +2347,7 @@ void histPlotter2D(TCanvas *Histogram1DCanvas,
                    double labelSizex,
                    double labelSizey,
                    double labelSizez,
-                   TList *Histogram_list,
+                   TList *Histogram_list, TFile *Histogram_OutPDF,
                    bool zLogScalePlot,
                    string Histogram1DSaveNameDir,
                    string Histogram1DSaveName,
@@ -2409,7 +2409,7 @@ void histPlotter2D(TCanvas *Histogram1DCanvas,
     Histogram1DCanvas->SaveAs((Histogram1DSaveNameDir + Histogram1DSaveName).c_str());
     gStyle->SetStatX(DefStatX);
     gStyle->SetStatY(DefStatY);
-    Histogram1DCanvas->Clear();
+    Histogram2D->Write(); Histogram1DCanvas->Clear();
 }
 //</editor-fold>
 

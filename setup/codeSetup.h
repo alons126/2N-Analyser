@@ -52,7 +52,8 @@ std::string MomentumResolutionDirectory = DataDirectory + "NeutronResolution" + 
 std::string NucleonCutsDirectory = DataDirectory + "NucleonCuts" + "/";
 std::string PIDCutsDirectory = DataDirectory + "PIDCuts" + "/";
 
-std::string plots_file_type = "_plots.root";
+std::string plots_TList_FileType = "_plots.root";
+std::string plots_TFile_FileType = "_plots.pdf";
 std::string log_file_name = "Run_log.txt";
 std::string plots_log_save_Directory = plots_path + "/" + log_file_name;
 //</editor-fold>
@@ -146,21 +147,21 @@ std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 // HIPO files for uniform samples ---------------------------------------------------------------------------------------------------------------------------------------
 
 /* Local hipo files - Uniform sample @ 6GeV */
-// std::string AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/598636MeV"; // Storage (D:)
-// std::string AnalyseFileSample = "reconhipo";                                                               // my test with Justin's code; all particle data saved
-// std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-// std::string AnalyseFile = AnalyseFileDir + "recon_Uniform_sample_598636MeV_*.hipo";                        // 11 files
+ // std::string AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/598636MeV"; // Storage (D:)
+ // std::string AnalyseFileSample = "reconhipo";                                                               // my test with Justin's code; all particle data saved
+ // std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+ // std::string AnalyseFile = AnalyseFileDir + "recon_Uniform_sample_598636MeV_*.hipo";                        // 11 files
 
-// std::string AnalyseFilePath = "mnt/d/e4nu/hipo_data_files";                                              // Storage (D:)
-////std::string AnalyseFilePath = "mnt/h/e4nu/hipo_data_files";                                              // Alon's Passport (F:)
-////std::string AnalyseFilePath = "mnt/g/e4nu/hipo_data_files";                                              // Alon's Portable (G:)
-// std::string AnalyseFileSample = "C12x4_G18_02a_00_000_Q204_598636MeV";                                   // my test with Justin's code; all particle data saved
-// std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-////std::string AnalyseFile = AnalyseFileDir + "*.hipo";
-////std::string AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_9_torus-1.0.hipo"; // 1 file
-// std::string AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_51*.hipo";         // 11 files
-////std::string AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_5*.hipo";          // 111 files
-////std::string AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_2*.hipo";          // 512 files
+//  std::string AnalyseFilePath = "mnt/d/e4nu/hipo_data_files";                                              // Storage (D:)
+// //std::string AnalyseFilePath = "mnt/h/e4nu/hipo_data_files";                                              // Alon's Passport (F:)
+// //std::string AnalyseFilePath = "mnt/g/e4nu/hipo_data_files";                                              // Alon's Portable (G:)
+//  std::string AnalyseFileSample = "C12x4_G18_02a_00_000_Q204_598636MeV";                                   // my test with Justin's code; all particle data saved
+//  std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+// //std::string AnalyseFile = AnalyseFileDir + "*.hipo";
+// //std::string AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_9_torus-1.0.hipo"; // 1 file
+//  std::string AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_51*.hipo";         // 11 files
+// //std::string AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_5*.hipo";          // 111 files
+// //std::string AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_2*.hipo";          // 512 files
 
 //// root files -----------------------------------------------------------------------------------------------------------------------------------------------------------
 

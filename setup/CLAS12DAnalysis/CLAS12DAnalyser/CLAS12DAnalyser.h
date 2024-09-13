@@ -303,7 +303,7 @@ DSCuts FD_nucleon_momentum_cut = DSCuts("FD nucleon momentum cut", "FD", "", "pF
 
 /* General plots TList */
 TList *plots = new TList();
-string listName = plots_path + "/" + AnalyseFileSample + plots_file_type;
+string listName = plots_path + "/" + AnalyseFileSample + plots_TList_FileType;
 const char *TListName = listName.c_str();
 //</editor-fold>
 

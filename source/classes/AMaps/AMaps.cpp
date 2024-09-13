@@ -23,6 +23,13 @@
 //<editor-fold desc="AMaps generation constructor">
 AMaps::AMaps(const string &SampleName, bool reformat_e_bins, bool varying_P_e_bins, bool varying_P_nuc_bins, double beamE, const string &AMapsMode, const string &SavePath,
              int nOfNucMomBins, int nOfElecMomBins, int hnsNumOfXBins, int hnsNumOfYBins, int hesNumOfXBins, int hesNumOfYBins) {
+    AcceptanceMapsBC_OutFile = new TFile((SavePath + "/" + "AcceptanceMapsBC.pdf").c_str(),"RECREATE");
+    TLAMaps_OutFile = new TFile((SavePath + "/" + "TLAMaps.pdf").c_str(),"RECREATE");
+    RecoAMaps_OutFile = new TFile((SavePath + "/" + "RecoAMaps.pdf").c_str(),"RECREATE");
+    AMapsRatio_OutFile = new TFile((SavePath + "/" + "AMapsRatio.pdf").c_str(),"RECREATE");
+    Charged_particle_Sep_AMaps_OutFile = new TFile((SavePath + "/" + "Charged_particle_Sep_AMaps.pdf").c_str(),"RECREATE");
+    AcceptanceMaps_OutFile = new TFile((SavePath + "/" + "AcceptanceMaps.pdf").c_str(),"RECREATE");
+
     AMaps_Mode = AMapsMode;
     SName = SampleName;
     AMapSavePath = SavePath;
@@ -1602,43 +1609,43 @@ void AMaps::DrawAndSaveHitMaps(const string &SampleName, TCanvas *h1DCanvas, con
     SaveHitMaps(SampleName, AcceptanceMapsDirectory);
 
     /* Acceptance maps BC */
-    ElectronAMapBC.hDrawAndSave(SampleNameTemp, h1DCanvas, AcceptanceMapsBC, true);
-    ProtonAMapBC.hDrawAndSave(SampleNameTemp, h1DCanvas, AcceptanceMapsBC, true);
-    NeutronAMapBC.hDrawAndSave(SampleNameTemp, h1DCanvas, AcceptanceMapsBC, true);
-    NucleonAMapBC.hDrawAndSave(SampleNameTemp, h1DCanvas, AcceptanceMapsBC, true);
+    ElectronAMapBC.hDrawAndSave(SampleNameTemp, h1DCanvas, AcceptanceMapsBC,AcceptanceMapsBC_OutFile, true);
+    ProtonAMapBC.hDrawAndSave(SampleNameTemp, h1DCanvas, AcceptanceMapsBC,AcceptanceMapsBC_OutFile, true);
+    NeutronAMapBC.hDrawAndSave(SampleNameTemp, h1DCanvas, AcceptanceMapsBC,AcceptanceMapsBC_OutFile, true);
+    NucleonAMapBC.hDrawAndSave(SampleNameTemp, h1DCanvas, AcceptanceMapsBC,AcceptanceMapsBC_OutFile, true);
 
     /* Electron maps */
     for (int i = 0; i < ElectronMomSliceLimits.size(); i++) {
-        ElectronTLAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, TLAMaps, true);
-        ElectronRecoAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, RecoAMaps, true);
-        ElectronRecoToTLRatioBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, AMapsRatio, true);
-        ElectronAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, Charged_particle_Sep_AMaps, true);
+        ElectronTLAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, TLAMaps,TLAMaps_OutFile, true);
+        ElectronRecoAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, RecoAMaps,RecoAMaps_OutFile, true);
+        ElectronRecoToTLRatioBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, AMapsRatio,AMapsRatio_OutFile, true);
+        ElectronAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, Charged_particle_Sep_AMaps,Charged_particle_Sep_AMaps_OutFile, true);
     }
 
     for (int i = 0; i < NucleonMomSliceLimits.size(); i++) {
         /* Proton maps */
-        ProtonTLAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, TLAMaps, true);
-        ProtonRecoAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, RecoAMaps, true);
-        ProtonRecoToTLRatioBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, AMapsRatio, true);
-        ProtonAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, Charged_particle_Sep_AMaps, true);
+        ProtonTLAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, TLAMaps,TLAMaps_OutFile, true);
+        ProtonRecoAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, RecoAMaps,RecoAMaps_OutFile, true);
+        ProtonRecoToTLRatioBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, AMapsRatio,AMapsRatio_OutFile, true);
+        ProtonAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, Charged_particle_Sep_AMaps,Charged_particle_Sep_AMaps_OutFile, true);
 
         /* Neutron maps */
-        NeutronTLAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, TLAMaps, true);
-        NeutronRecoAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, RecoAMaps, true);
-        NeutronRecoToTLRatioBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, AMapsRatio, true);
-        NeutronAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, Charged_particle_Sep_AMaps, true);
+        NeutronTLAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, TLAMaps,TLAMaps_OutFile, true);
+        NeutronRecoAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, RecoAMaps,RecoAMaps_OutFile, true);
+        NeutronRecoToTLRatioBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, AMapsRatio,AMapsRatio_OutFile, true);
+        NeutronAMapsBySlice.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, Charged_particle_Sep_AMaps,Charged_particle_Sep_AMaps_OutFile, true);
     }
 
     /* Neutron maps */
-    NeutronTLAMap.hDrawAndSave(SampleNameTemp, h1DCanvas, TLAMaps, true);
-    NeutronRecoAMap.hDrawAndSave(SampleNameTemp, h1DCanvas, RecoAMaps, true);
-    NeutronRecoToTLRatio.hDrawAndSave(SampleNameTemp, h1DCanvas, AMapsRatio, true);
+    NeutronTLAMap.hDrawAndSave(SampleNameTemp, h1DCanvas, TLAMaps,TLAMaps_OutFile, true);
+    NeutronRecoAMap.hDrawAndSave(SampleNameTemp, h1DCanvas, RecoAMaps,RecoAMaps_OutFile, true);
+    NeutronRecoToTLRatio.hDrawAndSave(SampleNameTemp, h1DCanvas, AMapsRatio,AMapsRatio_OutFile, true);
 
     /* Finalized acceptance maps */
-    ElectronAMap.hDrawAndSave(SampleNameTemp, h1DCanvas, AcceptanceMaps, true);
-    ProtonAMap.hDrawAndSave(SampleNameTemp, h1DCanvas, AcceptanceMaps, true);
-    NeutronAMap.hDrawAndSave(SampleNameTemp, h1DCanvas, AcceptanceMaps, true);
-    NucleonAMap.hDrawAndSave(SampleNameTemp, h1DCanvas, AcceptanceMaps, true);
+    ElectronAMap.hDrawAndSave(SampleNameTemp, h1DCanvas, AcceptanceMaps,AcceptanceMaps_OutFile, true);
+    ProtonAMap.hDrawAndSave(SampleNameTemp, h1DCanvas, AcceptanceMaps,AcceptanceMaps_OutFile, true);
+    NeutronAMap.hDrawAndSave(SampleNameTemp, h1DCanvas, AcceptanceMaps,AcceptanceMaps_OutFile, true);
+    NucleonAMap.hDrawAndSave(SampleNameTemp, h1DCanvas, AcceptanceMaps,AcceptanceMaps_OutFile, true);
 
     //<editor-fold desc="Save TL Acceptance maps to plots directory">
     /* Acceptance maps BC */

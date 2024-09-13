@@ -121,6 +121,13 @@ private:
     TList *Charged_particle_Sep_AMaps = new TList();
     TList *AcceptanceMaps = new TList();
 
+    TFile *AcceptanceMapsBC_OutFile;
+    TFile *TLAMaps_OutFile;
+    TFile *RecoAMaps_OutFile;
+    TFile *AMapsRatio_OutFile;
+    TFile *Charged_particle_Sep_AMaps_OutFile;
+    TFile *AcceptanceMaps_OutFile;
+
     string AMapSavePath, AMapCopySavePath;
 
     string AMapsBC_prefix = "00_AMaps_BC_-_";

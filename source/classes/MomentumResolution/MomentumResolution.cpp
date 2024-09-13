@@ -57,6 +57,8 @@ void MomentumResolution::MomResInit(const bool &plot_and_fit_MomRes, const bool 
                                     const bool &FitDebugging) {
     if (isNeutron) {
         if (plot_and_fit_MomRes) {
+            ResSlicePlots_OutFile = new TFile((SavePath + "/" + "Neutron_ResSlicePlots.pdf").c_str(),"RECREATE");
+
             SetMomResCalculations(SampleName, NucleonCutsDirectory, beamE, MomRes_mu_cuts, MomRes_sigma_cuts, ParticleMomTh, Calculate_momResS2, Run_with_momResS2,
                                   MomentumResolutionDirectory, SavePath, DeltaSlices, VaryingDelta, SmearM, CorrM, momRes_test, false, FitDebugging);
 
@@ -139,6 +141,8 @@ void MomentumResolution::MomResInit(const bool &plot_and_fit_MomRes, const bool 
         }
     } else if (isProton) {
         if (plot_and_fit_MomRes) {
+            ResSlicePlots_OutFile = new TFile((SavePath + "/" + "Proton_ResSlicePlots.pdf").c_str(),"RECREATE");
+
             SetMomResCalculations(SampleName, NucleonCutsDirectory, beamE, MomRes_mu_cuts, MomRes_sigma_cuts, ParticleMomTh, Calculate_momResS2, Run_with_momResS2,
                                   MomentumResolutionDirectory, SavePath, DeltaSlices, VaryingDelta, SmearM, CorrM, momRes_test, ForceSmallpResLimits, FitDebugging);
         }
@@ -1262,11 +1266,11 @@ void MomentumResolution::DrawAndSaveResSlices(const string &SampleName, TCanvas 
     }
 
     for (int i = 0; i < TL_NumberOfSlices; i++) {
-        ResTLMomSlices.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, ResSlicePlots, false, true, 1., 9999, 9999, 0, false);
+        ResTLMomSlices.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, ResSlicePlots, ResSlicePlots_OutFile, false, true, 1., 9999, 9999, 0, false);
     }
 
     for (int i = 0; i < Reco_NumberOfSlices; i++) {
-        ResRecoMomSlices.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, ResSlicePlots, false, true, 1., 9999, 9999, 0, false);
+        ResRecoMomSlices.at(i).hDrawAndSave(SampleNameTemp, h1DCanvas, ResSlicePlots, ResSlicePlots_OutFile, false, true, 1., 9999, 9999, 0, false);
     }
 
     /* Save res and fitted res plots to plots directory: */

@@ -1,3 +1,0 @@
-/home/alon/project/cmake-build-debug-wsl/CMakeFiles/rebuild_cache.dir
-/home/alon/project/cmake-build-debug-wsl/CMakeFiles/edit_cache.dir
-/home/alon/project/cmake-build-debug-wsl/CMakeFiles/project.dir
