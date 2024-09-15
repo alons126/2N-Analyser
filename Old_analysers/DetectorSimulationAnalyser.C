@@ -1050,7 +1050,8 @@ void EventAnalyser()
 
     if (is2GeVSample)
     {
-        Q2_uboundary_FD = 1;
+        Q2_uboundary_FD = 0.8;
+        // Q2_uboundary_FD = 1;
     }
     else if (is4GeVSample)
     {
