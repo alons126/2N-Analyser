@@ -624,7 +624,7 @@ void EventAnalyser()
     bool FSR_1D_plots, FSR_2D_plots; // FSR_2D_plots is disabled below if HipoChainLength is 2 or lower
     //</editor-fold>
 
-    bool TestRun = false; // set as false for a full run
+    bool TestRun = true; // set as false for a full run
 
     //<editor-fold desc="Set enabled plots">
     if (!TestRun)
@@ -694,12 +694,13 @@ void EventAnalyser()
         Plot_selector_master = true; // Master plot selector for analysis
 
         /* Cut variable plots */
-        Cut_plots_master = true; // Master cut plots selector
-                                 //     Nphe_plots = true, Chi2_plots = true, Vertex_plots = true, SF_plots = true, fiducial_plots = true;
+        // Cut_plots_master = true;
+        Cut_plots_master = false; // Master cut plots selector
+        // Nphe_plots = true, Chi2_plots = true, Vertex_plots = true, SF_plots = true, fiducial_plots = true;
         Nphe_plots = false, Chi2_plots = false, Vertex_plots = false, SF_plots = false, fiducial_plots = false;
 
-        Momentum_plots = true;
-        //        Momentum_plots = false;
+        // Momentum_plots = true;
+        Momentum_plots = false;
 
         /* W plots */
         //     W_plots = true;
@@ -718,8 +719,8 @@ void EventAnalyser()
         Theta_e_plots = false, Phi_e_plots = false;
 
         /* Momentum transfer plots */
-        //     Momentum_transfer_plots = true;
-        Momentum_transfer_plots = false;
+        Momentum_transfer_plots = true;
+        // Momentum_transfer_plots = false;
 
         /* E_e plots */
         //     E_e_plots = true;
@@ -743,18 +744,18 @@ void EventAnalyser()
         ToF_plots = false;
 
         /* Efficiency plots */
-        Efficiency_plots = true;
-        //        Efficiency_plots = false;
-        TL_after_Acceptance_Maps_plots = true;
-        //        TL_after_Acceptance_Maps_plots = false;
+        // Efficiency_plots = true;
+        Efficiency_plots = false;
+        // TL_after_Acceptance_Maps_plots = true;
+        TL_after_Acceptance_Maps_plots = false;
 
         /* Resolution plots */
         //        AMaps_plots = true;
         AMaps_plots = false;
 
         /* Resolution plots */
-        Resolution_plots = true;
-        //        Resolution_plots = false;
+        // Resolution_plots = true;
+        Resolution_plots = false;
 
         /* Multiplicity plots */
         //        Multiplicity_plots = true;
