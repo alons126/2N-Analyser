@@ -1044,6 +1044,22 @@ void EventAnalyser()
     const double Opening_Ang_narrow_lboundary = 0, Opening_Ang_narrow_uboundary = 100.;
     const double Phi_lboundary = -180., Phi_uboundary = 180.;
 
+    /* Momentum transfer boundries */
+    double Q2_lboundary_FD = 0., Q2_uboundary_FD = beamE * 1.1;
+
+    if (is2GeVSample)
+    {
+        Q2_uboundary_FD = 1;
+    }
+    else if (is4GeVSample)
+    {
+        Q2_uboundary_FD = 3;
+    }
+    else if (is6GeVSample)
+    {
+        Q2_uboundary_FD = 5;
+    }
+
     /* TKI boundries */
     const double dP_T_boundary = 3.;
     //</editor-fold>
@@ -5925,498 +5941,498 @@ void EventAnalyser()
 
     //<editor-fold desc="Momentum transfer histograms (no #(e) cut)">
     THStack *sQ2_All_e = new THStack("Q^{2} (no #(e) cut, CD & FD)", "Q^{2} Histogram (no #(e) cut, CD & FD);Q^{2} [GeV^{2}/c^{2}];");
-    TH1D *hQ2_All_e = new TH1D("Q^{2} (no #(e) cut, FD)", "Q^{2} (no #(e) cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
-    TH1D *hQ2_QEL_All_e = new TH1D("Q^{2} (QE Only, no #(e) cut, FD)", "Q^{2} (QE Only, no #(e) cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                   beamE * 1.1);
-    TH1D *hQ2_MEC_All_e = new TH1D("Q^{2} (MEC Only, no #(e) cut, FD)", "Q^{2} (MEC Only, no #(e) cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                   beamE * 1.1);
-    TH1D *hQ2_RES_All_e = new TH1D("Q^{2} (RES Only, no #(e) cut, FD)", "Q^{2} (RES Only, no #(e) cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                   beamE * 1.1);
-    TH1D *hQ2_DIS_All_e = new TH1D("Q^{2} (DIS Only, no #(e) cut, FD)", "Q^{2} (DIS Only, no #(e) cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                   beamE * 1.1);
+    TH1D *hQ2_All_e = new TH1D("Q^{2} (no #(e) cut, FD)", "Q^{2} (no #(e) cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
+    TH1D *hQ2_QEL_All_e = new TH1D("Q^{2} (QE Only, no #(e) cut, FD)", "Q^{2} (QE Only, no #(e) cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                   Q2_uboundary_FD);
+    TH1D *hQ2_MEC_All_e = new TH1D("Q^{2} (MEC Only, no #(e) cut, FD)", "Q^{2} (MEC Only, no #(e) cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                   Q2_uboundary_FD);
+    TH1D *hQ2_RES_All_e = new TH1D("Q^{2} (RES Only, no #(e) cut, FD)", "Q^{2} (RES Only, no #(e) cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                   Q2_uboundary_FD);
+    TH1D *hQ2_DIS_All_e = new TH1D("Q^{2} (DIS Only, no #(e) cut, FD)", "Q^{2} (DIS Only, no #(e) cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                   Q2_uboundary_FD);
     string hQ2_All_e_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_All_e_Directory"];
 
     THStack *sq_3v_All_e = new THStack("q = |#font[62]{q}| (no #(e) cut, CD & FD)", "q = |#font[62]{q}| Histogram (no #(e) cut, CD & FD);q [GeV/c];");
-    TH1D *hq_3v_All_e = new TH1D("q = |#font[62]{q}| (no #(e) cut, FD)", "q = |#font[62]{q}| (no #(e) cut, FD);q [GeV/c];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                 beamE * 1.1);
+    TH1D *hq_3v_All_e = new TH1D("q = |#font[62]{q}| (no #(e) cut, FD)", "q = |#font[62]{q}| (no #(e) cut, FD);q [GeV/c];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                 Q2_uboundary_FD);
     TH1D *hq_3v_QEL_All_e = new TH1D("q = |#font[62]{q}| (QE Only, no #(e) cut, FD)", "q = |#font[62]{q}| (QE Only, no #(e) cut, FD);q [GeV/c];",
-                                     numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_MEC_All_e = new TH1D("q = |#font[62]{q}| (MEC Only, no #(e) cut, FD)", "q = |#font[62]{q}| (MEC Only, no #(e) cut, FD);q [GeV/c];",
-                                     numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_RES_All_e = new TH1D("q = |#font[62]{q}| (RES Only, no #(e) cut, FD)", "q = |#font[62]{q}| (RES Only, no #(e) cut, FD);q [GeV/c];",
-                                     numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_DIS_All_e = new TH1D("q = |#font[62]{q}| (DIS Only, no #(e) cut, FD)", "q = |#font[62]{q}| (DIS Only, no #(e) cut, FD);q [GeV/c];",
-                                     numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hq_3v_All_e_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_All_e_Directory"];
     //</editor-fold>
 
     //<editor-fold desc="Momentum transfer histograms (1e cut)">
     THStack *sQ2_1e_cut = new THStack("Q^{2} (1e Cut ,CD & FD)", "Q^{2} Histogram (1e Cut, CD & FD);Q^{2} [GeV^{2}/c^{2}];");
-    TH1D *hQ2_1e_cut = new TH1D("Q^{2} (1e Cut, FD)", "Q^{2} (1e Cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
-    TH1D *hQ2_QEL_1e_cut = new TH1D("Q^{2} (QE Only, 1e Cut, FD)", "Q^{2} (QE Only, 1e Cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                    beamE * 1.1);
-    TH1D *hQ2_MEC_1e_cut = new TH1D("Q^{2} (MEC Only, 1e Cut, FD)", "Q^{2} (MEC Only, 1e Cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                    beamE * 1.1);
-    TH1D *hQ2_RES_1e_cut = new TH1D("Q^{2} (RES Only, 1e Cut, FD)", "Q^{2} (RES Only, 1e Cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                    beamE * 1.1);
-    TH1D *hQ2_DIS_1e_cut = new TH1D("Q^{2} (DIS Only, 1e Cut, FD)", "Q^{2} (DIS Only, 1e Cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                    beamE * 1.1);
+    TH1D *hQ2_1e_cut = new TH1D("Q^{2} (1e Cut, FD)", "Q^{2} (1e Cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
+    TH1D *hQ2_QEL_1e_cut = new TH1D("Q^{2} (QE Only, 1e Cut, FD)", "Q^{2} (QE Only, 1e Cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                    Q2_uboundary_FD);
+    TH1D *hQ2_MEC_1e_cut = new TH1D("Q^{2} (MEC Only, 1e Cut, FD)", "Q^{2} (MEC Only, 1e Cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                    Q2_uboundary_FD);
+    TH1D *hQ2_RES_1e_cut = new TH1D("Q^{2} (RES Only, 1e Cut, FD)", "Q^{2} (RES Only, 1e Cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                    Q2_uboundary_FD);
+    TH1D *hQ2_DIS_1e_cut = new TH1D("Q^{2} (DIS Only, 1e Cut, FD)", "Q^{2} (DIS Only, 1e Cut, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                    Q2_uboundary_FD);
     string hQ2_1e_cut_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1e_cut_Directory"];
 
     THStack *sq_3v_1e_cut = new THStack("q = |#font[62]{q}| (1e Cut, CD & FD)", "q = |#font[62]{q}| Histogram (1e Cut, CD & FD);q [GeV/c];");
-    TH1D *hq_3v_1e_cut = new TH1D("q = |#font[62]{q}| (1e Cut, FD)", "q = |#font[62]{q}| (1e Cut, FD);q [GeV/c];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+    TH1D *hq_3v_1e_cut = new TH1D("q = |#font[62]{q}| (1e Cut, FD)", "q = |#font[62]{q}| (1e Cut, FD);q [GeV/c];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_QEL_1e_cut = new TH1D("q = |#font[62]{q}| (QE Only, 1e Cut, FD)", "q = |#font[62]{q}| (QE Only, 1e Cut, FD);q [GeV/c];",
-                                      numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                      numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_MEC_1e_cut = new TH1D("q = |#font[62]{q}| (MEC Only, 1e Cut, FD)", "q = |#font[62]{q}| (MEC Only, 1e Cut, FD);q [GeV/c];",
-                                      numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                      numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_RES_1e_cut = new TH1D("q = |#font[62]{q}| (RES Only, 1e Cut, FD)", "q = |#font[62]{q}| (RES Only, 1e Cut, FD);q [GeV/c];",
-                                      numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                      numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_DIS_1e_cut = new TH1D("q = |#font[62]{q}| (DIS Only, 1e Cut, FD)", "q = |#font[62]{q}| (DIS Only, 1e Cut, FD);q [GeV/c];",
-                                      numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                      numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hq_3v_1e_cut_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1e_cut_Directory"];
 
     TH2D *hQ2_VS_W_1e_cut = new TH2D("Q^{2} vs. W (All Int., 1e Cut)",
                                      "Q^{2} vs. W (All Int., 1e Cut);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_QEL_1e_cut = new TH2D("Q^{2} vs. W (QE Only, 1e Cut)",
                                          "Q^{2} vs. W (QE Only, 1e Cut);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_MEC_1e_cut = new TH2D("Q^{2} vs. W (MEC Only, 1e Cut)",
                                          "Q^{2} vs. W (MEC Only, 1e Cut);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_RES_1e_cut = new TH2D("Q^{2} vs. W (RES Only, 1e Cut)",
                                          "Q^{2} vs. W (RES Only, 1e Cut);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_DIS_1e_cut = new TH2D("Q^{2} vs. W (DIS Only, 1e Cut)",
                                          "Q^{2} vs. W (DIS Only, 1e Cut);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_W_1e_cut_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1e_cut_Directory"];
 
     TH2D *hQ2_VS_q_3v_1e_cut = new TH2D("Q^{2} vs. |#font[62]{q}| (All Int., 1e Cut)", "Q^{2} vs. |#font[62]{q}| (All Int., 1e Cut);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                        numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                        numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_QEL_1e_cut = new TH2D("Q^{2} vs. |#font[62]{q}| (QE Only, 1e Cut)", "Q^{2} vs. |#font[62]{q}| (QE Only, 1e Cut);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                            numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                            numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_MEC_1e_cut = new TH2D("Q^{2} vs. |#font[62]{q}| (MEC Only, 1e Cut)", "Q^{2} vs. |#font[62]{q}| (MEC Only, 1e Cut);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                            numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                            numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_RES_1e_cut = new TH2D("Q^{2} vs. |#font[62]{q}| (RES Only, 1e Cut)", "Q^{2} vs. |#font[62]{q}| (RES Only, 1e Cut);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                            numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                            numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_DIS_1e_cut = new TH2D("Q^{2} vs. |#font[62]{q}| (DIS Only, 1e Cut)", "Q^{2} vs. |#font[62]{q}| (DIS Only, 1e Cut);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                            numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                            numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_q_3v_1e_cut_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1e_cut_Directory"];
 
     TH2D *hQ2_VS_omega_1e_cut = new TH2D("Q^{2} vs. #omega (All Int., 1e Cut)", "Q^{2} vs. #omega (All Int., 1e Cut);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_QEL_1e_cut = new TH2D("Q^{2} vs. #omega (QE Only, 1e Cut)", "Q^{2} vs. #omega (QE Only, 1e Cut);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                             numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                             numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_MEC_1e_cut = new TH2D("Q^{2} vs. #omega (MEC Only, 1e Cut)", "Q^{2} vs. #omega (MEC Only, 1e Cut);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                             numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                             numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_RES_1e_cut = new TH2D("Q^{2} vs. #omega (RES Only, 1e Cut)", "Q^{2} vs. #omega (RES Only, 1e Cut);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                             numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                             numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_DIS_1e_cut = new TH2D("Q^{2} vs. #omega (DIS Only, 1e Cut)", "Q^{2} vs. #omega (DIS Only, 1e Cut);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                             numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                             numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_omega_1e_cut_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1e_cut_Directory"];
 
     TH2D *hq_3v_VS_omega_1e_cut = new TH2D("|#font[62]{q}| vs. #omega (All Int., 1e Cut)", "|#font[62]{q}| vs. #omega (All Int., 1e Cut);#omega [GeV];q [GeV/c]",
-                                           numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                           numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_QEL_1e_cut = new TH2D("|#font[62]{q}| vs. #omega (QE Only, 1e Cut)", "|#font[62]{q}| vs. #omega (QE Only, 1e Cut);#omega [GeV];q [GeV/c]",
-                                               numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                               numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_MEC_1e_cut = new TH2D("|#font[62]{q}| vs. #omega (MEC Only, 1e Cut)", "|#font[62]{q}| vs. #omega (MEC Only, 1e Cut);#omega [GeV];q [GeV/c]",
-                                               numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                               numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_RES_1e_cut = new TH2D("|#font[62]{q}| vs. #omega (RES Only, 1e Cut)", "|#font[62]{q}| vs. #omega (RES Only, 1e Cut);#omega [GeV];q [GeV/c]",
-                                               numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                               numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_DIS_1e_cut = new TH2D("|#font[62]{q}| vs. #omega (DIS Only, 1e Cut)", "|#font[62]{q}| vs. #omega (DIS Only, 1e Cut);#omega [GeV];q [GeV/c]",
-                                               numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                               numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hq_3v_VS_omega_1e_cut_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1e_cut_Directory"];
     //</editor-fold>
 
     //<editor-fold desc="Momentum transfer histograms (1p)">
     THStack *sQ2_1p = new THStack("Q^{2} (1p, CD & FD)", "Q^{2} (1p, CD & FD);Q^{2} [GeV^{2}/c^{2}];");
-    TH1D *hQ2_1p = new TH1D("Q^{2} (1p, FD)", "Q^{2} (1p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
-    TH1D *hQ2_QEL_1p = new TH1D("Q^{2} (QE Only, 1p, FD)", "Q^{2} (QE Only, 1p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
-    TH1D *hQ2_MEC_1p = new TH1D("Q^{2} (MEC Only, 1p, FD)", "Q^{2} (MEC Only, 1p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
-    TH1D *hQ2_RES_1p = new TH1D("Q^{2} (RES Only, 1p, FD)", "Q^{2} (RES Only, 1p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
-    TH1D *hQ2_DIS_1p = new TH1D("Q^{2} (DIS Only, 1p, FD)", "Q^{2} (DIS Only, 1p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+    TH1D *hQ2_1p = new TH1D("Q^{2} (1p, FD)", "Q^{2} (1p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
+    TH1D *hQ2_QEL_1p = new TH1D("Q^{2} (QE Only, 1p, FD)", "Q^{2} (QE Only, 1p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
+    TH1D *hQ2_MEC_1p = new TH1D("Q^{2} (MEC Only, 1p, FD)", "Q^{2} (MEC Only, 1p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
+    TH1D *hQ2_RES_1p = new TH1D("Q^{2} (RES Only, 1p, FD)", "Q^{2} (RES Only, 1p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
+    TH1D *hQ2_DIS_1p = new TH1D("Q^{2} (DIS Only, 1p, FD)", "Q^{2} (DIS Only, 1p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_1p_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1p_Directory"];
 
     THStack *sq_3v_1p = new THStack("q = |#font[62]{q}| (1p, CD & FD)", "q = |#font[62]{q}| Histogram (1p, CD & FD);q [GeV/c];");
-    TH1D *hq_3v_1p = new TH1D("q = |#font[62]{q}| (1p, FD)", "q = |#font[62]{q}| (1p, FD);q [GeV/c];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+    TH1D *hq_3v_1p = new TH1D("q = |#font[62]{q}| (1p, FD)", "q = |#font[62]{q}| (1p, FD);q [GeV/c];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_QEL_1p = new TH1D("q = |#font[62]{q}| (QE Only, 1p, FD)", "q = |#font[62]{q}| (QE Only, 1p, FD);q [GeV/c];",
-                                  numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                  numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_MEC_1p = new TH1D("q = |#font[62]{q}| (MEC Only, 1p, FD)", "q = |#font[62]{q}| (MEC Only, 1p, FD);q [GeV/c];",
-                                  numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                  numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_RES_1p = new TH1D("q = |#font[62]{q}| (RES Only, 1p, FD)", "q = |#font[62]{q}| (RES Only, 1p, FD);q [GeV/c];",
-                                  numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                  numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_DIS_1p = new TH1D("q = |#font[62]{q}| (DIS Only, 1p, FD)", "q = |#font[62]{q}| (DIS Only, 1p, FD);q [GeV/c];",
-                                  numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                  numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hq_3v_1p_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1p_Directory"];
 
     TH2D *hQ2_VS_W_1p = new TH2D("Q^{2} vs. W (All Int., 1p)",
                                  "Q^{2} vs. W (All Int., 1p);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                 numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                 numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_QEL_1p = new TH2D("Q^{2} vs. W (QE Only, 1p)",
                                      "Q^{2} vs. W (QE Only, 1p);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_MEC_1p = new TH2D("Q^{2} vs. W (MEC Only, 1p)",
                                      "Q^{2} vs. W (MEC Only, 1p);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_RES_1p = new TH2D("Q^{2} vs. W (RES Only, 1p)",
                                      "Q^{2} vs. W (RES Only, 1p);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_DIS_1p = new TH2D("Q^{2} vs. W (DIS Only, 1p)",
                                      "Q^{2} vs. W (DIS Only, 1p);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_W_1p_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1p_Directory"];
 
     TH2D *hQ2_VS_q_3v_1p = new TH2D("Q^{2} vs. |#font[62]{q}| (All Int., 1p)", "Q^{2} vs. |#font[62]{q}| (All Int., 1p);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                    numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                    numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_QEL_1p = new TH2D("Q^{2} vs. |#font[62]{q}| (QE Only, 1p)", "Q^{2} vs. |#font[62]{q}| (QE Only, 1p);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                        numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                        numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_MEC_1p = new TH2D("Q^{2} vs. |#font[62]{q}| (MEC Only, 1p)", "Q^{2} vs. |#font[62]{q}| (MEC Only, 1p);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                        numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                        numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_RES_1p = new TH2D("Q^{2} vs. |#font[62]{q}| (RES Only, 1p)", "Q^{2} vs. |#font[62]{q}| (RES Only, 1p);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                        numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                        numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_DIS_1p = new TH2D("Q^{2} vs. |#font[62]{q}| (DIS Only, 1p)", "Q^{2} vs. |#font[62]{q}| (DIS Only, 1p);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                        numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                        numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_q_3v_1p_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1p_Directory"];
 
     TH2D *hQ2_VS_omega_1p = new TH2D("Q^{2} vs. #omega (All Int., 1p)", "Q^{2} vs. #omega (All Int., 1p);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_QEL_1p = new TH2D("Q^{2} vs. #omega (QE Only, 1p)", "Q^{2} vs. #omega (QE Only, 1p);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_MEC_1p = new TH2D("Q^{2} vs. #omega (MEC Only, 1p)", "Q^{2} vs. #omega (MEC Only, 1p);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_RES_1p = new TH2D("Q^{2} vs. #omega (RES Only, 1p)", "Q^{2} vs. #omega (RES Only, 1p);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_DIS_1p = new TH2D("Q^{2} vs. #omega (DIS Only, 1p)", "Q^{2} vs. #omega (DIS Only, 1p);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_omega_1p_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1p_Directory"];
 
     TH2D *hq_3v_VS_omega_1p = new TH2D("|#font[62]{q}| vs. #omega (All Int., 1p)", "|#font[62]{q}| vs. #omega (All Int., 1p);#omega [GeV];q [GeV/c]",
-                                       numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                       numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_QEL_1p = new TH2D("|#font[62]{q}| vs. #omega (QE Only, 1p)", "|#font[62]{q}| vs. #omega (QE Only, 1p);#omega [GeV];q [GeV/c]",
-                                           numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                           numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_MEC_1p = new TH2D("|#font[62]{q}| vs. #omega (MEC Only, 1p)", "|#font[62]{q}| vs. #omega (MEC Only, 1p);#omega [GeV];q [GeV/c]",
-                                           numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                           numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_RES_1p = new TH2D("|#font[62]{q}| vs. #omega (RES Only, 1p)", "|#font[62]{q}| vs. #omega (RES Only, 1p);#omega [GeV];q [GeV/c]",
-                                           numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                           numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_DIS_1p = new TH2D("|#font[62]{q}| vs. #omega (DIS Only, 1p)", "|#font[62]{q}| vs. #omega (DIS Only, 1p);#omega [GeV];q [GeV/c]",
-                                           numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                           numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hq_3v_VS_omega_1p_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1p_Directory"];
     //</editor-fold>
 
     //<editor-fold desc="Momentum transfer histograms (1n)">
     THStack *sQ2_1n = new THStack("Q^{2} (1n, CD & FD)", "Q^{2} (1n, CD & FD);Q^{2} [GeV^{2}/c^{2}];");
-    TH1D *hQ2_1n = new TH1D("Q^{2} (1n, FD)", "Q^{2} (1n, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
-    TH1D *hQ2_QEL_1n = new TH1D("Q^{2} (QE Only, 1n, FD)", "Q^{2} (QE Only, 1n, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                beamE * 1.1);
-    TH1D *hQ2_MEC_1n = new TH1D("Q^{2} (MEC Only, 1n, FD)", "Q^{2} (MEC Only, 1n, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                beamE * 1.1);
-    TH1D *hQ2_RES_1n = new TH1D("Q^{2} (RES Only, 1n, FD)", "Q^{2} (RES Only, 1n, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                beamE * 1.1);
-    TH1D *hQ2_DIS_1n = new TH1D("Q^{2} (DIS Only, 1n, FD)", "Q^{2} (DIS Only, 1n, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                beamE * 1.1);
+    TH1D *hQ2_1n = new TH1D("Q^{2} (1n, FD)", "Q^{2} (1n, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
+    TH1D *hQ2_QEL_1n = new TH1D("Q^{2} (QE Only, 1n, FD)", "Q^{2} (QE Only, 1n, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                Q2_uboundary_FD);
+    TH1D *hQ2_MEC_1n = new TH1D("Q^{2} (MEC Only, 1n, FD)", "Q^{2} (MEC Only, 1n, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                Q2_uboundary_FD);
+    TH1D *hQ2_RES_1n = new TH1D("Q^{2} (RES Only, 1n, FD)", "Q^{2} (RES Only, 1n, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                Q2_uboundary_FD);
+    TH1D *hQ2_DIS_1n = new TH1D("Q^{2} (DIS Only, 1n, FD)", "Q^{2} (DIS Only, 1n, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                Q2_uboundary_FD);
     TH1D *hq_3v_QEL_1n = new TH1D("q = |#font[62]{q}| (QE Only, 1n, FD)", "q = |#font[62]{q}| (QE Only, 1n, FD);q [GeV/c];",
-                                  numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                  numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_MEC_1n = new TH1D("q = |#font[62]{q}| (MEC Only, 1n, FD)", "q = |#font[62]{q}| (MEC Only, 1n, FD);q [GeV/c];",
-                                  numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                  numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_RES_1n = new TH1D("q = |#font[62]{q}| (RES Only, 1n, FD)", "q = |#font[62]{q}| (RES Only, 1n, FD);q [GeV/c];",
-                                  numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                  numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_DIS_1n = new TH1D("q = |#font[62]{q}| (DIS Only, 1n, FD)", "q = |#font[62]{q}| (DIS Only, 1n, FD);q [GeV/c];",
-                                  numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                  numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_1n_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1n_Directory"];
 
     THStack *sq_3v_1n = new THStack("q = |#font[62]{q}| (1n, CD & FD)", "q = |#font[62]{q}| Histogram (1n, CD & FD);q [GeV/c];");
-    TH1D *hq_3v_1n = new TH1D("q = |#font[62]{q}| (1n, FD)", "q = |#font[62]{q}| (1n, FD);q [GeV/c];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+    TH1D *hq_3v_1n = new TH1D("q = |#font[62]{q}| (1n, FD)", "q = |#font[62]{q}| (1n, FD);q [GeV/c];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hq_3v_1n_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1n_Directory"];
 
     TH2D *hQ2_VS_W_1n = new TH2D("Q^{2} vs. W (All Int., 1n)",
                                  "Q^{2} vs. W (All Int., 1n);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                 numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                 numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_QEL_1n = new TH2D("Q^{2} vs. W (QE Only, 1n)",
                                      "Q^{2} vs. W (QE Only, 1n);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_MEC_1n = new TH2D("Q^{2} vs. W (MEC Only, 1n)",
                                      "Q^{2} vs. W (MEC Only, 1n);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_RES_1n = new TH2D("Q^{2} vs. W (RES Only, 1n)",
                                      "Q^{2} vs. W (RES Only, 1n);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_DIS_1n = new TH2D("Q^{2} vs. W (DIS Only, 1n)",
                                      "Q^{2} vs. W (DIS Only, 1n);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_W_1n_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1n_Directory"];
 
     TH2D *hQ2_VS_q_3v_1n = new TH2D("Q^{2} vs. |#font[62]{q}| (All Int., 1n)", "Q^{2} vs. |#font[62]{q}| (All Int., 1n);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                    numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                    numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_QEL_1n = new TH2D("Q^{2} vs. |#font[62]{q}| (QE Only, 1n)", "Q^{2} vs. |#font[62]{q}| (QE Only, 1n);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                        numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                        numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_MEC_1n = new TH2D("Q^{2} vs. |#font[62]{q}| (MEC Only, 1n)", "Q^{2} vs. |#font[62]{q}| (MEC Only, 1n);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                        numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                        numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_RES_1n = new TH2D("Q^{2} vs. |#font[62]{q}| (RES Only, 1n)", "Q^{2} vs. |#font[62]{q}| (RES Only, 1n);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                        numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                        numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_DIS_1n = new TH2D("Q^{2} vs. |#font[62]{q}| (DIS Only, 1n)", "Q^{2} vs. |#font[62]{q}| (DIS Only, 1n);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                        numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                        numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_q_3v_1n_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1n_Directory"];
 
     TH2D *hQ2_VS_omega_1n = new TH2D("Q^{2} vs. #omega (All Int., 1n)", "Q^{2} vs. #omega (All Int., 1n);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_QEL_1n = new TH2D("Q^{2} vs. #omega (QE Only, 1n)", "Q^{2} vs. #omega (QE Only, 1n);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_MEC_1n = new TH2D("Q^{2} vs. #omega (MEC Only, 1n)", "Q^{2} vs. #omega (MEC Only, 1n);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_RES_1n = new TH2D("Q^{2} vs. #omega (RES Only, 1n)", "Q^{2} vs. #omega (RES Only, 1n);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_DIS_1n = new TH2D("Q^{2} vs. #omega (DIS Only, 1n)", "Q^{2} vs. #omega (DIS Only, 1n);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_omega_1n_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1n_Directory"];
 
     TH2D *hq_3v_VS_omega_1n = new TH2D("|#font[62]{q}| vs. #omega (All Int., 1n)", "|#font[62]{q}| vs. #omega (All Int., 1n);#omega [GeV];q [GeV/c]",
-                                       numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                       numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_QEL_1n = new TH2D("|#font[62]{q}| vs. #omega (QE Only, 1n)", "|#font[62]{q}| vs. #omega (QE Only, 1n);#omega [GeV];q [GeV/c]",
-                                           numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                           numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_MEC_1n = new TH2D("|#font[62]{q}| vs. #omega (MEC Only, 1n)", "|#font[62]{q}| vs. #omega (MEC Only, 1n);#omega [GeV];q [GeV/c]",
-                                           numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                           numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_RES_1n = new TH2D("|#font[62]{q}| vs. #omega (RES Only, 1n)", "|#font[62]{q}| vs. #omega (RES Only, 1n);#omega [GeV];q [GeV/c]",
-                                           numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                           numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_DIS_1n = new TH2D("|#font[62]{q}| vs. #omega (DIS Only, 1n)", "|#font[62]{q}| vs. #omega (DIS Only, 1n);#omega [GeV];q [GeV/c]",
-                                           numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                           numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hq_3v_VS_omega_1n_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_1n_Directory"];
     //</editor-fold>
 
     //<editor-fold desc="Momentum transfer histograms (2p)">
     THStack *sQ2_2p = new THStack("Q^{2} (2p, CD & FD)", "Q^{2} (2p, CD & FD);Q^{2} [GeV^{2}/c^{2}];");
-    TH1D *hQ2_2p = new TH1D("Q^{2} (2p, FD)", "Q^{2} (2p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
-    TH1D *hQ2_QEL_2p = new TH1D("Q^{2} (QE Only, 2p, FD)", "Q^{2} (QE Only, 2p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                beamE * 1.1);
-    TH1D *hQ2_MEC_2p = new TH1D("Q^{2} (MEC Only, 2p, FD)", "Q^{2} (MEC Only, 2p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                beamE * 1.1);
-    TH1D *hQ2_RES_2p = new TH1D("Q^{2} (RES Only, 2p, FD)", "Q^{2} (RES Only, 2p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                beamE * 1.1);
-    TH1D *hQ2_DIS_2p = new TH1D("Q^{2} (DIS Only, 2p, FD)", "Q^{2} (DIS Only, 2p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                beamE * 1.1);
+    TH1D *hQ2_2p = new TH1D("Q^{2} (2p, FD)", "Q^{2} (2p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
+    TH1D *hQ2_QEL_2p = new TH1D("Q^{2} (QE Only, 2p, FD)", "Q^{2} (QE Only, 2p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                Q2_uboundary_FD);
+    TH1D *hQ2_MEC_2p = new TH1D("Q^{2} (MEC Only, 2p, FD)", "Q^{2} (MEC Only, 2p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                Q2_uboundary_FD);
+    TH1D *hQ2_RES_2p = new TH1D("Q^{2} (RES Only, 2p, FD)", "Q^{2} (RES Only, 2p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                Q2_uboundary_FD);
+    TH1D *hQ2_DIS_2p = new TH1D("Q^{2} (DIS Only, 2p, FD)", "Q^{2} (DIS Only, 2p, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                Q2_uboundary_FD);
     string hQ2_2p_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_2p_Directory"];
 
     THStack *sq_3v_2p = new THStack("q = |#font[62]{q}| (2p, CD & FD)", "q = |#font[62]{q}| Histogram (2p, CD & FD);q [GeV/c];");
-    TH1D *hq_3v_2p = new TH1D("q = |#font[62]{q}| (2p, FD)", "q = |#font[62]{q}| (2p, FD);q [GeV/c];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+    TH1D *hq_3v_2p = new TH1D("q = |#font[62]{q}| (2p, FD)", "q = |#font[62]{q}| (2p, FD);q [GeV/c];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_QEL_2p = new TH1D("q = |#font[62]{q}| (QE Only, 2p, FD)", "q = |#font[62]{q}| (QE Only, 2p, FD);q [GeV/c];",
-                                  numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                  numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_MEC_2p = new TH1D("q = |#font[62]{q}| (MEC Only, 2p, FD)", "q = |#font[62]{q}| (MEC Only, 2p, FD);q [GeV/c];",
-                                  numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                  numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_RES_2p = new TH1D("q = |#font[62]{q}| (RES Only, 2p, FD)", "q = |#font[62]{q}| (RES Only, 2p, FD);q [GeV/c];",
-                                  numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                  numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_DIS_2p = new TH1D("q = |#font[62]{q}| (DIS Only, 2p, FD)", "q = |#font[62]{q}| (DIS Only, 2p, FD);q [GeV/c];",
-                                  numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                  numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hq_3v_2p_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_2p_Directory"];
 
     TH2D *hQ2_VS_W_2p = new TH2D("Q^{2} vs. W (All Int., 2p)",
                                  "Q^{2} vs. W (All Int., 2p);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                 numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                 numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_QEL_2p = new TH2D("Q^{2} vs. W (QE Only, 2p)",
                                      "Q^{2} vs. W (QE Only, 2p);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_MEC_2p = new TH2D("Q^{2} vs. W (MEC Only, 2p)",
                                      "Q^{2} vs. W (MEC Only, 2p);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_RES_2p = new TH2D("Q^{2} vs. W (RES Only, 2p)",
                                      "Q^{2} vs. W (RES Only, 2p);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_DIS_2p = new TH2D("Q^{2} vs. W (DIS Only, 2p)",
                                      "Q^{2} vs. W (DIS Only, 2p);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_W_2p_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_2p_Directory"];
 
     TH2D *hQ2_VS_q_3v_2p = new TH2D("Q^{2} vs. |#font[62]{q}| (All Int., 2p)", "Q^{2} vs. |#font[62]{q}| (All Int., 2p);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                    numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                    numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_QEL_2p = new TH2D("Q^{2} vs. |#font[62]{q}| (QE Only, 2p)", "Q^{2} vs. |#font[62]{q}| (QE Only, 2p);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                        numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                        numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_MEC_2p = new TH2D("Q^{2} vs. |#font[62]{q}| (MEC Only, 2p)", "Q^{2} vs. |#font[62]{q}| (MEC Only, 2p);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                        numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                        numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_RES_2p = new TH2D("Q^{2} vs. |#font[62]{q}| (RES Only, 2p)", "Q^{2} vs. |#font[62]{q}| (RES Only, 2p);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                        numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                        numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_DIS_2p = new TH2D("Q^{2} vs. |#font[62]{q}| (DIS Only, 2p)", "Q^{2} vs. |#font[62]{q}| (DIS Only, 2p);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                        numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                        numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_q_3v_2p_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_2p_Directory"];
 
     TH2D *hQ2_VS_omega_2p = new TH2D("Q^{2} vs. #omega (All Int., 2p)", "Q^{2} vs. #omega (All Int., 2p);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_QEL_2p = new TH2D("Q^{2} vs. #omega (QE Only, 2p)", "Q^{2} vs. #omega (QE Only, 2p);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_MEC_2p = new TH2D("Q^{2} vs. #omega (MEC Only, 2p)", "Q^{2} vs. #omega (MEC Only, 2p);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_RES_2p = new TH2D("Q^{2} vs. #omega (RES Only, 2p)", "Q^{2} vs. #omega (RES Only, 2p);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_DIS_2p = new TH2D("Q^{2} vs. #omega (DIS Only, 2p)", "Q^{2} vs. #omega (DIS Only, 2p);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_omega_2p_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_2p_Directory"];
 
     TH2D *hq_3v_VS_omega_2p = new TH2D("|#font[62]{q}| vs. #omega (All Int., 2p)", "|#font[62]{q}| vs. #omega (All Int., 2p);#omega [GeV];q [GeV/c]",
-                                       numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                       numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_QEL_2p = new TH2D("|#font[62]{q}| vs. #omega (QE Only, 2p)", "|#font[62]{q}| vs. #omega (QE Only, 2p);#omega [GeV];q [GeV/c]",
-                                           numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                           numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_MEC_2p = new TH2D("|#font[62]{q}| vs. #omega (MEC Only, 2p)", "|#font[62]{q}| vs. #omega (MEC Only, 2p);#omega [GeV];q [GeV/c]",
-                                           numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                           numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_RES_2p = new TH2D("|#font[62]{q}| vs. #omega (RES Only, 2p)", "|#font[62]{q}| vs. #omega (RES Only, 2p);#omega [GeV];q [GeV/c]",
-                                           numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                           numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_DIS_2p = new TH2D("|#font[62]{q}| vs. #omega (DIS Only, 2p)", "|#font[62]{q}| vs. #omega (DIS Only, 2p);#omega [GeV];q [GeV/c]",
-                                           numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                           numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hq_3v_VS_omega_2p_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_2p_Directory"];
     //</editor-fold>
 
     //<editor-fold desc="Momentum transfer histograms (pFDpCD)">
     THStack *sQ2_pFDpCD = new THStack("Q^{2} (pFDpCD, CD & FD)", "Q^{2} (pFDpCD, CD & FD);Q^{2} [GeV^{2}/c^{2}];");
-    TH1D *hQ2_pFDpCD = new TH1D("Q^{2} (pFDpCD, FD)", "Q^{2} (pFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
-    TH1D *hQ2_QEL_pFDpCD = new TH1D("Q^{2} (QE Only, pFDpCD, FD)", "Q^{2} (QE Only, pFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                    beamE * 1.1);
-    TH1D *hQ2_MEC_pFDpCD = new TH1D("Q^{2} (MEC Only, pFDpCD, FD)", "Q^{2} (MEC Only, pFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                    beamE * 1.1);
-    TH1D *hQ2_RES_pFDpCD = new TH1D("Q^{2} (RES Only, pFDpCD, FD)", "Q^{2} (RES Only, pFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                    beamE * 1.1);
-    TH1D *hQ2_DIS_pFDpCD = new TH1D("Q^{2} (DIS Only, pFDpCD, FD)", "Q^{2} (DIS Only, pFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                    beamE * 1.1);
+    TH1D *hQ2_pFDpCD = new TH1D("Q^{2} (pFDpCD, FD)", "Q^{2} (pFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
+    TH1D *hQ2_QEL_pFDpCD = new TH1D("Q^{2} (QE Only, pFDpCD, FD)", "Q^{2} (QE Only, pFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                    Q2_uboundary_FD);
+    TH1D *hQ2_MEC_pFDpCD = new TH1D("Q^{2} (MEC Only, pFDpCD, FD)", "Q^{2} (MEC Only, pFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                    Q2_uboundary_FD);
+    TH1D *hQ2_RES_pFDpCD = new TH1D("Q^{2} (RES Only, pFDpCD, FD)", "Q^{2} (RES Only, pFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                    Q2_uboundary_FD);
+    TH1D *hQ2_DIS_pFDpCD = new TH1D("Q^{2} (DIS Only, pFDpCD, FD)", "Q^{2} (DIS Only, pFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                    Q2_uboundary_FD);
     string hQ2_pFDpCD_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_pFDpCD_Directory"];
 
     THStack *sq_3v_pFDpCD = new THStack("q = |#font[62]{q}| (pFDpCD, CD & FD)", "q = |#font[62]{q}| Histogram (pFDpCD, CD & FD);q [GeV/c];");
-    TH1D *hq_3v_pFDpCD = new TH1D("q = |#font[62]{q}| (pFDpCD, FD)", "q = |#font[62]{q}| (pFDpCD, FD);q [GeV/c];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+    TH1D *hq_3v_pFDpCD = new TH1D("q = |#font[62]{q}| (pFDpCD, FD)", "q = |#font[62]{q}| (pFDpCD, FD);q [GeV/c];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_QEL_pFDpCD = new TH1D("q = |#font[62]{q}| (QE Only, pFDpCD, FD)", "q = |#font[62]{q}| (QE Only, pFDpCD, FD);q [GeV/c];",
-                                      numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                      numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_MEC_pFDpCD = new TH1D("q = |#font[62]{q}| (MEC Only, pFDpCD, FD)", "q = |#font[62]{q}| (MEC Only, pFDpCD, FD);q [GeV/c];",
-                                      numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                      numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_RES_pFDpCD = new TH1D("q = |#font[62]{q}| (RES Only, pFDpCD, FD)", "q = |#font[62]{q}| (RES Only, pFDpCD, FD);q [GeV/c];",
-                                      numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                      numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_DIS_pFDpCD = new TH1D("q = |#font[62]{q}| (DIS Only, pFDpCD, FD)", "q = |#font[62]{q}| (DIS Only, pFDpCD, FD);q [GeV/c];",
-                                      numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                      numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hq_3v_pFDpCD_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_pFDpCD_Directory"];
 
     TH2D *hQ2_VS_W_pFDpCD = new TH2D("Q^{2} vs. W (All Int., pFDpCD)",
                                      "Q^{2} vs. W (All Int., pFDpCD);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_QEL_pFDpCD = new TH2D("Q^{2} vs. W (QE Only, pFDpCD)",
                                          "Q^{2} vs. W (QE Only, pFDpCD);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_MEC_pFDpCD = new TH2D("Q^{2} vs. W (MEC Only, pFDpCD)",
                                          "Q^{2} vs. W (MEC Only, pFDpCD);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_RES_pFDpCD = new TH2D("Q^{2} vs. W (RES Only, pFDpCD)",
                                          "Q^{2} vs. W (RES Only, pFDpCD);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_DIS_pFDpCD = new TH2D("Q^{2} vs. W (DIS Only, pFDpCD)",
                                          "Q^{2} vs. W (DIS Only, pFDpCD);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_W_pFDpCD_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_pFDpCD_Directory"];
 
     TH2D *hQ2_VS_q_3v_pFDpCD = new TH2D("Q^{2} vs. |#font[62]{q}| (All Int., pFDpCD)", "Q^{2} vs. |#font[62]{q}| (All Int., pFDpCD);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                        numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                        numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_QEL_pFDpCD = new TH2D("Q^{2} vs. |#font[62]{q}| (QE Only, pFDpCD)", "Q^{2} vs. |#font[62]{q}| (QE Only, pFDpCD);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                            numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                            numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_MEC_pFDpCD = new TH2D("Q^{2} vs. |#font[62]{q}| (MEC Only, pFDpCD)", "Q^{2} vs. |#font[62]{q}| (MEC Only, pFDpCD);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                            numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                            numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_RES_pFDpCD = new TH2D("Q^{2} vs. |#font[62]{q}| (RES Only, pFDpCD)", "Q^{2} vs. |#font[62]{q}| (RES Only, pFDpCD);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                            numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                            numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_DIS_pFDpCD = new TH2D("Q^{2} vs. |#font[62]{q}| (DIS Only, pFDpCD)", "Q^{2} vs. |#font[62]{q}| (DIS Only, pFDpCD);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                            numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                            numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_q_3v_pFDpCD_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_pFDpCD_Directory"];
 
     TH2D *hQ2_VS_omega_pFDpCD = new TH2D("Q^{2} vs. #omega (All Int., pFDpCD)", "Q^{2} vs. #omega (All Int., pFDpCD);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_QEL_pFDpCD = new TH2D("Q^{2} vs. #omega (QE Only, pFDpCD)", "Q^{2} vs. #omega (QE Only, pFDpCD);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                             numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                             numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_MEC_pFDpCD = new TH2D("Q^{2} vs. #omega (MEC Only, pFDpCD)", "Q^{2} vs. #omega (MEC Only, pFDpCD);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                             numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                             numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_RES_pFDpCD = new TH2D("Q^{2} vs. #omega (RES Only, pFDpCD)", "Q^{2} vs. #omega (RES Only, pFDpCD);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                             numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                             numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_DIS_pFDpCD = new TH2D("Q^{2} vs. #omega (DIS Only, pFDpCD)", "Q^{2} vs. #omega (DIS Only, pFDpCD);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                             numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                             numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_omega_pFDpCD_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_pFDpCD_Directory"];
 
     TH2D *hq_3v_VS_omega_pFDpCD = new TH2D("|#font[62]{q}| vs. #omega (All Int., pFDpCD)", "|#font[62]{q}| vs. #omega (All Int., pFDpCD);#omega [GeV];q [GeV/c]",
-                                           numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                           numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_QEL_pFDpCD = new TH2D("|#font[62]{q}| vs. #omega (QE Only, pFDpCD)", "|#font[62]{q}| vs. #omega (QE Only, pFDpCD);#omega [GeV];q [GeV/c]",
-                                               numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                               numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_MEC_pFDpCD = new TH2D("|#font[62]{q}| vs. #omega (MEC Only, pFDpCD)", "|#font[62]{q}| vs. #omega (MEC Only, pFDpCD);#omega [GeV];q [GeV/c]",
-                                               numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                               numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_RES_pFDpCD = new TH2D("|#font[62]{q}| vs. #omega (RES Only, pFDpCD)", "|#font[62]{q}| vs. #omega (RES Only, pFDpCD);#omega [GeV];q [GeV/c]",
-                                               numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                               numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_DIS_pFDpCD = new TH2D("|#font[62]{q}| vs. #omega (DIS Only, pFDpCD)", "|#font[62]{q}| vs. #omega (DIS Only, pFDpCD);#omega [GeV];q [GeV/c]",
-                                               numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                               numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hq_3v_VS_omega_pFDpCD_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_pFDpCD_Directory"];
     //</editor-fold>
 
     //<editor-fold desc="Momentum transfer histograms (nFDpCD)">
     THStack *sQ2_nFDpCD = new THStack("Q^{2} (nFDpCD, CD & FD)", "Q^{2} (nFDpCD, CD & FD);Q^{2} [GeV^{2}/c^{2}];");
-    TH1D *hQ2_nFDpCD = new TH1D("Q^{2} (nFDpCD, FD)", "Q^{2} (nFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
-    TH1D *hQ2_QEL_nFDpCD = new TH1D("Q^{2} (QE Only, nFDpCD, FD)", "Q^{2} (QE Only, nFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                    beamE * 1.1);
-    TH1D *hQ2_MEC_nFDpCD = new TH1D("Q^{2} (MEC Only, nFDpCD, FD)", "Q^{2} (MEC Only, nFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                    beamE * 1.1);
-    TH1D *hQ2_RES_nFDpCD = new TH1D("Q^{2} (RES Only, nFDpCD, FD)", "Q^{2} (RES Only, nFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                    beamE * 1.1);
-    TH1D *hQ2_DIS_nFDpCD = new TH1D("Q^{2} (DIS Only, nFDpCD, FD)", "Q^{2} (DIS Only, nFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, 0,
-                                    beamE * 1.1);
+    TH1D *hQ2_nFDpCD = new TH1D("Q^{2} (nFDpCD, FD)", "Q^{2} (nFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
+    TH1D *hQ2_QEL_nFDpCD = new TH1D("Q^{2} (QE Only, nFDpCD, FD)", "Q^{2} (QE Only, nFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                    Q2_uboundary_FD);
+    TH1D *hQ2_MEC_nFDpCD = new TH1D("Q^{2} (MEC Only, nFDpCD, FD)", "Q^{2} (MEC Only, nFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                    Q2_uboundary_FD);
+    TH1D *hQ2_RES_nFDpCD = new TH1D("Q^{2} (RES Only, nFDpCD, FD)", "Q^{2} (RES Only, nFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                    Q2_uboundary_FD);
+    TH1D *hQ2_DIS_nFDpCD = new TH1D("Q^{2} (DIS Only, nFDpCD, FD)", "Q^{2} (DIS Only, nFDpCD, FD);Q^{2} [GeV^{2}/c^{2}];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD,
+                                    Q2_uboundary_FD);
     string hQ2_nFDpCD_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_nFDpCD_Directory"];
 
     THStack *sq_3v_nFDpCD = new THStack("q = |#font[62]{q}| (nFDpCD, CD & FD)", "q = |#font[62]{q}| Histogram (nFDpCD, CD & FD);q [GeV/c];");
-    TH1D *hq_3v_nFDpCD = new TH1D("q = |#font[62]{q}| (nFDpCD, FD)", "q = |#font[62]{q}| (nFDpCD, FD);q [GeV/c];", numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+    TH1D *hq_3v_nFDpCD = new TH1D("q = |#font[62]{q}| (nFDpCD, FD)", "q = |#font[62]{q}| (nFDpCD, FD);q [GeV/c];", numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_QEL_nFDpCD = new TH1D("q = |#font[62]{q}| (QE Only, nFDpCD, FD)", "q = |#font[62]{q}| (QE Only, nFDpCD, FD);q [GeV/c];",
-                                      numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                      numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_MEC_nFDpCD = new TH1D("q = |#font[62]{q}| (MEC Only, nFDpCD, FD)", "q = |#font[62]{q}| (MEC Only, nFDpCD, FD);q [GeV/c];",
-                                      numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                      numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_RES_nFDpCD = new TH1D("q = |#font[62]{q}| (RES Only, nFDpCD, FD)", "q = |#font[62]{q}| (RES Only, nFDpCD, FD);q [GeV/c];",
-                                      numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                      numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH1D *hq_3v_DIS_nFDpCD = new TH1D("q = |#font[62]{q}| (DIS Only, nFDpCD, FD)", "q = |#font[62]{q}| (DIS Only, nFDpCD, FD);q [GeV/c];",
-                                      numTH1Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                      numTH1Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hq_3v_nFDpCD_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_nFDpCD_Directory"];
 
     TH2D *hQ2_VS_W_nFDpCD = new TH2D("Q^{2} vs. W (All Int., nFDpCD)",
                                      "Q^{2} vs. W (All Int., nFDpCD);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                     numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_QEL_nFDpCD = new TH2D("Q^{2} vs. W (QE Only, nFDpCD)",
                                          "Q^{2} vs. W (QE Only, nFDpCD);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_MEC_nFDpCD = new TH2D("Q^{2} vs. W (MEC Only, nFDpCD)",
                                          "Q^{2} vs. W (MEC Only, nFDpCD);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_RES_nFDpCD = new TH2D("Q^{2} vs. W (RES Only, nFDpCD)",
                                          "Q^{2} vs. W (RES Only, nFDpCD);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_W_DIS_nFDpCD = new TH2D("Q^{2} vs. W (DIS Only, nFDpCD)",
                                          "Q^{2} vs. W (DIS Only, nFDpCD);W = #sqrt{(#omega + m_{p})^{2} - #vec{q}^{2}}  [GeV/c^{2}];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, W_lboundary, W_uboundary, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_W_nFDpCD_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_nFDpCD_Directory"];
 
     TH2D *hQ2_VS_q_3v_nFDpCD = new TH2D("Q^{2} vs. |#font[62]{q}| (All Int., nFDpCD)", "Q^{2} vs. |#font[62]{q}| (All Int., nFDpCD);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                        numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                        numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_QEL_nFDpCD = new TH2D("Q^{2} vs. |#font[62]{q}| (QE Only, nFDpCD)", "Q^{2} vs. |#font[62]{q}| (QE Only, nFDpCD);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                            numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                            numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_MEC_nFDpCD = new TH2D("Q^{2} vs. |#font[62]{q}| (MEC Only, nFDpCD)", "Q^{2} vs. |#font[62]{q}| (MEC Only, nFDpCD);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                            numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                            numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_RES_nFDpCD = new TH2D("Q^{2} vs. |#font[62]{q}| (RES Only, nFDpCD)", "Q^{2} vs. |#font[62]{q}| (RES Only, nFDpCD);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                            numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                            numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_q_3v_DIS_nFDpCD = new TH2D("Q^{2} vs. |#font[62]{q}| (DIS Only, nFDpCD)", "Q^{2} vs. |#font[62]{q}| (DIS Only, nFDpCD);q [GeV/c];Q^{2} [GeV^{2}/c^{2}]",
-                                            numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                            numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_q_3v_nFDpCD_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_nFDpCD_Directory"];
 
     TH2D *hQ2_VS_omega_nFDpCD = new TH2D("Q^{2} vs. #omega (All Int., nFDpCD)", "Q^{2} vs. #omega (All Int., nFDpCD);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                         numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                         numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_QEL_nFDpCD = new TH2D("Q^{2} vs. #omega (QE Only, nFDpCD)", "Q^{2} vs. #omega (QE Only, nFDpCD);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                             numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                             numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_MEC_nFDpCD = new TH2D("Q^{2} vs. #omega (MEC Only, nFDpCD)", "Q^{2} vs. #omega (MEC Only, nFDpCD);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                             numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                             numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_RES_nFDpCD = new TH2D("Q^{2} vs. #omega (RES Only, nFDpCD)", "Q^{2} vs. #omega (RES Only, nFDpCD);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                             numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                             numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hQ2_VS_omega_DIS_nFDpCD = new TH2D("Q^{2} vs. #omega (DIS Only, nFDpCD)", "Q^{2} vs. #omega (DIS Only, nFDpCD);#omega [GeV];Q^{2} [GeV^{2}/c^{2}]",
-                                             numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                             numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hQ2_VS_omega_nFDpCD_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_nFDpCD_Directory"];
 
     TH2D *hq_3v_VS_omega_nFDpCD = new TH2D("|#font[62]{q}| vs. #omega (All Int., nFDpCD)", "|#font[62]{q}| vs. #omega (All Int., nFDpCD);#omega [GeV];q [GeV/c]",
-                                           numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                           numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_QEL_nFDpCD = new TH2D("|#font[62]{q}| vs. #omega (QE Only, nFDpCD)", "|#font[62]{q}| vs. #omega (QE Only, nFDpCD);#omega [GeV];q [GeV/c]",
-                                               numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                               numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_MEC_nFDpCD = new TH2D("|#font[62]{q}| vs. #omega (MEC Only, nFDpCD)", "|#font[62]{q}| vs. #omega (MEC Only, nFDpCD);#omega [GeV];q [GeV/c]",
-                                               numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                               numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_RES_nFDpCD = new TH2D("|#font[62]{q}| vs. #omega (RES Only, nFDpCD)", "|#font[62]{q}| vs. #omega (RES Only, nFDpCD);#omega [GeV];q [GeV/c]",
-                                               numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                               numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     TH2D *hq_3v_VS_omega_DIS_nFDpCD = new TH2D("|#font[62]{q}| vs. #omega (DIS Only, nFDpCD)", "|#font[62]{q}| vs. #omega (DIS Only, nFDpCD);#omega [GeV];q [GeV/c]",
-                                               numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1, numTH2Dbins_Momentum_transfer_plots, 0, beamE * 1.1);
+                                               numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD, numTH2Dbins_Momentum_transfer_plots, Q2_lboundary_FD, Q2_uboundary_FD);
     string hq_3v_VS_omega_nFDpCD_Dir = directories.Momentum_transfer_Directory_map["Momentum_transfer_nFDpCD_Directory"];
     //</editor-fold>
 
