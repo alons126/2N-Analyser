@@ -88,9 +88,10 @@ void CopyPadContent(TPad* sourcePad, TPad* targetPad) {
         targetPad->cd();
         if (obj->InheritsFrom("TAttDrawable")) {  // Ensure the object is drawable
             obj->DrawClone();  // Draw a clone of each primitive in the target pad
-        } else {
-            std::cerr << "Warning: Object is not drawable. Skipping." << std::endl;
         }
+        // else {
+        //     std::cerr << "Warning: Object is not drawable. Skipping." << std::endl;
+        // }
     }
 
     targetPad->Update();
