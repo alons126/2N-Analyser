@@ -7,21 +7,28 @@
 // DataAnalyser constructors ----------------------------------------------------------------------------------------------------------------------------------
 
 /* Default constructor */
-DataAnalyser::DataAnalyser(const string &FileType) {
+DataAnalyser::DataAnalyser(const string &FileType)
+{
     string AnalyserMode = ConfigureAnalyserMode(FileType);
     RunEventAnalyser(AnalyserMode);
 }
 
 // ConfigureAnalyserMode function -----------------------------------------------------------------------------------------------------------------------------
 
-string DataAnalyser::ConfigureAnalyserMode(const string &FileType) {
+string DataAnalyser::ConfigureAnalyserMode(const string &FileType)
+{
     string AnalyserMode;
 
-    if (FileType == "root") {
+    if (FileType == "root")
+    {
         AnalyserMode = "Truth level";
-    } else if (FileType == "hipo") {
+    }
+    else if (FileType == "hipo")
+    {
         AnalyserMode = "Detector Simulation";
-    } else {
+    }
+    else
+    {
         cout << "\nCould not find file type!! Exiting...\n\n", exit(0);
     }
 
@@ -30,11 +37,15 @@ string DataAnalyser::ConfigureAnalyserMode(const string &FileType) {
 
 // RunEventAnalyser functions ---------------------------------------------------------------------------------------------------------------------------------
 
-void DataAnalyser::RunEventAnalyser(const string &AnalyserMode) {
-    if (AnalyserMode == "Truth level") {
+void DataAnalyser::RunEventAnalyser(const string &AnalyserMode)
+{
+    if (AnalyserMode == "Truth level")
+    {
         gst g;
         g.Loop();
-    } else if (AnalyserMode == "Detector Simulation") {
-        EventAnalyser();
+    }
+    else if (AnalyserMode == "Detector Simulation")
+    {
+        EventAnalyser(AnalyseFilePath.at(i), AnalyseFileSample.at(i), AnalyseFile.at(i));
     }
 };
