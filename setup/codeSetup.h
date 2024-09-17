@@ -90,26 +90,26 @@ void ConfigSampleChain() {
 // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
 // AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 
-/* H1 5.98636GeV - run 015028 (ifarm DATA files - H1 DATA files) */
-AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/H/dst/recon";
-AnalyseFileSample = "015028";
-AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
-AnalyseFilePath_v.push_back(AnalyseFilePath);
-AnalyseFileSample_v.push_back(AnalyseFileSample);
-AnalyseFileDir_v.push_back(AnalyseFileDir);
-AnalyseFile_v.push_back(AnalyseFile);
-
-
-// /* D2 2.07052GeV - all runs (ifarm DATA files - D2 DATA files) */
-// AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/D/dst/recon";
-// AnalyseFileSample = "";
+// /* H1 5.98636GeV - run 015028 (ifarm DATA files - H1 DATA files) */
+// AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/H/dst/recon";
+// AnalyseFileSample = "015028";
 // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-// AnalyseFile = AnalyseFileDir + "*.hipo"; // all data files
+// AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 // AnalyseFilePath_v.push_back(AnalyseFilePath);
 // AnalyseFileSample_v.push_back(AnalyseFileSample);
 // AnalyseFileDir_v.push_back(AnalyseFileDir);
 // AnalyseFile_v.push_back(AnalyseFile);
+
+
+/* D2 2.07052GeV - all runs (ifarm DATA files - D2 DATA files) */
+AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/D/dst/recon";
+AnalyseFileSample = "";
+AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+AnalyseFile = AnalyseFileDir + "*.hipo"; // all data files
+AnalyseFilePath_v.push_back(AnalyseFilePath);
+AnalyseFileSample_v.push_back(AnalyseFileSample);
+AnalyseFileDir_v.push_back(AnalyseFileDir);
+AnalyseFile_v.push_back(AnalyseFile);
 
 // /* D2 4.02962GeV - run 015743 (ifarm DATA files - D2 DATA files) */
 // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon";
