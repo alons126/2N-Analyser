@@ -147,26 +147,26 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    /* C12x4 5.98636GeV - run 015188 (ifarm DATA files - C12x4 DATA files) */
-    AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon";
-    AnalyseFileSample = "015188";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "rec_clas_015188.evio.01685-01689.hipo"; // 1 run file
-    AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    // /* Ar40 2.07052GeV - run 015672 (ifarm DATA files - Ar40 DATA files) */
-    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/Ar/dst/recon";
-    // AnalyseFileSample = "015672";
+    // /* C12x4 5.98636GeV - run 015188 (ifarm DATA files - C12x4 DATA files) */
+    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon";
+    // AnalyseFileSample = "015188";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // // AnalyseFile = AnalyseFileDir + "rec_clas_015188.evio.01685-01689.hipo"; // 1 run file
     // AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
     // AnalyseFilePath_v.push_back(AnalyseFilePath);
     // AnalyseFileSample_v.push_back(AnalyseFileSample);
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
+
+    /* Ar40 2.07052GeV - run 015672 (ifarm DATA files - Ar40 DATA files) */
+    AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/Ar/dst/recon";
+    AnalyseFileSample = "015672";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
     // /* Ar40 4.02962GeV - run 015743 (ifarm DATA files - Ar40 DATA files) */
     // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon";
