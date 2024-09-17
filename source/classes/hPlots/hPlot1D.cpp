@@ -1863,9 +1863,21 @@ void hPlot1D::histPlotter1D(const std::string &SampleName, TCanvas *Histogram1DC
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
         Histogram1DCanvas->SaveAs(SaveDir);
 
+    cout << "\nTEST 1\n";
+
         CanvasPDF->cd(CanvasPDF_ind);
+
+            cout << "\nTEST 2\n";
+
         CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+
+                    cout << "\nTEST 3\n";
+
         CanvasPDF->Print(Histogram_OutPDF);
+
+            cout << "\nTEST 4\n";
+
+
         ++CanvasPDF_ind;
     }
 
