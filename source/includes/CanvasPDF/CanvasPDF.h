@@ -59,6 +59,22 @@ void SetCanvasPDFind(int &CanvasPDFind)
     {
         CanvasPDFind = CanvasPDFind - num_of_hist_per_row * num_of_hist_per_col;
     } else {
-        CanvasPDFind = CanvasPDFind;
+        CanvasPDFind = CanvasPDFind + 1;
+    }
+}
+
+void CopyPadContent(TPad* sourcePad, TPad* targetPad) {
+    if (sourcePad && targetPad) {
+        // Get the list of primitives (objects) in the source pad
+        TList* primList = sourcePad->GetListOfPrimitives();
+        
+        // Loop over all the primitives in the source pad and draw them in the target pad
+        TIter next(primList);
+        TObject* obj;
+        while ((obj = next())) {
+            targetPad->cd();
+            obj->DrawClone();  // Draw a clone of each primitive in the target pad
+        }
+        targetPad->Update();
     }
 }
