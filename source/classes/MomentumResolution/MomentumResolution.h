@@ -47,7 +47,8 @@
 
 using namespace std;
 
-class MomentumResolution {
+class MomentumResolution
+{
 private:
     bool isNeutron = false, isProton = false;
     string MomResParticle = "";
@@ -63,16 +64,16 @@ private:
     string SmearMode = "NONE", CorrMode = "NONE";
 
     string RecoSliceFitAlgorithm = "", TLSliceFitAlgorithm = "";
-    vector <hPlot1D> ResTLMomSlices, ResRecoMomSlices;
-    vector <vector<double>> ResTLMomSlicesLimits, ResRecoMomSlicesLimits;
-    vector <DSCuts> ResTLMomSlicesFitVar, ResRecoMomSlicesFitVar;
-    vector <DSCuts> ResTLMomSlicesHistVar, ResRecoMomSlicesHistVar;
-    vector <DSCuts> Loaded_Res_Slices_FitVar;
-    vector <DSCuts> Loaded_Res_Slices_HistVar;
+    vector<hPlot1D> ResTLMomSlices, ResRecoMomSlices;
+    vector<vector<double>> ResTLMomSlicesLimits, ResRecoMomSlicesLimits;
+    vector<DSCuts> ResTLMomSlicesFitVar, ResRecoMomSlicesFitVar;
+    vector<DSCuts> ResTLMomSlicesHistVar, ResRecoMomSlicesHistVar;
+    vector<DSCuts> Loaded_Res_Slices_FitVar;
+    vector<DSCuts> Loaded_Res_Slices_HistVar;
     vector<int> FittedTLMomSlices, FittedRecoMomSlices;
 
-    double SliceUpperMomLim; // upper lim for momentum slices - loaded from file
-    double SliceUpperMomLimKC_mu, SliceLowerMomLimKC_mu; // lower lim for momentum slices - set by constructor
+    double SliceUpperMomLim;                                   // upper lim for momentum slices - loaded from file
+    double SliceUpperMomLimKC_mu, SliceLowerMomLimKC_mu;       // lower lim for momentum slices - set by constructor
     double SliceUpperMomLimKC_sigma, SliceLowerMomLimKC_sigma; // lower lim for momentum slices - set by constructor
 
     double hSliceUpperLim = 1.1;
@@ -93,7 +94,7 @@ private:
     TFolder *FittedRecoProtonResSlicesMean = new TFolder("Fitted reco proton resolution slice mean", "Fitted reco proton resolution slice mean");
     TFolder *FittedRecoProtonResSlicesWidth = new TFolder("Fitted reco proton resolution slice width", "Fitted reco proton resolution slice width");
 
-    const char *ResSlicePlots_OutFile;
+    char *ResSlicePlots_OutFile0;
 
     //<editor-fold desc="Random number generators">
     string RandomNumGenerator = "TRandom3"; // TRandom3 by default
@@ -110,47 +111,47 @@ private:
     /* General vector structure:   {{A, B, ...}, {A_Err, B_Err, ...}, {ChiSquare_Smear_pol2_wKC, NDF_Smear_pol2_wKC},} */
 
     //<editor-fold desc="Correction and smear fit variables">
-    vector <vector<double>> TL_FitParam_Smear_pol1, Reco_FitParam_Smear_pol1;
-    vector <vector<double>> TL_FitParam_Smear_pol1_wKC, Reco_FitParam_Smear_pol1_wKC;
+    vector<vector<double>> TL_FitParam_Smear_pol1, Reco_FitParam_Smear_pol1;
+    vector<vector<double>> TL_FitParam_Smear_pol1_wKC, Reco_FitParam_Smear_pol1_wKC;
 
-    vector <vector<double>> TL_FitParam_Smear_pol2, Reco_FitParam_Smear_pol2;
-    vector <vector<double>> TL_FitParam_Smear_pol2_wKC, Reco_FitParam_Smear_pol2_wKC;
+    vector<vector<double>> TL_FitParam_Smear_pol2, Reco_FitParam_Smear_pol2;
+    vector<vector<double>> TL_FitParam_Smear_pol2_wKC, Reco_FitParam_Smear_pol2_wKC;
 
-    vector <vector<double>> TL_FitParam_Smear_pol3, Reco_FitParam_Smear_pol3;
-    vector <vector<double>> TL_FitParam_Smear_pol3_wKC, Reco_FitParam_Smear_pol3_wKC;
+    vector<vector<double>> TL_FitParam_Smear_pol3, Reco_FitParam_Smear_pol3;
+    vector<vector<double>> TL_FitParam_Smear_pol3_wKC, Reco_FitParam_Smear_pol3_wKC;
 
-    vector <vector<double>> TL_FitParam_Corr_pol1, Reco_FitParam_Corr_pol1;
-    vector <vector<double>> TL_FitParam_Corr_pol1_wKC, Reco_FitParam_Corr_pol1_wKC;
+    vector<vector<double>> TL_FitParam_Corr_pol1, Reco_FitParam_Corr_pol1;
+    vector<vector<double>> TL_FitParam_Corr_pol1_wKC, Reco_FitParam_Corr_pol1_wKC;
 
-    vector <vector<double>> TL_FitParam_Corr_pol2, Reco_FitParam_Corr_pol2;
-    vector <vector<double>> TL_FitParam_Corr_pol2_wKC, Reco_FitParam_Corr_pol2_wKC;
+    vector<vector<double>> TL_FitParam_Corr_pol2, Reco_FitParam_Corr_pol2;
+    vector<vector<double>> TL_FitParam_Corr_pol2_wKC, Reco_FitParam_Corr_pol2_wKC;
 
-    vector <vector<double>> TL_FitParam_Corr_pol3, Reco_FitParam_Corr_pol3;
-    vector <vector<double>> TL_FitParam_Corr_pol3_wKC, Reco_FitParam_Corr_pol3_wKC;
+    vector<vector<double>> TL_FitParam_Corr_pol3, Reco_FitParam_Corr_pol3;
+    vector<vector<double>> TL_FitParam_Corr_pol3_wKC, Reco_FitParam_Corr_pol3_wKC;
     //</editor-fold>
 
     //<editor-fold desc="Loaded correction and smear fit variables">
     string Loaded_Std_coefficients_path;
     vector<double> Loaded_Smear_coefficients_values;
-    vector <string> Loaded_Smear_coefficients_names;
+    vector<string> Loaded_Smear_coefficients_names;
 
-    vector <vector<double>> Loaded_TL_FitParam_Smear_pol1, Loaded_Reco_FitParam_Smear_pol1;
-    vector <vector<double>> Loaded_TL_FitParam_Smear_pol1_wKC, Loaded_Reco_FitParam_Smear_pol1_wKC;
-    vector <vector<double>> Loaded_TL_FitParam_Smear_pol2, Loaded_Reco_FitParam_Smear_pol2;
-    vector <vector<double>> Loaded_TL_FitParam_Smear_pol2_wKC, Loaded_Reco_FitParam_Smear_pol2_wKC;
-    vector <vector<double>> Loaded_TL_FitParam_Smear_pol3, Loaded_Reco_FitParam_Smear_pol3;
-    vector <vector<double>> Loaded_TL_FitParam_Smear_pol3_wKC, Loaded_Reco_FitParam_Smear_pol3_wKC;
+    vector<vector<double>> Loaded_TL_FitParam_Smear_pol1, Loaded_Reco_FitParam_Smear_pol1;
+    vector<vector<double>> Loaded_TL_FitParam_Smear_pol1_wKC, Loaded_Reco_FitParam_Smear_pol1_wKC;
+    vector<vector<double>> Loaded_TL_FitParam_Smear_pol2, Loaded_Reco_FitParam_Smear_pol2;
+    vector<vector<double>> Loaded_TL_FitParam_Smear_pol2_wKC, Loaded_Reco_FitParam_Smear_pol2_wKC;
+    vector<vector<double>> Loaded_TL_FitParam_Smear_pol3, Loaded_Reco_FitParam_Smear_pol3;
+    vector<vector<double>> Loaded_TL_FitParam_Smear_pol3_wKC, Loaded_Reco_FitParam_Smear_pol3_wKC;
 
     string Loaded_Corr_coefficients_path;
     vector<double> Loaded_Corr_coefficients_values;
-    vector <string> Loaded_Corr_coefficients_names;
+    vector<string> Loaded_Corr_coefficients_names;
 
-    vector <vector<double>> Loaded_TL_FitParam_Corr_pol1, Loaded_Reco_FitParam_Corr_pol1;
-    vector <vector<double>> Loaded_TL_FitParam_Corr_pol1_wKC, Loaded_Reco_FitParam_Corr_pol1_wKC;
-    vector <vector<double>> Loaded_TL_FitParam_Corr_pol2, Loaded_Reco_FitParam_Corr_pol2;
-    vector <vector<double>> Loaded_TL_FitParam_Corr_pol2_wKC, Loaded_Reco_FitParam_Corr_pol2_wKC;
-    vector <vector<double>> Loaded_TL_FitParam_Corr_pol3, Loaded_Reco_FitParam_Corr_pol3;
-    vector <vector<double>> Loaded_TL_FitParam_Corr_pol3_wKC, Loaded_Reco_FitParam_Corr_pol3_wKC;
+    vector<vector<double>> Loaded_TL_FitParam_Corr_pol1, Loaded_Reco_FitParam_Corr_pol1;
+    vector<vector<double>> Loaded_TL_FitParam_Corr_pol1_wKC, Loaded_Reco_FitParam_Corr_pol1_wKC;
+    vector<vector<double>> Loaded_TL_FitParam_Corr_pol2, Loaded_Reco_FitParam_Corr_pol2;
+    vector<vector<double>> Loaded_TL_FitParam_Corr_pol2_wKC, Loaded_Reco_FitParam_Corr_pol2_wKC;
+    vector<vector<double>> Loaded_TL_FitParam_Corr_pol3, Loaded_Reco_FitParam_Corr_pol3;
+    vector<vector<double>> Loaded_TL_FitParam_Corr_pol3_wKC, Loaded_Reco_FitParam_Corr_pol3_wKC;
     //</editor-fold>
 
     //</editor-fold>
@@ -162,16 +163,15 @@ private:
     string SlicesSaveNamePrefix;
 
 public:
-
-// Default constructor --------------------------------------------------------------------------------------------------------------------------------------------------
+    // Default constructor --------------------------------------------------------------------------------------------------------------------------------------------------
 
     MomentumResolution() = default;
 
-// Other constructors ---------------------------------------------------------------------------------------------------------------------------------------------------
+    // Other constructors ---------------------------------------------------------------------------------------------------------------------------------------------------
 
     MomentumResolution(const string &Particle);
 
-// MomResInit function --------------------------------------------------------------------------------------------------------------------------------------------------
+    // MomResInit function --------------------------------------------------------------------------------------------------------------------------------------------------
 
     void MomResInit(const bool &plot_and_fit_MomRes, const bool &Calculate_momResS2, const bool &Run_with_momResS2, const string &SampleName,
                     const string &NucleonCutsDirectory, const double &beamE, const DSCuts &MomRes_mu_cuts, const DSCuts &MomRes_sigma_cuts, const double &ParticleMomTh,
@@ -190,73 +190,73 @@ public:
                                const bool &FitDebugging = false);
 
     void SetMomResSlices(const string &SampleName, const string &NucleonCutsDirectory, const double &beamE, const double &ParticleMomTh, const string &MomentumType,
-                         const string &SavePath, const bool &VaryingDelta, const bool &momRes_test, const bool &ForceSmallpResLimits, vector <hPlot1D> &ResSlices0,
-                         vector <vector<double>> &ResSlicesLimits0, vector <DSCuts> &ResSlicesFitVar0, vector <DSCuts> &ResSlicesHistVar0, int &NumberOfSlices0,
+                         const string &SavePath, const bool &VaryingDelta, const bool &momRes_test, const bool &ForceSmallpResLimits, vector<hPlot1D> &ResSlices0,
+                         vector<vector<double>> &ResSlicesLimits0, vector<DSCuts> &ResSlicesFitVar0, vector<DSCuts> &ResSlicesHistVar0, int &NumberOfSlices0,
                          const bool &FitDebugging = false);
 
     void SetUpperMomCut(const string &SampleName, const string &NucleonCutsDirectory, const bool &FitDebugging = false);
 
     void LoadFitParam(const string &SampleName, const string &NucleonCutsDirectory, bool const &Calculate_momResS2, const string &MomentumResolutionDirectory);
 
-// ReadInputParam function ----------------------------------------------------------------------------------------------------------------------------------------------
+    // ReadInputParam function ----------------------------------------------------------------------------------------------------------------------------------------------
 
     void ReadInputParam(const char *filename);
 
-// hFillResPlotsByType function -----------------------------------------------------------------------------------------------------------------------------------------
+    // hFillResPlotsByType function -----------------------------------------------------------------------------------------------------------------------------------------
 
     void hFillResPlotsByType(const double &MomentumTL, const double &MomentumReco, const double &Resolution, const double &Weight);
 
-    void hFillResPlots(const double &Momentum, const double &Resolution, const double &Weight, vector <hPlot1D> &ResSlices0, vector <vector<double>> &ResSlicesLimits0,
+    void hFillResPlots(const double &Momentum, const double &Resolution, const double &Weight, vector<hPlot1D> &ResSlices0, vector<vector<double>> &ResSlicesLimits0,
                        int &NumberOfSlices0);
 
-// SliceFitDrawAndSaveByType function -----------------------------------------------------------------------------------------------------------------------------------
+    // SliceFitDrawAndSaveByType function -----------------------------------------------------------------------------------------------------------------------------------
 
     void SliceFitDrawAndSaveByType(const string &SampleName, const double &beamE);
 
-    void SliceFitDrawAndSave(const string &SampleName, const double &beamE, const string &MomentumType, vector <hPlot1D> &ResSlices0,
-                             vector <vector<double>> &ResSlicesLimits0, vector <DSCuts> &ResSlicesFitVar0, vector <DSCuts> &ResSlicesHistVar0, vector<int> &FittedSlices0,
+    void SliceFitDrawAndSave(const string &SampleName, const double &beamE, const string &MomentumType, vector<hPlot1D> &ResSlices0,
+                             vector<vector<double>> &ResSlicesLimits0, vector<DSCuts> &ResSlicesFitVar0, vector<DSCuts> &ResSlicesHistVar0, vector<int> &FittedSlices0,
                              int &NumberOfSlices0);
 
-    void PolyFitter(const string &MomentumType, const int &PolynomialDegree, const string &FitType, const string &MomentumFitRange, vector <vector<double>> &FitParam);
+    void PolyFitter(const string &MomentumType, const int &PolynomialDegree, const string &FitType, const string &MomentumFitRange, vector<vector<double>> &FitParam);
 
-// DrawAndSaveResSlices function ----------------------------------------------------------------------------------------------------------------------------------------
+    // DrawAndSaveResSlices function ----------------------------------------------------------------------------------------------------------------------------------------
 
     void DrawAndSaveResSlices(const string &SampleName, TCanvas *h1DCanvas, const string &plots_path, const string &MomentumResolutionDirectory);
 
-// LogResDataToFile function --------------------------------------------------------------------------------------------------------------------------------------------
+    // LogResDataToFile function --------------------------------------------------------------------------------------------------------------------------------------------
 
     void LogResDataToFile(const string &SampleName, const string &plots_path, const string &MomentumResolutionDirectory);
 
-// LogFitDataToFile function --------------------------------------------------------------------------------------------------------------------------------------------
+    // LogFitDataToFile function --------------------------------------------------------------------------------------------------------------------------------------------
 
     void LogFitDataToFile(const string &SampleName, const string &plots_path, const string &MomentumResolutionDirectory);
 
     void AutoLogger(const string &SampleName, const string &plots_path, const string &MomentumResolutionDirectory, const string &LogHeader,
-                    const vector <vector<double>> &Vector2Log, ofstream &Neutron_res_fit_param);
+                    const vector<vector<double>> &Vector2Log, ofstream &Neutron_res_fit_param);
 
-// LogHistDataToFile function -------------------------------------------------------------------------------------------------------------------------------------------
+    // LogHistDataToFile function -------------------------------------------------------------------------------------------------------------------------------------------
 
     void LogHistDataToFile(const string &SampleName, const string &plots_path, const string &MomentumResolutionDirectory);
 
-// ReadResDataParam function --------------------------------------------------------------------------------------------------------------------------------------------
+    // ReadResDataParam function --------------------------------------------------------------------------------------------------------------------------------------------
 
     void ReadResDataParam(const char *filename, const bool &Calculate_momResS2, const string &SampleName, const string &NucleonCutsDirectory, const string &MomentumType,
                           const bool &Load_correction = false, const bool &Load_smearing = false);
 
-    void AutoReader(const string &MomentumType, const int &PolynomialDegree, const string &parameter, basic_istream<char> &ss2, vector <vector<double>> &Loading_Dest,
-                    vector<double> &Loaded_coefficients_values, vector <string> &Loaded_coefficients_names);
+    void AutoReader(const string &MomentumType, const int &PolynomialDegree, const string &parameter, basic_istream<char> &ss2, vector<vector<double>> &Loading_Dest,
+                    vector<double> &Loaded_coefficients_values, vector<string> &Loaded_coefficients_names);
 
-    void AutoReader(const string &MomentumType, const int &PolynomialDegree, const string &parameter, basic_istream<char> &ss2, vector <vector<double>> &Loading_Dest);
+    void AutoReader(const string &MomentumType, const int &PolynomialDegree, const string &parameter, basic_istream<char> &ss2, vector<vector<double>> &Loading_Dest);
 
-// PSmear function ------------------------------------------------------------------------------------------------------------------------------------------------------
+    // PSmear function ------------------------------------------------------------------------------------------------------------------------------------------------------
 
     double PSmear(const bool &apply_nucleon_SmearAndCorr, const double &Momentum);
 
-// NCorr function -------------------------------------------------------------------------------------------------------------------------------------------------------
+    // NCorr function -------------------------------------------------------------------------------------------------------------------------------------------------------
 
     double NCorr(const bool &apply_nucleon_SmearAndCorr, const double &Momentum);
 
-// Other functions ------------------------------------------------------------------------------------------------------------------------------------------------------
+    // Other functions ------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // Set functions
     void SetHistSliceUpperLim(double hsUpperLim) { hSliceUpperLim = hsUpperLim; };
@@ -271,25 +271,33 @@ public:
 
     void SetForceSmallpResLimits(const bool &fsprl) { ForceSmallProtonResLimits = fsprl; };
 
-    void OverwriteResRecoMomSlices(vector<TH1D *> ResSlices0) {
-        for (int i = 0; i < ResRecoMomSlices.size(); i++) { ResRecoMomSlices.at(i).SetHistogram1D(ResSlices0.at(i)); }
+    void OverwriteResRecoMomSlices(vector<TH1D *> ResSlices0)
+    {
+        for (int i = 0; i < ResRecoMomSlices.size(); i++)
+        {
+            ResRecoMomSlices.at(i).SetHistogram1D(ResSlices0.at(i));
+        }
     }
 
-    void OverwriteResTLMomSlices(vector<TH1D *> ResSlices0) {
-        for (int i = 0; i < ResTLMomSlices.size(); i++) { ResTLMomSlices.at(i).SetHistogram1D(ResSlices0.at(i)); }
+    void OverwriteResTLMomSlices(vector<TH1D *> ResSlices0)
+    {
+        for (int i = 0; i < ResTLMomSlices.size(); i++)
+        {
+            ResTLMomSlices.at(i).SetHistogram1D(ResSlices0.at(i));
+        }
     }
 
-    void SetResRecoMomSlicesLimits(vector <vector<double>> ResSlicesLimits0) { ResRecoMomSlicesLimits = ResSlicesLimits0; };
+    void SetResRecoMomSlicesLimits(vector<vector<double>> ResSlicesLimits0) { ResRecoMomSlicesLimits = ResSlicesLimits0; };
 
-    void SetResTLMomSlicesLimits(vector <vector<double>> ResSlicesLimits0) { ResTLMomSlicesLimits = ResSlicesLimits0; };
+    void SetResTLMomSlicesLimits(vector<vector<double>> ResSlicesLimits0) { ResTLMomSlicesLimits = ResSlicesLimits0; };
 
-    void SetResRecoMomSlicesFitVar(vector <DSCuts> ResSlicesFitVar0) { ResRecoMomSlicesFitVar = ResSlicesFitVar0; };
+    void SetResRecoMomSlicesFitVar(vector<DSCuts> ResSlicesFitVar0) { ResRecoMomSlicesFitVar = ResSlicesFitVar0; };
 
-    void SetResTLMomSlicesFitVar(vector <DSCuts> ResSlicesFitVar0) { ResTLMomSlicesFitVar = ResSlicesFitVar0; };
+    void SetResTLMomSlicesFitVar(vector<DSCuts> ResSlicesFitVar0) { ResTLMomSlicesFitVar = ResSlicesFitVar0; };
 
-    void SetResRecoMomSlicesHistVar(vector <DSCuts> ResSlicesHistVar0) { ResRecoMomSlicesHistVar = ResSlicesHistVar0; };
+    void SetResRecoMomSlicesHistVar(vector<DSCuts> ResSlicesHistVar0) { ResRecoMomSlicesHistVar = ResSlicesHistVar0; };
 
-    void SetResTLMomSlicesHistVar(vector <DSCuts> ResSlicesHistVar0) { ResTLMomSlicesHistVar = ResSlicesHistVar0; };
+    void SetResTLMomSlicesHistVar(vector<DSCuts> ResSlicesHistVar0) { ResTLMomSlicesHistVar = ResSlicesHistVar0; };
 
     void SetFittedRecoMomSlices(vector<int> FittedSlices0) { FittedRecoMomSlices = FittedSlices0; };
 
@@ -304,7 +312,7 @@ public:
 
     vector<double> Get_Loaded_Smear_coefficients_values() { return Loaded_Smear_coefficients_values; };
 
-    vector <string> Get_Loaded_Smear_coefficients_names() { return Loaded_Smear_coefficients_names; };
+    vector<string> Get_Loaded_Smear_coefficients_names() { return Loaded_Smear_coefficients_names; };
 
     string Get_CorrMode() { return CorrMode; };
 
@@ -312,26 +320,25 @@ public:
 
     vector<double> Get_Loaded_Corr_coefficients_values() { return Loaded_Corr_coefficients_values; };
 
-    vector <string> Get_Loaded_Corr_coefficients_names() { return Loaded_Corr_coefficients_names; };
+    vector<string> Get_Loaded_Corr_coefficients_names() { return Loaded_Corr_coefficients_names; };
 
-    vector <vector<double>> GetResRecoMomSlicesLimits() { return ResRecoMomSlicesLimits; };
+    vector<vector<double>> GetResRecoMomSlicesLimits() { return ResRecoMomSlicesLimits; };
 
-    vector <vector<double>> GetResTLMomSlicesLimits() { return ResTLMomSlicesLimits; };
+    vector<vector<double>> GetResTLMomSlicesLimits() { return ResTLMomSlicesLimits; };
 
-    vector <DSCuts> GetResRecoMomSlicesFitVar() { return ResRecoMomSlicesFitVar; };
+    vector<DSCuts> GetResRecoMomSlicesFitVar() { return ResRecoMomSlicesFitVar; };
 
-    vector <DSCuts> GetResTLMomSlicesFitVar() { return ResTLMomSlicesFitVar; };
+    vector<DSCuts> GetResTLMomSlicesFitVar() { return ResTLMomSlicesFitVar; };
 
-    vector <DSCuts> GetResRecoMomSlicesHistVar() { return ResRecoMomSlicesHistVar; };
+    vector<DSCuts> GetResRecoMomSlicesHistVar() { return ResRecoMomSlicesHistVar; };
 
-    vector <DSCuts> GetResTLMomSlicesHistVar() { return ResTLMomSlicesHistVar; };
+    vector<DSCuts> GetResTLMomSlicesHistVar() { return ResTLMomSlicesHistVar; };
 
     vector<int> GetFittedRecoMomSlices() { return FittedRecoMomSlices; };
 
     vector<int> GetFittedTLMomSlices() { return FittedTLMomSlices; };
 
     string GetRandNumGenerator() { return RandomNumGenerator; };
-
 };
 
-#endif //MOMENTUMRESOLUTION_H
+#endif // MOMENTUMRESOLUTION_H
