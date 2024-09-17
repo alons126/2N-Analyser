@@ -1661,7 +1661,7 @@ void MomentumResolution::PolyFitter(const string &MomentumType, const int &Polyn
 void MomentumResolution::DrawAndSaveResSlices(const string &SampleName, TCanvas *h1DCanvas, const string &plots_path, const string &MomentumResolutionDirectory)
 {
     string SampleNameTemp = SampleName;
-    const char *ResSlicePlots_OutFile = ResSlicePlots_OutFile0;
+    const char *ResSlicePlots_OutFile = ResSlicePlots_OutFile0.c_str();
 
     if (isNeutron)
     {

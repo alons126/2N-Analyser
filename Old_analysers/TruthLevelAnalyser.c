@@ -10683,14 +10683,6 @@ void gst::Loop()
     fout->Write(); // TODO: figure out if fout is needed.
     fout->Close();
 
-    Histogram_OutPDF->Close();
-
-    //    cout << "\n";
-    //    cout << "\n";
-    //    cout << "Execution ended (code version " << Ver << ").\n";
-    //    cout << "File input was " << loadedInput << ".\n";
-    //    cout << "Settings mode was '" << file_name << "'.\n";
-
     cout << "\n";
     cout << "\n";
     cout << "===========================================================================\n";

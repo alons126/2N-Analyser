@@ -1874,12 +1874,12 @@ void AMaps::SaveHitMaps(const string &SampleName, const string &AcceptanceMapsDi
 void AMaps::DrawAndSaveHitMaps(const string &SampleName, TCanvas *h1DCanvas, const string &AcceptanceMapsDirectory)
 {
     string SampleNameTemp = SampleName;
-    const char *AcceptanceMapsBC_OutFile = AcceptanceMapsBC_OutFile0;
-    const char *TLAMaps_OutFile = TLAMaps_OutFile0;
-    const char *RecoAMaps_OutFile = RecoAMaps_OutFile0;
-    const char *AMapsRatio_OutFile = AMapsRatio_OutFile0;
-    const char *Charged_particle_Sep_AMaps_OutFile = Charged_particle_Sep_AMaps_OutFile0;
-    const char *AcceptanceMaps_OutFile = AcceptanceMaps_OutFile0;
+    const char *AcceptanceMapsBC_OutFile = AcceptanceMapsBC_OutFile0.c_str();
+    const char *TLAMaps_OutFile = TLAMaps_OutFile0.c_str();
+    const char *RecoAMaps_OutFile = RecoAMaps_OutFile0.c_str();
+    const char *AMapsRatio_OutFile = AMapsRatio_OutFile0.c_str();
+    const char *Charged_particle_Sep_AMaps_OutFile = Charged_particle_Sep_AMaps_OutFile0.c_str();
+    const char *AcceptanceMaps_OutFile = AcceptanceMaps_OutFile0.c_str();
 
     system(("mkdir -p " + AcceptanceMapsDirectory + SampleName).c_str());
 
