@@ -119,12 +119,12 @@ std::string file_name = "general_file";
 // std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
 // std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 
-// /* C12x4 5.98636GeV - run 015188 (ifarm DATA files - C12x4 DATA files) */
-// std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon";
-// std::string AnalyseFileSample = "015188";
-// std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-// // std::string AnalyseFile = AnalyseFileDir + "rec_clas_015188.evio.01685-01689.hipo"; // 1 run file
-// std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+/* C12x4 5.98636GeV - run 015188 (ifarm DATA files - C12x4 DATA files) */
+std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon";
+std::string AnalyseFileSample = "015188";
+std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+// std::string AnalyseFile = AnalyseFileDir + "rec_clas_015188.evio.01685-01689.hipo"; // 1 run file
+std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 
 
 // /* Ar40 2.07052GeV - run 015672 (ifarm DATA files - Ar40 DATA files) */
@@ -139,11 +139,11 @@ std::string file_name = "general_file";
 // std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
 // std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 
-/* Ar40 5.98636GeV - run 015792 (ifarm DATA files - Ar40 DATA files) */
-std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Ar/dst/recon";
-std::string AnalyseFileSample = "015792";
-std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+// /* Ar40 5.98636GeV - run 015792 (ifarm DATA files - Ar40 DATA files) */
+// std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Ar/dst/recon";
+// std::string AnalyseFileSample = "015792";
+// std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+// std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 
 // HIPO files for uniform samples ---------------------------------------------------------------------------------------------------------------------------------------
 
