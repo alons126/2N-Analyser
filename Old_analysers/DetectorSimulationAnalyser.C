@@ -169,7 +169,7 @@ void EventAnalyser()
     /* Settings that allow to disable/enable every cut individually */
 
     // clas12ana cuts ---------------------------------------------------------------------------------------------------------------------------------------------------
-    bool apply_cuts = false;                  // master ON/OFF switch for applying cuts
+    bool apply_cuts = false;                 // master ON/OFF switch for applying cuts
     bool clas12ana_particles = true;         // TODO: move form here!
     bool only_preselection_cuts = false;     // keep as false for regular runs!
     bool only_electron_quality_cuts = false; // keep as false for regular runs!
@@ -558,9 +558,7 @@ void EventAnalyser()
     /* Definition of plots TFile used to save all plots to .pdf file. */
 
     /* General plots TFile */
-    // TString TFileName = plots_path + "/Out.pdf";
-    TString TFileName = plots_path + "/" + SampleName + plots_TFile_FileType; // TODO: fix this output file
-    TFile *Histogram_OutPDF = new TFile(TFileName, "RECREATE");
+    const char *Histogram_OutPDF = plots_path + "/" + SampleName + plots_TFile_FileType;
     //</editor-fold>
 
     // Plot selector --------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -624,7 +622,7 @@ void EventAnalyser()
     bool FSR_1D_plots, FSR_2D_plots; // FSR_2D_plots is disabled below if HipoChainLength is 2 or lower
     //</editor-fold>
 
-    bool TestRun = true; // set as false for a full run
+    bool TestRun = false; // set as false for a full run
 
     //<editor-fold desc="Set enabled plots">
     if (!TestRun)
@@ -1050,19 +1048,19 @@ void EventAnalyser()
 
     if (is2GeVSample)
     {
-        Q2_uboundary_FD = 0.15;
-        // Q2_uboundary_FD = 0.8;
+        // Q2_uboundary_FD = 0.15;
+        Q2_uboundary_FD = 0.8;
         // Q2_uboundary_FD = 1;
     }
     else if (is4GeVSample)
     {
-        Q2_uboundary_FD = 1;
-        // Q2_uboundary_FD = 3;
+        // Q2_uboundary_FD = 1;
+        Q2_uboundary_FD = 3;
     }
     else if (is6GeVSample)
     {
-        Q2_uboundary_FD = 1.5;
-        // Q2_uboundary_FD = 5;
+        // Q2_uboundary_FD = 1.5;
+        Q2_uboundary_FD = 5;
     }
 
     /* TKI boundries */
@@ -20306,6 +20304,26 @@ void EventAnalyser()
     {
         cout << "\n\nPlotting Angle histograms...\n\n";
 
+        CanvasPDF->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
+        CanvasPDF->cd();
+
+        TLatex text;
+        text.SetTextSize(0.05);
+        text.DrawLatex(0.2, 0.9, "Angle histograms");
+        // text.DrawLatex(0.2, 0.8, "No Cuts");
+
+        // Force canvas to recognize modifications
+        CanvasPDF->Modified();
+        CanvasPDF->Update();
+
+        // Save the current canvas content to the PDF
+        CanvasPDF->Print(pdfFileName);
+
+        // End the multi-page PDF
+        CanvasPDF->Print(Form("%s]", pdfFileName));      // Close the PDF file
+        CanvasPDF->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
+        c1->cd();
+
         //  Theta_e plots (FD only) ---------------------------------------------------------------------------------------------------------------------------------------------
 
         //<editor-fold desc="Theta_e plots (no #(e) cut, FD)">
@@ -22070,6 +22088,10 @@ void EventAnalyser()
             //            quit();
         }
         //</editor-fold>
+
+        CanvasPDF->cd();
+        CanvasPDF->Print(Form("%s]", pdfFileName)); // Close the PDF file
+        c1->cd();
     }
     else
     {

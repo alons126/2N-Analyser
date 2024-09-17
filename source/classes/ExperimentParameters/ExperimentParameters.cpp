@@ -59,325 +59,215 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
 {
     string sName = "unknown_sample_598636MeV"; // to set beamE = 5.98636 by default;
 
-    if ((AnalyseFilePath == "mnt/d/e4nu/hipo_data_files")     // Storage (D:)
-        || (AnalyseFilePath == "mnt/g/e4nu/hipo_data_files")  // Alon's Portable (G:)
-        || (AnalyseFilePath == "mnt/h/e4nu/hipo_data_files")) // Alon's Passport (F:)
-    {
-        /* Local samples */
-        LocalSample = true;
-
-        //<editor-fold desc="Local samples">
-        if (AnalyseFileSample == "recon_qe_GENIE_C_598636MeV_Q2_0_5_test_5_first_10")
-        {
-            BeamAt6GeV = SimulationSample = true;
-            sName = "C12_simulation_6GeV_T5_first_10";
-        }
-        else if (AnalyseFileSample == "recon_qe_GENIE_C_598636MeV_Q2_0_5_test_5_first_100")
-        {
-            BeamAt6GeV = SimulationSample = true;
-            sName = "C12_simulation_6GeV_T5_first_100";
-        }
-        else if (AnalyseFileSample == "recon_qe_GENIE_C_598636MeV_Q2_0_5_test_5_first_250")
-        {
-            BeamAt6GeV = SimulationSample = true;
-            sName = "C12_simulation_6GeV_T5_first_250";
-        }
-        else if (AnalyseFileSample == "recon_qe_GENIE_C_598636MeV_Q2_0_5_test_5")
-        {
-            BeamAt6GeV = SimulationSample = true;
-            sName = "C12_simulation_6GeV_T5";
-        }
-        else if (AnalyseFileSample == "C12_simulation_G18_2GeV")
+    if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_e_tester_1e")
+    { // Uniform, simulation, 2GeV, ifarm
+        if (AnalyseFileSample == "reconhipo")
         {
             BeamAt2GeV = SimulationSample = true;
-            sName = "C12_simulation_G18_2GeV";
+            sName = "Uniform_sample_e_tester_2070MeV";
         }
-        else if (AnalyseFileSample == "C12_G18_02a_00_000_Q204_598636MeV")
-        {
-            BeamAt6GeV = SimulationSample = true;
-            sName = "C12_simulation_G18_Q204_6GeV";
-        }
-        else if (AnalyseFileSample == "C12x4_G18_02a_00_000_Q204_598636MeV")
-        {
-            BeamAt6GeV = SimulationSample = true;
-            sName = "C12x4_simulation_G18_Q204_6GeV";
-        }
-        //</editor-fold>
     }
-    else
-    {
-        /* ifarm samples */
-
-        //<editor-fold desc="ifarm samples">
-        if (AnalyseFilePath == "lustre19/expphy/volatile/clas12/asportes/simulationFiles/C12_G18_10a_02_11b_207052MeV")
-        { // C12, simulation, 2GeV, ifarm
-            if (AnalyseFileSample == "reconhipo")
-            {
-                BeamAt2GeV = SimulationSample = true;
-                sName = "C12_simulation_G18_2GeV";
-            }
+    else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_e_tester_1e")
+    { // Uniform, simulation, 4GeV, ifarm
+        if (AnalyseFileSample == "reconhipo")
+        {
+            BeamAt4GeV = SimulationSample = true;
+            sName = "Uniform_sample_e_tester_4029MeV";
         }
-        else if (AnalyseFilePath == "lustre19/expphy/volatile/clas12/asportes/simulationFiles/Ar40_G18_10a_02_11b_207052MeV")
-        { // Ar40, simulation, 2GeV, ifarm
-            if (AnalyseFileSample == "reconhipo")
-            {
-                BeamAt2GeV = SimulationSample = true;
-                sName = "Ar40_simulation_G18_2GeV";
-            }
+    }
+    else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_e_tester_1e")
+    { // Uniform, simulation, 6GeV, ifarm
+        if (AnalyseFileSample == "reconhipo")
+        {
+            BeamAt6GeV = SimulationSample = true;
+            sName = "Uniform_sample_e_tester_5986MeV";
         }
-        else if (AnalyseFilePath == "lustre19/expphy/volatile/clas12/asportes/simulationFiles/Ca48_G18_10a_02_11b_207052MeV")
-        { // Ca48, simulation, 2GeV, ifarm
-            if (AnalyseFileSample == "reconhipo")
-            {
-                BeamAt2GeV = SimulationSample = true;
-                sName = "Ca48_simulation_G18_2GeV";
-            }
+    }
+    else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/598636MeV")
+    { // Uniform, simulation, 6GeV, ifarm
+        if (AnalyseFileSample == "reconhipo")
+        {
+            BeamAt6GeV = SimulationSample = true;
+            sName = "Uniform_sample_598636MeV";
         }
-        else if (AnalyseFilePath == "lustre19/expphy/volatile/clas12/asportes/simulationFiles/598636MeV_Q2_0_5_test_5")
-        { // C12, simulation, 6GeV, Q205, T5, ifarm
-            if (AnalyseFileSample == "reconhipo")
-            {
-                BeamAt6GeV = SimulationSample = true;
-                sName = "C12_simulation_6GeV_T5";
-            }
+    }
+    else if (AnalyseFilePath == "volatile/clas12/rg-m/48Ca/dst/recon")
+    { // Ca48, data, 6GeV, ifarm
+        if (AnalyseFileSample == "015832")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "Ca48_data_6GeV_run_015832";
         }
-        else if (AnalyseFilePath == "volatile/clas12/asportes/simulationFiles/C12_G18_02a_00_000_Q208_598636MeV")
-        { // C12, simulation, 6GeV, Q208, ifarm
-            if (AnalyseFileSample == "reconhipo")
-            {
-                BeamAt6GeV = SimulationSample = true;
-                sName = "C12_simulation_G18_Q208_6GeV";
-            }
+        else if (AnalyseFileSample == "015843")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "Ca48_data_6GeV_run_015843";
         }
-        else if (AnalyseFilePath == "volatile/clas12/asportes/simulationFiles/C12_G18_02a_00_000_Q204_598636MeV")
-        { // C12, simulation, 6GeV, Q204, ifarm
-            if (AnalyseFileSample == "reconhipo")
-            {
-                BeamAt6GeV = SimulationSample = true;
-                sName = "C12_simulation_G18_Q204_6GeV";
-            }
+        else if (AnalyseFileSample == "015852")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "Ca48_data_6GeV_run_015852";
         }
-        else if (AnalyseFilePath == "volatile/clas12/asportes/simulationFiles/C12x4_G18_02a_00_000_Q204_598636MeV")
-        { // C12x4, simulation, 6GeV, Q204, ifarm
-            if (AnalyseFileSample == "reconhipo")
-            {
-                BeamAt6GeV = SimulationSample = true;
-                sName = "C12x4_simulation_G18_Q204_6GeV";
-            }
+        else if (AnalyseFileSample == "015854")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "Ca48_data_6GeV_run_015854";
         }
-        else if (AnalyseFilePath ==
-                 "lustre19/expphy/volatile/clas12/asportes/simulationFiles/Ca48_G18_10a_02_11b_Q205_598636MeV")
-        { // Ca48, simulation, 6GeV, Q205, ifarm
-            if (AnalyseFileSample == "reconhipo")
-            {
-                BeamAt6GeV = SimulationSample = true;
-                sName = "Ca48_simulation_G18_10a_02_11b_6GeV";
-            }
+    }
+    else if (AnalyseFilePath == "cache/hallb/scratch/rg-m/LH2/8.6.0")
+    { // LH2, data, 6GeV, ifarm
+        if (AnalyseFileSample == "015032")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "LH2_data_6GeV_run_015032";
         }
-        else if (AnalyseFilePath == "lustre19/expphy/volatile/clas12/asportes/simulationFiles/H1_G18_10a_02_11b_Q205_598636MeV")
-        { // H1, simulation, 6GeV, Q205, ifarm
-            if (AnalyseFileSample == "reconhipo")
-            {
-                BeamAt6GeV = SimulationSample = true;
-                sName = "H1_simulation_G18_10a_02_11b_6GeV";
-            }
+    }
+    //
+    else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/H/dst/recon")
+    { // H1, data, 2GeV, ifarm (Q2 study)
+        if (AnalyseFileSample == "015634")
+        {
+            BeamAt2GeV = DataSample = true;
+            sName = "H1_data_2GeV_run_015634";
         }
-        else if (AnalyseFilePath == "volatile/clas12/users/esteejus/Simulation_sigmaCM")
-        { // C, simulation, 6GeV, ifarm
-            if (AnalyseFileSample == "reconhipo")
-            {
-                BeamAt6GeV = SimulationSample = true;
-                sName = "C_simulation_Justin_6GeV";
-            }
+    }
+    // else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon")
+    // { // H1, data, 4GeV, ifarm (Q2 study)
+    //     if (AnalyseFileSample == "015743")
+    //     {
+    //         BeamAt4GeV = DataSample = true;
+    //         sName = "H1_data_4GeV_run_015743";
+    //     }
+    // }
+    else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/6gev/H/dst/recon")
+    { // H1, data, 6GeV, ifarm (Q2 study)
+        if (AnalyseFileSample == "015028")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "H1_data_6GeV_run_015028";
         }
-        else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/598636MeV")
-        { // C, simulation, 6GeV, ifarm
-            if (AnalyseFileSample == "reconhipo")
-            {
-                BeamAt6GeV = SimulationSample = true;
-                sName = "Uniform_sample_598636MeV";
-            }
+    }
+    else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/D/dst/recon")
+    { // D2, data, 2GeV, ifarm (Q2 study)
+        if (AnalyseFileSample == "")
+        {
+            BeamAt2GeV = DataSample = true;
+            sName = "D2_data_2GeV";
         }
-        else if (AnalyseFilePath == "volatile/clas12/rg-m/48Ca/dst/recon")
-        { // Ca48, data, 6GeV, ifarm
-            if (AnalyseFileSample == "015832")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "Ca48_data_6GeV_run_015832";
-            }
-            else if (AnalyseFileSample == "015843")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "Ca48_data_6GeV_run_015843";
-            }
-            else if (AnalyseFileSample == "015852")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "Ca48_data_6GeV_run_015852";
-            }
-            else if (AnalyseFileSample == "015854")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "Ca48_data_6GeV_run_015854";
-            }
+    }
+    // else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon")
+    // { // D2, data, 4GeV, ifarm (Q2 study)
+    //     if (AnalyseFileSample == "015743")
+    //     {
+    //         BeamAt4GeV = DataSample = true;
+    //         sName = "D2_data_4GeV_run_015743";
+    //     }
+    // }
+    else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/6gev/D/dst/recon")
+    { // D2, data, 6GeV, ifarm (Q2 study)
+        if (AnalyseFileSample == "015443")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "D2_data_6GeV_run_015443";
         }
-        else if (AnalyseFilePath == "cache/hallb/scratch/rg-m/LH2/8.6.0")
-        { // LH2, data, 6GeV, ifarm
-            if (AnalyseFileSample == "015032")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "LH2_data_6GeV_run_015032";
-            }
+    }
+    else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/Ar/dst/recon")
+    { // Ar40, data, 2GeV, ifarm (Q2 study)
+        if (AnalyseFileSample == "015672")
+        {
+            BeamAt2GeV = DataSample = true;
+            sName = "Ar40_data_2GeV_run_015672";
         }
-        //
-        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/H/dst/recon")
-        { // H1, data, 2GeV, ifarm (Q2 study)
-            if (AnalyseFileSample == "015634")
-            {
-                BeamAt2GeV = DataSample = true;
-                sName = "H1_data_2GeV_run_015634";
-            }
+    }
+    else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon")
+    { // Ar40, data, 4GeV, ifarm (Q2 study)
+        if (AnalyseFileSample == "015743")
+        {
+            BeamAt4GeV = DataSample = true;
+            sName = "Ar40_data_4GeV_run_015743";
         }
-        // else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon")
-        // { // H1, data, 4GeV, ifarm (Q2 study)
-        //     if (AnalyseFileSample == "015743")
-        //     {
-        //         BeamAt4GeV = DataSample = true;
-        //         sName = "H1_data_4GeV_run_015743";
-        //     }
-        // }
-        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/6gev/H/dst/recon")
-        { // H1, data, 6GeV, ifarm (Q2 study)
-            if (AnalyseFileSample == "015028")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "H1_data_6GeV_run_015028";
-            }
+    }
+    else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/6gev/Ar/dst/recon")
+    { // Ar40, data, 6GeV, ifarm (Q2 study)
+        if (AnalyseFileSample == "015792")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "Ar40_data_6GeV_run_015792";
         }
-        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/D/dst/recon")
-        { // D2, data, 2GeV, ifarm (Q2 study)
-            if (AnalyseFileSample == "")
-            {
-                BeamAt2GeV = DataSample = true;
-                sName = "D2_data_2GeV";
-            }
+    }
+    else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/C/dst/recon")
+    { // C, data, 2GeV, ifarm (Q2 study)
+        if (AnalyseFileSample == "015664")
+        {
+            BeamAt2GeV = DataSample = true;
+            sName = "C12_data_2GeV_run_015664";
         }
-        // else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon")
-        // { // D2, data, 4GeV, ifarm (Q2 study)
-        //     if (AnalyseFileSample == "015743")
-        //     {
-        //         BeamAt4GeV = DataSample = true;
-        //         sName = "D2_data_4GeV_run_015743";
-        //     }
-        // }
-        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/6gev/D/dst/recon")
-        { // D2, data, 6GeV, ifarm (Q2 study)
-            if (AnalyseFileSample == "015443")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "D2_data_6GeV_run_015443";
-            }
+    }
+    else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/4gev/C/dst/recon")
+    { // C, data, 4GeV, ifarm (Q2 study)
+        if (AnalyseFileSample == "015778")
+        {
+            BeamAt4GeV = DataSample = true;
+            sName = "C12_data_4GeV_run_015778";
         }
-        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/Ar/dst/recon")
-        { // Ar40, data, 2GeV, ifarm (Q2 study)
-            if (AnalyseFileSample == "015672")
-            {
-                BeamAt2GeV = DataSample = true;
-                sName = "Ar40_data_2GeV_run_015672";
-            }
+    }
+    else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon")
+    {                                      // Cx4, data, 6GeV, ifarm
+        if (AnalyseFileSample == "015186") // (Q2 study)
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "C12x4_data_6GeV_run_015186";
         }
-        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon")
-        { // Ar40, data, 4GeV, ifarm (Q2 study)
-            if (AnalyseFileSample == "015743")
-            {
-                BeamAt4GeV = DataSample = true;
-                sName = "Ar40_data_4GeV_run_015743";
-            }
+        else if (AnalyseFileSample == "015187")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "C12x4_data_6GeV_run_015187";
         }
-        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/6gev/Ar/dst/recon")
-        { // Ar40, data, 6GeV, ifarm (Q2 study)
-            if (AnalyseFileSample == "015792")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "Ar40_data_6GeV_run_015792";
-            }
+        else if (AnalyseFileSample == "015188")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "C12x4_data_6GeV_run_015188";
         }
-        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/2gev/C/dst/recon")
-        { // C, data, 2GeV, ifarm (Q2 study)
-            if (AnalyseFileSample == "015664")
-            {
-                BeamAt2GeV = DataSample = true;
-                sName = "C12_data_2GeV_run_015664";
-            }
+        else if (AnalyseFileSample == "015189")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "C12x4_data_6GeV_run_015189";
         }
-        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/4gev/C/dst/recon")
-        { // C, data, 4GeV, ifarm (Q2 study)
-            if (AnalyseFileSample == "015778")
-            {
-                BeamAt4GeV = DataSample = true;
-                sName = "C12_data_4GeV_run_015778";
-            }
+        else if (AnalyseFileSample == "015190")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "C12x4_data_6GeV_run_015190";
         }
-
-        else if (AnalyseFilePath == "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon")
-        {                                      // Cx4, data, 6GeV, ifarm
-            if (AnalyseFileSample == "015186") // (Q2 study)
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "C12x4_data_6GeV_run_015186";
-            }
-            else if (AnalyseFileSample == "015187")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "C12x4_data_6GeV_run_015187";
-            }
-            else if (AnalyseFileSample == "015188")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "C12x4_data_6GeV_run_015188";
-            }
-            else if (AnalyseFileSample == "015189")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "C12x4_data_6GeV_run_015189";
-            }
-            else if (AnalyseFileSample == "015190")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "C12x4_data_6GeV_run_015190";
-            }
-            else if (AnalyseFileSample == "015191")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "C12x4_data_6GeV_run_015191";
-            }
-            else if (AnalyseFileSample == "015192")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "C12x4_data_6GeV_run_015192";
-            }
-            else if (AnalyseFileSample == "015193")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "C12x4_data_6GeV_run_015193";
-            }
-            else if (AnalyseFileSample == "015194")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "C12x4_data_6GeV_run_015194";
-            }
-            else if (AnalyseFileSample == "015195")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "C12x4_data_6GeV_run_015195";
-            }
-            else if (AnalyseFileSample == "")
-            {
-                BeamAt6GeV = DataSample = true;
-                sName = "C12x4_data_6GeV";
-            }
+        else if (AnalyseFileSample == "015191")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "C12x4_data_6GeV_run_015191";
         }
-        //</editor-fold>
+        else if (AnalyseFileSample == "015192")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "C12x4_data_6GeV_run_015192";
+        }
+        else if (AnalyseFileSample == "015193")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "C12x4_data_6GeV_run_015193";
+        }
+        else if (AnalyseFileSample == "015194")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "C12x4_data_6GeV_run_015194";
+        }
+        else if (AnalyseFileSample == "015195")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "C12x4_data_6GeV_run_015195";
+        }
+        else if (AnalyseFileSample == "")
+        {
+            BeamAt6GeV = DataSample = true;
+            sName = "C12x4_data_6GeV";
+        }
     }
 
     //<editor-fold desc="Safety checks">

@@ -24,22 +24,22 @@
 					"label": ""
 				},
 				{
-					"line": 192,
+					"line": 191,
 					"column": 23,
 					"label": ""
 				},
 				{
-					"line": 626,
+					"line": 623,
 					"column": 21,
 					"label": ""
 				},
 				{
-					"line": 892,
+					"line": 889,
 					"column": 51,
 					"label": ""
 				},
 				{
-					"line": 962,
+					"line": 959,
 					"column": 43,
 					"label": ""
 				}
@@ -84,22 +84,22 @@
 					"label": "Config new samples - sample name"
 				},
 				{
-					"line": 445,
+					"line": 335,
 					"column": 4,
 					"label": "Config new samples - varing sample name"
 				},
 				{
-					"line": 478,
+					"line": 368,
 					"column": 2,
 					"label": "Config new samples - Vz cuts"
 				},
 				{
-					"line": 599,
+					"line": 489,
 					"column": 6,
 					"label": "Config new samples - dVz cuts"
 				},
 				{
-					"line": 748,
+					"line": 638,
 					"column": 0,
 					"label": "Config new samples - AddToHipoChain"
 				}

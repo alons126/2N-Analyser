@@ -178,20 +178,32 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    /* Ar40 5.98636GeV - run 015792 (ifarm DATA files - Ar40 DATA files) */
-    AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Ar/dst/recon";
-    AnalyseFileSample = "015792";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
+    // /* Ar40 5.98636GeV - run 015792 (ifarm DATA files - Ar40 DATA files) */
+    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Ar/dst/recon";
+    // AnalyseFileSample = "015792";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+    // AnalyseFilePath_v.push_back(AnalyseFilePath);
+    // AnalyseFileSample_v.push_back(AnalyseFileSample);
+    // AnalyseFileDir_v.push_back(AnalyseFileDir);
+    // AnalyseFile_v.push_back(AnalyseFile);
 
     // HIPO files for uniform samples ---------------------------------------------------------------------------------------------------------------------------------------
 
-    // /* Uniform electron tester sample @ 2GeV */
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_e_tester_1e";
+    /* Uniform electron tester sample @ 2GeV */
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_e_tester_1e";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "*.hipo";
+
+    // /* Uniform electron tester sample @ 4GeV */
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_e_tester_1e";
+    // AnalyseFileSample = "reconhipo";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "*.hipo";
+
+    // /* Uniform electron tester sample @ 6GeV */
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_e_tester_1e";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "*.hipo";
@@ -274,6 +286,26 @@ void ConfigSampleChain()
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //<editor-fold desc="Other parameters">
+
+// ======================================================================================================================================================================
+// PDF file canvas
+// ======================================================================================================================================================================
+
+int num_of_hist_per_row = 4;
+int num_of_hist_per_col = 3;
+int CanvasPDF_ind = 1;
+TCanvas *CanvasPDF = new TCanvas("CanvasPDF", "CanvasPDF", 1000 * num_of_hist_per_row, 750 * num_of_hist_per_col); // normal res
+
+void ConfigCanvasPDF()
+{
+    for (int i = 1; i < num_of_hist_per_row * num_of_hist_per_col + 1; i++)
+    {
+        CanvasPDF->cd(i)->SetGrid();
+        CanvasPDF->cd(i)->SetBottomMargin(0.14);
+        CanvasPDF->cd(i)->SetLeftMargin(0.16);
+        CanvasPDF->cd(i)->SetRightMargin(0.12);
+    }
+}
 
 // ======================================================================================================================================================================
 // BEnergyToNucleus definition

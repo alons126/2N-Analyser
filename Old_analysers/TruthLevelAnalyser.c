@@ -5895,8 +5895,7 @@ void gst::Loop() {
 
 // List definition ---------------------------------------------------------------------------------
 
-    TString TFileName = plots_path + "/Out" + plots_TFile_FileType;
-    TFile *Histogram_OutPDF = new TFile(TFileName, "RECREATE");
+    const char *Histogram_OutPDF = plots_path + "/Out" + plots_TFile_FileType;
 
 //  Code execution
 // =======================================================================================================================================================================

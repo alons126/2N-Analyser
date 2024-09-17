@@ -4,7 +4,8 @@ using namespace std;
 
 int main() {
     ConfigSampleChain();
-    
+    ConfigCanvasPDF();
+
     auto start = std::chrono::system_clock::now(); // Start counting running time
 
     string FileType = AnalyseFile.substr(AnalyseFile.find_last_of(".") + 1);
