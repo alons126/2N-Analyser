@@ -69,11 +69,11 @@ std::string file_name = "general_file";
 
 // HIPO files for Q2 study ----------------------------------------------------------------------------------------------------------------------------------------------
 
-/* H1 2.07052GeV - run 015634 (ifarm DATA files - H1 DATA files) */
-std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/H/dst/recon";
-std::string AnalyseFileSample = "015634";
-std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all data files
+// /* H1 2.07052GeV - run 015634 (ifarm DATA files - H1 DATA files) */
+// std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/H/dst/recon";
+// std::string AnalyseFileSample = "015634";
+// std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+// std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all data files
 
 // /* H1 4.02962GeV - run 015743 (ifarm DATA files - H1 DATA files) */
 // std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon";
@@ -81,11 +81,11 @@ std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all data files
 // std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
 // std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 
-// /* H1 5.98636GeV - run 015028 (ifarm DATA files - H1 DATA files) */
-// std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/H/dst/recon";
-// std::string AnalyseFileSample = "015028";
-// std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-// std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+/* H1 5.98636GeV - run 015028 (ifarm DATA files - H1 DATA files) */
+std::string AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/H/dst/recon";
+std::string AnalyseFileSample = "015028";
+std::string AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+std::string AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 
 
 // /* D2 2.07052GeV - all runs (ifarm DATA files - D2 DATA files) */
