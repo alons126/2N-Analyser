@@ -101,15 +101,15 @@ void ConfigSampleChain() {
 // AnalyseFile_v.push_back(AnalyseFile);
 
 
-/* D2 2.07052GeV - all runs (ifarm DATA files - D2 DATA files) */
-AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/D/dst/recon";
-AnalyseFileSample = "";
-AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-AnalyseFile = AnalyseFileDir + "*.hipo"; // all data files
-AnalyseFilePath_v.push_back(AnalyseFilePath);
-AnalyseFileSample_v.push_back(AnalyseFileSample);
-AnalyseFileDir_v.push_back(AnalyseFileDir);
-AnalyseFile_v.push_back(AnalyseFile);
+// /* D2 2.07052GeV - all runs (ifarm DATA files - D2 DATA files) */
+// AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/D/dst/recon";
+// AnalyseFileSample = "";
+// AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+// AnalyseFile = AnalyseFileDir + "*.hipo"; // all data files
+// AnalyseFilePath_v.push_back(AnalyseFilePath);
+// AnalyseFileSample_v.push_back(AnalyseFileSample);
+// AnalyseFileDir_v.push_back(AnalyseFileDir);
+// AnalyseFile_v.push_back(AnalyseFile);
 
 // /* D2 4.02962GeV - run 015743 (ifarm DATA files - D2 DATA files) */
 // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon";
@@ -117,15 +117,15 @@ AnalyseFile_v.push_back(AnalyseFile);
 // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
 // AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
 
-// /* D2 5.98636GeV - run 015443 (ifarm DATA files - D2 DATA files) */
-// AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/D/dst/recon";
-// AnalyseFileSample = "015443";
-// AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-// AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
-// AnalyseFilePath_v.push_back(AnalyseFilePath);
-// AnalyseFileSample_v.push_back(AnalyseFileSample);
-// AnalyseFileDir_v.push_back(AnalyseFileDir);
-// AnalyseFile_v.push_back(AnalyseFile);
+/* D2 5.98636GeV - run 015443 (ifarm DATA files - D2 DATA files) */
+AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/D/dst/recon";
+AnalyseFileSample = "015443";
+AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+AnalyseFilePath_v.push_back(AnalyseFilePath);
+AnalyseFileSample_v.push_back(AnalyseFileSample);
+AnalyseFileDir_v.push_back(AnalyseFileDir);
+AnalyseFile_v.push_back(AnalyseFile);
 
 
 // /* C12 2.07052GeV - run 015664 (ifarm DATA files - C12 DATA files) */
