@@ -24,12 +24,12 @@
 AMaps::AMaps(const string &SampleName, bool reformat_e_bins, bool varying_P_e_bins, bool varying_P_nuc_bins, double beamE, const string &AMapsMode, const string &SavePath,
              int nOfNucMomBins, int nOfElecMomBins, int hnsNumOfXBins, int hnsNumOfYBins, int hesNumOfXBins, int hesNumOfYBins)
 {
-    AcceptanceMapsBC_OutFile0 = (SavePath + "/" + "AcceptanceMapsBC.pdf").c_str();
-    TLAMaps_OutFile0 = (SavePath + "/" + "TLAMaps.pdf").c_str();
-    RecoAMaps_OutFile0 = (SavePath + "/" + "RecoAMaps.pdf").c_str();
-    AMapsRatio_OutFile0 = (SavePath + "/" + "AMapsRatio.pdf").c_str();
-    Charged_particle_Sep_AMaps_OutFile0 = (SavePath + "/" + "Charged_particle_Sep_AMaps.pdf").c_str();
-    AcceptanceMaps_OutFile0 = (SavePath + "/" + "AcceptanceMaps.pdf").c_str();
+    AcceptanceMapsBC_OutFile0 = SavePath + "/" + "AcceptanceMapsBC.pdf";
+    TLAMaps_OutFile0 = SavePath + "/" + "TLAMaps.pdf";
+    RecoAMaps_OutFile0 = SavePath + "/" + "RecoAMaps.pdf";
+    AMapsRatio_OutFile0 = SavePath + "/" + "AMapsRatio.pdf";
+    Charged_particle_Sep_AMaps_OutFile0 = SavePath + "/" + "Charged_particle_Sep_AMaps.pdf";
+    AcceptanceMaps_OutFile0 = SavePath + "/" + "AcceptanceMaps.pdf";
 
     AMaps_Mode = AMapsMode;
     SName = SampleName;

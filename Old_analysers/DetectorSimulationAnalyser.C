@@ -558,7 +558,8 @@ void EventAnalyser()
     /* Definition of plots TFile used to save all plots to .pdf file. */
 
     /* General plots PDF file */
-    const char *Histogram_OutPDF = plots_path + "/" + SampleName + plots_TFile_FileType;
+    string Histogram_OutPDF_fileName = plots_path + "/" + SampleName + plots_TFile_FileType;
+    const char *Histogram_OutPDF = Histogram_OutPDF_fileName.c_str();
     //</editor-fold>
 
     // Plot selector --------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -20317,10 +20318,10 @@ void EventAnalyser()
         CanvasPDF->Update();
 
         // Save the current canvas content to the PDF
-        CanvasPDF->Print(pdfFileName);
+        CanvasPDF->Print(Histogram_OutPDF);
 
         // End the multi-page PDF
-        CanvasPDF->Print(Form("%s]", pdfFileName));      // Close the PDF file
+        CanvasPDF->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
         CanvasPDF->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         c1->cd();
 
@@ -22090,7 +22091,7 @@ void EventAnalyser()
         //</editor-fold>
 
         CanvasPDF->cd();
-        CanvasPDF->Print(Form("%s]", pdfFileName)); // Close the PDF file
+        CanvasPDF->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
         c1->cd();
     }
     else
@@ -25868,8 +25869,6 @@ void EventAnalyser()
     plots_fout->Write();
     plots_fout->Close();
     //</editor-fold>
-
-    Histogram_OutPDF->Close();
 
     //<editor-fold desc="Saving Acceptance correction data">
     TFile *ACorr_data_fout;

@@ -69,9 +69,9 @@ void MomentumResolution::MomResInit(const bool &plot_and_fit_MomRes, const bool 
     {
         if (plot_and_fit_MomRes)
         {
-            ResSlicePlots_OutFile0 = (SavePath + "/" + "Neutron_ResSlicePlots.pdf").c_str()
+            ResSlicePlots_OutFile0 = SavePath + "/" + "Neutron_ResSlicePlots.pdf";
 
-                                         SetMomResCalculations(SampleName, NucleonCutsDirectory, beamE, MomRes_mu_cuts, MomRes_sigma_cuts, ParticleMomTh, Calculate_momResS2, Run_with_momResS2, MomentumResolutionDirectory, SavePath, DeltaSlices, VaryingDelta, SmearM, CorrM, momRes_test, false, FitDebugging);
+            SetMomResCalculations(SampleName, NucleonCutsDirectory, beamE, MomRes_mu_cuts, MomRes_sigma_cuts, ParticleMomTh, Calculate_momResS2, Run_with_momResS2, MomentumResolutionDirectory, SavePath, DeltaSlices, VaryingDelta, SmearM, CorrM, momRes_test, false, FitDebugging);
 
             if (momRes_test)
             {
@@ -183,7 +183,7 @@ void MomentumResolution::MomResInit(const bool &plot_and_fit_MomRes, const bool 
     {
         if (plot_and_fit_MomRes)
         {
-            ResSlicePlots_OutFile = (SavePath + "/" + "Proton_ResSlicePlots.pdf").c_str();
+            ResSlicePlots_OutFile = SavePath + "/" + "Proton_ResSlicePlots.pdf";
 
             SetMomResCalculations(SampleName, NucleonCutsDirectory, beamE, MomRes_mu_cuts, MomRes_sigma_cuts, ParticleMomTh, Calculate_momResS2, Run_with_momResS2,
                                   MomentumResolutionDirectory, SavePath, DeltaSlices, VaryingDelta, SmearM, CorrM, momRes_test, ForceSmallpResLimits, FitDebugging);
