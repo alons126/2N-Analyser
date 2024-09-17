@@ -15,13 +15,16 @@ int main()
 
     for (int i = 0; i < AnalyseFilePath.size(); i++)
     {
-        string FileType = AnalyseFile.substr(AnalyseFile.find_last_of(".") + 1);
 
         AnalyseFilePath = AnalyseFilePath_v.at(i);
         AnalyseFileSample = AnalyseFileSample_v.at(i);
         AnalyseFilePath = AnalyseFile_v.at(i);
 
-        cout << "\nAnalyseFile:\t" << AnalyseFile << "\n";
+        string FileType = AnalyseFile_v.at(i).substr(AnalyseFile_v.at(i).find_last_of(".") + 1);
+
+        cout << "\nAnalyseFilePath:\t" << AnalyseFilePath << "\n";
+        cout << "\nAnalyseFileSample:\t" << AnalyseFileSample << "\n";
+        cout << "\nAnalyseFilePath:\t" << AnalyseFilePath << "\n";
         cout << "FileType:\t" << FileType << "\n";
 
         DataAnalyser Analysis(FileType, AnalyseFilePath, AnalyseFileSample, AnalyseFile);
