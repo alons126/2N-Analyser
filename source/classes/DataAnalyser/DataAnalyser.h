@@ -14,7 +14,7 @@ private:
 public:
     // default constructor --------------------------------------------------------------------------------------------------------------------------------------------------
 
-    DataAnalyser(const string &FileType);
+    DataAnalyser(const string &FileType, const string &AnalyseFilePath, const string &AnalyseFileSample, const string &AnalyseFile);
 
     // ConfigureAnalyserMode function -----------------------------------------------------------------------------------------------------------------------------
 
