@@ -122,12 +122,12 @@ private:
     TList *Charged_particle_Sep_AMaps = new TList();
     TList *AcceptanceMaps = new TList();
 
-    char *AcceptanceMapsBC_OutFile0;
-    char *TLAMaps_OutFile0;
-    char *RecoAMaps_OutFile0;
-    char *AMapsRatio_OutFile0;
-    char *Charged_particle_Sep_AMaps_OutFile0;
-    char *AcceptanceMaps_OutFile0;
+    string AcceptanceMapsBC_OutFile0;
+    string TLAMaps_OutFile0;
+    string RecoAMaps_OutFile0;
+    string AMapsRatio_OutFile0;
+    string Charged_particle_Sep_AMaps_OutFile0;
+    string AcceptanceMaps_OutFile0;
 
     string AMapSavePath, AMapCopySavePath;
 

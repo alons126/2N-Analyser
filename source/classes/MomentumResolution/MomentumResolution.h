@@ -94,7 +94,7 @@ private:
     TFolder *FittedRecoProtonResSlicesMean = new TFolder("Fitted reco proton resolution slice mean", "Fitted reco proton resolution slice mean");
     TFolder *FittedRecoProtonResSlicesWidth = new TFolder("Fitted reco proton resolution slice width", "Fitted reco proton resolution slice width");
 
-    char *ResSlicePlots_OutFile0;
+    string ResSlicePlots_OutFile0;
 
     //<editor-fold desc="Random number generators">
     string RandomNumGenerator = "TRandom3"; // TRandom3 by default

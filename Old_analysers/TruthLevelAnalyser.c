@@ -5869,7 +5869,8 @@ void gst::Loop()
 
     // List definition ---------------------------------------------------------------------------------
 
-    string Histogram_OutPDF_fileName = plots_path + "/Out" + plots_TFile_FileType const char *Histogram_OutPDF = Histogram_OutPDF_fileName.c_str();
+    string Histogram_OutPDF_fileName = plots_path + "/Out" + plots_TFile_FileType;
+    const char *Histogram_OutPDF = Histogram_OutPDF_fileName.c_str();
 
     //  Code execution
     // =======================================================================================================================================================================
@@ -6743,7 +6744,7 @@ void gst::Loop()
                             }
                         }
                         else
-                        {   // If Proton_2_ind_2p is the leading proton and Proton_1_ind_2p is the recoil
+                        { // If Proton_2_ind_2p is the leading proton and Proton_1_ind_2p is the recoil
                             //                          Leading proton:
                             double P_L_2p = P_p2_2p;
 
