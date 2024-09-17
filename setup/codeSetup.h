@@ -73,6 +73,7 @@ std::string file_name = "general_file";
 
 // HIPO files for Q2 study ----------------------------------------------------------------------------------------------------------------------------------------------
 
+void ConfigSampleChain() {
 /* H1 2.07052GeV - run 015634 (ifarm DATA files - H1 DATA files) */
 AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/H/dst/recon";
 AnalyseFileSample = "015634";
@@ -188,6 +189,8 @@ AnalyseFile_v.push_back(AnalyseFile);
 // AnalyseFileSample_v.push_back(AnalyseFileSample);
 // AnalyseFileDir_v.push_back(AnalyseFileDir);
 // AnalyseFile_v.push_back(AnalyseFile);
+
+}
 
 // HIPO files for uniform samples ---------------------------------------------------------------------------------------------------------------------------------------
 
