@@ -5,14 +5,9 @@
 #ifndef HISTOGRAMPLOTTINGFUNCTIONS_H
 #define HISTOGRAMPLOTTINGFUNCTIONS_H
 
-/*
-#include <string>
-#include <cmath>
-#include <tuple>
-#include <iostream>
-#include <sys/stat.h>
-#include <sstream>
-*/
+#if IndependentCanvasPDF
+#include "../includes/CanvasPDF/CanvasPDF.h"
+#endif
 
 #include "GeneralFunctions.h"
 

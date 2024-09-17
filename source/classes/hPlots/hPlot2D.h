@@ -5,6 +5,10 @@
 #ifndef HPLOT2D_H
 #define HPLOT2D_H
 
+#if IndependentCanvasPDF
+#include "../../includes/CanvasPDF/CanvasPDF.h"
+#endif
+
 class hPlot2D {
 protected:
     /* 2D histogram declaration */

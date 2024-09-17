@@ -5,8 +5,10 @@
 
 #define MomResDebugMacro false
 #define FullAnalyser true
+#define IndependentCanvasPDF false
 
 #include "../source/constants.h"
+#include "../source/includes/CanvasPDF/CanvasPDF.h"
 #include "../source/classes/Directories/Directories.cpp"
 #include "../source/classes/ExperimentParameters/ExperimentParameters.cpp"
 #include "../source/functions/GeneralFunctions.h"
@@ -286,26 +288,6 @@ void ConfigSampleChain()
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //<editor-fold desc="Other parameters">
-
-// ======================================================================================================================================================================
-// PDF file canvas
-// ======================================================================================================================================================================
-
-int num_of_hist_per_row = 4;
-int num_of_hist_per_col = 3;
-int CanvasPDF_ind = 1;
-TCanvas *CanvasPDF = new TCanvas("CanvasPDF", "CanvasPDF", 1000 * num_of_hist_per_row, 750 * num_of_hist_per_col); // normal res
-
-void ConfigCanvasPDF()
-{
-    for (int i = 1; i < num_of_hist_per_row * num_of_hist_per_col + 1; i++)
-    {
-        CanvasPDF->cd(i)->SetGrid();
-        CanvasPDF->cd(i)->SetBottomMargin(0.14);
-        CanvasPDF->cd(i)->SetLeftMargin(0.16);
-        CanvasPDF->cd(i)->SetRightMargin(0.12);
-    }
-}
 
 // ======================================================================================================================================================================
 // BEnergyToNucleus definition

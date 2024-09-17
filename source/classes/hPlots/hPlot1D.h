@@ -32,6 +32,10 @@
 
 #include "../hData/hData.h"
 
+#if IndependentCanvasPDF
+#include "../../includes/CanvasPDF/CanvasPDF.h"
+#endif
+
 using namespace std;
 
 class hPlot1D
