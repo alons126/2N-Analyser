@@ -624,7 +624,7 @@ void EventAnalyser()
     bool FSR_1D_plots, FSR_2D_plots; // FSR_2D_plots is disabled below if HipoChainLength is 2 or lower
     //</editor-fold>
 
-    bool TestRun = false; // set as false for a full run
+    bool TestRun = true; // set as false for a full run
 
     //<editor-fold desc="Set enabled plots">
     if (!TestRun)
