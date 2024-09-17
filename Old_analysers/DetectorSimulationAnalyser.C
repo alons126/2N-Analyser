@@ -169,7 +169,7 @@ void EventAnalyser()
     /* Settings that allow to disable/enable every cut individually */
 
     // clas12ana cuts ---------------------------------------------------------------------------------------------------------------------------------------------------
-    bool apply_cuts = false;                  // master ON/OFF switch for applying cuts
+    bool apply_cuts = true;                  // master ON/OFF switch for applying cuts
     bool clas12ana_particles = true;         // TODO: move form here!
     bool only_preselection_cuts = false;     // keep as false for regular runs!
     bool only_electron_quality_cuts = false; // keep as false for regular runs!
@@ -624,7 +624,7 @@ void EventAnalyser()
     bool FSR_1D_plots, FSR_2D_plots; // FSR_2D_plots is disabled below if HipoChainLength is 2 or lower
     //</editor-fold>
 
-    bool TestRun = true; // set as false for a full run
+    bool TestRun = false; // set as false for a full run
 
     //<editor-fold desc="Set enabled plots">
     if (!TestRun)
@@ -1050,17 +1050,19 @@ void EventAnalyser()
 
     if (is2GeVSample)
     {
-        Q2_uboundary_FD = 0.6;
+        Q2_uboundary_FD = 0.15;
         // Q2_uboundary_FD = 0.8;
         // Q2_uboundary_FD = 1;
     }
     else if (is4GeVSample)
     {
-        Q2_uboundary_FD = 3;
+        Q2_uboundary_FD = 1;
+        // Q2_uboundary_FD = 3;
     }
     else if (is6GeVSample)
     {
-        Q2_uboundary_FD = 5;
+        Q2_uboundary_FD = 1.5;
+        // Q2_uboundary_FD = 5;
     }
 
     /* TKI boundries */
