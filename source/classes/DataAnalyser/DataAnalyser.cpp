@@ -37,7 +37,7 @@ string DataAnalyser::ConfigureAnalyserMode(const string &FileType)
 
 // RunEventAnalyser functions ---------------------------------------------------------------------------------------------------------------------------------
 
-void DataAnalyser::RunEventAnalyser(const string &AnalyserMode)
+void DataAnalyser::RunEventAnalyser(const string &AnalyserMode, const string &AnalyseFilePath, const string &AnalyseFileSample, const string &AnalyseFile)
 {
     if (AnalyserMode == "Truth level")
     {
@@ -46,6 +46,6 @@ void DataAnalyser::RunEventAnalyser(const string &AnalyserMode)
     }
     else if (AnalyserMode == "Detector Simulation")
     {
-        EventAnalyser(AnalyseFilePath.at(i), AnalyseFileSample.at(i), AnalyseFile.at(i));
+        EventAnalyser(AnalyseFilePath, AnalyseFileSample, AnalyseFile);
     }
 };

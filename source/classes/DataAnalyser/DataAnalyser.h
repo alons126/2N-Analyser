@@ -8,24 +8,21 @@
 #include "../../../Old_analysers/DetectorSimulationAnalyser.C"
 #include "../../../Old_analysers/TruthLevelAnalyser.c"
 
-class DataAnalyser {
+class DataAnalyser
+{
 private:
-
 public:
-
-// default constructor --------------------------------------------------------------------------------------------------------------------------------------------------
+    // default constructor --------------------------------------------------------------------------------------------------------------------------------------------------
 
     DataAnalyser(const string &FileType);
 
-// ConfigureAnalyserMode function -----------------------------------------------------------------------------------------------------------------------------
+    // ConfigureAnalyserMode function -----------------------------------------------------------------------------------------------------------------------------
 
     string ConfigureAnalyserMode(const string &FileType);
 
-// RunEventAnalyser functions ---------------------------------------------------------------------------------------------------------------------------------
+    // RunEventAnalyser functions ---------------------------------------------------------------------------------------------------------------------------------
 
-    void RunEventAnalyser(const string &AnalyserMode);
-
+    void RunEventAnalyser(const string &AnalyserMode, const string &AnalyseFilePath, const string &AnalyseFileSample, const string &AnalyseFile);
 };
 
-
-#endif //DATAANALYSER_H
+#endif // DATAANALYSER_H

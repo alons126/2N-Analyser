@@ -24,7 +24,7 @@ int main()
         cout << "\nAnalyseFile:\t" << AnalyseFile << "\n";
         cout << "FileType:\t" << FileType << "\n";
 
-        DataAnalyser Analysis(FileType);
+        DataAnalyser Analysis(FileType, AnalyseFilePath, AnalyseFileSample, AnalyseFile);
         std::string AnalyserMode = Analysis.ConfigureAnalyserMode(FileType);
 
         cout << "Analyser mode:\t'" << AnalyserMode << "'\n";
