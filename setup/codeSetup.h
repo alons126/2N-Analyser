@@ -158,15 +158,15 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // /* Ar40 2.07052GeV - run 015672 (ifarm DATA files - Ar40 DATA files) */
-    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/Ar/dst/recon";
-    // AnalyseFileSample = "015672";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    /* Ar40 2.07052GeV - run 015672 (ifarm DATA files - Ar40 DATA files) */
+    AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/Ar/dst/recon";
+    AnalyseFileSample = "015672";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
     // /* Ar40 4.02962GeV - run 015743 (ifarm DATA files - Ar40 DATA files) */
     // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon";
