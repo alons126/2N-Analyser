@@ -557,7 +557,7 @@ void EventAnalyser()
     //<editor-fold desc="TFile definition">
     /* Definition of plots TFile used to save all plots to .pdf file. */
 
-    /* General plots TFile */
+    /* General plots PDF file */
     const char *Histogram_OutPDF = plots_path + "/" + SampleName + plots_TFile_FileType;
     //</editor-fold>
 
