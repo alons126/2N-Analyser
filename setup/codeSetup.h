@@ -158,15 +158,15 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    /* Ar40 2.07052GeV - run 015672 (ifarm DATA files - Ar40 DATA files) */
-    AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/Ar/dst/recon";
-    AnalyseFileSample = "015672";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
+    // /* Ar40 2.07052GeV - run 015672 (ifarm DATA files - Ar40 DATA files) */
+    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/Ar/dst/recon";
+    // AnalyseFileSample = "015672";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+    // AnalyseFilePath_v.push_back(AnalyseFilePath);
+    // AnalyseFileSample_v.push_back(AnalyseFileSample);
+    // AnalyseFileDir_v.push_back(AnalyseFileDir);
+    // AnalyseFile_v.push_back(AnalyseFile);
 
     // /* Ar40 4.02962GeV - run 015743 (ifarm DATA files - Ar40 DATA files) */
     // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon";
@@ -187,88 +187,87 @@ void ConfigSampleChain()
     // AnalyseFileSample_v.push_back(AnalyseFileSample);
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
+
+    // HIPO files for uniform samples ---------------------------------------------------------------------------------------------------------------------------------------
+
+    // /* Uniform electron tester sample @ 2GeV */
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_e_tester_1e";
+    // AnalyseFileSample = "reconhipo";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "*.hipo";
+
+    /* Local hipo files - Uniform sample @ 6GeV */
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/598636MeV"; // Storage (D:)
+    // AnalyseFileSample = "reconhipo";                                                               // my test with Justin's code; all particle data saved
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_sample_598636MeV_*.hipo";                        // 11 files
+
+    //  AnalyseFilePath = "mnt/d/e4nu/hipo_data_files";                                              // Storage (D:)
+    // //AnalyseFilePath = "mnt/h/e4nu/hipo_data_files";                                              // Alon's Passport (F:)
+    // //AnalyseFilePath = "mnt/g/e4nu/hipo_data_files";                                              // Alon's Portable (G:)
+    //  AnalyseFileSample = "C12x4_G18_02a_00_000_Q204_598636MeV";                                   // my test with Justin's code; all particle data saved
+    //  AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // //AnalyseFile = AnalyseFileDir + "*.hipo";
+    // //AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_9_torus-1.0.hipo"; // 1 file
+    //  AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_51*.hipo";         // 11 files
+    // //AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_5*.hipo";          // 111 files
+    // //AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_2*.hipo";          // 512 files
+
+    //// root files -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    //////<editor-fold desc="root files">
+    // AnalyseFilePath = "home/alon/project";
+    // AnalyseFileSample = "Downloads";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "/" + "12C_2222GeV_GEM21_11a_00_000_wfsi_mk2.root";
+    ////AnalyseFile = AnalyseFileDir + "/" + "e_on_1000060120_2222MeV_em.gst.root";
+    ////AnalyseFile = "./e_on_1000060120_598636MeV.gst.root";
+
+    ////<editor-fold desc="SuSAv2 fix for thesis">
+    // AnalyseFilePath = "home/alon/project";
+    // AnalyseFileSample = "Downloads";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    ////AnalyseFile = AnalyseFileDir + "/" + "12C_2222GeV_GTEST19_10b_00_000.root"; // Original problem
+    // AnalyseFile = AnalyseFileDir + "/" + "e_on_1000060120_EMMEC_test_myBranch.root"; // Initial fix with 1M events (myBranch)
+    ////</editor-fold>
+
+    // AnalyseFilePath = "mnt/d/e4nu/hipo_data_files";
+    // AnalyseFileSample = "recon_qe_GENIE_C_598636MeV_Q2_0_4_test_1";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+
+    // AnalyseFilePath = "home/alon/project";
+    // AnalyseFileSample = "Downloads";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "e_on_1000060120_2222MeV_em.gst.root";
+
+    // AnalyseFileSample = "recon_qe_GENIE_C_598636MeV_Q2_0_4_test_1";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/" + "first_50_test" + "/";
+
+    // AnalyseFilePath = "pnfs/genie/scratch/users/asportes/script_jobs/detector_sim_truth_level";
+    // AnalyseFileSample = "detector_sim_truth_level/C12_G18_10a_02_11b_2GeV_QEL_test";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    ////AnalyseFile = AnalyseFileDir + "Ca48_G18_10a_02_11b_207052MeV.root";
+    // AnalyseFile = AnalyseFileDir + "e_on_1000060120_2070MeV.root";
+
+    // AnalyseFilePath = "home/alon/project";
+    // AnalyseFileSample = "Downloads";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    ////AnalyseFile = AnalyseFileDir + "Ca48_G18_10a_02_11b_207052MeV.root";
+    // AnalyseFile = AnalyseFileDir + "Ca48_G18_10a_02_11b_Q205_598636MeV.root";
+
+    // AnalyseFilePath = "lustre19/expphy/volatile/clas12/asportes/truthLevelROOTFiles";
+    // AnalyseFileSample = "C12_G18_10a_02_11b_207052MeV";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "C12_G18_10a_02_11b_207052MeV.root";
+
+    // AnalyseFilePath = "mnt/d/e4nu/root_data_files/Detector_sim_truth_level_files";
+    // AnalyseFileSample = "598636MeV_Q2_0_5";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    //
+    ////AnalyseFile = AnalyseFileDir + "e_on_1000060120_598636MeV_Q2_0_5.gst.root";
+    ////AnalyseFile = "./nu_SuSAv2_fix_test_12C_2222GeV_CC_myBranch_10M.root";
+    // AnalyseFile = "./nu_SuSAv2_fix_test_12C_2222GeV_CCMEC_myBranch_10M.root";
 }
-
-// HIPO files for uniform samples ---------------------------------------------------------------------------------------------------------------------------------------
-
-// /* Uniform electron tester sample @ 2GeV */
-// AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_e_tester_1e";
-// AnalyseFileSample = "reconhipo";
-// AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-// AnalyseFile = AnalyseFileDir + "*.hipo";
-
-/* Local hipo files - Uniform sample @ 6GeV */
-// AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/598636MeV"; // Storage (D:)
-// AnalyseFileSample = "reconhipo";                                                               // my test with Justin's code; all particle data saved
-// AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-// AnalyseFile = AnalyseFileDir + "recon_Uniform_sample_598636MeV_*.hipo";                        // 11 files
-
-//  AnalyseFilePath = "mnt/d/e4nu/hipo_data_files";                                              // Storage (D:)
-// //AnalyseFilePath = "mnt/h/e4nu/hipo_data_files";                                              // Alon's Passport (F:)
-// //AnalyseFilePath = "mnt/g/e4nu/hipo_data_files";                                              // Alon's Portable (G:)
-//  AnalyseFileSample = "C12x4_G18_02a_00_000_Q204_598636MeV";                                   // my test with Justin's code; all particle data saved
-//  AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-// //AnalyseFile = AnalyseFileDir + "*.hipo";
-// //AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_9_torus-1.0.hipo"; // 1 file
-//  AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_51*.hipo";         // 11 files
-// //AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_5*.hipo";          // 111 files
-// //AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_2*.hipo";          // 512 files
-
-//// root files -----------------------------------------------------------------------------------------------------------------------------------------------------------
-
-//////<editor-fold desc="root files">
-// AnalyseFilePath = "home/alon/project";
-// AnalyseFileSample = "Downloads";
-// AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-// AnalyseFile = AnalyseFileDir + "/" + "12C_2222GeV_GEM21_11a_00_000_wfsi_mk2.root";
-////AnalyseFile = AnalyseFileDir + "/" + "e_on_1000060120_2222MeV_em.gst.root";
-////AnalyseFile = "./e_on_1000060120_598636MeV.gst.root";
-
-////<editor-fold desc="SuSAv2 fix for thesis">
-// AnalyseFilePath = "home/alon/project";
-// AnalyseFileSample = "Downloads";
-// AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-////AnalyseFile = AnalyseFileDir + "/" + "12C_2222GeV_GTEST19_10b_00_000.root"; // Original problem
-// AnalyseFile = AnalyseFileDir + "/" + "e_on_1000060120_EMMEC_test_myBranch.root"; // Initial fix with 1M events (myBranch)
-////</editor-fold>
-
-// AnalyseFilePath = "mnt/d/e4nu/hipo_data_files";
-// AnalyseFileSample = "recon_qe_GENIE_C_598636MeV_Q2_0_4_test_1";
-// AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-
-// AnalyseFilePath = "home/alon/project";
-// AnalyseFileSample = "Downloads";
-// AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-// AnalyseFile = AnalyseFileDir + "e_on_1000060120_2222MeV_em.gst.root";
-
-// AnalyseFileSample = "recon_qe_GENIE_C_598636MeV_Q2_0_4_test_1";
-// AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/" + "first_50_test" + "/";
-
-// AnalyseFilePath = "pnfs/genie/scratch/users/asportes/script_jobs/detector_sim_truth_level";
-// AnalyseFileSample = "detector_sim_truth_level/C12_G18_10a_02_11b_2GeV_QEL_test";
-// AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-////AnalyseFile = AnalyseFileDir + "Ca48_G18_10a_02_11b_207052MeV.root";
-// AnalyseFile = AnalyseFileDir + "e_on_1000060120_2070MeV.root";
-
-// AnalyseFilePath = "home/alon/project";
-// AnalyseFileSample = "Downloads";
-// AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-////AnalyseFile = AnalyseFileDir + "Ca48_G18_10a_02_11b_207052MeV.root";
-// AnalyseFile = AnalyseFileDir + "Ca48_G18_10a_02_11b_Q205_598636MeV.root";
-
-// AnalyseFilePath = "lustre19/expphy/volatile/clas12/asportes/truthLevelROOTFiles";
-// AnalyseFileSample = "C12_G18_10a_02_11b_207052MeV";
-// AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-// AnalyseFile = AnalyseFileDir + "C12_G18_10a_02_11b_207052MeV.root";
-
-// AnalyseFilePath = "mnt/d/e4nu/root_data_files/Detector_sim_truth_level_files";
-// AnalyseFileSample = "598636MeV_Q2_0_5";
-// AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-//
-////AnalyseFile = AnalyseFileDir + "e_on_1000060120_598636MeV_Q2_0_5.gst.root";
-////AnalyseFile = "./nu_SuSAv2_fix_test_12C_2222GeV_CC_myBranch_10M.root";
-// AnalyseFile = "./nu_SuSAv2_fix_test_12C_2222GeV_CCMEC_myBranch_10M.root";
-//</editor-fold>
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                    Other parameters                                                                                 //
