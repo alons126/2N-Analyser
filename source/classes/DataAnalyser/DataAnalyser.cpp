@@ -7,10 +7,10 @@
 // DataAnalyser constructors ----------------------------------------------------------------------------------------------------------------------------------
 
 /* Default constructor */
-DataAnalyser::DataAnalyser(const string &FileType)
+DataAnalyser::DataAnalyser(const string &FileType, const string &AnalyseFilePath, const string &AnalyseFileSample, const string &AnalyseFile)
 {
     string AnalyserMode = ConfigureAnalyserMode(FileType);
-    RunEventAnalyser(AnalyserMode);
+    RunEventAnalyser(AnalyserMode, AnalyseFilePath, AnalyseFileSample, AnalyseFile);
 }
 
 // ConfigureAnalyserMode function -----------------------------------------------------------------------------------------------------------------------------
