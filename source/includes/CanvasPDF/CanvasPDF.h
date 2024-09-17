@@ -64,17 +64,34 @@ void SetCanvasPDFind(int &CanvasPDFind)
 }
 
 void CopyPadContent(TPad* sourcePad, TPad* targetPad) {
-    if (sourcePad && targetPad) {
-        // Get the list of primitives (objects) in the source pad
-        TList* primList = sourcePad->GetListOfPrimitives();
-        
-        // Loop over all the primitives in the source pad and draw them in the target pad
-        TIter next(primList);
-        TObject* obj;
-        while ((obj = next())) {
-            targetPad->cd();
-            obj->DrawClone();  // Draw a clone of each primitive in the target pad
-        }
-        targetPad->Update();
+    if (!sourcePad || !targetPad) {
+        std::cerr << "Error: One of the pads is null." << std::endl;
+        return;
     }
+
+    // Get the list of primitives (objects) in the source pad
+    TList* primList = sourcePad->GetListOfPrimitives();
+    if (!primList) {
+        std::cerr << "Error: No primitives found in the source pad." << std::endl;
+        return;
+    }
+
+    // Loop over all the primitives in the source pad and draw them in the target pad
+    TIter next(primList);
+    TObject* obj;
+    while ((obj = next())) {
+        if (!obj) {
+            std::cerr << "Error: Null object encountered in the primitive list." << std::endl;
+            continue;  // Skip null objects
+        }
+
+        targetPad->cd();
+        if (obj->InheritsFrom("TAttDrawable")) {  // Ensure the object is drawable
+            obj->DrawClone();  // Draw a clone of each primitive in the target pad
+        } else {
+            std::cerr << "Warning: Object is not drawable. Skipping." << std::endl;
+        }
+    }
+
+    targetPad->Update();
 }
