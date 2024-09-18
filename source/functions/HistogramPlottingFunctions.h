@@ -219,7 +219,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas,         // The canvas
         Histogram1DCanvas->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -242,7 +243,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas,         // The canvas
         Histogram1DCanvas->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -450,7 +452,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas,         // The canvas
         Histogram1DCanvas->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -473,7 +476,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas,         // The canvas
         Histogram1DCanvas->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -703,7 +707,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas,         // The canvas
         Histogram1DCanvas->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -726,7 +731,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas,         // The canvas
         Histogram1DCanvas->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -939,7 +945,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas,         // The canvas
         Histogram1DCanvas->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -962,7 +969,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas,         // The canvas
         Histogram1DCanvas->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -1161,7 +1169,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas,         // The canvas
             Histogram1DCanvas->SaveAs(SaveDir);
 
             CanvasPDF->cd(CanvasPDF_ind);
-            CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+            Histogram1DCanvas->DrawClonePad();
+            // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
             CanvasPDF->Print(Histogram_OutPDF);
             ++CanvasPDF_ind;
         }
@@ -1172,7 +1181,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas,         // The canvas
             Histogram1DCanvas->SaveAs(SaveDir);
 
             CanvasPDF->cd(CanvasPDF_ind);
-            CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+            Histogram1DCanvas->DrawClonePad();
+            // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
             CanvasPDF->Print(Histogram_OutPDF);
             ++CanvasPDF_ind;
         }
@@ -1188,7 +1198,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas,         // The canvas
             Histogram1DCanvas->SaveAs(SaveDir);
 
             CanvasPDF->cd(CanvasPDF_ind);
-            CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+            Histogram1DCanvas->DrawClonePad();
+            // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
             CanvasPDF->Print(Histogram_OutPDF);
             ++CanvasPDF_ind;
         }
@@ -1199,7 +1210,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas,         // The canvas
             Histogram1DCanvas->SaveAs(SaveDir);
 
             CanvasPDF->cd(CanvasPDF_ind);
-            CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+            Histogram1DCanvas->DrawClonePad();
+            // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
             CanvasPDF->Print(Histogram_OutPDF);
             ++CanvasPDF_ind;
         }
@@ -1383,7 +1395,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas,         // The canvas
             Histogram1DCanvas->SaveAs(SaveDir);
 
             CanvasPDF->cd(CanvasPDF_ind);
-            CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+            Histogram1DCanvas->DrawClonePad();
+            // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
             CanvasPDF->Print(Histogram_OutPDF);
             ++CanvasPDF_ind;
         }
@@ -1394,7 +1407,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas,         // The canvas
             Histogram1DCanvas->SaveAs(SaveDir);
 
             CanvasPDF->cd(CanvasPDF_ind);
-            CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+            Histogram1DCanvas->DrawClonePad();
+            // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
             CanvasPDF->Print(Histogram_OutPDF);
             ++CanvasPDF_ind;
         }
@@ -1410,7 +1424,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas,         // The canvas
             Histogram1DCanvas->SaveAs(SaveDir);
 
             CanvasPDF->cd(CanvasPDF_ind);
-            CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+            Histogram1DCanvas->DrawClonePad();
+            // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
             CanvasPDF->Print(Histogram_OutPDF);
             ++CanvasPDF_ind;
         }
@@ -1421,7 +1436,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas,         // The canvas
             Histogram1DCanvas->SaveAs(SaveDir);
 
             CanvasPDF->cd(CanvasPDF_ind);
-            CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+            Histogram1DCanvas->DrawClonePad();
+            // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
             CanvasPDF->Print(Histogram_OutPDF);
             ++CanvasPDF_ind;
         }
@@ -1614,7 +1630,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas1,        // canvas c1 of other his
         Histogram1DCanvas2->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas2->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas2->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas2->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -1627,7 +1644,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas1,        // canvas c1 of other his
         Histogram1DCanvas2->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas2->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas2->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas2->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -1821,7 +1839,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas1,        // canvas c1 of other his
         Histogram1DCanvas2->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas2->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas2->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas2->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -1834,7 +1853,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas1,        // canvas c1 of other his
         Histogram1DCanvas2->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas2->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas2->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas2->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -2050,7 +2070,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas1,        // canvas c1 of other his
         Histogram1DCanvas2->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas2->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas2->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas2->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -2063,7 +2084,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas1,        // canvas c1 of other his
         Histogram1DCanvas2->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas2->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas2->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas2->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -2261,7 +2283,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas1,        // canvas c1 of other his
         Histogram1DCanvas2->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas2->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas2->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas2->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -2274,7 +2297,8 @@ void histPlotter1D(TCanvas *Histogram1DCanvas1,        // canvas c1 of other his
         Histogram1DCanvas2->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas2->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas2->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas2->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -2525,7 +2549,8 @@ void histPlotter1DwFit(TCanvas *Histogram1DCanvas,
         Histogram1DCanvas->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -2538,7 +2563,8 @@ void histPlotter1DwFit(TCanvas *Histogram1DCanvas,
         Histogram1DCanvas->SaveAs(SaveDir);
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -2681,7 +2707,8 @@ void stackPlotter1D(TCanvas *Histogram1DCanvas,
         Histogram1DCanvas->SaveAs((Histogram1DStackSaveNamePath + Histogram1DStackSaveName + "_" + Histogram1DTitleReactions + ".png").c_str());
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -2690,7 +2717,8 @@ void stackPlotter1D(TCanvas *Histogram1DCanvas,
         Histogram1DCanvas->SaveAs((Histogram1DStackSaveNamePath + Histogram1DStackSaveName + "_" + Histogram1DTitleReactions + "_" + finalState + ".png").c_str());
 
         CanvasPDF->cd(CanvasPDF_ind);
-        CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        Histogram1DCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         CanvasPDF->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -2770,7 +2798,8 @@ void histPlotter2D(TCanvas *Histogram1DCanvas,
     gStyle->SetStatY(DefStatY);
 
     CanvasPDF->cd(CanvasPDF_ind);
-    CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+    Histogram1DCanvas->DrawClonePad();
+    // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
     CanvasPDF->Print(Histogram_OutPDF);
     ++CanvasPDF_ind;
 
@@ -2853,7 +2882,8 @@ void histPlotter2D(TCanvas *Histogram1DCanvas,
     gStyle->SetStatY(DefStatY);
 
     CanvasPDF->cd(CanvasPDF_ind);
-    CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+    Histogram1DCanvas->DrawClonePad();
+    // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
     CanvasPDF->Print(Histogram_OutPDF);
     ++CanvasPDF_ind;
 
@@ -2934,7 +2964,8 @@ void histPlotter2D(TCanvas *Histogram1DCanvas,
     gStyle->SetStatY(DefStatY);
 
     CanvasPDF->cd(CanvasPDF_ind);
-    CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+    Histogram1DCanvas->DrawClonePad();
+    // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
     CanvasPDF->Print(Histogram_OutPDF);
     ++CanvasPDF_ind;
 
@@ -3025,7 +3056,8 @@ void histPlotter2D(TCanvas *Histogram1DCanvas,
     gStyle->SetStatY(DefStatY);
 
     CanvasPDF->cd(CanvasPDF_ind);
-    CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+    Histogram1DCanvas->DrawClonePad();
+    // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
     CanvasPDF->Print(Histogram_OutPDF);
     ++CanvasPDF_ind;
 

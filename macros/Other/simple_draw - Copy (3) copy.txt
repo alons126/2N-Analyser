@@ -1,0 +1,20 @@
+TCanvas *c = new TCanvas("c1", "c2", 1000 * 1.25, 750 * 1.25); // normal res
+
+c->cd()->SetGrid();
+c->cd()->SetBottomMargin(0.14), c->cd()->SetLeftMargin(0.16), c->cd()->SetRightMargin(0.16), c->cd()->SetTopMargin(0.12);
+c->cd();
+
+TH1D *h = (TH1D *) _file0->Get("Q^{2} (1e Cut, FD)");
+//h->GetYaxis()->SetRangeUser(0,100000);
+h->SetLineStyle(1);
+h->SetLineColor(kBlue);
+
+h->Draw();
+
+c->SetLogy(1);
+
+c->SaveAs("Q2_zoomin.png")
+
+.q
+
+
