@@ -13,7 +13,7 @@ int main()
 
     cout << "\nLooping over sample chain...\n";
 
-    for (int i = 0; i < AnalyseFilePath.size(); i++)
+    for (int i = 0; i < AnalyseFilePath_v.size(); i++)
     {
 
         AnalyseFilePath = AnalyseFilePath_v.at(i);
