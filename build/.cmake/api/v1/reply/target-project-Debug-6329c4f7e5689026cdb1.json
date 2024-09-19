@@ -247,14 +247,14 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+					"fragment" : "-g -std=gnu++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/Users/alon/Software/root_cern/root_install/include"
+					"path" : "/opt/homebrew/Cellar/root/6.32.04/include/root"
 				},
 				{
 					"backtrace" : 4,
@@ -454,14 +454,14 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+					"fragment" : "-g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/Users/alon/Software/root_cern/root_install/include"
+					"path" : "/opt/homebrew/Cellar/root/6.32.04/include/root"
 				},
 				{
 					"backtrace" : 4,
@@ -620,102 +620,98 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/Users/alon/Software/root_cern/root_install/lib",
+				"backtrace" : 2,
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libCore.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libCore.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libImt.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libImt.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libRIO.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libRIO.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libNet.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libNet.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libHist.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libHist.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libGraf.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libGraf.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libGraf3d.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libGraf3d.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libGpad.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libGpad.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libROOTDataFrame.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libROOTDataFrame.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libTree.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libTree.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libTreePlayer.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libTreePlayer.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libRint.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libRint.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libPostscript.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libPostscript.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libMatrix.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libMatrix.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libPhysics.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libPhysics.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libMathCore.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libMathCore.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libThread.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libThread.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libMultiProc.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libMultiProc.so",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 2,
-				"fragment" : "/Users/alon/Software/root_cern/root_install/lib/libROOTVecOps.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libROOTVecOps.so",
 				"role" : "libraries"
 			}
 		],
