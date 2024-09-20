@@ -254,27 +254,27 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // Uniform ep @ 2GeV:
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_ep";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_ep_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    // // Uniform en @ 2GeV:
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_en";
+    // // Uniform ep @ 2GeV:
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_ep";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // // AnalyseFile = AnalyseFileDir + "recon_Uniform_en_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    // // AnalyseFile = AnalyseFileDir + "recon_Uniform_ep_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
     // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
     // AnalyseFilePath_v.push_back(AnalyseFilePath);
     // AnalyseFileSample_v.push_back(AnalyseFileSample);
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
+
+    // Uniform en @ 2GeV:
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_en";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_en_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
     
     // /* Uniform sample @ 4GeV */
 
