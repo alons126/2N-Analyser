@@ -90,7 +90,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
         }
         else
         { // Uniform samples for acceptance maps
-            if (findSubstring(AnalyseFilePat, "2070MeV"))
+            if (findSubstring(AnalyseFilePath, "2070MeV"))
             { /* 2GeV samples
                  NOTE: here '2070MeV' has to be in the sample path! */
                 if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_1e")
@@ -118,7 +118,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                     }
                 }
             }
-            else if (findSubstring(AnalyseFilePat, "4029MeV"))
+            else if (findSubstring(AnalyseFilePath, "4029MeV"))
             { /* 4GeV samples
                  NOTE: here '4029MeV' has to be in the sample path! */
                 if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_1e")
@@ -146,7 +146,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                     }
                 }
             }
-            else if (findSubstring(AnalyseFilePat, "5986MeV"))
+            else if (findSubstring(AnalyseFilePath, "5986MeV"))
             { /* 6GeV samples
                  NOTE: here '5986MeV' has to be in the sample path! */
                 if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_1e")
