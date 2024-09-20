@@ -560,9 +560,6 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     /* General plots PDF file */
     string Histogram_OutPDF_fileName = plots_path + "/" + SampleName + plots_TFile_FileType;
     const char *Histogram_OutPDF = Histogram_OutPDF_fileName.c_str();
-
-    cout << "\n" << "Histogram_OutPDF = " << Histogram_OutPDF << "\n";
-    exit(0);
     //</editor-fold>
 
     // Plot selector --------------------------------------------------------------------------------------------------------------------------------------------------------
