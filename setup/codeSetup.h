@@ -38,27 +38,27 @@ std::string Ver = "DetSim testings";
 
 //<editor-fold desc="path definitions">
 /* Histogram plots output directory */
-std::string WorkingDirectory = GetCurrentDirectory() + "/";
-std::string plots_path = "/lustre24/expphy/volatile/clas12/asportes/Analysis_output";
-// std::string plots_path = WorkingDirectory + "00_plots";
+const std::string WorkingDirectory = GetCurrentDirectory() + "/";
+const std::string plots_path = "/lustre24/expphy/volatile/clas12/asportes/Analysis_output";
+// const std::string plots_path = WorkingDirectory + "00_plots";
 
 /* setup directory and directories */
-std::string SettingsDirectory = WorkingDirectory + "setup" + "/";
+const std::string SettingsDirectory = WorkingDirectory + "setup" + "/";
 
 /* source directory and directories */
-std::string SourcesDirectory = WorkingDirectory + "source" + "/";
-std::string DataDirectory = SourcesDirectory + "data" + "/";
-std::string ACorrDirectory = DataDirectory + "AcceptanceCorrections" + "/";
-std::string AcceptanceMapsDirectory = DataDirectory + "AcceptanceMaps" + "/";
-std::string AcceptanceWeightsDirectory = DataDirectory + "AcceptanceWeights" + "/";
-std::string MomentumResolutionDirectory = DataDirectory + "NeutronResolution" + "/";
-std::string NucleonCutsDirectory = DataDirectory + "NucleonCuts" + "/";
-std::string PIDCutsDirectory = DataDirectory + "PIDCuts" + "/";
+const std::string SourcesDirectory = WorkingDirectory + "source" + "/";
+const std::string DataDirectory = SourcesDirectory + "data" + "/";
+const std::string ACorrDirectory = DataDirectory + "AcceptanceCorrections" + "/";
+const std::string AcceptanceMapsDirectory = DataDirectory + "AcceptanceMaps" + "/";
+const std::string AcceptanceWeightsDirectory = DataDirectory + "AcceptanceWeights" + "/";
+const std::string MomentumResolutionDirectory = DataDirectory + "NeutronResolution" + "/";
+const std::string NucleonCutsDirectory = DataDirectory + "NucleonCuts" + "/";
+const std::string PIDCutsDirectory = DataDirectory + "PIDCuts" + "/";
 
-std::string plots_TList_FileType = "_plots.root";
-std::string plots_TFile_FileType = "_plots.pdf";
-std::string log_file_name = "Run_log.txt";
-std::string plots_log_save_Directory = plots_path + "/" + log_file_name;
+const std::string plots_TList_FileType = "_plots.root";
+const std::string plots_TFile_FileType = "_plots.pdf";
+const std::string log_file_name = "Run_log.txt";
+const std::string plots_log_save_Directory = plots_path + "/" + log_file_name;
 //</editor-fold>
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
