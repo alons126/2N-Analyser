@@ -45,6 +45,9 @@ using namespace clas12;
 
 void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSample, const string &AnalyseFile)
 {
+
+    cout << "\nTEST 0\n";
+
     cout << "\n\n===========================================================================\n";
     cout << "\t\t\tDetector simulation analyser\n";
     cout << "===========================================================================\n\n";
@@ -162,6 +165,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     // ======================================================================================================================================================================
     // Cut setup
     // ======================================================================================================================================================================
+
+    cout << "\nTEST 1\n";
 
     // Cut setup ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -518,13 +523,15 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
     DSCuts MomRes_mu_cuts = DSCuts("MomRes_mu_cuts", "FD", "", "Protons and neutrons", 0, FD_nucleon_momentum_cut.GetLowerCut(), 2.2);       // E4nu meeting (29/01/24)
     DSCuts MomRes_sigma_cuts = DSCuts("MomRes_sigma_cuts", "FD", "", "Protons and neutrons", 0, FD_nucleon_momentum_cut.GetLowerCut(), 2.2); // Adi meeting after (29/01/24)
-    //</editor-fold>
+                                                                                                                                             //</editor-fold>
 
     //</editor-fold>
 
     // ======================================================================================================================================================================
     // Other setup
     // ======================================================================================================================================================================
+
+    cout << "\nTEST 2\n";
 
     //  Directory settings ------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1251,6 +1258,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     // ======================================================================================================================================================================
     // Cut parameters plots
     // ======================================================================================================================================================================
+
+    cout << "\nTEST 3\n";
 
     //<editor-fold desc="Cut parameters plots">
 
@@ -9938,6 +9947,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //                                                                         Code execution                                                                              //
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    cout << "\nTEST 4\n";
+
     //<editor-fold desc="Code execution">
     cout << "\nReading target parameter files...\n\n";
 
@@ -10162,6 +10173,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //  Setting beam particle's momentum
     //  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+    cout << "\nTEST 5\n";
+
     //<editor-fold desc="Setting beam particle's momentum">
     double Pv = beamE, Pvx = 0., Pvy = 0., Pvz = Pv; // Assuming momentum of incoming lepton is in the z direction
 
@@ -10210,6 +10223,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     cout << "\n\nLooping over chain files...\n\n";
+
+    cout << "\nTEST 6\n";
 
     while (chain.Next())
     {                    // loop over events
@@ -10613,6 +10628,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         //</editor-fold>
 
         //</editor-fold>
+
+        cout << "\nTEST 7\n";
 
         //  Filling truth level histograms (lundfile loop) ----------------------------------------------------------------------------------------------------------------------
 
@@ -12156,6 +12173,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         //  Fill All particles (All e) plots ------------------------------------------------------------------------------------------------------------------------------------
 
+        cout << "\nTEST 8\n";
+
         //<editor-fold desc="All particles plots">
         /* Declaration of electron variables for all particles analysis.
          * Variables with "tmp" will be used only in all particles plots.
@@ -12368,6 +12387,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         //</editor-fold>
 
         //  1e cut --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        cout << "\nTEST 9\n";
 
         //<editor-fold desc="1e cut">
         /* Here we apply electron cut on everything that follows (1p, nFDpCD, 1e2p and 2p) */
@@ -13883,6 +13904,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         //  1p (FD only) --------------------------------------------------------------------------------------------------------------------------------------------------------
 
+        cout << "\nTEST 10\n";
+
         //<editor-fold desc="1p (FD only)">
         /* 1p event selection: 1p = Protons_ind.size() = 1 in the FD, any number of FD neutrons and any number of other neutrals and particles with pdg=0.*/
         bool one_rec_FD_proton_1p = ((Protons_ind.size() == 1) && (protons[Protons_ind.at(0)]->getRegion() == FD));
@@ -14582,6 +14605,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         //</editor-fold>
 
         //  1n (FD only) --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        cout << "\nTEST 11\n";
 
         //<editor-fold desc="1n (FD only)">
         /* 1n event selection: 1n = any number of id. FD neutrons (we look at the leading nFD), with no charged particles (except electrons) and any number of other
@@ -16002,6 +16027,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
             //  Fillings 2p histograms ---------------------------------------------------------------------------------------------------------------------------------
 
+            cout << "\nTEST 12\n";
+
             //<editor-fold desc="Fillings 2p histograms">
             ++num_of_events_2p;
 
@@ -16608,6 +16635,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         //</editor-fold>
 
         //  pFDpCD --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        cout << "\nTEST 13\n";
 
         //<editor-fold desc="pFDpCD">
 
@@ -17576,6 +17605,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         //</editor-fold>
 
         //  nFDpCD --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        cout << "\nTEST 14\n";
 
         //<editor-fold desc="nFDpCD">
 
@@ -26024,5 +26055,4 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //</editor-fold>
 
     system(("zip -r " + run_plots_path + "/" + settings.GetRun_dir_name() + ".zip " + run_plots_path).c_str());
-
 }
