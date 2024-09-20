@@ -10227,7 +10227,9 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     cout << "\nTEST 6\n";
 
     while (chain.Next())
-    {                    // loop over events
+    { // loop over events
+        cout << "\nTEST 6\n";
+
         ++num_of_events; // logging Total #(events) in sample
 
         /* Particles outside clas12ana */
