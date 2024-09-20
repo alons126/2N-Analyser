@@ -11,6 +11,7 @@ class CustomPlotsDirectory
 {
 private:
     string Plots_path;
+    string Run_dir_name;
     string Plots_log_save_Directory;
 
     string Stage0_prefix = "_S00_NO_CUTS"; // Stage 0 - no cuts
@@ -27,7 +28,7 @@ private:
 
     string Added_PreStatuses, Added_Statuses;
 
-    string Global_Run_Status = "IndividualRunTest";
+    string Global_Run_Status = "ChainRun";
 
 public:
     // Default constructor ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -61,6 +62,11 @@ public:
         {
             plots_path = Plots_path;
         }
+    }
+
+    string GetRun_dir_name()
+    {
+        return Run_dir_name;
     }
 
     void GetPlotsLogSaveDirectory(string &plots_log_save_Directory)

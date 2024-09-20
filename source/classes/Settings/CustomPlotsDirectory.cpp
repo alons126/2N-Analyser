@@ -320,5 +320,7 @@ void CustomPlotsDirectory::SetPaths(const string &WorkingDirectory, const string
             }
         }
     }
+
+    Run_dir_name = run;
 }
 //</editor-fold>

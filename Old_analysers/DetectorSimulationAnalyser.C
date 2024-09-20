@@ -169,7 +169,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     /* Settings that allow to disable/enable every cut individually */
 
     // clas12ana cuts ---------------------------------------------------------------------------------------------------------------------------------------------------
-    bool apply_cuts = false;                 // master ON/OFF switch for applying cuts
+    bool apply_cuts = true;                 // master ON/OFF switch for applying cuts
     bool clas12ana_particles = true;         // TODO: move form here!
     bool only_preselection_cuts = false;     // keep as false for regular runs!
     bool only_electron_quality_cuts = false; // keep as false for regular runs!
@@ -192,10 +192,10 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
     // My analysis cuts ---------------------------------------------------------------------------------------------------------------------------------------------------
     /* Nucleon cuts */
-    bool apply_nucleon_cuts = true; // set as true to get good protons and calculate upper neutron momentum th.
+    bool apply_nucleon_cuts = false; // set as true to get good protons and calculate upper neutron momentum th.
 
     /* Physical cuts */
-    bool apply_nucleon_physical_cuts = true; // nucleon physical cuts master
+    bool apply_nucleon_physical_cuts = false; // nucleon physical cuts master
     // TODO: automate adding upper mom. th. to nucleon cuts (for nRes calc)
     bool apply_nBeta_fit_cuts = true; // apply neutron upper mom. th.
     bool apply_fiducial_cuts = false;
@@ -26022,4 +26022,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //</editor-fold>
 
     //</editor-fold>
+
+    system(("zip -r " + run_plots_path + "/" + settings.GetRun_dir_name() + ".zip " + run_plots_path).c_str());
+
 }
