@@ -306,12 +306,13 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
     /* Save plots to custom-named folders, to allow multi-sample runs at once. */
     const bool custom_cuts_naming = true;
+    std::string run_plots_path = plots_path;
     settings.SetCustomCutsNaming(custom_cuts_naming);
     settings.ConfigureStatuses(apply_cuts, clas12ana_particles, only_preselection_cuts, apply_chi2_cuts_1e_cut, only_electron_quality_cuts, apply_nucleon_cuts,
                                Enable_FD_photons, apply_nucleon_SmearAndCorr, apply_kinematical_cuts, apply_kinematical_weights, apply_fiducial_cuts, Generate_AMaps,
                                plot_and_fit_MomRes, VaryingDelta, Calculate_momResS2, Run_with_momResS2, momRes_test, Rec_wTL_ES, ZoomIn_On_mom_th_plots);
-    settings.SetPaths(WorkingDirectory, SampleName, plots_path, apply_cuts, apply_chi2_cuts_1e_cut, apply_nucleon_cuts);
-    settings.GetPlotsPath(plots_path);
+    settings.SetPaths(WorkingDirectory, SampleName, run_plots_path, apply_cuts, apply_chi2_cuts_1e_cut, apply_nucleon_cuts);
+    settings.GetPlotsPath(run_plots_path);
     settings.GetPlotsLogSaveDirectory(plots_log_save_Directory);
     //</editor-fold>
 
@@ -319,7 +320,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     /* Print out execution variables (for self observation) */
     cout << "-- Execution variables ----------------------------------------------------\n";
     cout << "WorkingDirectory:\t" << WorkingDirectory << "\n";
-    cout << "plots_path:\t\t" << plots_path << "\n\n";
+    cout << "run_plots_path:\t\t" << run_plots_path << "\n\n";
 
     cout << "AnalyseFilePath:\t" << "/" << AnalyseFilePath << "/" << "\n";
     cout << "AnalyseFileSample:\t" << "/" << AnalyseFileSample << "/" << "\n";
@@ -533,7 +534,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
      * All cut plots are separate from the analysis plots, and withing the 01_Cuts_plots folder. */
     cout << "\nCreating plot directories...";
 
-    string Plots_Folder = plots_path;
+    string Plots_Folder = run_plots_path;
     const bool Clear_Old_Directories = true;
 
     Directories directories = Directories(Plots_Folder, Clear_Old_Directories);
@@ -548,7 +549,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
     /* General plots TList */
     TList *plots = new TList();
-    string listName = plots_path + "/" + SampleName + plots_TList_FileType;
+    string listName = run_plots_path + "/" + SampleName + plots_TList_FileType;
     const char *TListName = listName.c_str();
     //</editor-fold>
 
@@ -558,7 +559,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     /* Definition of plots TFile used to save all plots to .pdf file. */
 
     /* General plots PDF file */
-    string Histogram_OutPDF_fileName = plots_path + "/" + SampleName + plots_TFile_FileType;
+    string Histogram_OutPDF_fileName = run_plots_path + "/" + SampleName + plots_TFile_FileType;
     const char *Histogram_OutPDF = Histogram_OutPDF_fileName.c_str();
     //</editor-fold>
 
@@ -853,27 +854,27 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     /* Delete existing .txt files */
     if (delete_txt_files)
     {
-        system(("find " + plots_path + " -type f -iname '*.txt' -delete").c_str());
+        system(("find " + run_plots_path + " -type f -iname '*.txt' -delete").c_str());
     }
 
     //<editor-fold desc="Deleting files by cases">
     if (delete_png_files && !delete_root_files)
     {
         cout << "\nClearing old plots...";
-        system(("find " + plots_path + " -type f -iname '*.png' -delete").c_str()); // Delete existing .png files
+        system(("find " + run_plots_path + " -type f -iname '*.png' -delete").c_str()); // Delete existing .png files
         cout << " done.\n\n";
     }
     else if (!delete_png_files && delete_root_files)
     {
         cout << "\nClearing old root files...";
-        system(("find " + plots_path + " -type f -iname '*.root' -delete").c_str()); // Delete existing .root files
+        system(("find " + run_plots_path + " -type f -iname '*.root' -delete").c_str()); // Delete existing .root files
         cout << " done.\n\n";
     }
     else if (delete_png_files && delete_root_files)
     {
         cout << "\nClearing old plots & root files...";
-        system(("find " + plots_path + " -type f -iname '*.png' -delete").c_str());  // Delete existing .png files
-        system(("find " + plots_path + " -type f -iname '*.root' -delete").c_str()); // Delete existing .root files
+        system(("find " + run_plots_path + " -type f -iname '*.png' -delete").c_str());  // Delete existing .png files
+        system(("find " + run_plots_path + " -type f -iname '*.root' -delete").c_str()); // Delete existing .root files
         cout << " done.\n\n";
     }
     else
@@ -1206,11 +1207,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     {
         if (!apply_chi2_cuts_1e_cut)
         {
-            EventPrint_save_Directory = plots_path + "/" + "Event_Print_without_chi2.txt";
+            EventPrint_save_Directory = run_plots_path + "/" + "Event_Print_without_chi2.txt";
         }
         else if (apply_chi2_cuts_1e_cut)
         {
-            EventPrint_save_Directory = plots_path + "/" + "Event_Print_ALL_CUTS.txt";
+            EventPrint_save_Directory = run_plots_path + "/" + "Event_Print_ALL_CUTS.txt";
         }
 
         EventPrint.open(EventPrint_save_Directory.c_str());
@@ -24760,8 +24761,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         if (plot_and_fit_MomRes)
         {
             pRes.SliceFitDrawAndSaveByType(SampleName, beamE);
-            pRes.LogResDataToFile(SampleName, plots_path, MomentumResolutionDirectory);
-            pRes.DrawAndSaveResSlices(SampleName, c1, plots_path, MomentumResolutionDirectory);
+            pRes.LogResDataToFile(SampleName, run_plots_path, MomentumResolutionDirectory);
+            pRes.DrawAndSaveResSlices(SampleName, c1, run_plots_path, MomentumResolutionDirectory);
         }
         //</editor-fold>
 
@@ -24818,8 +24819,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         if (plot_and_fit_MomRes)
         {
             nRes.SliceFitDrawAndSaveByType(SampleName, beamE);
-            nRes.LogResDataToFile(SampleName, plots_path, MomentumResolutionDirectory);
-            nRes.DrawAndSaveResSlices(SampleName, c1, plots_path, MomentumResolutionDirectory);
+            nRes.LogResDataToFile(SampleName, run_plots_path, MomentumResolutionDirectory);
+            nRes.DrawAndSaveResSlices(SampleName, c1, run_plots_path, MomentumResolutionDirectory);
         }
 
         hReco_L_1n.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Angle_plots_master, true, 1., 9999, 9999, 0, false);
@@ -25001,7 +25002,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         FittedPIDCuts.close();
 
-        system(("cp " + FittedPIDCutsFilePath + " " + plots_path).c_str()); // Copy fitted chi2 cuts file for easy download from ifarm
+        system(("cp " + FittedPIDCutsFilePath + " " + run_plots_path).c_str()); // Copy fitted chi2 cuts file for easy download from ifarm
     }
     //</editor-fold>
 
@@ -25057,7 +25058,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         Nucleon_Cuts.close();
 
-        system(("cp " + Nucleon_CutsFilePath + " " + plots_path).c_str()); // Copy nucleon cuts file for easy download from the ifarm
+        system(("cp " + Nucleon_CutsFilePath + " " + run_plots_path).c_str()); // Copy nucleon cuts file for easy download from the ifarm
     }
     //</editor-fold>
 
@@ -25072,10 +25073,10 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     if (debug_plots == true)
     {
         cout << "\n\nSaving debugging plots...\n\n";
-        TString hit_map_ref_filePath = plots_path + "/" + "hit_map_ref.root";
+        TString hit_map_ref_filePath = run_plots_path + "/" + "hit_map_ref.root";
         clasAna.set_hit_map_ref_fileName(hit_map_ref_filePath);
 
-        TString debug_filePath = plots_path + "/" + "DebugOutputFile.root";
+        TString debug_filePath = run_plots_path + "/" + "DebugOutputFile.root";
         clasAna.setdebug_fileName(debug_filePath);
         clasAna.WriteDebugPlots();
     }
@@ -25110,7 +25111,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     myLogFile << "plotsInput: " << plotsInput << "\n\n";
 
     myLogFile << "WorkingDirectory: " << WorkingDirectory << "\n";
-    myLogFile << "plots_path: " << plots_path << "\n";
+    myLogFile << "run_plots_path: " << run_plots_path << "\n";
     myLogFile << "SampleName: " << SampleName << "\n";
     myLogFile << "VaryingSampleName: " << VaryingSampleName << "\n\n";
 
@@ -25999,7 +26000,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     cout << "---------------------------------------------------------------------------\n\n";
 
     cout << "WorkingDirectory:\t" << WorkingDirectory << "\n";
-    cout << "plots_path:\t\t" << plots_path << "\n\n";
+    cout << "run_plots_path:\t\t" << run_plots_path << "\n\n";
 
     cout << "AnalyseFilePath:\t" << "/" << AnalyseFilePath << "/" << "\n";
     cout << "AnalyseFileSample:\t" << "/" << AnalyseFileSample << "/" << "\n";
