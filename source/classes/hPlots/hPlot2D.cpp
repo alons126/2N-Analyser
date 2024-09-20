@@ -231,10 +231,10 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *Histogram2DC
 
         CanvasPDF->cd(CanvasPDF_ind);
         // CopyPadContent((TPad *)Histogram2DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Form("%s[", pdfFileName));
+        CanvasPDF->Print(Form("%s[", Histogram_OutPDF));
         Histogram2DCanvas->DrawClonePad();
         CanvasPDF->Print(Histogram_OutPDF);
-        CanvasPDF->Print(Form("%s]", pdfFileName));
+        CanvasPDF->Print(Form("%s]", Histogram_OutPDF));
         // Histogram2DCanvas->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -249,10 +249,10 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *Histogram2DC
 
         CanvasPDF->cd(CanvasPDF_ind);
         // CopyPadContent((TPad *)Histogram2DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Form("%s[", pdfFileName));
+        CanvasPDF->Print(Form("%s[", Histogram_OutPDF));
         Histogram2DCanvas->DrawClonePad();
         CanvasPDF->Print(Histogram_OutPDF);
-        CanvasPDF->Print(Form("%s]", pdfFileName));
+        CanvasPDF->Print(Form("%s]", Histogram_OutPDF));
         // Histogram2DCanvas->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -359,10 +359,10 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *Histogram2DC
 
         CanvasPDF->cd(CanvasPDF_ind);
         // CopyPadContent((TPad *)Histogram2DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Form("%s[", pdfFileName));
+        CanvasPDF->Print(Form("%s[", Histogram_OutPDF));
         Histogram2DCanvas->DrawClonePad();
         CanvasPDF->Print(Histogram_OutPDF);
-        CanvasPDF->Print(Form("%s]", pdfFileName));
+        CanvasPDF->Print(Form("%s]", Histogram_OutPDF));
         // Histogram2DCanvas->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -375,10 +375,10 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *Histogram2DC
 
         CanvasPDF->cd(CanvasPDF_ind);
         // CopyPadContent((TPad *)Histogram2DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Form("%s[", pdfFileName));
+        CanvasPDF->Print(Form("%s[", Histogram_OutPDF));
         Histogram2DCanvas->DrawClonePad();
         CanvasPDF->Print(Histogram_OutPDF);
-        CanvasPDF->Print(Form("%s]", pdfFileName));
+        CanvasPDF->Print(Form("%s]", Histogram_OutPDF));
         // Histogram2DCanvas->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -476,10 +476,10 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *Histogram2DC
 
         CanvasPDF->cd(CanvasPDF_ind);
         // CopyPadContent((TPad *)Histogram2DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Form("%s[", pdfFileName));
+        CanvasPDF->Print(Form("%s[", Histogram_OutPDF));
         Histogram2DCanvas->DrawClonePad();
         CanvasPDF->Print(Histogram_OutPDF);
-        CanvasPDF->Print(Form("%s]", pdfFileName));
+        CanvasPDF->Print(Form("%s]", Histogram_OutPDF));
         // Histogram2DCanvas->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -492,10 +492,10 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *Histogram2DC
 
         CanvasPDF->cd(CanvasPDF_ind);
         // CopyPadContent((TPad *)Histogram2DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Form("%s[", pdfFileName));
+        CanvasPDF->Print(Form("%s[", Histogram_OutPDF));
         Histogram2DCanvas->DrawClonePad();
         CanvasPDF->Print(Histogram_OutPDF);
-        CanvasPDF->Print(Form("%s]", pdfFileName));
+        CanvasPDF->Print(Form("%s]", Histogram_OutPDF));
         // Histogram2DCanvas->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -597,10 +597,10 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *Histogram2DC
 
         CanvasPDF->cd(CanvasPDF_ind);
         // CopyPadContent((TPad *)Histogram2DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Form("%s[", pdfFileName));
+        CanvasPDF->Print(Form("%s[", Histogram_OutPDF));
         Histogram2DCanvas->DrawClonePad();
         CanvasPDF->Print(Histogram_OutPDF);
-        CanvasPDF->Print(Form("%s]", pdfFileName));
+        CanvasPDF->Print(Form("%s]", Histogram_OutPDF));
         // Histogram2DCanvas->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
@@ -613,10 +613,10 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *Histogram2DC
 
         CanvasPDF->cd(CanvasPDF_ind);
         // CopyPadContent((TPad *)Histogram2DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Form("%s[", pdfFileName));
+        CanvasPDF->Print(Form("%s[", Histogram_OutPDF));
         Histogram2DCanvas->DrawClonePad();
         CanvasPDF->Print(Histogram_OutPDF);
-        CanvasPDF->Print(Form("%s]", pdfFileName));
+        CanvasPDF->Print(Form("%s]", Histogram_OutPDF));
         // Histogram2DCanvas->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
