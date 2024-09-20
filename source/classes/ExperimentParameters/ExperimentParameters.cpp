@@ -59,36 +59,121 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
 {
     string sName = "unknown_sample_598636MeV"; // to set beamE = 5.98636 by default;
 
-    if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_e_tester_1e")
-    { // Uniform, simulation, 2GeV, ifarm
-        if (AnalyseFileSample == "reconhipo")
-        {
-            BeamAt2GeV = SimulationSample = true;
-            sName = "Uniform_sample_e_tester_2070MeV";
+    if (findSubstring(AnalyseFilePath, "Uniform_e-p-n_samples"))
+    { // Uniform samples
+        if (findSubstring(AnalyseFilePath, "OutPut_e_tester_1e"))
+        { // Electron tester samples
+            if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_e_tester_1e")
+            { // Uniform, simulation, 2GeV, ifarm
+                if (AnalyseFileSample == "reconhipo")
+                {
+                    BeamAt2GeV = SimulationSample = true;
+                    sName = "Uniform_sample_e_tester_2070MeV";
+                }
+            }
+            else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_e_tester_1e")
+            { // Uniform, simulation, 4GeV, ifarm
+                if (AnalyseFileSample == "reconhipo")
+                {
+                    BeamAt4GeV = SimulationSample = true;
+                    sName = "Uniform_sample_e_tester_4029MeV";
+                }
+            }
+            else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_e_tester_1e")
+            { // Uniform, simulation, 6GeV, ifarm
+                if (AnalyseFileSample == "reconhipo")
+                {
+                    BeamAt6GeV = SimulationSample = true;
+                    sName = "Uniform_sample_e_tester_5986MeV";
+                }
+            }
         }
-    }
-    else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_e_tester_1e")
-    { // Uniform, simulation, 4GeV, ifarm
-        if (AnalyseFileSample == "reconhipo")
-        {
-            BeamAt4GeV = SimulationSample = true;
-            sName = "Uniform_sample_e_tester_4029MeV";
-        }
-    }
-    else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_e_tester_1e")
-    { // Uniform, simulation, 6GeV, ifarm
-        if (AnalyseFileSample == "reconhipo")
-        {
-            BeamAt6GeV = SimulationSample = true;
-            sName = "Uniform_sample_e_tester_5986MeV";
-        }
-    }
-    else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/598636MeV")
-    { // Uniform, simulation, 6GeV, ifarm
-        if (AnalyseFileSample == "reconhipo")
-        {
-            BeamAt6GeV = SimulationSample = true;
-            sName = "Uniform_sample_598636MeV";
+        else
+        { // Uniform samples for acceptance maps
+            if (findSubstring(AnalyseFilePat, "2070MeV"))
+            { /* 2GeV samples
+                 NOTE: here '2070MeV' has to be in the sample path! */
+                if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_1e")
+                { // Uniform 1e, simulation, 2GeV, ifarm
+                    if (AnalyseFileSample == "reconhipo")
+                    {
+                        BeamAt2GeV = SimulationSample = true;
+                        sName = "Uniform_1e_sample_2070MeV";
+                    }
+                }
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_ep")
+                { // Uniform ep, simulation, 2GeV, ifarm
+                    if (AnalyseFileSample == "reconhipo")
+                    {
+                        BeamAt2GeV = SimulationSample = true;
+                        sName = "Uniform_ep_sample_2070MeV";
+                    }
+                }
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_en")
+                { // Uniform en, simulation, 2GeV, ifarm
+                    if (AnalyseFileSample == "reconhipo")
+                    {
+                        BeamAt2GeV = SimulationSample = true;
+                        sName = "Uniform_en_sample_2070MeV";
+                    }
+                }
+            }
+            else if (findSubstring(AnalyseFilePat, "4029MeV"))
+            { /* 4GeV samples
+                 NOTE: here '4029MeV' has to be in the sample path! */
+                if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_1e")
+                { // Uniform 1e, simulation, 4GeV, ifarm
+                    if (AnalyseFileSample == "reconhipo")
+                    {
+                        BeamAt4GeV = SimulationSample = true;
+                        sName = "Uniform_1e_sample_4029MeV";
+                    }
+                }
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_ep")
+                { // Uniform ep, simulation, 4GeV, ifarm
+                    if (AnalyseFileSample == "reconhipo")
+                    {
+                        BeamAt4GeV = SimulationSample = true;
+                        sName = "Uniform_ep_sample_4029MeV";
+                    }
+                }
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_en")
+                { // Uniform en, simulation, 4GeV, ifarm
+                    if (AnalyseFileSample == "reconhipo")
+                    {
+                        BeamAt4GeV = SimulationSample = true;
+                        sName = "Uniform_en_sample_4029MeV";
+                    }
+                }
+            }
+            else if (findSubstring(AnalyseFilePat, "5986MeV"))
+            { /* 6GeV samples
+                 NOTE: here '5986MeV' has to be in the sample path! */
+                if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_1e")
+                { // Uniform 1e, simulation, 6GeV, ifarm
+                    if (AnalyseFileSample == "reconhipo")
+                    {
+                        BeamAt6GeV = SimulationSample = true;
+                        sName = "Uniform_1e_sample_5986MeV";
+                    }
+                }
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_ep")
+                { // Uniform ep, simulation, 6GeV, ifarm
+                    if (AnalyseFileSample == "reconhipo")
+                    {
+                        BeamAt6GeV = SimulationSample = true;
+                        sName = "Uniform_ep_sample_5986MeV";
+                    }
+                }
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_en")
+                { // Uniform en, simulation, 6GeV, ifarm
+                    if (AnalyseFileSample == "reconhipo")
+                    {
+                        BeamAt6GeV = SimulationSample = true;
+                        sName = "Uniform_en_sample_5986MeV";
+                    }
+                }
+            }
         }
     }
     else if (AnalyseFilePath == "volatile/clas12/rg-m/48Ca/dst/recon")
@@ -610,15 +695,18 @@ double ExperimentParameters::ConfigureBeanEnergy(const string &sn)
 {
     double be;
 
-    if (findSubstring(sn, "598636MeV") || findSubstring(sn, "598636mev") || findSubstring(sn, "598636") || findSubstring(sn, "5986MeV") || findSubstring(sn, "5986mev") || findSubstring(sn, "5986") || findSubstring(sn, "6GeV") || findSubstring(sn, "6Gev") || findSubstring(sn, "6gev"))
+    if (findSubstring(sn, "598636MeV") || findSubstring(sn, "598636mev") || findSubstring(sn, "598636") || findSubstring(sn, "5986MeV") ||
+        findSubstring(sn, "5986mev") || findSubstring(sn, "5986") || findSubstring(sn, "6GeV") || findSubstring(sn, "6Gev") || findSubstring(sn, "6gev"))
     {
         be = 5.98636;
     }
-    else if (findSubstring(sn, "402962MeV") || findSubstring(sn, "402962mev") || findSubstring(sn, "402962") || findSubstring(sn, "4029MeV") || findSubstring(sn, "4029mev") || findSubstring(sn, "4029") || findSubstring(sn, "4GeV") || findSubstring(sn, "4Gev") || findSubstring(sn, "4gev"))
+    else if (findSubstring(sn, "402962MeV") || findSubstring(sn, "402962mev") || findSubstring(sn, "402962") || findSubstring(sn, "4029MeV") ||
+             findSubstring(sn, "4029mev") || findSubstring(sn, "4029") || findSubstring(sn, "4GeV") || findSubstring(sn, "4Gev") || findSubstring(sn, "4gev"))
     {
         be = 4.02962;
     }
-    else if (findSubstring(sn, "207052MeV") || findSubstring(sn, "207052mev") || findSubstring(sn, "207052") || findSubstring(sn, "2070MeV") || findSubstring(sn, "2070mev") || findSubstring(sn, "2070") || findSubstring(sn, "2GeV") || findSubstring(sn, "2Gev") || findSubstring(sn, "2gev"))
+    else if (findSubstring(sn, "207052MeV") || findSubstring(sn, "207052mev") || findSubstring(sn, "207052") || findSubstring(sn, "2070MeV") ||
+             findSubstring(sn, "2070mev") || findSubstring(sn, "2070") || findSubstring(sn, "2GeV") || findSubstring(sn, "2Gev") || findSubstring(sn, "2gev"))
     {
         be = 2.07052;
     }

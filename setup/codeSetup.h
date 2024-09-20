@@ -61,9 +61,9 @@ std::string log_file_name = "Run_log.txt";
 std::string plots_log_save_Directory = plots_path + "/" + log_file_name;
 //</editor-fold>
 
-// ======================================================================================================================================================================
-// file_name definitions and selection
-// ======================================================================================================================================================================
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                 Samples in sample chain                                                                             //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 std::vector<std::string> AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v;
 std::string AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile;
@@ -77,6 +77,12 @@ std::string file_name = "general_file";
 
 void ConfigSampleChain()
 {
+    // ==================================================================================================================================================================
+    // Data runs
+    // ==================================================================================================================================================================
+
+    // H1 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     // /* H1 2.07052GeV - run 015634 (ifarm DATA files - H1 DATA files) */
     // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/H/dst/recon";
     // AnalyseFileSample = "015634";
@@ -103,6 +109,8 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
+    // D2 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     // /* D2 2.07052GeV - all runs (ifarm DATA files - D2 DATA files) */
     // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/D/dst/recon";
     // AnalyseFileSample = "";
@@ -128,6 +136,8 @@ void ConfigSampleChain()
     // AnalyseFileSample_v.push_back(AnalyseFileSample);
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
+
+    // C12 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // /* C12 2.07052GeV - run 015664 (ifarm DATA files - C12 DATA files) */
     // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/C/dst/recon";
@@ -160,6 +170,8 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
+    // Ar40 -------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     // /* Ar40 2.07052GeV - run 015672 (ifarm DATA files - Ar40 DATA files) */
     // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/Ar/dst/recon";
     // AnalyseFileSample = "015672";
@@ -190,17 +202,22 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // HIPO files for uniform samples ---------------------------------------------------------------------------------------------------------------------------------------
+    // ==================================================================================================================================================================
+    // Uniform simulation files
+    // ==================================================================================================================================================================
+    // These samples were used to generate the acceptance maps
 
-    /* Uniform electron tester sample @ 2GeV */
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_e_tester_1e";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    AnalyseFile = AnalyseFileDir + "*.hipo";
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
+    // Electron tester samples ------------------------------------------------------------------------------------------------------------------------------------------
+
+    // /* Uniform electron tester sample @ 2GeV */
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_e_tester_1e";
+    // AnalyseFileSample = "reconhipo";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "*.hipo";
+    // AnalyseFilePath_v.push_back(AnalyseFilePath);
+    // AnalyseFileSample_v.push_back(AnalyseFileSample);
+    // AnalyseFileDir_v.push_back(AnalyseFileDir);
+    // AnalyseFile_v.push_back(AnalyseFile);
 
     // /* Uniform electron tester sample @ 4GeV */
     // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_e_tester_1e";
@@ -222,6 +239,117 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
+    // Uniform samples --------------------------------------------------------------------------------------------------------------------------------------------------
+
+    /* Uniform sample @ 2GeV */
+
+    // Uniform 1e @ 2GeV:
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_1e";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    // Uniform ep @ 2GeV:
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_ep";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "recon_Uniform_ep_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    // Uniform en @ 2GeV:
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_en";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "recon_Uniform_en_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+    
+    /* Uniform sample @ 4GeV */
+
+    // Uniform 1e @ 4GeV:
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_1e";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_4029MeV_1000_torus-1.0.hipo"; // 1 file
+    // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    // Uniform ep @ 4GeV:
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_ep";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "recon_Uniform_ep_sample_4029MeV_1000_torus-1.0.hipo"; // 1 file
+    // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    // Uniform en @ 4GeV:
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_en";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "recon_Uniform_en_sample_4029MeV_1000_torus-1.0.hipo"; // 1 file
+    // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+    
+    /* Uniform sample @ 6GeV */
+
+    // Uniform 1e @ 6GeV:
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_1e";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
+    // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    // Uniform ep @ 6GeV:
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_ep";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "recon_Uniform_ep_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
+    // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    // Uniform en @ 6GeV:
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_en";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "recon_Uniform_en_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
+    // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    // ==================================================================================================================================================================
+    // Old simulation files for local runs
+    // ==================================================================================================================================================================
+
     /* Local hipo files - Uniform sample @ 6GeV */
     // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/598636MeV"; // Storage (D:)
     // AnalyseFileSample = "reconhipo";                                                               // my test with Justin's code; all particle data saved
@@ -239,7 +367,9 @@ void ConfigSampleChain()
     // //AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_5*.hipo";          // 111 files
     // //AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_2*.hipo";          // 512 files
 
-    //// root files -----------------------------------------------------------------------------------------------------------------------------------------------------------
+    // ==================================================================================================================================================================
+    // Other ROOT files
+    // ==================================================================================================================================================================
 
     //////<editor-fold desc="root files">
     // AnalyseFilePath = "home/alon/project";

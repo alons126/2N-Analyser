@@ -27,7 +27,7 @@ private:
 
     string Added_PreStatuses, Added_Statuses;
 
-    string Global_Run_Status = "___";
+    string Global_Run_Status = "";
 
 public:
     // Default constructor ---------------------------------------------------------------------------------------------------------------------------------------------
