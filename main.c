@@ -42,7 +42,8 @@ int main()
 
         if (AnalyseFilePath_v.size() > 1)
         { // Delete all ROOT objects whose class names start with TH (to prevent a memory leak)
-            gDirectory->Delete("TH*;*");
+            // gDirectory->Delete("TH*;*");
+            gDirectory->Clear();
         }
     }
 
