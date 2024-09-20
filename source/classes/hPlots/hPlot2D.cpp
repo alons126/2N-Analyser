@@ -230,10 +230,12 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *Histogram2DC
         //        Histogram2DCanvas->SaveAs((Histogram2DSaveNameDir + sNameFlag + Histogram2DSaveName + "_zLogScale.png").c_str());
 
         CanvasPDF->cd(CanvasPDF_ind);
-        Histogram2DCanvas->DrawClonePad();
         // CopyPadContent((TPad *)Histogram2DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        CanvasPDF->Print(Form("%s[", pdfFileName));
+        Histogram2DCanvas->DrawClonePad();
         CanvasPDF->Print(Histogram_OutPDF);
-        Histogram2DCanvas->Print(Histogram_OutPDF);
+        CanvasPDF->Print(Form("%s]", pdfFileName));
+        // Histogram2DCanvas->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
 
@@ -246,10 +248,12 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *Histogram2DC
         Histogram2DCanvas->SaveAs((Histogram2DSaveNameDir + sNameFlag + Histogram2DSaveName + "_zLinearScale.png").c_str());
 
         CanvasPDF->cd(CanvasPDF_ind);
-        Histogram2DCanvas->DrawClonePad();
         // CopyPadContent((TPad *)Histogram2DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        CanvasPDF->Print(Form("%s[", pdfFileName));
+        Histogram2DCanvas->DrawClonePad();
         CanvasPDF->Print(Histogram_OutPDF);
-        Histogram2DCanvas->Print(Histogram_OutPDF);
+        CanvasPDF->Print(Form("%s]", pdfFileName));
+        // Histogram2DCanvas->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
 
@@ -354,10 +358,12 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *Histogram2DC
         Histogram2DCanvas->SaveAs((Histogram2DSaveNameDir + sNameFlag + Histogram2DSaveName + "_zLogScale.png").c_str());
 
         CanvasPDF->cd(CanvasPDF_ind);
-        Histogram2DCanvas->DrawClonePad();
         // CopyPadContent((TPad *)Histogram2DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        CanvasPDF->Print(Form("%s[", pdfFileName));
+        Histogram2DCanvas->DrawClonePad();
         CanvasPDF->Print(Histogram_OutPDF);
-        Histogram2DCanvas->Print(Histogram_OutPDF);
+        CanvasPDF->Print(Form("%s]", pdfFileName));
+        // Histogram2DCanvas->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
 
@@ -368,10 +374,12 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *Histogram2DC
         Histogram2DCanvas->SaveAs((Histogram2DSaveNameDir + "/z_Linear_Scale_plots/" + sNameFlag + Histogram2DSaveName + "_zLinearScale.png").c_str());
 
         CanvasPDF->cd(CanvasPDF_ind);
-        Histogram2DCanvas->DrawClonePad();
         // CopyPadContent((TPad *)Histogram2DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        CanvasPDF->Print(Form("%s[", pdfFileName));
+        Histogram2DCanvas->DrawClonePad();
         CanvasPDF->Print(Histogram_OutPDF);
-        Histogram2DCanvas->Print(Histogram_OutPDF);
+        CanvasPDF->Print(Form("%s]", pdfFileName));
+        // Histogram2DCanvas->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
 
@@ -467,10 +475,12 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *Histogram2DC
         Histogram2DCanvas->SaveAs((Histogram2DSaveNameDir + sNameFlag + Histogram2DSaveName + "_zLogScale.png").c_str());
 
         CanvasPDF->cd(CanvasPDF_ind);
-        Histogram2DCanvas->DrawClonePad();
         // CopyPadContent((TPad *)Histogram2DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        CanvasPDF->Print(Form("%s[", pdfFileName));
+        Histogram2DCanvas->DrawClonePad();
         CanvasPDF->Print(Histogram_OutPDF);
-        Histogram2DCanvas->Print(Histogram_OutPDF);
+        CanvasPDF->Print(Form("%s]", pdfFileName));
+        // Histogram2DCanvas->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
 
@@ -481,10 +491,12 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *Histogram2DC
         Histogram2DCanvas->SaveAs((Histogram2DSaveNameDir + "/z_Linear_Scale_plots/" + sNameFlag + Histogram2DSaveName + "_zLinearScale.png").c_str());
 
         CanvasPDF->cd(CanvasPDF_ind);
-        Histogram2DCanvas->DrawClonePad();
         // CopyPadContent((TPad *)Histogram2DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        CanvasPDF->Print(Form("%s[", pdfFileName));
+        Histogram2DCanvas->DrawClonePad();
         CanvasPDF->Print(Histogram_OutPDF);
-        Histogram2DCanvas->Print(Histogram_OutPDF);
+        CanvasPDF->Print(Form("%s]", pdfFileName));
+        // Histogram2DCanvas->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
 
@@ -584,10 +596,12 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *Histogram2DC
         Histogram2DCanvas->SaveAs((Histogram2DSaveNameDir + sNameFlag + Histogram2DSaveName + "_zLogScale.png").c_str());
 
         CanvasPDF->cd(CanvasPDF_ind);
-        Histogram2DCanvas->DrawClonePad();
         // CopyPadContent((TPad *)Histogram2DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        CanvasPDF->Print(Form("%s[", pdfFileName));
+        Histogram2DCanvas->DrawClonePad();
         CanvasPDF->Print(Histogram_OutPDF);
-        Histogram2DCanvas->Print(Histogram_OutPDF);
+        CanvasPDF->Print(Form("%s]", pdfFileName));
+        // Histogram2DCanvas->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
 
@@ -598,10 +612,12 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *Histogram2DC
         Histogram2DCanvas->SaveAs((Histogram2DSaveNameDir + "/z_Linear_Scale_plots/" + sNameFlag + Histogram2DSaveName + "_zLinearScale.png").c_str());
 
         CanvasPDF->cd(CanvasPDF_ind);
-        Histogram2DCanvas->DrawClonePad();
         // CopyPadContent((TPad *)Histogram2DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        CanvasPDF->Print(Form("%s[", pdfFileName));
+        Histogram2DCanvas->DrawClonePad();
         CanvasPDF->Print(Histogram_OutPDF);
-        Histogram2DCanvas->Print(Histogram_OutPDF);
+        CanvasPDF->Print(Form("%s]", pdfFileName));
+        // Histogram2DCanvas->Print(Histogram_OutPDF);
         ++CanvasPDF_ind;
     }
 
