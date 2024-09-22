@@ -123,12 +123,12 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     const bool ES_by_leading_FDneutron = true;
 
     /* Acceptance maps setup */
-    bool Generate_AMaps = false; // Generate acceptance maps
+    bool Generate_AMaps = true; // Generate acceptance maps
     // TODO: UPDATE AMaps loading constructor electron histogram's number of bins
     bool AMaps_calc_with_one_reco_electron = true;
     bool reformat_e_bins = false;
     bool varying_P_e_bins = true;
-    bool varying_P_nuc_bins = true;
+    bool varying_P_nuc_bins = false;
     bool Electron_single_slice_test = false; // keep as false for normal runs!
     bool Nucleon_single_slice_test = false;  // keep as false for normal runs!
     vector<int> TestSlices = {1, 1, 1};      // {ElectronTestSlice, ProtonTestSlice, NeutronTestSlice}
@@ -174,7 +174,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     /* Settings that allow to disable/enable every cut individually */
 
     // clas12ana cuts ---------------------------------------------------------------------------------------------------------------------------------------------------
-    bool apply_cuts = true;                 // master ON/OFF switch for applying cuts
+    bool apply_cuts = true;                  // master ON/OFF switch for applying cuts
     bool clas12ana_particles = true;         // TODO: move form here!
     bool only_preselection_cuts = false;     // keep as false for regular runs!
     bool only_electron_quality_cuts = false; // keep as false for regular runs!
@@ -197,10 +197,10 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
     // My analysis cuts ---------------------------------------------------------------------------------------------------------------------------------------------------
     /* Nucleon cuts */
-    bool apply_nucleon_cuts = false; // set as true to get good protons and calculate upper neutron momentum th.
+    bool apply_nucleon_cuts = true; // set as true to get good protons and calculate upper neutron momentum th.
 
     /* Physical cuts */
-    bool apply_nucleon_physical_cuts = false; // nucleon physical cuts master
+    bool apply_nucleon_physical_cuts = true; // nucleon physical cuts master
     // TODO: automate adding upper mom. th. to nucleon cuts (for nRes calc)
     bool apply_nBeta_fit_cuts = true; // apply neutron upper mom. th.
     bool apply_fiducial_cuts = false;
@@ -1104,14 +1104,19 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     int NumberNucOfMomSlices, NumberElecOfMomSlices, HistElectronSliceNumOfXBins = numTH2Dbins_Electron_Ang_Plots, HistNucSliceNumOfXBins = numTH2Dbins_Nucleon_Ang_Plots;
 
     //<editor-fold desc="Determine NumberNucOfMomSlices by sample">
-    if (VaryingSampleName == "C12_simulation_G18_Q204_6GeV" || VaryingSampleName == "C12x4_simulation_G18_Q204_6GeV")
+    if (!findSubstring(SampleName, "Uniform"))
     {
-        NumberNucOfMomSlices = 9, NumberElecOfMomSlices = 9;
-        //        NumberNucOfMomSlices = 9, NumberElecOfMomSlices = 35;
-    }
-    else
-    {
-        NumberNucOfMomSlices = 4, NumberElecOfMomSlices = 4;
+        if (VaryingSampleName == "C12_simulation_G18_Q204_6GeV" || VaryingSampleName == "C12x4_simulation_G18_Q204_6GeV")
+        {
+            NumberNucOfMomSlices = 9, NumberElecOfMomSlices = 9;
+            //        NumberNucOfMomSlices = 9, NumberElecOfMomSlices = 35;
+        }
+        else
+        {
+            NumberNucOfMomSlices = 4, NumberElecOfMomSlices = 4;
+        }
+    } else {
+        NumberNucOfMomSlices = 25, NumberElecOfMomSlices = 25;
     }
     //</editor-fold>
 
@@ -10049,8 +10054,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         else
         {
             cout << "\n\nLoading fitted Beta cuts...\n\n";
-            clasAna.readInputParam((NucleonCutsDirectory + "Nucleon_Cuts_-_" + SampleName +
-                                    ".par")
+            clasAna.readInputParam((NucleonCutsDirectory + "Nucleon_Cuts_-_" + SampleName + ".par")
                                        .c_str()); // load sample-appropreate cuts file from CutsDirectory
 
             /* Setting nucleon cuts - only if NOT plotting efficiency plots! */
