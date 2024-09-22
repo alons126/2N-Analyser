@@ -453,112 +453,183 @@ void ExperimentParameters::ConfigureVaryingSampleName(const string &sn)
 //<editor-fold desc="ConfigureVz_cuts function">
 void ExperimentParameters::ConfigureVz_cuts(const string &sn)
 {
-    if (sn == "Ar40_data_2GeV_run_015672")
-    {
-        Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
-        Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -12., -3.);
-        Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., -4.);
-    }
-    else if (sn == "Ar40_data_4GeV_run_015743")
-    {
-        Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
-        Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -9., -2.);
-        Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., -4.);
-    }
-    else if (sn == "Ar40_data_6GeV_run_015792")
-    {
-        Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
-        Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -9., -2.);
-        Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., -4.);
-    }
-    else if (sn == "C12_data_2GeV_run_015664")
-    {
-        Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
-        Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -9., -1.);
-        Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -4., 0.);
-    }
-    else if (sn == "C12_data_4GeV_run_015778")
-    {
-        Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
-        Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -6., 1.);
-        Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -4., -1.);
-    }
-    else if (sn == "D2_data_2GeV")
-    {
-        Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
-        Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -10., 1.);
-        Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 0.);
-    }
-    else if (sn == "D2_data_6GeV_run_015443")
-    {
-        Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
-        Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -7., 3.);
-        Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 1.);
-    }
-    else if (sn == "H1_data_2GeV_run_015634")
-    {
-        Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
-        Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -11., 1.);
-        Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 0.);
-    }
-    else if (sn == "H1_data_6GeV_run_015028")
-    {
-        Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
-        Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -7., 1.);
-        Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 1.);
-    }
-    else if (sn == "C12x4_simulation_G18_Q204_6GeV")
-    { // 4-foil
-        Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
-        Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -8., 3.);
-        Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 2.);
-    }
-    else if (sn == "C12_simulation_G18_Q204_6GeV")
-    { // 1-foil
-        Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -5, 5);
-        Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -5, 5);
-        Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -2, 1);
-    }
-    else if (findSubstring(sn, "C12x4_data_6GeV_run_0151"))
-    { // Sample is data
-        if (findSubstring(sn, "C12x4_data_6GeV_run_015186"))
-        { // 4-foil
-            Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
-            Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -7., 2.);
-            Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 2.);
+    if (findSubstring(sn, "Uniform"))
+    { // Sample is uniform simulation
+        if (findSubstring(sn, "2070MeV"))
+        {
+            if (sn == "Uniform_1e_sample_2070MeV")
+            {
+                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -10., 0.);
+                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -10., 0.);
+                Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -5., -1.);
+            }
+            else if (sn == "Uniform_ep_sample_2070MeV")
+            {
+                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -10., 0.);
+                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -10., 0.);
+                Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -5., -1.);
+            }
+            else if (sn == "Uniform_en_sample_2070MeV")
+            {
+                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -10., 0.);
+                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -10., 0.);
+                Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -5., -1.);
+            }
         }
-        else if (findSubstring(sn, "C12x4_data_6GeV_run_015187"))
-        { // 4-foil
-            Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
-            Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -7., 2.);
-            Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 2.);
+        else if (findSubstring(sn, "4029MeV"))
+        {
+            if (sn == "Uniform_1e_sample_4029MeV")
+            {
+                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -8., 3.);
+                Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 2.);
+            }
+            else if (sn == "Uniform_ep_sample_4029MeV")
+            {
+                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -8., 3.);
+                Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 2.);
+            }
+            else if (sn == "Uniform_en_sample_4029MeV")
+            {
+                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -8., 3.);
+                Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 2.);
+            }
         }
-        else if (findSubstring(sn, "C12x4_data_6GeV_run_015188"))
+        else if (findSubstring(sn, "5986MeV"))
+        {
+            if (sn == "Uniform_1e_sample_5986MeV")
+            {
+                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -8., 3.);
+                Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 2.);
+            }
+            else if (sn == "Uniform_ep_sample_5986MeV")
+            {
+                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -8., 3.);
+                Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 2.);
+            }
+            else if (sn == "Uniform_en_sample_5986MeV")
+            {
+                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -8., 3.);
+                Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 2.);
+            }
+        }
+    }
+    else if (findSubstring(sn, "simulation"))
+    { // Sample is simulation
+        if (sn == "C12x4_simulation_G18_Q204_6GeV")
         { // 4-foil
             Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
             Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -8., 3.);
-            //            Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -7., 2.);
             Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 2.);
         }
-        else
-        {
-            Vz_cuts = Vz_cuts_def;
-            Vz_cuts_FD = Vz_cuts_FD_def;
-            Vz_cuts_CD = Vz_cuts_CD_def;
+        else if (sn == "C12_simulation_G18_Q204_6GeV")
+        { // 1-foil
+            Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -5, 5);
+            Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -5, 5);
+            Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -2, 1);
         }
     }
-    else if (sn == "C12x4_data_6GeV")
-    { // Sample is data (full 4-foil run)
-        Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
-        Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -8., 3.);
-        //        Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -7., 2.);
-        Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 2.);
-    }
-    else if (sn == "LH2_data_6GeV_run_015032")
-    {
-        Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -15, 5);
-        Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -15, 5);
-        Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -15, 5);
+    else if (findSubstring(sn, "data"))
+    { // Sample is data
+        if (sn == "Ar40_data_2GeV_run_015672")
+        {
+            Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+            Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -12., -3.);
+            Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., -4.);
+        }
+        else if (sn == "Ar40_data_4GeV_run_015743")
+        {
+            Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+            Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -9., -2.);
+            Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., -4.);
+        }
+        else if (sn == "Ar40_data_6GeV_run_015792")
+        {
+            Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+            Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -9., -2.);
+            Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., -4.);
+        }
+        else if (sn == "C12_data_2GeV_run_015664")
+        {
+            Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+            Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -9., -1.);
+            Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -4., 0.);
+        }
+        else if (sn == "C12_data_4GeV_run_015778")
+        {
+            Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+            Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -6., 1.);
+            Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -4., -1.);
+        }
+        else if (sn == "D2_data_2GeV")
+        {
+            Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+            Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -10., 1.);
+            Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 0.);
+        }
+        else if (sn == "D2_data_6GeV_run_015443")
+        {
+            Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+            Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -7., 3.);
+            Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 1.);
+        }
+        else if (sn == "H1_data_2GeV_run_015634")
+        {
+            Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+            Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -11., 1.);
+            Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 0.);
+        }
+        else if (sn == "H1_data_6GeV_run_015028")
+        {
+            Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+            Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -7., 1.);
+            Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 1.);
+        }
+        else if (findSubstring(sn, "C12x4_data_6GeV_run_0151"))
+        {
+            if (findSubstring(sn, "C12x4_data_6GeV_run_015186"))
+            { // 4-foil
+                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -7., 2.);
+                Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 2.);
+            }
+            else if (findSubstring(sn, "C12x4_data_6GeV_run_015187"))
+            { // 4-foil
+                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -7., 2.);
+                Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 2.);
+            }
+            else if (findSubstring(sn, "C12x4_data_6GeV_run_015188"))
+            { // 4-foil
+                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -8., 3.);
+                //            Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -7., 2.);
+                Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 2.);
+            }
+            else
+            {
+                Vz_cuts = Vz_cuts_def;
+                Vz_cuts_FD = Vz_cuts_FD_def;
+                Vz_cuts_CD = Vz_cuts_CD_def;
+            }
+        }
+        else if (sn == "C12x4_data_6GeV")
+        { // Sample is data (full 4-foil run)
+            Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -7., 2.);
+            Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -8., 3.);
+            Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -7., 2.);
+        }
+        else if (sn == "LH2_data_6GeV_run_015032")
+        {
+            Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -15, 5);
+            Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -15, 5);
+            Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -15, 5);
+        }
     }
     else
     {
@@ -574,110 +645,182 @@ void ExperimentParameters::ConfigureVz_cuts(const string &sn)
 //<editor-fold desc="ConfigureVz_cuts function">
 void ExperimentParameters::ConfiguredVz_cuts(const string &sn)
 {
-    if (sn == "Ar40_data_2GeV_run_015672")
-    {
-        dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
-        dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -4, 8);
-        dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -2, 6);
-    }
-    else if (sn == "Ar40_data_4GeV_run_015743")
-    {
-        dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
-        dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -8, 4);
-        dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -4, 2);
-    }
-    else if (sn == "Ar40_data_6GeV_run_015792")
-    {
-        dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
-        dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -8, 4);
-        dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -4, 2);
-    }
-    else if (sn == "C12_data_2GeV_run_015664")
-    {
-        dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
-        dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -3, 5);
-        dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -2, 5);
-    }
-    else if (sn == "C12_data_4GeV_run_015778")
-    {
-        dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
-        dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -6, 3);
-        dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -4, 2);
-    }
-    else if (sn == "D2_data_2GeV")
-    {
-        dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
-        dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 7);
-        dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -2, 5);
-    }
-    else if (sn == "D2_data_6GeV_run_015443")
-    {
-        dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
-        dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -7, 3);
-        dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 3);
-    }
-    else if (sn == "H1_data_2GeV_run_015634")
-    {
-        dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
-        dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -3, 6);
-        dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -2, 5);
-    }
-    else if (sn == "H1_data_6GeV_run_015028")
-    {
-        dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
-        dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -6, 2);
-        dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -4, 2);
-    }
-    else if (sn == "C12x4_simulation_G18_Q204_6GeV")
-    { // 4-foil
-        dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
-        dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
-        dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
-    }
-    else if (sn == "C12_simulation_G18_Q204_6GeV")
-    { // 1-foil
-        dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
-        dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
-        dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
-    }
-    else if (findSubstring(sn, "C12x4_data_6GeV_run_0151"))
-    { // Sample is data
-        if (findSubstring(sn, "C12x4_data_6GeV_run_015186"))
-        { // 4-foil
-            dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
-            dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
-            dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
-        }
-        else if (findSubstring(sn, "C12x4_data_6GeV_run_015187"))
-        { // 4-foil
-            dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
-            dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
-            dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
-        }
-        else if (findSubstring(sn, "C12x4_data_6GeV_run_015188"))
-        { // 4-foil
-            dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
-            dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
-            dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
-        }
-        else
+    if (findSubstring(sn, "Uniform"))
+    { // Sample is uniform simulation
+        if (findSubstring(sn, "2070MeV"))
         {
-            dVz_cuts = dVz_cuts_def;
-            dVz_cuts_FD = dVz_cuts_FD_def;
-            dVz_cuts_CD = dVz_cuts_CD_def;
+            if (sn == "Uniform_1e_sample_2070MeV")
+            {
+                dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -9999, 9999);
+                dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -9999, 9999);
+                dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -9999, 9999);
+            }
+            else if (sn == "Uniform_ep_sample_2070MeV")
+            {
+                dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -4, 2);
+                dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -4, 2);
+                dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -1, 3);
+            }
+            else if (sn == "Uniform_en_sample_2070MeV")
+            {
+                dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -9999, 9999);
+                dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -9999, 9999);
+                dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -9999, 9999);
+            }
+        }
+        else if (findSubstring(sn, "4029MeV"))
+        {
+            if (sn == "Uniform_1e_sample_4029MeV")
+            {
+                dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+                dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
+                dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
+            }
+            else if (sn == "Uniform_ep_sample_4029MeV")
+            {
+                dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+                dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
+                dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
+            }
+            else if (sn == "Uniform_en_sample_4029MeV")
+            {
+                dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+                dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
+                dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
+            }
+        }
+        else if (findSubstring(sn, "5986MeV"))
+        {
+            if (sn == "Uniform_1e_sample_5986MeV")
+            {
+                dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+                dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
+                dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
+            }
+            else if (sn == "Uniform_ep_sample_5986MeV")
+            {
+                dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+                dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
+                dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
+            }
+            else if (sn == "Uniform_en_sample_5986MeV")
+            {
+                dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+                dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
+                dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
+            }
         }
     }
-    else if (sn == "C12x4_data_6GeV")
-    { // Sample is data (full 4-foil run)
-        dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
-        dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
-        dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
+    else if (findSubstring(sn, "simulation"))
+    { // Sample is simulation
+        if (sn == "C12x4_simulation_G18_Q204_6GeV")
+        { // 4-foil
+            dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+            dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
+            dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
+        }
+        else if (sn == "C12_simulation_G18_Q204_6GeV")
+        { // 1-foil
+            dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+            dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
+            dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
+        }
     }
-    else if (sn == "LH2_data_6GeV_run_015032")
-    {
-        dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -8, 4);
-        dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -8, 4);
-        dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -8, 4);
+    else if (findSubstring(sn, "data"))
+    { // Sample is data
+        if (sn == "Ar40_data_2GeV_run_015672")
+        {
+            dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+            dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -4, 8);
+            dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -2, 6);
+        }
+        else if (sn == "Ar40_data_4GeV_run_015743")
+        {
+            dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+            dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -8, 4);
+            dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -4, 2);
+        }
+        else if (sn == "Ar40_data_6GeV_run_015792")
+        {
+            dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+            dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -8, 4);
+            dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -4, 2);
+        }
+        else if (sn == "C12_data_2GeV_run_015664")
+        {
+            dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+            dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -3, 5);
+            dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -2, 5);
+        }
+        else if (sn == "C12_data_4GeV_run_015778")
+        {
+            dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+            dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -6, 3);
+            dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -4, 2);
+        }
+        else if (sn == "D2_data_2GeV")
+        {
+            dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+            dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 7);
+            dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -2, 5);
+        }
+        else if (sn == "D2_data_6GeV_run_015443")
+        {
+            dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+            dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -7, 3);
+            dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 3);
+        }
+        else if (sn == "H1_data_2GeV_run_015634")
+        {
+            dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+            dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -3, 6);
+            dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -2, 5);
+        }
+        else if (sn == "H1_data_6GeV_run_015028")
+        {
+            dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+            dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -6, 2);
+            dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -4, 2);
+        }
+        else if (findSubstring(sn, "C12x4_data_6GeV_run_0151"))
+        {
+            if (findSubstring(sn, "C12x4_data_6GeV_run_015186"))
+            { // 4-foil
+                dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+                dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
+                dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
+            }
+            else if (findSubstring(sn, "C12x4_data_6GeV_run_015187"))
+            { // 4-foil
+                dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+                dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
+                dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
+            }
+            else if (findSubstring(sn, "C12x4_data_6GeV_run_015188"))
+            { // 4-foil
+                dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+                dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
+                dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
+            }
+            else
+            {
+                dVz_cuts = dVz_cuts_def;
+                dVz_cuts_FD = dVz_cuts_FD_def;
+                dVz_cuts_CD = dVz_cuts_CD_def;
+            }
+        }
+        else if (sn == "C12x4_data_6GeV")
+        { // Sample is data (full 4-foil run)
+            dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -5, 4);
+            dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -5, 4);
+            dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -5, 4);
+        }
+        else if (sn == "LH2_data_6GeV_run_015032")
+        {
+            dVz_cuts = DSCuts("dVz", "", "", "1e cut", 0, -8, 4);
+            dVz_cuts_FD = DSCuts("dVz", "FD", "", "1e cut", 0, -8, 4);
+            dVz_cuts_CD = DSCuts("dVz", "CD", "", "1e cut", 0, -8, 4);
+        }
     }
     else
     {

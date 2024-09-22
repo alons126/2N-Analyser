@@ -49,12 +49,12 @@
 					"label": "Config new samples - Vz cuts"
 				},
 				{
-					"line": 574,
+					"line": 645,
 					"column": 6,
 					"label": "Config new samples - dVz cuts"
 				},
 				{
-					"line": 726,
+					"line": 869,
 					"column": 0,
 					"label": "Config new samples - AddToHipoChain"
 				}
@@ -87,6 +87,216 @@
 					"line": 71,
 					"column": 13,
 					"label": "HistPlotter2D"
+				}
+			]
+		},
+		{
+			"path": "Old_analysers/DetectorSimulationAnalyser.C",
+			"bookmarks": [
+				{
+					"line": 103,
+					"column": 8,
+					"label": ""
+				},
+				{
+					"line": 124,
+					"column": 11,
+					"label": ""
+				},
+				{
+					"line": 135,
+					"column": 15,
+					"label": ""
+				},
+				{
+					"line": 175,
+					"column": 15,
+					"label": ""
+				},
+				{
+					"line": 194,
+					"column": 25,
+					"label": ""
+				},
+				{
+					"line": 197,
+					"column": 21,
+					"label": ""
+				},
+				{
+					"line": 390,
+					"column": 13,
+					"label": ""
+				},
+				{
+					"line": 463,
+					"column": 14,
+					"label": ""
+				},
+				{
+					"line": 535,
+					"column": 16,
+					"label": ""
+				},
+				{
+					"line": 552,
+					"column": 15,
+					"label": ""
+				},
+				{
+					"line": 563,
+					"column": 18,
+					"label": ""
+				},
+				{
+					"line": 634,
+					"column": 14,
+					"label": ""
+				},
+				{
+					"line": 900,
+					"column": 31,
+					"label": ""
+				},
+				{
+					"line": 970,
+					"column": 31,
+					"label": ""
+				},
+				{
+					"line": 1081,
+					"column": 23,
+					"label": ""
+				},
+				{
+					"line": 1159,
+					"column": 26,
+					"label": ""
+				},
+				{
+					"line": 1197,
+					"column": 43,
+					"label": ""
+				},
+				{
+					"line": 1252,
+					"column": 48,
+					"label": ""
+				},
+				{
+					"line": 1266,
+					"column": 60,
+					"label": ""
+				},
+				{
+					"line": 1787,
+					"column": 50,
+					"label": ""
+				},
+				{
+					"line": 1911,
+					"column": 37,
+					"label": ""
+				},
+				{
+					"line": 2010,
+					"column": 36,
+					"label": ""
+				},
+				{
+					"line": 3041,
+					"column": 22,
+					"label": ""
+				},
+				{
+					"line": 3560,
+					"column": 19,
+					"label": ""
+				},
+				{
+					"line": 3877,
+					"column": 23,
+					"label": ""
+				},
+				{
+					"line": 5951,
+					"column": 35,
+					"label": ""
+				},
+				{
+					"line": 6456,
+					"column": 30,
+					"label": ""
+				},
+				{
+					"line": 6775,
+					"column": 38,
+					"label": ""
+				},
+				{
+					"line": 7027,
+					"column": 37,
+					"label": ""
+				},
+				{
+					"line": 7522,
+					"column": 21,
+					"label": ""
+				},
+				{
+					"line": 7784,
+					"column": 28,
+					"label": ""
+				},
+				{
+					"line": 9161,
+					"column": 33,
+					"label": ""
+				},
+				{
+					"line": 9232,
+					"column": 28,
+					"label": ""
+				},
+				{
+					"line": 9839,
+					"column": 30,
+					"label": ""
+				},
+				{
+					"line": 12390,
+					"column": 23,
+					"label": ""
+				},
+				{
+					"line": 13906,
+					"column": 24,
+					"label": ""
+				},
+				{
+					"line": 14608,
+					"column": 36,
+					"label": ""
+				},
+				{
+					"line": 15904,
+					"column": 39,
+					"label": ""
+				},
+				{
+					"line": 15939,
+					"column": 26,
+					"label": ""
+				},
+				{
+					"line": 16638,
+					"column": 23,
+					"label": ""
+				},
+				{
+					"line": 17608,
+					"column": 39,
+					"label": ""
 				}
 			]
 		}
