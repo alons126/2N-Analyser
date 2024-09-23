@@ -21,7 +21,7 @@
 // AMaps constructors ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 //<editor-fold desc="AMaps generation constructor">
-AMaps::AMaps(const string &SampleName, const string &P_e_bin_profile, bool varying_P_nuc_bins, double beamE, const string &AMapsMode, const string &SavePath,
+AMaps::AMaps(const string &SampleName, const string &P_e_bin_profile, const string &P_nuc_bin_profile, double beamE, const string &AMapsMode, const string &SavePath,
              int nOfNucMomBins, int nOfElecMomBins, int hnsNumOfXBins, int hnsNumOfYBins, int hesNumOfXBins, int hesNumOfYBins)
 {
     AcceptanceMapsBC_OutFile0 = SavePath + "/" + "AcceptanceMapsBC.pdf";
@@ -93,7 +93,7 @@ AMaps::AMaps(const string &SampleName, const string &P_e_bin_profile, bool varyi
     }
     //</editor-fold>
 
-    SetBins(varying_P_nuc_bins, beamE);
+    SetBins(P_nuc_bin_profile, beamE);
     SetElectronBins(P_e_bin_profile, beamE);
 
     //<editor-fold desc="Acceptance maps BC">
@@ -450,13 +450,13 @@ AMaps::AMaps(const string &AcceptanceMapsDirectory, const string &SampleName,
 // SetBins functions ----------------------------------------------------------------------------------------------------------------------------------------------------
 
 //<editor-fold desc="SetBins function">
-void AMaps::SetBins(bool varying_P_nuc_bins, double beamE)
+void AMaps::SetBins(const string &P_nuc_bin_profile, double beamE)
 {
-    if (!varying_P_nuc_bins)
-    {
-        bool InvertedPrintOut = false;
-        bool RegPrintOut = false;
+    bool InvertedPrintOut = false;
+    bool RegPrintOut = true;
 
+    if (P_nuc_bin_profile == "equi_inverted_P_nuc")
+    {
         double InvertedPLowerLim = (1 / beamE);
         double InvertedPUpper = (1 / Nucleon_Momentum_Slice_Th);
         double Delta = (InvertedPUpper - InvertedPLowerLim) / NumberNucOfMomSlices;
@@ -468,7 +468,8 @@ void AMaps::SetBins(bool varying_P_nuc_bins, double beamE)
 
             if (InvertedPrintOut)
             {
-                cout << "\n\nInvertedBinLower = " << InvertedBinLower << "\n";
+                cout << "\n\nP_nuc_bin_profile = " << P_nuc_bin_profile << "\n";
+                cout << "InvertedBinLower = " << InvertedBinLower << "\n";
                 cout << "InvertedBinUpper = " << InvertedBinUpper << "\n";
                 cout << "i = " << i << "\n";
                 cout << "Delta = " << Delta << "\n\n";
@@ -502,7 +503,7 @@ void AMaps::SetBins(bool varying_P_nuc_bins, double beamE)
             exit(0);
         }
     }
-    else
+    else if (P_nuc_bin_profile == "varying_P_nuc_bins")
     {
         // TODO: separate by SampleName?
         bool RegPrintOut = false;
@@ -514,13 +515,52 @@ void AMaps::SetBins(bool varying_P_nuc_bins, double beamE)
         {
             for (int i = 0; i < NucleonMomSliceLimits.size(); i++)
             {
-                cout << "\n\nSliceLowerLimit = " << NucleonMomSliceLimits.at(i).at(0) << "\n";
+                cout << "\n\nP_nuc_bin_profile = " << P_nuc_bin_profile << "\n";
+                cout << "SliceLowerLimit = " << NucleonMomSliceLimits.at(i).at(0) << "\n";
                 cout << "SliceUpperLimit = " << NucleonMomSliceLimits.at(i).at(1) << "\n";
                 cout << "i = " << i << "\n";
             }
 
             exit(0);
         }
+    }
+    else if (P_nuc_bin_profile == "uniform_P_nuc_bins")
+    {
+        double PLowerLim = 0;
+        double PUpper = beamE;
+        double Delta = (PUpper - PLowerLim) / NumberNucOfMomSlices;
+
+        int Num_of_bins = 0; // For monitoring purposes only!
+
+        for (int i = 0; i < NumberNucOfMomSlices; i++)
+        {
+            double BinLower = PLowerLim + i * Delta;
+            double BinUpper = BinLower + Delta;
+
+            NucleonMomSliceLimits.push_back({BinLower, BinUpper});
+            ++Num_of_bins;
+
+            if (RegPrintOut)
+            {
+                cout << "\n\nP_nuc_bin_profile = " << P_nuc_bin_profile << "\n";
+                cout << "BinLower = " << BinLower << "\n";
+                cout << "BinUpper = " << BinUpper << "\n";
+                cout << "i = " << i << "\n";
+                cout << "Num_of_bins = " << Num_of_bins << "\n\n";
+                cout << "Delta = " << Delta << "\n\n";
+            }
+        }
+
+        if (RegPrintOut)
+        {
+            exit(0);
+        }
+    }
+    else
+    {
+        cout << "AMaps::SetBins: no valid P_nuc_bin_profile selected! Choose between:\n";
+        cout << "equi_inverted_P_nuc , varying_P_nuc_bins , uniform_P_nuc_bins\n";
+        cout << "Exiting...", exit(0);
     }
 }
 //</editor-fold>
@@ -529,7 +569,7 @@ void AMaps::SetBins(bool varying_P_nuc_bins, double beamE)
 void AMaps::SetElectronBins(const string &P_e_bin_profile, double beamE)
 {
     bool InvertedPrintOut = false;
-    bool RegPrintOut = true;
+    bool RegPrintOut = false;
 
     if (P_e_bin_profile == "reformat_e_bins")
     {
@@ -574,7 +614,8 @@ void AMaps::SetElectronBins(const string &P_e_bin_profile, double beamE)
 
             if (InvertedPrintOut)
             {
-                cout << "\n\nInvBinLower = " << InvBinLower << "\n";
+                cout << "\n\nP_e_bin_profile = " << P_e_bin_profile << "\n";
+                cout << "InvBinLower = " << InvBinLower << "\n";
                 cout << "InvBinUpper = " << InvBinUpper << "\n";
                 cout << "iter = " << iter << "\n";
                 cout << "delta = " << delta << "\n";
@@ -611,7 +652,8 @@ void AMaps::SetElectronBins(const string &P_e_bin_profile, double beamE)
 
             if (RegPrintOut)
             {
-                cout << "\n\nBinLower = " << BinLower << "\n";
+                cout << "\n\nP_e_bin_profile = " << P_e_bin_profile << "\n";
+                cout << "BinLower = " << BinLower << "\n";
                 cout << "BinUpper = " << BinUpper << "\n";
                 cout << "i = " << i << "\n";
             }
@@ -641,7 +683,8 @@ void AMaps::SetElectronBins(const string &P_e_bin_profile, double beamE)
         {
             for (int i = 0; i < NumOfElectronMomBins; i++)
             {
-                cout << "\n\nElectronMomSliceLimits.at(" << i << ").at(" << 0 << ") = " << ElectronMomSliceLimits.at(i).at(0) << "\n";
+                cout << "\n\nP_e_bin_profile = " << P_e_bin_profile << "\n";
+                cout << "ElectronMomSliceLimits.at(" << i << ").at(" << 0 << ") = " << ElectronMomSliceLimits.at(i).at(0) << "\n";
                 cout << "ElectronMomSliceLimits.at(" << i << ").at(" << 1 << ") = " << ElectronMomSliceLimits.at(i).at(1) << "\n";
             }
         }
@@ -669,7 +712,8 @@ void AMaps::SetElectronBins(const string &P_e_bin_profile, double beamE)
 
             if (RegPrintOut)
             {
-                cout << "\n\nBinLower = " << BinLower << "\n";
+                cout << "\n\nP_e_bin_profile = " << P_e_bin_profile << "\n";
+                cout << "BinLower = " << BinLower << "\n";
                 cout << "BinUpper = " << BinUpper << "\n";
                 cout << "i = " << i << "\n";
                 cout << "Num_of_bins = " << Num_of_bins << "\n\n";
@@ -695,7 +739,8 @@ void AMaps::SetElectronBins(const string &P_e_bin_profile, double beamE)
 
             if (InvertedPrintOut)
             {
-                cout << "\n\nInvertedBinLower = " << InvertedBinLower << "\n";
+                cout << "\n\nP_e_bin_profile = " << P_e_bin_profile << "\n";
+                cout << "InvertedBinLower = " << InvertedBinLower << "\n";
                 cout << "InvertedBinUpper = " << InvertedBinUpper << "\n";
                 cout << "i = " << i << "\n";
                 cout << "Delta = " << Delta << "\n\n";
@@ -731,7 +776,8 @@ void AMaps::SetElectronBins(const string &P_e_bin_profile, double beamE)
                 double BinLower = ElectronMomSliceLimits.at(i).at(0);
                 double BinUpper = ElectronMomSliceLimits.at(i).at(1);
 
-                cout << "\nBinLower = " << BinLower << "\n";
+                cout << "\nP_e_bin_profile = " << P_e_bin_profile << "\n";
+                cout << "BinLower = " << BinLower << "\n";
                 cout << "BinUpper = " << BinUpper << "\n";
                 cout << "i = " << i << "\n\n";
             }

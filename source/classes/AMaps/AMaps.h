@@ -187,7 +187,7 @@ public:
     // constructor ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // AMaps generation constructor:
-    AMaps(const string &SampleName, const string &P_e_bin_profile, bool varying_P_nuc_bins, double beamE, const string &AMapsMode = "",
+    AMaps(const string &SampleName, const string &P_e_bin_profile, const string &P_nuc_bin_profile, double beamE, const string &AMapsMode = "",
           const string &SavePath = "./", int nOfNucMomBins = 4, int nOfElecMomBins = 4, int hnsNumOfXBins = 75, int hnsNumOfYBins = 75, int hesNumOfXBins = 100,
           int hesNumOfYBins = 100);
 
@@ -197,7 +197,7 @@ public:
 
     // SetBins functions ----------------------------------------------------------------------------------------------------------------------------------------------------
 
-    void SetBins(bool varying_P_nuc_bins, double beamE);
+    void SetBins(const string &P_nuc_bin_profile, double beamE);
 
     void SetElectronBins(const string &P_e_bin_profile, double beamE);
 
