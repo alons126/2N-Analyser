@@ -21,7 +21,7 @@
 // AMaps constructors ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 //<editor-fold desc="AMaps generation constructor">
-AMaps::AMaps(const string &SampleName, bool reformat_e_bins, bool varying_P_e_bins, bool uniform_P_e_bins, bool varying_P_nuc_bins, double beamE, const string &AMapsMode, const string &SavePath,
+AMaps::AMaps(const string &SampleName, const string &P_e_bin_profile, bool varying_P_nuc_bins, double beamE, const string &AMapsMode, const string &SavePath,
              int nOfNucMomBins, int nOfElecMomBins, int hnsNumOfXBins, int hnsNumOfYBins, int hesNumOfXBins, int hesNumOfYBins)
 {
     AcceptanceMapsBC_OutFile0 = SavePath + "/" + "AcceptanceMapsBC.pdf";
@@ -94,7 +94,7 @@ AMaps::AMaps(const string &SampleName, bool reformat_e_bins, bool varying_P_e_bi
     //</editor-fold>
 
     SetBins(varying_P_nuc_bins, beamE);
-    SetElectronBins(reformat_e_bins, varying_P_e_bins, uniform_P_e_bins, beamE);
+    SetElectronBins(P_e_bin_profile, beamE);
 
     //<editor-fold desc="Acceptance maps BC">
     string hStatsTitleAMapBCElectron = "Electron_AMap_BC", hTitleAMapBCElectron = "Electron AMap BC", hSaveNameAMapBCElectron = "01_e_AMap_BC";
@@ -526,12 +526,12 @@ void AMaps::SetBins(bool varying_P_nuc_bins, double beamE)
 //</editor-fold>
 
 //<editor-fold desc="SetElectronBins function">
-void AMaps::SetElectronBins(bool reformat_e_bins, bool varying_P_e_bins, bool uniform_P_e_bins, double beamE)
+void AMaps::SetElectronBins(const string &P_e_bin_profile, double beamE)
 {
     bool InvertedPrintOut = false;
     bool RegPrintOut = true;
 
-    if (reformat_e_bins)
+    if (P_e_bin_profile == "reformat_e_bins")
     {
         double InvertedPLowerLim = (1 / beamE);
         double InvertedPUpperLim = (1 / Nucleon_Momentum_Slice_Th);
@@ -624,7 +624,7 @@ void AMaps::SetElectronBins(bool reformat_e_bins, bool varying_P_e_bins, bool un
             exit(0);
         }
     }
-    else if (varying_P_e_bins)
+    else if (P_e_bin_profile == "varying_P_e_bins")
     {
         if (findSubstring(SName, "C12_simulation_6GeV_T5"))
         { // Old sample
@@ -651,7 +651,7 @@ void AMaps::SetElectronBins(bool reformat_e_bins, bool varying_P_e_bins, bool un
             exit(0);
         }
     }
-    else if (uniform_P_e_bins)
+    else if (P_e_bin_profile == "uniform_P_e_bins")
     {
         double PLowerLim = 0;
         double PUpper = beamE;
@@ -682,7 +682,7 @@ void AMaps::SetElectronBins(bool reformat_e_bins, bool varying_P_e_bins, bool un
             exit(0);
         }
     }
-    else
+    else if (P_e_bin_profile == "equi_inverted_P_e")
     {
         double InvertedPLowerLim = (1 / beamE);
         double InvertedPUpper = (1 / Electron_Momentum_Slice_Th);
@@ -742,158 +742,14 @@ void AMaps::SetElectronBins(bool reformat_e_bins, bool varying_P_e_bins, bool un
             exit(0);
         }
     }
+    else
+    {
+        cout << "AMaps::SetElectronBins: no valid P_e_bin_profile selected! Choose between:\n";
+        cout << "reformat_e_bins , varying_P_e_bins , uniform_P_e_bins, equi_inverted_P_e\n";
+        cout << "Exiting...", exit(0);
+    }
 }
 //</editor-fold>
-
-////<editor-fold desc="SetElectronBins function (original)">
-// void AMaps::SetElectronBins(bool reformat_e_bins, bool varying_P_e_bins, double beamE) {
-//     bool InvertedPrintOut = false;
-//     bool RegPrintOut = false;
-//
-//     if (reformat_e_bins) {
-//         double InvertedPLowerLim = (1 / beamE);
-//         double InvertedPUpperLim = (1 / Nucleon_Momentum_Slice_Th);
-//         double p2 = 1.57819;
-//         double Delta = (InvertedPUpperLim - InvertedPLowerLim) / NumberNucOfMomSlices;
-//         double delta = (InvertedPUpperLim - (1 / p2));
-//         double Ratio = (InvertedPUpperLim - InvertedPLowerLim) / delta;
-//
-//         int NumOfElectronMomBins;
-//
-//         bool SliceAndDice = true;
-//         int iter = 0;
-//
-//         while (SliceAndDice) {
-//             double InvBinLower;
-//             double InvBinUpper;
-//             double deltaLoop = delta;
-//
-//             if (iter == 0) {
-//                 InvBinUpper = InvertedPUpperLim;
-//                 InvBinLower = InvBinUpper - deltaLoop;
-//             } else {
-//                 InvBinUpper = InvBinLower;
-//
-//                 deltaLoop = delta / 12;
-//
-//                 if (InvBinUpper - deltaLoop > 0) {
-//                     InvBinLower = InvBinUpper - deltaLoop;
-//                 } else {
-//                     InvBinLower = InvertedPLowerLim;
-//                 }
-//             }
-//
-//             if (InvertedPrintOut) {
-//                 cout << "\n\nInvBinLower = " << InvBinLower << "\n";
-//                 cout << "InvBinUpper = " << InvBinUpper << "\n";
-//                 cout << "iter = " << iter << "\n";
-//                 cout << "delta = " << delta << "\n";
-//                 cout << "deltaLoop = " << deltaLoop << "\n\n";
-//             }
-//
-////            InvertedElectronMomSliceLimits.push_back({InvBinLower, InvBinUpper});
-//
-////            if (InvBinUpper >= InvertedPLowerLim) {
-//            if (InvBinLower >= InvertedPLowerLim) {
-////            if (InvBinUpper - deltaLoop >= InvertedPLowerLim) {
-//                InvertedElectronMomSliceLimits.push_back({InvBinLower, InvBinUpper});
-//                ++iter;
-//            } else {
-//                SliceAndDice = false;
-//            }
-//        }
-//
-//        NumOfElectronMomBins = InvertedElectronMomSliceLimits.size();
-//
-//        if (InvertedPrintOut && !RegPrintOut) { exit(0); }
-//
-//        if (RegPrintOut) { cout << "\n\n---------------------------------------------------\n"; }
-//
-//        for (int i = 0; i < NumOfElectronMomBins; i++) {
-////        for (int i = (NumOfElectronMomBins - 1); i >= 0; i--) {
-////        for (int i = (NumberNucOfMomSlices - 2); i >= 0; i--) {
-////        for (int i = (NumOfElectronMomBins - 1); i >= 0; i--) {
-//            double BinLower = 1 / InvertedElectronMomSliceLimits.at(i).at(1);
-//            double BinUpper = 1 / InvertedElectronMomSliceLimits.at(i).at(0);
-//
-//            if (RegPrintOut) {
-//                cout << "\n\nBinLower = " << BinLower << "\n";
-//                cout << "BinUpper = " << BinUpper << "\n";
-//                cout << "i = " << i << "\n";
-//            }
-//
-//            ElectronMomSliceLimits.push_back({BinLower, BinUpper});
-//        }
-//
-//        if (RegPrintOut) { exit(0); }
-//    } else if (varying_P_e_bins) {
-//        if (findSubstring(SName, "C12_simulation_6GeV_T5")) { // Old sample
-//            ElectronMomSliceLimits = {{0.4, 1.6},
-//                                     {1.6, 2.2},
-//                                     {2.2, 2.8},
-//                                     {2.8, 4},
-//                                     {4,   5},
-//                                     {5,   6}};
-//        } else { // New sample (24M)
-//            ElectronMomSliceLimits = {{0.4, 0.6},
-//                                     {0.6, 0.8},
-//                                     {0.8, 1.2},
-//                                     {1.2, 1.6},
-//                                     {1.6, 2.2},
-//                                     {2.2, 2.8},
-//                                     {2.8, 4},
-//                                     {4,   5},
-//                                     {5,   6}};
-//        }
-//
-//        int NumOfElectronMomBins = ElectronMomSliceLimits.size();
-//
-//        if (RegPrintOut) {
-//            for (int i = 0; i < NumOfElectronMomBins; i++) {
-//                cout << "\n\nElectronMomSliceLimits.at(" << i << ").at(" << 0 << ") = " << ElectronMomSliceLimits.at(i).at(0) << "\n";
-//                cout << "ElectronMomSliceLimits.at(" << i << ").at(" << 1 << ") = " << ElectronMomSliceLimits.at(i).at(1) << "\n";
-//            }
-//        }
-//
-//        if (RegPrintOut) { exit(0); }
-//    } else {
-//        double InvertedPLowerLim = (1 / beamE);
-//        double InvertedPUpperLim = (1 / Nucleon_Momentum_Slice_Th);
-//        double Delta = (InvertedPUpperLim - InvertedPLowerLim) / NumberNucOfMomSlices;
-//
-//        for (int i = 0; i < NumberNucOfMomSlices; i++) {
-//            double InvertedBinLower = InvertedPLowerLim + i * Delta;
-//            double InvertedBinUpper = InvertedBinLower + Delta;
-//
-//            if (InvertedPrintOut) {
-//                cout << "\n\nInvertedBinLower = " << InvertedBinLower << "\n";
-//                cout << "InvertedBinUpper = " << InvertedBinUpper << "\n";
-//                cout << "i = " << i << "\n";
-//                cout << "Delta = " << Delta << "\n\n";
-//            }
-//
-//            InvertedElectronMomSliceLimits.push_back({InvertedBinLower, InvertedBinUpper});
-//        }
-//
-//        if (InvertedPrintOut && !RegPrintOut) { exit(0); }
-//
-//        for (int i = (NumberNucOfMomSlices - 1); i >= 0; i--) {
-//            double BinLower = 1 / InvertedElectronMomSliceLimits.at(i).at(1);
-//            double BinUpper = 1 / InvertedElectronMomSliceLimits.at(i).at(0);
-//
-//            if (RegPrintOut) {
-//                cout << "\n\nBinLower = " << BinLower << "\n";
-//                cout << "BinUpper = " << BinUpper << "\n";
-//                cout << "i = " << i << "\n";
-//            }
-//
-//            ElectronMomSliceLimits.push_back({BinLower, BinUpper});
-//        }
-//
-//        if (RegPrintOut) { exit(0); }
-//    }
-//}
-////</editor-fold>
 
 //<editor-fold desc="SetBins function (old)">
 void AMaps::SetBins(double beamE, double nOfMomBins)
