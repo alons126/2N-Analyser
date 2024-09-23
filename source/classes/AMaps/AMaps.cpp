@@ -529,7 +529,7 @@ void AMaps::SetBins(bool varying_P_nuc_bins, double beamE)
 void AMaps::SetElectronBins(bool reformat_e_bins, bool varying_P_e_bins, bool uniform_P_e_bins, double beamE)
 {
     bool InvertedPrintOut = false;
-    bool RegPrintOut = false;
+    bool RegPrintOut = true;
 
     if (reformat_e_bins)
     {
@@ -662,7 +662,7 @@ void AMaps::SetElectronBins(bool reformat_e_bins, bool varying_P_e_bins, bool un
             double BinLower = PLowerLim + i * Delta;
             double BinUpper = BinLower + Delta;
 
-            if (PrintOut)
+            if (RegPrintOut)
             {
                 cout << "\n\nBinLower = " << BinLower << "\n";
                 cout << "BinUpper = " << BinUpper << "\n";
