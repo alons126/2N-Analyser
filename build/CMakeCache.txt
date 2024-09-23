@@ -467,7 +467,7 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Vdt
-FIND_PACKAGE_MESSAGE_DETAILS_Vdt:INTERNAL=[/opt/homebrew/Cellar/root/6.32.04/include/root][/opt/homebrew/Cellar/root/6.32.04/lib/root/libvdt.dylib][v0.4()]
+FIND_PACKAGE_MESSAGE_DETAILS_Vdt:INTERNAL=[/opt/homebrew/Cellar/root/6.32.04/include/root][/opt/homebrew/Cellar/root/6.32.04/lib/root/libvdt.dylib][v0.3()]
 //Details about finding nlohmann_json
 FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[/opt/homebrew/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake][v3.11.3(3.11.3)]
 //ADVANCED property for variable: ROOT_Core_LIBRARY

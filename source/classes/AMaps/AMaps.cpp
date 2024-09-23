@@ -21,7 +21,7 @@
 // AMaps constructors ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 //<editor-fold desc="AMaps generation constructor">
-AMaps::AMaps(const string &SampleName, bool reformat_e_bins, bool varying_P_e_bins, bool varying_P_nuc_bins, double beamE, const string &AMapsMode, const string &SavePath,
+AMaps::AMaps(const string &SampleName, bool reformat_e_bins, bool varying_P_e_bins, bool uniform_P_e_bins, bool varying_P_nuc_bins, double beamE, const string &AMapsMode, const string &SavePath,
              int nOfNucMomBins, int nOfElecMomBins, int hnsNumOfXBins, int hnsNumOfYBins, int hesNumOfXBins, int hesNumOfYBins)
 {
     AcceptanceMapsBC_OutFile0 = SavePath + "/" + "AcceptanceMapsBC.pdf";
@@ -94,7 +94,7 @@ AMaps::AMaps(const string &SampleName, bool reformat_e_bins, bool varying_P_e_bi
     //</editor-fold>
 
     SetBins(varying_P_nuc_bins, beamE);
-    SetElectronBins(reformat_e_bins, varying_P_e_bins, beamE);
+    SetElectronBins(reformat_e_bins, varying_P_e_bins, uniform_P_e_bins, beamE);
 
     //<editor-fold desc="Acceptance maps BC">
     string hStatsTitleAMapBCElectron = "Electron_AMap_BC", hTitleAMapBCElectron = "Electron AMap BC", hSaveNameAMapBCElectron = "01_e_AMap_BC";
@@ -526,7 +526,7 @@ void AMaps::SetBins(bool varying_P_nuc_bins, double beamE)
 //</editor-fold>
 
 //<editor-fold desc="SetElectronBins function">
-void AMaps::SetElectronBins(bool reformat_e_bins, bool varying_P_e_bins, double beamE)
+void AMaps::SetElectronBins(bool reformat_e_bins, bool varying_P_e_bins, bool uniform_P_e_bins, double beamE)
 {
     bool InvertedPrintOut = false;
     bool RegPrintOut = false;
@@ -644,6 +644,33 @@ void AMaps::SetElectronBins(bool reformat_e_bins, bool varying_P_e_bins, double 
                 cout << "\n\nElectronMomSliceLimits.at(" << i << ").at(" << 0 << ") = " << ElectronMomSliceLimits.at(i).at(0) << "\n";
                 cout << "ElectronMomSliceLimits.at(" << i << ").at(" << 1 << ") = " << ElectronMomSliceLimits.at(i).at(1) << "\n";
             }
+        }
+
+        if (RegPrintOut)
+        {
+            exit(0);
+        }
+    }
+    else if (uniform_P_e_bins)
+    {
+        double PLowerLim = 0;
+        double PUpper = beamE;
+        double Delta = (PUpper - PLowerLim) / NumberElecOfMomSlices;
+
+        for (int i = 0; i < NumberElecOfMomSlices; i++)
+        {
+            double BinLower = PLowerLim + i * Delta;
+            double BinUpper = BinLower + Delta;
+
+            if (PrintOut)
+            {
+                cout << "\n\nBinLower = " << BinLower << "\n";
+                cout << "BinUpper = " << BinUpper << "\n";
+                cout << "i = " << i << "\n";
+                cout << "Delta = " << Delta << "\n\n";
+            }
+
+            ElectronMomSliceLimits.push_back({BinLower, BinUpper});
         }
 
         if (RegPrintOut)

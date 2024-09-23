@@ -127,7 +127,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     // TODO: UPDATE AMaps loading constructor electron histogram's number of bins
     bool AMaps_calc_with_one_reco_electron = true;
     bool reformat_e_bins = false;
-    bool varying_P_e_bins = true;
+    bool varying_P_e_bins = false;
+    bool uniform_P_e_bins = true;
     bool varying_P_nuc_bins = false;
     bool Electron_single_slice_test = false; // keep as false for normal runs!
     bool Nucleon_single_slice_test = false;  // keep as false for normal runs!
@@ -1097,11 +1098,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
     if (reformat_e_bins)
     {
-        varying_P_e_bins = false;
+        varying_P_e_bins = varying_P_e_bins = false;
     }
 
     /* Set Bins by case */
-    int NumberNucOfMomSlices, NumberElecOfMomSlices, HistElectronSliceNumOfXBins = numTH2Dbins_Electron_Ang_Plots, HistNucSliceNumOfXBins = numTH2Dbins_Nucleon_Ang_Plots;
+    int NumberNucOfMomSlices, NumberElecOfMomSlices, HistElectronSliceNumOfXBins = 200, HistNucSliceNumOfXBins = 200;
 
     //<editor-fold desc="Determine NumberNucOfMomSlices by sample">
     if (!findSubstring(SampleName, "Uniform"))
@@ -1125,9 +1126,9 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
     if (Generate_AMaps)
     {
-        aMaps = AMaps(SampleName, reformat_e_bins, varying_P_e_bins, varying_P_nuc_bins, beamE, "AMaps", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"],
+        aMaps = AMaps(SampleName, reformat_e_bins, varying_P_e_bins, uniform_P_e_bins, varying_P_nuc_bins, beamE, "AMaps", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"],
                       NumberNucOfMomSlices, NumberElecOfMomSlices, HistNucSliceNumOfXBins, HistNucSliceNumOfXBins, HistElectronSliceNumOfXBins, HistElectronSliceNumOfXBins);
-        wMaps = AMaps(SampleName, reformat_e_bins, varying_P_e_bins, varying_P_nuc_bins, beamE, "WMaps", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"],
+        wMaps = AMaps(SampleName, reformat_e_bins, varying_P_e_bins, uniform_P_e_bins, varying_P_nuc_bins, beamE, "WMaps", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"],
                       NumberNucOfMomSlices, NumberElecOfMomSlices, HistNucSliceNumOfXBins, HistNucSliceNumOfXBins, HistElectronSliceNumOfXBins, HistElectronSliceNumOfXBins);
     }
     else
@@ -25219,6 +25220,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     myLogFile << "AMaps_calc_with_one_reco_electron = " << BoolToString(AMaps_calc_with_one_reco_electron) << "\n";
     myLogFile << "reformat_e_bins = " << BoolToString(reformat_e_bins) << "\n";
     myLogFile << "varying_P_e_bins = " << BoolToString(varying_P_e_bins) << "\n";
+    myLogFile << "uniform_P_e_bins = " << BoolToString(uniform_P_e_bins) << "\n";
     myLogFile << "varying_P_nuc_bins = " << BoolToString(varying_P_nuc_bins) << "\n";
     myLogFile << "Electron_single_slice_test = " << BoolToString(Electron_single_slice_test) << "\n";
     myLogFile << "Nucleon_single_slice_test = " << BoolToString(Nucleon_single_slice_test) << "\n";

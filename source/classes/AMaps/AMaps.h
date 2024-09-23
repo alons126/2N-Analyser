@@ -187,7 +187,7 @@ public:
     // constructor ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // AMaps generation constructor:
-    AMaps(const string &SampleName, bool reformat_e_bins, bool varying_P_e_bins, bool varying_P_nuc_bins, double beamE, const string &AMapsMode = "",
+    AMaps(const string &SampleName, bool reformat_e_bins, bool varying_P_e_bins, bool uniform_P_e_bins, bool varying_P_nuc_bins, double beamE, const string &AMapsMode = "",
           const string &SavePath = "./", int nOfNucMomBins = 4, int nOfElecMomBins = 4, int hnsNumOfXBins = 75, int hnsNumOfYBins = 75, int hesNumOfXBins = 100,
           int hesNumOfYBins = 100);
 
@@ -199,7 +199,7 @@ public:
 
     void SetBins(bool varying_P_nuc_bins, double beamE);
 
-    void SetElectronBins(bool reformat_e_bins, bool varying_P_e_bins, double beamE);
+    void SetElectronBins(bool reformat_e_bins, bool varying_P_e_bins, bool uniform_P_e_bins, double beamE);
 
     void SetBins(double beamE, double NumberNucOfMomSlices); // old
 
