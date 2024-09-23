@@ -657,20 +657,24 @@ void AMaps::SetElectronBins(bool reformat_e_bins, bool varying_P_e_bins, bool un
         double PUpper = beamE;
         double Delta = (PUpper - PLowerLim) / NumberElecOfMomSlices;
 
+        int Num_of_bins = 0; // For monitoring purposes only!
+
         for (int i = 0; i < NumberElecOfMomSlices; i++)
         {
             double BinLower = PLowerLim + i * Delta;
             double BinUpper = BinLower + Delta;
+
+            ElectronMomSliceLimits.push_back({BinLower, BinUpper});
+            ++Num_of_bins;
 
             if (RegPrintOut)
             {
                 cout << "\n\nBinLower = " << BinLower << "\n";
                 cout << "BinUpper = " << BinUpper << "\n";
                 cout << "i = " << i << "\n";
+                cout << "Num_of_bins = " << Num_of_bins << "\n\n";
                 cout << "Delta = " << Delta << "\n\n";
             }
-
-            ElectronMomSliceLimits.push_back({BinLower, BinUpper});
         }
 
         if (RegPrintOut)

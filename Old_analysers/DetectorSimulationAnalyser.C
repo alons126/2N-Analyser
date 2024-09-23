@@ -126,6 +126,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     bool Generate_AMaps = true; // Generate acceptance maps
     // TODO: UPDATE AMaps loading constructor electron histogram's number of bins
     bool AMaps_calc_with_one_reco_electron = true;
+    const string P_e_bin_profile = "uniform_P_e_bins"; // {reformat_e_bins , varying_P_e_bins , uniform_P_e_bins}
     bool reformat_e_bins = false;
     bool varying_P_e_bins = false;
     bool uniform_P_e_bins = true;
