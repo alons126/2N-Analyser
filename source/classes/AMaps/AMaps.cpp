@@ -453,7 +453,7 @@ AMaps::AMaps(const string &AcceptanceMapsDirectory, const string &SampleName,
 void AMaps::SetBins(const string &P_nuc_bin_profile, double beamE)
 {
     bool InvertedPrintOut = false;
-    bool RegPrintOut = true;
+    bool RegPrintOut = false;
 
     if (P_nuc_bin_profile == "equi_inverted_P_nuc")
     {
@@ -546,7 +546,7 @@ void AMaps::SetBins(const string &P_nuc_bin_profile, double beamE)
                 cout << "BinLower = " << BinLower << "\n";
                 cout << "BinUpper = " << BinUpper << "\n";
                 cout << "i = " << i << "\n";
-                cout << "Num_of_bins = " << Num_of_bins << "\n\n";
+                cout << "Num_of_bins = " << Num_of_bins << "\n";
                 cout << "Delta = " << Delta << "\n\n";
             }
         }
@@ -716,7 +716,7 @@ void AMaps::SetElectronBins(const string &P_e_bin_profile, double beamE)
                 cout << "BinLower = " << BinLower << "\n";
                 cout << "BinUpper = " << BinUpper << "\n";
                 cout << "i = " << i << "\n";
-                cout << "Num_of_bins = " << Num_of_bins << "\n\n";
+                cout << "Num_of_bins = " << Num_of_bins << "\n";
                 cout << "Delta = " << Delta << "\n\n";
             }
         }
