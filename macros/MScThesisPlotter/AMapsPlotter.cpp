@@ -71,14 +71,32 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
 
     string SaveName;
 
-    string TL_root_file_prefix = "01_AMap_TL_-_C12x4_simulation_G18_Q204_6GeV.root";
-    string Reco_root_file_prefix = "02_AMap_Reco_-_C12x4_simulation_G18_Q204_6GeV.root";
-    string Ratio_root_file_prefix = "03_AMap_Ratio_-_C12x4_simulation_G18_Q204_6GeV.root";
-    string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_C12x4_simulation_G18_Q204_6GeV.root";
-    string Finalized_AMaps_root_file_prefix = "05_AMaps_-_C12x4_simulation_G18_Q204_6GeV.root";
+    // string TL_root_file_prefix = "01_AMap_TL_-_Uniform_en_sample_2070MeV.root";
+    // string Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_en_sample_2070MeV.root";
+    // string Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_en_sample_2070MeV.root";
+    // string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_en_sample_2070MeV.root";
+    // string Finalized_AMaps_root_file_prefix = "05_AMaps_-_Uniform_en_sample_2070MeV.root";
 
-    TCanvas *Sep_canv = new TCanvas("Sep_canv", "Sep_canv", 1000 * 1.5 * 0.6, 750 * 1.5 * 0.6);
-//    TCanvas *Sep_canv = new TCanvas("Sep_canv", "Sep_canv", 1000 * 1.5, 750 * 1.5);
+    string TL_root_file_prefix = "01_AMap_TL_-_Uniform_ep_sample_2070MeV.root";
+    string Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_ep_sample_2070MeV.root";
+    string Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_ep_sample_2070MeV.root";
+    string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_ep_sample_2070MeV.root";
+    string Finalized_AMaps_root_file_prefix = "05_AMaps_-_Uniform_ep_sample_2070MeV.root";
+
+    // string TL_root_file_prefix = "01_AMap_TL_-_Uniform_1e_sample_2070MeV.root";
+    // string Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_1e_sample_2070MeV.root";
+    // string Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_1e_sample_2070MeV.root";
+    // string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_1e_sample_2070MeV.root";
+    // string Finalized_AMaps_root_file_prefix = "05_AMaps_-_Uniform_1e_sample_2070MeV.root";
+
+    // string TL_root_file_prefix = "01_AMap_TL_-_C12x4_simulation_G18_Q204_6GeV.root";
+    // string Reco_root_file_prefix = "02_AMap_Reco_-_C12x4_simulation_G18_Q204_6GeV.root";
+    // string Ratio_root_file_prefix = "03_AMap_Ratio_-_C12x4_simulation_G18_Q204_6GeV.root";
+    // string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_C12x4_simulation_G18_Q204_6GeV.root";
+    // string Finalized_AMaps_root_file_prefix = "05_AMaps_-_C12x4_simulation_G18_Q204_6GeV.root";
+
+    // TCanvas *Sep_canv = new TCanvas("Sep_canv", "Sep_canv", 1000 * 1.5 * 0.6, 750 * 1.5 * 0.6);
+   TCanvas *Sep_canv = new TCanvas("Sep_canv", "Sep_canv", 1000 * 1.5, 750 * 1.5);
     Sep_canv->cd()->SetGrid();
     Sep_canv->cd()->SetBottomMargin(0.14), Sep_canv->cd()->SetLeftMargin(0.18), Sep_canv->cd()->SetRightMargin(0.12);
 
@@ -92,10 +110,12 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
         }
 
 //    // Create a canvas to plot histograms in a 3x3 grid
-        TCanvas *canvas = new TCanvas("c", "c", 1000 * 6 * 1.5 * 0.6, 750 * 11 * 1.5 * 0.6);
-//        TCanvas *canvas = new TCanvas("c", "c", 1000 * 6 * 1.5, 750 * 11 * 1.5);
+        // TCanvas *canvas = new TCanvas("c", "c", 1000 * 6 * 1.5 * 0.6, 750 * 11 * 1.5 * 0.6);
+    //    TCanvas *canvas = new TCanvas("c", "c", 1000 * 6 * 1.5, 750 * 11 * 1.5);
+       TCanvas *canvas = new TCanvas("c", "c", 1000 * 4 * 1.5*2, 750 * 3 * 1.5*2);
 
-        canvas->Divide(6, 11); // Divide the canvas into a 4x16 grid
+        canvas->Divide(6, 5); // Divide the canvas into a 4x16 grid
+        // canvas->Divide(6, 11); // Divide the canvas into a 4x16 grid
 
         int canvasIndex = 1;
         int canvasIndexMax;
@@ -106,11 +126,16 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
             canvasIndex = 0;
         }
 
-        if (numHistograms <= 11 * 6) {
+        if (numHistograms <= 6 * 5) {
             canvasIndexMax = numHistograms;
         } else {
-            canvasIndexMax = 11 * 6;
+            canvasIndexMax = 6 * 5;
         }
+        // if (numHistograms <= 11 * 6) {
+        //     canvasIndexMax = numHistograms;
+        // } else {
+        //     canvasIndexMax = 11 * 6;
+        // }
 
         int numOfFigures = 1;
 
@@ -340,10 +365,12 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
         }
 
 //    // Create a canvas to plot histograms in a 3x3 grid
-        TCanvas *canvas = new TCanvas("c", "c", 1000 * 3 * 1.5 * 0.6, 750 * 3 * 1.5 * 0.6);
-//        TCanvas *canvas = new TCanvas("c", "c", 1000 * 3 * 1.5, 750 * 3 * 1.5);
+        // TCanvas *canvas = new TCanvas("c", "c", 1000 * 3 * 1.5 * 0.6, 750 * 3 * 1.5 * 0.6);
+    //    TCanvas *canvas = new TCanvas("c", "c", 1000 * 3 * 1.5, 750 * 3 * 1.5);
+       TCanvas *canvas = new TCanvas("c", "c", 1000 * 5 * 1.5 * 2, 750 * 5 * 1.5 * 2);
 
-        canvas->Divide(3, 3); // Divide the canvas into a 3x3 grid
+        canvas->Divide(5, 5); // Divide the canvas into a 3x3 grid
+        // canvas->Divide(3, 3); // Divide the canvas into a 3x3 grid
 
         int canvasIndex = 1;
         int canvasIndexMax;
@@ -354,11 +381,16 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
             canvasIndex = 0;
         }
 
-        if (numHistograms <= 9) {
+        if (numHistograms <= 5 * 5) {
             canvasIndexMax = numHistograms;
         } else {
-            canvasIndexMax = 9;
+            canvasIndexMax = 5 * 5;
         }
+        // if (numHistograms <= 9) {
+        //     canvasIndexMax = numHistograms;
+        // } else {
+        //     canvasIndexMax = 9;
+        // }
 
         int numOfFigures = 1;
 
@@ -625,8 +657,8 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
         }
 
         cout << "\nplotting into canvas...\n";
-        TCanvas *canvas = new TCanvas("c", "c", 1000 * 2 * 0.6, 750 * 2 * 0.6);
-//        TCanvas *canvas = new TCanvas("c", "c", 1000 * 2, 750 * 2);
+        // TCanvas *canvas = new TCanvas("c", "c", 1000 * 2 * 0.6, 750 * 2 * 0.6);
+       TCanvas *canvas = new TCanvas("c", "c", 1000 * 2, 750 * 2);
         canvas->Divide(2, 2); // Divide the canvas into a 3x3 grid
 
         canvas->cd(1), canvas->cd(1)->SetGrid();
@@ -1003,24 +1035,47 @@ void AMapsPlotter(const string &InputPath = "", const bool &Sep_plots = false, c
         PlotsPath = PlotsPath_prefix;
     }
 
-    string TL_root_file_prefix = "01_AMap_TL_-_C12x4_simulation_G18_Q204_6GeV.root";
-    string Reco_root_file_prefix = "02_AMap_Reco_-_C12x4_simulation_G18_Q204_6GeV.root";
-    string Ratio_root_file_prefix = "03_AMap_Ratio_-_C12x4_simulation_G18_Q204_6GeV.root";
-    string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_C12x4_simulation_G18_Q204_6GeV.root";
+    // string TL_root_file_prefix = "01_AMap_TL_-_Uniform_en_sample_2070MeV.root";
+    // string Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_en_sample_2070MeV.root";
+    // string Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_en_sample_2070MeV.root";
+    // string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_en_sample_2070MeV.root";
 
-    plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "e", 61, Sep_plots, OutputPath);
-    plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "e", 61, Sep_plots, OutputPath);
-    plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "e", 61, Sep_plots, OutputPath);
-    plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "e", 61, Sep_plots, OutputPath);
-//    plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "e", 9,Sep_plots, OutputPath);
-//    plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "e", 9,Sep_plots, OutputPath);
-//    plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "e", 9,Sep_plots, OutputPath);
-//    plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "e", 9,Sep_plots, OutputPath);
+    string TL_root_file_prefix = "01_AMap_TL_-_Uniform_ep_sample_2070MeV.root";
+    string Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_ep_sample_2070MeV.root";
+    string Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_ep_sample_2070MeV.root";
+    string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_ep_sample_2070MeV.root";
 
-    plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "p", 7, Sep_plots, OutputPath);
-    plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "p", 7, Sep_plots, OutputPath);
-    plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "p", 7, Sep_plots, OutputPath);
-    plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "p", 7, Sep_plots, OutputPath);
+    // string TL_root_file_prefix = "01_AMap_TL_-_Uniform_1e_sample_2070MeV.root";
+    // string Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_1e_sample_2070MeV.root";
+    // string Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_1e_sample_2070MeV.root";
+    // string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_1e_sample_2070MeV.root";
+
+    // string TL_root_file_prefix = "01_AMap_TL_-_C12x4_simulation_G18_Q204_6GeV.root";
+    // string Reco_root_file_prefix = "02_AMap_Reco_-_C12x4_simulation_G18_Q204_6GeV.root";
+    // string Ratio_root_file_prefix = "03_AMap_Ratio_-_C12x4_simulation_G18_Q204_6GeV.root";
+    // string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_C12x4_simulation_G18_Q204_6GeV.root";
+
+    plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath);
+    plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath);
+    plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath);
+    plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath);
+//     plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "e", 61, Sep_plots, OutputPath);
+//     plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "e", 61, Sep_plots, OutputPath);
+//     plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "e", 61, Sep_plots, OutputPath);
+//     plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "e", 61, Sep_plots, OutputPath);
+// //    plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "e", 9,Sep_plots, OutputPath);
+// //    plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "e", 9,Sep_plots, OutputPath);
+// //    plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "e", 9,Sep_plots, OutputPath);
+// //    plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "e", 9,Sep_plots, OutputPath);
+
+    plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath);
+    plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath);
+    plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath);
+    plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath);
+    // plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "p", 7, Sep_plots, OutputPath);
+    // plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "p", 7, Sep_plots, OutputPath);
+    // plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "p", 7, Sep_plots, OutputPath);
+    // plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "p", 7, Sep_plots, OutputPath);
 
     plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "n", 4, Sep_plots, OutputPath);
 }
