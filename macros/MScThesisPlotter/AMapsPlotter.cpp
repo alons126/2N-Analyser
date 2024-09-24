@@ -14,7 +14,110 @@ using namespace std;
 
 /* Command to run code: clas12root /PATH2CODE/PlotAMaps.cpp -b -q */
 
-void plotHistograms(const char *filename, const string &ParticleNameShort1, const int &numHistograms, const bool &Sep_plots = false, const string &OutputPath = "") {
+string ConfigeTopDir(const char *filename)
+{
+    std::string FileName = filename;
+
+    if (findSubstring(FileName, "Uniform"))
+    {
+        if (findSubstring(FileName, "Uniform_1e"))
+        {
+            return "/Users/alon/Downloads/00_MScThesisPlotter_1e";
+        }
+        else if (findSubstring(FileName, "Uniform_ep"))
+        {
+            return "/Users/alon/Downloads/00_MScThesisPlotter_ep";
+        }
+        else if (findSubstring(FileName, "Uniform_en"))
+        {
+            return "/Users/alon/Downloads/00_MScThesisPlotter_en";
+        }
+    }
+
+    return "00_MScThesisPlotter";
+}
+
+void SetAMapsRootFiles(const char *filename, string &TL_root_file_prefix, string &Reco_root_file_prefix, string &Ratio_root_file_prefix, string &cPart_Sep_AMaps_root_file_prefix)
+{
+    std::string FileName = filename;
+
+    if (findSubstring(FileName, "Uniform"))
+    {
+        if (findSubstring(FileName, "Uniform_1e"))
+        {
+            TL_root_file_prefix = "01_AMap_TL_-_Uniform_1e_sample_2070MeV.root";
+            Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_1e_sample_2070MeV.root";
+            Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_1e_sample_2070MeV.root";
+            cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_1e_sample_2070MeV.root";
+        }
+        else if (findSubstring(FileName, "Uniform_ep"))
+        {
+            TL_root_file_prefix = "01_AMap_TL_-_Uniform_ep_sample_2070MeV.root";
+            Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_ep_sample_2070MeV.root";
+            Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_ep_sample_2070MeV.root";
+            cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_ep_sample_2070MeV.root";
+        }
+        else if (findSubstring(FileName, "Uniform_en"))
+        {
+            TL_root_file_prefix = "01_AMap_TL_-_Uniform_en_sample_2070MeV.root";
+            Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_en_sample_2070MeV.root";
+            Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_en_sample_2070MeV.root";
+            cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_en_sample_2070MeV.root";
+        }
+    }
+    else
+    {
+        TL_root_file_prefix = "01_AMap_TL_-_C12x4_simulation_G18_Q204_6GeV.root";
+        Reco_root_file_prefix = "02_AMap_Reco_-_C12x4_simulation_G18_Q204_6GeV.root";
+        Ratio_root_file_prefix = "03_AMap_Ratio_-_C12x4_simulation_G18_Q204_6GeV.root";
+        cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_C12x4_simulation_G18_Q204_6GeV.root";
+    }
+}
+
+void SetAMapsRootFiles(const char *filename, string &TL_root_file_prefix, string &Reco_root_file_prefix, string &Ratio_root_file_prefix, string &cPart_Sep_AMaps_root_file_prefix, string &Finalized_AMaps_root_file_prefix)
+{
+    std::string FileName = filename;
+
+    if (findSubstring(FileName, "Uniform"))
+    {
+        if (findSubstring(FileName, "Uniform_1e"))
+        {
+            TL_root_file_prefix = "01_AMap_TL_-_Uniform_1e_sample_2070MeV.root";
+            Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_1e_sample_2070MeV.root";
+            Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_1e_sample_2070MeV.root";
+            cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_1e_sample_2070MeV.root";
+            Finalized_AMaps_root_file_prefix = "05_AMaps_-_Uniform_1e_sample_2070MeV.root";
+        }
+        else if (findSubstring(FileName, "Uniform_ep"))
+        {
+            TL_root_file_prefix = "01_AMap_TL_-_Uniform_ep_sample_2070MeV.root";
+            Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_ep_sample_2070MeV.root";
+            Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_ep_sample_2070MeV.root";
+            cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_ep_sample_2070MeV.root";
+            Finalized_AMaps_root_file_prefix = "05_AMaps_-_Uniform_ep_sample_2070MeV.root";
+        }
+        else if (findSubstring(FileName, "Uniform_en"))
+        {
+            TL_root_file_prefix = "01_AMap_TL_-_Uniform_en_sample_2070MeV.root";
+            Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_en_sample_2070MeV.root";
+            Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_en_sample_2070MeV.root";
+            cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_en_sample_2070MeV.root";
+            Finalized_AMaps_root_file_prefix = "05_AMaps_-_Uniform_en_sample_2070MeV.root";
+        }
+    }
+    else
+    {
+        TL_root_file_prefix = "01_AMap_TL_-_C12x4_simulation_G18_Q204_6GeV.root";
+        Reco_root_file_prefix = "02_AMap_Reco_-_C12x4_simulation_G18_Q204_6GeV.root";
+        Ratio_root_file_prefix = "03_AMap_Ratio_-_C12x4_simulation_G18_Q204_6GeV.root";
+        cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_C12x4_simulation_G18_Q204_6GeV.root";
+        Finalized_AMaps_root_file_prefix = "05_AMaps_-_C12x4_simulation_G18_Q204_6GeV.root";
+    }
+}
+
+void plotHistograms(const char *filename, const string &ParticleNameShort1, const int &numHistograms, const bool &Sep_plots = false, const string &OutputPath = "",
+                    const int Num_of_hist_col = 3, const int Num_of_hist_rows = 3)
+{
     bool PresMode = false, ExamPresMode = false;
 
 #if PresentationMode
@@ -33,22 +136,38 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
     const string Sep_Reco_e_OutputPath = OutputPath + "Sep_e_maps/Sep_Reco_e_maps";
     const string Sep_Ratio_e_OutputPath = OutputPath + "Sep_e_maps/Sep_Ratio_e_maps";
     const string Sep_AMaps_e_OutputPath = OutputPath + "Sep_e_maps/Sep_AMaps_e_maps";
+
     const string Sep_TL_p_OutputPath = OutputPath + "Sep_p_maps/Sep_TL_p_maps";
     const string Sep_Reco_p_OutputPath = OutputPath + "Sep_p_maps/Sep_Reco_p_maps";
     const string Sep_Ratio_p_OutputPath = OutputPath + "Sep_p_maps/Sep_Ratio_p_maps";
     const string Sep_AMaps_p_OutputPath = OutputPath + "Sep_p_maps/Sep_AMaps_p_maps";
+
     const string Sep_n_OutputPath = OutputPath + "Sep_n_maps";
 
-    if (Sep_plots) {
-        system(("mkdir -p " + Sep_TL_e_OutputPath).c_str());
-        system(("mkdir -p " + Sep_Reco_e_OutputPath).c_str());
-        system(("mkdir -p " + Sep_Ratio_e_OutputPath).c_str());
-        system(("mkdir -p " + Sep_AMaps_e_OutputPath).c_str());
-        system(("mkdir -p " + Sep_TL_p_OutputPath).c_str());
-        system(("mkdir -p " + Sep_Reco_p_OutputPath).c_str());
-        system(("mkdir -p " + Sep_Ratio_p_OutputPath).c_str());
-        system(("mkdir -p " + Sep_AMaps_p_OutputPath).c_str());
-        system(("mkdir -p " + Sep_n_OutputPath).c_str());
+    if (Sep_plots)
+    {
+        if (findSubstring(filename, "Uniform_1e"))
+        {
+            system(("mkdir -p " + Sep_TL_e_OutputPath).c_str());
+            system(("mkdir -p " + Sep_Reco_e_OutputPath).c_str());
+            system(("mkdir -p " + Sep_Ratio_e_OutputPath).c_str());
+            system(("mkdir -p " + Sep_AMaps_e_OutputPath).c_str());
+        }
+        else if (findSubstring(filename, "Uniform_ep"))
+        {
+            system(("mkdir -p " + Sep_TL_p_OutputPath).c_str());
+            system(("mkdir -p " + Sep_Reco_p_OutputPath).c_str());
+            system(("mkdir -p " + Sep_Ratio_p_OutputPath).c_str());
+            system(("mkdir -p " + Sep_AMaps_p_OutputPath).c_str());
+        }
+        else if (findSubstring(filename, "Uniform_en"))
+        {
+            system(("mkdir -p " + Sep_n_OutputPath).c_str());
+        }
+        else
+        {
+            cout << "plotHistograms: 'filename' does not point to a uniform sample! Exiting...", exit(0);
+        }
     }
 
     double x_1 = 0.2, y_1 = 0.3, x_2 = 0.86, y_2 = 0.7;
@@ -58,84 +177,70 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
     string ParticleNameLong;
     string ParticleNameLong1;
 
-    if (ParticleNameShort1 == "e") {
+    if (ParticleNameShort1 == "e")
+    {
         ParticleNameLong = "electron";
         ParticleNameLong1 = "Electron";
-    } else if (ParticleNameShort1 == "p") {
+    }
+    else if (ParticleNameShort1 == "p")
+    {
         ParticleNameLong = "proton";
         ParticleNameLong1 = "Proton";
-    } else if (ParticleNameShort1 == "n") {
+    }
+    else if (ParticleNameShort1 == "n")
+    {
         ParticleNameLong = "neutron";
         ParticleNameLong1 = "Neutron";
     }
 
     string SaveName;
+    string TL_root_file_prefix, Reco_root_file_prefix, Ratio_root_file_prefix, cPart_Sep_AMaps_root_file_prefix, Finalized_AMaps_root_file_prefix;
 
-    // string TL_root_file_prefix = "01_AMap_TL_-_Uniform_en_sample_2070MeV.root";
-    // string Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_en_sample_2070MeV.root";
-    // string Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_en_sample_2070MeV.root";
-    // string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_en_sample_2070MeV.root";
-    // string Finalized_AMaps_root_file_prefix = "05_AMaps_-_Uniform_en_sample_2070MeV.root";
-
-    string TL_root_file_prefix = "01_AMap_TL_-_Uniform_ep_sample_2070MeV.root";
-    string Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_ep_sample_2070MeV.root";
-    string Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_ep_sample_2070MeV.root";
-    string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_ep_sample_2070MeV.root";
-    string Finalized_AMaps_root_file_prefix = "05_AMaps_-_Uniform_ep_sample_2070MeV.root";
-
-    // string TL_root_file_prefix = "01_AMap_TL_-_Uniform_1e_sample_2070MeV.root";
-    // string Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_1e_sample_2070MeV.root";
-    // string Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_1e_sample_2070MeV.root";
-    // string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_1e_sample_2070MeV.root";
-    // string Finalized_AMaps_root_file_prefix = "05_AMaps_-_Uniform_1e_sample_2070MeV.root";
-
-    // string TL_root_file_prefix = "01_AMap_TL_-_C12x4_simulation_G18_Q204_6GeV.root";
-    // string Reco_root_file_prefix = "02_AMap_Reco_-_C12x4_simulation_G18_Q204_6GeV.root";
-    // string Ratio_root_file_prefix = "03_AMap_Ratio_-_C12x4_simulation_G18_Q204_6GeV.root";
-    // string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_C12x4_simulation_G18_Q204_6GeV.root";
-    // string Finalized_AMaps_root_file_prefix = "05_AMaps_-_C12x4_simulation_G18_Q204_6GeV.root";
+    SetAMapsRootFiles(filename, TL_root_file_prefix, Reco_root_file_prefix, Ratio_root_file_prefix, cPart_Sep_AMaps_root_file_prefix, Finalized_AMaps_root_file_prefix);
 
     // TCanvas *Sep_canv = new TCanvas("Sep_canv", "Sep_canv", 1000 * 1.5 * 0.6, 750 * 1.5 * 0.6);
-   TCanvas *Sep_canv = new TCanvas("Sep_canv", "Sep_canv", 1000 * 1.5, 750 * 1.5);
+    TCanvas *Sep_canv = new TCanvas("Sep_canv", "Sep_canv", 1000 * 1.5, 750 * 1.5);
     Sep_canv->cd()->SetGrid();
     Sep_canv->cd()->SetBottomMargin(0.14), Sep_canv->cd()->SetLeftMargin(0.18), Sep_canv->cd()->SetRightMargin(0.12);
 
-    if (ParticleNameShort1 == "e") {
+    if (ParticleNameShort1 == "e" && findSubstring(filename, "Uniform_1e"))
+    {
         // Open the ROOT file containing histograms
         TFile *file = new TFile(filename);
 
-        if (!file || file->IsZombie()) {
+        if (!file || file->IsZombie())
+        {
             std::cerr << "Error: Could not open file: " << filename << std::endl;
             return;
         }
 
-//    // Create a canvas to plot histograms in a 3x3 grid
-        // TCanvas *canvas = new TCanvas("c", "c", 1000 * 6 * 1.5 * 0.6, 750 * 11 * 1.5 * 0.6);
-    //    TCanvas *canvas = new TCanvas("c", "c", 1000 * 6 * 1.5, 750 * 11 * 1.5);
-       TCanvas *canvas = new TCanvas("c", "c", 1000 * 4 * 1.5*2, 750 * 3 * 1.5*2);
+        //    // Create a canvas to plot histograms in a 3x3 grid
+        // TCanvas *canvas = new TCanvas("c", "c", 1000 * Num_of_hist_col * 1.5 * 0.6, 750 * Num_of_hist_rows * 1.5 * 0.6);
+        //    TCanvas *canvas = new TCanvas("c", "c", 1000 * Num_of_hist_col * 1.5, 750 * Num_of_hist_rows * 1.5);
+        TCanvas *canvas = new TCanvas("c", "c", 1000 * Num_of_hist_col * 1.5 * 2, 750 * Num_of_hist_rows * 1.5 * 2);
 
-        canvas->Divide(6, 5); // Divide the canvas into a 4x16 grid
-        // canvas->Divide(6, 11); // Divide the canvas into a 4x16 grid
+        canvas->Divide(Num_of_hist_col, Num_of_hist_rows); // Divide the canvas into a Num_of_hist_rows x Num_of_hist_col grid
 
         int canvasIndex = 1;
         int canvasIndexMax;
 
-        if (ParticleNameShort1 != "n") {
+        if (ParticleNameShort1 != "n")
+        {
             canvasIndex = 1;
-        } else {
+        }
+        else
+        {
             canvasIndex = 0;
         }
 
-        if (numHistograms <= 6 * 5) {
+        if (numHistograms <= Num_of_hist_col * Num_of_hist_rows)
+        {
             canvasIndexMax = numHistograms;
-        } else {
-            canvasIndexMax = 6 * 5;
         }
-        // if (numHistograms <= 11 * 6) {
-        //     canvasIndexMax = numHistograms;
-        // } else {
-        //     canvasIndexMax = 11 * 6;
-        // }
+        else
+        {
+            canvasIndexMax = Num_of_hist_col * Num_of_hist_rows;
+        }
 
         int numOfFigures = 1;
 
@@ -145,22 +250,31 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
         static TString classname("TH2D");
 
         TKey *Key;
-        TIter Next((TList *) file->GetListOfKeys());
+        TIter Next((TList *)file->GetListOfKeys());
         TH2D *Histogram2DTemp;
 
-        while ((Key = (TKey *) Next())) {
-            Histogram2DTemp = (TH2D *) Key->ReadObj();
+        while ((Key = (TKey *)Next()))
+        {
+            Histogram2DTemp = (TH2D *)Key->ReadObj();
 
             string Histogram2DTempName = Histogram2DTemp->GetName(), Histogram2DTempTitle = Histogram2DTemp->GetTitle();
 
-            if (PrintOutHistName) { cout << Histogram2DTempName << "\n\n"; }
+            if (PrintOutHistName)
+            {
+                cout << Histogram2DTempName << "\n\n";
+            }
 
-            if (findSubstring(Histogram2DTempName, ParticleNameShort2)) {
+            if (findSubstring(Histogram2DTempName, ParticleNameShort2))
+            {
                 ++HistogramCounter;
 
-                if (PrintOut) { cout << "\nKey name: " << Histogram2DTemp->GetName() << "; Type: " << Key->GetClassName() << "\n"; }
+                if (PrintOut)
+                {
+                    cout << "\nKey name: " << Histogram2DTemp->GetName() << "; Type: " << Key->GetClassName() << "\n";
+                }
 
-                if (Sep_plots) {
+                if (Sep_plots)
+                {
                     string Histogram2DTemp_Title = Histogram2DTemp->GetTitle();
                     string Histogram2DTemp_xLabel = Histogram2DTemp->GetXaxis()->GetTitle();
                     string Histogram2DTemp_yLabel = Histogram2DTemp->GetYaxis()->GetTitle();
@@ -170,20 +284,26 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, " (75x75) (AMaps)", "");
                     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, " (AMaps)", "");
 
-                    if (PresMode && !ExamPresMode) {
+                    if (PresMode && !ExamPresMode)
+                    {
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV/c]");
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV/c]", "#leq5.986 [GeV/c]");
-                    } else if (PresMode && ExamPresMode) {
+                    }
+                    else if (PresMode && ExamPresMode)
+                    {
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
-                    } else {
+                    }
+                    else
+                    {
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
                     }
 
                     string SliceVariant1, SliceVariant2, TitleInitial2Replace, TitleInitial2Replacment;
 
-                    if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL")) {
+                    if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL"))
+                    {
                         SliceVariant1 = "TL";
 
                         TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
@@ -191,7 +311,9 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                                                   ParticleNameLong + " for ";
 
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, TitleInitial2Replace, TitleInitial2Replacment);
-                    } else if (findSubstring(Histogram2DTempName, "Reco ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, "Reco "))
+                    {
                         SliceVariant1 = "Reco", SliceVariant2 = "reco";
 
                         TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
@@ -199,14 +321,18 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                                                   ParticleNameLong + " for ";
 
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, TitleInitial2Replace, TitleInitial2Replacment);
-                    } else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
-                               !findSubstring(Histogram2DTempName, " AMaps ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
+                             !findSubstring(Histogram2DTempName, " AMaps "))
+                    {
                         SliceVariant1 = "#epsilon_{eff}^{" + ParticleNameShort1 + "}";
 
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel,
                                      "Reco/TL ratio",
                                      (SliceVariant1 + "(P_{" + ParticleNameShort1 + "},#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
-                    } else if (findSubstring(Histogram2DTempName, " AMap ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, " AMap "))
+                    {
                         SliceVariant1 = "reco", SliceVariant2 = "Filtered";
 
                         TitleInitial2Replace = ParticleNameLong1 + " AMap for";
@@ -218,29 +344,35 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
 
                     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel,
                                  "(Reco./TL)", ("#epsilon_{eff}(P_{" + ParticleNameShort1 + "},#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
-//                                 "(Reco./TL)", ("#epsilon_{eff}(#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
+                    //                                 "(Reco./TL)", ("#epsilon_{eff}(#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
 
-
-                    if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL")) {
+                    if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL"))
+                    {
                         Sep_canv->cd();
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
                         Sep_canv->SaveAs((Sep_TL_e_OutputPath + "/" + to_string(canvasIndex) + "_TL_e_Slice_" + to_string(canvasIndex) + ".png").c_str());
                         Sep_canv->Clear();
-                    } else if (findSubstring(Histogram2DTempName, "Reco ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, "Reco "))
+                    {
                         Sep_canv->cd();
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
                         Sep_canv->SaveAs((Sep_Reco_e_OutputPath + "/" + to_string(canvasIndex) + "_Reco_e_Slice_" + to_string(canvasIndex) + ".png").c_str());
                         Sep_canv->Clear();
-                    } else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
-                               !findSubstring(Histogram2DTempName, " AMaps ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
+                             !findSubstring(Histogram2DTempName, " AMaps "))
+                    {
                         Sep_canv->cd();
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
                         Sep_canv->SaveAs((Sep_Ratio_e_OutputPath + "/" + to_string(canvasIndex) + "_Ratio_e_Slice_" + to_string(canvasIndex) + ".png").c_str());
                         Sep_canv->Clear();
-                    } else if (findSubstring(Histogram2DTempName, " AMap ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, " AMap "))
+                    {
                         Sep_canv->cd();
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
@@ -252,11 +384,14 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                 canvas->cd(canvasIndex), canvas->cd(canvasIndex)->SetGrid();
                 canvas->cd(canvasIndex)->SetBottomMargin(0.14), canvas->cd(canvasIndex)->SetLeftMargin(0.18), canvas->cd(canvasIndex)->SetRightMargin(0.12);
 
-                if (Histogram2DTemp->Integral() == 0.) {
+                if (Histogram2DTemp->Integral() == 0.)
+                {
                     TPaveText *displayText = new TPaveText(x_1, y_1, x_2, y_2, "NDC");
                     displayText->SetTextSize(diplayTextSize), displayText->SetFillColor(0), displayText->AddText("Empty histogram"), displayText->SetTextAlign(22);
                     Histogram2DTemp->Draw(), displayText->Draw();
-                } else {
+                }
+                else
+                {
                     string Histogram2DTemp_Title = Histogram2DTemp->GetTitle();
                     string Histogram2DTemp_xLabel = Histogram2DTemp->GetXaxis()->GetTitle();
                     string Histogram2DTemp_yLabel = Histogram2DTemp->GetYaxis()->GetTitle();
@@ -266,20 +401,26 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, " (75x75) (AMaps)", "");
                     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, " (AMaps)", "");
 
-                    if (PresMode && !ExamPresMode) {
+                    if (PresMode && !ExamPresMode)
+                    {
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV/c]");
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV/c]", "#leq5.986 [GeV/c]");
-                    } else if (PresMode && ExamPresMode) {
+                    }
+                    else if (PresMode && ExamPresMode)
+                    {
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
-                    } else {
+                    }
+                    else
+                    {
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
                     }
 
                     string SliceVariant1, SliceVariant2, TitleInitial2Replace, TitleInitial2Replacment;
 
-                    if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL")) {
+                    if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL"))
+                    {
                         SliceVariant1 = "TL";
 
                         TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
@@ -287,7 +428,9 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                                                   ParticleNameLong + " for ";
 
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, TitleInitial2Replace, TitleInitial2Replacment);
-                    } else if (findSubstring(Histogram2DTempName, "Reco ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, "Reco "))
+                    {
                         SliceVariant1 = "Reco", SliceVariant2 = "reco";
 
                         TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
@@ -295,14 +438,18 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                                                   ParticleNameLong + " for ";
 
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, TitleInitial2Replace, TitleInitial2Replacment);
-                    } else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
-                               !findSubstring(Histogram2DTempName, " AMaps ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
+                             !findSubstring(Histogram2DTempName, " AMaps "))
+                    {
                         SliceVariant1 = "#epsilon_{eff}^{" + ParticleNameShort1 + "}";
 
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel,
                                      "Reco/TL ratio",
                                      (SliceVariant1 + "(P_{" + ParticleNameShort1 + "},#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
-                    } else if (findSubstring(Histogram2DTempName, " AMap ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, " AMap "))
+                    {
                         SliceVariant1 = "reco", SliceVariant2 = "Filtered";
 
                         TitleInitial2Replace = ParticleNameLong1 + " AMap for";
@@ -318,31 +465,42 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                     Histogram2DTemp->Draw("colz"), gPad->Update();
                 }
 
-                if (!ShowStats) {
+                if (!ShowStats)
+                {
                     Histogram2DTemp->SetStats(0);
-                } else {
+                }
+                else
+                {
                     Histogram2DTemp->SetStats(1);
                 }
 
                 ++canvasIndex;
 
-                if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL")) {
+                if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL"))
+                {
                     SaveName = ParticleNameShort1 + "_TL_" + to_string(numOfFigures) + ".png";
-                } else if (findSubstring(Histogram2DTempName, "Reco ")) {
+                }
+                else if (findSubstring(Histogram2DTempName, "Reco "))
+                {
                     SaveName = ParticleNameShort1 + "_Reco_" + to_string(numOfFigures) + ".png";
-                } else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
-                           !findSubstring(Histogram2DTempName, " AMaps ")) {
+                }
+                else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
+                         !findSubstring(Histogram2DTempName, " AMaps "))
+                {
                     SaveName = ParticleNameShort1 + "_Ratio_" + to_string(numOfFigures) + ".png";
                     Histogram2DTemp->SetStats(0);
-                } else if (findSubstring(Histogram2DTempName, " AMap ")) {
+                }
+                else if (findSubstring(Histogram2DTempName, " AMap "))
+                {
                     SaveName = ParticleNameShort1 + "_AMaps_" + to_string(numOfFigures) + ".png";
                 }
 
-                if ((canvasIndex > canvasIndexMax) || (HistogramCounter == numHistograms)) {
+                if ((canvasIndex > canvasIndexMax) || (HistogramCounter == numHistograms))
+                {
                     canvas->SaveAs((OutputPath + SaveName).c_str());
                     canvas->Clear();
 
-                    canvas->Divide(4, 16); // Divide the canvas into a 4x16 grid
+                    canvas->Divide(Num_of_hist_col, Num_of_hist_rows); // Divide the canvas into a 4x16 grid
 
                     ++numOfFigures;
 
@@ -350,41 +508,53 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                 }
             }
 
-            if (HistogramCounter > numHistograms) { break; }
+            if (HistogramCounter > numHistograms)
+            {
+                break;
+            }
         }
 
         delete canvas;
         delete file;
-    } else if (ParticleNameShort1 == "p") {
+    }
+    else if (ParticleNameShort1 == "p" && findSubstring(filename, "Uniform_ep"))
+    {
         // Open the ROOT file containing histograms
         TFile *file = new TFile(filename);
 
-        if (!file || file->IsZombie()) {
+        if (!file || file->IsZombie())
+        {
             std::cerr << "Error: Could not open file: " << filename << std::endl;
             return;
         }
 
-//    // Create a canvas to plot histograms in a 3x3 grid
+        //    // Create a canvas to plot histograms in a 3x3 grid
         // TCanvas *canvas = new TCanvas("c", "c", 1000 * 3 * 1.5 * 0.6, 750 * 3 * 1.5 * 0.6);
-    //    TCanvas *canvas = new TCanvas("c", "c", 1000 * 3 * 1.5, 750 * 3 * 1.5);
-       TCanvas *canvas = new TCanvas("c", "c", 1000 * 5 * 1.5 * 2, 750 * 5 * 1.5 * 2);
+        //    TCanvas *canvas = new TCanvas("c", "c", 1000 * 3 * 1.5, 750 * 3 * 1.5);
+        TCanvas *canvas = new TCanvas("c", "c", 1000 * Num_of_hist_col * 1.5 * 2, 750 * Num_of_hist_rows * 1.5 * 2);
 
-        canvas->Divide(5, 5); // Divide the canvas into a 3x3 grid
+        canvas->Divide(Num_of_hist_col, Num_of_hist_rows); // Divide the canvas into a Num_of_hist_rows x Num_of_hist_col grid
         // canvas->Divide(3, 3); // Divide the canvas into a 3x3 grid
 
         int canvasIndex = 1;
         int canvasIndexMax;
 
-        if (ParticleNameShort1 != "n") {
+        if (ParticleNameShort1 != "n")
+        {
             canvasIndex = 1;
-        } else {
+        }
+        else
+        {
             canvasIndex = 0;
         }
 
-        if (numHistograms <= 5 * 5) {
+        if (numHistograms <= Num_of_hist_col * Num_of_hist_rows)
+        {
             canvasIndexMax = numHistograms;
-        } else {
-            canvasIndexMax = 5 * 5;
+        }
+        else
+        {
+            canvasIndexMax = Num_of_hist_col * Num_of_hist_rows;
         }
         // if (numHistograms <= 9) {
         //     canvasIndexMax = numHistograms;
@@ -400,22 +570,31 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
         static TString classname("TH2D");
 
         TKey *Key;
-        TIter Next((TList *) file->GetListOfKeys());
+        TIter Next((TList *)file->GetListOfKeys());
         TH2D *Histogram2DTemp;
 
-        while ((Key = (TKey *) Next())) {
-            Histogram2DTemp = (TH2D *) Key->ReadObj();
+        while ((Key = (TKey *)Next()))
+        {
+            Histogram2DTemp = (TH2D *)Key->ReadObj();
 
             string Histogram2DTempName = Histogram2DTemp->GetName(), Histogram2DTempTitle = Histogram2DTemp->GetTitle();
 
-            if (PrintOutHistName) { cout << Histogram2DTempName << "\n\n"; }
+            if (PrintOutHistName)
+            {
+                cout << Histogram2DTempName << "\n\n";
+            }
 
-            if (findSubstring(Histogram2DTempName, ParticleNameShort2)) {
+            if (findSubstring(Histogram2DTempName, ParticleNameShort2))
+            {
                 ++HistogramCounter;
 
-                if (PrintOut) { cout << "\nKey name: " << Histogram2DTemp->GetName() << "; Type: " << Key->GetClassName() << "\n"; }
+                if (PrintOut)
+                {
+                    cout << "\nKey name: " << Histogram2DTemp->GetName() << "; Type: " << Key->GetClassName() << "\n";
+                }
 
-                if (Sep_plots) {
+                if (Sep_plots)
+                {
                     string Histogram2DTemp_Title = Histogram2DTemp->GetTitle();
                     string Histogram2DTemp_xLabel = Histogram2DTemp->GetXaxis()->GetTitle();
                     string Histogram2DTemp_yLabel = Histogram2DTemp->GetYaxis()->GetTitle();
@@ -425,20 +604,26 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, " (75x75) (AMaps)", "");
                     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, " (AMaps)", "");
 
-                    if (PresMode && !ExamPresMode) {
+                    if (PresMode && !ExamPresMode)
+                    {
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV/c]");
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV/c]", "#leq5.986 [GeV/c]");
-                    } else if (PresMode && ExamPresMode) {
+                    }
+                    else if (PresMode && ExamPresMode)
+                    {
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
-                    } else {
+                    }
+                    else
+                    {
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
                     }
 
                     string SliceVariant1, SliceVariant2, TitleInitial2Replace, TitleInitial2Replacment;
 
-                    if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL")) {
+                    if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL"))
+                    {
                         SliceVariant1 = "TL";
 
                         TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
@@ -446,7 +631,9 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                                                   ParticleNameLong + " for ";
 
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, TitleInitial2Replace, TitleInitial2Replacment);
-                    } else if (findSubstring(Histogram2DTempName, "Reco ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, "Reco "))
+                    {
                         SliceVariant1 = "Reco", SliceVariant2 = "reco";
 
                         TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
@@ -454,14 +641,18 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                                                   ParticleNameLong + " for ";
 
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, TitleInitial2Replace, TitleInitial2Replacment);
-                    } else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
-                               !findSubstring(Histogram2DTempName, " AMaps ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
+                             !findSubstring(Histogram2DTempName, " AMaps "))
+                    {
                         SliceVariant1 = "#epsilon_{eff}^{" + ParticleNameShort1 + "}";
 
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel,
                                      "Reco/TL ratio",
                                      (SliceVariant1 + "(P_{" + ParticleNameShort1 + "},#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
-                    } else if (findSubstring(Histogram2DTempName, " AMap ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, " AMap "))
+                    {
                         SliceVariant1 = "reco", SliceVariant2 = "Filtered";
 
                         TitleInitial2Replace = ParticleNameLong1 + " AMap for";
@@ -474,26 +665,33 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel,
                                  "(Reco./TL)", ("#epsilon_{eff}(P_{" + ParticleNameShort1 + "},#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
 
-                    if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL")) {
+                    if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL"))
+                    {
                         Sep_canv->cd();
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
                         Sep_canv->SaveAs((Sep_TL_p_OutputPath + "/" + to_string(canvasIndex) + "_TL_p_Slice_" + to_string(canvasIndex) + ".png").c_str());
                         Sep_canv->Clear();
-                    } else if (findSubstring(Histogram2DTempName, "Reco ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, "Reco "))
+                    {
                         Sep_canv->cd();
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
                         Sep_canv->SaveAs((Sep_Reco_p_OutputPath + "/" + to_string(canvasIndex) + "_Reco_p_Slice_" + to_string(canvasIndex) + ".png").c_str());
                         Sep_canv->Clear();
-                    } else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
-                               !findSubstring(Histogram2DTempName, " AMaps ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
+                             !findSubstring(Histogram2DTempName, " AMaps "))
+                    {
                         Sep_canv->cd();
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
                         Sep_canv->SaveAs((Sep_Ratio_p_OutputPath + "/" + to_string(canvasIndex) + "_Ratio_p_Slice_" + to_string(canvasIndex) + ".png").c_str());
                         Sep_canv->Clear();
-                    } else if (findSubstring(Histogram2DTempName, " AMap ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, " AMap "))
+                    {
                         Sep_canv->cd();
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
@@ -505,11 +703,14 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                 canvas->cd(canvasIndex), canvas->cd(canvasIndex)->SetGrid();
                 canvas->cd(canvasIndex)->SetBottomMargin(0.14), canvas->cd(canvasIndex)->SetLeftMargin(0.18), canvas->cd(canvasIndex)->SetRightMargin(0.12);
 
-                if (Histogram2DTemp->Integral() == 0.) {
+                if (Histogram2DTemp->Integral() == 0.)
+                {
                     TPaveText *displayText = new TPaveText(x_1, y_1, x_2, y_2, "NDC");
                     displayText->SetTextSize(diplayTextSize), displayText->SetFillColor(0), displayText->AddText("Empty histogram"), displayText->SetTextAlign(22);
                     Histogram2DTemp->Draw(), displayText->Draw();
-                } else {
+                }
+                else
+                {
                     string Histogram2DTemp_Title = Histogram2DTemp->GetTitle();
                     string Histogram2DTemp_xLabel = Histogram2DTemp->GetXaxis()->GetTitle();
                     string Histogram2DTemp_yLabel = Histogram2DTemp->GetYaxis()->GetTitle();
@@ -519,20 +720,26 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, " (75x75) (AMaps)", "");
                     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, " (AMaps)", "");
 
-                    if (PresMode && !ExamPresMode) {
+                    if (PresMode && !ExamPresMode)
+                    {
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV/c]");
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV/c]", "#leq5.986 [GeV/c]");
-                    } else if (PresMode && ExamPresMode) {
+                    }
+                    else if (PresMode && ExamPresMode)
+                    {
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
-                    } else {
+                    }
+                    else
+                    {
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
                     }
 
                     string SliceVariant1, SliceVariant2, TitleInitial2Replace, TitleInitial2Replacment;
 
-                    if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL")) {
+                    if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL"))
+                    {
                         SliceVariant1 = "TL";
 
                         TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
@@ -540,7 +747,9 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                                                   ParticleNameLong + " for ";
 
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, TitleInitial2Replace, TitleInitial2Replacment);
-                    } else if (findSubstring(Histogram2DTempName, "Reco ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, "Reco "))
+                    {
                         SliceVariant1 = "Reco", SliceVariant2 = "reco";
 
                         TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
@@ -548,14 +757,18 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                                                   ParticleNameLong + " for ";
 
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, TitleInitial2Replace, TitleInitial2Replacment);
-                    } else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
-                               !findSubstring(Histogram2DTempName, " AMaps ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
+                             !findSubstring(Histogram2DTempName, " AMaps "))
+                    {
                         SliceVariant1 = "#epsilon_{eff}^{" + ParticleNameShort1 + "}";
 
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel,
                                      "Reco/TL ratio",
                                      (SliceVariant1 + "(P_{" + ParticleNameShort1 + "},#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
-                    } else if (findSubstring(Histogram2DTempName, " AMap ")) {
+                    }
+                    else if (findSubstring(Histogram2DTempName, " AMap "))
+                    {
                         SliceVariant1 = "reco", SliceVariant2 = "Filtered";
 
                         TitleInitial2Replace = ParticleNameLong1 + " AMap for";
@@ -571,31 +784,42 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                     Histogram2DTemp->Draw("colz"), gPad->Update();
                 }
 
-                if (!ShowStats) {
+                if (!ShowStats)
+                {
                     Histogram2DTemp->SetStats(0);
-                } else {
+                }
+                else
+                {
                     Histogram2DTemp->SetStats(1);
                 }
 
                 ++canvasIndex;
 
-                if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL")) {
+                if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL"))
+                {
                     SaveName = ParticleNameShort1 + "_TL_" + to_string(numOfFigures) + ".png";
-                } else if (findSubstring(Histogram2DTempName, "Reco ")) {
+                }
+                else if (findSubstring(Histogram2DTempName, "Reco "))
+                {
                     SaveName = ParticleNameShort1 + "_Reco_" + to_string(numOfFigures) + ".png";
-                } else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
-                           !findSubstring(Histogram2DTempName, " AMaps ")) {
+                }
+                else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
+                         !findSubstring(Histogram2DTempName, " AMaps "))
+                {
                     SaveName = ParticleNameShort1 + "_Ratio_" + to_string(numOfFigures) + ".png";
                     Histogram2DTemp->SetStats(0);
-                } else if (findSubstring(Histogram2DTempName, " AMap ")) {
+                }
+                else if (findSubstring(Histogram2DTempName, " AMap "))
+                {
                     SaveName = ParticleNameShort1 + "_AMaps_" + to_string(numOfFigures) + ".png";
                 }
 
-                if ((canvasIndex > canvasIndexMax) || (HistogramCounter == numHistograms)) {
+                if ((canvasIndex > canvasIndexMax) || (HistogramCounter == numHistograms))
+                {
                     canvas->SaveAs((OutputPath + SaveName).c_str());
                     canvas->Clear();
 
-                    canvas->Divide(3, 3); // Divide the canvas into a 3x3 grid
+                    canvas->Divide(Num_of_hist_col, Num_of_hist_rows); // Divide the canvas into a Num_of_hist_rows x Num_of_hist_col grid
 
                     ++numOfFigures;
 
@@ -603,12 +827,17 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                 }
             }
 
-            if (HistogramCounter > numHistograms) { break; }
+            if (HistogramCounter > numHistograms)
+            {
+                break;
+            }
         }
 
         delete canvas;
         delete file;
-    } else if (ParticleNameShort1 == "n") {
+    }
+    else if (ParticleNameShort1 == "n" && findSubstring(filename, "Uniform_en"))
+    {
         SaveName = "nFD_maps.png";
 
         string FileName0 = filename;
@@ -616,49 +845,73 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
 
         cout << "\n";
 
-        cout << "\n\nLoading 'TL Neutron Hit Map (AMaps)' from:\n" << FileName + TL_root_file_prefix << "\n";
+        cout << "\n\nLoading 'TL Neutron Hit Map (AMaps)' from:\n"
+             << FileName + TL_root_file_prefix << "\n";
         TFile *TL_root_file = new TFile((FileName + TL_root_file_prefix).c_str());
-        TH2D *TL_Histogram2D = (TH2D *) TL_root_file->Get("TL Neutron Hit Map (AMaps)");
-        if (!TL_root_file || TL_root_file->IsZombie()) { std::cerr << "Error: Could not open file: " << FileName << std::endl, exit(0); }
-        if (!TL_Histogram2D) {
+        TH2D *TL_Histogram2D = (TH2D *)TL_root_file->Get("TL Neutron Hit Map (AMaps)");
+        if (!TL_root_file || TL_root_file->IsZombie())
+        {
+            std::cerr << "Error: Could not open file: " << FileName << std::endl, exit(0);
+        }
+        if (!TL_Histogram2D)
+        {
             std::cerr << "Error: Could not open histogram: TL Neutron Hit Map (AMaps)" << std::endl;
-            std::cerr << "File path:\n" << FileName + TL_root_file_prefix << std::endl;
+            std::cerr << "File path:\n"
+                      << FileName + TL_root_file_prefix << std::endl;
             exit(0);
         }
 
-        cout << "\n\nLoading 'Reco Neutron Hit Map (AMaps)' from:\n" << FileName + TL_root_file_prefix << "\n";
+        cout << "\n\nLoading 'Reco Neutron Hit Map (AMaps)' from:\n"
+             << FileName + TL_root_file_prefix << "\n";
         TFile *Reco_root_file = new TFile((FileName + Reco_root_file_prefix).c_str());
-        TH2D *Reco_Histogram2D = (TH2D *) Reco_root_file->Get("Reco Neutron Hit Map (AMaps)");
-        if (!Reco_root_file || Reco_root_file->IsZombie()) { std::cerr << "Error: Could not open file: " << FileName << std::endl, exit(0); }
-        if (!Reco_Histogram2D) {
+        TH2D *Reco_Histogram2D = (TH2D *)Reco_root_file->Get("Reco Neutron Hit Map (AMaps)");
+        if (!Reco_root_file || Reco_root_file->IsZombie())
+        {
+            std::cerr << "Error: Could not open file: " << FileName << std::endl, exit(0);
+        }
+        if (!Reco_Histogram2D)
+        {
             std::cerr << "Error: Could not open histogram: Reco Neutron Hit Map (AMaps)" << std::endl;
-            std::cerr << "File path:\n" << FileName + Reco_root_file_prefix << std::endl;
+            std::cerr << "File path:\n"
+                      << FileName + Reco_root_file_prefix << std::endl;
             exit(0);
         }
 
-        cout << "\n\nLoading 'Neutron Reco/TL ratio (AMaps)' from:\n" << FileName + TL_root_file_prefix << "\n";
+        cout << "\n\nLoading 'Neutron Reco/TL ratio (AMaps)' from:\n"
+             << FileName + TL_root_file_prefix << "\n";
         TFile *Ratio_root_file = new TFile((FileName + Ratio_root_file_prefix).c_str());
         TH2D *Ratio_Histogram2D = Histofinder2D(Ratio_root_file, "Neutron Reco/TL ratio (");
-        if (!Ratio_root_file || Ratio_root_file->IsZombie()) { std::cerr << "Error: Could not open file: " << FileName << std::endl, exit(0); }
-        if (!Ratio_Histogram2D) {
+        if (!Ratio_root_file || Ratio_root_file->IsZombie())
+        {
+            std::cerr << "Error: Could not open file: " << FileName << std::endl, exit(0);
+        }
+        if (!Ratio_Histogram2D)
+        {
             std::cerr << "Error: Could not open histogram: Neutron Reco/TL ratio (AMaps)" << std::endl;
-            std::cerr << "File path:\n" << FileName + Ratio_root_file_prefix << std::endl;
+            std::cerr << "File path:\n"
+                      << FileName + Ratio_root_file_prefix << std::endl;
             exit(0);
         }
 
-        cout << "\n\nLoading 'Neutron_AMap (AMaps)' from:\n" << FileName + TL_root_file_prefix << "\n";
+        cout << "\n\nLoading 'Neutron_AMap (AMaps)' from:\n"
+             << FileName + TL_root_file_prefix << "\n";
         TFile *Finalized_AMaps_root_file = new TFile((FileName + Finalized_AMaps_root_file_prefix).c_str());
-        TH2D *Finalized_AMaps_Histogram2D = (TH2D *) Finalized_AMaps_root_file->Get("Neutron_AMap (AMaps)");
-        if (!Finalized_AMaps_root_file || Finalized_AMaps_root_file->IsZombie()) { std::cerr << "Error: Could not open file: " << FileName << std::endl, exit(0); }
-        if (!Finalized_AMaps_Histogram2D) {
+        TH2D *Finalized_AMaps_Histogram2D = (TH2D *)Finalized_AMaps_root_file->Get("Neutron_AMap (AMaps)");
+        if (!Finalized_AMaps_root_file || Finalized_AMaps_root_file->IsZombie())
+        {
+            std::cerr << "Error: Could not open file: " << FileName << std::endl, exit(0);
+        }
+        if (!Finalized_AMaps_Histogram2D)
+        {
             std::cerr << "Error: Could not open histogram: Neutron_AMap (AMaps)" << std::endl;
-            std::cerr << "File path:\n" << FileName + Finalized_AMaps_root_file_prefix << std::endl;
+            std::cerr << "File path:\n"
+                      << FileName + Finalized_AMaps_root_file_prefix << std::endl;
             exit(0);
         }
 
         cout << "\nplotting into canvas...\n";
         // TCanvas *canvas = new TCanvas("c", "c", 1000 * 2 * 0.6, 750 * 2 * 0.6);
-       TCanvas *canvas = new TCanvas("c", "c", 1000 * 2, 750 * 2);
+        TCanvas *canvas = new TCanvas("c", "c", 1000 * 2, 750 * 2);
         canvas->Divide(2, 2); // Divide the canvas into a 3x3 grid
 
         canvas->cd(1), canvas->cd(1)->SetGrid();
@@ -667,11 +920,14 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
         string TitlenFDReplacment = "#theta_{" + ParticleNameShort1 + "} vs. #phi_{" + ParticleNameShort1 + "}";
         string TitlenFDReplacment1 = "#epsilon_{eff}(#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})";
 
-        if (TL_Histogram2D->Integral() == 0.) {
+        if (TL_Histogram2D->Integral() == 0.)
+        {
             TPaveText *displayText = new TPaveText(x_1, y_1, x_2, y_2, "NDC");
             displayText->SetTextSize(diplayTextSize), displayText->SetFillColor(0), displayText->AddText("Empty histogram"), displayText->SetTextAlign(22);
             TL_Histogram2D->Draw(), displayText->Draw();
-        } else {
+        }
+        else
+        {
             string TL_Histogram2DName = TL_Histogram2D->GetName(), TL_Histogram2D_Title = TL_Histogram2D->GetTitle();
             string TL_Histogram2D_xLabel = TL_Histogram2D->GetXaxis()->GetTitle();
             string TL_Histogram2D_yLabel = TL_Histogram2D->GetYaxis()->GetTitle();
@@ -683,20 +939,26 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
             TitleAligner(TL_Histogram2D, TL_Histogram2D_Title, TL_Histogram2D_xLabel, TL_Histogram2D_yLabel,
                          "TL Neutron Hit Map", (TitlenFDReplacment + " of TL neutrons"));
 
-            if (PresMode && !ExamPresMode) {
+            if (PresMode && !ExamPresMode)
+            {
                 TitleAligner(TL_Histogram2D, TL_Histogram2D_Title, TL_Histogram2D_xLabel, TL_Histogram2D_yLabel, "[GeV/c]", "[GeV/c]");
                 TitleAligner(TL_Histogram2D, TL_Histogram2D_Title, TL_Histogram2D_xLabel, TL_Histogram2D_yLabel, "#leq6.00 [GeV/c]", "#leq5.986 [GeV/c]");
-            } else if (PresMode && ExamPresMode) {
+            }
+            else if (PresMode && ExamPresMode)
+            {
                 TitleAligner(TL_Histogram2D, TL_Histogram2D_Title, TL_Histogram2D_xLabel, TL_Histogram2D_yLabel, "[GeV/c]", "[GeV]");
                 TitleAligner(TL_Histogram2D, TL_Histogram2D_Title, TL_Histogram2D_xLabel, TL_Histogram2D_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
-            } else {
+            }
+            else
+            {
                 TitleAligner(TL_Histogram2D, TL_Histogram2D_Title, TL_Histogram2D_xLabel, TL_Histogram2D_yLabel, "[GeV/c]", "[GeV]");
                 TitleAligner(TL_Histogram2D, TL_Histogram2D_Title, TL_Histogram2D_xLabel, TL_Histogram2D_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
             }
 
             string SliceVariant1, SliceVariant2, TitleInitial2Replace, TitleInitial2Replacment;
 
-            if (findSubstring(TL_Histogram2DName, "TL ") && !findSubstring(TL_Histogram2DName, "/TL")) {
+            if (findSubstring(TL_Histogram2DName, "TL ") && !findSubstring(TL_Histogram2DName, "/TL"))
+            {
                 SliceVariant1 = "TL";
 
                 TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
@@ -704,7 +966,9 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                                           ParticleNameLong + " for ";
 
                 TitleAligner(TL_Histogram2D, TL_Histogram2D_Title, TL_Histogram2D_xLabel, TL_Histogram2D_yLabel, TitleInitial2Replace, TitleInitial2Replacment);
-            } else if (findSubstring(TL_Histogram2DName, "Reco ")) {
+            }
+            else if (findSubstring(TL_Histogram2DName, "Reco "))
+            {
                 SliceVariant1 = "Reco", SliceVariant2 = "reco";
 
                 TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
@@ -712,13 +976,17 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                                           ParticleNameLong + " for ";
 
                 TitleAligner(TL_Histogram2D, TL_Histogram2D_Title, TL_Histogram2D_xLabel, TL_Histogram2D_yLabel, TitleInitial2Replace, TitleInitial2Replacment);
-            } else if (findSubstring(TL_Histogram2DName, "Reco/TL ratio") &&
-                       !findSubstring(TL_Histogram2DName, " AMaps ")) {
+            }
+            else if (findSubstring(TL_Histogram2DName, "Reco/TL ratio") &&
+                     !findSubstring(TL_Histogram2DName, " AMaps "))
+            {
                 SliceVariant1 = "#epsilon_{eff}^{" + ParticleNameShort1 + "}";
 
                 TitleAligner(TL_Histogram2D, TL_Histogram2D_Title, TL_Histogram2D_xLabel, TL_Histogram2D_yLabel,
                              "Reco/TL ratio", (SliceVariant1 + "(P_{" + ParticleNameShort1 + "},#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
-            } else if (findSubstring(TL_Histogram2DName, " AMap ")) {
+            }
+            else if (findSubstring(TL_Histogram2DName, " AMap "))
+            {
                 SliceVariant1 = "reco", SliceVariant2 = "Filtered";
 
                 TitleInitial2Replace = ParticleNameLong1 + " AMap for";
@@ -731,7 +999,8 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
             TitleAligner(TL_Histogram2D, TL_Histogram2D_Title, TL_Histogram2D_xLabel, TL_Histogram2D_yLabel,
                          "(Reco./TL)", ("#epsilon_{eff}(P_{" + ParticleNameShort1 + "},#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
 
-            if (Sep_plots) {
+            if (Sep_plots)
+            {
                 Sep_canv->cd();
                 TL_Histogram2D->Draw("colz"), gPad->Update();
                 TL_Histogram2D->SetStats(0);
@@ -743,20 +1012,26 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
             TL_Histogram2D->Draw("colz"), gPad->Update();
         }
 
-        if (!ShowStats) {
+        if (!ShowStats)
+        {
             TL_Histogram2D->SetStats(0);
-        } else {
+        }
+        else
+        {
             TL_Histogram2D->SetStats(1);
         }
 
         canvas->cd(2), canvas->cd(2)->SetGrid();
         canvas->cd(2)->SetBottomMargin(0.14), canvas->cd(2)->SetLeftMargin(0.18), canvas->cd(2)->SetRightMargin(0.12);
 
-        if (Reco_Histogram2D->Integral() == 0.) {
+        if (Reco_Histogram2D->Integral() == 0.)
+        {
             TPaveText *displayText = new TPaveText(x_1, y_1, x_2, y_2, "NDC");
             displayText->SetTextSize(diplayTextSize), displayText->SetFillColor(0), displayText->AddText("Empty histogram"), displayText->SetTextAlign(22);
             Reco_Histogram2D->Draw(), displayText->Draw();
-        } else {
+        }
+        else
+        {
             string Reco_Histogram2DName = Reco_Histogram2D->GetName(), Reco_Histogram2D_Title = Reco_Histogram2D->GetTitle();
             string Reco_Histogram2D_xLabel = Reco_Histogram2D->GetXaxis()->GetTitle();
             string Reco_Histogram2D_yLabel = Reco_Histogram2D->GetYaxis()->GetTitle();
@@ -768,20 +1043,26 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
             TitleAligner(Reco_Histogram2D, Reco_Histogram2D_Title, Reco_Histogram2D_xLabel, Reco_Histogram2D_yLabel,
                          "Reco Neutron Hit Map", (TitlenFDReplacment + " of reco neutrons"));
 
-            if (PresMode && !ExamPresMode) {
+            if (PresMode && !ExamPresMode)
+            {
                 TitleAligner(Reco_Histogram2D, Reco_Histogram2D_Title, Reco_Histogram2D_xLabel, Reco_Histogram2D_yLabel, "[GeV/c]", "[GeV/c]");
                 TitleAligner(Reco_Histogram2D, Reco_Histogram2D_Title, Reco_Histogram2D_xLabel, Reco_Histogram2D_yLabel, "#leq6.00 [GeV/c]", "#leq5.986 [GeV/c]");
-            } else if (PresMode && ExamPresMode) {
+            }
+            else if (PresMode && ExamPresMode)
+            {
                 TitleAligner(Reco_Histogram2D, Reco_Histogram2D_Title, Reco_Histogram2D_xLabel, Reco_Histogram2D_yLabel, "[GeV/c]", "[GeV]");
                 TitleAligner(Reco_Histogram2D, Reco_Histogram2D_Title, Reco_Histogram2D_xLabel, Reco_Histogram2D_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
-            } else {
+            }
+            else
+            {
                 TitleAligner(Reco_Histogram2D, Reco_Histogram2D_Title, Reco_Histogram2D_xLabel, Reco_Histogram2D_yLabel, "[GeV/c]", "[GeV]");
                 TitleAligner(Reco_Histogram2D, Reco_Histogram2D_Title, Reco_Histogram2D_xLabel, Reco_Histogram2D_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
             }
 
             string SliceVariant1, SliceVariant2, TitleInitial2Replace, TitleInitial2Replacment;
 
-            if (findSubstring(Reco_Histogram2DName, "TL ") && !findSubstring(Reco_Histogram2DName, "/TL")) {
+            if (findSubstring(Reco_Histogram2DName, "TL ") && !findSubstring(Reco_Histogram2DName, "/TL"))
+            {
                 SliceVariant1 = "TL";
 
                 TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
@@ -789,7 +1070,9 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                                           ParticleNameLong + " for ";
 
                 TitleAligner(Reco_Histogram2D, Reco_Histogram2D_Title, Reco_Histogram2D_xLabel, Reco_Histogram2D_yLabel, TitleInitial2Replace, TitleInitial2Replacment);
-            } else if (findSubstring(Reco_Histogram2DName, "Reco ")) {
+            }
+            else if (findSubstring(Reco_Histogram2DName, "Reco "))
+            {
                 SliceVariant1 = "Reco", SliceVariant2 = "reco";
 
                 TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
@@ -797,13 +1080,17 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                                           ParticleNameLong + " for ";
 
                 TitleAligner(Reco_Histogram2D, Reco_Histogram2D_Title, Reco_Histogram2D_xLabel, Reco_Histogram2D_yLabel, TitleInitial2Replace, TitleInitial2Replacment);
-            } else if (findSubstring(Reco_Histogram2DName, "Reco/TL ratio") &&
-                       !findSubstring(Reco_Histogram2DName, " AMaps ")) {
+            }
+            else if (findSubstring(Reco_Histogram2DName, "Reco/TL ratio") &&
+                     !findSubstring(Reco_Histogram2DName, " AMaps "))
+            {
                 SliceVariant1 = "#epsilon_{eff}^{" + ParticleNameShort1 + "}";
 
                 TitleAligner(Reco_Histogram2D, Reco_Histogram2D_Title, Reco_Histogram2D_xLabel, Reco_Histogram2D_yLabel,
                              "Reco/TL ratio", (SliceVariant1 + "(P_{" + ParticleNameShort1 + "},#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
-            } else if (findSubstring(Reco_Histogram2DName, " AMap ")) {
+            }
+            else if (findSubstring(Reco_Histogram2DName, " AMap "))
+            {
                 SliceVariant1 = "reco", SliceVariant2 = "Filtered";
 
                 TitleInitial2Replace = ParticleNameLong1 + " AMap for";
@@ -816,7 +1103,8 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
             TitleAligner(Reco_Histogram2D, Reco_Histogram2D_Title, Reco_Histogram2D_xLabel, Reco_Histogram2D_yLabel,
                          "(Reco./TL)", ("#epsilon_{eff}(P_{" + ParticleNameShort1 + "},#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
 
-            if (Sep_plots) {
+            if (Sep_plots)
+            {
                 Sep_canv->cd();
                 Reco_Histogram2D->Draw("colz"), gPad->Update();
                 Reco_Histogram2D->SetStats(0);
@@ -828,20 +1116,26 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
             Reco_Histogram2D->Draw("colz"), gPad->Update();
         }
 
-        if (!ShowStats) {
+        if (!ShowStats)
+        {
             Reco_Histogram2D->SetStats(0);
-        } else {
+        }
+        else
+        {
             Reco_Histogram2D->SetStats(1);
         }
 
         canvas->cd(3), canvas->cd(3)->SetGrid();
         canvas->cd(3)->SetBottomMargin(0.14), canvas->cd(3)->SetLeftMargin(0.18), canvas->cd(3)->SetRightMargin(0.12);
 
-        if (Ratio_Histogram2D->Integral() == 0.) {
+        if (Ratio_Histogram2D->Integral() == 0.)
+        {
             TPaveText *displayText = new TPaveText(x_1, y_1, x_2, y_2, "NDC");
             displayText->SetTextSize(diplayTextSize), displayText->SetFillColor(0), displayText->AddText("Empty histogram"), displayText->SetTextAlign(22);
             Ratio_Histogram2D->Draw(), displayText->Draw();
-        } else {
+        }
+        else
+        {
             string Ratio_Histogram2DName = Ratio_Histogram2D->GetName(), Ratio_Histogram2D_Title = Ratio_Histogram2D->GetTitle();
             string Ratio_Histogram2D_xLabel = Ratio_Histogram2D->GetXaxis()->GetTitle();
             string Ratio_Histogram2D_yLabel = Ratio_Histogram2D->GetYaxis()->GetTitle();
@@ -851,20 +1145,26 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
             TitleAligner(Ratio_Histogram2D, Ratio_Histogram2D_Title, Ratio_Histogram2D_xLabel, Ratio_Histogram2D_yLabel, " (75x75) (AMaps)", "");
             TitleAligner(Ratio_Histogram2D, Ratio_Histogram2D_Title, Ratio_Histogram2D_xLabel, Ratio_Histogram2D_yLabel, " (AMaps)", "");
 
-            if (PresMode && !ExamPresMode) {
+            if (PresMode && !ExamPresMode)
+            {
                 TitleAligner(Ratio_Histogram2D, Ratio_Histogram2D_Title, Ratio_Histogram2D_xLabel, Ratio_Histogram2D_yLabel, "[GeV/c]", "[GeV/c]");
                 TitleAligner(Ratio_Histogram2D, Ratio_Histogram2D_Title, Ratio_Histogram2D_xLabel, Ratio_Histogram2D_yLabel, "#leq6.00 [GeV/c]", "#leq5.986 [GeV/c]");
-            } else if (PresMode && ExamPresMode) {
+            }
+            else if (PresMode && ExamPresMode)
+            {
                 TitleAligner(Ratio_Histogram2D, Ratio_Histogram2D_Title, Ratio_Histogram2D_xLabel, Ratio_Histogram2D_yLabel, "[GeV/c]", "[GeV]");
                 TitleAligner(Ratio_Histogram2D, Ratio_Histogram2D_Title, Ratio_Histogram2D_xLabel, Ratio_Histogram2D_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
-            } else {
+            }
+            else
+            {
                 TitleAligner(Ratio_Histogram2D, Ratio_Histogram2D_Title, Ratio_Histogram2D_xLabel, Ratio_Histogram2D_yLabel, "[GeV/c]", "[GeV]");
                 TitleAligner(Ratio_Histogram2D, Ratio_Histogram2D_Title, Ratio_Histogram2D_xLabel, Ratio_Histogram2D_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
             }
 
             string SliceVariant1, SliceVariant2, TitleInitial2Replace, TitleInitial2Replacment;
 
-            if (findSubstring(Ratio_Histogram2DName, "TL ") && !findSubstring(Ratio_Histogram2DName, "/TL")) {
+            if (findSubstring(Ratio_Histogram2DName, "TL ") && !findSubstring(Ratio_Histogram2DName, "/TL"))
+            {
                 SliceVariant1 = "TL";
 
                 TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
@@ -872,7 +1172,9 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                                           ParticleNameLong + " for ";
 
                 TitleAligner(Ratio_Histogram2D, Ratio_Histogram2D_Title, Ratio_Histogram2D_xLabel, Ratio_Histogram2D_yLabel, TitleInitial2Replace, TitleInitial2Replacment);
-            } else if (findSubstring(Ratio_Histogram2DName, "Reco ")) {
+            }
+            else if (findSubstring(Ratio_Histogram2DName, "Reco "))
+            {
                 SliceVariant1 = "Reco", SliceVariant2 = "reco";
 
                 TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
@@ -880,13 +1182,17 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                                           ParticleNameLong + " for ";
 
                 TitleAligner(Ratio_Histogram2D, Ratio_Histogram2D_Title, Ratio_Histogram2D_xLabel, Ratio_Histogram2D_yLabel, TitleInitial2Replace, TitleInitial2Replacment);
-            } else if (findSubstring(Ratio_Histogram2DName, "Reco/TL ratio") &&
-                       !findSubstring(Ratio_Histogram2DName, " AMaps ")) {
+            }
+            else if (findSubstring(Ratio_Histogram2DName, "Reco/TL ratio") &&
+                     !findSubstring(Ratio_Histogram2DName, " AMaps "))
+            {
                 SliceVariant1 = "#epsilon_{eff}^{" + ParticleNameShort1 + "}";
 
                 TitleAligner(Ratio_Histogram2D, Ratio_Histogram2D_Title, Ratio_Histogram2D_xLabel, Ratio_Histogram2D_yLabel,
                              "Reco/TL ratio", (SliceVariant1 + "(P_{" + ParticleNameShort1 + "},#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
-            } else if (findSubstring(Ratio_Histogram2DName, " AMap ")) {
+            }
+            else if (findSubstring(Ratio_Histogram2DName, " AMap "))
+            {
                 SliceVariant1 = "reco", SliceVariant2 = "Filtered";
 
                 TitleInitial2Replace = ParticleNameLong1 + " AMap for";
@@ -899,7 +1205,8 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
             TitleAligner(Ratio_Histogram2D, Ratio_Histogram2D_Title, Ratio_Histogram2D_xLabel, Ratio_Histogram2D_yLabel,
                          "(Reco./TL)", ("#epsilon_{eff}(P_{" + ParticleNameShort1 + "},#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
 
-            if (Sep_plots) {
+            if (Sep_plots)
+            {
                 Sep_canv->cd();
                 Ratio_Histogram2D->Draw("colz"), gPad->Update();
                 Ratio_Histogram2D->SetStats(0);
@@ -911,20 +1218,26 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
             Ratio_Histogram2D->Draw("colz"), gPad->Update();
         }
 
-        if (!ShowStats) {
+        if (!ShowStats)
+        {
             Ratio_Histogram2D->SetStats(0);
-        } else {
+        }
+        else
+        {
             Ratio_Histogram2D->SetStats(1);
         }
 
         canvas->cd(4), canvas->cd(4)->SetGrid();
         canvas->cd(4)->SetBottomMargin(0.14), canvas->cd(4)->SetLeftMargin(0.18), canvas->cd(4)->SetRightMargin(0.12);
 
-        if (Finalized_AMaps_Histogram2D->Integral() == 0.) {
+        if (Finalized_AMaps_Histogram2D->Integral() == 0.)
+        {
             TPaveText *displayText = new TPaveText(x_1, y_1, x_2, y_2, "NDC");
             displayText->SetTextSize(diplayTextSize), displayText->SetFillColor(0), displayText->AddText("Empty histogram"), displayText->SetTextAlign(22);
             Finalized_AMaps_Histogram2D->Draw(), displayText->Draw();
-        } else {
+        }
+        else
+        {
             string Finalized_AMaps_Histogram2DName = Finalized_AMaps_Histogram2D->GetName(), Finalized_AMaps_Histogram2D_Title = Finalized_AMaps_Histogram2D->GetTitle();
             string Finalized_AMaps_Histogram2D_xLabel = Finalized_AMaps_Histogram2D->GetXaxis()->GetTitle();
             string Finalized_AMaps_Histogram2D_yLabel = Finalized_AMaps_Histogram2D->GetYaxis()->GetTitle();
@@ -941,12 +1254,15 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                          "Neutron AMap for", ("Filtered " + TitlenFDReplacment + " of reco neutrons for"));
 
 #if PresentationMode
-            if (!ExamPresMode) {
-            TitleAligner(Finalized_AMaps_Histogram2D, Finalized_AMaps_Histogram2D_Title, Finalized_AMaps_Histogram2D_xLabel, Finalized_AMaps_Histogram2D_yLabel,
-                         "[GeV/c]", "[GeV/c]");
-            } else {
-            TitleAligner(Finalized_AMaps_Histogram2D, Finalized_AMaps_Histogram2D_Title, Finalized_AMaps_Histogram2D_xLabel, Finalized_AMaps_Histogram2D_yLabel,
-                         "[GeV/c]", "[GeV]");
+            if (!ExamPresMode)
+            {
+                TitleAligner(Finalized_AMaps_Histogram2D, Finalized_AMaps_Histogram2D_Title, Finalized_AMaps_Histogram2D_xLabel, Finalized_AMaps_Histogram2D_yLabel,
+                             "[GeV/c]", "[GeV/c]");
+            }
+            else
+            {
+                TitleAligner(Finalized_AMaps_Histogram2D, Finalized_AMaps_Histogram2D_Title, Finalized_AMaps_Histogram2D_xLabel, Finalized_AMaps_Histogram2D_yLabel,
+                             "[GeV/c]", "[GeV]");
             }
 #else
             TitleAligner(Finalized_AMaps_Histogram2D, Finalized_AMaps_Histogram2D_Title, Finalized_AMaps_Histogram2D_xLabel, Finalized_AMaps_Histogram2D_yLabel,
@@ -955,7 +1271,8 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
 
             string SliceVariant1, SliceVariant2, TitleInitial2Replace, TitleInitial2Replacment;
 
-            if (findSubstring(Finalized_AMaps_Histogram2DName, "TL ") && !findSubstring(Finalized_AMaps_Histogram2DName, "/TL")) {
+            if (findSubstring(Finalized_AMaps_Histogram2DName, "TL ") && !findSubstring(Finalized_AMaps_Histogram2DName, "/TL"))
+            {
                 SliceVariant1 = "TL";
 
                 TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
@@ -964,7 +1281,9 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
 
                 TitleAligner(Finalized_AMaps_Histogram2D, Finalized_AMaps_Histogram2D_Title, Finalized_AMaps_Histogram2D_xLabel, Finalized_AMaps_Histogram2D_yLabel,
                              TitleInitial2Replace, TitleInitial2Replacment);
-            } else if (findSubstring(Finalized_AMaps_Histogram2DName, "Reco ")) {
+            }
+            else if (findSubstring(Finalized_AMaps_Histogram2DName, "Reco "))
+            {
                 SliceVariant1 = "Reco", SliceVariant2 = "reco";
 
                 TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
@@ -973,13 +1292,17 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
 
                 TitleAligner(Finalized_AMaps_Histogram2D, Finalized_AMaps_Histogram2D_Title, Finalized_AMaps_Histogram2D_xLabel, Finalized_AMaps_Histogram2D_yLabel,
                              TitleInitial2Replace, TitleInitial2Replacment);
-            } else if (findSubstring(Finalized_AMaps_Histogram2DName, "Reco/TL ratio") &&
-                       !findSubstring(Finalized_AMaps_Histogram2DName, " AMaps ")) {
+            }
+            else if (findSubstring(Finalized_AMaps_Histogram2DName, "Reco/TL ratio") &&
+                     !findSubstring(Finalized_AMaps_Histogram2DName, " AMaps "))
+            {
                 SliceVariant1 = "#epsilon_{eff}^{" + ParticleNameShort1 + "}";
 
                 TitleAligner(Finalized_AMaps_Histogram2D, Finalized_AMaps_Histogram2D_Title, Finalized_AMaps_Histogram2D_xLabel, Finalized_AMaps_Histogram2D_yLabel,
                              "Reco/TL ratio", (SliceVariant1 + "(P_{" + ParticleNameShort1 + "},#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
-            } else if (findSubstring(Finalized_AMaps_Histogram2DName, " AMap ")) {
+            }
+            else if (findSubstring(Finalized_AMaps_Histogram2DName, " AMap "))
+            {
                 SliceVariant1 = "reco", SliceVariant2 = "Filtered";
 
                 TitleInitial2Replace = ParticleNameLong1 + " AMap for";
@@ -993,7 +1316,8 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
             TitleAligner(Finalized_AMaps_Histogram2D, Finalized_AMaps_Histogram2D_Title, Finalized_AMaps_Histogram2D_xLabel, Finalized_AMaps_Histogram2D_yLabel,
                          "(Reco./TL)", ("#epsilon_{eff}(P_{" + ParticleNameShort1 + "},#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
 
-            if (Sep_plots) {
+            if (Sep_plots)
+            {
                 Sep_canv->cd();
                 Finalized_AMaps_Histogram2D->Draw("colz"), gPad->Update();
                 Finalized_AMaps_Histogram2D->SetStats(0);
@@ -1005,9 +1329,12 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
             Finalized_AMaps_Histogram2D->Draw("colz"), gPad->Update();
         }
 
-        if (!ShowStats) {
+        if (!ShowStats)
+        {
             Finalized_AMaps_Histogram2D->SetStats(0);
-        } else {
+        }
+        else
+        {
             Finalized_AMaps_Histogram2D->SetStats(1);
         }
 
@@ -1025,57 +1352,38 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
     delete Sep_canv;
 }
 
-void AMapsPlotter(const string &InputPath = "", const bool &Sep_plots = false, const string &OutputPath = "") {
+void AMapsPlotter(const string &InputPath = "", const bool &Sep_plots = false, const string &OutputPath = "")
+{
     string PlotsPath_prefix = "12_Acceptance_maps_plots/01_AMaps_1e_cut/05_Generated_maps/";
     string PlotsPath;
 
-    if (InputPath != "") {
+    if (InputPath != "")
+    {
         PlotsPath = InputPath + PlotsPath_prefix;
-    } else {
+    }
+    else
+    {
         PlotsPath = PlotsPath_prefix;
     }
 
-    // string TL_root_file_prefix = "01_AMap_TL_-_Uniform_en_sample_2070MeV.root";
-    // string Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_en_sample_2070MeV.root";
-    // string Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_en_sample_2070MeV.root";
-    // string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_en_sample_2070MeV.root";
+    string TL_root_file_prefix, Reco_root_file_prefix, Ratio_root_file_prefix, cPart_Sep_AMaps_root_file_prefix;
+    const char *filename = PlotsPath.c_str();
 
-    string TL_root_file_prefix = "01_AMap_TL_-_Uniform_ep_sample_2070MeV.root";
-    string Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_ep_sample_2070MeV.root";
-    string Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_ep_sample_2070MeV.root";
-    string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_ep_sample_2070MeV.root";
+    SetAMapsRootFiles(filename, TL_root_file_prefix, Reco_root_file_prefix, Ratio_root_file_prefix, cPart_Sep_AMaps_root_file_prefix);
 
-    // string TL_root_file_prefix = "01_AMap_TL_-_Uniform_1e_sample_2070MeV.root";
-    // string Reco_root_file_prefix = "02_AMap_Reco_-_Uniform_1e_sample_2070MeV.root";
-    // string Ratio_root_file_prefix = "03_AMap_Ratio_-_Uniform_1e_sample_2070MeV.root";
-    // string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_Uniform_1e_sample_2070MeV.root";
+    plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath, 3, 3);
+    plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath, 3, 3);
+    plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath, 3, 3);
+    plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath, 3, 3);
+    // plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath, 6, 5);
+    // plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath, 6, 5);
+    // plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath, 6, 5);
+    // plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath, 6, 5);
 
-    // string TL_root_file_prefix = "01_AMap_TL_-_C12x4_simulation_G18_Q204_6GeV.root";
-    // string Reco_root_file_prefix = "02_AMap_Reco_-_C12x4_simulation_G18_Q204_6GeV.root";
-    // string Ratio_root_file_prefix = "03_AMap_Ratio_-_C12x4_simulation_G18_Q204_6GeV.root";
-    // string cPart_Sep_AMaps_root_file_prefix = "04_cPart_Sep_AMaps_-_C12x4_simulation_G18_Q204_6GeV.root";
+    plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath, 3,3);
+    plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath, 3,3);
+    plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath, 3,3);
+    plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath, 3,3);
 
-    plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath);
-    plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath);
-    plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath);
-    plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath);
-//     plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "e", 61, Sep_plots, OutputPath);
-//     plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "e", 61, Sep_plots, OutputPath);
-//     plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "e", 61, Sep_plots, OutputPath);
-//     plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "e", 61, Sep_plots, OutputPath);
-// //    plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "e", 9,Sep_plots, OutputPath);
-// //    plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "e", 9,Sep_plots, OutputPath);
-// //    plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "e", 9,Sep_plots, OutputPath);
-// //    plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "e", 9,Sep_plots, OutputPath);
-
-    plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath);
-    plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath);
-    plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath);
-    plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath);
-    // plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "p", 7, Sep_plots, OutputPath);
-    // plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "p", 7, Sep_plots, OutputPath);
-    // plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "p", 7, Sep_plots, OutputPath);
-    // plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "p", 7, Sep_plots, OutputPath);
-
-    plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "n", 4, Sep_plots, OutputPath);
+    plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "n", 4, Sep_plots, OutputPath, 1, 1);
 }
