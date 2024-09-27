@@ -25790,14 +25790,14 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         myLogFile << "num_of_events_with_nFD_CLA12:\t\t" << num_of_events_with_nFD_CLA12 << "\n";
         myLogFile << "num_of_events_with_nFD_CLA12_PCAL:\t" << num_of_events_with_nFD_CLA12_PCAL << "\n";
         myLogFile << "num_of_events_with_nFD_CLA12_ECIN:\t" << num_of_events_with_nFD_CLA12_ECIN << "\n";
-        myLogFile << "num_of_events_with_nFD_CLA12_ECOUT:\t" << num_of_events_with_nFD_CLA12_Ecout << "\n";
+        myLogFile << "num_of_events_with_nFD_CLA12_ECOUT:\t" << num_of_events_with_nFD_CLA12_ECOUT << "\n";
         myLogFile << "num_of_events_with_nFD_CLA12_EC:\t" << num_of_events_with_nFD_CLA12_EC << "\n\n";
 
         myLogFile << "-- FD photon hit counts in ECAL -------------------------------------------\n";
         myLogFile << "num_of_events_with_phFD_CLA12:\t\t" << num_of_events_with_phFD_CLA12 << "\n";
         myLogFile << "num_of_events_with_phFD_CLA12_PCAL:\t" << num_of_events_with_phFD_CLA12_PCAL << "\n";
         myLogFile << "num_of_events_with_phFD_CLA12_ECIN:\t" << num_of_events_with_phFD_CLA12_ECIN << "\n";
-        myLogFile << "num_of_events_with_phFD_CLA12_ECOUT:\t" << num_of_events_with_phFD_CLA12_Ecout << "\n";
+        myLogFile << "num_of_events_with_phFD_CLA12_ECOUT:\t" << num_of_events_with_phFD_CLA12_ECOUT << "\n";
         myLogFile << "num_of_events_with_phFD_CLA12_EC:\t" << num_of_events_with_phFD_CLA12_EC << "\n\n";
     }
 
