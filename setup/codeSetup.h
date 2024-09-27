@@ -241,7 +241,7 @@ void ConfigSampleChain()
 
     // Uniform samples --------------------------------------------------------------------------------------------------------------------------------------------------
 
-    /* Uniform sample @ 2GeV */
+    // /* Uniform sample @ 2GeV */
 
     // Uniform 1e @ 2GeV:
     AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_1e";
