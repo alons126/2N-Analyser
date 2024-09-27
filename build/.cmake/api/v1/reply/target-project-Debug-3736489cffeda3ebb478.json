@@ -254,7 +254,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/opt/homebrew/Cellar/root/6.32.04/include/root"
+					"path" : "/opt/homebrew/Cellar/root/6.32.06/include/root"
 				},
 				{
 					"backtrace" : 4,
@@ -461,7 +461,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/opt/homebrew/Cellar/root/6.32.04/include/root"
+					"path" : "/opt/homebrew/Cellar/root/6.32.06/include/root"
 				},
 				{
 					"backtrace" : 4,
@@ -621,97 +621,97 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libCore.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libCore.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libImt.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libImt.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libRIO.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libRIO.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libNet.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libNet.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libHist.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libHist.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libGraf.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libGraf.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libGraf3d.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libGraf3d.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libGpad.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libGpad.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libROOTDataFrame.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libROOTDataFrame.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libTree.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libTree.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libTreePlayer.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libTreePlayer.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libRint.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libRint.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libPostscript.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libPostscript.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libMatrix.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libMatrix.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libPhysics.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libPhysics.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libMathCore.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libMathCore.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libThread.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libThread.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libMultiProc.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libMultiProc.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/root/6.32.04/lib/root/libROOTVecOps.so",
+				"fragment" : "/opt/homebrew/Cellar/root/6.32.06/lib/root/libROOTVecOps.so",
 				"role" : "libraries"
 			}
 		],

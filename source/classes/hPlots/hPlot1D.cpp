@@ -136,7 +136,7 @@ hPlot1D::hPlot1D(std::string hst, std::string ht, std::string xat, double LowerX
 }
 
 //<editor-fold desc="histPlotter1D function (old)">
-void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool normalize_Histogram, bool custom_normalization,
+void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool normalize_Histogram, bool custom_normalization,
                             double custom_normalization_factor,
                             std::string Histogram1DTitle, std::string Histogram1DTitleReactions, double titleSize, double labelSizex,
                             double labelSizey,
@@ -301,7 +301,7 @@ void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool 
 
     if (LogScalePlot)
     {
-        Histogram1DCanvas->SetLogy(1);
+        HistogramCanvas->SetLogy(1);
         string Histogram1DSaveNameDir;
 
         if (finalState == "")
@@ -314,18 +314,19 @@ void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool 
         }
 
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
-        Histogram1DCanvas->SaveAs(SaveDir);
+        HistogramCanvas->SaveAs(SaveDir);
 
-        CanvasPDF->cd(CanvasPDF_ind);
-        Histogram1DCanvas->DrawClonePad();
-        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Histogram_OutPDF);
-        ++CanvasPDF_ind;
+        // CanvasPDF->cd(CanvasPDF_ind);
+        // HistogramCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Histogram_OutPDF);
+        // ++CanvasPDF_ind;
     }
 
     if (LinearScalePlot)
     {
-        Histogram1DCanvas->SetLogy(0);
+        HistogramCanvas->SetLogy(0);
         string Histogram1DSaveNameDir;
 
         if (finalState == "")
@@ -338,13 +339,14 @@ void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool 
         }
 
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
-        Histogram1DCanvas->SaveAs(SaveDir);
+        HistogramCanvas->SaveAs(SaveDir);
 
-        CanvasPDF->cd(CanvasPDF_ind);
-        Histogram1DCanvas->DrawClonePad();
-        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Histogram_OutPDF);
-        ++CanvasPDF_ind;
+        // CanvasPDF->cd(CanvasPDF_ind);
+        // HistogramCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Histogram_OutPDF);
+        // ++CanvasPDF_ind;
     }
 
     if (AddToStack)
@@ -354,13 +356,13 @@ void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool 
         Histogram1DStack->Add(Histogram1D);
     }
 
-    Histogram1DCanvas->cd();
-    Histogram1DCanvas->Clear();
+    HistogramCanvas->cd();
+    HistogramCanvas->Clear();
 }
 //</editor-fold>
 
 //<editor-fold desc="histPlotter1D function (old, stackless)">
-void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool normalize_Histogram, bool custom_normalization,
+void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool normalize_Histogram, bool custom_normalization,
                             double custom_normalization_factor,
                             string Histogram1DTitle, string Histogram1DTitleReactions, double titleSize, double labelSizex, double labelSizey,
                             TList *Histogram_list, const char *Histogram_OutPDF,
@@ -524,7 +526,7 @@ void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool 
 
     if (LogScalePlot)
     {
-        Histogram1DCanvas->SetLogy(1);
+        HistogramCanvas->SetLogy(1);
         string Histogram1DSaveNameDir;
 
         if (finalState == "")
@@ -537,18 +539,19 @@ void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool 
         }
 
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
-        Histogram1DCanvas->SaveAs(SaveDir);
+        HistogramCanvas->SaveAs(SaveDir);
 
-        CanvasPDF->cd(CanvasPDF_ind);
-        Histogram1DCanvas->DrawClonePad();
-        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Histogram_OutPDF);
-        ++CanvasPDF_ind;
+        // CanvasPDF->cd(CanvasPDF_ind);
+        // HistogramCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Histogram_OutPDF);
+        // ++CanvasPDF_ind;
     }
 
     if (LinearScalePlot)
     {
-        Histogram1DCanvas->SetLogy(0);
+        HistogramCanvas->SetLogy(0);
         string Histogram1DSaveNameDir;
 
         if (finalState == "")
@@ -561,24 +564,25 @@ void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool 
         }
 
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
-        Histogram1DCanvas->SaveAs(SaveDir);
+        HistogramCanvas->SaveAs(SaveDir);
 
-        CanvasPDF->cd(CanvasPDF_ind);
-        Histogram1DCanvas->DrawClonePad();
-        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Histogram_OutPDF);
-        ++CanvasPDF_ind;
+        // CanvasPDF->cd(CanvasPDF_ind);
+        // HistogramCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Histogram_OutPDF);
+        // ++CanvasPDF_ind;
     }
 
-    Histogram1DCanvas->cd();
-    Histogram1DCanvas->Clear();
+    HistogramCanvas->cd();
+    HistogramCanvas->Clear();
 }
 //</editor-fold>
 
 // histPlotter1D function (unsymmetric cuts for SF plots) ---------------------------------------------------------------------------------------------------------------
 
 //<editor-fold desc="histPlotter1D function (unsymmetric cuts for SF plots)">
-void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool normalize_Histogram, bool custom_normalization,
+void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool normalize_Histogram, bool custom_normalization,
                             double custom_normalization_factor,
                             std::string Histogram1DTitle, std::string Histogram1DTitleReactions, TList *Histogram_list, const char *Histogram_OutPDF, int lineWidth,
                             bool LogScalePlot,
@@ -747,30 +751,32 @@ void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool 
 
     if (LogScalePlot)
     {
-        Histogram1DCanvas->SetLogy(1);
+        HistogramCanvas->SetLogy(1);
         std::string Histogram1DSaveNameDir = Histogram1DSaveNamePath + Histogram1DSaveName + "_log_scale_" + finalState + ".png";
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
-        Histogram1DCanvas->SaveAs(SaveDir);
+        HistogramCanvas->SaveAs(SaveDir);
 
-        CanvasPDF->cd(CanvasPDF_ind);
-        Histogram1DCanvas->DrawClonePad();
-        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Histogram_OutPDF);
-        ++CanvasPDF_ind;
+        // CanvasPDF->cd(CanvasPDF_ind);
+        // HistogramCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Histogram_OutPDF);
+        // ++CanvasPDF_ind;
     }
 
     if (LinearScalePlot)
     {
-        Histogram1DCanvas->SetLogy(0);
+        HistogramCanvas->SetLogy(0);
         std::string Histogram1DSaveNameDir = Histogram1DSaveNamePath + Histogram1DSaveName + "_linear_scale_" + finalState + ".png";
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
-        Histogram1DCanvas->SaveAs(SaveDir);
+        HistogramCanvas->SaveAs(SaveDir);
 
-        CanvasPDF->cd(CanvasPDF_ind);
-        Histogram1DCanvas->DrawClonePad();
-        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Histogram_OutPDF);
-        ++CanvasPDF_ind;
+        // CanvasPDF->cd(CanvasPDF_ind);
+        // HistogramCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Histogram_OutPDF);
+        // ++CanvasPDF_ind;
     }
 
     if (AddToStack)
@@ -780,13 +786,13 @@ void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool 
         Histogram1DStack->Add(Histogram1D);
     }
 
-    Histogram1DCanvas->cd();
-    Histogram1DCanvas->Clear();
+    HistogramCanvas->cd();
+    HistogramCanvas->Clear();
 }
 //</editor-fold>
 
 //<editor-fold desc="histPlotter1D function (unsymmetric cuts for SF plots, stackless)">
-void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool normalize_Histogram, bool custom_normalization,
+void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool normalize_Histogram, bool custom_normalization,
                             double custom_normalization_factor,
                             string Histogram1DTitle, string Histogram1DTitleReactions, TList *Histogram_list, const char *Histogram_OutPDF, int lineWidth, bool LogScalePlot,
                             bool LinearScalePlot,
@@ -955,7 +961,7 @@ void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool 
 
     if (LogScalePlot)
     {
-        Histogram1DCanvas->SetLogy(1);
+        HistogramCanvas->SetLogy(1);
         string Histogram1DSaveNameDir;
 
         if (finalState == "")
@@ -968,18 +974,19 @@ void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool 
         }
 
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
-        Histogram1DCanvas->SaveAs(SaveDir);
+        HistogramCanvas->SaveAs(SaveDir);
 
-        CanvasPDF->cd(CanvasPDF_ind);
-        Histogram1DCanvas->DrawClonePad();
-        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Histogram_OutPDF);
-        ++CanvasPDF_ind;
+        // CanvasPDF->cd(CanvasPDF_ind);
+        // HistogramCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Histogram_OutPDF);
+        // ++CanvasPDF_ind;
     }
 
     if (LinearScalePlot)
     {
-        Histogram1DCanvas->SetLogy(0);
+        HistogramCanvas->SetLogy(0);
         string Histogram1DSaveNameDir;
 
         if (finalState == "")
@@ -992,24 +999,25 @@ void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool 
         }
 
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
-        Histogram1DCanvas->SaveAs(SaveDir);
+        HistogramCanvas->SaveAs(SaveDir);
 
-        CanvasPDF->cd(CanvasPDF_ind);
-        Histogram1DCanvas->DrawClonePad();
-        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Histogram_OutPDF);
-        ++CanvasPDF_ind;
+        // CanvasPDF->cd(CanvasPDF_ind);
+        // HistogramCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Histogram_OutPDF);
+        // ++CanvasPDF_ind;
     }
 
-    Histogram1DCanvas->cd();
-    Histogram1DCanvas->Clear();
+    HistogramCanvas->cd();
+    HistogramCanvas->Clear();
 }
 //</editor-fold>
 
 // histPlotter1D function (one-sided cuts for Nphe plots) ---------------------------------------------------------------------------------------------------------------
 
 //<editor-fold desc="histPlotter1D function (one-sided cuts for Nphe plots)">
-void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool normalize_Histogram, bool custom_normalization,
+void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool normalize_Histogram, bool custom_normalization,
                             double custom_normalization_factor,
                             std::string Histogram1DTitle, std::string Histogram1DTitleReactions, TList *Histogram_list, const char *Histogram_OutPDF, int lineWidth,
                             bool LogScalePlot,
@@ -1142,30 +1150,32 @@ void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool 
 
     if (LogScalePlot)
     {
-        Histogram1DCanvas->SetLogy(1);
+        HistogramCanvas->SetLogy(1);
         std::string Histogram1DSaveNameDir = Histogram1DSaveNamePath + Histogram1DSaveName + "_log_scale_" + finalState + ".png";
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
-        Histogram1DCanvas->SaveAs(SaveDir);
+        HistogramCanvas->SaveAs(SaveDir);
 
-        CanvasPDF->cd(CanvasPDF_ind);
-        Histogram1DCanvas->DrawClonePad();
-        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Histogram_OutPDF);
-        ++CanvasPDF_ind;
+        // CanvasPDF->cd(CanvasPDF_ind);
+        // HistogramCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Histogram_OutPDF);
+        // ++CanvasPDF_ind;
     }
 
     if (LinearScalePlot)
     {
-        Histogram1DCanvas->SetLogy(0);
+        HistogramCanvas->SetLogy(0);
         std::string Histogram1DSaveNameDir = Histogram1DSaveNamePath + Histogram1DSaveName + "_linear_scale_" + finalState + ".png";
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
-        Histogram1DCanvas->SaveAs(SaveDir);
+        HistogramCanvas->SaveAs(SaveDir);
 
-        CanvasPDF->cd(CanvasPDF_ind);
-        Histogram1DCanvas->DrawClonePad();
-        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Histogram_OutPDF);
-        ++CanvasPDF_ind;
+        // CanvasPDF->cd(CanvasPDF_ind);
+        // HistogramCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Histogram_OutPDF);
+        // ++CanvasPDF_ind;
     }
 
     if (AddToStack)
@@ -1175,13 +1185,13 @@ void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool 
         Histogram1DStack->Add(Histogram1D);
     }
 
-    Histogram1DCanvas->cd();
-    Histogram1DCanvas->Clear();
+    HistogramCanvas->cd();
+    HistogramCanvas->Clear();
 }
 //</editor-fold>
 
 //<editor-fold desc="histPlotter1D function (one-sided cuts for Nphe plots, stackless)">
-void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool normalize_Histogram, bool custom_normalization,
+void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool normalize_Histogram, bool custom_normalization,
                             double custom_normalization_factor,
                             string Histogram1DTitle, string Histogram1DTitleReactions, TList *Histogram_list, const char *Histogram_OutPDF, int lineWidth, bool LogScalePlot,
                             bool LinearScalePlot,
@@ -1334,76 +1344,80 @@ void hPlot1D::histPlotter1D(TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool 
 
     if (LogScalePlot)
     {
-        Histogram1DCanvas->SetLogy(1);
+        HistogramCanvas->SetLogy(1);
         if (finalState == "")
         {
             string Histogram1DSaveNameDir = Histogram1DSaveNamePath + Histogram1DSaveName + "_log_scale.png";
             const char *SaveDir = Histogram1DSaveNameDir.c_str();
-            Histogram1DCanvas->SaveAs(SaveDir);
+            HistogramCanvas->SaveAs(SaveDir);
 
-            CanvasPDF->cd(CanvasPDF_ind);
-            Histogram1DCanvas->DrawClonePad();
-            // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-            CanvasPDF->Print(Histogram_OutPDF);
-            ++CanvasPDF_ind;
+            // CanvasPDF->cd(CanvasPDF_ind);
+            // HistogramCanvas->DrawClonePad();
+            // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+            // CanvasPDF->Print(Histogram_OutPDF);
+            HistogramCanvas->Print(Histogram_OutPDF);
+            // ++CanvasPDF_ind;
         }
         else
         {
             string Histogram1DSaveNameDir = Histogram1DSaveNamePath + Histogram1DSaveName + "_log_scale_" + finalState + ".png";
             const char *SaveDir = Histogram1DSaveNameDir.c_str();
-            Histogram1DCanvas->SaveAs(SaveDir);
+            HistogramCanvas->SaveAs(SaveDir);
 
-            CanvasPDF->cd(CanvasPDF_ind);
-            Histogram1DCanvas->DrawClonePad();
-            // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-            CanvasPDF->Print(Histogram_OutPDF);
-            ++CanvasPDF_ind;
+            // CanvasPDF->cd(CanvasPDF_ind);
+            // HistogramCanvas->DrawClonePad();
+            // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+            // CanvasPDF->Print(Histogram_OutPDF);
+            HistogramCanvas->Print(Histogram_OutPDF);
+            // ++CanvasPDF_ind;
         }
     }
 
     if (LinearScalePlot)
     {
-        Histogram1DCanvas->SetLogy(0);
+        HistogramCanvas->SetLogy(0);
         if (finalState == "")
         {
             string Histogram1DSaveNameDir = Histogram1DSaveNamePath + Histogram1DSaveName + "_linear_scale.png";
             const char *SaveDir = Histogram1DSaveNameDir.c_str();
-            Histogram1DCanvas->SaveAs(SaveDir);
+            HistogramCanvas->SaveAs(SaveDir);
 
-            CanvasPDF->cd(CanvasPDF_ind);
-            Histogram1DCanvas->DrawClonePad();
-            // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-            CanvasPDF->Print(Histogram_OutPDF);
-            ++CanvasPDF_ind;
+            // CanvasPDF->cd(CanvasPDF_ind);
+            // HistogramCanvas->DrawClonePad();
+            // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+            // CanvasPDF->Print(Histogram_OutPDF);
+            HistogramCanvas->Print(Histogram_OutPDF);
+            // ++CanvasPDF_ind;
         }
         else
         {
             string Histogram1DSaveNameDir = Histogram1DSaveNamePath + Histogram1DSaveName + "_linear_scale_" + finalState + ".png";
             const char *SaveDir = Histogram1DSaveNameDir.c_str();
-            Histogram1DCanvas->SaveAs(SaveDir);
+            HistogramCanvas->SaveAs(SaveDir);
 
-            CanvasPDF->cd(CanvasPDF_ind);
-            Histogram1DCanvas->DrawClonePad();
-            // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-            CanvasPDF->Print(Histogram_OutPDF);
-            ++CanvasPDF_ind;
+            // CanvasPDF->cd(CanvasPDF_ind);
+            // HistogramCanvas->DrawClonePad();
+            // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+            // CanvasPDF->Print(Histogram_OutPDF);
+            HistogramCanvas->Print(Histogram_OutPDF);
+            // ++CanvasPDF_ind;
         }
     }
 
-    Histogram1DCanvas->cd();
-    Histogram1DCanvas->Clear();
+    HistogramCanvas->cd();
+    HistogramCanvas->Clear();
 }
 //</editor-fold>
 
 // histPlotter1D function (unified) -------------------------------------------------------------------------------------------------------------------------------------
 
 //<editor-fold desc="histPlotter1D function (unified)">
-void hPlot1D::histPlotter1D(const std::string &SampleName, TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool normalize_Histogram,
+void hPlot1D::histPlotter1D(const std::string &SampleName, TCanvas *HistogramCanvas, TH1D *Histogram1D, bool normalize_Histogram,
                             bool custom_normalization,
                             double custom_normalization_factor, TList *Histogram_list, const char *Histogram_OutPDF, THStack *Histogram1DStack, double plot_lower_cut = -9999,
                             double plot_upper_cut = 9999, double plot_Xmax = 0, bool plot_max = true)
 {
-    Histogram1DCanvas->cd();
+    HistogramCanvas->cd();
     std::string sNameFlag;
 
     if (findSubstring(SampleName, "sim"))
@@ -1588,7 +1602,7 @@ void hPlot1D::histPlotter1D(const std::string &SampleName, TCanvas *Histogram1DC
 
     if (LogScalePlot)
     {
-        Histogram1DCanvas->SetLogy(1);
+        HistogramCanvas->SetLogy(1);
         std::string Histogram1DSaveNameDir;
 
         if (Histogram1DTitles["DetectorRegion"] == "")
@@ -1602,18 +1616,19 @@ void hPlot1D::histPlotter1D(const std::string &SampleName, TCanvas *Histogram1DC
         }
 
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
-        Histogram1DCanvas->SaveAs(SaveDir);
+        HistogramCanvas->SaveAs(SaveDir);
 
-        CanvasPDF->cd(CanvasPDF_ind);
-        Histogram1DCanvas->DrawClonePad();
-        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Histogram_OutPDF);
-        ++CanvasPDF_ind;
+        // CanvasPDF->cd(CanvasPDF_ind);
+        // HistogramCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Histogram_OutPDF);
+        // ++CanvasPDF_ind;
     }
 
     if (LinearScalePlot)
     {
-        Histogram1DCanvas->SetLogy(0);
+        HistogramCanvas->SetLogy(0);
         std::string Histogram1DSaveNameDir;
 
         if (Histogram1DTitles["DetectorRegion"] == "")
@@ -1627,13 +1642,14 @@ void hPlot1D::histPlotter1D(const std::string &SampleName, TCanvas *Histogram1DC
         }
 
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
-        Histogram1DCanvas->SaveAs(SaveDir);
+        HistogramCanvas->SaveAs(SaveDir);
 
-        CanvasPDF->cd(CanvasPDF_ind);
-        Histogram1DCanvas->DrawClonePad();
-        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Histogram_OutPDF);
-        ++CanvasPDF_ind;
+        // CanvasPDF->cd(CanvasPDF_ind);
+        // HistogramCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Histogram_OutPDF);
+        // ++CanvasPDF_ind;
     }
 
     if (AddToStack)
@@ -1643,19 +1659,19 @@ void hPlot1D::histPlotter1D(const std::string &SampleName, TCanvas *Histogram1DC
         Histogram1DStack->Add(Histogram1D);
     }
 
-    Histogram1DCanvas->cd();
-    Histogram1DCanvas->Clear();
+    HistogramCanvas->cd();
+    HistogramCanvas->Clear();
 }
 //</editor-fold>
 
 //<editor-fold desc="histPlotter1D function (unified, stackless)">
-void hPlot1D::histPlotter1D(const std::string &SampleName, TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool normalize_Histogram,
+void hPlot1D::histPlotter1D(const std::string &SampleName, TCanvas *HistogramCanvas, TH1D *Histogram1D, bool normalize_Histogram,
                             bool custom_normalization,
                             double custom_normalization_factor, TList *Histogram_list, const char *Histogram_OutPDF, double plot_lower_cut = -9999, double plot_upper_cut = 9999,
                             double plot_Xmax = 0,
                             bool plot_max = true)
 {
-    Histogram1DCanvas->cd();
+    HistogramCanvas->cd();
     std::string sNameFlag;
 
     if (findSubstring(SampleName, "sim"))
@@ -1841,7 +1857,7 @@ void hPlot1D::histPlotter1D(const std::string &SampleName, TCanvas *Histogram1DC
 
     if (LogScalePlot)
     {
-        Histogram1DCanvas->SetLogy(1);
+        HistogramCanvas->SetLogy(1);
         std::string Histogram1DSaveNameDir;
 
         if (Histogram1DTitles["DetectorRegion"] == "")
@@ -1854,18 +1870,19 @@ void hPlot1D::histPlotter1D(const std::string &SampleName, TCanvas *Histogram1DC
                 Histogram1DSaveNamePath + sNameFlag + Histogram1DSaveName + "_log_scale_" + Histogram1DTitles["DetectorRegion"] + ".png";
         }
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
-        Histogram1DCanvas->SaveAs(SaveDir);
+        HistogramCanvas->SaveAs(SaveDir);
 
-        CanvasPDF->cd(CanvasPDF_ind);
-        Histogram1DCanvas->DrawClonePad();
-        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Histogram_OutPDF);
-        ++CanvasPDF_ind;
+        // CanvasPDF->cd(CanvasPDF_ind);
+        // HistogramCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Histogram_OutPDF);
+        // ++CanvasPDF_ind;
     }
 
     if (LinearScalePlot)
     {
-        Histogram1DCanvas->SetLogy(0);
+        HistogramCanvas->SetLogy(0);
         std::string Histogram1DSaveNameDir;
 
         if (Histogram1DTitles["DetectorRegion"] == "")
@@ -1878,25 +1895,26 @@ void hPlot1D::histPlotter1D(const std::string &SampleName, TCanvas *Histogram1DC
                 Histogram1DSaveNamePath + sNameFlag + Histogram1DSaveName + "_linear_scale_" + Histogram1DTitles["DetectorRegion"] + ".png";
         }
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
-        Histogram1DCanvas->SaveAs(SaveDir);
+        HistogramCanvas->SaveAs(SaveDir);
 
-        CanvasPDF->cd(CanvasPDF_ind);
-        Histogram1DCanvas->DrawClonePad();
-        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Histogram_OutPDF);
+        // CanvasPDF->cd(CanvasPDF_ind);
+        // HistogramCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Histogram_OutPDF);
 
-        ++CanvasPDF_ind;
+        // ++CanvasPDF_ind;
     }
 
-    Histogram1DCanvas->cd();
-    Histogram1DCanvas->Clear();
+    HistogramCanvas->cd();
+    HistogramCanvas->Clear();
 }
 //</editor-fold>
 
 // histPlotter1DwFit function (unified) -------------------------------------------------------------------------------------------------------------------------------------
 
 //<editor-fold desc="histPlotter1DwFit function">
-void hPlot1D::histPlotter1DwFit(std::string SampleName, TCanvas *Histogram1DCanvas, TH1D *Histogram1D, bool normalize_Histogram,
+void hPlot1D::histPlotter1DwFit(std::string SampleName, TCanvas *HistogramCanvas, TH1D *Histogram1D, bool normalize_Histogram,
                                 bool custom_normalization, double custom_normalization_factor, string Histogram1DTitle,
                                 string Histogram1DTitleReactions, TList *Histogram_list, const char *Histogram_OutPDF, string Histogram1DSaveName,
                                 const string &Histogram1DSaveNamePath, string finalState, double &plot_Xmax, double &plot_lcut, double &plot_ucut,
@@ -2168,7 +2186,7 @@ void hPlot1D::histPlotter1DwFit(std::string SampleName, TCanvas *Histogram1DCanv
 
     if (LogScalePlot)
     {
-        Histogram1DCanvas->SetLogy(1);
+        HistogramCanvas->SetLogy(1);
         std::string Histogram1DSaveNameDir;
 
         if (Histogram1DTitles["DetectorRegion"] == "")
@@ -2182,18 +2200,19 @@ void hPlot1D::histPlotter1DwFit(std::string SampleName, TCanvas *Histogram1DCanv
         }
 
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
-        Histogram1DCanvas->SaveAs(SaveDir);
+        HistogramCanvas->SaveAs(SaveDir);
 
-        CanvasPDF->cd(CanvasPDF_ind);
-        Histogram1DCanvas->DrawClonePad();
-        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Histogram_OutPDF);
-        ++CanvasPDF_ind;
+        // CanvasPDF->cd(CanvasPDF_ind);
+        // HistogramCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Histogram_OutPDF);
+        // ++CanvasPDF_ind;
     }
 
     if (LinearScalePlot)
     {
-        Histogram1DCanvas->SetLogy(0);
+        HistogramCanvas->SetLogy(0);
         std::string Histogram1DSaveNameDir;
 
         if (Histogram1DTitles["DetectorRegion"] == "")
@@ -2207,19 +2226,20 @@ void hPlot1D::histPlotter1DwFit(std::string SampleName, TCanvas *Histogram1DCanv
         }
 
         const char *SaveDir = Histogram1DSaveNameDir.c_str();
-        Histogram1DCanvas->SaveAs(SaveDir);
+        HistogramCanvas->SaveAs(SaveDir);
 
-        CanvasPDF->cd(CanvasPDF_ind);
-        Histogram1DCanvas->DrawClonePad();
-        // CopyPadContent((TPad *)Histogram1DCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
-        CanvasPDF->Print(Histogram_OutPDF);
-        ++CanvasPDF_ind;
+        // CanvasPDF->cd(CanvasPDF_ind);
+        // HistogramCanvas->DrawClonePad();
+        // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
+        // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Histogram_OutPDF);
+        // ++CanvasPDF_ind;
     }
 
     Histogram_list->Add(Histogram1D);
 
-    Histogram1DCanvas->cd();
-    Histogram1DCanvas->Clear();
+    HistogramCanvas->cd();
+    HistogramCanvas->Clear();
 }
 //</editor-fold>
 

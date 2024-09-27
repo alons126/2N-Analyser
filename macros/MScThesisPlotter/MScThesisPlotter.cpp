@@ -83,18 +83,22 @@ void MScThesisPlotter()
     //</editor-fold>
 
     //<editor-fold desc="AMaps runs">
-    const char *plots_AMaps = "/Users/alon/Downloads/Uniform_1e_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R2/Uniform_1e_sample_2070MeV_plots.root";
-    const char *plots_AMaps_plotsPath = "/Users/alon/Downloads/Uniform_1e_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R2/";
-    const char *plots_AMaps_GenMaps = "/Users/alon/Downloads/Uniform_1e_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R2/12_Acceptance_maps_plots/01_AMaps_1e_cut/05_Generated_maps/";
+    const string costumTopDir = "_R3";
+    const char *plots_AMaps = "/Users/alon/Downloads/Uniform_1e_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R3/Uniform_1e_sample_2070MeV_plots.root";
+    const char *plots_AMaps_plotsPath = "/Users/alon/Downloads/Uniform_1e_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R3/";
+    const char *plots_AMaps_GenMaps = "/Users/alon/Downloads/Uniform_1e_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R3/12_Acceptance_maps_plots/01_AMaps_1e_cut/05_Generated_maps/";
 
-    // const char *plots_AMaps = "/Users/alon/Downloads/Uniform_ep_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R2/Uniform_ep_sample_2070MeV_plots.root";
-    // const char *plots_AMaps_plotsPath = "/Users/alon/Downloads/Uniform_ep_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R2/";
-    // const char *plots_AMaps_GenMaps = "/Users/alon/Downloads/Uniform_ep_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R2/12_Acceptance_maps_plots/01_AMaps_1e_cut/05_Generated_maps/";
+    // const string costumTopDir = "_R3";
+    // const char *plots_AMaps = "/Users/alon/Downloads/Uniform_ep_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R3/Uniform_ep_sample_2070MeV_plots.root";
+    // const char *plots_AMaps_plotsPath = "/Users/alon/Downloads/Uniform_ep_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R3/";
+    // const char *plots_AMaps_GenMaps = "/Users/alon/Downloads/Uniform_ep_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R3/12_Acceptance_maps_plots/01_AMaps_1e_cut/05_Generated_maps/";
 
-    // const char *plots_AMaps = "/Users/alon/Downloads/Uniform_en_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R2/Uniform_en_sample_2070MeV_plots.root";
-    // const char *plots_AMaps_plotsPath = "/Users/alon/Downloads/Uniform_en_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R2/";
-    // const char *plots_AMaps_GenMaps = "/Users/alon/Downloads/Uniform_en_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R2/12_Acceptance_maps_plots/01_AMaps_1e_cut/05_Generated_maps/";
+    // const string costumTopDir = "_R3";
+    // const char *plots_AMaps = "/Users/alon/Downloads/Uniform_en_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R3/Uniform_en_sample_2070MeV_plots.root";
+    // const char *plots_AMaps_plotsPath = "/Users/alon/Downloads/Uniform_en_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R3/";
+    // const char *plots_AMaps_GenMaps = "/Users/alon/Downloads/Uniform_en_sample_2070MeV_S03AC_NC_AMaps_ChainRun_R3/12_Acceptance_maps_plots/01_AMaps_1e_cut/05_Generated_maps/";
 
+    // const string costumTopDir = "";
     // const char *plots_AMaps = "/mnt/f/C12x4_sim_G18_Q204_6GeV/02_AMaps_runs/v3/C12x4_simulation_G18_Q204_6GeV_S03AC_NC_AMaps_v3"
     //                           "/C12x4_simulation_G18_Q204_6GeV_plots.root";
     // const char *plots_AMaps_plotsPath = "/mnt/f/C12x4_sim_G18_Q204_6GeV/02_AMaps_runs/v3/C12x4_simulation_G18_Q204_6GeV_S03AC_NC_AMaps_v3/";
@@ -185,353 +189,353 @@ void MScThesisPlotter()
     //<editor-fold desc="Make directories">
 
     //<editor-fold desc="Preselection_Sim">
-    const string PreselectionSimFolder = ConfigeTopDir(plots_AMaps_plotsPath) + "/Preselection_Sim";
+    const string PreselectionSimFolder = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Preselection_Sim";
     system(("rm -r " + PreselectionSimFolder).c_str());
     system(("mkdir -p " + PreselectionSimFolder).c_str());
 
     //<editor-fold desc="Vertex cuts">
-    const string VertexCutsFolderSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Preselection_Sim/01_Vertex_Cuts_Sim";
+    const string VertexCutsFolderSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Preselection_Sim/01_Vertex_Cuts_Sim";
     system(("mkdir -p " + VertexCutsFolderSim).c_str());
 
-    const string VertexCutsFolderSimBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Preselection_Sim/01_Vertex_Cuts_Sim/Before_Cuts_Sim";
+    const string VertexCutsFolderSimBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Preselection_Sim/01_Vertex_Cuts_Sim/Before_Cuts_Sim";
     system(("mkdir -p " + VertexCutsFolderSimBC).c_str());
 
-    const string VertexCutsFolderSimAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Preselection_Sim/01_Vertex_Cuts_Sim/After_Cuts_Sim";
+    const string VertexCutsFolderSimAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Preselection_Sim/01_Vertex_Cuts_Sim/After_Cuts_Sim";
     system(("mkdir -p " + VertexCutsFolderSimAC).c_str());
     //</editor-fold>
 
     //<editor-fold desc="Vertex correlation cuts">
-    const string VertexCorrCutsFolderSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Preselection_Sim/02_Vertex_Corr_Cuts_Sim";
+    const string VertexCorrCutsFolderSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Preselection_Sim/02_Vertex_Corr_Cuts_Sim";
     system(("mkdir -p " + VertexCutsFolderSim).c_str());
 
-    const string VertexCorrCutsFolderSimBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Preselection_Sim/02_Vertex_Corr_Cuts_Sim/Before_Cuts_Sim";
+    const string VertexCorrCutsFolderSimBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Preselection_Sim/02_Vertex_Corr_Cuts_Sim/Before_Cuts_Sim";
     system(("mkdir -p " + VertexCorrCutsFolderSimBC).c_str());
 
-    const string VertexCorrCutsFolderSimAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Preselection_Sim/02_Vertex_Corr_Cuts_Sim/After_Cuts_Sim";
+    const string VertexCorrCutsFolderSimAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Preselection_Sim/02_Vertex_Corr_Cuts_Sim/After_Cuts_Sim";
     system(("mkdir -p " + VertexCorrCutsFolderSimAC).c_str());
     //</editor-fold>
 
     //<editor-fold desc="DC fiducial cuts">
-    const string DCFiducialCutsFolderSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Preselection_Sim/03_DC_fiducial_Cuts_Sim";
+    const string DCFiducialCutsFolderSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Preselection_Sim/03_DC_fiducial_Cuts_Sim";
     system(("mkdir -p " + DCFiducialCutsFolderSim).c_str());
 
-    const string DCFiducialCutsFolderSimBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Preselection_Sim/03_DC_fiducial_Cuts_Sim/Before_Cuts_Sim";
+    const string DCFiducialCutsFolderSimBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Preselection_Sim/03_DC_fiducial_Cuts_Sim/Before_Cuts_Sim";
     system(("mkdir -p " + DCFiducialCutsFolderSimBC).c_str());
 
-    const string DCFiducialCutsFolderSimAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Preselection_Sim/03_DC_fiducial_Cuts_Sim/After_Cuts_Sim";
+    const string DCFiducialCutsFolderSimAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Preselection_Sim/03_DC_fiducial_Cuts_Sim/After_Cuts_Sim";
     system(("mkdir -p " + DCFiducialCutsFolderSimAC).c_str());
     //</editor-fold>
 
     //</editor-fold>
 
     //<editor-fold desc="Event_Selection_Sim">
-    const string EventSelectionSimFolder = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim";
+    const string EventSelectionSimFolder = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim";
     system(("rm -r " + EventSelectionSimFolder).c_str());
     system(("mkdir -p " + EventSelectionSimFolder).c_str());
 
-    const string ElectronIDFolderSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/01_Electron_ID_Sim";
+    const string ElectronIDFolderSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/01_Electron_ID_Sim";
     system(("mkdir -p " + ElectronIDFolderSim).c_str());
 
-    const string ElectronIDFolderSimBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/01_Electron_ID_Sim/Before_Cuts_Sim";
+    const string ElectronIDFolderSimBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/01_Electron_ID_Sim/Before_Cuts_Sim";
     system(("mkdir -p " + ElectronIDFolderSimBC).c_str());
 
-    const string ElectronIDFolderSimAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/01_Electron_ID_Sim/After_Cuts_Sim";
+    const string ElectronIDFolderSimAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/01_Electron_ID_Sim/After_Cuts_Sim";
     system(("mkdir -p " + ElectronIDFolderSimAC).c_str());
 
-    const string ProtonIDFolderSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/02_Proton_ID_Sim";
+    const string ProtonIDFolderSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/02_Proton_ID_Sim";
     system(("mkdir -p " + ProtonIDFolderSim).c_str());
 
-    const string ProtonIDFolderSimBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/02_Proton_ID_Sim/Before_Cuts_Sim";
+    const string ProtonIDFolderSimBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/02_Proton_ID_Sim/Before_Cuts_Sim";
     system(("mkdir -p " + ProtonIDFolderSimBC).c_str());
 
-    const string ProtonIDFolderSimAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/02_Proton_ID_Sim/After_Cuts_Sim";
+    const string ProtonIDFolderSimAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/02_Proton_ID_Sim/After_Cuts_Sim";
     system(("mkdir -p " + ProtonIDFolderSimAC).c_str());
 
-    const string NeutralsFDIDFolderSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/03_Neutrals_FD_ID_Sim";
+    const string NeutralsFDIDFolderSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/03_Neutrals_FD_ID_Sim";
     system(("mkdir -p " + NeutralsFDIDFolderSim).c_str());
 
-    const string NeutralsFDIDFolderSimBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/03_Neutrals_FD_ID_Sim/Before_Cuts_Sim";
+    const string NeutralsFDIDFolderSimBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/03_Neutrals_FD_ID_Sim/Before_Cuts_Sim";
     system(("mkdir -p " + NeutralsFDIDFolderSimBC).c_str());
 
-    const string NeutralsFDIDFolderSimAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/03_Neutrals_FD_ID_Sim/After_Cuts_Sim";
+    const string NeutralsFDIDFolderSimAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/03_Neutrals_FD_ID_Sim/After_Cuts_Sim";
     system(("mkdir -p " + NeutralsFDIDFolderSimAC).c_str());
 
-    const string PionsIDFolderSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/04_Pions_ID_Sim";
+    const string PionsIDFolderSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/04_Pions_ID_Sim";
     system(("mkdir -p " + PionsIDFolderSim).c_str());
 
-    const string PionsIDFolderSimBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/04_Pions_ID_Sim/Before_Cuts_Sim";
+    const string PionsIDFolderSimBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/04_Pions_ID_Sim/Before_Cuts_Sim";
     system(("mkdir -p " + PionsIDFolderSimBC).c_str());
 
-    const string PionsIDFolderSimAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/04_Pions_ID_Sim/After_Cuts_Sim";
+    const string PionsIDFolderSimAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/04_Pions_ID_Sim/After_Cuts_Sim";
     system(("mkdir -p " + PionsIDFolderSimAC).c_str());
 
-    const string OtherPartIDFolderSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/05_Other_part_ID_Sim";
+    const string OtherPartIDFolderSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/05_Other_part_ID_Sim";
     system(("mkdir -p " + OtherPartIDFolderSim).c_str());
 
-    const string OtherPartIDFolderSimBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/05_Other_part_ID_Sim/Before_Cuts_Sim";
+    const string OtherPartIDFolderSimBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/05_Other_part_ID_Sim/Before_Cuts_Sim";
     system(("mkdir -p " + OtherPartIDFolderSimBC).c_str());
 
-    const string OtherPartIDFolderSimAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/05_Other_part_ID_Sim/After_Cuts_Sim";
+    const string OtherPartIDFolderSimAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/05_Other_part_ID_Sim/After_Cuts_Sim";
     system(("mkdir -p " + OtherPartIDFolderSimAC).c_str());
 
-    const string AMapsFolderSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/06_AMaps";
+    const string AMapsFolderSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/06_AMaps";
     system(("mkdir -p " + AMapsFolderSim).c_str());
 
-    const string AMapsFolderMapsSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/06_AMaps/01_Maps";
+    const string AMapsFolderMapsSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/06_AMaps/01_Maps";
     system(("mkdir -p " + AMapsFolderMapsSim).c_str());
 
-    const string AMapsFolderMomentumPlotsSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/06_AMaps/02_Momentum_Plots";
+    const string AMapsFolderMomentumPlotsSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/06_AMaps/02_Momentum_Plots";
     system(("mkdir -p " + AMapsFolderMomentumPlotsSim).c_str());
 
-    const string EfficiencyFolderSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/07_Efficiency";
+    const string EfficiencyFolderSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/07_Efficiency";
     system(("mkdir -p " + EfficiencyFolderSim).c_str());
 
-    const string EfficiencyRegFolderSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/07_Efficiency/01_No_FC";
+    const string EfficiencyRegFolderSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/07_Efficiency/01_No_FC";
     system(("mkdir -p " + EfficiencyRegFolderSim).c_str());
 
-    const string EfficiencyWithFCFolderSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/07_Efficiency/02_wFC";
+    const string EfficiencyWithFCFolderSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/07_Efficiency/02_wFC";
     system(("mkdir -p " + EfficiencyWithFCFolderSim).c_str());
 
-    const string MomResFolderSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/08_MomRes";
+    const string MomResFolderSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/08_MomRes";
     system(("mkdir -p " + MomResFolderSim).c_str());
 
-    const string MomResS1FolderSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/08_MomRes/01_momResS1_Calc";
+    const string MomResS1FolderSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/08_MomRes/01_momResS1_Calc";
     system(("mkdir -p " + MomResS1FolderSim).c_str());
 
-    const string MomResS2FolderSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/08_MomRes/02_momResS2_Calc";
+    const string MomResS2FolderSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/08_MomRes/02_momResS2_Calc";
     system(("mkdir -p " + MomResS2FolderSim).c_str());
 
-    const string MomResS2RTFolderSim = ConfigeTopDir(plots_AMaps_plotsPath) + "/Event_Selection_Sim/08_MomRes/03_momResS2RT_Calc";
+    const string MomResS2RTFolderSim = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Event_Selection_Sim/08_MomRes/03_momResS2RT_Calc";
     system(("mkdir -p " + MomResS2RTFolderSim).c_str());
     //</editor-fold>
 
     //<editor-fold desc="Results">
-    const string ResultsFolder = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results";
+    const string ResultsFolder = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results";
     system(("rm -r " + ResultsFolder).c_str());
     system(("mkdir -p " + ResultsFolder).c_str());
 
     //<editor-fold desc="Event_Selection_Data">
-    const string ElectronIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/01_Electron_ID_Data";
+    const string ElectronIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/01_Electron_ID_Data";
     system(("mkdir -p " + ElectronIDFolderData).c_str());
 
-    const string ElectronIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/01_Electron_ID_Data/Before_Cuts_Data";
+    const string ElectronIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/01_Electron_ID_Data/Before_Cuts_Data";
     system(("mkdir -p " + ElectronIDFolderDataBC).c_str());
 
-    const string ElectronIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/01_Electron_ID_Data/After_Cuts_Data";
+    const string ElectronIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/01_Electron_ID_Data/After_Cuts_Data";
     system(("mkdir -p " + ElectronIDFolderDataAC).c_str());
 
-    const string ProtonIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/02_Proton_ID_Data";
+    const string ProtonIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/02_Proton_ID_Data";
     system(("mkdir -p " + ProtonIDFolderData).c_str());
 
-    const string ProtonIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/02_Proton_ID_Data/Before_Cuts_Data";
+    const string ProtonIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/02_Proton_ID_Data/Before_Cuts_Data";
     system(("mkdir -p " + ProtonIDFolderDataBC).c_str());
 
-    const string ProtonIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/02_Proton_ID_Data/After_Cuts_Data";
+    const string ProtonIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/02_Proton_ID_Data/After_Cuts_Data";
     system(("mkdir -p " + ProtonIDFolderDataAC).c_str());
 
-    const string NeutralsFDIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/03_Neutrals_FD_ID_Data";
+    const string NeutralsFDIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/03_Neutrals_FD_ID_Data";
     system(("mkdir -p " + NeutralsFDIDFolderData).c_str());
 
-    const string NeutralsFDIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/03_Neutrals_FD_ID_Data/Before_Cuts_Data";
+    const string NeutralsFDIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/03_Neutrals_FD_ID_Data/Before_Cuts_Data";
     system(("mkdir -p " + NeutralsFDIDFolderDataBC).c_str());
 
-    const string NeutralsFDIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/03_Neutrals_FD_ID_Data/After_Cuts_Data";
+    const string NeutralsFDIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/03_Neutrals_FD_ID_Data/After_Cuts_Data";
     system(("mkdir -p " + NeutralsFDIDFolderDataAC).c_str());
 
-    const string PionsIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/04_Pions_ID_Data";
+    const string PionsIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/04_Pions_ID_Data";
     system(("mkdir -p " + PionsIDFolderData).c_str());
 
-    const string PionsIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/04_Pions_ID_Data/Before_Cuts_Data";
+    const string PionsIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/04_Pions_ID_Data/Before_Cuts_Data";
     system(("mkdir -p " + PionsIDFolderDataBC).c_str());
 
-    const string PionsIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/04_Pions_ID_Data/After_Cuts_Data";
+    const string PionsIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/04_Pions_ID_Data/After_Cuts_Data";
     system(("mkdir -p " + PionsIDFolderDataAC).c_str());
 
-    const string OtherPartIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/05_Other_part_ID_Data";
+    const string OtherPartIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/05_Other_part_ID_Data";
     system(("mkdir -p " + OtherPartIDFolderData).c_str());
 
-    const string OtherPartIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/05_Other_part_ID_Data/Before_Cuts_Data";
+    const string OtherPartIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/05_Other_part_ID_Data/Before_Cuts_Data";
     system(("mkdir -p " + OtherPartIDFolderDataBC).c_str());
 
-    const string OtherPartIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/05_Other_part_ID_Data/After_Cuts_Data";
+    const string OtherPartIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/05_Other_part_ID_Data/After_Cuts_Data";
     system(("mkdir -p " + OtherPartIDFolderDataAC).c_str());
     //</editor-fold>
 
     //<editor-fold desc="Final_State_Comparison">
-    const string FinalStateCompFolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp";
+    const string FinalStateCompFolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp";
     system(("mkdir -p " + FinalStateCompFolderData).c_str());
 
     //<editor-fold desc="01_Momentum_comp">
-    const string MomCompFolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp";
+    const string MomCompFolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp";
     system(("mkdir -p " + MomCompFolderData).c_str());
 
-    const string MomComp_BSaC_1N_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp/00_SaC_Results_Sim/01_Before_SaC_Sim";
+    const string MomComp_BSaC_1N_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp/00_SaC_Results_Sim/01_Before_SaC_Sim";
     system(("mkdir -p " + MomComp_BSaC_1N_Sim_FolderData).c_str());
 
-    const string MomComp_BSaC_1N_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp/00_SaC_Results_Data/01_Before_SaC_Data";
+    const string MomComp_BSaC_1N_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp/00_SaC_Results_Data/01_Before_SaC_Data";
     system(("mkdir -p " + MomComp_BSaC_1N_Data_FolderData).c_str());
 
-    const string MomComp_ASaC_1N_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp/00_SaC_Results_Sim/02_After_SaC_Sim";
+    const string MomComp_ASaC_1N_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp/00_SaC_Results_Sim/02_After_SaC_Sim";
     system(("mkdir -p " + MomComp_ASaC_1N_Sim_FolderData).c_str());
 
-    const string MomComp_ASaC_1N_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp/00_SaC_Results_Data/02_After_SaC_Data";
+    const string MomComp_ASaC_1N_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp/00_SaC_Results_Data/02_After_SaC_Data";
     system(("mkdir -p " + MomComp_ASaC_1N_Data_FolderData).c_str());
 
-    const string MomComp_ElecMom_2N_Reco_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp/01_Elec_Mom_Sim";
+    const string MomComp_ElecMom_2N_Reco_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp/01_Elec_Mom_Sim";
     system(("mkdir -p " + MomComp_ElecMom_2N_Reco_Sim_FolderData).c_str());
 
-    const string MomComp_ElecMom_2N_Reco_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp/01_Elec_Mom_Data";
+    const string MomComp_ElecMom_2N_Reco_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp/01_Elec_Mom_Data";
     system(("mkdir -p " + MomComp_ElecMom_2N_Reco_Data_FolderData).c_str());
 
-    const string MomComp_NucMom_2N_Reco_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp/02_Nuc_Mom/01_Nuc_Mom_2N_Reco_Sim";
+    const string MomComp_NucMom_2N_Reco_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp/02_Nuc_Mom/01_Nuc_Mom_2N_Reco_Sim";
     system(("mkdir -p " + MomComp_NucMom_2N_Reco_Sim_FolderData).c_str());
 
-    const string MomComp_NucMom_2N_Reco_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp/02_Nuc_Mom/01_Nuc_Mom_2N_Reco_Data";
+    const string MomComp_NucMom_2N_Reco_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp/02_Nuc_Mom/01_Nuc_Mom_2N_Reco_Data";
     system(("mkdir -p " + MomComp_NucMom_2N_Reco_Data_FolderData).c_str());
 
-    const string MomComp_NucMom_2N_TL_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp/02_Nuc_Mom/02_Nuc_Mom_2N_TL_Sim";
+    const string MomComp_NucMom_2N_TL_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp/02_Nuc_Mom/02_Nuc_Mom_2N_TL_Sim";
     system(("mkdir -p " + MomComp_NucMom_2N_TL_Sim_FolderData).c_str());
 
-    const string MomComp_NucMom_1N_TL_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp/02_Nuc_Mom/03_Nuc_Mom_1N_TL_Sim";
+    const string MomComp_NucMom_1N_TL_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp/02_Nuc_Mom/03_Nuc_Mom_1N_TL_Sim";
     system(("mkdir -p " + MomComp_NucMom_1N_TL_Sim_FolderData).c_str());
 
-    const string MomComp_NucMom_1N_Reco_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp/02_Nuc_Mom/03_Nuc_Mom_1N_Reco_Sim";
+    const string MomComp_NucMom_1N_Reco_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp/02_Nuc_Mom/03_Nuc_Mom_1N_Reco_Sim";
     system(("mkdir -p " + MomComp_NucMom_1N_Reco_Sim_FolderData).c_str());
 
-    const string MomComp_NucMom_1N_Reco_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp/02_Nuc_Mom/03_Nuc_Mom_1N_Reco_Data";
+    const string MomComp_NucMom_1N_Reco_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp/02_Nuc_Mom/03_Nuc_Mom_1N_Reco_Data";
     system(("mkdir -p " + MomComp_NucMom_1N_Reco_Data_FolderData).c_str());
 
-    const string MomComp_TotAndRel_Mom_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp/03_Total_And_Rel_Mom_Sim";
+    const string MomComp_TotAndRel_Mom_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp/03_Total_And_Rel_Mom_Sim";
     system(("mkdir -p " + MomComp_TotAndRel_Mom_Sim_FolderData).c_str());
 
-    const string MomComp_TotAndRel_Mom_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp/03_Total_And_Rel_Mom_Data";
+    const string MomComp_TotAndRel_Mom_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp/03_Total_And_Rel_Mom_Data";
     system(("mkdir -p " + MomComp_TotAndRel_Mom_Data_FolderData).c_str());
 
-    const string MomComp_P_miss_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp/04_P_miss_Sim";
+    const string MomComp_P_miss_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp/04_P_miss_Sim";
     system(("mkdir -p " + MomComp_P_miss_Sim_FolderData).c_str());
 
-    const string MomComp_P_miss_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/01_Momentum_comp/04_P_miss_Data";
+    const string MomComp_P_miss_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/01_Momentum_comp/04_P_miss_Data";
     system(("mkdir -p " + MomComp_P_miss_Data_FolderData).c_str());
     //</editor-fold>
 
     //<editor-fold desc="02_Inv_mass_comp">
-    const string InvMassCompFolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/02_Inv_mass_comp";
+    const string InvMassCompFolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/02_Inv_mass_comp";
     system(("mkdir -p " + InvMassCompFolderData).c_str());
 
-    const string InvMassComp_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/02_Inv_mass_comp/02_Inv_mass_comp_Sim";
+    const string InvMassComp_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/02_Inv_mass_comp/02_Inv_mass_comp_Sim";
     system(("mkdir -p " + InvMassComp_Sim_FolderData).c_str());
 
-    const string InvMassComp_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/02_Inv_mass_comp/02_Inv_mass_comp_Data";
+    const string InvMassComp_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/02_Inv_mass_comp/02_Inv_mass_comp_Data";
     system(("mkdir -p " + InvMassComp_Data_FolderData).c_str());
     //</editor-fold>
 
     //<editor-fold desc="03_Angular_dist_comp">
-    const string AngDistCompFolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp";
+    const string AngDistCompFolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp";
     system(("mkdir -p " + AngDistCompFolderData).c_str());
 
-    const string AngDistComp_Scattring_Ang_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/01_Scattring_Ang_Sim";
+    const string AngDistComp_Scattring_Ang_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/01_Scattring_Ang_Sim";
     system(("mkdir -p " + AngDistComp_Scattring_Ang_Sim_FolderData).c_str());
 
-    const string AngDistComp_Scattring_Ang_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/01_Scattring_Ang_Data";
+    const string AngDistComp_Scattring_Ang_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/01_Scattring_Ang_Data";
     system(("mkdir -p " + AngDistComp_Scattring_Ang_Data_FolderData).c_str());
 
-    const string AngDistComp_Opening_Ang_P_FD_and_P_CD_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/02_Opening_Ang__P_FD_and_P_CD__Sim";
+    const string AngDistComp_Opening_Ang_P_FD_and_P_CD_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/02_Opening_Ang__P_FD_and_P_CD__Sim";
     system(("mkdir -p " + AngDistComp_Opening_Ang_P_FD_and_P_CD_Sim_FolderData).c_str());
 
-    const string AngDistComp_Opening_Ang_P_FD_and_P_CD_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/02_Opening_Ang__P_FD_and_P_CD__Data";
+    const string AngDistComp_Opening_Ang_P_FD_and_P_CD_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/02_Opening_Ang__P_FD_and_P_CD__Data";
     system(("mkdir -p " + AngDistComp_Opening_Ang_P_FD_and_P_CD_Data_FolderData).c_str());
 
-    const string AngDistComp_Opening_Ang_P_e_and_P_tot_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/03_Opening_Ang__P_e_and_P_tot__Sim";
+    const string AngDistComp_Opening_Ang_P_e_and_P_tot_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/03_Opening_Ang__P_e_and_P_tot__Sim";
     system(("mkdir -p " + AngDistComp_Opening_Ang_P_e_and_P_tot_Sim_FolderData).c_str());
 
     const string AngDistComp_Opening_Ang_P_e_and_P_tot_Data_FolderData =
-        ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/03_Opening_Ang__P_e_and_P_tot__Data";
+        ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/03_Opening_Ang__P_e_and_P_tot__Data";
     system(("mkdir -p " + AngDistComp_Opening_Ang_P_e_and_P_tot_Data_FolderData).c_str());
 
-    const string AngDistComp_Opening_Ang_q_and_P_tot_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/04_Opening_Ang__q_and_P_tot__Sim";
+    const string AngDistComp_Opening_Ang_q_and_P_tot_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/04_Opening_Ang__q_and_P_tot__Sim";
     system(("mkdir -p " + AngDistComp_Opening_Ang_q_and_P_tot_Sim_FolderData).c_str());
 
-    const string AngDistComp_Opening_Ang_q_and_P_tot_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/04_Opening_Ang__q_and_P_tot__Data";
+    const string AngDistComp_Opening_Ang_q_and_P_tot_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/04_Opening_Ang__q_and_P_tot__Data";
     system(("mkdir -p " + AngDistComp_Opening_Ang_q_and_P_tot_Data_FolderData).c_str());
 
-    const string AngDistComp_Opening_Ang_q_and_P_L_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/05_Opening_Ang__q_and_P_L__Sim";
+    const string AngDistComp_Opening_Ang_q_and_P_L_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/05_Opening_Ang__q_and_P_L__Sim";
     system(("mkdir -p " + AngDistComp_Opening_Ang_q_and_P_L_Sim_FolderData).c_str());
 
-    const string AngDistComp_Opening_Ang_q_and_P_L_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/05_Opening_Ang__q_and_P_L__Data";
+    const string AngDistComp_Opening_Ang_q_and_P_L_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/05_Opening_Ang__q_and_P_L__Data";
     system(("mkdir -p " + AngDistComp_Opening_Ang_q_and_P_L_Data_FolderData).c_str());
 
-    const string AngDistComp_Opening_Ang_q_and_P_R_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/06_Opening_Ang__q_and_P_R__Sim";
+    const string AngDistComp_Opening_Ang_q_and_P_R_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/06_Opening_Ang__q_and_P_R__Sim";
     system(("mkdir -p " + AngDistComp_Opening_Ang_q_and_P_R_Sim_FolderData).c_str());
 
-    const string AngDistComp_Opening_Ang_q_and_P_R_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/06_Opening_Ang__q_and_P_R__Data";
+    const string AngDistComp_Opening_Ang_q_and_P_R_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/06_Opening_Ang__q_and_P_R__Data";
     system(("mkdir -p " + AngDistComp_Opening_Ang_q_and_P_R_Data_FolderData).c_str());
 
     const string AngDistComp_Opening_Ang_P_L_minus_q_and_P_R_Sim_FolderData =
-        ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/07_Opening_Ang__P_L_minus_q_and_P_R__Sim";
+        ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/07_Opening_Ang__P_L_minus_q_and_P_R__Sim";
     system(("mkdir -p " + AngDistComp_Opening_Ang_P_L_minus_q_and_P_R_Sim_FolderData).c_str());
 
     const string AngDistComp_Opening_Ang_P_L_minus_q_and_P_R_Data_FolderData =
-        ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/07_Opening_Ang__P_L_minus_q_and_P_R__Data";
+        ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/07_Opening_Ang__P_L_minus_q_and_P_R__Data";
     system(("mkdir -p " + AngDistComp_Opening_Ang_P_L_minus_q_and_P_R_Data_FolderData).c_str());
 
-    const string AngDistComp_Opening_Ang_q_and_P_nucFD_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/08_Opening_Ang__q_and_P_nucFD__Sim";
+    const string AngDistComp_Opening_Ang_q_and_P_nucFD_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/08_Opening_Ang__q_and_P_nucFD__Sim";
     system(("mkdir -p " + AngDistComp_Opening_Ang_q_and_P_nucFD_Sim_FolderData).c_str());
 
     const string AngDistComp_Opening_Ang_q_and_P_nucFD_Data_FolderData =
-        ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/08_Opening_Ang__q_and_P_nucFD__Data";
+        ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/08_Opening_Ang__q_and_P_nucFD__Data";
     system(("mkdir -p " + AngDistComp_Opening_Ang_q_and_P_nucFD_Data_FolderData).c_str());
 
-    const string AngDistComp_Opening_Ang_q_and_P_nucCD_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/09_Opening_Ang__q_and_P_nucCD__Sim";
+    const string AngDistComp_Opening_Ang_q_and_P_nucCD_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/09_Opening_Ang__q_and_P_nucCD__Sim";
     system(("mkdir -p " + AngDistComp_Opening_Ang_q_and_P_nucCD_Sim_FolderData).c_str());
 
     const string AngDistComp_Opening_Ang_q_and_P_nucCD_Data_FolderData =
-        ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/03_Angular_dist_comp/09_Opening_Ang__q_and_P_nucCD__Data";
+        ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/03_Angular_dist_comp/09_Opening_Ang__q_and_P_nucCD__Data";
     system(("mkdir -p " + AngDistComp_Opening_Ang_q_and_P_nucCD_Data_FolderData).c_str());
     //</editor-fold>
 
     //<editor-fold desc="04_Energy_dist_comp">
-    const string EnergyCompFolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/04_Energy_dist_comp";
+    const string EnergyCompFolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/04_Energy_dist_comp";
     system(("mkdir -p " + EnergyCompFolderData).c_str());
 
-    const string EnergyComp_E_e_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/04_Energy_dist_comp/01_E_e_Sim";
+    const string EnergyComp_E_e_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/04_Energy_dist_comp/01_E_e_Sim";
     system(("mkdir -p " + EnergyComp_E_e_Sim_FolderData).c_str());
 
-    const string EnergyComp_E_e_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/04_Energy_dist_comp/01_E_e_Data";
+    const string EnergyComp_E_e_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/04_Energy_dist_comp/01_E_e_Data";
     system(("mkdir -p " + EnergyComp_E_e_Data_FolderData).c_str());
 
-    const string EnergyComp_Omega_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/04_Energy_dist_comp/02_Energy_Trans_Sim";
+    const string EnergyComp_Omega_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/04_Energy_dist_comp/02_Energy_Trans_Sim";
     system(("mkdir -p " + EnergyComp_Omega_Sim_FolderData).c_str());
 
-    const string EnergyComp_Omega_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/04_Energy_dist_comp/02_Energy_Trans_Data";
+    const string EnergyComp_Omega_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/04_Energy_dist_comp/02_Energy_Trans_Data";
     system(("mkdir -p " + EnergyComp_Omega_Data_FolderData).c_str());
 
-    const string EnergyComp_E_cal_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/04_Energy_dist_comp/03_E_cal_Sim";
+    const string EnergyComp_E_cal_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/04_Energy_dist_comp/03_E_cal_Sim";
     system(("mkdir -p " + EnergyComp_E_cal_Sim_FolderData).c_str());
 
-    const string EnergyComp_E_cal_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/04_Energy_dist_comp/03_E_cal_Data";
+    const string EnergyComp_E_cal_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/04_Energy_dist_comp/03_E_cal_Data";
     system(("mkdir -p " + EnergyComp_E_cal_Data_FolderData).c_str());
     //</editor-fold>
 
     //<editor-fold desc="05_TKI_comp">
-    const string TKICompFolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/05_TKI_comp";
+    const string TKICompFolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/05_TKI_comp";
     system(("mkdir -p " + TKICompFolderData).c_str());
 
-    const string TKIComp_dP_T_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/05_TKI_comp/01_dP_T_Sim";
+    const string TKIComp_dP_T_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/05_TKI_comp/01_dP_T_Sim";
     system(("mkdir -p " + TKIComp_dP_T_Sim_FolderData).c_str());
 
-    const string TKIComp_dP_T_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/05_TKI_comp/01_dP_T_Data";
+    const string TKIComp_dP_T_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/05_TKI_comp/01_dP_T_Data";
     system(("mkdir -p " + TKIComp_dP_T_Data_FolderData).c_str());
 
-    const string TKIComp_dAlpha_T_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/05_TKI_comp/02_dAlpha_T_Sim";
+    const string TKIComp_dAlpha_T_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/05_TKI_comp/02_dAlpha_T_Sim";
     system(("mkdir -p " + TKIComp_dAlpha_T_Sim_FolderData).c_str());
 
-    const string TKIComp_dAlpha_T_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/05_TKI_comp/02_dAlpha_T_Data";
+    const string TKIComp_dAlpha_T_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/05_TKI_comp/02_dAlpha_T_Data";
     system(("mkdir -p " + TKIComp_dAlpha_T_Data_FolderData).c_str());
 
-    const string TKIComp_dP_T_vs_dAlpha_T_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/05_TKI_comp/03_dP_T_vs_dAlpha_T_Sim";
+    const string TKIComp_dP_T_vs_dAlpha_T_Sim_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/05_TKI_comp/03_dP_T_vs_dAlpha_T_Sim";
     system(("mkdir -p " + TKIComp_dP_T_vs_dAlpha_T_Sim_FolderData).c_str());
 
-    const string TKIComp_dP_T_vs_dAlpha_T_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Final_State_Comp/05_TKI_comp/03_dP_T_vs_dAlpha_T_Data";
+    const string TKIComp_dP_T_vs_dAlpha_T_Data_FolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Final_State_Comp/05_TKI_comp/03_dP_T_vs_dAlpha_T_Data";
     system(("mkdir -p " + TKIComp_dP_T_vs_dAlpha_T_Data_FolderData).c_str());
     //</editor-fold>
 
@@ -1066,49 +1070,49 @@ void MScThesisPlotter()
     //     cout << "\n\n\nPlotting results plots\n";
 
     // //    //<editor-fold desc="Event_Selection_Data">
-    // //    const string ElectronIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/01_Electron_ID_Data";
+    // //    const string ElectronIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/01_Electron_ID_Data";
     // //    system(("mkdir -p " + ElectronIDFolderData).c_str());
     // //
-    // //    const string ElectronIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/01_Electron_ID_Data/Before_Cuts_Data";
+    // //    const string ElectronIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/01_Electron_ID_Data/Before_Cuts_Data";
     // //    system(("mkdir -p " + ElectronIDFolderDataBC).c_str());
     // //
-    // //    const string ElectronIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/01_Electron_ID_Data/After_Cuts_Data";
+    // //    const string ElectronIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/01_Electron_ID_Data/After_Cuts_Data";
     // //    system(("mkdir -p " + ElectronIDFolderDataAC).c_str());
     // //
-    // //    const string ProtonIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/02_Proton_ID_Data";
+    // //    const string ProtonIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/02_Proton_ID_Data";
     // //    system(("mkdir -p " + ProtonIDFolderData).c_str());
     // //
-    // //    const string ProtonIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/02_Proton_ID_Data/Before_Cuts_Data";
+    // //    const string ProtonIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/02_Proton_ID_Data/Before_Cuts_Data";
     // //    system(("mkdir -p " + ProtonIDFolderDataBC).c_str());
     // //
-    // //    const string ProtonIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/02_Proton_ID_Data/After_Cuts_Data";
+    // //    const string ProtonIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/02_Proton_ID_Data/After_Cuts_Data";
     // //    system(("mkdir -p " + ProtonIDFolderDataAC).c_str());
     // //
-    // //    const string NeutralsFDIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/03_Neutrals_FD_ID_Data";
+    // //    const string NeutralsFDIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/03_Neutrals_FD_ID_Data";
     // //    system(("mkdir -p " + NeutralsFDIDFolderData).c_str());
     // //
-    // //    const string NeutralsFDIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/03_Neutrals_FD_ID_Data/Before_Cuts_Data";
+    // //    const string NeutralsFDIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/03_Neutrals_FD_ID_Data/Before_Cuts_Data";
     // //    system(("mkdir -p " + NeutralsFDIDFolderDataBC).c_str());
     // //
-    // //    const string NeutralsFDIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/03_Neutrals_FD_ID_Data/After_Cuts_Data";
+    // //    const string NeutralsFDIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/03_Neutrals_FD_ID_Data/After_Cuts_Data";
     // //    system(("mkdir -p " + NeutralsFDIDFolderDataAC).c_str());
     // //
-    // //    const string PionsIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/04_Pions_ID_Data";
+    // //    const string PionsIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/04_Pions_ID_Data";
     // //    system(("mkdir -p " + PionsIDFolderData).c_str());
     // //
-    // //    const string PionsIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/04_Pions_ID_Data/Before_Cuts_Data";
+    // //    const string PionsIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/04_Pions_ID_Data/Before_Cuts_Data";
     // //    system(("mkdir -p " + PionsIDFolderDataBC).c_str());
     // //
-    // //    const string PionsIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/04_Pions_ID_Data/After_Cuts_Data";
+    // //    const string PionsIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/04_Pions_ID_Data/After_Cuts_Data";
     // //    system(("mkdir -p " + PionsIDFolderDataAC).c_str());
     // //
-    // //    const string OtherPartIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/05_Other_part_ID_Data";
+    // //    const string OtherPartIDFolderData = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/05_Other_part_ID_Data";
     // //    system(("mkdir -p " + OtherPartIDFolderData).c_str());
     // //
-    // //    const string OtherPartIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/05_Other_part_ID_Data/Before_Cuts_Data";
+    // //    const string OtherPartIDFolderDataBC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/05_Other_part_ID_Data/Before_Cuts_Data";
     // //    system(("mkdir -p " + OtherPartIDFolderDataBC).c_str());
     // //
-    // //    const string OtherPartIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath) + "/Results/Event_Selection_Data/05_Other_part_ID_Data/After_Cuts_Data";
+    // //    const string OtherPartIDFolderDataAC = ConfigeTopDir(plots_AMaps_plotsPath, costumTopDir) + "/Results/Event_Selection_Data/05_Other_part_ID_Data/After_Cuts_Data";
     // //    system(("mkdir -p " + OtherPartIDFolderDataAC).c_str());
     // //    //</editor-fold>
 

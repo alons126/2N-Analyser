@@ -14,23 +14,44 @@ using namespace std;
 
 /* Command to run code: clas12root /PATH2CODE/PlotAMaps.cpp -b -q */
 
-string ConfigeTopDir(const char *filename)
+string ConfigeTopDir(const char *filename, const string &costumTopDir)
 {
     std::string FileName = filename;
 
-    if (findSubstring(FileName, "Uniform"))
+    if (costumTopDir == "")
     {
-        if (findSubstring(FileName, "Uniform_1e"))
+        if (findSubstring(FileName, "Uniform"))
         {
-            return "/Users/alon/Downloads/00_MScThesisPlotter_1e";
+            if (findSubstring(FileName, "Uniform_1e"))
+            {
+                return "/Users/alon/Downloads/00_MScThesisPlotter_1e";
+            }
+            else if (findSubstring(FileName, "Uniform_ep"))
+            {
+                return "/Users/alon/Downloads/00_MScThesisPlotter_ep";
+            }
+            else if (findSubstring(FileName, "Uniform_en"))
+            {
+                return "/Users/alon/Downloads/00_MScThesisPlotter_en";
+            }
         }
-        else if (findSubstring(FileName, "Uniform_ep"))
+    }
+    else
+    {
+        if (findSubstring(FileName, "Uniform"))
         {
-            return "/Users/alon/Downloads/00_MScThesisPlotter_ep";
-        }
-        else if (findSubstring(FileName, "Uniform_en"))
-        {
-            return "/Users/alon/Downloads/00_MScThesisPlotter_en";
+            if (findSubstring(FileName, "Uniform_1e"))
+            {
+                return "/Users/alon/Downloads/00_MScThesisPlotter_1e" + costumTopDir;
+            }
+            else if (findSubstring(FileName, "Uniform_ep"))
+            {
+                return "/Users/alon/Downloads/00_MScThesisPlotter_ep" + costumTopDir;
+            }
+            else if (findSubstring(FileName, "Uniform_en"))
+            {
+                return "/Users/alon/Downloads/00_MScThesisPlotter_en" + costumTopDir;
+            }
         }
     }
 
@@ -1380,10 +1401,10 @@ void AMapsPlotter(const string &InputPath = "", const bool &Sep_plots = false, c
     // plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath, 6, 5);
     // plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "e", 30, Sep_plots, OutputPath, 6, 5);
 
-    plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath, 3,3);
-    plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath, 3,3);
-    plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath, 3,3);
-    plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath, 3,3);
+    plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath, 3, 3);
+    plotHistograms((PlotsPath + Reco_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath, 3, 3);
+    plotHistograms((PlotsPath + Ratio_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath, 3, 3);
+    plotHistograms((PlotsPath + cPart_Sep_AMaps_root_file_prefix).c_str(), "p", 25, Sep_plots, OutputPath, 3, 3);
 
     plotHistograms((PlotsPath + TL_root_file_prefix).c_str(), "n", 4, Sep_plots, OutputPath, 1, 1);
 }

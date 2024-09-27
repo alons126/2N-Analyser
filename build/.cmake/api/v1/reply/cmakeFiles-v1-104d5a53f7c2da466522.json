@@ -200,7 +200,7 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/opt/homebrew/Cellar/root/6.32.04/share/root/cmake/modules/FindVdt.cmake"
+			"path" : "/opt/homebrew/Cellar/root/6.32.06/share/root/cmake/modules/FindVdt.cmake"
 		},
 		{
 			"isCMake" : true,

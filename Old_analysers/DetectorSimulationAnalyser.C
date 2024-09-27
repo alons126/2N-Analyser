@@ -46,11 +46,11 @@ using namespace clas12;
 void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSample, const string &AnalyseFile)
 {
 
-    // cout << "\nTEST 0\n";
+    // cout << "\033[33m\nTEST 0\n\033[0m";
 
-    cout << "\n\n===========================================================================\n";
-    cout << "\t\t\tDetector simulation analyser\n";
-    cout << "===========================================================================\n\n";
+    cout << "\033[33m\n\n===========================================================================\n\033[0m";
+    cout << "\033[33m\t\t\tDetector simulation analyser\n\033[0m";
+    cout << "\033[33m===========================================================================\n\n\033[0m";
 
     string AnalyserVersion = "Version 1.10";
 
@@ -164,7 +164,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     // Cut setup
     // ======================================================================================================================================================================
 
-    // cout << "\nTEST 1\n";
+    // cout << "\033[33m\nTEST 1\n\033[0m";
 
     // Cut setup ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -172,7 +172,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     /* Settings that allow to disable/enable every cut individually */
 
     // clas12ana cuts ---------------------------------------------------------------------------------------------------------------------------------------------------
-    bool apply_cuts = true;                  // master ON/OFF switch for applying cuts
+    bool apply_cuts = false;                  // master ON/OFF switch for applying cuts
     bool clas12ana_particles = true;         // TODO: move form here!
     bool only_preselection_cuts = false;     // keep as false for regular runs!
     bool only_electron_quality_cuts = false; // keep as false for regular runs!
@@ -301,7 +301,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         || (Calculate_momResS2 && !VaryingDelta)  // Don't run calculate momResS2 and small momentum slices at the same time
     )
     {
-        cout << "\n\nmomRes order error! Exiting...\n\n", exit(0);
+        cout << "\033[33m\n\nmomRes order error! Exiting...\n\n", exit(0);
     }
     //</editor-fold>
 
@@ -322,59 +322,59 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
     //<editor-fold desc="Print out execution variables">
     /* Print out execution variables (for self observation) */
-    cout << "-- Execution variables ----------------------------------------------------\n";
-    cout << "WorkingDirectory:\t" << WorkingDirectory << "\n";
-    cout << "run_plots_path:\t\t" << run_plots_path << "\n\n";
+    cout << "\033[33m-- Execution variables ----------------------------------------------------\n\033[0m";
+    cout << "\033[33mWorkingDirectory:\t" << WorkingDirectory << "\n\033[0m";
+    cout << "\033[33mrun_plots_path:\t\t" << run_plots_path << "\n\n\033[0m";
 
-    cout << "AnalyseFilePath:\t" << "/" << AnalyseFilePath << "/" << "\n";
-    cout << "AnalyseFileSample:\t" << "/" << AnalyseFileSample << "/" << "\n";
-    cout << "AnalyseFile:\t\t" << AnalyseFile << "\n";
-    cout << "Settings mode:\t\t'" << file_name << "'\n\n";
+    cout << "\033[33mAnalyseFilePath:\t" << "/" << AnalyseFilePath << "/" << "\n\033[0m";
+    cout << "\033[33mAnalyseFileSample:\t" << "/" << AnalyseFileSample << "/" << "\n\033[0m";
+    cout << "\033[33mAnalyseFile:\t\t" << AnalyseFile << "\n\033[0m";
+    cout << "\033[33mSettings mode:\t\t'" << file_name << "'\n\n\033[0m";
 
-    cout << "SampleName:\t\t" << SampleName << "\n";
-    cout << "VaryingSampleName:\t" << VaryingSampleName << "\n";
-    cout << "Target:\t\t\t" << Target << " (PDG: " << TargetPDG << ")\n";
-    cout << "Beam Energy:\t\t" << beamE << " [GeV]\n\n\n\n";
+    cout << "\033[33mSampleName:\t\t" << SampleName << "\n\033[0m";
+    cout << "\033[33mVaryingSampleName:\t" << VaryingSampleName << "\n\033[0m";
+    cout << "\033[33mTarget:\t\t\t" << Target << " (PDG: " << TargetPDG << ")\n\033[0m";
+    cout << "\033[33mBeam Energy:\t\t" << beamE << " [GeV]\n\n\n\n\033[0m";
     //</editor-fold>
 
     //<editor-fold desc="Cuts output">
     /* Print out the cuts within the run (for self-observation) */
     if (!apply_cuts)
     {
-        cout << "Cuts are disabled:\n";
+        cout << "\033[33mCuts are disabled:\n\033[0m";
     }
     else
     {
-        cout << "Cuts are enabled:\n";
+        cout << "\033[33mCuts are enabled:\n\033[0m";
     }
 
-    cout << "apply_cuts:\t\t\t" << BoolToString(apply_cuts) << "\n";
-    cout << "clas12ana_particles:\t\t" << BoolToString(clas12ana_particles) << "\n"; // TODO: move form here!
-    cout << "only_preselection_cuts:\t\t" << BoolToString(only_preselection_cuts) << "\n";
-    cout << "only_electron_quality_cuts:\t" << BoolToString(only_electron_quality_cuts) << "\n\n";
+    cout << "\033[33mapply_cuts:\t\t\t" << BoolToString(apply_cuts) << "\n\033[0m";
+    cout << "\033[33mclas12ana_particles:\t\t" << BoolToString(clas12ana_particles) << "\n\033[0m"; // TODO: move form here!
+    cout << "\033[33monly_preselection_cuts:\t\t" << BoolToString(only_preselection_cuts) << "\n\033[0m";
+    cout << "\033[33monly_electron_quality_cuts:\t" << BoolToString(only_electron_quality_cuts) << "\n\n\033[0m";
 
-    cout << "apply_preselection_cuts:\t" << BoolToString(apply_preselection_cuts) << "\n";
-    cout << "apply_Vz_cuts:\t\t\t" << BoolToString(apply_Vz_cuts) << "\n";
-    cout << "apply_dVz_cuts:\t\t\t" << BoolToString(apply_dVz_cuts) << "\n";
-    cout << "apply_DC_fiducial_cuts:\t\t" << BoolToString(apply_DC_fiducial_cuts) << "\n\n";
+    cout << "\033[33mapply_preselection_cuts:\t" << BoolToString(apply_preselection_cuts) << "\n\033[0m";
+    cout << "\033[33mapply_Vz_cuts:\t\t\t" << BoolToString(apply_Vz_cuts) << "\n\033[0m";
+    cout << "\033[33mapply_dVz_cuts:\t\t\t" << BoolToString(apply_dVz_cuts) << "\n\033[0m";
+    cout << "\033[33mapply_DC_fiducial_cuts:\t\t" << BoolToString(apply_DC_fiducial_cuts) << "\n\n\033[0m";
 
-    cout << "apply_electron_quality_cuts:\t" << BoolToString(apply_electron_quality_cuts) << "\n";
-    cout << "apply_Nphe_cut:\t\t\t" << BoolToString(apply_Nphe_cut) << "\n";
-    cout << "apply_ECAL_SF_cuts:\t\t" << BoolToString(apply_ECAL_SF_cuts) << "\n";
-    cout << "apply_ECAL_P_cuts:\t\t" << BoolToString(apply_ECAL_P_cuts) << "\n";
-    cout << "apply_ECAL_fiducial_cuts:\t" << BoolToString(apply_ECAL_fiducial_cuts) << "\n";
-    cout << "apply_Electron_beta_cut:\t" << BoolToString(apply_Electron_beta_cut) << "\n\n";
+    cout << "\033[33mapply_electron_quality_cuts:\t" << BoolToString(apply_electron_quality_cuts) << "\n\033[0m";
+    cout << "\033[33mapply_Nphe_cut:\t\t\t" << BoolToString(apply_Nphe_cut) << "\n\033[0m";
+    cout << "\033[33mapply_ECAL_SF_cuts:\t\t" << BoolToString(apply_ECAL_SF_cuts) << "\n\033[0m";
+    cout << "\033[33mapply_ECAL_P_cuts:\t\t" << BoolToString(apply_ECAL_P_cuts) << "\n\033[0m";
+    cout << "\033[33mapply_ECAL_fiducial_cuts:\t" << BoolToString(apply_ECAL_fiducial_cuts) << "\n\033[0m";
+    cout << "\033[33mapply_Electron_beta_cut:\t" << BoolToString(apply_Electron_beta_cut) << "\n\n\033[0m";
 
-    cout << "apply_chi2_cuts_1e_cut:\t\t" << BoolToString(apply_chi2_cuts_1e_cut) << "\n";
+    cout << "\033[33mapply_chi2_cuts_1e_cut:\t\t" << BoolToString(apply_chi2_cuts_1e_cut) << "\n\033[0m";
 
-    cout << "apply_nucleon_cuts:\t\t" << BoolToString(apply_nucleon_cuts) << "\n\n";
+    cout << "\033[33mapply_nucleon_cuts:\t\t" << BoolToString(apply_nucleon_cuts) << "\n\n\033[0m";
 
-    cout << "apply_nucleon_physical_cuts:\t" << BoolToString(apply_nucleon_physical_cuts) << "\n";
-    cout << "apply_nBeta_fit_cuts:\t\t" << BoolToString(apply_nBeta_fit_cuts) << "\n";
-    cout << "apply_fiducial_cuts:\t\t" << BoolToString(apply_fiducial_cuts) << "\n";
-    cout << "apply_kinematical_cuts:\t\t" << BoolToString(apply_kinematical_cuts) << "\n";
-    cout << "apply_kinematical_weights:\t" << BoolToString(apply_kinematical_weights) << "\n";
-    cout << "apply_nucleon_SmearAndCorr:\t" << BoolToString(apply_nucleon_SmearAndCorr) << "\n\n";
+    cout << "\033[33mapply_nucleon_physical_cuts:\t" << BoolToString(apply_nucleon_physical_cuts) << "\n\033[0m";
+    cout << "\033[33mapply_nBeta_fit_cuts:\t\t" << BoolToString(apply_nBeta_fit_cuts) << "\n\033[0m";
+    cout << "\033[33mapply_fiducial_cuts:\t\t" << BoolToString(apply_fiducial_cuts) << "\n\033[0m";
+    cout << "\033[33mapply_kinematical_cuts:\t\t" << BoolToString(apply_kinematical_cuts) << "\n\033[0m";
+    cout << "\033[33mapply_kinematical_weights:\t" << BoolToString(apply_kinematical_weights) << "\n\033[0m";
+    cout << "\033[33mapply_nucleon_SmearAndCorr:\t" << BoolToString(apply_nucleon_SmearAndCorr) << "\n\n\033[0m";
     //</editor-fold>
 
     //</editor-fold>
@@ -529,7 +529,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     // Other setup
     // ======================================================================================================================================================================
 
-    // cout << "\nTEST 2\n";
+    // cout << "\033[33m\nTEST 2\n\033[0m";
 
     //  Directory settings ------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -538,14 +538,14 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
      * Directory creation is done in the Directories class.
      * Added for the case that plots out folder does not exist and for organization.
      * All cut plots are separate from the analysis plots, and withing the 01_Cuts_plots folder. */
-    cout << "\nCreating plot directories...";
+    cout << "\033[33m\nCreating plot directories...\033[0m";
 
     string Plots_Folder = run_plots_path;
     const bool Clear_Old_Directories = true;
 
     Directories directories = Directories(Plots_Folder, Clear_Old_Directories);
 
-    cout << " done.\n\n";
+    cout << "\033[33m done.\n\n\033[0m";
     //</editor-fold>
 
     // TList definition -----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -866,26 +866,26 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Deleting files by cases">
     if (delete_png_files && !delete_root_files)
     {
-        cout << "\nClearing old plots...";
+        cout << "\033[33m\nClearing old plots...\033[0m";
         system(("find " + run_plots_path + " -type f -iname '*.png' -delete").c_str()); // Delete existing .png files
-        cout << " done.\n\n";
+        cout << "\033[33m done.\n\n\033[0m";
     }
     else if (!delete_png_files && delete_root_files)
     {
-        cout << "\nClearing old root files...";
+        cout << "\033[33m\nClearing old root files...\033[0m";
         system(("find " + run_plots_path + " -type f -iname '*.root' -delete").c_str()); // Delete existing .root files
-        cout << " done.\n\n";
+        cout << "\033[33m done.\n\n\033[0m";
     }
     else if (delete_png_files && delete_root_files)
     {
-        cout << "\nClearing old plots & root files...";
+        cout << "\033[33m\nClearing old plots & root files...\033[0m";
         system(("find " + run_plots_path + " -type f -iname '*.png' -delete").c_str());  // Delete existing .png files
         system(("find " + run_plots_path + " -type f -iname '*.root' -delete").c_str()); // Delete existing .root files
-        cout << " done.\n\n";
+        cout << "\033[33m done.\n\n\033[0m";
     }
     else
     {
-        cout << "\nNo files were cleared.\n\n";
+        cout << "\033[33m\nNo files were cleared.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -1081,7 +1081,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
     //<editor-fold desc="Acceptance maps generation">
     /* Acceptance maps are handled completely by the AMaps class */
-    cout << "\nSetting Acceptance maps...";
+    cout << "\033[33m\nSetting Acceptance maps...\033[0m";
 
     if (!calculate_truth_level)
     {
@@ -1131,14 +1131,14 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         wMaps = AMaps(AcceptanceWeightsDirectory, VaryingSampleName, Electron_single_slice_test, Nucleon_single_slice_test, TestSlices);
     }
 
-    cout << " done.\n\n";
+    cout << "\033[33m done.\n\n\033[0m";
     //</editor-fold>
 
     // Acceptance correction data -------------------------------------------------------------------------------------------------------------------------------------------
 
     //<editor-fold desc="Acceptance correction">
     /* Neutron resolution fits is handled completely by the MomentumResolution class */
-    cout << "\nSetting acceptance correction data...";
+    cout << "\033[33m\nSetting acceptance correction data...\033[0m";
 
     bool save_ACorr_data = false;
 
@@ -1154,14 +1154,14 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         save_ACorr_data = false;
     }
 
-    cout << " done.\n\n";
+    cout << "\033[33m done.\n\n\033[0m";
     //</editor-fold>
 
     // Neutron resolution & proton smearing ---------------------------------------------------------------------------------------------------------------------------------
 
     //<editor-fold desc="Neutron resolution">
     /* Neutron resolution fits is handled completely by the MomentumResolution class */
-    cout << "\nSetting neutron resolution data...";
+    cout << "\033[33m\nSetting neutron resolution data...\033[0m";
 
     if (!calculate_truth_level)
     {
@@ -1192,7 +1192,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                     CorrMode, momRes_test, ForceSmallpResLimits);
     //</editor-fold>
 
-    cout << "\ndone.\n\n";
+    cout << "\033[33m\ndone.\n\n\033[0m";
     //</editor-fold>
 
     // Debugging setup ---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1226,21 +1226,21 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         if (!apply_chi2_cuts_1e_cut)
         {
-            EventPrint << "//////////////////////////////////////////////////////////////////////\n";
-            EventPrint << "// Log of number of particles in event with all cuts except chi2    //\n";
-            EventPrint << "//////////////////////////////////////////////////////////////////////\n\n";
+            EventPrint << "//////////////////////////////////////////////////////////////////////\n\033[0m";
+            EventPrint << "// Log of number of particles in event with all cuts except chi2    //\n\033[0m";
+            EventPrint << "//////////////////////////////////////////////////////////////////////\n\n\033[0m";
         }
         else if (apply_chi2_cuts_1e_cut)
         {
-            EventPrint << "//////////////////////////////////////////////////////////////////////\n";
-            EventPrint << "// Log of number of particles in event with all cuts including chi2 //\n";
-            EventPrint << "//////////////////////////////////////////////////////////////////////\n\n";
+            EventPrint << "//////////////////////////////////////////////////////////////////////\n\033[0m";
+            EventPrint << "// Log of number of particles in event with all cuts including chi2 //\n\033[0m";
+            EventPrint << "//////////////////////////////////////////////////////////////////////\n\n\033[0m";
         }
 
-        EventPrint << "EVENT SELECTION:\n";
-        EventPrint << "#electrons in event:\t\t" << Ne_in_event << "\n";
-        EventPrint << "minimal #hadrons in event:\t" << Nf_in_event << "\n";
-        EventPrint << "#event upper bound:\t\t" << nEvents2print << "\n\n\n";
+        EventPrint << "EVENT SELECTION:\n\033[0m";
+        EventPrint << "#electrons in event:\t\t" << Ne_in_event << "\n\033[0m";
+        EventPrint << "minimal #hadrons in event:\t" << Nf_in_event << "\n\033[0m";
+        EventPrint << "#event upper bound:\t\t" << nEvents2print << "\n\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -1253,13 +1253,13 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Histogram definitions">
     /* Histogram definitions and setup. */
 
-    cout << "\nDefining histograms...";
+    cout << "\033[33m\nDefining histograms...\033[0m";
 
     // ======================================================================================================================================================================
     // Cut parameters plots
     // ======================================================================================================================================================================
 
-    // cout << "\nTEST 3\n";
+    // cout << "\033[33m\nTEST 3\n\033[0m";
 
     //<editor-fold desc="Cut parameters plots">
 
@@ -9940,17 +9940,17 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
     //</editor-fold>
 
-    cout << " done.\n\n";
+    cout << "\033[33m done.\n\n\033[0m";
     //</editor-fold>
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //                                                                         Code execution                                                                              //
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    // cout << "\nTEST 4\n";
+    // cout << "\033[33m\nTEST 4\n\033[0m";
 
     //<editor-fold desc="Code execution">
-    cout << "\nReading target parameter files...\n\n";
+    cout << "\033[33m\nReading target parameter files...\n\n\033[0m";
 
     //<editor-fold desc="Setting and loading cuts (via clas12ana)">
     clas12ana clasAna;
@@ -9997,7 +9997,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         }
         else if (apply_chi2_cuts_1e_cut)
         {
-            cout << "\nLoading fitted pid cuts...\n\n";
+            cout << "\033[33m\nLoading fitted pid cuts...\n\n\033[0m";
             clasAna.readInputParam((PIDCutsDirectory + "Fitted_PID_Cuts_-_" + SampleName +
                                     ".par")
                                        .c_str()); // load sample-appropreate cuts file from CutsDirectory
@@ -10048,7 +10048,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         }
         else
         {
-            cout << "\n\nLoading fitted Beta cuts...\n\n";
+            cout << "\033[33m\n\nLoading fitted Beta cuts...\n\n\033[0m";
             clasAna.readInputParam((NucleonCutsDirectory + "Nucleon_Cuts_-_" + SampleName + ".par")
                                        .c_str()); // load sample-appropreate cuts file from CutsDirectory
 
@@ -10145,7 +10145,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //</editor-fold>
 
     //<editor-fold desc="Setting HipoChain">
-    cout << "\n\nSetting HipoChain...\n\n";
+    cout << "\033[33m\n\nSetting HipoChain...\n\n\033[0m";
 
     clas12root::HipoChain chain;
     Experiment.AddToHipoChain(chain, SampleName, AnalyseFilePath, AnalyseFileSample, AnalyseFile);
@@ -10158,7 +10158,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     chain.db()->turnOffQADB();
 
     //<editor-fold desc="Auto-disable variables accoding to HipoChain length">
-    cout << "\n\nHipoChain loaded! HipoChainLength = " << HipoChainLength << "\n";
+    cout << "\033[33m\n\nHipoChain loaded! HipoChainLength = " << HipoChainLength << "\n\033[0m";
 
     if (HipoChainLength < 100)
     { /* This avoids a crush when plotting 2D final state ratios */
@@ -10172,7 +10172,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //  Setting beam particle's momentum
     //  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    // cout << "\nTEST 5\n";
+    // cout << "\033[33m\nTEST 5\n\033[0m";
 
     //<editor-fold desc="Setting beam particle's momentum">
     double Pv = beamE, Pvx = 0., Pvy = 0., Pvz = Pv; // Assuming momentum of incoming lepton is in the z direction
@@ -10221,13 +10221,13 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //  Looping over each HipoChain files
     //  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    cout << "\n\nLooping over chain files...\n\n";
+    cout << "\033[33m\n\nLooping over chain files...\n\n\033[0m";
 
-    // cout << "\nTEST 6\n";
+    // cout << "\033[33m\nTEST 6\n\033[0m";
 
     while (chain.Next())
     { // loop over events
-        // cout << "\nTEST 6\n";
+        // cout << "\033[33m\nTEST 6\n\033[0m";
 
         ++num_of_events; // logging Total #(events) in sample
 
@@ -10353,7 +10353,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         {
             if (!((allParticles[i]->par()->getPid() == 2112) || (allParticles[i]->par()->getPid() == 22)))
             {
-                cout << "\n\nReDef_neutrons_FD: A neutron PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nReDef_neutrons_FD: A neutron PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(0);
             }
 
             bool NeutronInPCAL_test = (allParticles[i]->cal(clas12::PCAL)->getDetector() == 7);   // PCAL hit
@@ -10362,12 +10362,12 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
             if (NeutronInPCAL_test)
             {
-                cout << "\n\nReDef_neutrons_FD test: a neutron have been found with a PCAL hit! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nReDef_neutrons_FD test: a neutron have been found with a PCAL hit! Exiting...\n\n", exit(0);
             }
 
             if (!(NeutronInECIN_test || NeutronInECOUT_test))
             {
-                cout << "\n\nReDef_neutrons_FD test: a neutron have been found without either ECIN or ECOUT hit! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nReDef_neutrons_FD test: a neutron have been found without either ECIN or ECOUT hit! Exiting...\n\n", exit(0);
             }
         }
 
@@ -10375,14 +10375,14 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         {
             if (allParticles[i]->par()->getPid() != 22)
             {
-                cout << "\n\nReDef_photons_FD test: A photon PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nReDef_photons_FD test: A photon PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(0);
             }
 
             bool PhotonInPCAL_test = (allParticles[i]->cal(clas12::PCAL)->getDetector() == 7); // PCAL hit
 
             if (!PhotonInPCAL_test)
             {
-                cout << "\n\n1n: a photon have been found without a PCAL hit! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1n: a photon have been found without a PCAL hit! Exiting...\n\n", exit(0);
             }
         }
         //</editor-fold>
@@ -10439,7 +10439,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         /* Safety check that allParticles.size(), Nf are the same */
         if ((clas12ana_particles) && (allParticles.size() != Nf))
         {
-            cout << "\n\nallParticles.size() is different than Nf! Exiting...\n\n", exit(0);
+            cout << "\033[33m\n\nallParticles.size() is different than Nf! Exiting...\n\n", exit(0);
         }
         //</editor-fold>
 
@@ -10452,14 +10452,14 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
                 if (!((Reco_Proton_Momentum <= p_mom_th.GetUpperCut()) && (Reco_Proton_Momentum >= p_mom_th.GetLowerCut())))
                 {
-                    cout << "\n\nFD proton check: there are FD protons outside momentum th. range! Exiting...\n\n", exit(0);
+                    cout << "\033[33m\n\nFD proton check: there are FD protons outside momentum th. range! Exiting...\n\n", exit(0);
                 }
 
                 for (int j = i + 1; j < Protons_ind.size(); j++)
                 {
                     if (Protons_ind.at(i) == Protons_ind.at(j))
                     {
-                        cout << "\n\nFD proton check: duplicated FD protons! Exiting...\n\n", exit(0);
+                        cout << "\033[33m\n\nFD proton check: duplicated FD protons! Exiting...\n\n", exit(0);
                     }
                 }
             }
@@ -10481,25 +10481,25 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
                 if (allParticles[NeutronsFD_ind_mom_max]->getRegion() != FD)
                 {
-                    cout << "\n\nLeading reco nFD check: Leading nFD is not in the FD! Exiting...\n\n", exit(0);
+                    cout << "\033[33m\n\nLeading reco nFD check: Leading nFD is not in the FD! Exiting...\n\n", exit(0);
                 }
 
                 if (!((allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 2112) ||
                       (allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 22)))
                 {
-                    cout << "\n\nLeading reco nFD check: A neutron PDG is not 2112 or 22 ("
+                    cout << "\033[33m\n\nLeading reco nFD check: A neutron PDG is not 2112 or 22 ("
                          << allParticles[NeutronsFD_ind_mom_max]->par()->getPid() << ")! Exiting...\n\n",
                         exit(0);
                 }
 
                 if (LeadingnFDPCAL)
                 {
-                    cout << "\n\nLeading reco nFD check: neutron hit in PCAL! Exiting...\n\n", exit(0);
+                    cout << "\033[33m\n\nLeading reco nFD check: neutron hit in PCAL! Exiting...\n\n", exit(0);
                 }
 
                 if (!(LeadingnFDECIN || LeadingnFDECOUT))
                 {
-                    cout << "\n\nLeading reco nFD check: no neutron hit in ECIN or ECOUT! Exiting...\n\n", exit(0);
+                    cout << "\033[33m\n\nLeading reco nFD check: no neutron hit in ECIN or ECOUT! Exiting...\n\n", exit(0);
                 }
             }
             //</editor-fold>
@@ -10507,14 +10507,14 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             //<editor-fold desc="Safety check for leading nFD assignment">
             if ((NeutronsFD_ind.size() > 0) && (NeutronsFD_ind_mom_max == -1))
             {
-                cout << "\n\nLeading reco nFD check: leading was not assigned! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nLeading reco nFD check: leading was not assigned! Exiting...\n\n", exit(0);
             }
 
             if (NeutronsFD_ind.size() == 1)
             {
                 if (NeutronsFD_ind.at(0) != NeutronsFD_ind_mom_max)
                 {
-                    cout << "\n\nLeading reco nFD check: leading was assigned incorrectly! Exiting...\n\n", exit(0);
+                    cout << "\033[33m\n\nLeading reco nFD check: leading was assigned incorrectly! Exiting...\n\n", exit(0);
                 }
             }
             else if (NeutronsFD_ind.size() > 1)
@@ -10527,7 +10527,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
                     if (dMomentum < 0)
                     {
-                        cout << "\n\nLeading reco nFD check: assigned nFD is not the leading! Exiting...\n\n", exit(0);
+                        cout << "\033[33m\n\nLeading reco nFD check: assigned nFD is not the leading! Exiting...\n\n", exit(0);
                     }
                 }
             }
@@ -10542,19 +10542,19 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
             if (!((Reco_Neutron_Momentum <= n_mom_th.GetUpperCut()) && (Reco_Neutron_Momentum >= n_mom_th.GetLowerCut())))
             {
-                cout << "\n\nallParticles[NeutronsFD_ind.at(i)]->par()->getPid() = " << allParticles[NeutronsFD_ind.at(i)]->par()->getPid()
-                     << "\n";
-                cout << "Reco_Neutron_Momentum = " << Reco_Neutron_Momentum << "\n";
-                cout << "n_mom_th.GetUpperCut() = " << n_mom_th.GetUpperCut() << "\n";
-                cout << "n_mom_th.GetLowerCut() = " << n_mom_th.GetLowerCut() << "\n";
-                cout << "\n\nFD neutron check: there are FD neutrons outside momentum th. range! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nallParticles[NeutronsFD_ind.at(i)]->par()->getPid() = " << allParticles[NeutronsFD_ind.at(i)]->par()->getPid()
+                     << "\n\033[0m";
+                cout << "\033[33mReco_Neutron_Momentum = " << Reco_Neutron_Momentum << "\n\033[0m";
+                cout << "\033[33mn_mom_th.GetUpperCut() = " << n_mom_th.GetUpperCut() << "\n\033[0m";
+                cout << "\033[33mn_mom_th.GetLowerCut() = " << n_mom_th.GetLowerCut() << "\n\033[0m";
+                cout << "\033[33m\n\nFD neutron check: there are FD neutrons outside momentum th. range! Exiting...\n\n", exit(0);
             }
 
             for (int j = i + 1; j < NeutronsFD_ind.size(); j++)
             {
                 if (NeutronsFD_ind.at(i) == NeutronsFD_ind.at(j))
                 {
-                    cout << "\n\nFD neutron check: duplicated FD neutrons! Exiting...\n\n", exit(0);
+                    cout << "\033[33m\n\nFD neutron check: duplicated FD neutrons! Exiting...\n\n", exit(0);
                 }
             }
         }
@@ -10600,17 +10600,17 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             {
                 if (event < (nEvents2print + 1))
                 {
-                    EventPrint << "--- EVENT NUMBER " << event << " ---\n";
-                    EventPrint << "#particles in event:\t" << Nf << "\n";
-                    EventPrint << "protons.size() = " << protons.size() << "\n";
-                    EventPrint << "Kplus.size() = " << Kplus.size() << "\n";
-                    EventPrint << "Kminus.size() = " << Kminus.size() << "\n";
-                    EventPrint << "piplus.size() = " << piplus.size() << "\n";
-                    EventPrint << "piminus.size() = " << piminus.size() << "\n";
-                    EventPrint << "electrons.size() = " << electrons.size() << "\n";
-                    EventPrint << "deuterons.size() = " << deuterons.size() << "\n";
-                    EventPrint << "neutrals.size() = " << neutrals.size() << "\n";
-                    EventPrint << "otherpart.size() = " << otherpart.size() << "\n\n\n";
+                    EventPrint << "--- EVENT NUMBER " << event << " ---\n\033[0m";
+                    EventPrint << "#particles in event:\t" << Nf << "\n\033[0m";
+                    EventPrint << "protons.size() = " << protons.size() << "\n\033[0m";
+                    EventPrint << "Kplus.size() = " << Kplus.size() << "\n\033[0m";
+                    EventPrint << "Kminus.size() = " << Kminus.size() << "\n\033[0m";
+                    EventPrint << "piplus.size() = " << piplus.size() << "\n\033[0m";
+                    EventPrint << "piminus.size() = " << piminus.size() << "\n\033[0m";
+                    EventPrint << "electrons.size() = " << electrons.size() << "\n\033[0m";
+                    EventPrint << "deuterons.size() = " << deuterons.size() << "\n\033[0m";
+                    EventPrint << "neutrals.size() = " << neutrals.size() << "\n\033[0m";
+                    EventPrint << "otherpart.size() = " << otherpart.size() << "\n\n\n\033[0m";
                 }
             }
         }
@@ -10630,7 +10630,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         //</editor-fold>
 
-        // cout << "\nTEST 7\n";
+        // cout << "\033[33m\nTEST 7\n\033[0m";
 
         //  Filling truth level histograms (lundfile loop) ----------------------------------------------------------------------------------------------------------------------
 
@@ -10942,21 +10942,21 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             {
                 if ((TL_IDed_Leading_nFD_ind != -1) && (TL_IDed_Leading_nFD_momentum != Leading_TL_FDNeutron_Momentum))
                 {
-                    cout << "\nTL_IDed_Leading_nFD_momentum = " << TL_IDed_Leading_nFD_momentum << "\n";
-                    cout << "Leading_TL_FDNeutron_Momentum = " << Leading_TL_FDNeutron_Momentum << "\n";
-                    cout << "\n\nLeading TL nFD check: momentum magnitude inconsistent! Exiting...\n\n", exit(0);
+                    cout << "\033[33m\nTL_IDed_Leading_nFD_momentum = " << TL_IDed_Leading_nFD_momentum << "\n\033[0m";
+                    cout << "\033[33mLeading_TL_FDNeutron_Momentum = " << Leading_TL_FDNeutron_Momentum << "\n\033[0m";
+                    cout << "\033[33m\n\nLeading TL nFD check: momentum magnitude inconsistent! Exiting...\n\n", exit(0);
                 }
 
                 if ((TL_NeutronsFD_mom_ind.size() > 0) && (TL_IDed_Leading_nFD_ind == -1))
                 {
-                    cout << "\n\nLeading TL nFD check: leading was not assigned! Exiting...\n\n", exit(0);
+                    cout << "\033[33m\n\nLeading TL nFD check: leading was not assigned! Exiting...\n\n", exit(0);
                 }
 
                 if (TL_NeutronsFD_mom_ind.size() == 1)
                 {
                     if (TL_NeutronsFD_mom_ind.at(0) != TL_IDed_Leading_nFD_ind)
                     {
-                        cout << "\n\nLeading TL nFD check: leading was assigned incorrectly! Exiting...\n\n", exit(0);
+                        cout << "\033[33m\n\nLeading TL nFD check: leading was assigned incorrectly! Exiting...\n\n", exit(0);
                     }
                 }
                 else if (TL_NeutronsFD_mom_ind.size() > 1)
@@ -10971,7 +10971,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
                         if (dMomentum < 0)
                         {
-                            cout << "\n\nLeading TL nFD check: assigned nFD is not the leading! Exiting...\n\n", exit(0);
+                            cout << "\033[33m\n\nLeading TL nFD check: assigned nFD is not the leading! Exiting...\n\n", exit(0);
                         }
                     }
                 }
@@ -12036,12 +12036,12 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                         //<editor-fold desc="Safety checks for TL electrons (AMaps & WMaps)">
                         if (particlePDGtmp != 11)
                         {
-                            cout << "\n\nTL electrons check (AMaps & WMaps): TL electron PGD is invalid (" << particlePDGtmp << ")! Exiting...\n\n", exit(0);
+                            cout << "\033[33m\n\nTL electrons check (AMaps & WMaps): TL electron PGD is invalid (" << particlePDGtmp << ")! Exiting...\n\n", exit(0);
                         }
 
                         if (!inFD)
                         {
-                            cout << "\n\nTL electrons check (AMaps & WMaps): TL electron is not in FD! Exiting...\n\n", exit(0);
+                            cout << "\033[33m\n\nTL electrons check (AMaps & WMaps): TL electron is not in FD! Exiting...\n\n", exit(0);
                         }
                         //</editor-fold>
 
@@ -12057,10 +12057,10 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                         //
                         //                            //<editor-fold desc="Safety checks for TL neutrons (AMaps & WMaps)">
                         //                            if (particlePDGtmp != 2112) {
-                        //                                cout << "\n\nTL neutrons check (AMaps & WMaps): TL neutron PGD is invalid (" << particlePDGtmp << ")! Exiting...\n\n", exit(0);
+                        //                                cout << "\033[33m\n\nTL neutrons check (AMaps & WMaps): TL neutron PGD is invalid (" << particlePDGtmp << ")! Exiting...\n\n", exit(0);
                         //                            }
                         //
-                        //                            if (!inFD) { cout << "\n\nTL neutrons check (AMaps & WMaps): TL neutron is not in FD! Exiting...\n\n", exit(0); }
+                        //                            if (!inFD) { cout << "\033[33m\n\nTL neutrons check (AMaps & WMaps): TL neutron is not in FD! Exiting...\n\n", exit(0); }
                         //                            //</editor-fold>
                         //
                         //                            bool FD_Theta_Cut_TL_neutrons = (Particle_TL_Theta <= FD_nucleon_theta_cut.GetUpperCut());
@@ -12087,14 +12087,14 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                             //<editor-fold desc="Safety checks for TL protons (AMaps & WMaps)">
                             if (particlePDGtmp != 2212)
                             {
-                                cout << "\n\nTL protons check (AMaps & WMaps): TL proton PGD is invalid (" << particlePDGtmp
+                                cout << "\033[33m\n\nTL protons check (AMaps & WMaps): TL proton PGD is invalid (" << particlePDGtmp
                                      << ")! Exiting...\n\n",
                                     exit(0);
                             }
 
                             if (!inFD)
                             {
-                                cout << "\n\nTL protons check (AMaps & WMaps): TL proton is not in FD! Exiting...\n\n", exit(0);
+                                cout << "\033[33m\n\nTL protons check (AMaps & WMaps): TL proton is not in FD! Exiting...\n\n", exit(0);
                             }
                             //</editor-fold>
 
@@ -12141,14 +12141,14 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                     //<editor-fold desc="Safety checks for TL neutrons (AMaps & WMaps)">
                     if (particlePDGtmp != 2112)
                     {
-                        cout << "\n\nTL neutrons check (AMaps & WMaps): TL neutron PGD is invalid (" << particlePDGtmp
+                        cout << "\033[33m\n\nTL neutrons check (AMaps & WMaps): TL neutron PGD is invalid (" << particlePDGtmp
                              << ")! Exiting...\n\n",
                             exit(0);
                     }
 
                     if (!inFD)
                     {
-                        cout << "\n\nTL neutrons check (AMaps & WMaps): TL neutron is not in FD! Exiting...\n\n", exit(0);
+                        cout << "\033[33m\n\nTL neutrons check (AMaps & WMaps): TL neutron is not in FD! Exiting...\n\n", exit(0);
                     }
                     //</editor-fold>
 
@@ -12174,7 +12174,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         //  Fill All particles (All e) plots ------------------------------------------------------------------------------------------------------------------------------------
 
-        // cout << "\nTEST 8\n";
+        // cout << "\033[33m\nTEST 8\n\033[0m";
 
         //<editor-fold desc="All particles plots">
         /* Declaration of electron variables for all particles analysis.
@@ -12389,7 +12389,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         //  1e cut --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        // cout << "\nTEST 9\n";
+        // cout << "\033[33m\nTEST 9\n\033[0m";
 
         //<editor-fold desc="1e cut">
         /* Here we apply electron cut on everything that follows (1p, nFDpCD, 1e2p and 2p) */
@@ -12406,7 +12406,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         //<editor-fold desc="Safety checks (1e cut)">
         if (electrons.size() != 1)
         {
-            cout << "\n\n1e cut: single electron cut is not implemented! Exiting...\n\n", exit(0);
+            cout << "\033[33m\n\n1e cut: single electron cut is not implemented! Exiting...\n\n", exit(0);
         }
         //</editor-fold>
 
@@ -12436,26 +12436,26 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         // Check that we do have only one electron:
         if (electrons.size() != 1)
         {
-            cout << "\n\n1e cut: electrons.size() is different than 1! Exiting...\n\n", exit(0);
+            cout << "\033[33m\n\n1e cut: electrons.size() is different than 1! Exiting...\n\n", exit(0);
         }
         if (electrons[0]->getRegion() != FD)
         {
-            cout << "\n\n1e cut: electrons is not in the FD! Exiting...\n\n", exit(0);
+            cout << "\033[33m\n\n1e cut: electrons is not in the FD! Exiting...\n\n", exit(0);
         }
 
         // Check that our one electron is within momentum cuts:
         // TODO: might be problemetic if electron momentum cuts are changed. consider removing this if that does happen.
         if (Electron_ind.size() != 1)
         {
-            cout << "\n\n1e cut: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
+            cout << "\033[33m\n\n1e cut: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
         }
         if (Electron_ind.at(0) != 0)
         {
-            cout << "\n\n1e cut: Electron_ind.at(0) is different than 0! Exiting...\n\n", exit(0);
+            cout << "\033[33m\n\n1e cut: Electron_ind.at(0) is different than 0! Exiting...\n\n", exit(0);
         }
         if (electrons[Electron_ind.at(0)]->getRegion() != FD)
         {
-            cout << "\n\n1e cut: Electron_ind.at(0) is not in the FD! Exiting...\n\n", exit(0);
+            cout << "\033[33m\n\n1e cut: Electron_ind.at(0) is not in the FD! Exiting...\n\n", exit(0);
         }
         //</editor-fold>
 
@@ -13777,24 +13777,24 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                     //<editor-fold desc="Safety checks that leading nFD is neutron by definition (AMaps & WMaps)">
                     if (allParticles[NeutronsFD_ind_mom_max]->getRegion() != FD)
                     {
-                        cout << "\n\nLeading reco nFD check (AMaps & WMaps): Leading nFD is not in the FD! Exiting...\n\n", exit(0);
+                        cout << "\033[33m\n\nLeading reco nFD check (AMaps & WMaps): Leading nFD is not in the FD! Exiting...\n\n", exit(0);
                     }
 
                     if (!((allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 2112) || (allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 22)))
                     {
-                        cout << "\n\nLeading reco nFD check (AMaps & WMaps): A neutron PDG is not 2112 or 22 (" << allParticles[NeutronsFD_ind_mom_max]->par()->getPid()
+                        cout << "\033[33m\n\nLeading reco nFD check (AMaps & WMaps): A neutron PDG is not 2112 or 22 (" << allParticles[NeutronsFD_ind_mom_max]->par()->getPid()
                              << ")! Exiting...\n\n",
                             exit(0);
                     }
 
                     if (hitPCAL_1e_cut)
                     {
-                        cout << "\n\nLeading reco nFD check (AMaps & WMaps): neutron hit in PCAL! Exiting...\n\n", exit(0);
+                        cout << "\033[33m\n\nLeading reco nFD check (AMaps & WMaps): neutron hit in PCAL! Exiting...\n\n", exit(0);
                     }
 
                     if (!(hitECIN_1e_cut || hitECOUT_1e_cut))
                     {
-                        cout << "\n\nLeading reco nFD check (AMaps & WMaps): no neutron hit in ECIN or ECOUT! Exiting...\n\n", exit(0);
+                        cout << "\033[33m\n\nLeading reco nFD check (AMaps & WMaps): no neutron hit in ECIN or ECOUT! Exiting...\n\n", exit(0);
                     }
                     //</editor-fold>
 
@@ -13843,18 +13843,18 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             //
             //                    //<editor-fold desc="Safety checks that i-th nFD is neutron by definition (AMaps & WMaps)">
             //                    if (allParticles[i]->getRegion() != FD) {
-            //                        cout << "\n\nLeading reco nFD check (AMaps & WMaps): Leading nFD is not in the FD! Exiting...\n\n", exit(0);
+            //                        cout << "\033[33m\n\nLeading reco nFD check (AMaps & WMaps): Leading nFD is not in the FD! Exiting...\n\n", exit(0);
             //                    }
             //
             //                    if (!((allParticles[i]->par()->getPid() == 2112) || (allParticles[i]->par()->getPid() == 22))) {
-            //                        cout << "\n\nLeading reco nFD check (AMaps & WMaps): A neutron PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(
+            //                        cout << "\033[33m\n\nLeading reco nFD check (AMaps & WMaps): A neutron PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(
             //                                0);
             //                    }
             //
-            //                    if (hitPCAL_1e_cut) { cout << "\n\nLeading reco nFD check (AMaps & WMaps): neutron hit in PCAL! Exiting...\n\n", exit(0); }
+            //                    if (hitPCAL_1e_cut) { cout << "\033[33m\n\nLeading reco nFD check (AMaps & WMaps): neutron hit in PCAL! Exiting...\n\n", exit(0); }
             //
             //                    if (!(hitECIN_1e_cut ||
-            //                          hitECOUT_1e_cut)) { cout << "\n\nLeading reco nFD check (AMaps & WMaps): no neutron hit in ECIN or ECOUT! Exiting...\n\n", exit(0); }
+            //                          hitECOUT_1e_cut)) { cout << "\033[33m\n\nLeading reco nFD check (AMaps & WMaps): no neutron hit in ECIN or ECOUT! Exiting...\n\n", exit(0); }
             //                    //</editor-fold>
             //
             //                    if (allParticles[i]->cal(n_detlayer_1e_cut)->getLv() > clasAna.getEcalEdgeCuts() &&
@@ -13905,7 +13905,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         //  1p (FD only) --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        // cout << "\nTEST 10\n";
+        // cout << "\033[33m\nTEST 10\n\033[0m";
 
         //<editor-fold desc="1p (FD only)">
         /* 1p event selection: 1p = Protons_ind.size() = 1 in the FD, any number of FD neutrons and any number of other neutrals and particles with pdg=0.*/
@@ -13927,54 +13927,54 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             /* Safety check that we are looking at 1p */
             if (e_1p->getRegion() != FD)
             {
-                cout << "\n\n1p: Electron is not in the FD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1p: Electron is not in the FD! Exiting...\n\n", exit(0);
             }
             if (p_1p->getRegion() != FD)
             {
-                cout << "\n\n1p: nFD is not in the FD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1p: nFD is not in the FD! Exiting...\n\n", exit(0);
             }
 
             if (Protons_ind.size() != 1)
             {
-                cout << "\n\n1p: Protons_ind.size() is different than 1! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1p: Protons_ind.size() is different than 1! Exiting...\n\n", exit(0);
             }
             if (Kplus.size() != 0)
             {
-                cout << "\n\n1p: Kplus.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1p: Kplus.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Kminus.size() != 0)
             {
-                cout << "\n\n1p: Kminus.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1p: Kminus.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Piplus_ind.size() != 0)
             {
-                cout << "\n\n1p: Piplus_ind.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1p: Piplus_ind.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Piminus_ind.size() != 0)
             {
-                cout << "\n\n1p: Piminus_ind.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1p: Piminus_ind.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Electron_ind.size() != 1)
             {
-                cout << "\n\n1p: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1p: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
             }
             if (deuterons.size() != 0)
             {
-                cout << "\n\n1p: deuterons.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1p: deuterons.size() is different than 0! Exiting...\n\n", exit(0);
             }
 
             if (e_1p->getRegion() != FD)
             {
-                cout << "\n\n1p: 1p proton is not in the FD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1p: 1p proton is not in the FD! Exiting...\n\n", exit(0);
             }
             if (p_1p->getRegion() != FD)
             {
-                cout << "\n\n1p: 1p electron is not in the FD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1p: 1p electron is not in the FD! Exiting...\n\n", exit(0);
             }
 
             if (!(Enable_FD_photons || (PhotonsFD_ind.size() == 0)))
             {
-                cout << "\n\n1p: PhotonsFD_ind.size() is non-zero (" << PhotonsFD_ind.size() << ")! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1p: PhotonsFD_ind.size() is non-zero (" << PhotonsFD_ind.size() << ")! Exiting...\n\n", exit(0);
             }
             //</editor-fold>
 
@@ -14607,7 +14607,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         //  1n (FD only) --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        // cout << "\nTEST 11\n";
+        // cout << "\033[33m\nTEST 11\n\033[0m";
 
         //<editor-fold desc="1n (FD only)">
         /* 1n event selection: 1n = any number of id. FD neutrons (we look at the leading nFD), with no charged particles (except electrons) and any number of other
@@ -14646,16 +14646,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             /* Safety check that we are looking at 1n */
             if (e_1n->getRegion() != FD)
             {
-                cout << "\n\n1n: Electron is not in the FD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1n: Electron is not in the FD! Exiting...\n\n", exit(0);
             }
             if (n_1n->getRegion() != FD)
             {
-                cout << "\n\n1n: nFD is not in the FD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1n: nFD is not in the FD! Exiting...\n\n", exit(0);
             }
 
             if (!(Enable_FD_photons || (PhotonsFD_ind.size() == 0)))
             {
-                cout << "\n\n1n: PhotonsFD_ind.size() is non-zero (" << PhotonsFD_ind.size() << ")! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1n: PhotonsFD_ind.size() is non-zero (" << PhotonsFD_ind.size() << ")! Exiting...\n\n", exit(0);
             }
 
             if (ES_by_leading_FDneutron)
@@ -14670,40 +14670,40 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
                         if (P_max_test < P_temp)
                         {
-                            cout << "\n\n1n: NeutronsFD_ind_mom_max is not leading FD neutron! Exiting...\n\n", exit(0);
+                            cout << "\033[33m\n\n1n: NeutronsFD_ind_mom_max is not leading FD neutron! Exiting...\n\n", exit(0);
                         }
                     }
                 }
             }
 
-            //            if (NeutronsFD_ind.size() != 1) { cout << "\n\n1n: NeutronsFD_ind.size() is different than 1! Exiting...\n\n", exit(0); }
+            //            if (NeutronsFD_ind.size() != 1) { cout << "\033[33m\n\n1n: NeutronsFD_ind.size() is different than 1! Exiting...\n\n", exit(0); }
             if (Protons_ind.size() != 0)
             {
-                cout << "\n\n1n: Protons_ind.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1n: Protons_ind.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Kplus.size() != 0)
             {
-                cout << "\n\n1n: Kplus.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1n: Kplus.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Kminus.size() != 0)
             {
-                cout << "\n\n1n: Kminus.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1n: Kminus.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Piplus_ind.size() != 0)
             {
-                cout << "\n\n1n: Piplus_ind.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1n: Piplus_ind.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Piminus_ind.size() != 0)
             {
-                cout << "\n\n1n: Piminus_ind.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1n: Piminus_ind.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Electron_ind.size() != 1)
             {
-                cout << "\n\n1n: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1n: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
             }
             if (deuterons.size() != 0)
             {
-                cout << "\n\n1n: deuterons.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1n: deuterons.size() is different than 0! Exiting...\n\n", exit(0);
             }
 
             for (int &i : NeutronsFD_ind)
@@ -14711,11 +14711,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 bool NeutronInPCAL_1n = (allParticles[i]->cal(clas12::PCAL)->getDetector() == 7); // PCAL hit
                 if (NeutronInPCAL_1n)
                 {
-                    cout << "\n\n1n: a neutron have been found with a PCAL hit! Exiting...\n\n", exit(0);
+                    cout << "\033[33m\n\n1n: a neutron have been found with a PCAL hit! Exiting...\n\n", exit(0);
                 }
                 if (!((allParticles[i]->par()->getPid() == 2112) || (allParticles[i]->par()->getPid() == 22)))
                 {
-                    cout << "\n\n1n: A neutron PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(0);
+                    cout << "\033[33m\n\n1n: A neutron PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(0);
                 }
             }
 
@@ -14724,11 +14724,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 bool PhotonInPCAL_1n = (allParticles[i]->cal(clas12::PCAL)->getDetector() == 7); // PCAL hit
                 if (!PhotonInPCAL_1n)
                 {
-                    cout << "\n\n1n: a photon have been found without a PCAL hit! Exiting...\n\n", exit(0);
+                    cout << "\033[33m\n\n1n: a photon have been found without a PCAL hit! Exiting...\n\n", exit(0);
                 }
                 if (allParticles[i]->par()->getPid() != 22)
                 {
-                    cout << "\n\n1n: A photon PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(0);
+                    cout << "\033[33m\n\n1n: A photon PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(0);
                 }
             }
 
@@ -14743,23 +14743,23 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
             if (n_1n->getRegion() != FD)
             {
-                cout << "\n\n1n: neutron is not in FD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1n: neutron is not in FD! Exiting...\n\n", exit(0);
             }
             if (!((NeutronPDG == 22) || (NeutronPDG == 2112)))
             {
-                cout << "\n\n1n: neutral PDG is not 2112 or 22 (" << NeutronPDG << ")! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1n: neutral PDG is not 2112 or 22 (" << NeutronPDG << ")! Exiting...\n\n", exit(0);
             }
             if (NeutronInPCAL_1n)
             {
-                cout << "\n\n1n: neutron hit in PCAL! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1n: neutron hit in PCAL! Exiting...\n\n", exit(0);
             }
             if (!(NeutronInECIN_1n || NeutronInECOUT_1n))
             {
-                cout << "\n\n1n: no neutron hit in ECIN or ECOUT! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1n: no neutron hit in ECIN or ECOUT! Exiting...\n\n", exit(0);
             }
             if (!(!NeutronInPCAL_1n && (NeutronInECIN_1n || NeutronInECOUT_1n)))
             {
-                cout << "\n\n1n: not neutron by definition! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n1n: not neutron by definition! Exiting...\n\n", exit(0);
             }
             //</editor-fold>
 
@@ -15122,11 +15122,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                         {
                             if (!(allParticles[i]->getRegion() == FD))
                             {
-                                cout << "\n\nBeta_n_1n: neutron is not in FD! Exiting...\n\n", exit(0);
+                                cout << "\033[33m\n\nBeta_n_1n: neutron is not in FD! Exiting...\n\n", exit(0);
                             }
                             if (!(!inPCALtmp && (inECINtmp || inECOUTtmp)))
                             {
-                                cout << "\n\nBeta_n_1n: photon is not a neutron! Exiting...\n\n", exit(0);
+                                cout << "\033[33m\n\nBeta_n_1n: photon is not a neutron! Exiting...\n\n", exit(0);
                             }
 
                             //<editor-fold desc="Filling beta of neutrons from 'photons' - all sectors">
@@ -15176,11 +15176,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                     {
                         if (!(allParticles[n_ind_1n]->getRegion() == FD))
                         {
-                            cout << "\n\nBeta_n_1n: neutron is not in FD! Exiting...\n\n", exit(0);
+                            cout << "\033[33m\n\nBeta_n_1n: neutron is not in FD! Exiting...\n\n", exit(0);
                         }
                         if (!(!inPCALtmp && (inECINtmp || inECOUTtmp)))
                         {
-                            cout << "\n\nBeta_n_1n: photon is not a neutron! Exiting...\n\n", exit(0);
+                            cout << "\033[33m\n\nBeta_n_1n: photon is not a neutron! Exiting...\n\n", exit(0);
                         }
 
                         //<editor-fold desc="Filling beta of neutrons from 'photons' - all sectors">
@@ -15952,31 +15952,31 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             /* Safety check that we are looking at 2p */
             if (Protons_ind.size() != 2)
             {
-                cout << "\n\n2p: Protons_ind.size() is different than 2! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n2p: Protons_ind.size() is different than 2! Exiting...\n\n", exit(0);
             }
             if (Kplus.size() != 0)
             {
-                cout << "\n\n2p: Kplus.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n2p: Kplus.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Kminus.size() != 0)
             {
-                cout << "\n\n2p: Kminus.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n2p: Kminus.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Piplus_ind.size() != 0)
             {
-                cout << "\n\n2p: Piplus_ind.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n2p: Piplus_ind.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Piminus_ind.size() != 0)
             {
-                cout << "\n\n2p: Piminus_ind.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n2p: Piminus_ind.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Electron_ind.size() != 1)
             {
-                cout << "\n\n2p: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n2p: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
             }
             if (deuterons.size() != 0)
             {
-                cout << "\n\n2p: deuterons.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\n2p: deuterons.size() is different than 0! Exiting...\n\n", exit(0);
             }
             //</editor-fold>
 
@@ -16028,7 +16028,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
             //  Fillings 2p histograms ---------------------------------------------------------------------------------------------------------------------------------
 
-            // cout << "\nTEST 12\n";
+            // cout << "\033[33m\nTEST 12\n\033[0m";
 
             //<editor-fold desc="Fillings 2p histograms">
             ++num_of_events_2p;
@@ -16637,7 +16637,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         //  pFDpCD --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        // cout << "\nTEST 13\n";
+        // cout << "\033[33m\nTEST 13\n\033[0m";
 
         //<editor-fold desc="pFDpCD">
 
@@ -16698,62 +16698,62 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             /* Safety check that we are looking at pFDpCD */
             if (e_pFDpCD->getRegion() != FD)
             {
-                cout << "\n\npFDpCD: Electron is not in the FD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\npFDpCD: Electron is not in the FD! Exiting...\n\n", exit(0);
             }
             if (pFD_pFDpCD->getRegion() != FD)
             {
-                cout << "\n\npFDpCD: nFD is not in the FD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\npFDpCD: nFD is not in the FD! Exiting...\n\n", exit(0);
             }
             if (pCD_pFDpCD->getRegion() != CD)
             {
-                cout << "\n\npFDpCD: pCD is not in the CD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\npFDpCD: pCD is not in the CD! Exiting...\n\n", exit(0);
             }
             if (Protons_ind.size() != 2)
             {
-                cout << "\n\npFDpCD: Protons_ind.size() is different than 2! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\npFDpCD: Protons_ind.size() is different than 2! Exiting...\n\n", exit(0);
             }
 
             if (protons[Protons_ind.at(0)]->getRegion() == protons[Protons_ind.at(1)]->getRegion())
             {
-                cout << "\n\npFDpCD: Protons are in the same region! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\npFDpCD: Protons are in the same region! Exiting...\n\n", exit(0);
             }
 
             if (e_pFDpCD->getRegion() != FD)
             {
-                cout << "\n\npFDpCD: Electron is not in the FD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\npFDpCD: Electron is not in the FD! Exiting...\n\n", exit(0);
             }
             if (pFD_pFDpCD->getRegion() != FD)
             {
-                cout << "\n\npFDpCD: pFD is not in the FD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\npFDpCD: pFD is not in the FD! Exiting...\n\n", exit(0);
             }
             if (pCD_pFDpCD->getRegion() != CD)
             {
-                cout << "\n\npFDpCD: pCD is not in the CD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\npFDpCD: pCD is not in the CD! Exiting...\n\n", exit(0);
             }
 
             if (Kplus.size() != 0)
             {
-                cout << "\n\npFDpCD: Kplus.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\npFDpCD: Kplus.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Kminus.size() != 0)
             {
-                cout << "\n\npFDpCD: Kminus.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\npFDpCD: Kminus.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Piplus_ind.size() != 0)
             {
-                cout << "\n\npFDpCD: Piplus_ind.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\npFDpCD: Piplus_ind.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Piminus_ind.size() != 0)
             {
-                cout << "\n\npFDpCD: Piminus_ind.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\npFDpCD: Piminus_ind.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Electron_ind.size() != 1)
             {
-                cout << "\n\npFDpCD: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\npFDpCD: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
             }
             if (deuterons.size() != 0)
             {
-                cout << "\n\npFDpCD: deuterons.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\npFDpCD: deuterons.size() is different than 0! Exiting...\n\n", exit(0);
             }
             //</editor-fold>
 
@@ -17607,7 +17607,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         //  nFDpCD --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        // cout << "\nTEST 14\n";
+        // cout << "\033[33m\nTEST 14\n\033[0m";
 
         //<editor-fold desc="nFDpCD">
 
@@ -17651,49 +17651,49 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             // TODO: reorgenize these Safety checks
             if (e_nFDpCD->getRegion() != FD)
             {
-                cout << "\n\nnFDpCD: Electron is not in the FD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nnFDpCD: Electron is not in the FD! Exiting...\n\n", exit(0);
             }
             if (nFD_nFDpCD->getRegion() != FD)
             {
-                cout << "\n\nnFDpCD: nFD is not in the FD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nnFDpCD: nFD is not in the FD! Exiting...\n\n", exit(0);
             }
             if (pCD_nFDpCD->getRegion() != CD)
             {
-                cout << "\n\nnFDpCD: pCD is not in the CD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nnFDpCD: pCD is not in the CD! Exiting...\n\n", exit(0);
             }
 
             if (!(Enable_FD_photons || (PhotonsFD_ind.size() == 0)))
             {
-                cout << "\n\nnFDpCD: PhotonsFD_ind.size() is non-zero (" << PhotonsFD_ind.size() << ")! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nnFDpCD: PhotonsFD_ind.size() is non-zero (" << PhotonsFD_ind.size() << ")! Exiting...\n\n", exit(0);
             }
 
             if (Protons_ind.size() != 1)
             {
-                cout << "\n\nnFDpCD: Protons_ind.size() is different than 2! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nnFDpCD: Protons_ind.size() is different than 2! Exiting...\n\n", exit(0);
             }
             if (Kplus.size() != 0)
             {
-                cout << "\n\nnFDpCD: Kplus.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nnFDpCD: Kplus.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Kminus.size() != 0)
             {
-                cout << "\n\nnFDpCD: Kminus.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nnFDpCD: Kminus.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Piplus_ind.size() != 0)
             {
-                cout << "\n\nnFDpCD: Piplus_ind.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nnFDpCD: Piplus_ind.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Piminus_ind.size() != 0)
             {
-                cout << "\n\nnFDpCD: Piminus_ind.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nnFDpCD: Piminus_ind.size() is different than 0! Exiting...\n\n", exit(0);
             }
             if (Electron_ind.size() != 1)
             {
-                cout << "\n\nnFDpCD: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nnFDpCD: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
             }
             if (deuterons.size() != 0)
             {
-                cout << "\n\nnFDpCD: deuterons.size() is different than 0! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nnFDpCD: deuterons.size() is different than 0! Exiting...\n\n", exit(0);
             }
 
             for (int &i : NeutronsFD_ind)
@@ -17701,11 +17701,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 bool NeutronInPCAL_nFDpCD = (allParticles[i]->cal(clas12::PCAL)->getDetector() == 7); // PCAL hit
                 if (NeutronInPCAL_nFDpCD)
                 {
-                    cout << "\n\nnFDpCD: a neutron have been found with a PCAL hit! Exiting...\n\n", exit(0);
+                    cout << "\033[33m\n\nnFDpCD: a neutron have been found with a PCAL hit! Exiting...\n\n", exit(0);
                 }
                 if (!((allParticles[i]->par()->getPid() == 2112) || (allParticles[i]->par()->getPid() == 22)))
                 {
-                    cout << "\n\nnFDpCD: A neutron PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(0);
+                    cout << "\033[33m\n\nnFDpCD: A neutron PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(0);
                 }
             }
 
@@ -17714,11 +17714,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 bool PhotonInPCAL_nFDpCD = (allParticles[i]->cal(clas12::PCAL)->getDetector() == 7); // PCAL hit
                 if (!PhotonInPCAL_nFDpCD)
                 {
-                    cout << "\n\nnFDpCD: a photon have been found without a PCAL hit! Exiting...\n\n", exit(0);
+                    cout << "\033[33m\n\nnFDpCD: a photon have been found without a PCAL hit! Exiting...\n\n", exit(0);
                 }
                 if (allParticles[i]->par()->getPid() != 22)
                 {
-                    cout << "\n\nnFDpCD: A photon PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(0);
+                    cout << "\033[33m\n\nnFDpCD: A photon PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(0);
                 }
             }
             //</editor-fold>
@@ -17815,19 +17815,19 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             /* Safety check that we are looking at good neutron (BEFORE VETO!!!) */
             if (nFD_nFDpCD->getRegion() != FD)
             {
-                cout << "\n\nnFDpCD: neutron is not in FD! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nnFDpCD: neutron is not in FD! Exiting...\n\n", exit(0);
             }
             if (!((NeutronPDG_nFDpCD == 22) || (NeutronPDG_nFDpCD == 2112)))
             {
-                cout << "\n\nnFDpCD: neutral PDG is not 2112 or 22 (" << NeutronPDG_nFDpCD << ")! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nnFDpCD: neutral PDG is not 2112 or 22 (" << NeutronPDG_nFDpCD << ")! Exiting...\n\n", exit(0);
             }
             if (NeutronInPCAL_nFDpCD)
             {
-                cout << "\n\nnFDpCD: neutron hit in PCAL! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nnFDpCD: neutron hit in PCAL! Exiting...\n\n", exit(0);
             }
             if (!(NeutronInECIN_nFDpCD || NeutronInECOUT_nFDpCD))
             {
-                cout << "\n\nnFDpCD: no neutron hit in ECIN or ECOUT! Exiting...\n\n", exit(0);
+                cout << "\033[33m\n\nnFDpCD: no neutron hit in ECIN or ECOUT! Exiting...\n\n", exit(0);
             }
             //</editor-fold>
 
@@ -18715,7 +18715,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         } // end of 1enFDpCD & nFDpCD cuts if
         //</editor-fold>
 
-        // cout << "\nTEST 15\n";
+        // cout << "\033[33m\nTEST 15\n\033[0m";
 
     } // end of while
     // </editor-fold>
@@ -18759,7 +18759,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Number of Photo-electrons (Nphe) histograms">
     if (Nphe_plots)
     {
-        cout << "\n\nPlotting number of photo-electrons (Nphe) histograms...\n\n";
+        cout << "\033[33m\n\nPlotting number of photo-electrons (Nphe) histograms...\n\n\033[0m";
 
         //  Nphe plots ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -18797,7 +18797,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     else
     {
-        cout << "\n\nnumber of photo-electrons (Nphe) plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nnumber of photo-electrons (Nphe) plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -18808,7 +18808,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Chi2 plots">
     if (Chi2_plots)
     {
-        cout << "\n\nPlotting Chi2 plots...\n\n";
+        cout << "\033[33m\n\nPlotting Chi2 plots...\n\n\033[0m";
 
         //<editor-fold desc="Finding Xmax">
         Chi2_Electron_cuts_FD.MeanFromHistogram = hChi2_Electron_1e_cut_FD.GetHistogram1D().GetBinCenter(hChi2_Electron_1e_cut_FD.GetHistogram1D().GetMaximumBin());
@@ -19017,7 +19017,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     else
     {
-        cout << "\n\nChi2 plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nChi2 plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -19028,7 +19028,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Vertex plots">
     if (Vertex_plots)
     {
-        cout << "\n\nPlotting Vertex plots...\n\n";
+        cout << "\033[33m\n\nPlotting Vertex plots...\n\n\033[0m";
 
         //  Vertex plots --------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -19170,7 +19170,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     else
     {
-        cout << "\n\nVertex plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nVertex plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -19181,7 +19181,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Sampling Fraction (SF) histograms">
     if (SF_plots)
     {
-        cout << "\n\nPlotting Sampling Fraction histograms...\n\n";
+        cout << "\033[33m\n\nPlotting Sampling Fraction histograms...\n\n\033[0m";
 
         //  SF plots ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -19253,7 +19253,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     else
     {
-        cout << "\n\nSampling Fraction plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nSampling Fraction plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -19264,7 +19264,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="ECAL edge histograms (electrons only, FD only)">
     if (fiducial_plots)
     {
-        cout << "\n\nPlotting fiducial histograms...\n\n";
+        cout << "\033[33m\n\nPlotting fiducial histograms...\n\n\033[0m";
 
         //  ECAL coordinates vs. SF plots ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -19315,7 +19315,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     else
     {
-        cout << "\n\nFiducial plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nFiducial plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -19326,7 +19326,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Momentum histograms">
     if (Momentum_plots)
     {
-        cout << "\n\nPlotting Momentum histograms...\n\n";
+        cout << "\033[33m\n\nPlotting Momentum histograms...\n\n\033[0m";
 
         //  Momentum plots ------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -19824,14 +19824,14 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 DrawAndSaveFSRatio(SampleName, hP_tot_mu_vs_P_rel_mu_pFDpCD, hP_tot_mu_vs_P_rel_mu_nFDpCD, plots);
             }
 
-            //            cout << "\n\n\nExited after DrawAndSaveFSRatio finished for momentum!\n\n\n";
+            //            cout << "\033[33m\n\n\nExited after DrawAndSaveFSRatio finished for momentum!\n\n\n\033[0m";
             //            quit();
         }
         //</editor-fold>
     }
     else
     {
-        cout << "\n\nMomentum plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nMomentum plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -19844,7 +19844,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="W histograms">
     if (W_plots)
     {
-        cout << "\n\nPlotting W histograms...\n\n";
+        cout << "\033[33m\n\nPlotting W histograms...\n\n\033[0m";
 
         //  W plots (CD & FD) ---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -20065,13 +20065,13 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 DrawAndSaveFSRatio(SampleName, hW_All_Int_pFDpCD, hW_All_Int_pFDpCD_Dir, hW_All_Int_nFDpCD, plots);
             }
 
-            //            cout << "\n\n\nExited after DrawAndSaveFSRatio finished for W!\n\n\n";
+            //            cout << "\033[33m\n\n\nExited after DrawAndSaveFSRatio finished for W!\n\n\n\033[0m";
         }
         //</editor-fold>
     }
     else
     {
-        cout << "\n\nW plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nW plots are disabled by user.\n\n\033[0m";
     } // end of Beta plot if
     //</editor-fold>
 
@@ -20084,7 +20084,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Beta plots">
     if (Beta_plots)
     {
-        cout << "\n\nPlotting Beta histograms...\n\n";
+        cout << "\033[33m\n\nPlotting Beta histograms...\n\n\033[0m";
 
         //  Beta plots ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -20105,7 +20105,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     else
     {
-        cout << "\n\nBeta plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nBeta plots are disabled by user.\n\n\033[0m";
     } // end of Beta plot if
 
     if (!apply_nucleon_cuts && !is2GeVSample)
@@ -20119,7 +20119,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Beta vs. P plots">
     if (Beta_vs_P_plots)
     {
-        cout << "\n\nPlotting Beta vs. P histograms...\n\n";
+        cout << "\033[33m\n\nPlotting Beta vs. P histograms...\n\n\033[0m";
 
         //  Beta vs. P TF1 plots ------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -20326,7 +20326,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     else
     {
-        cout << "\n\nBeta vs. P plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nBeta vs. P plots are disabled by user.\n\n\033[0m";
     } // end of Beta vs. P plot if
     //</editor-fold>
 
@@ -20339,7 +20339,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Angle histograms">
     if (Angle_plots_master)
     {
-        cout << "\n\nPlotting Angle histograms...\n\n";
+        cout << "\033[33m\n\nPlotting Angle histograms...\n\n\033[0m";
 
         CanvasPDF->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         CanvasPDF->cd();
@@ -22121,7 +22121,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 DrawAndSaveFSRatio(SampleName, hTheta_pFD_pCD_vs_W_pFDpCD, hTheta_pFD_pCD_vs_W_pFDpCD_Dir, hTheta_nFD_pCD_vs_W_nFDpCD, plots);
             }
 
-            //            cout << "\n\n\nExited after DrawAndSaveFSRatio finished for angles!\n\n\n";
+            //            cout << "\033[33m\n\n\nExited after DrawAndSaveFSRatio finished for angles!\n\n\n\033[0m";
             //            quit();
         }
         //</editor-fold>
@@ -22132,7 +22132,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     else
     {
-        cout << "\n\nAngle plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nAngle plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -22143,7 +22143,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Momentum transfer histograms">
     if (Momentum_transfer_plots)
     {
-        cout << "\n\nPlotting Momentum transfer histograms...\n\n";
+        cout << "\033[33m\n\nPlotting Momentum transfer histograms...\n\n\033[0m";
 
         //  Momentum transfer plots (FD only) --------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -22634,14 +22634,14 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 DrawAndSaveFSRatio(SampleName, hQ2_VS_W_pFDpCD, hQ2_VS_W_pFDpCD_Dir, hQ2_VS_W_nFDpCD, plots);
             }
 
-            //            cout << "\n\n\nExited after DrawAndSaveFSRatio finished for Q2!\n\n\n";
+            //            cout << "\033[33m\n\n\nExited after DrawAndSaveFSRatio finished for Q2!\n\n\n\033[0m";
             //            quit();
         }
         //</editor-fold>
     }
     else
     {
-        cout << "\n\nMomentum transfer plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nMomentum transfer plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -22652,7 +22652,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Energy (E_e) histograms">
     if (E_e_plots)
     {
-        cout << "\n\nPlotting Energy (E_e) histograms...\n\n";
+        cout << "\033[33m\n\nPlotting Energy (E_e) histograms...\n\n\033[0m";
 
         //  E_e plots (FD only) -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -22954,14 +22954,14 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 DrawAndSaveFSRatio(SampleName, hE_e_VS_Theta_e_All_Int_pFDpCD_FD, hE_e_VS_Theta_e_All_Int_pFDpCD_FD_Dir, hE_e_VS_Theta_e_All_Int_nFDpCD_FD, plots);
             }
 
-            //            cout << "\n\n\nExited after DrawAndSaveFSRatio finished for Q2!\n\n\n";
+            //            cout << "\033[33m\n\n\nExited after DrawAndSaveFSRatio finished for Q2!\n\n\n\033[0m";
             //            quit();
         }
         //</editor-fold>
     }
     else
     {
-        cout << "\n\nEnergy (E_e) plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nEnergy (E_e) plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -22973,7 +22973,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     if (ETrans_all_plots)
     {
 
-        cout << "\n\nPlotting Energy Transfer (ET) histograms...\n\n";
+        cout << "\033[33m\n\nPlotting Energy Transfer (ET) histograms...\n\n\033[0m";
 
         if (ETrans_All_Int_plots)
         {
@@ -23287,14 +23287,14 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 DrawAndSaveFSRatio(SampleName, hET15_All_Int_pFDpCD_FD, hET15_All_Int_pFDpCD_FD_Dir, hET15_All_Int_nFDpCD_FD, plots);
             }
 
-            //            cout << "\n\n\nExited after DrawAndSaveFSRatio finished for Q2!\n\n\n";
+            //            cout << "\033[33m\n\n\nExited after DrawAndSaveFSRatio finished for Q2!\n\n\n\033[0m";
             //            quit();
         }
         //</editor-fold>
     }
     else
     {
-        cout << "\n\nEnergy transfer plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nEnergy transfer plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -23306,7 +23306,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     if (Ecal_plots)
     {
 
-        cout << "\n\nPlotting Ecal reconstruction histograms...\n\n";
+        cout << "\033[33m\n\nPlotting Ecal reconstruction histograms...\n\n\033[0m";
 
         //  Ecal plots (CD & FD) ------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -23601,14 +23601,14 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 DrawAndSaveFSRatio(SampleName, hEcal_vs_W_pFDpCD, hEcal_vs_W_pFDpCD_Dir, hEcal_vs_W_nFDpCD, plots);
             }
 
-            //            cout << "\n\n\nExited after DrawAndSaveFSRatio finished for Ecal!\n\n\n";
+            //            cout << "\033[33m\n\n\nExited after DrawAndSaveFSRatio finished for Ecal!\n\n\n\033[0m";
             //            quit();
         }
         //</editor-fold>
     }
     else
     {
-        cout << "\n\nEcal plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nEcal plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -23619,7 +23619,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="TKI histograms">
     if (TKI_plots)
     {
-        cout << "\n\nTKI histograms...\n\n";
+        cout << "\033[33m\n\nTKI histograms...\n\n\033[0m";
 
         //  dP_T plots (CD & FD) ------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -23845,14 +23845,14 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 DrawAndSaveFSRatio(SampleName, hdAlpha_T_tot_vs_W_pFDpCD, hdAlpha_T_tot_vs_W_pFDpCD_Dir, hdAlpha_T_tot_vs_W_nFDpCD, plots);
             }
 
-            //            cout << "\n\n\nExited after DrawAndSaveFSRatio finished for TKI!\n\n\n";
+            //            cout << "\033[33m\n\n\nExited after DrawAndSaveFSRatio finished for TKI!\n\n\n\033[0m";
             //            quit();
         }
         //</editor-fold>
     }
     else
     {
-        cout << "\n\nTKI plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nTKI plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -23863,11 +23863,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="ToF histograms">
     if (ToF_plots)
     {
-        cout << "\n\nToF histograms...\n\n";
+        cout << "\033[33m\n\nToF histograms...\n\n\033[0m";
     }
     else
     {
-        cout << "\n\nToF plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nToF plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -23880,7 +23880,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Efficiency plots">
     if (Efficiency_plots)
     {
-        cout << "\n\nPlotting efficiency histograms...\n\n";
+        cout << "\033[33m\n\nPlotting efficiency histograms...\n\n\033[0m";
 
         //  Efficiency plots ----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -24632,21 +24632,21 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 //                DrawAndSaveFSRatio(SampleName, hPhi_pCD_AC_truth_pFDpCD, hPhi_nFD_AC_truth_nFDpCD, plots);
             }
 
-            //            cout << "\n\n\nExited after DrawAndSaveFSRatio finished for TL!\n\n\n";
+            //            cout << "\033[33m\n\n\nExited after DrawAndSaveFSRatio finished for TL!\n\n\n\033[0m";
             //            quit();
         }
         //</editor-fold>
     }
     else
     {
-        cout << "\n\nEfficiency plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nEfficiency plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
     //<editor-fold desc="TL plots after Acceptance maps">
     if (TL_after_Acceptance_Maps_plots)
     {
-        cout << "\n\nPlotting TL plots after Acceptance maps...\n\n";
+        cout << "\033[33m\n\nPlotting TL plots after Acceptance maps...\n\n\033[0m";
 
         //  TL after Acceptance maps plots ---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -24678,7 +24678,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     else
     {
-        cout << "\n\nTL plots after Acceptance maps are disabled by user.\n\n";
+        cout << "\033[33m\n\nTL plots after Acceptance maps are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -24691,7 +24691,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Acceptance maps histograms">
     if (AMaps_plots)
     {
-        cout << "\n\nPlotting Acceptance maps histograms...\n\n";
+        cout << "\033[33m\n\nPlotting Acceptance maps histograms...\n\n\033[0m";
 
         //  Acceptance maps plots -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -24728,7 +24728,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     else
     {
-        cout << "\n\nAcceptance maps plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nAcceptance maps plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -24739,7 +24739,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Resolution histograms">
     if (Resolution_plots)
     {
-        cout << "\n\nPlotting Resolution histograms...\n\n";
+        cout << "\033[33m\n\nPlotting Resolution histograms...\n\n\033[0m";
 
         //  Resolution plots -----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -24937,7 +24937,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     else
     {
-        cout << "\n\nResolution plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nResolution plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -24948,7 +24948,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Multiplicity histograms">
     if (Multiplicity_plots)
     {
-        cout << "\n\nPlotting Multiplicity histograms...\n\n";
+        cout << "\033[33m\n\nPlotting Multiplicity histograms...\n\n\033[0m";
 
         //  Multiplicity plots -----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -24994,7 +24994,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     else
     {
-        cout << "\n\nMultiplicity plots are disabled by user.\n\n";
+        cout << "\033[33m\n\nMultiplicity plots are disabled by user.\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -25107,7 +25107,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
     if (debug_plots == true)
     {
-        cout << "\n\nSaving debugging plots...\n\n";
+        cout << "\033[33m\n\nSaving debugging plots...\n\n\033[0m";
         TString hit_map_ref_filePath = run_plots_path + "/" + "hit_map_ref.root";
         clasAna.set_hit_map_ref_fileName(hit_map_ref_filePath);
 
@@ -25117,7 +25117,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     else
     {
-        cout << "\n\nDebugging plots are disabled...\n\n";
+        cout << "\033[33m\n\nDebugging plots are disabled...\n\n\033[0m";
     }
     //</editor-fold>
 
@@ -25790,14 +25790,14 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         myLogFile << "num_of_events_with_nFD_CLA12:\t\t" << num_of_events_with_nFD_CLA12 << "\n";
         myLogFile << "num_of_events_with_nFD_CLA12_PCAL:\t" << num_of_events_with_nFD_CLA12_PCAL << "\n";
         myLogFile << "num_of_events_with_nFD_CLA12_ECIN:\t" << num_of_events_with_nFD_CLA12_ECIN << "\n";
-        myLogFile << "num_of_events_with_nFD_CLA12_ECOUT:\t" << num_of_events_with_nFD_CLA12_ECOUT << "\n";
+        myLogFile << "num_of_events_with_nFD_CLA12_ECOUT:\t" << num_of_events_with_nFD_CLA12_Ecout << "\033[33m\n";
         myLogFile << "num_of_events_with_nFD_CLA12_EC:\t" << num_of_events_with_nFD_CLA12_EC << "\n\n";
 
         myLogFile << "-- FD photon hit counts in ECAL -------------------------------------------\n";
         myLogFile << "num_of_events_with_phFD_CLA12:\t\t" << num_of_events_with_phFD_CLA12 << "\n";
         myLogFile << "num_of_events_with_phFD_CLA12_PCAL:\t" << num_of_events_with_phFD_CLA12_PCAL << "\n";
         myLogFile << "num_of_events_with_phFD_CLA12_ECIN:\t" << num_of_events_with_phFD_CLA12_ECIN << "\n";
-        myLogFile << "num_of_events_with_phFD_CLA12_ECOUT:\t" << num_of_events_with_phFD_CLA12_ECOUT << "\n";
+        myLogFile << "num_of_events_with_phFD_CLA12_ECOUT:\t" << num_of_events_with_phFD_CLA12_Ecout << "\033[33m\n";
         myLogFile << "num_of_events_with_phFD_CLA12_EC:\t" << num_of_events_with_phFD_CLA12_EC << "\n\n";
     }
 
@@ -25895,7 +25895,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //<editor-fold desc="Saving histogram list and finishing execution">
 
     //<editor-fold desc="Saving histogram list">
-    cout << "\n\nSaving histogram list...";
+    cout << "\033[33m\n\nSaving histogram list...\033[0m";
 
     //<editor-fold desc="Saving histogram TList">
     TFile *plots_fout = new TFile(TListName, "recreate");
@@ -25918,138 +25918,138 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     //</editor-fold>
 
-    cout << " done.\n\n";
+    cout << "\033[33m done.\n\n\033[0m";
     //</editor-fold>
 
     //<editor-fold desc="finishing execution">
-    cout << "\n\n===========================================================================\n";
-    cout << "\t\t\tExecution summary\n";
-    cout << "===========================================================================\n\n";
+    cout << "\033[33m\n\n===========================================================================\n\033[0m";
+    cout << "\033[33m\t\t\tExecution summary\n\033[0m";
+    cout << "\033[33m===========================================================================\n\n\033[0m";
 
-    cout << "---------------------------------------------------------------------------\n";
-    cout << "\t\t\tEvent counts\n";
-    cout << "---------------------------------------------------------------------------\n\n";
+    cout << "\033[33m---------------------------------------------------------------------------\n\033[0m";
+    cout << "\033[33m\t\t\tEvent counts\n\033[0m";
+    cout << "\033[33m---------------------------------------------------------------------------\n\n\033[0m";
 
-    cout << "-- Inclusive TL counts ----------------------------------------------------\n";
-    cout << "Total #(QEL events):\t\t\t" << num_of_QEL_events << "\n";
-    cout << "Total #(MEC events):\t\t\t" << num_of_MEC_events << "\n";
-    cout << "Total #(RES events):\t\t\t" << num_of_RES_events << "\n";
-    cout << "Total #(DIS events):\t\t\t" << num_of_DIS_events << "\n";
-    cout << "QEL + MEC + RES + DIS:\t\t\t" << num_of_QEL_events + num_of_MEC_events + num_of_RES_events + num_of_DIS_events << "\n\n";
+    cout << "\033[33m-- Inclusive TL counts ----------------------------------------------------\n\033[0m";
+    cout << "\033[33mTotal #(QEL events):\t\t\t" << num_of_QEL_events << "\n\033[0m";
+    cout << "\033[33mTotal #(MEC events):\t\t\t" << num_of_MEC_events << "\n\033[0m";
+    cout << "\033[33mTotal #(RES events):\t\t\t" << num_of_RES_events << "\n\033[0m";
+    cout << "\033[33mTotal #(DIS events):\t\t\t" << num_of_DIS_events << "\n\033[0m";
+    cout << "\033[33mQEL + MEC + RES + DIS:\t\t\t" << num_of_QEL_events + num_of_MEC_events + num_of_RES_events + num_of_DIS_events << "\n\n\033[0m";
 
-    cout << "-- Total counts -----------------------------------------------------------\n";
-    cout << "Total #(events):\t\t\t" << num_of_events << "\n";
-    cout << "Total #(events) w/o any e:\t\t" << num_of_events_without_any_e << "\n";
-    cout << "Total #(events) w/ any e:\t\t" << num_of_events_with_any_e << "\n\n";
+    cout << "\033[33m-- Total counts -----------------------------------------------------------\n\033[0m";
+    cout << "\033[33mTotal #(events):\t\t\t" << num_of_events << "\n\033[0m";
+    cout << "\033[33mTotal #(events) w/o any e:\t\t" << num_of_events_without_any_e << "\n\033[0m";
+    cout << "\033[33mTotal #(events) w/ any e:\t\t" << num_of_events_with_any_e << "\n\n\033[0m";
 
-    cout << "-- Events with electrons counts -------------------------------------------\n";
-    cout << "#(events) w/ at least 1e:\t\t" << num_of_events_with_at_least_1e << "\n";
-    cout << "#(events) w/ more then 1e:\t\t" << num_of_events_more_then_1e << "\n";
-    cout << "#(events) w/ exactly 1e:\t\t" << num_of_events_with_exactly_1e << "\n\n";
-    cout << "#(events) w/ exactly 1e (from file):\t\t" << num_of_events_with_exactly_1e_from_file << "\n\n";
+    cout << "\033[33m-- Events with electrons counts -------------------------------------------\n\033[0m";
+    cout << "\033[33m#(events) w/ at least 1e:\t\t" << num_of_events_with_at_least_1e << "\n\033[0m";
+    cout << "\033[33m#(events) w/ more then 1e:\t\t" << num_of_events_more_then_1e << "\n\033[0m";
+    cout << "\033[33m#(events) w/ exactly 1e:\t\t" << num_of_events_with_exactly_1e << "\n\n\033[0m";
+    cout << "\033[33m#(events) w/ exactly 1e (from file):\t\t" << num_of_events_with_exactly_1e_from_file << "\n\n\033[0m";
 
     if (Count_FD_neurton_and_photon_hits)
     {
-        cout << "-- FD neutron hit counts in ECAL ------------------------------------------\n";
-        cout << "num_of_events_with_nFD_CLA12:\t\t" << num_of_events_with_nFD_CLA12 << "\n";
-        cout << "num_of_events_with_nFD_CLA12_PCAL:\t" << num_of_events_with_nFD_CLA12_PCAL << "\n";
-        cout << "num_of_events_with_nFD_CLA12_ECIN:\t" << num_of_events_with_nFD_CLA12_ECIN << "\n";
-        cout << "num_of_events_with_nFD_CLA12_ECOUT:\t" << num_of_events_with_nFD_CLA12_ECOUT << "\n";
-        cout << "num_of_events_with_nFD_CLA12_EC:\t" << num_of_events_with_nFD_CLA12_EC << "\n\n";
+        cout << "\033[33m-- FD neutron hit counts in ECAL ------------------------------------------\n\033[0m";
+        cout << "\033[33mnum_of_events_with_nFD_CLA12:\t\t" << num_of_events_with_nFD_CLA12 << "\n\033[0m";
+        cout << "\033[33mnum_of_events_with_nFD_CLA12_PCAL:\t" << num_of_events_with_nFD_CLA12_PCAL << "\n\033[0m";
+        cout << "\033[33mnum_of_events_with_nFD_CLA12_ECIN:\t" << num_of_events_with_nFD_CLA12_ECIN << "\n\033[0m";
+        cout << "\033[33mnum_of_events_with_nFD_CLA12_ECOUT:\t" << num_of_events_with_nFD_CLA12_Ecout << "\033[33m\n\033[0m";
+        cout << "\033[33mnum_of_events_with_nFD_CLA12_EC:\t" << num_of_events_with_nFD_CLA12_EC << "\n\n\033[0m";
 
-        cout << "-- FD photon hit counts in ECAL -------------------------------------------\n";
-        cout << "num_of_events_with_phFD_CLA12:\t\t" << num_of_events_with_phFD_CLA12 << "\n";
-        cout << "num_of_events_with_phFD_CLA12_PCAL:\t" << num_of_events_with_phFD_CLA12_PCAL << "\n";
-        cout << "num_of_events_with_phFD_CLA12_ECIN:\t" << num_of_events_with_phFD_CLA12_ECIN << "\n";
-        cout << "num_of_events_with_phFD_CLA12_ECOUT:\t" << num_of_events_with_phFD_CLA12_ECOUT << "\n";
-        cout << "num_of_events_with_phFD_CLA12_EC:\t" << num_of_events_with_phFD_CLA12_EC << "\n\n";
+        cout << "\033[33m-- FD photon hit counts in ECAL -------------------------------------------\n\033[0m";
+        cout << "\033[33mnum_of_events_with_phFD_CLA12:\t\t" << num_of_events_with_phFD_CLA12 << "\n\033[0m";
+        cout << "\033[33mnum_of_events_with_phFD_CLA12_PCAL:\t" << num_of_events_with_phFD_CLA12_PCAL << "\n\033[0m";
+        cout << "\033[33mnum_of_events_with_phFD_CLA12_ECIN:\t" << num_of_events_with_phFD_CLA12_ECIN << "\n\033[0m";
+        cout << "\033[33mnum_of_events_with_phFD_CLA12_ECOUT:\t" << num_of_events_with_phFD_CLA12_Ecout << "\033[33m\n\033[0m";
+        cout << "\033[33mnum_of_events_with_phFD_CLA12_EC:\t" << num_of_events_with_phFD_CLA12_EC << "\n\n\033[0m";
     }
-    cout << "-- Inclusive Reco counts --------------------------------------------------\n";
-    cout << "Total #(QEL events) 1e cut:\t\t" << num_of_QEL_events_1e_cut << "\n";
-    cout << "Total #(MEC events) 1e cut:\t\t" << num_of_MEC_events_1e_cut << "\n";
-    cout << "Total #(RES events) 1e cut:\t\t" << num_of_RES_events_1e_cut << "\n";
-    cout << "Total #(DIS events) 1e cut:\t\t" << num_of_DIS_events_1e_cut << "\n";
-    cout << "QEL + MEC + RES + DIS:\t\t\t"
-         << num_of_QEL_events_1e_cut + num_of_MEC_events_1e_cut + num_of_RES_events_1e_cut + num_of_DIS_events_1e_cut << "\n\n";
+    cout << "\033[33m-- Inclusive Reco counts --------------------------------------------------\n\033[0m";
+    cout << "\033[33mTotal #(QEL events) 1e cut:\t\t" << num_of_QEL_events_1e_cut << "\n\033[0m";
+    cout << "\033[33mTotal #(MEC events) 1e cut:\t\t" << num_of_MEC_events_1e_cut << "\n\033[0m";
+    cout << "\033[33mTotal #(RES events) 1e cut:\t\t" << num_of_RES_events_1e_cut << "\n\033[0m";
+    cout << "\033[33mTotal #(DIS events) 1e cut:\t\t" << num_of_DIS_events_1e_cut << "\n\033[0m";
+    cout << "\033[33mQEL + MEC + RES + DIS:\t\t\t"
+         << num_of_QEL_events_1e_cut + num_of_MEC_events_1e_cut + num_of_RES_events_1e_cut + num_of_DIS_events_1e_cut << "\n\n\033[0m";
 
-    cout << "-- 1e1p event counts ------------------------------------------------------\n";
-    cout << "#(events) w/ 1e1p:\t\t\t" << num_of_events_with_1e1p << "\n\n";
+    cout << "\033[33m-- 1e1p event counts ------------------------------------------------------\n\033[0m";
+    cout << "\033[33m#(events) w/ 1e1p:\t\t\t" << num_of_events_with_1e1p << "\n\n\033[0m";
 
-    cout << "-- 1e2p event counts ------------------------------------------------------\n";
-    cout << "#(events) w/ 1e2p:\t\t\t" << num_of_events_with_1e2p << "\n\n";
+    cout << "\033[33m-- 1e2p event counts ------------------------------------------------------\n\033[0m";
+    cout << "\033[33m#(events) w/ 1e2p:\t\t\t" << num_of_events_with_1e2p << "\n\n\033[0m";
 
-    cout << "-- 1epFDpCD event counts --------------------------------------------------\n";
-    cout << "#(events) w/ 1epFDpCD:\t\t\t" << num_of_events_with_1epFDpCD << "\n\n";
+    cout << "\033[33m-- 1epFDpCD event counts --------------------------------------------------\n\033[0m";
+    cout << "\033[33m#(events) w/ 1epFDpCD:\t\t\t" << num_of_events_with_1epFDpCD << "\n\n\033[0m";
 
-    cout << "-- 2p event counts --------------------------------------------------------\n";
-    cout << "num_of_events_2p_wFakeProtons:\t\t" << num_of_events_2p_wFakeProtons << "\n\n";
+    cout << "\033[33m-- 2p event counts --------------------------------------------------------\n\033[0m";
+    cout << "\033[33mnum_of_events_2p_wFakeProtons:\t\t" << num_of_events_2p_wFakeProtons << "\n\n\033[0m";
 
     if (apply_nucleon_cuts)
     {
-        cout << "num_of_RM_2p_events_sCTOFhp:\t\t" << pid.num_of_RM_2p_events_sCTOFhp << "\n";
-        cout << "num_of_AD_2p_events_from_3p_sCTOFhp:\t" << pid.num_of_AD_2p_events_from_3p_sCTOFhp << "\n";
-        cout << "num_of_AD_2p_events_from_4p_sCTOFhp:\t" << pid.num_of_AD_2p_events_from_4p_sCTOFhp << "\n";
-        cout << "num_of_AD_2p_events_from_Xp_sCTOFhp:\t" << pid.num_of_AD_2p_events_from_Xp_sCTOFhp << "\n";
-        cout << "num_of_RM_2p_events_dCDaFDd:\t\t" << pid.num_of_RM_2p_events_dCDaFDd << "\n";
-        cout << "num_of_AD_2p_events_from_3p_dCDaFDd:\t" << pid.num_of_AD_2p_events_from_3p_dCDaFDd << "\n";
-        cout << "num_of_AD_2p_events_from_4p_dCDaFDd:\t" << pid.num_of_AD_2p_events_from_4p_dCDaFDd << "\n";
-        cout << "num_of_AD_2p_events_from_Xp_dCDaFDd:\t" << pid.num_of_AD_2p_events_from_Xp_dCDaFDd << "\n\n";
+        cout << "\033[33mnum_of_RM_2p_events_sCTOFhp:\t\t" << pid.num_of_RM_2p_events_sCTOFhp << "\n\033[0m";
+        cout << "\033[33mnum_of_AD_2p_events_from_3p_sCTOFhp:\t" << pid.num_of_AD_2p_events_from_3p_sCTOFhp << "\n\033[0m";
+        cout << "\033[33mnum_of_AD_2p_events_from_4p_sCTOFhp:\t" << pid.num_of_AD_2p_events_from_4p_sCTOFhp << "\n\033[0m";
+        cout << "\033[33mnum_of_AD_2p_events_from_Xp_sCTOFhp:\t" << pid.num_of_AD_2p_events_from_Xp_sCTOFhp << "\n\033[0m";
+        cout << "\033[33mnum_of_RM_2p_events_dCDaFDd:\t\t" << pid.num_of_RM_2p_events_dCDaFDd << "\n\033[0m";
+        cout << "\033[33mnum_of_AD_2p_events_from_3p_dCDaFDd:\t" << pid.num_of_AD_2p_events_from_3p_dCDaFDd << "\n\033[0m";
+        cout << "\033[33mnum_of_AD_2p_events_from_4p_dCDaFDd:\t" << pid.num_of_AD_2p_events_from_4p_dCDaFDd << "\n\033[0m";
+        cout << "\033[33mnum_of_AD_2p_events_from_Xp_dCDaFDd:\t" << pid.num_of_AD_2p_events_from_Xp_dCDaFDd << "\n\n\033[0m";
 
-        cout << "num_of_AD_2p_events_from_mixed_sCTOFhp_dCDaFDd:\t" << pid.num_of_AD_2p_events_from_mixed_sCTOFhp_dCDaFDd << "\n\n";
+        cout << "\033[33mnum_of_AD_2p_events_from_mixed_sCTOFhp_dCDaFDd:\t" << pid.num_of_AD_2p_events_from_mixed_sCTOFhp_dCDaFDd << "\n\n\033[0m";
 
-        cout << "num_of_events_2p (from monitoring):\t" << num_of_events_2p_wFakeProtons - pid.num_of_RM_2p_events_sCTOFhp - pid.num_of_RM_2p_events_dCDaFDd + pid.num_of_AD_2p_events_from_3p_sCTOFhp + pid.num_of_AD_2p_events_from_4p_sCTOFhp + pid.num_of_AD_2p_events_from_3p_dCDaFDd + pid.num_of_AD_2p_events_from_4p_dCDaFDd << "\n\n";
+        cout << "\033[33mnum_of_events_2p (from monitoring):\t" << num_of_events_2p_wFakeProtons - pid.num_of_RM_2p_events_sCTOFhp - pid.num_of_RM_2p_events_dCDaFDd + pid.num_of_AD_2p_events_from_3p_sCTOFhp + pid.num_of_AD_2p_events_from_4p_sCTOFhp + pid.num_of_AD_2p_events_from_3p_dCDaFDd + pid.num_of_AD_2p_events_from_4p_dCDaFDd << "\n\n\033[0m";
 
-        cout << "num_of_events_2p (from monitoring; no mixed):\t" << num_of_events_2p_wFakeProtons - pid.num_of_RM_2p_events_sCTOFhp - pid.num_of_RM_2p_events_dCDaFDd + pid.num_of_AD_2p_events_from_3p_sCTOFhp + pid.num_of_AD_2p_events_from_4p_sCTOFhp + pid.num_of_AD_2p_events_from_3p_dCDaFDd + pid.num_of_AD_2p_events_from_4p_dCDaFDd - pid.num_of_AD_2p_events_from_mixed_sCTOFhp_dCDaFDd << "\n\n";
+        cout << "\033[33mnum_of_events_2p (from monitoring; no mixed):\t" << num_of_events_2p_wFakeProtons - pid.num_of_RM_2p_events_sCTOFhp - pid.num_of_RM_2p_events_dCDaFDd + pid.num_of_AD_2p_events_from_3p_sCTOFhp + pid.num_of_AD_2p_events_from_4p_sCTOFhp + pid.num_of_AD_2p_events_from_3p_dCDaFDd + pid.num_of_AD_2p_events_from_4p_dCDaFDd - pid.num_of_AD_2p_events_from_mixed_sCTOFhp_dCDaFDd << "\n\n\033[0m";
     }
 
-    cout << "#(events) 2p:\t\t\t\t" << num_of_events_2p << "\n\n";
+    cout << "\033[33m#(events) 2p:\t\t\t\t" << num_of_events_2p << "\n\n\033[0m";
 
-    cout << "-- pFDpCD event counts ----------------------------------------------------\n";
-    cout << "#(events) pFDpCD:\t\t\t" << num_of_events_pFDpCD << "\n\n";
+    cout << "\033[33m-- pFDpCD event counts ----------------------------------------------------\n\033[0m";
+    cout << "\033[33m#(events) pFDpCD:\t\t\t" << num_of_events_pFDpCD << "\n\n\033[0m";
 
-    cout << "-- Event counts -----------------------------------------------------------\n";
-    //    cout << "num_of_events_1e1p_all:\t\t\t" << num_of_events_1e1p_all << "\n";
-    cout << "num_of_events_1p_inFD:\t\t\t" << num_of_events_1p_inFD << "\n\n";
+    cout << "\033[33m-- Event counts -----------------------------------------------------------\n\033[0m";
+    //    cout << "\033[33mnum_of_events_1e1p_all:\t\t\t" << num_of_events_1e1p_all << "\n\033[0m";
+    cout << "\033[33mnum_of_events_1p_inFD:\t\t\t" << num_of_events_1p_inFD << "\n\n\033[0m";
 
-    cout << "num_of_events_1n_inFD:\t\t\t" << num_of_events_1n_inFD << "\n";
-    cout << "num_of_events_1n_inFD_AV:\t\t" << num_of_events_1n_inFD_AV << "\n";
-    cout << "num_of_events_1n_inFD_AV_wmt1gTLn:\t" << num_of_events_1n_inFD_AV_wmt1gTLn << "\n\n";
+    cout << "\033[33mnum_of_events_1n_inFD:\t\t\t" << num_of_events_1n_inFD << "\n\033[0m";
+    cout << "\033[33mnum_of_events_1n_inFD_AV:\t\t" << num_of_events_1n_inFD_AV << "\n\033[0m";
+    cout << "\033[33mnum_of_events_1n_inFD_AV_wmt1gTLn:\t" << num_of_events_1n_inFD_AV_wmt1gTLn << "\n\n\033[0m";
 
-    //    cout << "num_of_events_1e2p_all:\t\t\t" << num_of_events_1e2p_all << "\n";
-    //    cout << "num_of_events_1e2p_all_woFDphotons:\t" << num_of_events_1e2p_all_woFDphotons << "\n";
-    cout << "num_of_events_2p_wFakeProtons:\t\t" << num_of_events_2p_wFakeProtons << "\n";
-    cout << "num_of_events_2p:\t\t\t" << num_of_events_2p << "\n\n";
+    //    cout << "\033[33mnum_of_events_1e2p_all:\t\t\t" << num_of_events_1e2p_all << "\n\033[0m";
+    //    cout << "\033[33mnum_of_events_1e2p_all_woFDphotons:\t" << num_of_events_1e2p_all_woFDphotons << "\n\033[0m";
+    cout << "\033[33mnum_of_events_2p_wFakeProtons:\t\t" << num_of_events_2p_wFakeProtons << "\n\033[0m";
+    cout << "\033[33mnum_of_events_2p:\t\t\t" << num_of_events_2p << "\n\n\033[0m";
 
-    cout << "num_of_events_1epFDpCD:\t\t\t" << num_of_events_with_1epFDpCD << "\n";
-    cout << "num_of_events_1epFDpFD:\t\t\t" << num_of_events_with_1epFDpFD << "\n";
-    cout << "num_of_events_1epCDpCD:\t\t\t" << num_of_events_with_1epCDpCD << "\n\n";
+    cout << "\033[33mnum_of_events_1epFDpCD:\t\t\t" << num_of_events_with_1epFDpCD << "\n\033[0m";
+    cout << "\033[33mnum_of_events_1epFDpFD:\t\t\t" << num_of_events_with_1epFDpFD << "\n\033[0m";
+    cout << "\033[33mnum_of_events_1epCDpCD:\t\t\t" << num_of_events_with_1epCDpCD << "\n\n\033[0m";
 
-    cout << "num_of_events_pFDpCD:\t\t\t" << num_of_events_pFDpCD << "\n\n";
+    cout << "\033[33mnum_of_events_pFDpCD:\t\t\t" << num_of_events_pFDpCD << "\n\n\033[0m";
 
-    cout << "num_of_events_nFDpCD:\t\t\t" << num_of_events_nFDpCD << "\n";
-    cout << "num_of_events_nFDpCD_AV:\t\t" << num_of_events_nFDpCD_AV << "\n\n";
+    cout << "\033[33mnum_of_events_nFDpCD:\t\t\t" << num_of_events_nFDpCD << "\n\033[0m";
+    cout << "\033[33mnum_of_events_nFDpCD_AV:\t\t" << num_of_events_nFDpCD_AV << "\n\n\033[0m";
 
-    cout << "---------------------------------------------------------------------------\n";
-    cout << "\t\t\tExecution variables\n";
-    cout << "---------------------------------------------------------------------------\n\n";
+    cout << "\033[33m---------------------------------------------------------------------------\n\033[0m";
+    cout << "\033[33m\t\t\tExecution variables\n\033[0m";
+    cout << "\033[33m---------------------------------------------------------------------------\n\n\033[0m";
 
-    cout << "WorkingDirectory:\t" << WorkingDirectory << "\n";
-    cout << "run_plots_path:\t\t" << run_plots_path << "\n\n";
+    cout << "\033[33mWorkingDirectory:\t" << WorkingDirectory << "\n\033[0m";
+    cout << "\033[33mrun_plots_path:\t\t" << run_plots_path << "\n\n\033[0m";
 
-    cout << "AnalyseFilePath:\t" << "/" << AnalyseFilePath << "/" << "\n";
-    cout << "AnalyseFileSample:\t" << "/" << AnalyseFileSample << "/" << "\n";
-    cout << "AnalyseFile:\t\t" << AnalyseFile << "\n\n";
+    cout << "\033[33mAnalyseFilePath:\t" << "/" << AnalyseFilePath << "/" << "\n\033[0m";
+    cout << "\033[33mAnalyseFileSample:\t" << "/" << AnalyseFileSample << "/" << "\n\033[0m";
+    cout << "\033[33mAnalyseFile:\t\t" << AnalyseFile << "\n\n\033[0m";
 
-    cout << "SampleName:\t\t" << SampleName << "\n";
-    cout << "VaryingSampleName:\t" << VaryingSampleName << "\n\n";
+    cout << "\033[33mSampleName:\t\t" << SampleName << "\n\033[0m";
+    cout << "\033[33mVaryingSampleName:\t" << VaryingSampleName << "\n\n\033[0m";
 
-    cout << "apply_cuts:\t\t'" << BoolToString(apply_cuts) << "'\n";
-    cout << "Settings mode:\t\t'" << file_name << "'\n\n";
+    cout << "\033[33mapply_cuts:\t\t'" << BoolToString(apply_cuts) << "'\n\033[0m";
+    cout << "\033[33mSettings mode:\t\t'" << file_name << "'\n\n\033[0m";
 
-    cout << "Beam Energy:\t\t" << beamE << " [GeV]\n";
-    cout << "Target:\t\t\t" << Target << " (PDG: " << TargetPDG << ")\n\n";
+    cout << "\033[33mBeam Energy:\t\t" << beamE << " [GeV]\n\033[0m";
+    cout << "\033[33mTarget:\t\t\t" << Target << " (PDG: " << TargetPDG << ")\n\n\033[0m";
 
-    cout << "Operation finished (AnalyserVersion = " << AnalyserVersion << ")." << "\n\n";
+    cout << "\033[33mOperation finished (AnalyserVersion = " << AnalyserVersion << ")." << "\n\n\033[0m";
     //</editor-fold>
 
     //</editor-fold>

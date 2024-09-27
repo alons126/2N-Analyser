@@ -68,6 +68,8 @@
         "vector": "cpp",
         "algorithm": "cpp",
         "dataanalyser.cpp": "c",
-        "truthlevelanalyser.c": "cpp"
+        "truthlevelanalyser.c": "cpp",
+        "memory": "cpp",
+        "print": "cpp"
     }
 }

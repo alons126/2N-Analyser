@@ -210,64 +210,64 @@ CMAKE_TAPI:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeD
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Path to a library.
-ROOT_Core_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libCore.so
+ROOT_Core_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libCore.so
 
 //The directory containing a CMake configuration file for ROOT.
 ROOT_DIR:PATH=/opt/homebrew/share/root/cmake
 
 //Path to a library.
-ROOT_Gpad_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libGpad.so
+ROOT_Gpad_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libGpad.so
 
 //Path to a library.
-ROOT_Graf3d_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libGraf3d.so
+ROOT_Graf3d_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libGraf3d.so
 
 //Path to a library.
-ROOT_Graf_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libGraf.so
+ROOT_Graf_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libGraf.so
 
 //Path to a library.
-ROOT_Hist_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libHist.so
+ROOT_Hist_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libHist.so
 
 //Path to a library.
-ROOT_Imt_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libImt.so
+ROOT_Imt_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libImt.so
 
 //Path to a library.
-ROOT_MathCore_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libMathCore.so
+ROOT_MathCore_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libMathCore.so
 
 //Path to a library.
-ROOT_Matrix_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libMatrix.so
+ROOT_Matrix_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libMatrix.so
 
 //Path to a library.
-ROOT_MultiProc_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libMultiProc.so
+ROOT_MultiProc_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libMultiProc.so
 
 //Path to a library.
-ROOT_Net_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libNet.so
+ROOT_Net_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libNet.so
 
 //Path to a library.
-ROOT_Physics_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libPhysics.so
+ROOT_Physics_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libPhysics.so
 
 //Path to a library.
-ROOT_Postscript_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libPostscript.so
+ROOT_Postscript_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libPostscript.so
 
 //Path to a library.
-ROOT_RIO_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libRIO.so
+ROOT_RIO_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libRIO.so
 
 //Path to a library.
-ROOT_ROOTDataFrame_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libROOTDataFrame.so
+ROOT_ROOTDataFrame_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libROOTDataFrame.so
 
 //Path to a library.
-ROOT_ROOTVecOps_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libROOTVecOps.so
+ROOT_ROOTVecOps_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libROOTVecOps.so
 
 //Path to a library.
-ROOT_Rint_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libRint.so
+ROOT_Rint_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libRint.so
 
 //Path to a library.
-ROOT_Thread_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libThread.so
+ROOT_Thread_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libThread.so
 
 //Path to a library.
-ROOT_TreePlayer_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libTreePlayer.so
+ROOT_TreePlayer_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libTreePlayer.so
 
 //Path to a library.
-ROOT_Tree_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libTree.so
+ROOT_Tree_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libTree.so
 
 //Path to a program.
 ROOT_genmap_CMD:FILEPATH=ROOT_genmap_CMD-NOTFOUND
@@ -309,10 +309,10 @@ ROOT_rootmv_CMD:FILEPATH=/opt/homebrew/bin/rootmv
 ROOT_rootrm_CMD:FILEPATH=/opt/homebrew/bin/rootrm
 
 //Path to a file.
-VDT_INCLUDE_DIR:PATH=/opt/homebrew/Cellar/root/6.32.04/include/root
+VDT_INCLUDE_DIR:PATH=/opt/homebrew/Cellar/root/6.32.06/include/root
 
 //Path to a library.
-VDT_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.04/lib/root/libvdt.dylib
+VDT_LIBRARY:FILEPATH=/opt/homebrew/Cellar/root/6.32.06/lib/root/libvdt.dylib
 
 //The directory containing a CMake configuration file for nlohmann_json.
 nlohmann_json_DIR:PATH=/opt/homebrew/share/cmake/nlohmann_json
@@ -467,7 +467,7 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Vdt
-FIND_PACKAGE_MESSAGE_DETAILS_Vdt:INTERNAL=[/opt/homebrew/Cellar/root/6.32.04/include/root][/opt/homebrew/Cellar/root/6.32.04/lib/root/libvdt.dylib][v0.3()]
+FIND_PACKAGE_MESSAGE_DETAILS_Vdt:INTERNAL=[/opt/homebrew/Cellar/root/6.32.06/include/root][/opt/homebrew/Cellar/root/6.32.06/lib/root/libvdt.dylib][v0.4()]
 //Details about finding nlohmann_json
 FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[/opt/homebrew/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake][v3.11.3(3.11.3)]
 //ADVANCED property for variable: ROOT_Core_LIBRARY
