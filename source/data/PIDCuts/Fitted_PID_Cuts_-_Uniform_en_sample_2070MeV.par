@@ -6,8 +6,8 @@
 
 # pid cuts by detector (pid:mean:sigma) - sigma_CD=3;sigma_FD=3:
 pid_cuts		2212:0:9999:CD
-pid_cuts		2212:-0.652251:9.24978:FD
+pid_cuts		2212:-0.719367:9.25785:FD
 pid_cuts		211:0:9999:CD
-pid_cuts		211:-2.83481:14.9088:FD
+pid_cuts		211:-2.29004:15.1272:FD
 pid_cuts		-211:0:9999:CD
-pid_cuts		-211:-3.3134:16.3132:FD
+pid_cuts		-211:-4.66251:17.1612:FD
