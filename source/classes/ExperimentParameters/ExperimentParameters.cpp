@@ -354,6 +354,14 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
             sName = "C12x4_data_6GeV";
         }
     }
+    else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_02")
+    { // C, simulation, 4GeV, ifarm (Q2 study)
+        if (AnalyseFileSample == "reconhipo")
+        {
+            BeamAt4GeV = SimulationSample = true;
+            sName = "C12_simulation_test_Q2_0_02_4GeV";
+        }
+    }
 
     //<editor-fold desc="Safety checks">
     if (!BeamAt2GeV && !BeamAt4GeV && !BeamAt6GeV)
