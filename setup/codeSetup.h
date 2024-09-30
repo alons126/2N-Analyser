@@ -353,397 +353,7 @@ void ConfigSampleChain()
 
 
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_02";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_03";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_04";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_05";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_06";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_07";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_08";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_09";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_10";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_11";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_12";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_13";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_14";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_15";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_16";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_17";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_18";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_19";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_20";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_21";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_22";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_23";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_24";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_25";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_26";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_27";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_28";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_29";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_30";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_31";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_32";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_33";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_34";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_35";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_36";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_37";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_38";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_39";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_40";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
-
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_02";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_02";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -753,7 +363,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_03";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_03";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -763,7 +373,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_04";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_04";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -773,7 +383,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_05";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_05";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -783,7 +393,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_06";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_06";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -793,7 +403,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_07";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_07";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -803,7 +413,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_08";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_08";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -813,7 +423,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_09";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_09";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -823,7 +433,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_10";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_10";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -833,7 +443,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_11";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_11";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -843,7 +453,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_12";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_12";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -853,7 +463,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_13";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_13";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -863,7 +473,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_14";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_14";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -873,7 +483,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_15";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_15";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -883,7 +493,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_16";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_16";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -893,7 +503,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_17";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_17";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -903,7 +513,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_18";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_18";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -913,7 +523,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_19";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_19";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -923,7 +533,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_20";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_20";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -933,7 +543,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_21";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_21";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -943,7 +553,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_22";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_22";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -953,7 +563,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_23";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_23";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -963,7 +573,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_24";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_24";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -973,7 +583,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_25";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_25";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -983,7 +593,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_26";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_26";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -993,7 +603,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_27";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_27";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1003,7 +613,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_28";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_28";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1013,7 +623,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_29";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_29";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1023,7 +633,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_30";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_30";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1033,7 +643,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_31";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_31";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1043,7 +653,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_32";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_32";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1053,7 +663,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_33";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_33";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1063,7 +673,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_34";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_34";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1073,7 +683,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_35";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_35";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1083,7 +693,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_36";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_36";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1093,7 +703,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_37";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_37";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1103,7 +713,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_38";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_38";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1113,7 +723,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_39";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_39";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1123,7 +733,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_40";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_40";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1132,6 +742,398 @@ void ConfigSampleChain()
     // AnalyseFileSample_v.push_back(AnalyseFileSample);
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
+
+
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_02";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_03";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_04";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_05";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_06";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_07";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_08";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_09";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_10";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_11";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_12";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_13";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_14";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_15";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_16";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_17";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_18";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_19";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_20";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_21";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_22";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_23";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_24";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_25";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_26";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_27";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_28";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_29";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_30";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_31";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_32";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_33";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_34";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_35";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_36";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_37";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_38";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_39";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
+
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/4029MeV/Q2_0_40";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
 
     // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_40";
