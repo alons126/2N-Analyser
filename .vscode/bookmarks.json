@@ -39,22 +39,22 @@
 					"label": "Config new samples - sample name"
 				},
 				{
-					"line": 428,
+					"line": 1701,
 					"column": 4,
 					"label": "Config new samples - varing sample name"
 				},
 				{
-					"line": 461,
+					"line": 1734,
 					"column": 2,
 					"label": "Config new samples - Vz cuts"
 				},
 				{
-					"line": 653,
+					"line": 1926,
 					"column": 6,
 					"label": "Config new samples - dVz cuts"
 				},
 				{
-					"line": 877,
+					"line": 2150,
 					"column": 0,
 					"label": "Config new samples - AddToHipoChain"
 				}
@@ -64,62 +64,62 @@
 			"path": "macros/MScThesisPlotter/MScThesisPlotter.cpp",
 			"bookmarks": [
 				{
-					"line": 53,
+					"line": 54,
 					"column": 25,
 					"label": "MScThesisPlotter"
 				},
 				{
-					"line": 58,
+					"line": 59,
 					"column": 31,
 					"label": ""
 				},
 				{
-					"line": 83,
+					"line": 84,
 					"column": 37,
 					"label": ""
 				},
 				{
-					"line": 107,
+					"line": 108,
 					"column": 42,
 					"label": ""
 				},
 				{
-					"line": 126,
+					"line": 127,
 					"column": 38,
 					"label": ""
 				},
 				{
-					"line": 167,
+					"line": 168,
 					"column": 37,
 					"label": ""
 				},
 				{
-					"line": 187,
+					"line": 188,
 					"column": 43,
 					"label": ""
 				},
 				{
-					"line": 189,
+					"line": 190,
 					"column": 43,
 					"label": ""
 				},
 				{
-					"line": 205,
+					"line": 206,
 					"column": 50,
 					"label": ""
 				},
 				{
-					"line": 216,
+					"line": 217,
 					"column": 43,
 					"label": ""
 				},
 				{
-					"line": 229,
+					"line": 230,
 					"column": 46,
 					"label": ""
 				},
 				{
-					"line": 310,
+					"line": 311,
 					"column": 34,
 					"label": ""
 				}
