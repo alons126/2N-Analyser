@@ -9640,21 +9640,21 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                         directories.AMaps_Directory_map["WMaps_BC_1e_cut_Directory"], "04_Nucleon_AMap_BCwKC", Phi_lboundary, Phi_uboundary,
                                         Theta_lboundary_FD, Theta_uboundary_FD, numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
 
-    hPlot1D hReco_P_e_WMap = hPlot1D("1e cut", "FD", "Reco P_{e} used in WMaps", "Reco P_{e} used in WMaps", "P_{e} [GeV/c]",
+    hPlot1D hReco_P_e_WMaps = hPlot1D("1e cut", "FD", "Reco P_{e} used in WMaps", "Reco P_{e} used in WMaps", "P_{e} [GeV/c]",
                                       directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01a_Reco_P_e_used_in_WMaps", Momentum_lboundary, Momentum_uboundary,
                                       numTH1Dbins);
-    hPlot1D hTL_P_e_WMap = hPlot1D("1e cut", "FD", "TL P_{e} used in WMaps", "TL P_{e} used in WMaps", "P_{e} [GeV/c]",
+    hPlot1D hTL_P_e_WMaps = hPlot1D("1e cut", "FD", "TL P_{e} used in WMaps", "TL P_{e} used in WMaps", "P_{e} [GeV/c]",
                                     directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01b_TL_P_e_used_in_WMaps", Momentum_lboundary, Momentum_uboundary,
                                     numTH1Dbins);
-    hPlot1D hReco_Theta_e_WMap = hPlot1D("1e cut", "FD", "Reco #theta_{e} used in WMaps", "Reco #theta_{e} used in WMaps", "#theta_{e} [#circ]",
+    hPlot1D hReco_Theta_e_WMaps = hPlot1D("1e cut", "FD", "Reco #theta_{e} used in WMaps", "Reco #theta_{e} used in WMaps", "#theta_{e} [#circ]",
                                           directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01c_Reco_Theta_e_used_in_WMaps", ThetaFD_AMaps.GetLowerCut(),
                                           ThetaFD_AMaps.GetUpperCut(), numTH1Dbins);
-    hPlot1D hTL_Theta_e_WMap = hPlot1D("1e cut", "FD", "TL #theta_{e} used in WMaps", "TL #theta_{e} used in WMaps", "#theta_{e} [#circ]",
+    hPlot1D hTL_Theta_e_WMaps = hPlot1D("1e cut", "FD", "TL #theta_{e} used in WMaps", "TL #theta_{e} used in WMaps", "#theta_{e} [#circ]",
                                         directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01d_TL_Theta_e_used_in_WMaps", ThetaFD_AMaps.GetLowerCut(),
                                         ThetaFD_AMaps.GetUpperCut(), numTH1Dbins);
-    hPlot1D hReco_Phi_e_WMap = hPlot1D("1e cut", "FD", "Reco #phi_{e} used in WMaps", "Reco #phi_{e} used in WMaps", "#phi_{e} [#circ]",
+    hPlot1D hReco_Phi_e_WMaps = hPlot1D("1e cut", "FD", "Reco #phi_{e} used in WMaps", "Reco #phi_{e} used in WMaps", "#phi_{e} [#circ]",
                                         directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01e_Reco_Phi_e_used_in_WMaps", Phi_lboundary, Phi_uboundary, numTH1Dbins);
-    hPlot1D hTL_Phi_e_WMap = hPlot1D("1e cut", "FD", "TL #phi_{e} used in WMaps", "TL #phi_{e} used in WMaps", "#phi_{e} [#circ]",
+    hPlot1D hTL_Phi_e_WMaps = hPlot1D("1e cut", "FD", "TL #phi_{e} used in WMaps", "TL #phi_{e} used in WMaps", "#phi_{e} [#circ]",
                                       directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01f_TL_Phi_e_used_in_WMaps", Phi_lboundary, Phi_uboundary, numTH1Dbins);
     hPlot2D hReco_P_e_vs_Reco_Theta_e_WMap = hPlot2D("", "", "Reco_P_e_vs_Reco_Theta_e_WMaps", "Reco P_{e} vs. Reco #theta_{e} used in WMaps",
                                                      "P_{e} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01aa_Reco_P_e_vs_Reco_Theta_e_WMaps",
@@ -9681,21 +9681,21 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                    Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
 
-    hPlot1D hReco_P_pFD_WMap = hPlot1D("1e cut", "FD", "Reco P_{pFD} used in WMaps", "Reco P_{pFD} used in WMaps", "P_{pFD} [GeV/c]",
+    hPlot1D hReco_P_pFD_WMaps = hPlot1D("1e cut", "FD", "Reco P_{pFD} used in WMaps", "Reco P_{pFD} used in WMaps", "P_{pFD} [GeV/c]",
                                         directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02a_Reco_P_pFD_used_in_WMaps", Momentum_lboundary, Momentum_uboundary,
                                         numTH1Dbins);
-    hPlot1D hTL_P_pFD_WMap = hPlot1D("1e cut", "FD", "TL P_{pFD} used in WMaps", "TL P_{pFD} used in WMaps", "P_{pFD} [GeV/c]",
+    hPlot1D hTL_P_pFD_WMaps = hPlot1D("1e cut", "FD", "TL P_{pFD} used in WMaps", "TL P_{pFD} used in WMaps", "P_{pFD} [GeV/c]",
                                       directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02b_TL_P_pFD_used_in_WMaps", Momentum_lboundary, Momentum_uboundary,
                                       numTH1Dbins);
-    hPlot1D hReco_Theta_pFD_WMap = hPlot1D("1e cut", "FD", "Reco #theta_{pFD} used in WMaps", "Reco #theta_{pFD} used in WMaps", "#theta_{pFD} [#circ]",
+    hPlot1D hReco_Theta_pFD_WMaps = hPlot1D("1e cut", "FD", "Reco #theta_{pFD} used in WMaps", "Reco #theta_{pFD} used in WMaps", "#theta_{pFD} [#circ]",
                                             directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02c_Reco_Theta_pFD_used_in_WMaps", ThetaFD_AMaps.GetLowerCut(),
                                             ThetaFD_AMaps.GetUpperCut(), numTH1Dbins);
-    hPlot1D hTL_Theta_pFD_WMap = hPlot1D("1e cut", "FD", "TL #theta_{pFD} used in WMaps", "TL #theta_{pFD} used in WMaps", "#theta_{pFD} [#circ]",
+    hPlot1D hTL_Theta_pFD_WMaps = hPlot1D("1e cut", "FD", "TL #theta_{pFD} used in WMaps", "TL #theta_{pFD} used in WMaps", "#theta_{pFD} [#circ]",
                                           directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02d_TL_Theta_pFD_used_in_WMaps", ThetaFD_AMaps.GetLowerCut(),
                                           ThetaFD_AMaps.GetUpperCut(), numTH1Dbins);
-    hPlot1D hReco_Phi_pFD_WMap = hPlot1D("1e cut", "FD", "Reco #phi_{pFD} used in WMaps", "Reco #phi_{pFD} used in WMaps", "#phi_{pFD} [#circ]",
+    hPlot1D hReco_Phi_pFD_WMaps = hPlot1D("1e cut", "FD", "Reco #phi_{pFD} used in WMaps", "Reco #phi_{pFD} used in WMaps", "#phi_{pFD} [#circ]",
                                           directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01e_Reco_Phi_pFD_used_in_WMaps", -180, 180, numTH1Dbins);
-    hPlot1D hTL_Phi_pFD_WMap = hPlot1D("1e cut", "FD", "TL #phi_{pFD} used in WMaps", "TL #phi_{pFD} used in WMaps", "#phi_{pFD} [#circ]",
+    hPlot1D hTL_Phi_pFD_WMaps = hPlot1D("1e cut", "FD", "TL #phi_{pFD} used in WMaps", "TL #phi_{pFD} used in WMaps", "#phi_{pFD} [#circ]",
                                         directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01f_TL_Phi_pFD_used_in_WMaps", -180, 180, numTH1Dbins);
     hPlot2D hReco_P_pFD_vs_Reco_Theta_pFD_WMap = hPlot2D("", "", "Reco_P_pFD_vs_Reco_Theta_pFD_WMaps", "Reco P_{pFD} vs. Reco #theta_{pFD} used in WMaps",
                                                          "P_{pFD} [GeV/c]", "#theta_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02aa_Reco_P_pFD_vs_Reco_Theta_pFD_WMaps",
@@ -9870,21 +9870,21 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                    Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
 
-    hPlot1D hReco_P_nFD_WMap = hPlot1D("1e cut", "FD", "Reco P_{nFD} used in WMaps", "Reco P_{nFD} used in WMaps", "P_{nFD} [GeV/c]",
+    hPlot1D hReco_P_nFD_WMaps = hPlot1D("1e cut", "FD", "Reco P_{nFD} used in WMaps", "Reco P_{nFD} used in WMaps", "P_{nFD} [GeV/c]",
                                         directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "03a_Reco_P_nFD_used_in_WMaps", Momentum_lboundary, Momentum_uboundary,
                                         numTH1Dbins);
-    hPlot1D hTL_P_nFD_WMap = hPlot1D("1e cut", "FD", "TL P_{nFD} used in WMaps", "TL P_{nFD} used in WMaps", "P_{nFD} [GeV/c]",
+    hPlot1D hTL_P_nFD_WMaps = hPlot1D("1e cut", "FD", "TL P_{nFD} used in WMaps", "TL P_{nFD} used in WMaps", "P_{nFD} [GeV/c]",
                                       directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "03b_TL_P_nFD_used_in_WMaps", Momentum_lboundary, Momentum_uboundary,
                                       numTH1Dbins);
-    hPlot1D hReco_Theta_nFD_WMap = hPlot1D("1e cut", "FD", "Reco #theta_{nFD} used in WMaps", "Reco #theta_{nFD} used in WMaps", "#theta_{nFD} [#circ]",
+    hPlot1D hReco_Theta_nFD_WMaps = hPlot1D("1e cut", "FD", "Reco #theta_{nFD} used in WMaps", "Reco #theta_{nFD} used in WMaps", "#theta_{nFD} [#circ]",
                                             directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "03c_Reco_Theta_nFD_used_in_WMaps", ThetaFD_AMaps.GetLowerCut(),
                                             ThetaFD_AMaps.GetUpperCut(), numTH1Dbins);
-    hPlot1D hTL_Theta_nFD_WMap = hPlot1D("1e cut", "FD", "TL #theta_{nFD} used in WMaps", "TL #theta_{nFD} used in WMaps", "#theta_{nFD} [#circ]",
+    hPlot1D hTL_Theta_nFD_WMaps = hPlot1D("1e cut", "FD", "TL #theta_{nFD} used in WMaps", "TL #theta_{nFD} used in WMaps", "#theta_{nFD} [#circ]",
                                           directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "03d_TL_Theta_nFD_used_in_WMaps", ThetaFD_AMaps.GetLowerCut(),
                                           ThetaFD_AMaps.GetUpperCut(), numTH1Dbins);
-    hPlot1D hReco_Phi_nFD_WMap = hPlot1D("1e cut", "FD", "Reco #phi_{nFD} used in WMaps", "Reco #phi_{nFD} used in WMaps", "#phi_{nFD} [#circ]",
+    hPlot1D hReco_Phi_nFD_WMaps = hPlot1D("1e cut", "FD", "Reco #phi_{nFD} used in WMaps", "Reco #phi_{nFD} used in WMaps", "#phi_{nFD} [#circ]",
                                           directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01e_Reco_Phi_nFD_used_in_WMaps", -180, 180, numTH1Dbins);
-    hPlot1D hTL_Phi_nFD_WMap = hPlot1D("1e cut", "FD", "TL #phi_{nFD} used in WMaps", "TL #phi_{nFD} used in WMaps", "#phi_{nFD} [#circ]",
+    hPlot1D hTL_Phi_nFD_WMaps = hPlot1D("1e cut", "FD", "TL #phi_{nFD} used in WMaps", "TL #phi_{nFD} used in WMaps", "#phi_{nFD} [#circ]",
                                         directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01f_TL_Phi_nFD_used_in_WMaps", -180, 180, numTH1Dbins);
     hPlot2D hReco_P_nFD_vs_Reco_Theta_nFD_WMap = hPlot2D("", "", "Reco_P_nFD_vs_Reco_Theta_nFD_WMaps", "Reco P_{nFD} vs. Reco #theta_{nFD} used in WMaps",
                                                          "P_{nFD} [GeV/c]", "#theta_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02aa_Reco_P_nFD_vs_Reco_Theta_nFD_WMaps",
