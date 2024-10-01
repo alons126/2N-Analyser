@@ -30,7 +30,7 @@ private:
 
     // string Global_Run_Status = "ChainRun";
     // string Global_Run_Status = "ChainRunV3_R1";
-    string Global_Run_Status = "FS_cuts_only_ChainRunV3_R1";
+    string Global_Run_Status = "ECAL_cuts_only_ChainRunV3_R1";
 
 public:
     // Default constructor ---------------------------------------------------------------------------------------------------------------------------------------------
