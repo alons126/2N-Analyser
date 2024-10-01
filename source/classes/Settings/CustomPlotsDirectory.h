@@ -29,8 +29,8 @@ private:
     string Added_PreStatuses, Added_Statuses;
 
     // string Global_Run_Status = "ChainRun";
-    string Global_Run_Status = "ChainRunV3_R1";
-    // string Global_Run_Status = "Vz_only_ChainRunV3_R1";
+    // string Global_Run_Status = "ChainRunV3_R1";
+    string Global_Run_Status = "Vz_only_ChainRunV3_R1";
 
 public:
     // Default constructor ---------------------------------------------------------------------------------------------------------------------------------------------
