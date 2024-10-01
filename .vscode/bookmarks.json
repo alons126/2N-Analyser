@@ -14,7 +14,7 @@
 			"path": "source/classes/Settings/CustomPlotsDirectory.h",
 			"bookmarks": [
 				{
-					"line": 34,
+					"line": 35,
 					"column": 34,
 					"label": "Out folder name extension"
 				}
@@ -142,31 +142,6 @@
 					"line": 71,
 					"column": 13,
 					"label": "HistPlotter2D"
-				}
-			]
-		},
-		{
-			"path": "Old_analysers/DetectorSimulationAnalyser.C",
-			"bookmarks": [
-				{
-					"line": 103,
-					"column": 8,
-					"label": ""
-				},
-				{
-					"line": 124,
-					"column": 11,
-					"label": ""
-				},
-				{
-					"line": 133,
-					"column": 15,
-					"label": ""
-				},
-				{
-					"line": 173,
-					"column": 15,
-					"label": ""
 				}
 			]
 		}
