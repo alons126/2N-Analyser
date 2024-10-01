@@ -168,47 +168,47 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     /* Settings that allow to disable/enable every cut individually */
 
     // clas12ana cuts ---------------------------------------------------------------------------------------------------------------------------------------------------
-    // bool apply_cuts = false;                 // master ON/OFF switch for applying cuts
-    // bool clas12ana_particles = true;         // TODO: move form here!
-    // bool only_preselection_cuts = false;     // keep as false for regular runs!
-    // bool only_electron_quality_cuts = true; // keep as false for regular runs!
-
-    // /* Preselection cuts (event cuts) */
-    // bool apply_preselection_cuts = true;              // master ON/OFF switch for preselection cuts
-    // bool apply_Vz_cuts = false, apply_dVz_cuts = true; // Vertex cuts
-    // bool apply_DC_fiducial_cuts = false;               // DC fiducial (edge) cuts
-
-    // /* Electron quality cuts */
-    // bool apply_electron_quality_cuts = false; // master ON/OFF switch for eQC
-    // bool apply_Nphe_cut = false;              // Number of photo-electrons in HTCC cut
-    // bool apply_ECAL_SF_cuts = false;          // SF cut on both E_deb AND P_e
-    // bool apply_ECAL_P_cuts = false;          // SF cut on P_e (keep as false for now!)
-    // bool apply_ECAL_fiducial_cuts = false;    // ECAL edge cuts for other charged particles
-    // bool apply_Electron_beta_cut = false;     // Electron beta cut
-
-    // /* Chi2 cuts (= PID cuts) */
-    // bool apply_chi2_cuts_1e_cut = false;
-
-    bool apply_cuts = true;                  // master ON/OFF switch for applying cuts
+    bool apply_cuts = false;                 // master ON/OFF switch for applying cuts
     bool clas12ana_particles = true;         // TODO: move form here!
     bool only_preselection_cuts = false;     // keep as false for regular runs!
-    bool only_electron_quality_cuts = false; // keep as false for regular runs!
+    bool only_electron_quality_cuts = true; // keep as false for regular runs!
 
     /* Preselection cuts (event cuts) */
     bool apply_preselection_cuts = true;              // master ON/OFF switch for preselection cuts
-    bool apply_Vz_cuts = true, apply_dVz_cuts = true; // Vertex cuts
-    bool apply_DC_fiducial_cuts = true;               // DC fiducial (edge) cuts
+    bool apply_Vz_cuts = false, apply_dVz_cuts = true; // Vertex cuts
+    bool apply_DC_fiducial_cuts = false;               // DC fiducial (edge) cuts
 
     /* Electron quality cuts */
-    bool apply_electron_quality_cuts = true; // master ON/OFF switch for eQC
-    bool apply_Nphe_cut = true;              // Number of photo-electrons in HTCC cut
-    bool apply_ECAL_SF_cuts = true;          // SF cut on both E_deb AND P_e
+    bool apply_electron_quality_cuts = false; // master ON/OFF switch for eQC
+    bool apply_Nphe_cut = false;              // Number of photo-electrons in HTCC cut
+    bool apply_ECAL_SF_cuts = false;          // SF cut on both E_deb AND P_e
     bool apply_ECAL_P_cuts = false;          // SF cut on P_e (keep as false for now!)
-    bool apply_ECAL_fiducial_cuts = true;    // ECAL edge cuts for other charged particles
-    bool apply_Electron_beta_cut = true;     // Electron beta cut
+    bool apply_ECAL_fiducial_cuts = false;    // ECAL edge cuts for other charged particles
+    bool apply_Electron_beta_cut = false;     // Electron beta cut
 
     /* Chi2 cuts (= PID cuts) */
-    bool apply_chi2_cuts_1e_cut = true;
+    bool apply_chi2_cuts_1e_cut = false;
+
+    // bool apply_cuts = true;                  // master ON/OFF switch for applying cuts
+    // bool clas12ana_particles = true;         // TODO: move form here!
+    // bool only_preselection_cuts = false;     // keep as false for regular runs!
+    // bool only_electron_quality_cuts = false; // keep as false for regular runs!
+
+    // /* Preselection cuts (event cuts) */
+    // bool apply_preselection_cuts = true;              // master ON/OFF switch for preselection cuts
+    // bool apply_Vz_cuts = true, apply_dVz_cuts = true; // Vertex cuts
+    // bool apply_DC_fiducial_cuts = true;               // DC fiducial (edge) cuts
+
+    // /* Electron quality cuts */
+    // bool apply_electron_quality_cuts = true; // master ON/OFF switch for eQC
+    // bool apply_Nphe_cut = true;              // Number of photo-electrons in HTCC cut
+    // bool apply_ECAL_SF_cuts = true;          // SF cut on both E_deb AND P_e
+    // bool apply_ECAL_P_cuts = false;          // SF cut on P_e (keep as false for now!)
+    // bool apply_ECAL_fiducial_cuts = true;    // ECAL edge cuts for other charged particles
+    // bool apply_Electron_beta_cut = true;     // Electron beta cut
+
+    // /* Chi2 cuts (= PID cuts) */
+    // bool apply_chi2_cuts_1e_cut = true;
 
     // My analysis cuts ---------------------------------------------------------------------------------------------------------------------------------------------------
     /* Nucleon cuts */
