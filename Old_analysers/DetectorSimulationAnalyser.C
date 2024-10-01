@@ -22419,10 +22419,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         stackPlotter1D(c1, sE_e_15_2p_FD, norm_E_e_plots, "E_{e} around #theta_{e} = 15#circ", "2p", plots, Histogram_OutPDF, hE_e_15_All_Int_2p_FD, hE_e_15_QEL_2p_FD, hE_e_15_MEC_2p_FD,
                        hE_e_15_RES_2p_FD, hE_e_15_DIS_2p_FD, "02_E_e_15_Stack", sE_e_15_2p_FD_Dir, "");
 
-        01_SF_nFDpCD
-
-            // E_e plots (pFDpCD, FD)
-            double E_e_pFDpCD_All_Int_integral = hE_e_All_Int_pFDpCD_FD->Integral();
+        // E_e plots (pFDpCD, FD)
+        double E_e_pFDpCD_All_Int_integral = hE_e_All_Int_pFDpCD_FD->Integral();
         double E_e_QE_pFDpCD_integral = hE_e_QEL_pFDpCD_FD->Integral(), E_e_MEC_pFDpCD_integral = hE_e_MEC_pFDpCD_FD->Integral();
         double E_e_RES_pFDpCD_integral = hE_e_RES_pFDpCD_FD->Integral(), E_e_DIS_pFDpCD_integral = hE_e_DIS_pFDpCD_FD->Integral();
 
