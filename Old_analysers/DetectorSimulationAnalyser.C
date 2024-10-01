@@ -772,7 +772,6 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         //        FSR_2D_plots = true; // disabled below if HipoChainLength is 2 or lower
         FSR_1D_plots = false;
         FSR_2D_plots = false; // disabled below if HipoChainLength is 2 or lower
-        /
     }
 
     /* Other setup variables */
