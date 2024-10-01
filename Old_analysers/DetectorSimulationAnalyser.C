@@ -25528,13 +25528,13 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         hElectronAMapBC.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
         hReco_P_e_AMaps.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Momentum_plots, true, 1., 9999, 9999, 0, false);
         hReco_P_e_vs_Reco_Theta_e_AMap.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
-        hReco_P_e_vs_Reco_phi_e_AMap.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
+        hReco_P_e_vs_Reco_Phi_e_AMap.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
         hTL_P_e_AMaps.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Momentum_plots, true, 1., 9999, 9999, 0, false);
         hTL_P_e_vs_TL_Theta_e_AMap.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
         hTL_P_e_vs_TL_Phi_e_AMap.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
         hReco_P_e_WMaps.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Momentum_plots, true, 1., 9999, 9999, 0, false);
         hReco_P_e_vs_Reco_Theta_e_WMap.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
-        hReco_P_e_vs_Reco_phi_e_WMap.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
+        hReco_P_e_vs_Reco_Phi_e_WMap.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
         hTL_P_e_WMaps.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Momentum_plots, true, 1., 9999, 9999, 0, false);
         hTL_P_e_vs_TL_Theta_e_WMap.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
         hTL_P_e_vs_TL_Phi_e_WMap.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
