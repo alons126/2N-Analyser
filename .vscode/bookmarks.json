@@ -14,7 +14,7 @@
 			"path": "source/classes/Settings/CustomPlotsDirectory.h",
 			"bookmarks": [
 				{
-					"line": 33,
+					"line": 34,
 					"column": 34,
 					"label": "Out folder name extension"
 				}
@@ -166,96 +166,6 @@
 				{
 					"line": 173,
 					"column": 15,
-					"label": ""
-				},
-				{
-					"line": 21996,
-					"column": 25,
-					"label": ""
-				},
-				{
-					"line": 21999,
-					"column": 21,
-					"label": ""
-				},
-				{
-					"line": 22192,
-					"column": 13,
-					"label": ""
-				},
-				{
-					"line": 22265,
-					"column": 14,
-					"label": ""
-				},
-				{
-					"line": 22337,
-					"column": 16,
-					"label": ""
-				},
-				{
-					"line": 22354,
-					"column": 15,
-					"label": ""
-				},
-				{
-					"line": 22365,
-					"column": 18,
-					"label": ""
-				},
-				{
-					"line": 22436,
-					"column": 14,
-					"label": ""
-				},
-				{
-					"line": 22702,
-					"column": 31,
-					"label": ""
-				},
-				{
-					"line": 22772,
-					"column": 31,
-					"label": ""
-				},
-				{
-					"line": 22883,
-					"column": 23,
-					"label": ""
-				},
-				{
-					"line": 22961,
-					"column": 26,
-					"label": ""
-				},
-				{
-					"line": 25027,
-					"column": 43,
-					"label": ""
-				},
-				{
-					"line": 25082,
-					"column": 48,
-					"label": ""
-				},
-				{
-					"line": 25096,
-					"column": 60,
-					"label": ""
-				},
-				{
-					"line": 25617,
-					"column": 50,
-					"label": ""
-				},
-				{
-					"line": 25741,
-					"column": 37,
-					"label": ""
-				},
-				{
-					"line": 25840,
-					"column": 36,
 					"label": ""
 				}
 			]
