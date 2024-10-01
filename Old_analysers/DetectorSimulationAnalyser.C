@@ -175,7 +175,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
     /* Preselection cuts (event cuts) */
     bool apply_preselection_cuts = true;              // master ON/OFF switch for preselection cuts
-    bool apply_Vz_cuts = true, apply_dVz_cuts = false; // Vertex cuts
+    bool apply_Vz_cuts = false, apply_dVz_cuts = true; // Vertex cuts
     bool apply_DC_fiducial_cuts = false;               // DC fiducial (edge) cuts
 
     /* Electron quality cuts */
