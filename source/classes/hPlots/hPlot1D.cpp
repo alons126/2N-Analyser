@@ -320,7 +320,9 @@ void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool no
         // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
         // ++CanvasPDF_ind;
     }
 
@@ -345,8 +347,10 @@ void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool no
         // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     if (AddToStack)
@@ -545,8 +549,10 @@ void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool no
         // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     if (LinearScalePlot)
@@ -570,8 +576,10 @@ void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool no
         // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     HistogramCanvas->cd();
@@ -760,8 +768,10 @@ void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool no
         // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     if (LinearScalePlot)
@@ -775,8 +785,10 @@ void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool no
         // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     if (AddToStack)
@@ -980,8 +992,10 @@ void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool no
         // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     if (LinearScalePlot)
@@ -1005,8 +1019,10 @@ void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool no
         // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     HistogramCanvas->cd();
@@ -1159,8 +1175,10 @@ void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool no
         // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     if (LinearScalePlot)
@@ -1174,8 +1192,10 @@ void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool no
         // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     if (AddToStack)
@@ -1355,8 +1375,10 @@ void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool no
             // HistogramCanvas->DrawClonePad();
             // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
             // CanvasPDF->Print(Histogram_OutPDF);
+            HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
             HistogramCanvas->Print(Histogram_OutPDF);
-            // ++CanvasPDF_ind;
+            HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                                   // ++CanvasPDF_ind;
         }
         else
         {
@@ -1368,8 +1390,10 @@ void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool no
             // HistogramCanvas->DrawClonePad();
             // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
             // CanvasPDF->Print(Histogram_OutPDF);
+            HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
             HistogramCanvas->Print(Histogram_OutPDF);
-            // ++CanvasPDF_ind;
+            HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                                   // ++CanvasPDF_ind;
         }
     }
 
@@ -1386,8 +1410,10 @@ void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool no
             // HistogramCanvas->DrawClonePad();
             // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
             // CanvasPDF->Print(Histogram_OutPDF);
+            HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
             HistogramCanvas->Print(Histogram_OutPDF);
-            // ++CanvasPDF_ind;
+            HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                                   // ++CanvasPDF_ind;
         }
         else
         {
@@ -1399,8 +1425,10 @@ void hPlot1D::histPlotter1D(TCanvas *HistogramCanvas, TH1D *Histogram1D, bool no
             // HistogramCanvas->DrawClonePad();
             // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
             // CanvasPDF->Print(Histogram_OutPDF);
+            HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
             HistogramCanvas->Print(Histogram_OutPDF);
-            // ++CanvasPDF_ind;
+            HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                                   // ++CanvasPDF_ind;
         }
     }
 
@@ -1622,8 +1650,10 @@ void hPlot1D::histPlotter1D(const std::string &SampleName, TCanvas *HistogramCan
         // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     if (LinearScalePlot)
@@ -1648,8 +1678,10 @@ void hPlot1D::histPlotter1D(const std::string &SampleName, TCanvas *HistogramCan
         // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     if (AddToStack)
@@ -1876,8 +1908,10 @@ void hPlot1D::histPlotter1D(const std::string &SampleName, TCanvas *HistogramCan
         // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     if (LinearScalePlot)
@@ -1901,7 +1935,9 @@ void hPlot1D::histPlotter1D(const std::string &SampleName, TCanvas *HistogramCan
         // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
 
         // ++CanvasPDF_ind;
     }
@@ -2206,8 +2242,10 @@ void hPlot1D::histPlotter1DwFit(std::string SampleName, TCanvas *HistogramCanvas
         // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     if (LinearScalePlot)
@@ -2232,8 +2270,10 @@ void hPlot1D::histPlotter1DwFit(std::string SampleName, TCanvas *HistogramCanvas
         // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     Histogram_list->Add(Histogram1D);

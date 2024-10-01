@@ -233,8 +233,10 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *HistogramCan
         // // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     if (ZLinearScalePlot)
@@ -249,8 +251,10 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *HistogramCan
         // // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     gStyle->SetStatX(DefStatX);
@@ -357,8 +361,10 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *HistogramCan
         // // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     if (ZLinearScalePlot)
@@ -371,8 +377,10 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *HistogramCan
         // // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     gStyle->SetStatX(DefStatX);
@@ -470,8 +478,10 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *HistogramCan
         // // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     if (ZLinearScalePlot)
@@ -484,8 +494,10 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *HistogramCan
         // // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     gStyle->SetStatX(DefStatX);
@@ -587,8 +599,10 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *HistogramCan
         // // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     if (ZLinearScalePlot)
@@ -601,8 +615,10 @@ void hPlot2D::histPlotter2D(const std::string &SampleName, TCanvas *HistogramCan
         // // HistogramCanvas->DrawClonePad();
         // CopyPadContent((TPad *)HistogramCanvas->cd(), (TPad *)CanvasPDF->cd(CanvasPDF_ind));
         // CanvasPDF->Print(Histogram_OutPDF);
+        HistogramCanvas->Print(Form("%s[", Histogram_OutPDF)); // Open the PDF file
         HistogramCanvas->Print(Histogram_OutPDF);
-        // ++CanvasPDF_ind;
+        HistogramCanvas->Print(Form("%s]", Histogram_OutPDF)); // Close the PDF file
+                                                               // ++CanvasPDF_ind;
     }
 
     gStyle->SetStatX(DefStatX);
