@@ -9228,24 +9228,24 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                      "P_{e} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "01aa_Reco_P_e_vs_Reco_Theta_e_AMap",
                                                      Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_e_vs_Reco_phi_e_AMap = hPlot2D("", "", "Reco_P_e_vs_Reco_phi_e_AMap", "Reco P_{e} vs. Reco #phi_{e} used in AMaps",
-                                                   "P_{e} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "01ab_Reco_P_e_vs_Reco_phi_e_AMap",
+    hPlot2D hReco_P_e_vs_Reco_Phi_e_AMap = hPlot2D("", "", "Reco_P_e_vs_Reco_Phi_e_AMap", "Reco P_{e} vs. Reco #phi_{e} used in AMaps",
+                                                   "P_{e} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "01ab_Reco_P_e_vs_Reco_Phi_e_AMap",
                                                    Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_P_e_vs_TL_Theta_e_AMap = hPlot2D("", "", "Reco_P_e_vs_TL_Theta_e_AMap", "Reco P_{e} vs. TL #theta_{e} used in AMaps",
                                                    "P_{e} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "01ba_Reco_P_e_vs_TL_Theta_e_AMap",
                                                    Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_e_vs_TL_phi_e_AMap = hPlot2D("", "", "Reco_P_e_vs_TL_phi_e_AMap", "Reco P_{e} vs. TL #phi_{e} used in AMaps",
-                                                 "P_{e} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "01bb_Reco_P_e_vs_TL_phi_e_AMap",
+    hPlot2D hReco_P_e_vs_TL_Phi_e_AMap = hPlot2D("", "", "Reco_P_e_vs_TL_Phi_e_AMap", "Reco P_{e} vs. TL #phi_{e} used in AMaps",
+                                                 "P_{e} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "01bb_Reco_P_e_vs_TL_Phi_e_AMap",
                                                  Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                  numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_P_e_vs_TL_Theta_e_AMap = hPlot2D("", "", "TL_P_e_vs_TL_Theta_e_AMap", "TL P_{e} vs. TL #theta_{e} used in AMaps",
                                                    "P_{e} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "01ba_TL_P_e_vs_TL_Theta_e_AMap",
                                                    Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hTL_P_e_vs_TL_phi_e_AMap = hPlot2D("", "", "TL_P_e_vs_TL_phi_e_AMap", "TL P_{e} vs. TL #phi_{e} used in AMaps",
-                                                   "P_{e} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "01ab_TL_P_e_vs_TL_phi_e_AMap",
+    hPlot2D hTL_P_e_vs_TL_Phi_e_AMap = hPlot2D("", "", "TL_P_e_vs_TL_Phi_e_AMap", "TL P_{e} vs. TL #phi_{e} used in AMaps",
+                                                   "P_{e} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "01ab_TL_P_e_vs_TL_Phi_e_AMap",
                                                    Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
 
@@ -9269,16 +9269,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                          "P_{pFD} [GeV/c]", "#theta_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02aa_Reco_P_pFD_vs_Reco_Theta_pFD_AMap",
                                                          Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_pFD_vs_Reco_phi_pFD_AMap = hPlot2D("", "", "Reco_P_pFD_vs_Reco_phi_pFD_AMap", "Reco P_{pFD} vs. Reco #phi_{pFD} used in AMaps",
-                                                       "P_{pFD} [GeV/c]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ab_Reco_P_pFD_vs_Reco_phi_pFD_AMap",
+    hPlot2D hReco_P_pFD_vs_Reco_Phi_pFD_AMap = hPlot2D("", "", "Reco_P_pFD_vs_Reco_Phi_pFD_AMap", "Reco P_{pFD} vs. Reco #phi_{pFD} used in AMaps",
+                                                       "P_{pFD} [GeV/c]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ab_Reco_P_pFD_vs_Reco_Phi_pFD_AMap",
                                                        Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_P_pFD_vs_TL_Theta_pFD_AMap = hPlot2D("", "", "Reco_P_pFD_vs_TL_Theta_pFD_AMap", "Reco P_{pFD} vs. TL #theta_{pFD} used in AMaps",
                                                        "P_{pFD} [GeV/c]", "#theta_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ac_Reco_P_pFD_vs_TL_Theta_pFD_AMap",
                                                        Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_pFD_vs_TL_phi_pFD_AMap = hPlot2D("", "", "Reco_P_pFD_vs_TL_phi_pFD_AMap", "Reco P_{pFD} vs. TL #phi_{pFD} used in AMaps",
-                                                     "P_{pFD} [GeV/c]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ad_Reco_P_pFD_vs_TL_phi_pFD_AMap",
+    hPlot2D hReco_P_pFD_vs_TL_Phi_pFD_AMap = hPlot2D("", "", "Reco_P_pFD_vs_TL_Phi_pFD_AMap", "Reco P_{pFD} vs. TL #phi_{pFD} used in AMaps",
+                                                     "P_{pFD} [GeV/c]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ad_Reco_P_pFD_vs_TL_Phi_pFD_AMap",
                                                      Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_P_pFD_vs_Reco_P_e_AMap = hPlot2D("", "", "Reco_P_pFD_vs_Reco_P_e_AMap", "Reco P_{pFD} vs. Reco P_{e} used in AMaps",
@@ -9293,16 +9293,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                        "P_{pFD} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ag_Reco_P_pFD_vs_Reco_Theta_e_AMap",
                                                        Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_pFD_vs_Reco_phi_e_AMap = hPlot2D("", "", "Reco_P_pFD_vs_Reco_phi_e_AMap", "Reco P_{pFD} vs. Reco #phi_{e} used in AMaps",
-                                                     "P_{pFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ah_Reco_P_pFD_vs_Reco_phi_e_AMap",
+    hPlot2D hReco_P_pFD_vs_Reco_Phi_e_AMap = hPlot2D("", "", "Reco_P_pFD_vs_Reco_Phi_e_AMap", "Reco P_{pFD} vs. Reco #phi_{e} used in AMaps",
+                                                     "P_{pFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ah_Reco_P_pFD_vs_Reco_Phi_e_AMap",
                                                      Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_P_pFD_vs_TL_Theta_e_AMap = hPlot2D("", "", "Reco_P_pFD_vs_TL_Theta_e_AMap", "Reco P_{pFD} vs. TL #theta_{e} used in AMaps",
                                                      "P_{pFD} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ai_Reco_P_pFD_vs_TL_Theta_e_AMap",
                                                      Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_pFD_vs_TL_phi_e_AMap = hPlot2D("", "", "Reco_P_pFD_vs_TL_phi_e_AMap", "Reco P_{pFD} vs. TL #phi_{e} used in AMaps",
-                                                   "P_{pFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02aj_Reco_P_pFD_vs_TL_phi_e_AMap",
+    hPlot2D hReco_P_pFD_vs_TL_Phi_e_AMap = hPlot2D("", "", "Reco_P_pFD_vs_TL_Phi_e_AMap", "Reco P_{pFD} vs. TL #phi_{e} used in AMaps",
+                                                   "P_{pFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02aj_Reco_P_pFD_vs_TL_Phi_e_AMap",
                                                    Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_P_pFD_vs_Reco_Theta_pFD_AMap = hPlot2D("", "", "TL_P_pFD_vs_Reco_Theta_pFD_AMap", "TL P_{pFD} vs. Reco #theta_{pFD} used in AMaps",
@@ -9313,8 +9313,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                      "P_{pFD} [GeV/c]", "#theta_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02bb_TL_P_pFD_vs_TL_Theta_pFD_AMap",
                                                      Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hTL_P_pFD_vs_TL_phi_pFD_AMap = hPlot2D("", "", "TL_P_pFD_vs_TL_phi_pFD_AMap", "TL P_{pFD} vs. TL #phi_{pFD} used in AMaps",
-                                                   "P_{pFD} [GeV/c]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02bc_TL_P_pFD_vs_TL_phi_pFD_AMap",
+    hPlot2D hTL_P_pFD_vs_TL_Phi_pFD_AMap = hPlot2D("", "", "TL_P_pFD_vs_TL_Phi_pFD_AMap", "TL P_{pFD} vs. TL #phi_{pFD} used in AMaps",
+                                                   "P_{pFD} [GeV/c]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02bc_TL_P_pFD_vs_TL_Phi_pFD_AMap",
                                                    Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_P_pFD_vs_TL_P_e_AMap = hPlot2D("", "", "TL_P_pFD_vs_TL_P_e_AMap", "TL P_{pFD} vs. Reco P_{e} used in AMaps",
@@ -9329,16 +9329,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                    "P_{pFD} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02bf_TL_P_pFD_vs_TL_Theta_e_AMap",
                                                    Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hTL_P_pFD_vs_TL_phi_e_AMap = hPlot2D("", "", "TL_P_pFD_vs_TL_phi_e_AMap", "TL P_{pFD} vs. TL #phi_{e} used in AMaps",
-                                                 "P_{pFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02bg_TL_P_pFD_vs_TL_phi_e_AMap",
+    hPlot2D hTL_P_pFD_vs_TL_Phi_e_AMap = hPlot2D("", "", "TL_P_pFD_vs_TL_Phi_e_AMap", "TL P_{pFD} vs. TL #phi_{e} used in AMaps",
+                                                 "P_{pFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02bg_TL_P_pFD_vs_TL_Phi_e_AMap",
                                                  Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                  numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Theta_pFD_vs_Reco_phi_pFD_AMap = hPlot2D("", "", "Reco_Theta_pFD_vs_Reco_phi_pFD_AMap", "Reco #theta_{pFD} vs. Reco #phi_{pFD} used in AMaps",
-                                                           "#theta_{pFD} [#circ]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ca_Reco_Theta_pFD_vs_Reco_phi_pFD_AMap",
+    hPlot2D hReco_Theta_pFD_vs_Reco_Phi_pFD_AMap = hPlot2D("", "", "Reco_Theta_pFD_vs_Reco_Phi_pFD_AMap", "Reco #theta_{pFD} vs. Reco #phi_{pFD} used in AMaps",
+                                                           "#theta_{pFD} [#circ]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ca_Reco_Theta_pFD_vs_Reco_Phi_pFD_AMap",
                                                            ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), Phi_lboundary, Phi_uboundary,
                                                            numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Theta_pFD_vs_TL_phi_pFD_AMap = hPlot2D("", "", "Reco_Theta_pFD_vs_TL_phi_pFD_AMap", "Reco #theta_{pFD} vs. TL #phi_{pFD} used in AMaps",
-                                                         "#theta_{pFD} [#circ]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02cb_Reco_Theta_pFD_vs_TL_phi_pFD_AMap",
+    hPlot2D hReco_Theta_pFD_vs_TL_Phi_pFD_AMap = hPlot2D("", "", "Reco_Theta_pFD_vs_TL_Phi_pFD_AMap", "Reco #theta_{pFD} vs. TL #phi_{pFD} used in AMaps",
+                                                         "#theta_{pFD} [#circ]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02cb_Reco_Theta_pFD_vs_TL_Phi_pFD_AMap",
                                                          ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), Phi_lboundary, Phi_uboundary,
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_Theta_pFD_vs_Reco_P_e_AMap = hPlot2D("", "", "Reco_Theta_pFD_vs_Reco_P_e_AMap", "Reco #theta_{pFD} vs. Reco P_{e} used in AMaps",
@@ -9353,16 +9353,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                            "#theta_{pFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ce_Reco_Theta_pFD_vs_Reco_Theta_e_AMap",
                                                            ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                            numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Theta_pFD_vs_Reco_phi_e_AMap = hPlot2D("", "", "Reco_Theta_pFD_vs_Reco_phi_e_AMap", "Reco #theta_{pFD} vs. Reco #phi_{e} used in AMaps",
-                                                         "#theta_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02cf_Reco_Theta_pFD_vs_Reco_phi_e_AMap",
+    hPlot2D hReco_Theta_pFD_vs_Reco_Phi_e_AMap = hPlot2D("", "", "Reco_Theta_pFD_vs_Reco_Phi_e_AMap", "Reco #theta_{pFD} vs. Reco #phi_{e} used in AMaps",
+                                                         "#theta_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02cf_Reco_Theta_pFD_vs_Reco_Phi_e_AMap",
                                                          ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), Phi_lboundary, Phi_uboundary,
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_Theta_pFD_vs_TL_Theta_e_AMap = hPlot2D("", "", "Reco_Theta_pFD_vs_TL_Theta_e_AMap", "Reco #theta_{pFD} vs. TL #theta_{e} used in AMaps",
                                                          "#theta_{pFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02cg_Reco_Theta_pFD_vs_TL_Theta_e_AMap",
                                                          ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Theta_pFD_vs_TL_phi_e_AMap = hPlot2D("", "", "Reco_Theta_pFD_vs_TL_phi_e_AMap", "Reco #theta_{pFD} vs. TL #phi_{e} used in AMaps",
-                                                       "#theta_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ch_Reco_Theta_pFD_vs_TL_phi_e_AMap",
+    hPlot2D hReco_Theta_pFD_vs_TL_Phi_e_AMap = hPlot2D("", "", "Reco_Theta_pFD_vs_TL_Phi_e_AMap", "Reco #theta_{pFD} vs. TL #phi_{e} used in AMaps",
+                                                       "#theta_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ch_Reco_Theta_pFD_vs_TL_Phi_e_AMap",
                                                        ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), Phi_lboundary, Phi_uboundary,
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_Theta_pFD_vs_TL_Phi_pFD_AMap = hPlot2D("", "", "TL_Theta_pFD_vs_TL_Phi_pFD_AMap", "TL #theta_{pFD} vs. Reco #phi_{pFD} used in AMaps",
@@ -9385,12 +9385,12 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                        "#theta_{pFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02df_TL_Theta_pFD_vs_TL_Theta_e_AMap",
                                                        ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Phi_pFD_vs_Reco_phi_pFD_AMap = hPlot2D("", "", "Reco_Phi_pFD_vs_Reco_phi_pFD_AMap", "Reco #phi_{pFD} vs. Reco #phi_{pFD} used in AMaps",
-                                                         "#phi_{pFD} [#circ]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ea_Reco_Phi_pFD_vs_Reco_phi_pFD_AMap",
+    hPlot2D hReco_Phi_pFD_vs_Reco_Phi_pFD_AMap = hPlot2D("", "", "Reco_Phi_pFD_vs_Reco_Phi_pFD_AMap", "Reco #phi_{pFD} vs. Reco #phi_{pFD} used in AMaps",
+                                                         "#phi_{pFD} [#circ]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ea_Reco_Phi_pFD_vs_Reco_Phi_pFD_AMap",
                                                          Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Phi_pFD_vs_TL_phi_pFD_AMap = hPlot2D("", "", "Reco_Phi_pFD_vs_TL_phi_pFD_AMap", "Reco #phi_{pFD} vs. TL #phi_{pFD} used in AMaps",
-                                                       "#phi_{pFD} [#circ]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02eb_Reco_Phi_pFD_vs_TL_phi_pFD_AMap",
+    hPlot2D hReco_Phi_pFD_vs_TL_Phi_pFD_AMap = hPlot2D("", "", "Reco_Phi_pFD_vs_TL_Phi_pFD_AMap", "Reco #phi_{pFD} vs. TL #phi_{pFD} used in AMaps",
+                                                       "#phi_{pFD} [#circ]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02eb_Reco_Phi_pFD_vs_TL_Phi_pFD_AMap",
                                                        Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_Phi_pFD_vs_Reco_P_e_AMap = hPlot2D("", "", "Reco_Phi_pFD_vs_Reco_P_e_AMap", "Reco #phi_{pFD} vs. Reco P_{e} used in AMaps",
@@ -9405,16 +9405,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                          "#phi_{pFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ee_Reco_Phi_pFD_vs_Reco_Theta_e_AMap",
                                                          Phi_lboundary, Phi_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Phi_pFD_vs_Reco_phi_e_AMap = hPlot2D("", "", "Reco_Phi_pFD_vs_Reco_phi_e_AMap", "Reco #phi_{pFD} vs. Reco #phi_{e} used in AMaps",
-                                                       "#phi_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ef_Reco_Phi_pFD_vs_Reco_phi_e_AMap",
+    hPlot2D hReco_Phi_pFD_vs_Reco_Phi_e_AMap = hPlot2D("", "", "Reco_Phi_pFD_vs_Reco_Phi_e_AMap", "Reco #phi_{pFD} vs. Reco #phi_{e} used in AMaps",
+                                                       "#phi_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ef_Reco_Phi_pFD_vs_Reco_Phi_e_AMap",
                                                        Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_Phi_pFD_vs_TL_Theta_e_AMap = hPlot2D("", "", "Reco_Phi_pFD_vs_TL_Theta_e_AMap", "Reco #phi_{pFD} vs. TL #theta_{e} used in AMaps",
                                                        "#phi_{pFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02eg_Reco_Phi_pFD_vs_TL_Theta_e_AMap",
                                                        Phi_lboundary, Phi_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Phi_pFD_vs_TL_phi_e_AMap = hPlot2D("", "", "Reco_Phi_pFD_vs_TL_phi_e_AMap", "Reco #phi_{pFD} vs. TL #phi_{e} used in AMaps",
-                                                     "#phi_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ef_Reco_Phi_pFD_vs_TL_phi_e_AMap",
+    hPlot2D hReco_Phi_pFD_vs_TL_Phi_e_AMap = hPlot2D("", "", "Reco_Phi_pFD_vs_TL_Phi_e_AMap", "Reco #phi_{pFD} vs. TL #phi_{e} used in AMaps",
+                                                     "#phi_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ef_Reco_Phi_pFD_vs_TL_Phi_e_AMap",
                                                      Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_Phi_pFD_vs_TL_Phi_pFD_AMap = hPlot2D("", "", "TL_Phi_pFD_vs_TL_Phi_pFD_AMap", "TL #phi_{pFD} vs. Reco #phi_{pFD} used in AMaps",
@@ -9433,8 +9433,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                      "#phi_{pFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02fd_TL_Phi_pFD_vs_TL_Theta_e_AMap",
                                                      Phi_lboundary, Phi_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hTL_Phi_pFD_vs_TL_phi_e_AMap = hPlot2D("", "", "TL_Phi_pFD_vs_TL_phi_e_AMap", "TL #phi_{pFD} vs. TL #phi_{e} used in AMaps",
-                                                   "#phi_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02fh_TL_Phi_pFD_vs_TL_phi_e_AMap",
+    hPlot2D hTL_Phi_pFD_vs_TL_Phi_e_AMap = hPlot2D("", "", "TL_Phi_pFD_vs_TL_Phi_e_AMap", "TL #phi_{pFD} vs. TL #phi_{e} used in AMaps",
+                                                   "#phi_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02fh_TL_Phi_pFD_vs_TL_Phi_e_AMap",
                                                    Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
 
@@ -9458,16 +9458,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                          "P_{nFD} [GeV/c]", "#theta_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02aa_Reco_P_nFD_vs_Reco_Theta_nFD_AMap",
                                                          Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_nFD_vs_Reco_phi_nFD_AMap = hPlot2D("", "", "Reco_P_nFD_vs_Reco_phi_nFD_AMap", "Reco P_{nFD} vs. Reco #phi_{nFD} used in AMaps",
-                                                       "P_{nFD} [GeV/c]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ab_Reco_P_nFD_vs_Reco_phi_nFD_AMap",
+    hPlot2D hReco_P_nFD_vs_Reco_Phi_nFD_AMap = hPlot2D("", "", "Reco_P_nFD_vs_Reco_Phi_nFD_AMap", "Reco P_{nFD} vs. Reco #phi_{nFD} used in AMaps",
+                                                       "P_{nFD} [GeV/c]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ab_Reco_P_nFD_vs_Reco_Phi_nFD_AMap",
                                                        Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_P_nFD_vs_TL_Theta_nFD_AMap = hPlot2D("", "", "Reco_P_nFD_vs_TL_Theta_nFD_AMap", "Reco P_{nFD} vs. TL #theta_{nFD} used in AMaps",
                                                        "P_{nFD} [GeV/c]", "#theta_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ac_Reco_P_nFD_vs_TL_Theta_nFD_AMap",
                                                        Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_nFD_vs_TL_phi_nFD_AMap = hPlot2D("", "", "Reco_P_nFD_vs_TL_phi_nFD_AMap", "Reco P_{nFD} vs. TL #phi_{nFD} used in AMaps",
-                                                     "P_{nFD} [GeV/c]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ad_Reco_P_nFD_vs_TL_phi_nFD_AMap",
+    hPlot2D hReco_P_nFD_vs_TL_Phi_nFD_AMap = hPlot2D("", "", "Reco_P_nFD_vs_TL_Phi_nFD_AMap", "Reco P_{nFD} vs. TL #phi_{nFD} used in AMaps",
+                                                     "P_{nFD} [GeV/c]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ad_Reco_P_nFD_vs_TL_Phi_nFD_AMap",
                                                      Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_P_nFD_vs_Reco_P_e_AMap = hPlot2D("", "", "Reco_P_nFD_vs_Reco_P_e_AMap", "Reco P_{nFD} vs. Reco P_{e} used in AMaps",
@@ -9482,16 +9482,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                        "P_{nFD} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ag_Reco_P_nFD_vs_Reco_Theta_e_AMap",
                                                        Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_nFD_vs_Reco_phi_e_AMap = hPlot2D("", "", "Reco_P_nFD_vs_Reco_phi_e_AMap", "Reco P_{nFD} vs. Reco #phi_{e} used in AMaps",
-                                                     "P_{nFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ah_Reco_P_nFD_vs_Reco_phi_e_AMap",
+    hPlot2D hReco_P_nFD_vs_Reco_Phi_e_AMap = hPlot2D("", "", "Reco_P_nFD_vs_Reco_Phi_e_AMap", "Reco P_{nFD} vs. Reco #phi_{e} used in AMaps",
+                                                     "P_{nFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ah_Reco_P_nFD_vs_Reco_Phi_e_AMap",
                                                      Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_P_nFD_vs_TL_Theta_e_AMap = hPlot2D("", "", "Reco_P_nFD_vs_TL_Theta_e_AMap", "Reco P_{nFD} vs. TL #theta_{e} used in AMaps",
                                                      "P_{nFD} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ai_Reco_P_nFD_vs_TL_Theta_e_AMap",
                                                      Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_nFD_vs_TL_phi_e_AMap = hPlot2D("", "", "Reco_P_nFD_vs_TL_phi_e_AMap", "Reco P_{nFD} vs. TL #phi_{e} used in AMaps",
-                                                   "P_{nFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02aj_Reco_P_nFD_vs_TL_phi_e_AMap",
+    hPlot2D hReco_P_nFD_vs_TL_Phi_e_AMap = hPlot2D("", "", "Reco_P_nFD_vs_TL_Phi_e_AMap", "Reco P_{nFD} vs. TL #phi_{e} used in AMaps",
+                                                   "P_{nFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02aj_Reco_P_nFD_vs_TL_Phi_e_AMap",
                                                    Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_P_nFD_vs_Reco_Theta_nFD_AMap = hPlot2D("", "", "TL_P_nFD_vs_Reco_Theta_nFD_AMap", "TL P_{nFD} vs. Reco #theta_{nFD} used in AMaps",
@@ -9502,8 +9502,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                      "P_{nFD} [GeV/c]", "#theta_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02bb_TL_P_nFD_vs_TL_Theta_nFD_AMap",
                                                      Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hTL_P_nFD_vs_TL_phi_nFD_AMap = hPlot2D("", "", "TL_P_nFD_vs_TL_phi_nFD_AMap", "TL P_{nFD} vs. TL #phi_{nFD} used in AMaps",
-                                                   "P_{nFD} [GeV/c]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02bc_TL_P_nFD_vs_TL_phi_nFD_AMap",
+    hPlot2D hTL_P_nFD_vs_TL_Phi_nFD_AMap = hPlot2D("", "", "TL_P_nFD_vs_TL_Phi_nFD_AMap", "TL P_{nFD} vs. TL #phi_{nFD} used in AMaps",
+                                                   "P_{nFD} [GeV/c]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02bc_TL_P_nFD_vs_TL_Phi_nFD_AMap",
                                                    Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_P_nFD_vs_TL_P_e_AMap = hPlot2D("", "", "TL_P_nFD_vs_TL_P_e_AMap", "TL P_{nFD} vs. Reco P_{e} used in AMaps",
@@ -9518,16 +9518,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                    "P_{nFD} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02bf_TL_P_nFD_vs_TL_Theta_e_AMap",
                                                    Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hTL_P_nFD_vs_TL_phi_e_AMap = hPlot2D("", "", "TL_P_nFD_vs_TL_phi_e_AMap", "TL P_{nFD} vs. TL #phi_{e} used in AMaps",
-                                                 "P_{nFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02bg_TL_P_nFD_vs_TL_phi_e_AMap",
+    hPlot2D hTL_P_nFD_vs_TL_Phi_e_AMap = hPlot2D("", "", "TL_P_nFD_vs_TL_Phi_e_AMap", "TL P_{nFD} vs. TL #phi_{e} used in AMaps",
+                                                 "P_{nFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02bg_TL_P_nFD_vs_TL_Phi_e_AMap",
                                                  Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                  numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Theta_nFD_vs_Reco_phi_nFD_AMap = hPlot2D("", "", "Reco_Theta_nFD_vs_Reco_phi_nFD_AMap", "Reco #theta_{nFD} vs. Reco #phi_{nFD} used in AMaps",
-                                                           "#theta_{nFD} [#circ]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ca_Reco_Theta_nFD_vs_Reco_phi_nFD_AMap",
+    hPlot2D hReco_Theta_nFD_vs_Reco_Phi_nFD_AMap = hPlot2D("", "", "Reco_Theta_nFD_vs_Reco_Phi_nFD_AMap", "Reco #theta_{nFD} vs. Reco #phi_{nFD} used in AMaps",
+                                                           "#theta_{nFD} [#circ]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ca_Reco_Theta_nFD_vs_Reco_Phi_nFD_AMap",
                                                            ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), Phi_lboundary, Phi_uboundary,
                                                            numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Theta_nFD_vs_TL_phi_nFD_AMap = hPlot2D("", "", "Reco_Theta_nFD_vs_TL_phi_nFD_AMap", "Reco #theta_{nFD} vs. TL #phi_{nFD} used in AMaps",
-                                                         "#theta_{nFD} [#circ]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02cb_Reco_Theta_nFD_vs_TL_phi_nFD_AMap",
+    hPlot2D hReco_Theta_nFD_vs_TL_Phi_nFD_AMap = hPlot2D("", "", "Reco_Theta_nFD_vs_TL_Phi_nFD_AMap", "Reco #theta_{nFD} vs. TL #phi_{nFD} used in AMaps",
+                                                         "#theta_{nFD} [#circ]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02cb_Reco_Theta_nFD_vs_TL_Phi_nFD_AMap",
                                                          ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), Phi_lboundary, Phi_uboundary,
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_Theta_nFD_vs_Reco_P_e_AMap = hPlot2D("", "", "Reco_Theta_nFD_vs_Reco_P_e_AMap", "Reco #theta_{nFD} vs. Reco P_{e} used in AMaps",
@@ -9542,16 +9542,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                            "#theta_{nFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ce_Reco_Theta_nFD_vs_Reco_Theta_e_AMap",
                                                            ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                            numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Theta_nFD_vs_Reco_phi_e_AMap = hPlot2D("", "", "Reco_Theta_nFD_vs_Reco_phi_e_AMap", "Reco #theta_{nFD} vs. Reco #phi_{e} used in AMaps",
-                                                         "#theta_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02cf_Reco_Theta_nFD_vs_Reco_phi_e_AMap",
+    hPlot2D hReco_Theta_nFD_vs_Reco_Phi_e_AMap = hPlot2D("", "", "Reco_Theta_nFD_vs_Reco_Phi_e_AMap", "Reco #theta_{nFD} vs. Reco #phi_{e} used in AMaps",
+                                                         "#theta_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02cf_Reco_Theta_nFD_vs_Reco_Phi_e_AMap",
                                                          ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), Phi_lboundary, Phi_uboundary,
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_Theta_nFD_vs_TL_Theta_e_AMap = hPlot2D("", "", "Reco_Theta_nFD_vs_TL_Theta_e_AMap", "Reco #theta_{nFD} vs. TL #theta_{e} used in AMaps",
                                                          "#theta_{nFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02cg_Reco_Theta_nFD_vs_TL_Theta_e_AMap",
                                                          ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Theta_nFD_vs_TL_phi_e_AMap = hPlot2D("", "", "Reco_Theta_nFD_vs_TL_phi_e_AMap", "Reco #theta_{nFD} vs. TL #phi_{e} used in AMaps",
-                                                       "#theta_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ch_Reco_Theta_nFD_vs_TL_phi_e_AMap",
+    hPlot2D hReco_Theta_nFD_vs_TL_Phi_e_AMap = hPlot2D("", "", "Reco_Theta_nFD_vs_TL_Phi_e_AMap", "Reco #theta_{nFD} vs. TL #phi_{e} used in AMaps",
+                                                       "#theta_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ch_Reco_Theta_nFD_vs_TL_Phi_e_AMap",
                                                        ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), Phi_lboundary, Phi_uboundary,
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_Theta_nFD_vs_TL_Phi_nFD_AMap = hPlot2D("", "", "TL_Theta_nFD_vs_TL_Phi_nFD_AMap", "TL #theta_{nFD} vs. Reco #phi_{nFD} used in AMaps",
@@ -9574,12 +9574,12 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                        "#theta_{nFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02df_TL_Theta_nFD_vs_TL_Theta_e_AMap",
                                                        ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Phi_nFD_vs_Reco_phi_nFD_AMap = hPlot2D("", "", "Reco_Phi_nFD_vs_Reco_phi_nFD_AMap", "Reco #phi_{nFD} vs. Reco #phi_{nFD} used in AMaps",
-                                                         "#phi_{nFD} [#circ]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ea_Reco_Phi_nFD_vs_Reco_phi_nFD_AMap",
+    hPlot2D hReco_Phi_nFD_vs_Reco_Phi_nFD_AMap = hPlot2D("", "", "Reco_Phi_nFD_vs_Reco_Phi_nFD_AMap", "Reco #phi_{nFD} vs. Reco #phi_{nFD} used in AMaps",
+                                                         "#phi_{nFD} [#circ]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ea_Reco_Phi_nFD_vs_Reco_Phi_nFD_AMap",
                                                          Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Phi_nFD_vs_TL_phi_nFD_AMap = hPlot2D("", "", "Reco_Phi_nFD_vs_TL_phi_nFD_AMap", "Reco #phi_{nFD} vs. TL #phi_{nFD} used in AMaps",
-                                                       "#phi_{nFD} [#circ]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02eb_Reco_Phi_nFD_vs_TL_phi_nFD_AMap",
+    hPlot2D hReco_Phi_nFD_vs_TL_Phi_nFD_AMap = hPlot2D("", "", "Reco_Phi_nFD_vs_TL_Phi_nFD_AMap", "Reco #phi_{nFD} vs. TL #phi_{nFD} used in AMaps",
+                                                       "#phi_{nFD} [#circ]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02eb_Reco_Phi_nFD_vs_TL_Phi_nFD_AMap",
                                                        Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_Phi_nFD_vs_Reco_P_e_AMap = hPlot2D("", "", "Reco_Phi_nFD_vs_Reco_P_e_AMap", "Reco #phi_{nFD} vs. Reco P_{e} used in AMaps",
@@ -9594,16 +9594,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                          "#phi_{nFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ee_Reco_Phi_nFD_vs_Reco_Theta_e_AMap",
                                                          Phi_lboundary, Phi_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Phi_nFD_vs_Reco_phi_e_AMap = hPlot2D("", "", "Reco_Phi_nFD_vs_Reco_phi_e_AMap", "Reco #phi_{nFD} vs. Reco #phi_{e} used in AMaps",
-                                                       "#phi_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ef_Reco_Phi_nFD_vs_Reco_phi_e_AMap",
+    hPlot2D hReco_Phi_nFD_vs_Reco_Phi_e_AMap = hPlot2D("", "", "Reco_Phi_nFD_vs_Reco_Phi_e_AMap", "Reco #phi_{nFD} vs. Reco #phi_{e} used in AMaps",
+                                                       "#phi_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ef_Reco_Phi_nFD_vs_Reco_Phi_e_AMap",
                                                        Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_Phi_nFD_vs_TL_Theta_e_AMap = hPlot2D("", "", "Reco_Phi_nFD_vs_TL_Theta_e_AMap", "Reco #phi_{nFD} vs. TL #theta_{e} used in AMaps",
                                                        "#phi_{nFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02eg_Reco_Phi_nFD_vs_TL_Theta_e_AMap",
                                                        Phi_lboundary, Phi_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Phi_nFD_vs_TL_phi_e_AMap = hPlot2D("", "", "Reco_Phi_nFD_vs_TL_phi_e_AMap", "Reco #phi_{nFD} vs. TL #phi_{e} used in AMaps",
-                                                     "#phi_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ef_Reco_Phi_nFD_vs_TL_phi_e_AMap",
+    hPlot2D hReco_Phi_nFD_vs_TL_Phi_e_AMap = hPlot2D("", "", "Reco_Phi_nFD_vs_TL_Phi_e_AMap", "Reco #phi_{nFD} vs. TL #phi_{e} used in AMaps",
+                                                     "#phi_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02ef_Reco_Phi_nFD_vs_TL_Phi_e_AMap",
                                                      Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_Phi_nFD_vs_TL_Phi_nFD_AMap = hPlot2D("", "", "TL_Phi_nFD_vs_TL_Phi_nFD_AMap", "TL #phi_{nFD} vs. Reco #phi_{nFD} used in AMaps",
@@ -9622,8 +9622,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                      "#phi_{nFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02fd_TL_Phi_nFD_vs_TL_Theta_e_AMap",
                                                      Phi_lboundary, Phi_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hTL_Phi_nFD_vs_TL_phi_e_AMap = hPlot2D("", "", "TL_Phi_nFD_vs_TL_phi_e_AMap", "TL #phi_{nFD} vs. TL #phi_{e} used in AMaps",
-                                                   "#phi_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02fh_TL_Phi_nFD_vs_TL_phi_e_AMap",
+    hPlot2D hTL_Phi_nFD_vs_TL_Phi_e_AMap = hPlot2D("", "", "TL_Phi_nFD_vs_TL_Phi_e_AMap", "TL #phi_{nFD} vs. TL #phi_{e} used in AMaps",
+                                                   "#phi_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "02fh_TL_Phi_nFD_vs_TL_Phi_e_AMap",
                                                    Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
 
@@ -9660,24 +9660,24 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                      "P_{e} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01aa_Reco_P_e_vs_Reco_Theta_e_WMaps",
                                                      Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_e_vs_Reco_phi_e_WMap = hPlot2D("", "", "Reco_P_e_vs_Reco_phi_e_WMaps", "Reco P_{e} vs. Reco #phi_{e} used in WMaps",
-                                                   "P_{e} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01ab_Reco_P_e_vs_Reco_phi_e_WMaps",
+    hPlot2D hReco_P_e_vs_Reco_Phi_e_WMap = hPlot2D("", "", "Reco_P_e_vs_Reco_Phi_e_WMaps", "Reco P_{e} vs. Reco #phi_{e} used in WMaps",
+                                                   "P_{e} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01ab_Reco_P_e_vs_Reco_Phi_e_WMaps",
                                                    Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_P_e_vs_TL_Theta_e_WMap = hPlot2D("", "", "Reco_P_e_vs_TL_Theta_e_WMaps", "Reco P_{e} vs. TL #theta_{e} used in WMaps",
                                                    "P_{e} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01ba_Reco_P_e_vs_TL_Theta_e_WMaps",
                                                    Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_e_vs_TL_phi_e_WMap = hPlot2D("", "", "Reco_P_e_vs_TL_phi_e_WMaps", "Reco P_{e} vs. TL #phi_{e} used in WMaps",
-                                                 "P_{e} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01bb_Reco_P_e_vs_TL_phi_e_WMaps",
+    hPlot2D hReco_P_e_vs_TL_Phi_e_WMap = hPlot2D("", "", "Reco_P_e_vs_TL_Phi_e_WMaps", "Reco P_{e} vs. TL #phi_{e} used in WMaps",
+                                                 "P_{e} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01bb_Reco_P_e_vs_TL_Phi_e_WMaps",
                                                  Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                  numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_P_e_vs_TL_Theta_e_WMap = hPlot2D("", "", "TL_P_e_vs_TL_Theta_e_WMap", "TL P_{e} vs. TL #theta_{e} used in WMaps",
                                                    "P_{e} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01ba_TL_P_e_vs_TL_Theta_e_WMap",
                                                    Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hTL_P_e_vs_TL_phi_e_WMap = hPlot2D("", "", "TL_P_e_vs_TL_phi_e_WMap", "TL P_{e} vs. TL #phi_{e} used in WMaps",
-                                                   "P_{e} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "01ab_TL_P_e_vs_TL_phi_e_WMap",
+    hPlot2D hTL_P_e_vs_TL_Phi_e_WMap = hPlot2D("", "", "TL_P_e_vs_TL_Phi_e_WMap", "TL P_{e} vs. TL #phi_{e} used in WMaps",
+                                                   "P_{e} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "01ab_TL_P_e_vs_TL_Phi_e_WMap",
                                                    Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
 
@@ -9701,16 +9701,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                          "P_{pFD} [GeV/c]", "#theta_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02aa_Reco_P_pFD_vs_Reco_Theta_pFD_WMaps",
                                                          Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_pFD_vs_Reco_phi_pFD_WMap = hPlot2D("", "", "Reco_P_pFD_vs_Reco_phi_pFD_WMaps", "Reco P_{pFD} vs. Reco #phi_{pFD} used in WMaps",
-                                                       "P_{pFD} [GeV/c]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ab_Reco_P_pFD_vs_Reco_phi_pFD_WMaps",
+    hPlot2D hReco_P_pFD_vs_Reco_Phi_pFD_WMap = hPlot2D("", "", "Reco_P_pFD_vs_Reco_Phi_pFD_WMaps", "Reco P_{pFD} vs. Reco #phi_{pFD} used in WMaps",
+                                                       "P_{pFD} [GeV/c]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ab_Reco_P_pFD_vs_Reco_Phi_pFD_WMaps",
                                                        Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_P_pFD_vs_TL_Theta_pFD_WMap = hPlot2D("", "", "Reco_P_pFD_vs_TL_Theta_pFD_WMaps", "Reco P_{pFD} vs. TL #theta_{pFD} used in WMaps",
                                                        "P_{pFD} [GeV/c]", "#theta_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ac_Reco_P_pFD_vs_TL_Theta_pFD_WMaps",
                                                        Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_pFD_vs_TL_phi_pFD_WMap = hPlot2D("", "", "Reco_P_pFD_vs_TL_phi_pFD_WMaps", "Reco P_{pFD} vs. TL #phi_{pFD} used in WMaps",
-                                                     "P_{pFD} [GeV/c]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ad_Reco_P_pFD_vs_TL_phi_pFD_WMaps",
+    hPlot2D hReco_P_pFD_vs_TL_Phi_pFD_WMap = hPlot2D("", "", "Reco_P_pFD_vs_TL_Phi_pFD_WMaps", "Reco P_{pFD} vs. TL #phi_{pFD} used in WMaps",
+                                                     "P_{pFD} [GeV/c]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ad_Reco_P_pFD_vs_TL_Phi_pFD_WMaps",
                                                      Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_P_pFD_vs_Reco_P_e_WMap = hPlot2D("", "", "Reco_P_pFD_vs_Reco_P_e_WMaps", "Reco P_{pFD} vs. Reco P_{e} used in WMaps",
@@ -9725,16 +9725,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                        "P_{pFD} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ag_Reco_P_pFD_vs_Reco_Theta_e_WMaps",
                                                        Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_pFD_vs_Reco_phi_e_WMap = hPlot2D("", "", "Reco_P_pFD_vs_Reco_phi_e_WMaps", "Reco P_{pFD} vs. Reco #phi_{e} used in WMaps",
-                                                     "P_{pFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ah_Reco_P_pFD_vs_Reco_phi_e_WMaps",
+    hPlot2D hReco_P_pFD_vs_Reco_Phi_e_WMap = hPlot2D("", "", "Reco_P_pFD_vs_Reco_Phi_e_WMaps", "Reco P_{pFD} vs. Reco #phi_{e} used in WMaps",
+                                                     "P_{pFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ah_Reco_P_pFD_vs_Reco_Phi_e_WMaps",
                                                      Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_P_pFD_vs_TL_Theta_e_WMap = hPlot2D("", "", "Reco_P_pFD_vs_TL_Theta_e_WMaps", "Reco P_{pFD} vs. TL #theta_{e} used in WMaps",
                                                      "P_{pFD} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ai_Reco_P_pFD_vs_TL_Theta_e_WMaps",
                                                      Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_pFD_vs_TL_phi_e_WMap = hPlot2D("", "", "Reco_P_pFD_vs_TL_phi_e_WMaps", "Reco P_{pFD} vs. TL #phi_{e} used in WMaps",
-                                                   "P_{pFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02aj_Reco_P_pFD_vs_TL_phi_e_WMaps",
+    hPlot2D hReco_P_pFD_vs_TL_Phi_e_WMap = hPlot2D("", "", "Reco_P_pFD_vs_TL_Phi_e_WMaps", "Reco P_{pFD} vs. TL #phi_{e} used in WMaps",
+                                                   "P_{pFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02aj_Reco_P_pFD_vs_TL_Phi_e_WMaps",
                                                    Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_P_pFD_vs_Reco_Theta_pFD_WMap = hPlot2D("", "", "TL_P_pFD_vs_Reco_Theta_pFD_WMaps", "TL P_{pFD} vs. Reco #theta_{pFD} used in WMaps",
@@ -9745,8 +9745,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                      "P_{pFD} [GeV/c]", "#theta_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02bb_TL_P_pFD_vs_TL_Theta_pFD_WMaps",
                                                      Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hTL_P_pFD_vs_TL_phi_pFD_WMap = hPlot2D("", "", "TL_P_pFD_vs_TL_phi_pFD_WMaps", "TL P_{pFD} vs. TL #phi_{pFD} used in WMaps",
-                                                   "P_{pFD} [GeV/c]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02bc_TL_P_pFD_vs_TL_phi_pFD_WMaps",
+    hPlot2D hTL_P_pFD_vs_TL_Phi_pFD_WMap = hPlot2D("", "", "TL_P_pFD_vs_TL_Phi_pFD_WMaps", "TL P_{pFD} vs. TL #phi_{pFD} used in WMaps",
+                                                   "P_{pFD} [GeV/c]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02bc_TL_P_pFD_vs_TL_Phi_pFD_WMaps",
                                                    Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_P_pFD_vs_TL_P_e_WMap = hPlot2D("", "", "TL_P_pFD_vs_TL_P_e_WMaps", "TL P_{pFD} vs. Reco P_{e} used in WMaps",
@@ -9761,16 +9761,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                    "P_{pFD} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02bf_TL_P_pFD_vs_TL_Theta_e_WMaps",
                                                    Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hTL_P_pFD_vs_TL_phi_e_WMap = hPlot2D("", "", "TL_P_pFD_vs_TL_phi_e_WMaps", "TL P_{pFD} vs. TL #phi_{e} used in WMaps",
-                                                 "P_{pFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02bg_TL_P_pFD_vs_TL_phi_e_WMaps",
+    hPlot2D hTL_P_pFD_vs_TL_Phi_e_WMap = hPlot2D("", "", "TL_P_pFD_vs_TL_Phi_e_WMaps", "TL P_{pFD} vs. TL #phi_{e} used in WMaps",
+                                                 "P_{pFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02bg_TL_P_pFD_vs_TL_Phi_e_WMaps",
                                                  Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                  numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Theta_pFD_vs_Reco_phi_pFD_WMap = hPlot2D("", "", "Reco_Theta_pFD_vs_Reco_phi_pFD_WMaps", "Reco #theta_{pFD} vs. Reco #phi_{pFD} used in WMaps",
-                                                           "#theta_{pFD} [#circ]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ca_Reco_Theta_pFD_vs_Reco_phi_pFD_WMaps",
+    hPlot2D hReco_Theta_pFD_vs_Reco_Phi_pFD_WMap = hPlot2D("", "", "Reco_Theta_pFD_vs_Reco_Phi_pFD_WMaps", "Reco #theta_{pFD} vs. Reco #phi_{pFD} used in WMaps",
+                                                           "#theta_{pFD} [#circ]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ca_Reco_Theta_pFD_vs_Reco_Phi_pFD_WMaps",
                                                            ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), Phi_lboundary, Phi_uboundary,
                                                            numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Theta_pFD_vs_TL_phi_pFD_WMap = hPlot2D("", "", "Reco_Theta_pFD_vs_TL_phi_pFD_WMaps", "Reco #theta_{pFD} vs. TL #phi_{pFD} used in WMaps",
-                                                         "#theta_{pFD} [#circ]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02cb_Reco_Theta_pFD_vs_TL_phi_pFD_WMaps",
+    hPlot2D hReco_Theta_pFD_vs_TL_Phi_pFD_WMap = hPlot2D("", "", "Reco_Theta_pFD_vs_TL_Phi_pFD_WMaps", "Reco #theta_{pFD} vs. TL #phi_{pFD} used in WMaps",
+                                                         "#theta_{pFD} [#circ]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02cb_Reco_Theta_pFD_vs_TL_Phi_pFD_WMaps",
                                                          ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), Phi_lboundary, Phi_uboundary,
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_Theta_pFD_vs_Reco_P_e_WMap = hPlot2D("", "", "Reco_Theta_pFD_vs_Reco_P_e_WMaps", "Reco #theta_{pFD} vs. Reco P_{e} used in WMaps",
@@ -9785,16 +9785,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                            "#theta_{pFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ce_Reco_Theta_pFD_vs_Reco_Theta_e_WMaps",
                                                            ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                            numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Theta_pFD_vs_Reco_phi_e_WMap = hPlot2D("", "", "Reco_Theta_pFD_vs_Reco_phi_e_WMaps", "Reco #theta_{pFD} vs. Reco #phi_{e} used in WMaps",
-                                                         "#theta_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02cf_Reco_Theta_pFD_vs_Reco_phi_e_WMaps",
+    hPlot2D hReco_Theta_pFD_vs_Reco_Phi_e_WMap = hPlot2D("", "", "Reco_Theta_pFD_vs_Reco_Phi_e_WMaps", "Reco #theta_{pFD} vs. Reco #phi_{e} used in WMaps",
+                                                         "#theta_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02cf_Reco_Theta_pFD_vs_Reco_Phi_e_WMaps",
                                                          ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), Phi_lboundary, Phi_uboundary,
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_Theta_pFD_vs_TL_Theta_e_WMap = hPlot2D("", "", "Reco_Theta_pFD_vs_TL_Theta_e_WMaps", "Reco #theta_{pFD} vs. TL #theta_{e} used in WMaps",
                                                          "#theta_{pFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02cg_Reco_Theta_pFD_vs_TL_Theta_e_WMaps",
                                                          ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Theta_pFD_vs_TL_phi_e_WMap = hPlot2D("", "", "Reco_Theta_pFD_vs_TL_phi_e_WMaps", "Reco #theta_{pFD} vs. TL #phi_{e} used in WMaps",
-                                                       "#theta_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ch_Reco_Theta_pFD_vs_TL_phi_e_WMaps",
+    hPlot2D hReco_Theta_pFD_vs_TL_Phi_e_WMap = hPlot2D("", "", "Reco_Theta_pFD_vs_TL_Phi_e_WMaps", "Reco #theta_{pFD} vs. TL #phi_{e} used in WMaps",
+                                                       "#theta_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ch_Reco_Theta_pFD_vs_TL_Phi_e_WMaps",
                                                        ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), Phi_lboundary, Phi_uboundary,
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_Theta_pFD_vs_TL_Phi_pFD_WMap = hPlot2D("", "", "TL_Theta_pFD_vs_TL_Phi_pFD_WMaps", "TL #theta_{pFD} vs. Reco #phi_{pFD} used in WMaps",
@@ -9817,12 +9817,12 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                        "#theta_{pFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02df_TL_Theta_pFD_vs_TL_Theta_e_WMaps",
                                                        ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Phi_pFD_vs_Reco_phi_pFD_WMap = hPlot2D("", "", "Reco_Phi_pFD_vs_Reco_phi_pFD_WMaps", "Reco #phi_{pFD} vs. Reco #phi_{pFD} used in WMaps",
-                                                         "#phi_{pFD} [#circ]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ea_Reco_Phi_pFD_vs_Reco_phi_pFD_WMaps",
+    hPlot2D hReco_Phi_pFD_vs_Reco_Phi_pFD_WMap = hPlot2D("", "", "Reco_Phi_pFD_vs_Reco_Phi_pFD_WMaps", "Reco #phi_{pFD} vs. Reco #phi_{pFD} used in WMaps",
+                                                         "#phi_{pFD} [#circ]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ea_Reco_Phi_pFD_vs_Reco_Phi_pFD_WMaps",
                                                          Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Phi_pFD_vs_TL_phi_pFD_WMap = hPlot2D("", "", "Reco_Phi_pFD_vs_TL_phi_pFD_WMaps", "Reco #phi_{pFD} vs. TL #phi_{pFD} used in WMaps",
-                                                       "#phi_{pFD} [#circ]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02eb_Reco_Phi_pFD_vs_TL_phi_pFD_WMaps",
+    hPlot2D hReco_Phi_pFD_vs_TL_Phi_pFD_WMap = hPlot2D("", "", "Reco_Phi_pFD_vs_TL_Phi_pFD_WMaps", "Reco #phi_{pFD} vs. TL #phi_{pFD} used in WMaps",
+                                                       "#phi_{pFD} [#circ]", "#phi_{pFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02eb_Reco_Phi_pFD_vs_TL_Phi_pFD_WMaps",
                                                        Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_Phi_pFD_vs_Reco_P_e_WMap = hPlot2D("", "", "Reco_Phi_pFD_vs_Reco_P_e_WMaps", "Reco #phi_{pFD} vs. Reco P_{e} used in WMaps",
@@ -9837,16 +9837,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                          "#phi_{pFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ee_Reco_Phi_pFD_vs_Reco_Theta_e_WMaps",
                                                          Phi_lboundary, Phi_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Phi_pFD_vs_Reco_phi_e_WMap = hPlot2D("", "", "Reco_Phi_pFD_vs_Reco_phi_e_WMaps", "Reco #phi_{pFD} vs. Reco #phi_{e} used in WMaps",
-                                                       "#phi_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ef_Reco_Phi_pFD_vs_Reco_phi_e_WMaps",
+    hPlot2D hReco_Phi_pFD_vs_Reco_Phi_e_WMap = hPlot2D("", "", "Reco_Phi_pFD_vs_Reco_Phi_e_WMaps", "Reco #phi_{pFD} vs. Reco #phi_{e} used in WMaps",
+                                                       "#phi_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ef_Reco_Phi_pFD_vs_Reco_Phi_e_WMaps",
                                                        Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_Phi_pFD_vs_TL_Theta_e_WMap = hPlot2D("", "", "Reco_Phi_pFD_vs_TL_Theta_e_WMaps", "Reco #phi_{pFD} vs. TL #theta_{e} used in WMaps",
                                                        "#phi_{pFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02eg_Reco_Phi_pFD_vs_TL_Theta_e_WMaps",
                                                        Phi_lboundary, Phi_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Phi_pFD_vs_TL_phi_e_WMap = hPlot2D("", "", "Reco_Phi_pFD_vs_TL_phi_e_WMaps", "Reco #phi_{pFD} vs. TL #phi_{e} used in WMaps",
-                                                     "#phi_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ef_Reco_Phi_pFD_vs_TL_phi_e_WMaps",
+    hPlot2D hReco_Phi_pFD_vs_TL_Phi_e_WMap = hPlot2D("", "", "Reco_Phi_pFD_vs_TL_Phi_e_WMaps", "Reco #phi_{pFD} vs. TL #phi_{e} used in WMaps",
+                                                     "#phi_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ef_Reco_Phi_pFD_vs_TL_Phi_e_WMaps",
                                                      Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_Phi_pFD_vs_TL_Phi_pFD_WMap = hPlot2D("", "", "TL_Phi_pFD_vs_TL_Phi_pFD_WMaps", "TL #phi_{pFD} vs. Reco #phi_{pFD} used in WMaps",
@@ -9865,8 +9865,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                      "#phi_{pFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02fd_TL_Phi_pFD_vs_TL_Theta_e_WMaps",
                                                      Phi_lboundary, Phi_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hTL_Phi_pFD_vs_TL_phi_e_WMap = hPlot2D("", "", "TL_Phi_pFD_vs_TL_phi_e_WMaps", "TL #phi_{pFD} vs. TL #phi_{e} used in WMaps",
-                                                   "#phi_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02fh_TL_Phi_pFD_vs_TL_phi_e_WMaps",
+    hPlot2D hTL_Phi_pFD_vs_TL_Phi_e_WMap = hPlot2D("", "", "TL_Phi_pFD_vs_TL_Phi_e_WMaps", "TL #phi_{pFD} vs. TL #phi_{e} used in WMaps",
+                                                   "#phi_{pFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02fh_TL_Phi_pFD_vs_TL_Phi_e_WMaps",
                                                    Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
 
@@ -9890,16 +9890,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                          "P_{nFD} [GeV/c]", "#theta_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02aa_Reco_P_nFD_vs_Reco_Theta_nFD_WMaps",
                                                          Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_nFD_vs_Reco_phi_nFD_WMap = hPlot2D("", "", "Reco_P_nFD_vs_Reco_phi_nFD_WMaps", "Reco P_{nFD} vs. Reco #phi_{nFD} used in WMaps",
-                                                       "P_{nFD} [GeV/c]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ab_Reco_P_nFD_vs_Reco_phi_nFD_WMaps",
+    hPlot2D hReco_P_nFD_vs_Reco_Phi_nFD_WMap = hPlot2D("", "", "Reco_P_nFD_vs_Reco_Phi_nFD_WMaps", "Reco P_{nFD} vs. Reco #phi_{nFD} used in WMaps",
+                                                       "P_{nFD} [GeV/c]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ab_Reco_P_nFD_vs_Reco_Phi_nFD_WMaps",
                                                        Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_P_nFD_vs_TL_Theta_nFD_WMap = hPlot2D("", "", "Reco_P_nFD_vs_TL_Theta_nFD_WMaps", "Reco P_{nFD} vs. TL #theta_{nFD} used in WMaps",
                                                        "P_{nFD} [GeV/c]", "#theta_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ac_Reco_P_nFD_vs_TL_Theta_nFD_WMaps",
                                                        Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_nFD_vs_TL_phi_nFD_WMap = hPlot2D("", "", "Reco_P_nFD_vs_TL_phi_nFD_WMaps", "Reco P_{nFD} vs. TL #phi_{nFD} used in WMaps",
-                                                     "P_{nFD} [GeV/c]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ad_Reco_P_nFD_vs_TL_phi_nFD_WMaps",
+    hPlot2D hReco_P_nFD_vs_TL_Phi_nFD_WMap = hPlot2D("", "", "Reco_P_nFD_vs_TL_Phi_nFD_WMaps", "Reco P_{nFD} vs. TL #phi_{nFD} used in WMaps",
+                                                     "P_{nFD} [GeV/c]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ad_Reco_P_nFD_vs_TL_Phi_nFD_WMaps",
                                                      Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_P_nFD_vs_Reco_P_e_WMap = hPlot2D("", "", "Reco_P_nFD_vs_Reco_P_e_WMaps", "Reco P_{nFD} vs. Reco P_{e} used in WMaps",
@@ -9914,16 +9914,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                        "P_{nFD} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ag_Reco_P_nFD_vs_Reco_Theta_e_WMaps",
                                                        Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_nFD_vs_Reco_phi_e_WMap = hPlot2D("", "", "Reco_P_nFD_vs_Reco_phi_e_WMaps", "Reco P_{nFD} vs. Reco #phi_{e} used in WMaps",
-                                                     "P_{nFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ah_Reco_P_nFD_vs_Reco_phi_e_WMaps",
+    hPlot2D hReco_P_nFD_vs_Reco_Phi_e_WMap = hPlot2D("", "", "Reco_P_nFD_vs_Reco_Phi_e_WMaps", "Reco P_{nFD} vs. Reco #phi_{e} used in WMaps",
+                                                     "P_{nFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ah_Reco_P_nFD_vs_Reco_Phi_e_WMaps",
                                                      Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_P_nFD_vs_TL_Theta_e_WMap = hPlot2D("", "", "Reco_P_nFD_vs_TL_Theta_e_WMaps", "Reco P_{nFD} vs. TL #theta_{e} used in WMaps",
                                                      "P_{nFD} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ai_Reco_P_nFD_vs_TL_Theta_e_WMaps",
                                                      Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_P_nFD_vs_TL_phi_e_WMap = hPlot2D("", "", "Reco_P_nFD_vs_TL_phi_e_WMaps", "Reco P_{nFD} vs. TL #phi_{e} used in WMaps",
-                                                   "P_{nFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02aj_Reco_P_nFD_vs_TL_phi_e_WMaps",
+    hPlot2D hReco_P_nFD_vs_TL_Phi_e_WMap = hPlot2D("", "", "Reco_P_nFD_vs_TL_Phi_e_WMaps", "Reco P_{nFD} vs. TL #phi_{e} used in WMaps",
+                                                   "P_{nFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02aj_Reco_P_nFD_vs_TL_Phi_e_WMaps",
                                                    Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_P_nFD_vs_Reco_Theta_nFD_WMap = hPlot2D("", "", "TL_P_nFD_vs_Reco_Theta_nFD_WMaps", "TL P_{nFD} vs. Reco #theta_{nFD} used in WMaps",
@@ -9934,8 +9934,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                      "P_{nFD} [GeV/c]", "#theta_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02bb_TL_P_nFD_vs_TL_Theta_nFD_WMaps",
                                                      Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hTL_P_nFD_vs_TL_phi_nFD_WMap = hPlot2D("", "", "TL_P_nFD_vs_TL_phi_nFD_WMaps", "TL P_{nFD} vs. TL #phi_{nFD} used in WMaps",
-                                                   "P_{nFD} [GeV/c]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02bc_TL_P_nFD_vs_TL_phi_nFD_WMaps",
+    hPlot2D hTL_P_nFD_vs_TL_Phi_nFD_WMap = hPlot2D("", "", "TL_P_nFD_vs_TL_Phi_nFD_WMaps", "TL P_{nFD} vs. TL #phi_{nFD} used in WMaps",
+                                                   "P_{nFD} [GeV/c]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02bc_TL_P_nFD_vs_TL_Phi_nFD_WMaps",
                                                    Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_P_nFD_vs_TL_P_e_WMap = hPlot2D("", "", "TL_P_nFD_vs_TL_P_e_WMaps", "TL P_{nFD} vs. Reco P_{e} used in WMaps",
@@ -9950,16 +9950,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                    "P_{nFD} [GeV/c]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02bf_TL_P_nFD_vs_TL_Theta_e_WMaps",
                                                    Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hTL_P_nFD_vs_TL_phi_e_WMap = hPlot2D("", "", "TL_P_nFD_vs_TL_phi_e_WMaps", "TL P_{nFD} vs. TL #phi_{e} used in WMaps",
-                                                 "P_{nFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02bg_TL_P_nFD_vs_TL_phi_e_WMaps",
+    hPlot2D hTL_P_nFD_vs_TL_Phi_e_WMap = hPlot2D("", "", "TL_P_nFD_vs_TL_Phi_e_WMaps", "TL P_{nFD} vs. TL #phi_{e} used in WMaps",
+                                                 "P_{nFD} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02bg_TL_P_nFD_vs_TL_Phi_e_WMaps",
                                                  Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                  numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Theta_nFD_vs_Reco_phi_nFD_WMap = hPlot2D("", "", "Reco_Theta_nFD_vs_Reco_phi_nFD_WMaps", "Reco #theta_{nFD} vs. Reco #phi_{nFD} used in WMaps",
-                                                           "#theta_{nFD} [#circ]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ca_Reco_Theta_nFD_vs_Reco_phi_nFD_WMaps",
+    hPlot2D hReco_Theta_nFD_vs_Reco_Phi_nFD_WMap = hPlot2D("", "", "Reco_Theta_nFD_vs_Reco_Phi_nFD_WMaps", "Reco #theta_{nFD} vs. Reco #phi_{nFD} used in WMaps",
+                                                           "#theta_{nFD} [#circ]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ca_Reco_Theta_nFD_vs_Reco_Phi_nFD_WMaps",
                                                            ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), Phi_lboundary, Phi_uboundary,
                                                            numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Theta_nFD_vs_TL_phi_nFD_WMap = hPlot2D("", "", "Reco_Theta_nFD_vs_TL_phi_nFD_WMaps", "Reco #theta_{nFD} vs. TL #phi_{nFD} used in WMaps",
-                                                         "#theta_{nFD} [#circ]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02cb_Reco_Theta_nFD_vs_TL_phi_nFD_WMaps",
+    hPlot2D hReco_Theta_nFD_vs_TL_Phi_nFD_WMap = hPlot2D("", "", "Reco_Theta_nFD_vs_TL_Phi_nFD_WMaps", "Reco #theta_{nFD} vs. TL #phi_{nFD} used in WMaps",
+                                                         "#theta_{nFD} [#circ]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02cb_Reco_Theta_nFD_vs_TL_Phi_nFD_WMaps",
                                                          ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), Phi_lboundary, Phi_uboundary,
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_Theta_nFD_vs_Reco_P_e_WMap = hPlot2D("", "", "Reco_Theta_nFD_vs_Reco_P_e_WMaps", "Reco #theta_{nFD} vs. Reco P_{e} used in WMaps",
@@ -9974,16 +9974,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                            "#theta_{nFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ce_Reco_Theta_nFD_vs_Reco_Theta_e_WMaps",
                                                            ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                            numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Theta_nFD_vs_Reco_phi_e_WMap = hPlot2D("", "", "Reco_Theta_nFD_vs_Reco_phi_e_WMaps", "Reco #theta_{nFD} vs. Reco #phi_{e} used in WMaps",
-                                                         "#theta_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02cf_Reco_Theta_nFD_vs_Reco_phi_e_WMaps",
+    hPlot2D hReco_Theta_nFD_vs_Reco_Phi_e_WMap = hPlot2D("", "", "Reco_Theta_nFD_vs_Reco_Phi_e_WMaps", "Reco #theta_{nFD} vs. Reco #phi_{e} used in WMaps",
+                                                         "#theta_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02cf_Reco_Theta_nFD_vs_Reco_Phi_e_WMaps",
                                                          ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), Phi_lboundary, Phi_uboundary,
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_Theta_nFD_vs_TL_Theta_e_WMap = hPlot2D("", "", "Reco_Theta_nFD_vs_TL_Theta_e_WMaps", "Reco #theta_{nFD} vs. TL #theta_{e} used in WMaps",
                                                          "#theta_{nFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02cg_Reco_Theta_nFD_vs_TL_Theta_e_WMaps",
                                                          ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Theta_nFD_vs_TL_phi_e_WMap = hPlot2D("", "", "Reco_Theta_nFD_vs_TL_phi_e_WMaps", "Reco #theta_{nFD} vs. TL #phi_{e} used in WMaps",
-                                                       "#theta_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ch_Reco_Theta_nFD_vs_TL_phi_e_WMaps",
+    hPlot2D hReco_Theta_nFD_vs_TL_Phi_e_WMap = hPlot2D("", "", "Reco_Theta_nFD_vs_TL_Phi_e_WMaps", "Reco #theta_{nFD} vs. TL #phi_{e} used in WMaps",
+                                                       "#theta_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ch_Reco_Theta_nFD_vs_TL_Phi_e_WMaps",
                                                        ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), Phi_lboundary, Phi_uboundary,
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_Theta_nFD_vs_TL_Phi_nFD_WMap = hPlot2D("", "", "TL_Theta_nFD_vs_TL_Phi_nFD_WMaps", "TL #theta_{nFD} vs. Reco #phi_{nFD} used in WMaps",
@@ -10006,12 +10006,12 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                        "#theta_{nFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02df_TL_Theta_nFD_vs_TL_Theta_e_WMaps",
                                                        ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(), ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Phi_nFD_vs_Reco_phi_nFD_WMap = hPlot2D("", "", "Reco_Phi_nFD_vs_Reco_phi_nFD_WMaps", "Reco #phi_{nFD} vs. Reco #phi_{nFD} used in WMaps",
-                                                         "#phi_{nFD} [#circ]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ea_Reco_Phi_nFD_vs_Reco_phi_nFD_WMaps",
+    hPlot2D hReco_Phi_nFD_vs_Reco_Phi_nFD_WMap = hPlot2D("", "", "Reco_Phi_nFD_vs_Reco_Phi_nFD_WMaps", "Reco #phi_{nFD} vs. Reco #phi_{nFD} used in WMaps",
+                                                         "#phi_{nFD} [#circ]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ea_Reco_Phi_nFD_vs_Reco_Phi_nFD_WMaps",
                                                          Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Phi_nFD_vs_TL_phi_nFD_WMap = hPlot2D("", "", "Reco_Phi_nFD_vs_TL_phi_nFD_WMaps", "Reco #phi_{nFD} vs. TL #phi_{nFD} used in WMaps",
-                                                       "#phi_{nFD} [#circ]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02eb_Reco_Phi_nFD_vs_TL_phi_nFD_WMaps",
+    hPlot2D hReco_Phi_nFD_vs_TL_Phi_nFD_WMap = hPlot2D("", "", "Reco_Phi_nFD_vs_TL_Phi_nFD_WMaps", "Reco #phi_{nFD} vs. TL #phi_{nFD} used in WMaps",
+                                                       "#phi_{nFD} [#circ]", "#phi_{nFD} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02eb_Reco_Phi_nFD_vs_TL_Phi_nFD_WMaps",
                                                        Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_Phi_nFD_vs_Reco_P_e_WMap = hPlot2D("", "", "Reco_Phi_nFD_vs_Reco_P_e_WMaps", "Reco #phi_{nFD} vs. Reco P_{e} used in WMaps",
@@ -10026,16 +10026,16 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                          "#phi_{nFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ee_Reco_Phi_nFD_vs_Reco_Theta_e_WMaps",
                                                          Phi_lboundary, Phi_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                          numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Phi_nFD_vs_Reco_phi_e_WMap = hPlot2D("", "", "Reco_Phi_nFD_vs_Reco_phi_e_WMaps", "Reco #phi_{nFD} vs. Reco #phi_{e} used in WMaps",
-                                                       "#phi_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ef_Reco_Phi_nFD_vs_Reco_phi_e_WMaps",
+    hPlot2D hReco_Phi_nFD_vs_Reco_Phi_e_WMap = hPlot2D("", "", "Reco_Phi_nFD_vs_Reco_Phi_e_WMaps", "Reco #phi_{nFD} vs. Reco #phi_{e} used in WMaps",
+                                                       "#phi_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ef_Reco_Phi_nFD_vs_Reco_Phi_e_WMaps",
                                                        Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hReco_Phi_nFD_vs_TL_Theta_e_WMap = hPlot2D("", "", "Reco_Phi_nFD_vs_TL_Theta_e_WMaps", "Reco #phi_{nFD} vs. TL #theta_{e} used in WMaps",
                                                        "#phi_{nFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02eg_Reco_Phi_nFD_vs_TL_Theta_e_WMaps",
                                                        Phi_lboundary, Phi_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                        numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hReco_Phi_nFD_vs_TL_phi_e_WMap = hPlot2D("", "", "Reco_Phi_nFD_vs_TL_phi_e_WMaps", "Reco #phi_{nFD} vs. TL #phi_{e} used in WMaps",
-                                                     "#phi_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ef_Reco_Phi_nFD_vs_TL_phi_e_WMaps",
+    hPlot2D hReco_Phi_nFD_vs_TL_Phi_e_WMap = hPlot2D("", "", "Reco_Phi_nFD_vs_TL_Phi_e_WMaps", "Reco #phi_{nFD} vs. TL #phi_{e} used in WMaps",
+                                                     "#phi_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02ef_Reco_Phi_nFD_vs_TL_Phi_e_WMaps",
                                                      Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_Phi_nFD_vs_TL_Phi_nFD_WMap = hPlot2D("", "", "TL_Phi_nFD_vs_TL_Phi_nFD_WMaps", "TL #phi_{nFD} vs. Reco #phi_{nFD} used in WMaps",
@@ -10054,8 +10054,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                      "#phi_{nFD} [#circ]", "#theta_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02fd_TL_Phi_nFD_vs_TL_Theta_e_WMaps",
                                                      Phi_lboundary, Phi_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                      numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
-    hPlot2D hTL_Phi_nFD_vs_TL_phi_e_WMap = hPlot2D("", "", "TL_Phi_nFD_vs_TL_phi_e_WMaps", "TL #phi_{nFD} vs. TL #phi_{e} used in WMaps",
-                                                   "#phi_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02fh_TL_Phi_nFD_vs_TL_phi_e_WMaps",
+    hPlot2D hTL_Phi_nFD_vs_TL_Phi_e_WMap = hPlot2D("", "", "TL_Phi_nFD_vs_TL_Phi_e_WMaps", "TL #phi_{nFD} vs. TL #phi_{e} used in WMaps",
+                                                   "#phi_{nFD} [#circ]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "02fh_TL_Phi_nFD_vs_TL_Phi_e_WMaps",
                                                    Phi_lboundary, Phi_uboundary, Phi_lboundary, Phi_uboundary,
                                                    numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     //</editor-fold>
