@@ -184,7 +184,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     bool apply_ECAL_SF_cuts = false;          // SF cut on both E_deb AND P_e
     bool apply_ECAL_P_cuts = false;          // SF cut on P_e (keep as false for now!)
     bool apply_ECAL_fiducial_cuts = false;    // ECAL edge cuts for other charged particles
-    bool apply_Electron_beta_cut = true;     // Electron beta cut
+    bool apply_Electron_beta_cut = false;     // Electron beta cut
 
     /* Chi2 cuts (= PID cuts) */
     bool apply_chi2_cuts_1e_cut = false;
