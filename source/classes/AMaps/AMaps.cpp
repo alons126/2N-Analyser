@@ -526,9 +526,9 @@ void AMaps::SetBins(const string &P_nuc_bin_profile, double beamE)
     }
     else if (P_nuc_bin_profile == "uniform_P_nuc_bins")
     {
-        double PLowerLim = 0;
-        double PUpper = beamE;
-        double Delta = (PUpper - PLowerLim) / NumberNucOfMomSlices;
+        double PLowerLim = Nucleon_Momentum_Slice_Th;
+        double PUpperLim = beamE;
+        double Delta = (PUpperLim - PLowerLim) / NumberNucOfMomSlices;
 
         int Num_of_bins = 0; // For monitoring purposes only!
 
