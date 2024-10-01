@@ -14581,13 +14581,13 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 hElectronAMapBC.hFill(Phi_e, Theta_e, Weight);
                 hReco_P_e_AMaps.hFill(P_e_1e_cut, Weight);
                 hReco_P_e_vs_Reco_Theta_e_AMap.hFill(P_e_1e_cut, Theta_e, Weight);
-                hReco_P_e_vs_Reco_phi_e_AMap.hFill(P_e_1e_cut, Phi_e, Weight);
+                hReco_P_e_vs_Reco_Phi_e_AMap.hFill(P_e_1e_cut, Phi_e, Weight);
                 aMaps.hFillHitMaps("Reco", "Electron", P_e_1e_cut, Theta_e, Phi_e, Weight);
 
                 hReco_P_e_WMaps.hFill(P_e_1e_cut, Weight);
                 hElectronAMapBCwKC.hFill(Phi_e, Theta_e, Weight);
-                hReco_P_e_vs_Reco_Theta_e_WMaps.hFill(P_e_1e_cut, Theta_e, Weight);
-                hReco_P_e_vs_Reco_phi_e_WMaps.hFill(P_e_1e_cut, Phi_e, Weight);
+                hReco_P_e_vs_Reco_Theta_e_WMap.hFill(P_e_1e_cut, Theta_e, Weight);
+                hReco_P_e_vs_Reco_Phi_e_WMap.hFill(P_e_1e_cut, Phi_e, Weight);
                 wMaps.hFillHitMaps("Reco", "Electron", P_e_1e_cut, Theta_e, Phi_e, Weight);
             }
             //</editor-fold>
