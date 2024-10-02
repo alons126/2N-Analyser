@@ -261,7 +261,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     else
     {
-        apply_Nphe_cut = apply_ECAL_SF_cuts = apply_ECAL_P_cuts = apply_ECAL_fiducial_cuts = apply_Electron_beta_cut = true;
+        apply_Nphe_cut = apply_ECAL_SF_cuts = apply_ECAL_fiducial_cuts = apply_Electron_beta_cut = true;
+        // apply_Nphe_cut = apply_ECAL_SF_cuts = apply_ECAL_P_cuts = apply_ECAL_fiducial_cuts = apply_Electron_beta_cut = true;
     }
 
     if (!apply_chi2_cuts_1e_cut)
