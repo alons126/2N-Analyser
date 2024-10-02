@@ -250,20 +250,20 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     {
         apply_Vz_cuts = apply_dVz_cuts = apply_DC_fiducial_cuts = false;
     }
-    else
-    {
-        apply_Vz_cuts = apply_dVz_cuts = apply_DC_fiducial_cuts = true;
-    }
+    // else
+    // {
+    //     apply_Vz_cuts = apply_dVz_cuts = apply_DC_fiducial_cuts = true;
+    // }
 
     if (!apply_electron_quality_cuts)
     {
         apply_Nphe_cut = apply_ECAL_SF_cuts = apply_ECAL_P_cuts = apply_ECAL_fiducial_cuts = apply_Electron_beta_cut = false;
     }
-    else
-    {
-        apply_Nphe_cut = apply_ECAL_SF_cuts = apply_ECAL_fiducial_cuts = apply_Electron_beta_cut = true;
-        // apply_Nphe_cut = apply_ECAL_SF_cuts = apply_ECAL_P_cuts = apply_ECAL_fiducial_cuts = apply_Electron_beta_cut = true;
-    }
+    // else
+    // {
+    //     apply_Nphe_cut = apply_ECAL_SF_cuts = apply_ECAL_fiducial_cuts = apply_Electron_beta_cut = true;
+    //     // apply_Nphe_cut = apply_ECAL_SF_cuts = apply_ECAL_P_cuts = apply_ECAL_fiducial_cuts = apply_Electron_beta_cut = true;
+    // }
 
     if (!apply_chi2_cuts_1e_cut)
     {
@@ -19052,6 +19052,9 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         hVy_Proton_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
         hVz_Proton_1e_cut_CD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., Vz_cut_CD.GetLowerCut(), Vz_cut_CD.GetUpperCut(), 0, false);
         hVz_Proton_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., Vz_cut_FD.GetLowerCut(), Vz_cut_FD.GetUpperCut(), 0, false);
+        hVz_Proton_vs_P_p_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
+        hVz_Proton_vs_Theta_p_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
+        hVz_Proton_vs_Phi_p_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
 
         hVx_Kplus_1e_cut_CD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
         hVx_Kplus_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
@@ -19097,6 +19100,9 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         hdVy_Proton_FD_1e_cut.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
         hdVz_Proton_CD_1e_cut.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., dVz_cuts_CD.GetLowerCut(), dVz_cuts_CD.GetUpperCut(), 0, false);
         hdVz_Proton_FD_1e_cut.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., dVz_cuts_FD.GetLowerCut(), dVz_cuts_FD.GetUpperCut(), 0, false);
+        hdVz_Proton_vs_P_p_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
+        hdVz_Proton_vs_Theta_p_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
+        hdVz_Proton_vs_Phi_p_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
 
         hdVx_Kplus_CD_1e_cut.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
         hdVx_Kplus_FD_1e_cut.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
