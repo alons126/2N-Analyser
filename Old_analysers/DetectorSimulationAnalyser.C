@@ -189,9 +189,9 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     // /* Chi2 cuts (= PID cuts) */
     // bool apply_chi2_cuts_1e_cut = false;
 
-    bool apply_cuts = true;                  // master ON/OFF switch for applying cuts
+    bool apply_cuts = false;                  // master ON/OFF switch for applying cuts
     bool clas12ana_particles = true;         // TODO: move form here!
-    bool only_preselection_cuts = false;     // keep as false for regular runs!
+    bool only_preselection_cuts = true;     // keep as false for regular runs!
     bool only_electron_quality_cuts = false; // keep as false for regular runs!
 
     /* Preselection cuts (event cuts) */
@@ -237,6 +237,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         {
             apply_preselection_cuts = false;
         }
+
         if (!only_electron_quality_cuts)
         {
             apply_electron_quality_cuts = false;
@@ -249,10 +250,18 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     {
         apply_Vz_cuts = apply_dVz_cuts = apply_DC_fiducial_cuts = false;
     }
+    else
+    {
+        apply_Vz_cuts = apply_dVz_cuts = apply_DC_fiducial_cuts = true;
+    }
 
     if (!apply_electron_quality_cuts)
     {
         apply_Nphe_cut = apply_ECAL_SF_cuts = apply_ECAL_P_cuts = apply_ECAL_fiducial_cuts = apply_Electron_beta_cut = false;
+    }
+    else
+    {
+        apply_Nphe_cut = apply_ECAL_SF_cuts = apply_ECAL_P_cuts = apply_ECAL_fiducial_cuts = apply_Electron_beta_cut = true;
     }
 
     if (!apply_chi2_cuts_1e_cut)
@@ -24893,7 +24902,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     myLogFile << "clas12ana_particles = " << BoolToString(clas12ana_particles) << "\n\n"; // TODO: move form here!
 
     myLogFile << "only_preselection_cuts = " << BoolToString(only_preselection_cuts) << "\n";
-    myLogFile << "only_electron_quality_cuts = " << BoolToString(only_electron_quality_cuts) << "\n";
+    myLogFile << "only_electron_quality_cuts = " << BoolToString(only_electron_quality_cuts) << "\n\n";
 
     myLogFile << "apply_preselection_cuts = " << BoolToString(apply_preselection_cuts) << "\n";
     myLogFile << "apply_Vz_cuts = " << BoolToString(apply_Vz_cuts) << "\n";

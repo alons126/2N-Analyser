@@ -84,20 +84,20 @@ void MScThesisPlotter()
     //</editor-fold>
 
     //<editor-fold desc="AMaps runs">
-    // const string costumTopDir = "_V2_R2";
-    // const char *plots_AMaps = "/Users/alon/Downloads/Uniform_1e_sample_2070MeV_S03AC_NC_AMaps_ChainRunV2_R2/Uniform_1e_sample_2070MeV_plots.root";
-    // const char *plots_AMaps_plotsPath = "/Users/alon/Downloads/Uniform_1e_sample_2070MeV_S03AC_NC_AMaps_ChainRunV2_R2/";
-    // const char *plots_AMaps_GenMaps = "/Users/alon/Downloads/Uniform_1e_sample_2070MeV_S03AC_NC_AMaps_ChainRunV2_R2/12_Acceptance_maps_plots/01_AMaps_1e_cut/05_Generated_maps/";
+    const string costumTopDir = "_V3_R2";
+    const char *plots_AMaps = "/Users/alon/Downloads/Uniform_1e_sample_2070MeV_S03AC_NC_AMaps_ChainRunV3_R2/Uniform_1e_sample_2070MeV_plots.root";
+    const char *plots_AMaps_plotsPath = "/Users/alon/Downloads/Uniform_1e_sample_2070MeV_S03AC_NC_AMaps_ChainRunV3_R2/";
+    const char *plots_AMaps_GenMaps = "/Users/alon/Downloads/Uniform_1e_sample_2070MeV_S03AC_NC_AMaps_ChainRunV3_R2/12_Acceptance_maps_plots/01_AMaps_1e_cut/05_Generated_maps/";
 
-    // const string costumTopDir = "_V2_R2";
-    // const char *plots_AMaps = "/Users/alon/Downloads/Uniform_ep_sample_2070MeV_S03AC_NC_AMaps_ChainRunV2_R2/Uniform_ep_sample_2070MeV_plots.root";
-    // const char *plots_AMaps_plotsPath = "/Users/alon/Downloads/Uniform_ep_sample_2070MeV_S03AC_NC_AMaps_ChainRunV2_R2/";
-    // const char *plots_AMaps_GenMaps = "/Users/alon/Downloads/Uniform_ep_sample_2070MeV_S03AC_NC_AMaps_ChainRunV2_R2/12_Acceptance_maps_plots/01_AMaps_1e_cut/05_Generated_maps/";
+    // const string costumTopDir = "_V3_R2";
+    // const char *plots_AMaps = "/Users/alon/Downloads/Uniform_ep_sample_2070MeV_S03AC_NC_AMaps_ChainRunV3_R2/Uniform_ep_sample_2070MeV_plots.root";
+    // const char *plots_AMaps_plotsPath = "/Users/alon/Downloads/Uniform_ep_sample_2070MeV_S03AC_NC_AMaps_ChainRunV3_R2/";
+    // const char *plots_AMaps_GenMaps = "/Users/alon/Downloads/Uniform_ep_sample_2070MeV_S03AC_NC_AMaps_ChainRunV3_R2/12_Acceptance_maps_plots/01_AMaps_1e_cut/05_Generated_maps/";
 
-    const string costumTopDir = "_V2_R2";
-    const char *plots_AMaps = "/Users/alon/Downloads/Uniform_en_sample_2070MeV_S03AC_NC_AMaps_ChainRunV2_R2/Uniform_en_sample_2070MeV_plots.root";
-    const char *plots_AMaps_plotsPath = "/Users/alon/Downloads/Uniform_en_sample_2070MeV_S03AC_NC_AMaps_ChainRunV2_R2/";
-    const char *plots_AMaps_GenMaps = "/Users/alon/Downloads/Uniform_en_sample_2070MeV_S03AC_NC_AMaps_ChainRunV2_R2/12_Acceptance_maps_plots/01_AMaps_1e_cut/05_Generated_maps/";
+    // const string costumTopDir = "_V3_R2";
+    // const char *plots_AMaps = "/Users/alon/Downloads/Uniform_en_sample_2070MeV_S03AC_NC_AMaps_ChainRunV3_R2/Uniform_en_sample_2070MeV_plots.root";
+    // const char *plots_AMaps_plotsPath = "/Users/alon/Downloads/Uniform_en_sample_2070MeV_S03AC_NC_AMaps_ChainRunV3_R2/";
+    // const char *plots_AMaps_GenMaps = "/Users/alon/Downloads/Uniform_en_sample_2070MeV_S03AC_NC_AMaps_ChainRunV3_R2/12_Acceptance_maps_plots/01_AMaps_1e_cut/05_Generated_maps/";
 
     // const string costumTopDir = "";
     // const char *plots_AMaps = "/mnt/f/C12x4_sim_G18_Q204_6GeV/02_AMaps_runs/v3/C12x4_simulation_G18_Q204_6GeV_S03AC_NC_AMaps_v3"
