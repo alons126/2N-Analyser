@@ -83,124 +83,112 @@ void ConfigSampleChain()
 
     // H1 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    // /* H1 2.07052GeV - run 015634 (ifarm DATA files - H1 DATA files) */
-    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/H/dst/recon";
-    // AnalyseFileSample = "015634";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all data files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    /* H1 2.07052GeV - run 015634 (ifarm DATA files - H1 DATA files) */
+    AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/H/dst/recon";
+    AnalyseFileSample = "015634";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all data files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
-    // /* H1 4.02962GeV - run 015743 (ifarm DATA files - H1 DATA files) */
-    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon";
-    // AnalyseFileSample = "015743";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
-
-    // /* H1 5.98636GeV - run 015028 (ifarm DATA files - H1 DATA files) */
-    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/H/dst/recon";
-    // AnalyseFileSample = "015028";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    /* H1 5.98636GeV - run 015028 (ifarm DATA files - H1 DATA files) */
+    AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/H/dst/recon";
+    AnalyseFileSample = "015028";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
     // D2 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    // /* D2 2.07052GeV - all runs (ifarm DATA files - D2 DATA files) */
-    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/D/dst/recon";
-    // AnalyseFileSample = "";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all data files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    /* D2 2.07052GeV - all runs (ifarm DATA files - D2 DATA files) */
+    AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/D/dst/recon";
+    AnalyseFileSample = "";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all data files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
-    // /* D2 4.02962GeV - run 015743 (ifarm DATA files - D2 DATA files) */
-    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon";
-    // AnalyseFileSample = "015743";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
-
-    // /* D2 5.98636GeV - run 015443 (ifarm DATA files - D2 DATA files) */
-    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/D/dst/recon";
-    // AnalyseFileSample = "015443";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    /* D2 5.98636GeV - run 015443 (ifarm DATA files - D2 DATA files) */
+    AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/D/dst/recon";
+    AnalyseFileSample = "015443";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
     // C12 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    // /* C12 2.07052GeV - run 015664 (ifarm DATA files - C12 DATA files) */
-    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/C/dst/recon";
-    // AnalyseFileSample = "015664";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    /* C12 2.07052GeV - run 015664 (ifarm DATA files - C12 DATA files) */
+    AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/C/dst/recon";
+    AnalyseFileSample = "015664";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
-    // /* C12 4.02962GeV - run 015778 (ifarm DATA files - C12 DATA files) */
-    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/4gev/C/dst/recon";
-    // AnalyseFileSample = "015778";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    /* C12 4.02962GeV - run 015778 (ifarm DATA files - C12 DATA files) */
+    AnalyseFilePath = "cache/clas12/rg-m/production/pass1/4gev/C/dst/recon";
+    AnalyseFileSample = "015778";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
-    // /* C12x4 5.98636GeV - run 015188 (ifarm DATA files - C12x4 DATA files) */
-    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon";
-    // AnalyseFileSample = "015188";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // // AnalyseFile = AnalyseFileDir + "rec_clas_015188.evio.01685-01689.hipo"; // 1 run file
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    /* C12x4 5.98636GeV - run 015188 (ifarm DATA files - C12x4 DATA files) */
+    AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Cx4/dst/recon";
+    AnalyseFileSample = "015188";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "rec_clas_015188.evio.01685-01689.hipo"; // 1 run file
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
     // Ar40 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    // /* Ar40 2.07052GeV - run 015672 (ifarm DATA files - Ar40 DATA files) */
-    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/Ar/dst/recon";
-    // AnalyseFileSample = "015672";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    /* Ar40 2.07052GeV - run 015672 (ifarm DATA files - Ar40 DATA files) */
+    AnalyseFilePath = "cache/clas12/rg-m/production/pass1/2gev/Ar/dst/recon";
+    AnalyseFileSample = "015672";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
-    // /* Ar40 4.02962GeV - run 015743 (ifarm DATA files - Ar40 DATA files) */
-    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon";
-    // AnalyseFileSample = "015743";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    /* Ar40 4.02962GeV - run 015743 (ifarm DATA files - Ar40 DATA files) */
+    AnalyseFilePath = "cache/clas12/rg-m/production/pass1/4gev/Ar/dst/recon";
+    AnalyseFileSample = "015743";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
-    // /* Ar40 5.98636GeV - run 015792 (ifarm DATA files - Ar40 DATA files) */
-    // AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Ar/dst/recon";
-    // AnalyseFileSample = "015792";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    /* Ar40 5.98636GeV - run 015792 (ifarm DATA files - Ar40 DATA files) */
+    AnalyseFilePath = "cache/clas12/rg-m/production/pass1/6gev/Ar/dst/recon";
+    AnalyseFileSample = "015792";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all run files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
     // ==================================================================================================================================================================
     // Uniform simulation files
@@ -312,40 +300,40 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    /* Uniform samples @ 6GeV */
+    // /* Uniform samples @ 6GeV */
 
-    // Uniform 1e @ 6GeV:
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_1e";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
+    // // Uniform 1e @ 6GeV:
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_1e";
+    // AnalyseFileSample = "reconhipo";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
+    // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    // AnalyseFilePath_v.push_back(AnalyseFilePath);
+    // AnalyseFileSample_v.push_back(AnalyseFileSample);
+    // AnalyseFileDir_v.push_back(AnalyseFileDir);
+    // AnalyseFile_v.push_back(AnalyseFile);
 
-    // Uniform ep @ 6GeV:
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_ep";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_ep_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
+    // // Uniform ep @ 6GeV:
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_ep";
+    // AnalyseFileSample = "reconhipo";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // // AnalyseFile = AnalyseFileDir + "recon_Uniform_ep_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
+    // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    // AnalyseFilePath_v.push_back(AnalyseFilePath);
+    // AnalyseFileSample_v.push_back(AnalyseFileSample);
+    // AnalyseFileDir_v.push_back(AnalyseFileDir);
+    // AnalyseFile_v.push_back(AnalyseFile);
 
-    // Uniform en @ 6GeV:
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_en";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_en_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
+    // // Uniform en @ 6GeV:
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_en";
+    // AnalyseFileSample = "reconhipo";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // // AnalyseFile = AnalyseFileDir + "recon_Uniform_en_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
+    // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    // AnalyseFilePath_v.push_back(AnalyseFilePath);
+    // AnalyseFileSample_v.push_back(AnalyseFileSample);
+    // AnalyseFileDir_v.push_back(AnalyseFileDir);
+    // AnalyseFile_v.push_back(AnalyseFile);
 
     // Small Q2 test samples --------------------------------------------------------------------------------------------------------------------------------------------
 
