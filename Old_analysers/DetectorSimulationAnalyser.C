@@ -168,7 +168,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     /* Settings that allow to disable/enable every cut individually */
 
     // clas12ana cuts ---------------------------------------------------------------------------------------------------------------------------------------------------
-    bool apply_cuts = false;                  // master ON/OFF switch for applying cuts
+    bool apply_cuts = false;                 // master ON/OFF switch for applying cuts
     bool clas12ana_particles = true;         // TODO: move form here!
     bool only_preselection_cuts = false;     // keep as false for regular runs!
     bool only_electron_quality_cuts = false; // keep as false for regular runs!
@@ -11303,20 +11303,10 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             bool TL_Event_Selection_1e_cut_AMaps = (TL_ElectronFD_mom_ind.size() == 1);
             bool TL_Event_Selection_1e_cut = TL_Event_Selection_1e_cut_AMaps;
 
-            // // test 1:
-            // bool TL_Event_Selection_1e_cut_AMaps = ((TL_Electron_mom_ind.size() == 1) &&
-            //                                         (TL_ElectronFD_mom_ind.size() == 1)); // One id. FD electron above momentum th.
-            // bool TL_Event_Selection_1e_cut = (TL_Event_Selection_1e_cut_AMaps &&
-            //                                   TL_ElectronFD_mom_ind.size() == TL_ElectronFD_wFC_mom_ind.size()); // One id. FD electron above momentum threshold
-
-            // // test 1:
-            // bool TL_Event_Selection_1e_cut_AMaps = ((TL_Electron_mom_ind.size() == 1) &&
-            //                                         (TL_ElectronFD_mom_ind.size() == 1)); // One id. FD electron above momentum th.
-            // bool TL_Event_Selection_1e_cut = (TL_Event_Selection_1e_cut_AMaps &&
-            //                                   TL_ElectronFD_mom_ind.size() == TL_ElectronFD_wFC_mom_ind.size()); // One id. FD electron above momentum threshold
-
-
-
+            // test 3:
+            bool TL_Event_Selection_1e_cut_AMaps = (TL_ElectronFD_mom_ind.size() == 1);
+            bool TL_Event_Selection_1e_cut = (TL_Event_Selection_1e_cut_AMaps &&
+                                              TL_ElectronFD_mom_ind.size() == TL_ElectronFD_wFC_mom_ind.size());
 
             // bool TL_Event_Selection_1e_cut_AMaps = ((TL_Electron_mom_ind.size() == 1) &&
             //                                         (TL_ElectronFD_mom_ind.size() == 1)); // One id. FD electron above momentum th.
