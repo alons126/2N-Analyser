@@ -52,7 +52,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /opt/homebrew/Cellar/cmake/3.30.3/bin/cmake --regenerate-during-build -S/Users/alon/Projects/2N-Analyser -B/Users/alon/Projects/2N-Analyser/build
+  command = /opt/homebrew/Cellar/cmake/3.30.4/bin/cmake --regenerate-during-build -S/Users/alon/Projects/2N-Analyser -B/Users/alon/Projects/2N-Analyser/build
   description = Re-running CMake...
   generator = 1
 
