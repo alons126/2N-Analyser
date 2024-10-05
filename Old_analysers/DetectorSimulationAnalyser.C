@@ -1068,25 +1068,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
 
     /* Set Bins by case */
-    int NumberNucOfMomSlices, NumberElecOfMomSlices, HistElectronSliceNumOfXBins = 100, HistNucSliceNumOfXBins = 100;
-
-    // Determine NumberNucOfMomSlices by sample
-    if (!findSubstring(SampleName, "Uniform"))
-    {
-        if (VaryingSampleName == "C12_simulation_G18_Q204_6GeV" || VaryingSampleName == "C12x4_simulation_G18_Q204_6GeV")
-        {
-            NumberNucOfMomSlices = 9, NumberElecOfMomSlices = 9;
-            //        NumberNucOfMomSlices = 9, NumberElecOfMomSlices = 35;
-        }
-        else
-        {
-            NumberNucOfMomSlices = 4, NumberElecOfMomSlices = 4;
-        }
-    }
-    else
-    {
-        NumberNucOfMomSlices = 25, NumberElecOfMomSlices = 30;
-    }
+    int NumberNucOfMomSlices = 15, NumberElecOfMomSlices = 20, HistElectronSliceNumOfXBins = 100, HistNucSliceNumOfXBins = 100;
 
     AMaps aMaps, wMaps;
     // TODO: UPDATE AMaps loading constructor electron histogram's number of bins
@@ -9234,7 +9216,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                  Momentum_lboundary, Momentum_uboundary, ThetaFD_AMaps.GetLowerCut(), ThetaFD_AMaps.GetUpperCut(),
                                                  numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
     hPlot2D hTL_P_e_vs_TL_Phi_e_WMap = hPlot2D("", "", "TL_P_e_vs_TL_Phi_e_WMap", "TL P_{e} vs. TL #phi_{e} used in WMaps",
-                                               "P_{e} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["AMaps_1e_cut_Directory"], "01ab_TL_P_e_vs_TL_Phi_e_WMap",
+                                               "P_{e} [GeV/c]", "#phi_{e} [#circ]", directories.AMaps_Directory_map["WMaps_1e_cut_Directory"], "01ab_TL_P_e_vs_TL_Phi_e_WMap",
                                                Momentum_lboundary, Momentum_uboundary, Phi_lboundary, Phi_uboundary,
                                                numTH2Dbins_Nucleon_AMaps_Plots, numTH2Dbins_Nucleon_AMaps_Plots);
 

@@ -14,7 +14,7 @@
 			"path": "source/classes/Settings/CustomPlotsDirectory.h",
 			"bookmarks": [
 				{
-					"line": 34,
+					"line": 33,
 					"column": 34,
 					"label": "Out folder name extension"
 				}
@@ -39,22 +39,22 @@
 					"label": "Config new samples - sample name"
 				},
 				{
-					"line": 1701,
+					"line": 1721,
 					"column": 4,
 					"label": "Config new samples - varing sample name"
 				},
 				{
-					"line": 1734,
+					"line": 1754,
 					"column": 2,
 					"label": "Config new samples - Vz cuts"
 				},
 				{
-					"line": 1926,
+					"line": 1946,
 					"column": 6,
 					"label": "Config new samples - dVz cuts"
 				},
 				{
-					"line": 2150,
+					"line": 2170,
 					"column": 0,
 					"label": "Config new samples - AddToHipoChain"
 				}
