@@ -11295,13 +11295,31 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             // Event selection for TL plots
 
             // Setting up event selection for AMaps
-            //            bool TL_Event_Selection_1e_cut_AMaps = (TL_ElectronFD_mom_ind.size() == 1);  // One id. FD electron above momentum th.
-            bool TL_Event_Selection_1e_cut_AMaps = ((TL_Electron_mom_ind.size() == 1) &&
-                                                    (TL_ElectronFD_mom_ind.size() == 1)); // One id. FD electron above momentum th.
+            // test 1:
+            bool TL_Event_Selection_1e_cut_AMaps = (TL_Electron_mom_ind.size() == 1);
+            bool TL_Event_Selection_1e_cut = TL_Event_Selection_1e_cut_AMaps;
 
-            // Setting up basic TL event selection
-            bool TL_Event_Selection_1e_cut = (TL_Event_Selection_1e_cut_AMaps &&
-                                              TL_ElectronFD_mom_ind.size() == TL_ElectronFD_wFC_mom_ind.size()); // One id. FD electron above momentum threshold
+            // // test 1:
+            // bool TL_Event_Selection_1e_cut_AMaps = ((TL_Electron_mom_ind.size() == 1) &&
+            //                                         (TL_ElectronFD_mom_ind.size() == 1)); // One id. FD electron above momentum th.
+            // bool TL_Event_Selection_1e_cut = (TL_Event_Selection_1e_cut_AMaps &&
+            //                                   TL_ElectronFD_mom_ind.size() == TL_ElectronFD_wFC_mom_ind.size()); // One id. FD electron above momentum threshold
+
+            // // test 1:
+            // bool TL_Event_Selection_1e_cut_AMaps = ((TL_Electron_mom_ind.size() == 1) &&
+            //                                         (TL_ElectronFD_mom_ind.size() == 1)); // One id. FD electron above momentum th.
+            // bool TL_Event_Selection_1e_cut = (TL_Event_Selection_1e_cut_AMaps &&
+            //                                   TL_ElectronFD_mom_ind.size() == TL_ElectronFD_wFC_mom_ind.size()); // One id. FD electron above momentum threshold
+
+
+
+
+            // bool TL_Event_Selection_1e_cut_AMaps = ((TL_Electron_mom_ind.size() == 1) &&
+            //                                         (TL_ElectronFD_mom_ind.size() == 1)); // One id. FD electron above momentum th.
+
+            // // Setting up basic TL event selection
+            // bool TL_Event_Selection_1e_cut = (TL_Event_Selection_1e_cut_AMaps &&
+            //                                   TL_ElectronFD_mom_ind.size() == TL_ElectronFD_wFC_mom_ind.size()); // One id. FD electron above momentum threshold
             TL_Event_Selection_inclusive = TL_Event_Selection_1e_cut;
             bool no_TL_pip = (TL_piplusFD_mom_ind.size() == 0 && TL_piplusCD_mom_ind.size() == 0);   // No pi+ above momentum threshold (CD & FD)
             bool no_TL_pim = (TL_piminusFD_mom_ind.size() == 0 && TL_piminusCD_mom_ind.size() == 0); // No pi- above momentum threshold (CD & FD)
@@ -11347,7 +11365,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             bool FDneutron_wFC_nFDpCD = Leading_Neutron_inFD_wFC; // leading nFD is within fiducial cuts (wFC)
             TL_Event_Selection_nFDpCD = (TL_Basic_ES && one_CDproton_nFDpCD && no_FDproton_nFDpCD && one_FDNeutron_nFDpCD && FDneutron_wFC_nFDpCD);
 
-            // Fill TL histograms and AMaps
+            // Fill TL histograms
             for (Int_t i = 0; i < Ngen; i++)
             {
                 mcpbank->setEntry(i);
@@ -11361,7 +11379,6 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 bool inFD = ((Particle_TL_Theta >= ThetaFD.GetLowerCut()) && (Particle_TL_Theta <= ThetaFD.GetUpperCut()));
                 bool inCD = ((Particle_TL_Theta > ThetaCD.GetLowerCut()) && (Particle_TL_Theta <= ThetaCD.GetUpperCut()));
 
-                // Fill TL histograms
                 if (fill_TL_plots)
                 {
                     if (particlePDGtmp == 11)
@@ -12328,7 +12345,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
             } // end of for loop over TL particles
 
-            // Fill TL histograms and AMaps
+            // Fill AMaps
             double Electron_TL_Momentum, Electron_TL_Theta, Electron_TL_Phi;
 
             for (Int_t i = 0; i < Ngen; i++)
