@@ -11303,17 +11303,18 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             // bool TL_Event_Selection_1e_cut_AMaps = (TL_ElectronFD_mom_ind.size() == 1);
             // bool TL_Event_Selection_1e_cut = TL_Event_Selection_1e_cut_AMaps;
 
-            // test 3:
-            bool TL_Event_Selection_1e_cut_AMaps = (TL_ElectronFD_mom_ind.size() == 1);
-            bool TL_Event_Selection_1e_cut = (TL_Event_Selection_1e_cut_AMaps &&
-                                              TL_ElectronFD_mom_ind.size() == TL_ElectronFD_wFC_mom_ind.size());
-
-            // bool TL_Event_Selection_1e_cut_AMaps = ((TL_Electron_mom_ind.size() == 1) &&
-            //                                         (TL_ElectronFD_mom_ind.size() == 1)); // One id. FD electron above momentum th.
-
-            // // Setting up basic TL event selection
+            // // test 3:
+            // bool TL_Event_Selection_1e_cut_AMaps = (TL_ElectronFD_mom_ind.size() == 1);
             // bool TL_Event_Selection_1e_cut = (TL_Event_Selection_1e_cut_AMaps &&
-            //                                   TL_ElectronFD_mom_ind.size() == TL_ElectronFD_wFC_mom_ind.size()); // One id. FD electron above momentum threshold
+            //                                   TL_ElectronFD_mom_ind.size() == TL_ElectronFD_wFC_mom_ind.size());
+
+            // Setting up event selection for AMaps
+            bool TL_Event_Selection_1e_cut_AMaps = ((TL_Electron_mom_ind.size() == 1) &&
+                                                    (TL_ElectronFD_mom_ind.size() == 1)); // One id. FD electron above momentum th.
+
+            // Setting up basic TL event selection
+            bool TL_Event_Selection_1e_cut = (TL_Event_Selection_1e_cut_AMaps &&
+                                              TL_ElectronFD_mom_ind.size() == TL_ElectronFD_wFC_mom_ind.size()); // One id. FD electron above momentum threshold
             TL_Event_Selection_inclusive = TL_Event_Selection_1e_cut;
             bool no_TL_pip = (TL_piplusFD_mom_ind.size() == 0 && TL_piplusCD_mom_ind.size() == 0);   // No pi+ above momentum threshold (CD & FD)
             bool no_TL_pim = (TL_piminusFD_mom_ind.size() == 0 && TL_piminusCD_mom_ind.size() == 0); // No pi- above momentum threshold (CD & FD)
