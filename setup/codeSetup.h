@@ -1545,7 +1545,7 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    /* SuSs Q2 6GeV */
+    /* SuSa Q2 6GeV */
 
     AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_40";
     AnalyseFileSample = "reconhipo";
