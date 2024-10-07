@@ -9,6 +9,7 @@
 
 #include "../source/constants.h"
 #include "../source/includes/CanvasPDF/CanvasPDF.h"
+#include "../source/classes/Debugger/Debugger.cpp"
 #include "../source/classes/Directories/Directories.cpp"
 #include "../source/classes/ExperimentParameters/ExperimentParameters.cpp"
 #include "../source/functions/GeneralFunctions.h"
@@ -61,6 +62,13 @@ const std::string plots_TFile_FileType = "_plots.pdf";
 const std::string log_file_name = "Run_log.txt";
 const std::string plots_log_save_Directory = plots_path + "/" + log_file_name;
 //</editor-fold>
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                        Debugger                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const bool DebuggerMode = false;
+Debugger CodeDebugger;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                 Samples in sample chain                                                                             //

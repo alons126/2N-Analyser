@@ -372,7 +372,7 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         Sep_canv->cd();
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
-                        Sep_canv->SaveAs((Sep_TL_e_OutputPath + "/" + to_string(canvasIndex) + "_TL_e_Slice_" + to_string(canvasIndex) + ".png").c_str());
+                        Sep_canv->SaveAs((Sep_TL_e_OutputPath + "/" + to_string(HistogramCounter) + "_TL_e_Slice_" + to_string(HistogramCounter) + ".png").c_str());
                         Sep_canv->Clear();
                     }
                     else if (findSubstring(Histogram2DTempName, "Reco "))
@@ -380,16 +380,15 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         Sep_canv->cd();
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
-                        Sep_canv->SaveAs((Sep_Reco_e_OutputPath + "/" + to_string(canvasIndex) + "_Reco_e_Slice_" + to_string(canvasIndex) + ".png").c_str());
+                        Sep_canv->SaveAs((Sep_Reco_e_OutputPath + "/" + to_string(HistogramCounter) + "_Reco_e_Slice_" + to_string(HistogramCounter) + ".png").c_str());
                         Sep_canv->Clear();
                     }
-                    else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
-                             !findSubstring(Histogram2DTempName, " AMaps "))
+                    else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") && !findSubstring(Histogram2DTempName, " AMaps "))
                     {
                         Sep_canv->cd();
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
-                        Sep_canv->SaveAs((Sep_Ratio_e_OutputPath + "/" + to_string(canvasIndex) + "_Ratio_e_Slice_" + to_string(canvasIndex) + ".png").c_str());
+                        Sep_canv->SaveAs((Sep_Ratio_e_OutputPath + "/" + to_string(HistogramCounter) + "_Ratio_e_Slice_" + to_string(HistogramCounter) + ".png").c_str());
                         Sep_canv->Clear();
                     }
                     else if (findSubstring(Histogram2DTempName, " AMap "))
@@ -397,7 +396,7 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         Sep_canv->cd();
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
-                        Sep_canv->SaveAs((Sep_AMaps_e_OutputPath + "/" + to_string(canvasIndex) + "_AMaps_e_Slice_" + to_string(canvasIndex) + ".png").c_str());
+                        Sep_canv->SaveAs((Sep_AMaps_e_OutputPath + "/" + to_string(HistogramCounter) + "_AMaps_e_Slice_" + to_string(HistogramCounter) + ".png").c_str());
                         Sep_canv->Clear();
                     }
                 }
@@ -505,8 +504,7 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                 {
                     SaveName = ParticleNameShort1 + "_Reco_" + to_string(numOfFigures) + ".png";
                 }
-                else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
-                         !findSubstring(Histogram2DTempName, " AMaps "))
+                else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") && !findSubstring(Histogram2DTempName, " AMaps "))
                 {
                     SaveName = ParticleNameShort1 + "_Ratio_" + to_string(numOfFigures) + ".png";
                     Histogram2DTemp->SetStats(0);
@@ -663,13 +661,11 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
 
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, TitleInitial2Replace, TitleInitial2Replacment);
                     }
-                    else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
-                             !findSubstring(Histogram2DTempName, " AMaps "))
+                    else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") && !findSubstring(Histogram2DTempName, " AMaps "))
                     {
                         SliceVariant1 = "#epsilon_{eff}^{" + ParticleNameShort1 + "}";
 
-                        TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel,
-                                     "Reco/TL ratio",
+                        TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "Reco/TL ratio",
                                      (SliceVariant1 + "(P_{" + ParticleNameShort1 + "},#theta_{" + ParticleNameShort1 + "},#phi_{" + ParticleNameShort1 + "})"));
                     }
                     else if (findSubstring(Histogram2DTempName, " AMap "))
@@ -691,7 +687,7 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         Sep_canv->cd();
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
-                        Sep_canv->SaveAs((Sep_TL_p_OutputPath + "/" + to_string(canvasIndex) + "_TL_p_Slice_" + to_string(canvasIndex) + ".png").c_str());
+                        Sep_canv->SaveAs((Sep_TL_p_OutputPath + "/" + to_string(HistogramCounter) + "_TL_p_Slice_" + to_string(HistogramCounter) + ".png").c_str());
                         Sep_canv->Clear();
                     }
                     else if (findSubstring(Histogram2DTempName, "Reco "))
@@ -699,16 +695,15 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         Sep_canv->cd();
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
-                        Sep_canv->SaveAs((Sep_Reco_p_OutputPath + "/" + to_string(canvasIndex) + "_Reco_p_Slice_" + to_string(canvasIndex) + ".png").c_str());
+                        Sep_canv->SaveAs((Sep_Reco_p_OutputPath + "/" + to_string(HistogramCounter) + "_Reco_p_Slice_" + to_string(HistogramCounter) + ".png").c_str());
                         Sep_canv->Clear();
                     }
-                    else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
-                             !findSubstring(Histogram2DTempName, " AMaps "))
+                    else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") && !findSubstring(Histogram2DTempName, " AMaps "))
                     {
                         Sep_canv->cd();
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
-                        Sep_canv->SaveAs((Sep_Ratio_p_OutputPath + "/" + to_string(canvasIndex) + "_Ratio_p_Slice_" + to_string(canvasIndex) + ".png").c_str());
+                        Sep_canv->SaveAs((Sep_Ratio_p_OutputPath + "/" + to_string(HistogramCounter) + "_Ratio_p_Slice_" + to_string(HistogramCounter) + ".png").c_str());
                         Sep_canv->Clear();
                     }
                     else if (findSubstring(Histogram2DTempName, " AMap "))
@@ -716,7 +711,7 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         Sep_canv->cd();
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
-                        Sep_canv->SaveAs((Sep_AMaps_p_OutputPath + "/" + to_string(canvasIndex) + "_AMaps_p_Slice_" + to_string(canvasIndex) + ".png").c_str());
+                        Sep_canv->SaveAs((Sep_AMaps_p_OutputPath + "/" + to_string(HistogramCounter) + "_AMaps_p_Slice_" + to_string(HistogramCounter) + ".png").c_str());
                         Sep_canv->Clear();
                     }
                 }
@@ -824,8 +819,7 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                 {
                     SaveName = ParticleNameShort1 + "_Reco_" + to_string(numOfFigures) + ".png";
                 }
-                else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
-                         !findSubstring(Histogram2DTempName, " AMaps "))
+                else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") && !findSubstring(Histogram2DTempName, " AMaps "))
                 {
                     SaveName = ParticleNameShort1 + "_Ratio_" + to_string(numOfFigures) + ".png";
                     Histogram2DTemp->SetStats(0);

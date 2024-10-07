@@ -726,7 +726,8 @@ void MomentumResolution::ReadInputParam(const char *filename)
     }
     else
     {
-        cout << "Parameter file didn't read in " << filename << endl;
+        cout << "MomentumResolution::ReadInputParam: Parameter file didn't read in:\n"
+             << filename << endl;
     }
 }
 //</editor-fold>

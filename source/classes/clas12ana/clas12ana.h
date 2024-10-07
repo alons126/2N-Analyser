@@ -1338,7 +1338,7 @@ void clas12ana::readInputParam(const char *filename)
                     vertex_cuts.insert(pair<string, vector<double>>(pid, par));
             }
             else if (parameter == "Momentum_cuts_ECAL")
-            {   // My addition
+            { // My addition
                 //            else if (parameter == "Momentum_cuts") { // My addition
                 // TODO: organize this properly with a map for each pdg.
                 ss >> parameter2;
@@ -1390,7 +1390,7 @@ void clas12ana::readInputParam(const char *filename)
                 }
             }
             else if (parameter == "dPhi_pFD_pCD")
-            {   // My addition
+            { // My addition
                 //            } else if (parameter == "dPhi_p1_p2") { // My addition
                 // TODO: organize this properly with a map for each pdg.
                 ss >> parameter2;
@@ -1453,8 +1453,10 @@ void clas12ana::readInputParam(const char *filename)
         }
     }
     else
+    {
         cout << "clas12ana::readInputParam: Parameter file didn't read in:\n"
              << filename << endl;
+    }
 
     return;
 }

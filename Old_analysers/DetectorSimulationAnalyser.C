@@ -46,7 +46,7 @@ using namespace clas12;
 void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSample, const string &AnalyseFile)
 {
 
-    // cout << "\033[33m\nTEST 0\n\033[0m";
+    CodeDebugger.PrintStepTester(DebuggerMode);
 
     cout << "\033[33m\n\n===========================================================================\n\033[0m";
     cout << "\033[33m\t\t\tDetector simulation analyser\n\033[0m";
@@ -160,7 +160,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     // Cut setup
     // ======================================================================================================================================================================
 
-    // cout << "\033[33m\nTEST 1\n\033[0m";
+    CodeDebugger.PrintStepTester(DebuggerMode);
 
     // Cut setup ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -522,7 +522,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     // Other setup
     // ======================================================================================================================================================================
 
-    // cout << "\033[33m\nTEST 2\n\033[0m";
+    CodeDebugger.PrintStepTester(DebuggerMode);
 
     //  Directory settings ------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1207,7 +1207,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     // Cut parameters plots
     // ======================================================================================================================================================================
 
-    // cout << "\033[33m\nTEST 3\n\033[0m";
+    CodeDebugger.PrintStepTester(DebuggerMode);
 
     // Cut parameters plots
 
@@ -10295,7 +10295,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //                                                                         Code execution                                                                              //
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    // cout << "\033[33m\nTEST 4\n\033[0m";
+    CodeDebugger.PrintStepTester(DebuggerMode);
 
     // Code execution
     cout << "\033[33m\nReading target parameter files...\n\n\033[0m";
@@ -10516,7 +10516,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     //  Setting beam particle's momentum
     //  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    // cout << "\033[33m\nTEST 5\n\033[0m";
+    CodeDebugger.PrintStepTester(DebuggerMode);
 
     // Setting beam particle's momentum
     double Pv = beamE, Pvx = 0., Pvy = 0., Pvz = Pv; // Assuming momentum of incoming lepton is in the z direction
@@ -10565,11 +10565,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
     cout << "\033[33m\n\nLooping over chain files...\n\n\033[0m";
 
-    // cout << "\033[33m\nTEST 6\n\033[0m";
+    CodeDebugger.PrintStepTester(DebuggerMode);
 
     while (chain.Next())
     { // loop over events
-        // cout << "\033[33m\nTEST 6\n\033[0m";
+        CodeDebugger.PrintStepTester(DebuggerMode);
 
         ++num_of_events; // logging Total #(events) in sample
 
@@ -10946,7 +10946,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             pid.GPMonitoring(GoodProtonsMonitorPlots, protons, IDed_Protons_ind, Protons_ind, Theta_p1_cuts_2p, Theta_p2_cuts_2p, dphi_p1_p2_2p, Weight);
         }
 
-        // cout << "\033[33m\nTEST 7\n\033[0m";
+        CodeDebugger.PrintStepTester(DebuggerMode);
 
         //  Filling truth level histograms (lundfile loop) ----------------------------------------------------------------------------------------------------------------------
 
@@ -12498,7 +12498,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         //  Fill All particles (All e) plots ------------------------------------------------------------------------------------------------------------------------------------
 
-        // cout << "\033[33m\nTEST 8\n\033[0m";
+        CodeDebugger.PrintStepTester(DebuggerMode);
 
         // All particles plots
         /* Declaration of electron variables for all particles analysis.
@@ -12700,7 +12700,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         //  1e cut --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        // cout << "\033[33m\nTEST 9\n\033[0m";
+        CodeDebugger.PrintStepTester(DebuggerMode);
 
         // 1e cut
         /* Here we apply electron cut on everything that follows (1p, nFDpCD, 1e2p and 2p) */
@@ -14130,7 +14130,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         //  1p (FD only) --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        // cout << "\033[33m\nTEST 10\n\033[0m";
+        CodeDebugger.PrintStepTester(DebuggerMode);
 
         // 1p (FD only)
         /* 1p event selection: 1p = Protons_ind.size() = 1 in the FD, any number of FD neutrons and any number of other neutrals and particles with pdg=0.*/
@@ -14802,7 +14802,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         //  1n (FD only) --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        // cout << "\033[33m\nTEST 11\n\033[0m";
+        CodeDebugger.PrintStepTester(DebuggerMode);
 
         // 1n (FD only)
         /* 1n event selection: 1n = any number of id. FD neutrons (we look at the leading nFD), with no charged particles (except electrons) and any number of other
@@ -16156,7 +16156,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
             //  Fillings 2p histograms ---------------------------------------------------------------------------------------------------------------------------------
 
-            // cout << "\033[33m\nTEST 12\n\033[0m";
+            CodeDebugger.PrintStepTester(DebuggerMode);
 
             // Fillings 2p histograms
             ++num_of_events_2p;
@@ -16736,7 +16736,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         //  pFDpCD --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        // cout << "\033[33m\nTEST 13\n\033[0m";
+        CodeDebugger.PrintStepTester(DebuggerMode);
 
         // pFDpCD
 
@@ -17658,7 +17658,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         //  nFDpCD --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        // cout << "\033[33m\nTEST 14\n\033[0m";
+        CodeDebugger.PrintStepTester(DebuggerMode);
 
         // nFDpCD
 
@@ -18711,7 +18711,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         } // end of 1enFDpCD & nFDpCD cuts if
 
-        // cout << "\033[33m\nTEST 15\n\033[0m";
+        CodeDebugger.PrintStepTester(DebuggerMode);
 
     } // end of while
     // </editor-fold>
