@@ -29,7 +29,7 @@ private:
     string Added_PreStatuses, Added_Statuses;
 
     // string Global_Run_Status = "ChainRun";
-    string Global_Run_Status = "ChainRunV4_R1_torus_plus1-test";
+    string Global_Run_Status = "ChainRunV4_R1_TorusSymmetric-test";
 
 public:
     // Default constructor ---------------------------------------------------------------------------------------------------------------------------------------------
