@@ -301,40 +301,43 @@ void ConfigSampleChain()
     // AnalyseFileDir_v.push_back(AnalyseFileDir);
     // AnalyseFile_v.push_back(AnalyseFile);
 
-    // /* Uniform samples @ 6GeV */
+    /* Uniform samples @ 6GeV */
 
-    // // Uniform 1e @ 6GeV:
+    // Uniform 1e @ 6GeV:
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV-BeamE-test/OutPut_1e";
     // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_1e";
-    // AnalyseFileSample = "reconhipo";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
-    // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
-    // // Uniform ep @ 6GeV:
+    // Uniform ep @ 6GeV:
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV-BeamE-test/OutPut_ep";
     // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_ep";
-    // AnalyseFileSample = "reconhipo";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // // AnalyseFile = AnalyseFileDir + "recon_Uniform_ep_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
-    // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_ep_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
-    // // Uniform en @ 6GeV:
+    // Uniform en @ 6GeV:
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV-BeamE-test/OutPut_en";
     // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_en";
-    // AnalyseFileSample = "reconhipo";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // // AnalyseFile = AnalyseFileDir + "recon_Uniform_en_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
-    // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_en_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
     // Small Q2 test samples --------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -354,22 +357,16 @@ void ConfigSampleChain()
     // Old simulation files for local runs
     // ==================================================================================================================================================================
 
-    /* Local hipo files - Uniform sample @ 6GeV */
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/598636MeV"; // Storage (D:)
-    // AnalyseFileSample = "reconhipo";                                                               // my test with Justin's code; all particle data saved
+    // AnalyseFilePath = "mnt/d/e4nu/hipo_data_files"; // Storage (D:)
+    // // AnalyseFilePath = "mnt/h/e4nu/hipo_data_files";                                              // Alon's Passport (F:)
+    // // AnalyseFilePath = "mnt/g/e4nu/hipo_data_files";                                              // Alon's Portable (G:)
+    // AnalyseFileSample = "C12x4_G18_02a_00_000_Q204_598636MeV"; // my test with Justin's code; all particle data saved
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "recon_Uniform_sample_598636MeV_*.hipo";                        // 11 files
-
-    AnalyseFilePath = "mnt/d/e4nu/hipo_data_files"; // Storage (D:)
-    // AnalyseFilePath = "mnt/h/e4nu/hipo_data_files";                                              // Alon's Passport (F:)
-    // AnalyseFilePath = "mnt/g/e4nu/hipo_data_files";                                              // Alon's Portable (G:)
-    AnalyseFileSample = "C12x4_G18_02a_00_000_Q204_598636MeV"; // my test with Justin's code; all particle data saved
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // All files
-    // AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_9_torus-1.0.hipo"; // 1 file
-    // AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_51*.hipo";         // 11 files
-    // AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_5*.hipo";          // 111 files
-    // AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_2*.hipo";          // 512 files
+    // // AnalyseFile = AnalyseFileDir + "*.hipo"; // All files
+    // // AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_9_torus-1.0.hipo"; // 1 file
+    // // AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_51*.hipo";         // 11 files
+    // // AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_5*.hipo";          // 111 files
+    // // AnalyseFile = AnalyseFileDir + "recon_C12x4_G18_02a_00_000_Q204_598636MeV_2*.hipo";          // 512 files
 
     // ==================================================================================================================================================================
     // Other ROOT files

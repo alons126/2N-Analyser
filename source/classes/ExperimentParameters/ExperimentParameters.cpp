@@ -17,6 +17,14 @@ ExperimentParameters::ExperimentParameters(const string &AnalyseFilePath, const 
         TotalChargeNumber_Z = 1;
         StrangeQuarksNumber_L = IsomerNumber_I = 0;
     }
+    else if (SampleName.find("D2") <= SampleName[SampleName.size() - 1])
+    {
+        TargetElement = "D2";
+        TargetElementPDG = 1000010020;
+        TotalBaryonNumber_A = 2;
+        TotalChargeNumber_Z = 1;
+        StrangeQuarksNumber_L = IsomerNumber_I = 0;
+    }
     else if ((SampleName.find("c12") <= SampleName[SampleName.size() - 1]) || (SampleName.find("C12") <= SampleName[SampleName.size() - 1]) ||
              (SampleName.find("12c") <= SampleName[SampleName.size() - 1]) || (SampleName.find("12C") <= SampleName[SampleName.size() - 1]) ||
              (SampleName.find("_c_") <= SampleName[SampleName.size() - 1]) || (SampleName.find("_C_") <= SampleName[SampleName.size() - 1]))
@@ -149,7 +157,8 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
             else if (findSubstring(AnalyseFilePath, "5986MeV"))
             { /* 6GeV samples
                  NOTE: here '5986MeV' has to be in the sample path! */
-                if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_1e")
+                if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_1e" ||
+                    AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV-BeamE-test/OutPut_1e")
                 { // Uniform 1e, simulation, 6GeV, ifarm
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -157,7 +166,8 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "Uniform_1e_sample_5986MeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_ep")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_ep" ||
+                         AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV-BeamE-test/OutPut_ep")
                 { // Uniform ep, simulation, 6GeV, ifarm
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -165,7 +175,8 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "Uniform_ep_sample_5986MeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_en")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_en" ||
+                         AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV-BeamE-test/OutPut_en")
                 { // Uniform en, simulation, 6GeV, ifarm
                     if (AnalyseFileSample == "reconhipo")
                     {

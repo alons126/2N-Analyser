@@ -34,27 +34,27 @@
 			"path": "source/classes/ExperimentParameters/ExperimentParameters.cpp",
 			"bookmarks": [
 				{
-					"line": 57,
+					"line": 65,
 					"column": 1,
 					"label": "Config new samples - sample name"
 				},
 				{
-					"line": 1721,
+					"line": 1732,
 					"column": 4,
 					"label": "Config new samples - varing sample name"
 				},
 				{
-					"line": 1754,
+					"line": 1765,
 					"column": 2,
 					"label": "Config new samples - Vz cuts"
 				},
 				{
-					"line": 1946,
+					"line": 1957,
 					"column": 6,
 					"label": "Config new samples - dVz cuts"
 				},
 				{
-					"line": 2170,
+					"line": 2181,
 					"column": 0,
 					"label": "Config new samples - AddToHipoChain"
 				}
