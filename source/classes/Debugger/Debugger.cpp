@@ -37,3 +37,71 @@ void Debugger::SafetyCheck_FD_protons(const char *FILE, const int LINE,
         }
     }
 }
+
+// SafetyCheck_leading_FD_neutron function ------------------------------------------------------------------------------------------------------------------------------------------------
+
+void Debugger::SafetyCheck_leading_FD_neutron(const char *FILE, const int LINE,
+                                              const bool &apply_nucleon_cuts, const bool &ES_by_leading_FDneutron, const int &NeutronsFD_ind_mom_max, std::vector<region_part_ptr> &allParticles,
+                                              const vector<int> &NeutronsFD_ind, ParticleID &pid)
+{
+    if (ES_by_leading_FDneutron)
+    {
+
+        // Safety checks that leading nFD is neutron by definition
+        if (NeutronsFD_ind_mom_max != -1)
+        {
+            bool LeadingnFDPCAL = (allParticles[NeutronsFD_ind_mom_max]->cal(clas12::PCAL)->getDetector() == 7);   // PCAL hit
+            bool LeadingnFDECIN = (allParticles[NeutronsFD_ind_mom_max]->cal(clas12::ECIN)->getDetector() == 7);   // ECIN hit
+            bool LeadingnFDECOUT = (allParticles[NeutronsFD_ind_mom_max]->cal(clas12::ECOUT)->getDetector() == 7); // ECOUT hit
+
+            if (allParticles[NeutronsFD_ind_mom_max]->getRegion() != FD)
+            {
+                PrintErrorMessage(FILE, LINE, "Leading reco nFD check: Leading nFD is not in the FD!", "");
+            }
+
+            if (!((allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 2112) ||
+                  (allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 22)))
+            {
+                PrintErrorMessage(FILE, LINE, ("Leading reco nFD check: A neutron PDG is not 2112 or 22 (" + allParticles[NeutronsFD_ind_mom_max]->par()->getPid()), "");
+            }
+
+            if (LeadingnFDPCAL)
+            {
+                PrintErrorMessage(FILE, LINE, "Leading reco nFD check: neutron hit in PCAL!", "");
+            }
+
+            if (!(LeadingnFDECIN || LeadingnFDECOUT))
+            {
+                PrintErrorMessage(FILE, LINE, "Leading reco nFD check: no neutron hit in ECIN or ECOUT!", "");
+            }
+        }
+
+        // Safety check for leading nFD assignment
+        if ((NeutronsFD_ind.size() > 0) && (NeutronsFD_ind_mom_max == -1))
+        {
+            PrintErrorMessage(FILE, LINE, "Leading reco nFD check: leading was not assigned!", "");
+        }
+
+        if (NeutronsFD_ind.size() == 1)
+        {
+            if (NeutronsFD_ind.at(0) != NeutronsFD_ind_mom_max)
+            {
+                PrintErrorMessage(FILE, LINE, "Leading reco nFD check: leading was assigned incorrectly!", "");
+            }
+        }
+        else if (NeutronsFD_ind.size() > 1)
+        {
+            for (int &i : NeutronsFD_ind)
+            {
+                double Leading_neutron_momentum = pid.GetFDNeutronP(allParticles[NeutronsFD_ind_mom_max], apply_nucleon_cuts);
+                double Temp_neutron_momentum = pid.GetFDNeutronP(allParticles[i], apply_nucleon_cuts);
+                double dMomentum = Leading_neutron_momentum - Temp_neutron_momentum;
+
+                if (dMomentum < 0)
+                {
+                    PrintErrorMessage(FILE, LINE, "Leading reco nFD check: assigned nFD is not the leading!", "");
+                }
+            }
+        }
+    }
+}

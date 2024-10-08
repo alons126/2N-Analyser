@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include "../DSCuts/DSCuts.h"
+#include "../ParticleID/ParticleID.cpp"
 
 using namespace std;
 
@@ -22,8 +23,16 @@ public:
     void SafetyCheck_clas12ana_particles(const char *FILE, const int LINE,
                                          const bool &clas12ana_particles, std::vector<region_part_ptr> &allParticles, const int Nf);
 
+    // SafetyCheck_FD_protons function ------------------------------------------------------------------------------------------------------------------------------------------------
+
     void SafetyCheck_FD_protons(const char *FILE, const int LINE,
                                 const vector<int> &Protons_ind, std::vector<region_part_ptr> &protons, const DSCuts &p_mom_th);
+
+    // SafetyCheck_leading_FD_neutron function ------------------------------------------------------------------------------------------------------------------------------------------------
+
+    void SafetyCheck_leading_FD_neutron(const char *FILE, const int LINE,
+                                        const bool &apply_nucleon_cuts, const bool &ES_by_leading_FDneutron, const int &NeutronsFD_ind_mom_max, std::vector<region_part_ptr> &allParticles,
+                                        const vector<int> &NeutronsFD_ind, ParticleID &pid);
 
     // PrintStepTester function ---------------------------------------------------------------------------------------------------------------------------------------------
 
