@@ -10620,7 +10620,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         // Safety check for clas12ana particles
         /* Safety check that allParticles.size(), Nf are the same */
-        debugger.SafetyCheck(__FILE__, __LINE__, clas12ana_particles, allParticles, Nf + 1);
+        CodeDebugger.SafetyCheck(__FILE__, __LINE__, clas12ana_particles, allParticles, Nf + 1);
         // if ((clas12ana_particles) && (allParticles.size() != Nf))
         // {
         //     cout << "\033[33m\n\nallParticles.size() is different than Nf! Exiting...\n\n", exit(0);
