@@ -291,10 +291,12 @@ void Debugger::SafetyCheck_basic_event_selection(const char *FILE, const int LIN
     {
         PrintErrorMessage(FILE, LINE, (FinaleState + ": Kplus.size() is different than 0!"), "");
     }
+
     if (Kminus.size() != 0)
     {
         PrintErrorMessage(FILE, LINE, (FinaleState + ": Kminus.size() is different than 0!"), "");
     }
+
     if (Piplus_ind.size() != 0)
     {
         PrintErrorMessage(FILE, LINE, (FinaleState + ": Piplus_ind.size() is different than 0!"), "");
@@ -303,12 +305,137 @@ void Debugger::SafetyCheck_basic_event_selection(const char *FILE, const int LIN
     {
         PrintErrorMessage(FILE, LINE, (FinaleState + ": Piminus_ind.size() is different than 0!"), "");
     }
+
     if (Electron_ind.size() != 1)
     {
         PrintErrorMessage(FILE, LINE, (FinaleState + ": Electron_ind.size() is different than 1!"), "");
     }
+
     if (deuterons.size() != 0)
     {
         PrintErrorMessage(FILE, LINE, (FinaleState + ": deuterons.size() is different than 0!"), "");
+    }
+}
+
+// SafetyCheck_1p function ------------------------------------------------------------------------------------------------------------------------------------------------
+
+void Debugger::SafetyCheck_1p(const char *FILE, const int LINE,
+                              const vector<int> &Protons_ind, std::vector<region_part_ptr> &e_1p, std::vector<region_part_ptr> &p_1p,
+                              const bool &Enable_FD_photons, const vector<int> &PhotonsFD_ind)
+{
+    if (Protons_ind.size() != 1)
+    {
+        PrintErrorMessage(FILE, LINE, "1p: Protons_ind.size() is different than 1!", "");
+    }
+
+    if (e_1p->getRegion() != FD)
+    {
+        PrintErrorMessage(FILE, LINE, "1p: 1p proton is not in the FD!", "");
+    }
+
+    if (p_1p->getRegion() != FD)
+    {
+        PrintErrorMessage(FILE, LINE, "1p: 1p electron is not in the FD!", "");
+    }
+
+    if (!(Enable_FD_photons || (PhotonsFD_ind.size() == 0)))
+    {
+        PrintErrorMessage(FILE, LINE, ("1p: PhotonsFD_ind.size() is non-zero (" + to_string(PhotonsFD_ind.size()) + ")!"), "");
+    }
+}
+
+// SafetyCheck_1n function ------------------------------------------------------------------------------------------------------------------------------------------------
+
+void Debugger::SafetyCheck_1n(const char *FILE, const int LINE,
+                              const vector<int> &NeutronsFD_ind, std::vector<region_part_ptr> &e_1n, std::vector<region_part_ptr> &n_1n,
+                              const bool &Enable_FD_photons, const vector<int> &PhotonsFD_ind, const bool &ES_by_leading_FDneutron, ParticleID &pid,
+                              std::vector<region_part_ptr> &allParticles, const int &NeutronsFD_ind_mom_max, const bool &apply_nucleon_cuts)
+{
+    if (e_1n->getRegion() != FD)
+    {
+        PrintErrorMessage(FILE, LINE, "1n: Electron is not in the FD!", "");
+    }
+    if (n_1n->getRegion() != FD)
+    {
+        PrintErrorMessage(FILE, LINE, "1n: nFD is not in the FD!", "");
+    }
+
+    if (!(Enable_FD_photons || (PhotonsFD_ind.size() == 0)))
+    {
+        PrintErrorMessage(FILE, LINE, ("1n: PhotonsFD_ind.size() is non-zero (" + to_string(PhotonsFD_ind.size()) + ")!"), "");
+    }
+
+    if (ES_by_leading_FDneutron)
+    { // TODO: add this check to nFDpCD
+        double P_max_test = pid.GetFDNeutronP(allParticles[NeutronsFD_ind_mom_max], apply_nucleon_cuts);
+
+        for (int &i : NeutronsFD_ind)
+        {
+            if (i != NeutronsFD_ind_mom_max)
+            {
+                double P_temp = pid.GetFDNeutronP(allParticles[i], apply_nucleon_cuts);
+
+                if (P_max_test < P_temp)
+                {
+                    PrintErrorMessage(FILE, LINE, "1n: NeutronsFD_ind_mom_max is not leading FD neutron!", "");
+                }
+            }
+        }
+    }
+
+    for (int &i : NeutronsFD_ind)
+    {
+        bool NeutronInPCAL_1n = (allParticles[i]->cal(clas12::PCAL)->getDetector() == 7); // PCAL hit
+        if (NeutronInPCAL_1n)
+        {
+            PrintErrorMessage(FILE, LINE, "1n: a neutron have been found with a PCAL hit!", "");
+        }
+        if (!((allParticles[i]->par()->getPid() == 2112) || (allParticles[i]->par()->getPid() == 22)))
+        {
+            PrintErrorMessage(FILE, LINE, ("1n: A neutron PDG is not 2112 or 22 (" + to_string(allParticles[i]->par()->getPid()) + ")!"), "");
+        }
+    }
+
+    for (int &i : PhotonsFD_ind)
+    {
+        bool PhotonInPCAL_1n = (allParticles[i]->cal(clas12::PCAL)->getDetector() == 7); // PCAL hit
+        if (!PhotonInPCAL_1n)
+        {
+            PrintErrorMessage(FILE, LINE, "1n: a photon have been found without a PCAL hit!", "");
+        }
+        if (allParticles[i]->par()->getPid() != 22)
+        {
+            PrintErrorMessage(FILE, LINE, ("1n: A photon PDG is not 2112 or 22 (" + to_string(allParticles[i]->par()->getPid()) + ")!"), "");
+        }
+    }
+
+    /* Safety check that we are looking at good neutron (BEFORE VETO!!!) */
+    int NeutronPDG = n_1n->par()->getPid();
+
+    bool NeutronInPCAL_1n = (n_1n->cal(clas12::PCAL)->getDetector() == 7);   // PCAL hit
+    bool NeutronInECIN_1n = (n_1n->cal(clas12::ECIN)->getDetector() == 7);   // ECIN hit
+    bool NeutronInECOUT_1n = (n_1n->cal(clas12::ECOUT)->getDetector() == 7); // ECOUT hit
+    auto n_detlayer_1n = NeutronInPCAL_1n ? clas12::PCAL : NeutronInECIN_1n ? clas12::ECIN
+                                                                            : clas12::ECOUT; // determine the earliest layer of the neutral hit
+
+    if (n_1n->getRegion() != FD)
+    {
+        PrintErrorMessage(FILE, LINE, "1n: neutron is not in FD!", "");
+    }
+    if (!((NeutronPDG == 22) || (NeutronPDG == 2112)))
+    {
+        PrintErrorMessage(FILE, LINE, ("1n: neutral PDG is not 2112 or 22 (" + to_string(NeutronPDG) + ")!"), "");
+    }
+    if (NeutronInPCAL_1n)
+    {
+        PrintErrorMessage(FILE, LINE, "1n: neutron hit in PCAL!", "");
+    }
+    if (!(NeutronInECIN_1n || NeutronInECOUT_1n))
+    {
+        PrintErrorMessage(FILE, LINE, "1n: no neutron hit in ECIN or ECOUT!", "");
+    }
+    if (!(!NeutronInPCAL_1n && (NeutronInECIN_1n || NeutronInECOUT_1n)))
+    {
+        PrintErrorMessage(FILE, LINE, "1n: not neutron by definition!", "");
     }
 }

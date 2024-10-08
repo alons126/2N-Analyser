@@ -13745,28 +13745,9 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             region_part_ptr e_1p = electrons[Electron_ind.at(0)];
             region_part_ptr p_1p = protons[Protons_ind.at(0)];
 
-            // Safety check (1p)
             /* Safety check that we are looking at 1p */
             CodeDebugger.SafetyCheck_basic_event_selection(__FILE__, __LINE__, "1p", Kplus, Kminus, Piplus_ind, Piminus_ind, Electron_ind, deuterons);
-
-            if (Protons_ind.size() != 1)
-            {
-                cout << "\033[33m\n\n1p: Protons_ind.size() is different than 1! Exiting...\n\n", exit(0);
-            }
-
-            if (e_1p->getRegion() != FD)
-            {
-                cout << "\033[33m\n\n1p: 1p proton is not in the FD! Exiting...\n\n", exit(0);
-            }
-            if (p_1p->getRegion() != FD)
-            {
-                cout << "\033[33m\n\n1p: 1p electron is not in the FD! Exiting...\n\n", exit(0);
-            }
-
-            if (!(Enable_FD_photons || (PhotonsFD_ind.size() == 0)))
-            {
-                cout << "\033[33m\n\n1p: PhotonsFD_ind.size() is non-zero (" << PhotonsFD_ind.size() << ")! Exiting...\n\n", exit(0);
-            }
+            CodeDebugger.SafetyCheck_1p(__FILE__, __LINE__, Protons_ind, e_1p, p_1p, Enable_FD_photons, PhotonsFD_ind);
 
             // Setting 1p analysis variables
             double ProtonMomBKC_1p = p_1p->getP(); // proton momentum before smearing or kinematical cuts
@@ -14402,97 +14383,10 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             region_part_ptr e_1n = electrons[Electron_ind.at(0)];
             region_part_ptr n_1n = allParticles[n_ind_1n]; // neutron with the largest momentum magnitude
 
-            // Safety check (1n)
             /* Safety check that we are looking at 1n */
-            if (e_1n->getRegion() != FD)
-            {
-                cout << "\033[33m\n\n1n: Electron is not in the FD! Exiting...\n\n", exit(0);
-            }
-            if (n_1n->getRegion() != FD)
-            {
-                cout << "\033[33m\n\n1n: nFD is not in the FD! Exiting...\n\n", exit(0);
-            }
-
-            if (!(Enable_FD_photons || (PhotonsFD_ind.size() == 0)))
-            {
-                cout << "\033[33m\n\n1n: PhotonsFD_ind.size() is non-zero (" << PhotonsFD_ind.size() << ")! Exiting...\n\n", exit(0);
-            }
-
-            if (ES_by_leading_FDneutron)
-            { // TODO: add this check to nFDpCD
-                double P_max_test = pid.GetFDNeutronP(allParticles[NeutronsFD_ind_mom_max], apply_nucleon_cuts);
-
-                for (int &i : NeutronsFD_ind)
-                {
-                    if (i != NeutronsFD_ind_mom_max)
-                    {
-                        double P_temp = pid.GetFDNeutronP(allParticles[i], apply_nucleon_cuts);
-
-                        if (P_max_test < P_temp)
-                        {
-                            cout << "\033[33m\n\n1n: NeutronsFD_ind_mom_max is not leading FD neutron! Exiting...\n\n", exit(0);
-                        }
-                    }
-                }
-            }
-
             CodeDebugger.SafetyCheck_basic_event_selection(__FILE__, __LINE__, "1n", Kplus, Kminus, Piplus_ind, Piminus_ind, Electron_ind, deuterons);
-
-            for (int &i : NeutronsFD_ind)
-            {
-                bool NeutronInPCAL_1n = (allParticles[i]->cal(clas12::PCAL)->getDetector() == 7); // PCAL hit
-                if (NeutronInPCAL_1n)
-                {
-                    cout << "\033[33m\n\n1n: a neutron have been found with a PCAL hit! Exiting...\n\n", exit(0);
-                }
-                if (!((allParticles[i]->par()->getPid() == 2112) || (allParticles[i]->par()->getPid() == 22)))
-                {
-                    cout << "\033[33m\n\n1n: A neutron PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(0);
-                }
-            }
-
-            for (int &i : PhotonsFD_ind)
-            {
-                bool PhotonInPCAL_1n = (allParticles[i]->cal(clas12::PCAL)->getDetector() == 7); // PCAL hit
-                if (!PhotonInPCAL_1n)
-                {
-                    cout << "\033[33m\n\n1n: a photon have been found without a PCAL hit! Exiting...\n\n", exit(0);
-                }
-                if (allParticles[i]->par()->getPid() != 22)
-                {
-                    cout << "\033[33m\n\n1n: A photon PDG is not 2112 or 22 (" << allParticles[i]->par()->getPid() << ")! Exiting...\n\n", exit(0);
-                }
-            }
-
-            /* Safety check that we are looking at good neutron (BEFORE VETO!!!) */
-            int NeutronPDG = n_1n->par()->getPid();
-
-            bool NeutronInPCAL_1n = (n_1n->cal(clas12::PCAL)->getDetector() == 7);   // PCAL hit
-            bool NeutronInECIN_1n = (n_1n->cal(clas12::ECIN)->getDetector() == 7);   // ECIN hit
-            bool NeutronInECOUT_1n = (n_1n->cal(clas12::ECOUT)->getDetector() == 7); // ECOUT hit
-            auto n_detlayer_1n = NeutronInPCAL_1n ? clas12::PCAL : NeutronInECIN_1n ? clas12::ECIN
-                                                                                    : clas12::ECOUT; // determine the earliest layer of the neutral hit
-
-            if (n_1n->getRegion() != FD)
-            {
-                cout << "\033[33m\n\n1n: neutron is not in FD! Exiting...\n\n", exit(0);
-            }
-            if (!((NeutronPDG == 22) || (NeutronPDG == 2112)))
-            {
-                cout << "\033[33m\n\n1n: neutral PDG is not 2112 or 22 (" << NeutronPDG << ")! Exiting...\n\n", exit(0);
-            }
-            if (NeutronInPCAL_1n)
-            {
-                cout << "\033[33m\n\n1n: neutron hit in PCAL! Exiting...\n\n", exit(0);
-            }
-            if (!(NeutronInECIN_1n || NeutronInECOUT_1n))
-            {
-                cout << "\033[33m\n\n1n: no neutron hit in ECIN or ECOUT! Exiting...\n\n", exit(0);
-            }
-            if (!(!NeutronInPCAL_1n && (NeutronInECIN_1n || NeutronInECOUT_1n)))
-            {
-                cout << "\033[33m\n\n1n: not neutron by definition! Exiting...\n\n", exit(0);
-            }
+            CodeDebugger.SafetyCheck_1n(__FILE__, __LINE__, NeutronsFD_ind, e_1n, n_1n, Enable_FD_photons, PhotonsFD_ind, ES_by_leading_FDneutron, pid,
+                                        allParticles, NeutronsFD_ind_mom_max, apply_nucleon_cuts);
 
             // Setting 1n analysis variables
             double NeutronMomBKC_1n = pid.GetFDNeutronP(n_1n, apply_nucleon_cuts); // neutron momentum before shift for kin cuts
