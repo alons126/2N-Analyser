@@ -12391,23 +12391,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         // Check that we do have only one electron:
         CodeDebugger.SafetyCheck_1e_cut_electron(__FILE__, __LINE__, electrons);
 
-        // Check that our one electron is within momentum cuts:
-        // TODO: might be problemetic if electron momentum cuts are changed. consider removing this if that does happen.
-        if (Electron_ind.size() != 1)
-        {
-            cout << "\033[33m\n\n1e cut: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
-        }
-        if (Electron_ind.at(0) != 0)
-        {
-            cout << "\033[33m\n\n1e cut: Electron_ind.at(0) is different than 0! Exiting...\n\n", exit(0);
-        }
-        if (electrons[Electron_ind.at(0)]->getRegion() != FD)
-        {
-            cout << "\033[33m\n\n1e cut: Electron_ind.at(0) is not in the FD! Exiting...\n\n", exit(0);
-        }
-
         // events counts (1e cut)
-
         ++num_of_events_with_exactly_1e; // logging #(events) w/ exactly 1e (after beta cut)
 
         // events counts with protons (1e cut)

@@ -243,6 +243,12 @@ void Debugger::SafetyCheck_1e_cut_electron(const char *FILE, const int LINE,
     {
         PrintErrorMessage(FILE, LINE, "1e cut: electrons.size() is different than 1!", "");
     }
+
+    if (Electron_ind.at(0) != 0)
+    {
+        PrintErrorMessage(FILE, LINE, "1e cut: Electron_ind.at(0) is different than 0!", "");
+    }
+
     if (electrons[0]->getRegion() != FD)
     {
         PrintErrorMessage(FILE, LINE, "1e cut: electrons is not in the FD!", "");
