@@ -12385,10 +12385,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             continue;
         }
 
-        // Safety checks (1e cut)
         /* Safety check that we are looking at 1e cut. */
-
-        // Check that we do have only one electron:
         CodeDebugger.SafetyCheck_1e_cut_electron(__FILE__, __LINE__, electrons, Electron_ind);
 
         // events counts (1e cut)
@@ -13609,7 +13606,6 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             if (electrons[0]->getRegion() == FD)
             {
                 /* Fill reco electron acceptance maps */
-
                 hElectronAMapBC.hFill(Phi_e, Theta_e, Weight);
                 hReco_P_e_AMaps.hFill(P_e_1e_cut, Weight);
                 hReco_P_e_vs_Reco_Theta_e_AMap.hFill(P_e_1e_cut, Theta_e, Weight);
@@ -13627,7 +13623,6 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             for (int &i : Protons_ind)
             {
                 /* Fill all reco FD proton acceptance maps */
-
                 if (protons[i]->getRegion() == FD)
                 {
                     double Reco_Proton_Momentum = protons[i]->getP();
@@ -13669,34 +13664,13 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 if (NeutronsFD_ind_mom_max != -1)
                 { // if NeutronsFD_ind_mom_max == -1, there are no neutrons above momentum th. in the event
                     /* Fill leading reco FD neutron acceptance maps */
-
                     bool hitPCAL_1e_cut = (allParticles[NeutronsFD_ind_mom_max]->cal(clas12::PCAL)->getDetector() == 7);   // PCAL hit
                     bool hitECIN_1e_cut = (allParticles[NeutronsFD_ind_mom_max]->cal(clas12::ECIN)->getDetector() == 7);   // ECIN hit
                     bool hitECOUT_1e_cut = (allParticles[NeutronsFD_ind_mom_max]->cal(clas12::ECOUT)->getDetector() == 7); // ECOUT hit
                     auto n_detlayer_1e_cut = hitECIN_1e_cut ? clas12::ECIN : clas12::ECOUT;                                // find first layer of hit
 
                     // Safety checks that leading nFD is neutron by definition (AMaps & WMaps)
-                    if (allParticles[NeutronsFD_ind_mom_max]->getRegion() != FD)
-                    {
-                        cout << "\033[33m\n\nLeading reco nFD check (AMaps & WMaps): Leading nFD is not in the FD! Exiting...\n\n", exit(0);
-                    }
-
-                    if (!((allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 2112) || (allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 22)))
-                    {
-                        cout << "\033[33m\n\nLeading reco nFD check (AMaps & WMaps): A neutron PDG is not 2112 or 22 (" << allParticles[NeutronsFD_ind_mom_max]->par()->getPid()
-                             << ")! Exiting...\n\n",
-                            exit(0);
-                    }
-
-                    if (hitPCAL_1e_cut)
-                    {
-                        cout << "\033[33m\n\nLeading reco nFD check (AMaps & WMaps): neutron hit in PCAL! Exiting...\n\n", exit(0);
-                    }
-
-                    if (!(hitECIN_1e_cut || hitECOUT_1e_cut))
-                    {
-                        cout << "\033[33m\n\nLeading reco nFD check (AMaps & WMaps): no neutron hit in ECIN or ECOUT! Exiting...\n\n", exit(0);
-                    }
+                    SafetyCheck_AMaps_Reco_leading_neutrons(__FILE__, __LINE__, allParticles, NeutronsFD_ind_mom_max, hitPCAL_1e_cut, hitECIN_1e_cut, hitECOUT_1e_cut);
 
                     if (allParticles[NeutronsFD_ind_mom_max]->cal(n_detlayer_1e_cut)->getLv() > clasAna.getEcalEdgeCuts() &&
                         allParticles[NeutronsFD_ind_mom_max]->cal(n_detlayer_1e_cut)->getLw() > clasAna.getEcalEdgeCuts())
@@ -13742,7 +13716,6 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                     } // end of if neutron is within fiducial cuts
                 }
             }
-
         } // end of fill Acceptance maps if
 
         // Fill neutron multiplicity plots (1e cut)
@@ -13774,42 +13747,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
             // Safety check (1p)
             /* Safety check that we are looking at 1p */
-            if (e_1p->getRegion() != FD)
-            {
-                cout << "\033[33m\n\n1p: Electron is not in the FD! Exiting...\n\n", exit(0);
-            }
-            if (p_1p->getRegion() != FD)
-            {
-                cout << "\033[33m\n\n1p: nFD is not in the FD! Exiting...\n\n", exit(0);
-            }
+            CodeDebugger.SafetyCheck_basic_event_selection(__FILE__, __LINE__, "1p", Kplus, Kminus, Piplus_ind, Piminus_ind, Electron_ind, deuterons);
 
             if (Protons_ind.size() != 1)
             {
                 cout << "\033[33m\n\n1p: Protons_ind.size() is different than 1! Exiting...\n\n", exit(0);
-            }
-            if (Kplus.size() != 0)
-            {
-                cout << "\033[33m\n\n1p: Kplus.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Kminus.size() != 0)
-            {
-                cout << "\033[33m\n\n1p: Kminus.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Piplus_ind.size() != 0)
-            {
-                cout << "\033[33m\n\n1p: Piplus_ind.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Piminus_ind.size() != 0)
-            {
-                cout << "\033[33m\n\n1p: Piminus_ind.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Electron_ind.size() != 1)
-            {
-                cout << "\033[33m\n\n1p: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
-            }
-            if (deuterons.size() != 0)
-            {
-                cout << "\033[33m\n\n1p: deuterons.size() is different than 0! Exiting...\n\n", exit(0);
             }
 
             if (e_1p->getRegion() != FD)
@@ -14494,35 +14436,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 }
             }
 
-            //            if (NeutronsFD_ind.size() != 1) { cout << "\033[33m\n\n1n: NeutronsFD_ind.size() is different than 1! Exiting...\n\n", exit(0); }
-            if (Protons_ind.size() != 0)
-            {
-                cout << "\033[33m\n\n1n: Protons_ind.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Kplus.size() != 0)
-            {
-                cout << "\033[33m\n\n1n: Kplus.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Kminus.size() != 0)
-            {
-                cout << "\033[33m\n\n1n: Kminus.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Piplus_ind.size() != 0)
-            {
-                cout << "\033[33m\n\n1n: Piplus_ind.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Piminus_ind.size() != 0)
-            {
-                cout << "\033[33m\n\n1n: Piminus_ind.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Electron_ind.size() != 1)
-            {
-                cout << "\033[33m\n\n1n: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
-            }
-            if (deuterons.size() != 0)
-            {
-                cout << "\033[33m\n\n1n: deuterons.size() is different than 0! Exiting...\n\n", exit(0);
-            }
+            CodeDebugger.SafetyCheck_basic_event_selection(__FILE__, __LINE__, "1n", Kplus, Kminus, Piplus_ind, Piminus_ind, Electron_ind, deuterons);
 
             for (int &i : NeutronsFD_ind)
             {
@@ -15709,30 +15623,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             {
                 cout << "\033[33m\n\n2p: Protons_ind.size() is different than 2! Exiting...\n\n", exit(0);
             }
-            if (Kplus.size() != 0)
-            {
-                cout << "\033[33m\n\n2p: Kplus.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Kminus.size() != 0)
-            {
-                cout << "\033[33m\n\n2p: Kminus.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Piplus_ind.size() != 0)
-            {
-                cout << "\033[33m\n\n2p: Piplus_ind.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Piminus_ind.size() != 0)
-            {
-                cout << "\033[33m\n\n2p: Piminus_ind.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Electron_ind.size() != 1)
-            {
-                cout << "\033[33m\n\n2p: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
-            }
-            if (deuterons.size() != 0)
-            {
-                cout << "\033[33m\n\n2p: deuterons.size() is different than 0! Exiting...\n\n", exit(0);
-            }
+
+            CodeDebugger.SafetyCheck_basic_event_selection(__FILE__, __LINE__, "2p", Kplus, Kminus, Piplus_ind, Piminus_ind, Electron_ind, deuterons);
 
             /* Setting particle vectors (for code organization) */
             auto e_2p = electrons[Electron_ind.at(0)];
@@ -16452,30 +16344,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 cout << "\033[33m\n\npFDpCD: pCD is not in the CD! Exiting...\n\n", exit(0);
             }
 
-            if (Kplus.size() != 0)
-            {
-                cout << "\033[33m\n\npFDpCD: Kplus.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Kminus.size() != 0)
-            {
-                cout << "\033[33m\n\npFDpCD: Kminus.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Piplus_ind.size() != 0)
-            {
-                cout << "\033[33m\n\npFDpCD: Piplus_ind.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Piminus_ind.size() != 0)
-            {
-                cout << "\033[33m\n\npFDpCD: Piminus_ind.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Electron_ind.size() != 1)
-            {
-                cout << "\033[33m\n\npFDpCD: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
-            }
-            if (deuterons.size() != 0)
-            {
-                cout << "\033[33m\n\npFDpCD: deuterons.size() is different than 0! Exiting...\n\n", exit(0);
-            }
+            CodeDebugger.SafetyCheck_basic_event_selection(__FILE__, __LINE__, "pFDpCD", Kplus, Kminus, Piplus_ind, Piminus_ind, Electron_ind, deuterons);
 
             // Setting pFDpCD analysis variables
             double ProtonMomBKC_pFDpCD = pFD_pFDpCD->getP(); // proton momentum before smearing or kinematical cuts
@@ -17344,30 +17213,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             {
                 cout << "\033[33m\n\nnFDpCD: Protons_ind.size() is different than 2! Exiting...\n\n", exit(0);
             }
-            if (Kplus.size() != 0)
-            {
-                cout << "\033[33m\n\nnFDpCD: Kplus.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Kminus.size() != 0)
-            {
-                cout << "\033[33m\n\nnFDpCD: Kminus.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Piplus_ind.size() != 0)
-            {
-                cout << "\033[33m\n\nnFDpCD: Piplus_ind.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Piminus_ind.size() != 0)
-            {
-                cout << "\033[33m\n\nnFDpCD: Piminus_ind.size() is different than 0! Exiting...\n\n", exit(0);
-            }
-            if (Electron_ind.size() != 1)
-            {
-                cout << "\033[33m\n\nnFDpCD: Electron_ind.size() is different than 1! Exiting...\n\n", exit(0);
-            }
-            if (deuterons.size() != 0)
-            {
-                cout << "\033[33m\n\nnFDpCD: deuterons.size() is different than 0! Exiting...\n\n", exit(0);
-            }
+
+            CodeDebugger.SafetyCheck_basic_event_selection(__FILE__, __LINE__, "nFDpCD", Kplus, Kminus, Piplus_ind, Piminus_ind, Electron_ind, deuterons);
 
             for (int &i : NeutronsFD_ind)
             {

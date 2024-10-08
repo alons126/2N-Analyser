@@ -55,6 +55,9 @@ public:
     void SafetyCheck_AMaps_Truth_neutrons(const char *FILE, const int LINE,
                                           const int &particlePDGtmp, const bool &inFD_AMaps);
 
+    void SafetyCheck_AMaps_Reco_leading_neutrons(const char *FILE, const int LINE,
+                                                 const int &particlePDGtmp, const bool &inFD_AMaps);
+
     // SafetyCheck_one_good_electron function ------------------------------------------------------------------------------------------------------------------------------------------------
 
     void SafetyCheck_one_good_electron(const char *FILE, const int LINE,
@@ -64,6 +67,12 @@ public:
 
     void SafetyCheck_1e_cut_electron(const char *FILE, const int LINE,
                                      std::vector<region_part_ptr> &electrons, const vector<int> &Electron_ind);
+
+    // SafetyCheck_basic_event_selection function ------------------------------------------------------------------------------------------------------------------------------------------------
+
+    void SafetyCheck_basic_event_selection(const char *FILE, const int LINE,
+                                           const std::string FinaleState, std::vector<region_part_ptr> &Kplus, std::vector<region_part_ptr> &Kminus,
+                                           const vector<int> &Piplus_ind, const vector<int> &Piminus_ind, const vector<int> &Electron_ind, std::vector<region_part_ptr> &deuterons);
 
     // PrintStepTester function ---------------------------------------------------------------------------------------------------------------------------------------------
 

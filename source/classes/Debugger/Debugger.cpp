@@ -223,6 +223,32 @@ void Debugger::SafetyCheck_AMaps_Truth_neutrons(const char *FILE, const int LINE
     }
 }
 
+void Debugger::SafetyCheck_AMaps_Reco_leading_neutrons(const char *FILE, const int LINE,
+                                                       std::vector<region_part_ptr> &allParticles, const int &NeutronsFD_ind_mom_max,
+                                                       const bool &hitPCAL_1e_cut, const bool &hitECIN_1e_cut, const bool &hitECOUT_1e_cut)
+{
+    if (allParticles[NeutronsFD_ind_mom_max]->getRegion() != FD)
+    {
+        PrintErrorMessage(FILE, LINE, "Leading reco nFD check (AMaps & WMaps): Leading nFD is not in the FD!", "");
+    }
+
+    if (!((allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 2112) || (allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 22)))
+    {
+        PrintErrorMessage(FILE, LINE,
+                          ("Leading reco nFD check (AMaps & WMaps): A neutron PDG is not 2112 or 22 (" + to_string(allParticles[NeutronsFD_ind_mom_max]->par()->getPid()) + ")!"), "");
+    }
+
+    if (hitPCAL_1e_cut)
+    {
+        PrintErrorMessage(FILE, LINE, "Leading reco nFD check (AMaps & WMaps): neutron hit in PCAL!", "");
+    }
+
+    if (!(hitECIN_1e_cut || hitECOUT_1e_cut))
+    {
+        PrintErrorMessage(FILE, LINE, "Leading reco nFD check (AMaps & WMaps): no neutron hit in ECIN or ECOUT!", "");
+    }
+}
+
 // SafetyCheck_one_good_electron function ------------------------------------------------------------------------------------------------------------------------------------------------
 
 void Debugger::SafetyCheck_one_good_electron(const char *FILE, const int LINE,
@@ -252,5 +278,37 @@ void Debugger::SafetyCheck_1e_cut_electron(const char *FILE, const int LINE,
     if (electrons[0]->getRegion() != FD)
     {
         PrintErrorMessage(FILE, LINE, "1e cut: electrons is not in the FD!", "");
+    }
+}
+
+// SafetyCheck_basic_event_selection function ------------------------------------------------------------------------------------------------------------------------------------------------
+
+void Debugger::SafetyCheck_basic_event_selection(const char *FILE, const int LINE,
+                                                 const std::string FinaleState, std::vector<region_part_ptr> &Kplus, std::vector<region_part_ptr> &Kminus,
+                                                 const vector<int> &Piplus_ind, const vector<int> &Piminus_ind, const vector<int> &Electron_ind, std::vector<region_part_ptr> &deuterons)
+{
+    if (Kplus.size() != 0)
+    {
+        PrintErrorMessage(FILE, LINE, (FinaleState + ": Kplus.size() is different than 0!"), "");
+    }
+    if (Kminus.size() != 0)
+    {
+        PrintErrorMessage(FILE, LINE, (FinaleState + ": Kminus.size() is different than 0!"), "");
+    }
+    if (Piplus_ind.size() != 0)
+    {
+        PrintErrorMessage(FILE, LINE, (FinaleState + ": Piplus_ind.size() is different than 0!"), "");
+    }
+    if (Piminus_ind.size() != 0)
+    {
+        PrintErrorMessage(FILE, LINE, (FinaleState + ": Piminus_ind.size() is different than 0!"), "");
+    }
+    if (Electron_ind.size() != 1)
+    {
+        PrintErrorMessage(FILE, LINE, (FinaleState + ": Electron_ind.size() is different than 1!"), "");
+    }
+    if (deuterons.size() != 0)
+    {
+        PrintErrorMessage(FILE, LINE, (FinaleState + ": deuterons.size() is different than 0!"), "");
     }
 }
