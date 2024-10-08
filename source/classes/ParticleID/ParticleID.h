@@ -22,7 +22,7 @@
 #include "../hPlots/hPlot2D.h"
 #include "../../functions/AngleCalc/CalcdPhi.h"
 
-#if MOMENTUMRESOLUTION_H == false
+#if !defined(MOMENTUMRESOLUTION_H)
 #include "../MomentumResolution/MomentumResolution.cpp"
 #endif
 
