@@ -13670,7 +13670,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                     auto n_detlayer_1e_cut = hitECIN_1e_cut ? clas12::ECIN : clas12::ECOUT;                                // find first layer of hit
 
                     // Safety checks that leading nFD is neutron by definition (AMaps & WMaps)
-                    SafetyCheck_AMaps_Reco_leading_neutrons(__FILE__, __LINE__, allParticles, NeutronsFD_ind_mom_max, hitPCAL_1e_cut, hitECIN_1e_cut, hitECOUT_1e_cut);
+                    CodeDebugger.SafetyCheck_AMaps_Reco_leading_neutrons(__FILE__, __LINE__, allParticles, NeutronsFD_ind_mom_max, hitPCAL_1e_cut, hitECIN_1e_cut, hitECOUT_1e_cut);
 
                     if (allParticles[NeutronsFD_ind_mom_max]->cal(n_detlayer_1e_cut)->getLv() > clasAna.getEcalEdgeCuts() &&
                         allParticles[NeutronsFD_ind_mom_max]->cal(n_detlayer_1e_cut)->getLw() > clasAna.getEcalEdgeCuts())

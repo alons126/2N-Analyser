@@ -56,7 +56,8 @@ public:
                                           const int &particlePDGtmp, const bool &inFD_AMaps);
 
     void SafetyCheck_AMaps_Reco_leading_neutrons(const char *FILE, const int LINE,
-                                                 const int &particlePDGtmp, const bool &inFD_AMaps);
+                                                 std::vector<region_part_ptr> &allParticles, const int &NeutronsFD_ind_mom_max,
+                                                 const bool &hitPCAL_1e_cut, const bool &hitECIN_1e_cut, const bool &hitECOUT_1e_cut);
 
     // SafetyCheck_one_good_electron function ------------------------------------------------------------------------------------------------------------------------------------------------
 
