@@ -78,13 +78,13 @@ public:
     // SafetyCheck_1p function ------------------------------------------------------------------------------------------------------------------------------------------------
 
     void SafetyCheck_1p(const char *FILE, const int LINE,
-                        const vector<int> &Protons_ind, std::vector<region_part_ptr> &e_1p, std::vector<region_part_ptr> &p_1p,
+                        const vector<int> &Protons_ind, region_part_ptr &e_1p, region_part_ptr &p_1p,
                         const bool &Enable_FD_photons, const vector<int> &PhotonsFD_ind);
 
     // SafetyCheck_1n function ------------------------------------------------------------------------------------------------------------------------------------------------
 
     void SafetyCheck_1n(const char *FILE, const int LINE,
-                        const vector<int> &NeutronsFD_ind, std::vector<region_part_ptr> &e_1n, std::vector<region_part_ptr> &n_1n,
+                        const vector<int> &NeutronsFD_ind, region_part_ptr &e_1n, region_part_ptr &n_1n,
                         const bool &Enable_FD_photons, const vector<int> &PhotonsFD_ind, const bool &ES_by_leading_FDneutron, ParticleID &pid,
                         std::vector<region_part_ptr> &allParticles, const int &NeutronsFD_ind_mom_max, const bool &apply_nucleon_cuts);
 
