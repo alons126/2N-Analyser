@@ -32,7 +32,7 @@ public:
 
     void SafetyCheck_leading_FD_neutron(const char *FILE, const int LINE,
                                         const bool &apply_nucleon_cuts, const bool &ES_by_leading_FDneutron, const int &NeutronsFD_ind_mom_max, std::vector<region_part_ptr> &allParticles,
-                                        const vector<int> &NeutronsFD_ind, ParticleID &pid);
+                                        vector<int> &NeutronsFD_ind, ParticleID &pid);
 
     // PrintStepTester function ---------------------------------------------------------------------------------------------------------------------------------------------
 
