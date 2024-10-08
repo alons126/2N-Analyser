@@ -10627,26 +10627,27 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         // }
 
         // Safety checks for FD protons
-        for (int i = 0; i < Protons_ind.size(); i++)
-        {
-            if (protons[i]->getRegion() == FD)
-            {
-                double Reco_Proton_Momentum = protons[i]->getP();
+        CodeDebugger.SafetyCheck_FD_protons(__FILE__, __LINE__,Protons_ind, protons, p_mom_th);
+        // for (int i = 0; i < Protons_ind.size(); i++)
+        // {
+        //     if (protons[i]->getRegion() == FD)
+        //     {
+        //         double Reco_Proton_Momentum = protons[i]->getP();
 
-                if (!((Reco_Proton_Momentum <= p_mom_th.GetUpperCut()) && (Reco_Proton_Momentum >= p_mom_th.GetLowerCut())))
-                {
-                    cout << "\033[33m\n\nFD proton check: there are FD protons outside momentum th. range! Exiting...\n\n", exit(0);
-                }
+        //         if (!((Reco_Proton_Momentum <= p_mom_th.GetUpperCut()) && (Reco_Proton_Momentum >= p_mom_th.GetLowerCut())))
+        //         {
+        //             cout << "\033[33m\n\nFD proton check: there are FD protons outside momentum th. range! Exiting...\n\n", exit(0);
+        //         }
 
-                for (int j = i + 1; j < Protons_ind.size(); j++)
-                {
-                    if (Protons_ind.at(i) == Protons_ind.at(j))
-                    {
-                        cout << "\033[33m\n\nFD proton check: duplicated FD protons! Exiting...\n\n", exit(0);
-                    }
-                }
-            }
-        }
+        //         for (int j = i + 1; j < Protons_ind.size(); j++)
+        //         {
+        //             if (Protons_ind.at(i) == Protons_ind.at(j))
+        //             {
+        //                 cout << "\033[33m\n\nFD proton check: duplicated FD protons! Exiting...\n\n", exit(0);
+        //             }
+        //         }
+        //     }
+        // }
 
         // Safety checks for FD neutrons
 
