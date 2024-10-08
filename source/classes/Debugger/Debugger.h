@@ -30,9 +30,13 @@ public:
 
     // SafetyCheck_leading_FD_neutron function ------------------------------------------------------------------------------------------------------------------------------------------------
 
-    void SafetyCheck_leading_FD_neutron(const char *FILE, const int LINE,
-                                        const bool &apply_nucleon_cuts, const bool &ES_by_leading_FDneutron, const int &NeutronsFD_ind_mom_max,
-                                        std::vector<region_part_ptr> &allParticles, vector<int> &NeutronsFD_ind, ParticleID &pid);
+    void SafetyCheck_Reco_leading_FD_neutron(const char *FILE, const int LINE,
+                                             const bool &apply_nucleon_cuts, const bool &ES_by_leading_FDneutron, const int &NeutronsFD_ind_mom_max,
+                                             std::vector<region_part_ptr> &allParticles, vector<int> &NeutronsFD_ind, ParticleID &pid);
+
+    void SafetyCheck_Truth_leading_FD_neutron(const char *FILE, const int LINE,
+                                              const bool &apply_nucleon_cuts, const bool &ES_by_leading_FDneutron, const int &NeutronsFD_ind_mom_max,
+                                              std::vector<region_part_ptr> &allParticles, vector<int> &NeutronsFD_ind, ParticleID &pid);
 
     // SafetyCheck_FD_neutron function ------------------------------------------------------------------------------------------------------------------------------------------------
 

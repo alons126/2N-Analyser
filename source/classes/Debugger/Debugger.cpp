@@ -40,9 +40,9 @@ void Debugger::SafetyCheck_FD_protons(const char *FILE, const int LINE,
 
 // SafetyCheck_leading_FD_neutron function ------------------------------------------------------------------------------------------------------------------------------------------------
 
-void Debugger::SafetyCheck_leading_FD_neutron(const char *FILE, const int LINE,
-                                              const bool &apply_nucleon_cuts, const bool &ES_by_leading_FDneutron, const int &NeutronsFD_ind_mom_max, std::vector<region_part_ptr> &allParticles,
-                                              vector<int> &NeutronsFD_ind, ParticleID &pid)
+void Debugger::SafetyCheck_Reco_leading_FD_neutron(const char *FILE, const int LINE,
+                                                   const bool &apply_nucleon_cuts, const bool &ES_by_leading_FDneutron, const int &NeutronsFD_ind_mom_max, std::vector<region_part_ptr> &allParticles,
+                                                   vector<int> &NeutronsFD_ind, ParticleID &pid)
 {
     if (ES_by_leading_FDneutron)
     {
@@ -99,6 +99,50 @@ void Debugger::SafetyCheck_leading_FD_neutron(const char *FILE, const int LINE,
                 if (dMomentum < 0)
                 {
                     PrintErrorMessage(FILE, LINE, "Leading reco nFD check: assigned nFD is not the leading!", "");
+                }
+            }
+        }
+    }
+}
+
+void Debugger::SafetyCheck_Truth_leading_FD_neutron(const char *FILE, const int LINE,
+                                                    const bool &ES_by_leading_FDneutron, const int &TL_IDed_Leading_nFD_ind, const double &TL_IDed_Leading_nFD_momentum,
+                                                    const double &Leading_TL_FDNeutron_Momentum, vector<int> TL_NeutronsFD_mom_ind, mcpar_ptr mcpbank)
+{
+    if (ES_by_leading_FDneutron)
+    {
+        if ((TL_IDed_Leading_nFD_ind != -1) && (TL_IDed_Leading_nFD_momentum != Leading_TL_FDNeutron_Momentum))
+        {
+            cout << "\033[33m\nTL_IDed_Leading_nFD_momentum = " << TL_IDed_Leading_nFD_momentum << "\n\033[0m";
+            cout << "\033[33mLeading_TL_FDNeutron_Momentum = " << Leading_TL_FDNeutron_Momentum << "\n\033[0m";
+            cout << "\033[33m\n\nLeading TL nFD check: momentum magnitude inconsistent! Exiting...\n\n", exit(0);
+        }
+
+        if ((TL_NeutronsFD_mom_ind.size() > 0) && (TL_IDed_Leading_nFD_ind == -1))
+        {
+            cout << "\033[33m\n\nLeading TL nFD check: leading was not assigned! Exiting...\n\n", exit(0);
+        }
+
+        if (TL_NeutronsFD_mom_ind.size() == 1)
+        {
+            if (TL_NeutronsFD_mom_ind.at(0) != TL_IDed_Leading_nFD_ind)
+            {
+                cout << "\033[33m\n\nLeading TL nFD check: leading was assigned incorrectly! Exiting...\n\n", exit(0);
+            }
+        }
+        else if (TL_NeutronsFD_mom_ind.size() > 1)
+        {
+            for (int &i : TL_NeutronsFD_mom_ind)
+            {
+                mcpbank->setEntry(i);
+
+                double Leading_neutron_momentum = Leading_TL_FDNeutron_Momentum;
+                double Temp_neutron_momentum = rCalc(mcpbank->getPx(), mcpbank->getPy(), mcpbank->getPz());
+                double dMomentum = Leading_neutron_momentum - Temp_neutron_momentum;
+
+                if (dMomentum < 0)
+                {
+                    cout << "\033[33m\n\nLeading TL nFD check: assigned nFD is not the leading! Exiting...\n\n", exit(0);
                 }
             }
         }

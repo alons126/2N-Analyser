@@ -10632,7 +10632,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         CodeDebugger.SafetyCheck_FD_protons(__FILE__, __LINE__, Protons_ind, protons, p_mom_th);
 
         // Safety checks for FD neutrons - checks for leading FD neutron
-        CodeDebugger.SafetyCheck_leading_FD_neutron(__FILE__, __LINE__, apply_nucleon_cuts, ES_by_leading_FDneutron, NeutronsFD_ind_mom_max, allParticles, NeutronsFD_ind, pid);
+        CodeDebugger.SafetyCheck_Reco_leading_FD_neutron(__FILE__, __LINE__, apply_nucleon_cuts, ES_by_leading_FDneutron, NeutronsFD_ind_mom_max, allParticles, NeutronsFD_ind, pid);
 
         //  Safety checks for FD neutrons - checks for FD neutrons
         CodeDebugger.SafetyCheck_FD_neutron(__FILE__, __LINE__, apply_nucleon_cuts, allParticles, n_mom_th, NeutronsFD_ind, pid);
@@ -10663,7 +10663,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         }
 
         // Print events to file
-        if (PrintEvents)
+        if (PrintEvents) // TODO: add to debugger class?
         {
             bool EventPrintSelection = (Ne == Ne_in_event && Nf >= Nf_in_event);
             int event = c12->runconfig()->getEvent();
@@ -10767,8 +10767,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 {
                     bool e_inFD = aMaps.IsInFDQuery((!TL_fiducial_cuts), ThetaFD, "Electron", Particle_TL_Momentum, Particle_TL_Theta, Particle_TL_Phi);
 
-                    if ((Particle_TL_Momentum >= TL_e_mom_cuts.GetLowerCut()) &&
-                        (Particle_TL_Momentum <= TL_e_mom_cuts.GetUpperCut()))
+                    if ((Particle_TL_Momentum >= TL_e_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_e_mom_cuts.GetUpperCut()))
                     {
                         TL_Electron_mom_ind.push_back(i);
                     }
@@ -10777,8 +10776,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
                     if (inFD)
                     {
-                        if ((Particle_TL_Momentum >= TL_e_mom_cuts.GetLowerCut()) &&
-                            (Particle_TL_Momentum <= TL_e_mom_cuts.GetUpperCut()))
+                        if ((Particle_TL_Momentum >= TL_e_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_e_mom_cuts.GetUpperCut()))
                         {
                             TL_ElectronFD_mom_ind.push_back(i);
 
@@ -10796,8 +10794,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                     bool n_inFD = aMaps.IsInFDQuery((!TL_fiducial_cuts), ThetaFD, "Neutron", Particle_TL_Momentum, Particle_TL_Theta, Particle_TL_Phi,
                                                     Calc_eff_overlapping_FC);
 
-                    if ((Particle_TL_Momentum >= TL_n_mom_cuts.GetLowerCut()) &&
-                        (Particle_TL_Momentum <= TL_n_mom_cuts.GetUpperCut()))
+                    if ((Particle_TL_Momentum >= TL_n_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_n_mom_cuts.GetUpperCut()))
                     {
                         TL_Neutrons_mom_ind.push_back(i);
                     }
@@ -10806,8 +10803,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
                     if (inFD)
                     {
-                        if ((Particle_TL_Momentum >= TL_n_mom_cuts.GetLowerCut()) &&
-                            (Particle_TL_Momentum <= TL_n_mom_cuts.GetUpperCut()))
+                        if ((Particle_TL_Momentum >= TL_n_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_n_mom_cuts.GetUpperCut()))
                         {
                             TL_NeutronsFD_mom_ind.push_back(i);
 
@@ -10836,8 +10832,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 {
                     bool p_inFD = aMaps.IsInFDQuery((!TL_fiducial_cuts), ThetaFD, "Proton", Particle_TL_Momentum, Particle_TL_Theta, Particle_TL_Phi, Calc_eff_overlapping_FC);
 
-                    if ((Particle_TL_Momentum >= TL_p_mom_cuts.GetLowerCut()) &&
-                        (Particle_TL_Momentum <= TL_p_mom_cuts.GetUpperCut()))
+                    if ((Particle_TL_Momentum >= TL_p_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_p_mom_cuts.GetUpperCut()))
                     {
                         TL_Protons_mom_ind.push_back(i);
                     }
@@ -10846,8 +10841,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
                     if (inFD)
                     {
-                        if ((Particle_TL_Momentum >= TL_pFD_mom_cuts.GetLowerCut()) &&
-                            (Particle_TL_Momentum <= TL_pFD_mom_cuts.GetUpperCut()))
+                        if ((Particle_TL_Momentum >= TL_pFD_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_pFD_mom_cuts.GetUpperCut()))
                         {
                             TL_ProtonsFD_mom_ind.push_back(i);
 
@@ -10861,8 +10855,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                     }
                     else if (inCD)
                     {
-                        if ((Particle_TL_Momentum >= TL_pCD_mom_cuts.GetLowerCut()) &&
-                            (Particle_TL_Momentum <= TL_pCD_mom_cuts.GetUpperCut()))
+                        if ((Particle_TL_Momentum >= TL_pCD_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_pCD_mom_cuts.GetUpperCut()))
                         {
                             TL_ProtonsCD_mom_ind.push_back(i);
                         }
@@ -10872,8 +10865,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 }
                 else if (particlePDGtmp == 211)
                 {
-                    if ((Particle_TL_Momentum >= TL_pip_mom_cuts.GetLowerCut()) &&
-                        (Particle_TL_Momentum <= TL_pip_mom_cuts.GetUpperCut()))
+                    if ((Particle_TL_Momentum >= TL_pip_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_pip_mom_cuts.GetUpperCut()))
                     {
                         TL_piplus_mom_ind.push_back(i);
                     }
@@ -10882,8 +10874,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
                     if (inFD)
                     {
-                        if ((Particle_TL_Momentum >= TL_pipFD_mom_cuts.GetLowerCut()) &&
-                            (Particle_TL_Momentum <= TL_pipFD_mom_cuts.GetUpperCut()))
+                        if ((Particle_TL_Momentum >= TL_pipFD_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_pipFD_mom_cuts.GetUpperCut()))
                         {
                             TL_piplusFD_mom_ind.push_back(i);
                         }
@@ -10892,8 +10883,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                     }
                     else if (inCD)
                     {
-                        if ((Particle_TL_Momentum >= TL_pipCD_mom_cuts.GetLowerCut()) &&
-                            (Particle_TL_Momentum <= TL_pipCD_mom_cuts.GetUpperCut()))
+                        if ((Particle_TL_Momentum >= TL_pipCD_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_pipCD_mom_cuts.GetUpperCut()))
                         {
                             TL_piplusCD_mom_ind.push_back(i);
                         }
@@ -10903,8 +10893,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 }
                 else if (particlePDGtmp == -211)
                 {
-                    if ((Particle_TL_Momentum >= TL_pim_mom_cuts.GetLowerCut()) &&
-                        (Particle_TL_Momentum <= TL_pim_mom_cuts.GetUpperCut()))
+                    if ((Particle_TL_Momentum >= TL_pim_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_pim_mom_cuts.GetUpperCut()))
                     {
                         TL_piminus_mom_ind.push_back(i);
                     }
@@ -10913,8 +10902,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
                     if (inFD)
                     {
-                        if ((Particle_TL_Momentum >= TL_pimFD_mom_cuts.GetLowerCut()) &&
-                            (Particle_TL_Momentum <= TL_pimFD_mom_cuts.GetUpperCut()))
+                        if ((Particle_TL_Momentum >= TL_pimFD_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_pimFD_mom_cuts.GetUpperCut()))
                         {
                             TL_piminusFD_mom_ind.push_back(i);
                         }
@@ -10923,8 +10911,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                     }
                     else if (inCD)
                     {
-                        if ((Particle_TL_Momentum >= TL_pimCD_mom_cuts.GetLowerCut()) &&
-                            (Particle_TL_Momentum <= TL_pimCD_mom_cuts.GetUpperCut()))
+                        if ((Particle_TL_Momentum >= TL_pimCD_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_pimCD_mom_cuts.GetUpperCut()))
                         {
                             TL_piminusCD_mom_ind.push_back(i);
                         }
@@ -10934,8 +10921,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 }
                 else if (particlePDGtmp == 111)
                 {
-                    if ((Particle_TL_Momentum >= TL_pi0_mom_cuts.GetLowerCut()) &&
-                        (Particle_TL_Momentum <= TL_pi0_mom_cuts.GetUpperCut()))
+                    if ((Particle_TL_Momentum >= TL_pi0_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_pi0_mom_cuts.GetUpperCut()))
                     {
                         TL_pizero_mom_ind.push_back(i);
                     }
@@ -10944,8 +10930,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
                     if (inFD)
                     {
-                        if ((Particle_TL_Momentum >= TL_pi0_mom_cuts.GetLowerCut()) &&
-                            (Particle_TL_Momentum <= TL_pi0_mom_cuts.GetUpperCut()))
+                        if ((Particle_TL_Momentum >= TL_pi0_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_pi0_mom_cuts.GetUpperCut()))
                         {
                             TL_pi0FD_mom_ind.push_back(i);
                         }
@@ -10955,8 +10940,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 }
                 else if (particlePDGtmp == 22)
                 {
-                    if ((Particle_TL_Momentum >= TL_ph_mom_cuts.GetLowerCut()) &&
-                        (Particle_TL_Momentum <= TL_ph_mom_cuts.GetUpperCut()))
+                    if ((Particle_TL_Momentum >= TL_ph_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_ph_mom_cuts.GetUpperCut()))
                     {
                         TL_Photons_mom_ind.push_back(i);
                     }
@@ -10965,8 +10949,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
                     if (inFD)
                     {
-                        if ((Particle_TL_Momentum >= TL_ph_mom_cuts.GetLowerCut()) &&
-                            (Particle_TL_Momentum <= TL_ph_mom_cuts.GetUpperCut()))
+                        if ((Particle_TL_Momentum >= TL_ph_mom_cuts.GetLowerCut()) && (Particle_TL_Momentum <= TL_ph_mom_cuts.GetUpperCut()))
                         {
                             TL_PhotonsFD_mom_ind.push_back(i);
                         }
@@ -11003,70 +10986,18 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 Leading_Neutron_inFD_wFC = false;
             }
 
-            // Safety check
-            /* Safety check for leading FD neutron */
-            if (ES_by_leading_FDneutron)
-            {
-                if ((TL_IDed_Leading_nFD_ind != -1) && (TL_IDed_Leading_nFD_momentum != Leading_TL_FDNeutron_Momentum))
-                {
-                    cout << "\033[33m\nTL_IDed_Leading_nFD_momentum = " << TL_IDed_Leading_nFD_momentum << "\n\033[0m";
-                    cout << "\033[33mLeading_TL_FDNeutron_Momentum = " << Leading_TL_FDNeutron_Momentum << "\n\033[0m";
-                    cout << "\033[33m\n\nLeading TL nFD check: momentum magnitude inconsistent! Exiting...\n\n", exit(0);
-                }
-
-                if ((TL_NeutronsFD_mom_ind.size() > 0) && (TL_IDed_Leading_nFD_ind == -1))
-                {
-                    cout << "\033[33m\n\nLeading TL nFD check: leading was not assigned! Exiting...\n\n", exit(0);
-                }
-
-                if (TL_NeutronsFD_mom_ind.size() == 1)
-                {
-                    if (TL_NeutronsFD_mom_ind.at(0) != TL_IDed_Leading_nFD_ind)
-                    {
-                        cout << "\033[33m\n\nLeading TL nFD check: leading was assigned incorrectly! Exiting...\n\n", exit(0);
-                    }
-                }
-                else if (TL_NeutronsFD_mom_ind.size() > 1)
-                {
-                    for (int &i : TL_NeutronsFD_mom_ind)
-                    {
-                        mcpbank->setEntry(i);
-
-                        double Leading_neutron_momentum = Leading_TL_FDNeutron_Momentum;
-                        double Temp_neutron_momentum = rCalc(mcpbank->getPx(), mcpbank->getPy(), mcpbank->getPz());
-                        double dMomentum = Leading_neutron_momentum - Temp_neutron_momentum;
-
-                        if (dMomentum < 0)
-                        {
-                            cout << "\033[33m\n\nLeading TL nFD check: assigned nFD is not the leading! Exiting...\n\n", exit(0);
-                        }
-                    }
-                }
-            }
+            // Safety check for truth leading FD neutron
+            SafetyCheck_Truth_leading_FD_neutron(__FILE__, __LINE__,
+                                                 ES_by_leading_FDneutron, TL_IDed_Leading_nFD_ind, TL_IDed_Leading_nFD_momentum,
+                                                 Leading_TL_FDNeutron_Momentum, TL_NeutronsFD_mom_ind, mcpbank);
 
             // Event selection for TL plots
 
             // Setting up event selection for AMaps
-            // // test 1:
-            // bool TL_Event_Selection_1e_cut_AMaps = (TL_Electron_mom_ind.size() == 1);
-            // bool TL_Event_Selection_1e_cut = TL_Event_Selection_1e_cut_AMaps;
-
-            // // test 2:
-            // bool TL_Event_Selection_1e_cut_AMaps = (TL_ElectronFD_mom_ind.size() == 1);
-            // bool TL_Event_Selection_1e_cut = TL_Event_Selection_1e_cut_AMaps;
-
-            // // test 3:
-            // bool TL_Event_Selection_1e_cut_AMaps = (TL_ElectronFD_mom_ind.size() == 1);
-            // bool TL_Event_Selection_1e_cut = (TL_Event_Selection_1e_cut_AMaps &&
-            //                                   TL_ElectronFD_mom_ind.size() == TL_ElectronFD_wFC_mom_ind.size());
-
-            // Setting up event selection for AMaps
-            bool TL_Event_Selection_1e_cut_AMaps = ((TL_Electron_mom_ind.size() == 1) &&
-                                                    (TL_ElectronFD_mom_ind.size() == 1)); // One id. FD electron above momentum th.
+            bool TL_Event_Selection_1e_cut_AMaps = ((TL_Electron_mom_ind.size() == 1) && (TL_ElectronFD_mom_ind.size() == 1)); // One id. FD electron above momentum th.
 
             // Setting up basic TL event selection
-            bool TL_Event_Selection_1e_cut = (TL_Event_Selection_1e_cut_AMaps &&
-                                              TL_ElectronFD_mom_ind.size() == TL_ElectronFD_wFC_mom_ind.size()); // One id. FD electron above momentum threshold
+            bool TL_Event_Selection_1e_cut = (TL_Event_Selection_1e_cut_AMaps && TL_ElectronFD_mom_ind.size() == TL_ElectronFD_wFC_mom_ind.size()); // One id. FD electron above momentum threshold
             TL_Event_Selection_inclusive = TL_Event_Selection_1e_cut;
             bool no_TL_pip = (TL_piplusFD_mom_ind.size() == 0 && TL_piplusCD_mom_ind.size() == 0);   // No pi+ above momentum threshold (CD & FD)
             bool no_TL_pim = (TL_piminusFD_mom_ind.size() == 0 && TL_piminusCD_mom_ind.size() == 0); // No pi- above momentum threshold (CD & FD)
@@ -11078,8 +11009,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
             // Setting up 1p TL event selection
             // 1p = one id. FD proton (any or no FD neutrons, according to the value of Enable_FD_neutrons):
-            bool TL_FDneutrons_1p = (Enable_FD_neutrons ||
-                                     (TL_NeutronsFD_mom_ind.size() == 0)); // no id. FD neutrons for Enable_FD_neutrons = false
+            bool TL_FDneutrons_1p = (Enable_FD_neutrons || (TL_NeutronsFD_mom_ind.size() == 0)); // no id. FD neutrons for Enable_FD_neutrons = false
             bool no_CDproton_1p = (TL_ProtonsCD_mom_ind.size() == 0);
             bool one_FDproton_1p = ((TL_ProtonsFD_mom_ind.size() == 1) &&
                                     (TLKinCutsCheck(c12, apply_kinematical_cuts, TL_ProtonsFD_mom_ind, FD_nucleon_theta_cut, FD_nucleon_momentum_cut)));
