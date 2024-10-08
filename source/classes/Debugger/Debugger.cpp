@@ -59,10 +59,9 @@ void Debugger::SafetyCheck_leading_FD_neutron(const char *FILE, const int LINE,
                 PrintErrorMessage(FILE, LINE, "Leading reco nFD check: Leading nFD is not in the FD!", "");
             }
 
-            if (!((allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 2112) ||
-                  (allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 22)))
+            if (!((allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 2112) || (allParticles[NeutronsFD_ind_mom_max]->par()->getPid() == 22)))
             {
-                PrintErrorMessage(FILE, LINE, ("Leading reco nFD check: A neutron PDG is not 2112 or 22 (" + allParticles[NeutronsFD_ind_mom_max]->par()->getPid()), "");
+                PrintErrorMessage(FILE, LINE, ("Leading reco nFD check: A neutron PDG is not 2112 or 22 (" + to_string(allParticles[NeutronsFD_ind_mom_max]->par()->getPid())), "");
             }
 
             if (LeadingnFDPCAL)
@@ -101,6 +100,37 @@ void Debugger::SafetyCheck_leading_FD_neutron(const char *FILE, const int LINE,
                 {
                     PrintErrorMessage(FILE, LINE, "Leading reco nFD check: assigned nFD is not the leading!", "");
                 }
+            }
+        }
+    }
+}
+
+// SafetyCheck_FD_neutron function ------------------------------------------------------------------------------------------------------------------------------------------------
+
+void Debugger::SafetyCheck_FD_neutron(const char *FILE, const int LINE,
+                                      const bool &apply_nucleon_cuts, std::vector<region_part_ptr> &allParticles, const DSCuts &n_mom_th,
+                                      vector<int> &NeutronsFD_ind, ParticleID &pid)
+{
+    for (int i = 0; i < NeutronsFD_ind.size(); i++)
+    {
+        double Reco_Neutron_Momentum = pid.GetFDNeutronP(allParticles[NeutronsFD_ind.at(i)], apply_nucleon_cuts);
+
+        if (!((Reco_Neutron_Momentum <= n_mom_th.GetUpperCut()) && (Reco_Neutron_Momentum >= n_mom_th.GetLowerCut())))
+        {
+            cout << "\033[33m\n\nallParticles[NeutronsFD_ind.at(i)]->par()->getPid() = " << allParticles[NeutronsFD_ind.at(i)]->par()->getPid()
+                 << "\n\033[0m";
+            cout << "\033[33mReco_Neutron_Momentum = " << Reco_Neutron_Momentum << "\n\033[0m";
+            cout << "\033[33mn_mom_th.GetUpperCut() = " << n_mom_th.GetUpperCut() << "\n\033[0m";
+            cout << "\033[33mn_mom_th.GetLowerCut() = " << n_mom_th.GetLowerCut() << "\n\033[0m";
+            cout << "\033[33m\n\nFD neutron check: there are FD neutrons outside momentum th. range! Exiting...\n\n", exit(0);
+            PrintErrorMessage(FILE, LINE, "FD neutron check: there are FD neutrons outside momentum th. range!", "");
+        }
+
+        for (int j = i + 1; j < NeutronsFD_ind.size(); j++)
+        {
+            if (NeutronsFD_ind.at(i) == NeutronsFD_ind.at(j))
+            {
+                PrintErrorMessage(FILE, LINE, "FD neutron check: duplicated FD neutrons!", "");
             }
         }
     }
