@@ -12366,10 +12366,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         } // the rough 1e cut
 
         // Safety checks (1e cut)
-        if (electrons.size() != 1)
-        {
-            cout << "\033[33m\n\n1e cut: single electron cut is not implemented! Exiting...\n\n", exit(0);
-        }
+        CodeDebugger.SafetyCheck_one_good_electron(__FILE__, __LINE__, electrons);
 
         // Applying electron beta cut
         bool Bad_Electron_beta;
@@ -12392,14 +12389,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         /* Safety check that we are looking at 1e cut. */
 
         // Check that we do have only one electron:
-        if (electrons.size() != 1)
-        {
-            cout << "\033[33m\n\n1e cut: electrons.size() is different than 1! Exiting...\n\n", exit(0);
-        }
-        if (electrons[0]->getRegion() != FD)
-        {
-            cout << "\033[33m\n\n1e cut: electrons is not in the FD! Exiting...\n\n", exit(0);
-        }
+        CodeDebugger.SafetyCheck_1e_cut_electron(__FILE__, __LINE__, electrons);
 
         // Check that our one electron is within momentum cuts:
         // TODO: might be problemetic if electron momentum cuts are changed. consider removing this if that does happen.

@@ -182,7 +182,7 @@ void Debugger::SafetyCheck_FD_neutron(const char *FILE, const int LINE,
 // SafetyCheck_AMaps function ------------------------------------------------------------------------------------------------------------------------------------------------
 
 void Debugger::SafetyCheck_AMaps_Truth_electrons(const char *FILE, const int LINE,
-                                                const int &particlePDGtmp, const bool &inFD_AMaps)
+                                                 const int &particlePDGtmp, const bool &inFD_AMaps)
 {
     if (particlePDGtmp != 11)
     {
@@ -196,7 +196,7 @@ void Debugger::SafetyCheck_AMaps_Truth_electrons(const char *FILE, const int LIN
 }
 
 void Debugger::SafetyCheck_AMaps_Truth_protons(const char *FILE, const int LINE,
-                                              const int &particlePDGtmp, const bool &inFD_AMaps)
+                                               const int &particlePDGtmp, const bool &inFD_AMaps)
 {
     if (particlePDGtmp != 2212)
     {
@@ -210,7 +210,7 @@ void Debugger::SafetyCheck_AMaps_Truth_protons(const char *FILE, const int LINE,
 }
 
 void Debugger::SafetyCheck_AMaps_Truth_neutrons(const char *FILE, const int LINE,
-                                              const int &particlePDGtmp, const bool &inFD_AMaps)
+                                                const int &particlePDGtmp, const bool &inFD_AMaps)
 {
     if (particlePDGtmp != 2112)
     {
@@ -220,5 +220,31 @@ void Debugger::SafetyCheck_AMaps_Truth_neutrons(const char *FILE, const int LINE
     if (!inFD_AMaps)
     {
         PrintErrorMessage(FILE, LINE, "TL neutrons check (AMaps & WMaps): TL neutron is not in FD!", "");
+    }
+}
+
+// SafetyCheck_one_good_electron function ------------------------------------------------------------------------------------------------------------------------------------------------
+
+void Debugger::SafetyCheck_one_good_electron(const char *FILE, const int LINE,
+                                             std::vector<region_part_ptr> &electrons)
+{
+    if (electrons.size() != 1)
+    {
+        PrintErrorMessage(FILE, LINE, "1e cut: single electron cut is not implemented!", "");
+    }
+}
+
+// SafetyCheck_one_good_electron function ------------------------------------------------------------------------------------------------------------------------------------------------
+
+void Debugger::SafetyCheck_1e_cut_electron(const char *FILE, const int LINE,
+                                           std::vector<region_part_ptr> &electrons)
+{
+    if (electrons.size() != 1)
+    {
+        PrintErrorMessage(FILE, LINE, "1e cut: electrons.size() is different than 1!", "");
+    }
+    if (electrons[0]->getRegion() != FD)
+    {
+        PrintErrorMessage(FILE, LINE, "1e cut: electrons is not in the FD!", "");
     }
 }
