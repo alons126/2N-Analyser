@@ -21,7 +21,8 @@ scp -r asportes@ftp.jlab.org:/w/hallb-scshelf2102/clas12/asportes/recon_c12_6gev
 #include "../source/classes/hPlots/hPlot1D.cpp"
 #include "../source/classes/hPlots/hPlot2D.cpp"
 
-#if MOMENTUMRESOLUTION_H == false
+#if defined(MOMENTUMRESOLUTION_H)
+#else
 #include "../source/classes/MomentumResolution/MomentumResolution.cpp"
 #endif
 
