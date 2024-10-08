@@ -35,8 +35,8 @@ public:
                                              std::vector<region_part_ptr> &allParticles, vector<int> &NeutronsFD_ind, ParticleID &pid);
 
     void SafetyCheck_Truth_leading_FD_neutron(const char *FILE, const int LINE,
-                                              const bool &apply_nucleon_cuts, const bool &ES_by_leading_FDneutron, const int &NeutronsFD_ind_mom_max,
-                                              std::vector<region_part_ptr> &allParticles, vector<int> &NeutronsFD_ind, ParticleID &pid);
+                                              const bool &ES_by_leading_FDneutron, const int &TL_IDed_Leading_nFD_ind, const double &TL_IDed_Leading_nFD_momentum,
+                                              const double &Leading_TL_FDNeutron_Momentum, vector<int> TL_NeutronsFD_mom_ind, mcpar_ptr mcpbank);
 
     // SafetyCheck_FD_neutron function ------------------------------------------------------------------------------------------------------------------------------------------------
 

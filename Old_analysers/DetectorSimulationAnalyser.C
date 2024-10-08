@@ -10987,9 +10987,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             }
 
             // Safety check for truth leading FD neutron
-            SafetyCheck_Truth_leading_FD_neutron(__FILE__, __LINE__,
-                                                 ES_by_leading_FDneutron, TL_IDed_Leading_nFD_ind, TL_IDed_Leading_nFD_momentum,
-                                                 Leading_TL_FDNeutron_Momentum, TL_NeutronsFD_mom_ind, mcpbank);
+            CodeDebugger.SafetyCheck_Truth_leading_FD_neutron(__FILE__, __LINE__, ES_by_leading_FDneutron, TL_IDed_Leading_nFD_ind, TL_IDed_Leading_nFD_momentum,
+                                                              Leading_TL_FDNeutron_Momentum, TL_NeutronsFD_mom_ind, mcpbank);
 
             // Event selection for TL plots
 
