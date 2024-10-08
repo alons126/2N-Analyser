@@ -115,13 +115,13 @@ void Debugger::SafetyCheck_FD_neutron(const char *FILE, const int LINE,
     {
         double Reco_Neutron_Momentum = pid.GetFDNeutronP(allParticles[NeutronsFD_ind.at(i)], apply_nucleon_cuts);
 
-        if (!((Reco_Neutron_Momentum <= n_mom_th.GetUpperCut()) && (Reco_Neutron_Momentum >= n_mom_th.GetLowerCut())))
+        if (!((Reco_Neutron_Momentum <= n_mom_th.GetUpperCutConst()) && (Reco_Neutron_Momentum >= n_mom_th.GetLowerCutConst())))
         {
             cout << "\033[33m\n\nallParticles[NeutronsFD_ind.at(i)]->par()->getPid() = " << allParticles[NeutronsFD_ind.at(i)]->par()->getPid()
                  << "\n\033[0m";
             cout << "\033[33mReco_Neutron_Momentum = " << Reco_Neutron_Momentum << "\n\033[0m";
-            cout << "\033[33mn_mom_th.GetUpperCut() = " << n_mom_th.GetUpperCut() << "\n\033[0m";
-            cout << "\033[33mn_mom_th.GetLowerCut() = " << n_mom_th.GetLowerCut() << "\n\033[0m";
+            cout << "\033[33mn_mom_th.GetUpperCutConst() = " << n_mom_th.GetUpperCutConst() << "\n\033[0m";
+            cout << "\033[33mn_mom_th.GetLowerCutConst() = " << n_mom_th.GetLowerCutConst() << "\n\033[0m";
             cout << "\033[33m\n\nFD neutron check: there are FD neutrons outside momentum th. range! Exiting...\n\n", exit(0);
             PrintErrorMessage(FILE, LINE, "FD neutron check: there are FD neutrons outside momentum th. range!", "");
         }
