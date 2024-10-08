@@ -1,5 +1,7 @@
 #include "Debugger.h"
 
+// SafetyCheck_clas12ana_particles function ------------------------------------------------------------------------------------------------------------------------------------------------
+
 void Debugger::SafetyCheck_clas12ana_particles(const char *FILE, const int LINE,
                                                const bool &clas12ana_particles, std::vector<region_part_ptr> &allParticles, const int Nf)
 {
@@ -8,6 +10,8 @@ void Debugger::SafetyCheck_clas12ana_particles(const char *FILE, const int LINE,
         PrintErrorMessage(FILE, LINE, "allParticles.size() is different than Nf!", "");
     }
 }
+
+// SafetyCheck_FD_protons function ------------------------------------------------------------------------------------------------------------------------------------------------
 
 void Debugger::SafetyCheck_FD_protons(const char *FILE, const int LINE,
                                       const vector<int> &Protons_ind, std::vector<region_part_ptr> &protons, const DSCuts &p_mom_th)
@@ -18,7 +22,7 @@ void Debugger::SafetyCheck_FD_protons(const char *FILE, const int LINE,
         {
             double Reco_Proton_Momentum = protons[i]->getP();
 
-            if (!((Reco_Proton_Momentum <= p_mom_th.GetUpperCut()) && (Reco_Proton_Momentum >= p_mom_th.GetLowerCut())))
+            if (!((Reco_Proton_Momentum <= p_mom_th.GetUpperCutConst()) && (Reco_Proton_Momentum >= p_mom_th.GetLowerCutConst())))
             {
                 PrintErrorMessage(FILE, LINE, "FD proton check: there are FD protons outside momentum th. range!", "");
             }

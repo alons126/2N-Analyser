@@ -17,8 +17,7 @@ public:
 
     Debugger() = default;
 
-    // PrintStepTester function ---------------------------------------------------------------------------------------------------------------------------------------------
-    // Safety check function ------------------------------------------------------------------------------------------------------------------------------------------------
+    // SafetyCheck_clas12ana_particles function ------------------------------------------------------------------------------------------------------------------------------------------------
 
     void SafetyCheck_clas12ana_particles(const char *FILE, const int LINE,
                                          const bool &clas12ana_particles, std::vector<region_part_ptr> &allParticles, const int Nf);
