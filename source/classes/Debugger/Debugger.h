@@ -16,6 +16,12 @@ public:
     Debugger() = default;
 
     // PrintStepTester function ---------------------------------------------------------------------------------------------------------------------------------------------
+    // Safety check function ------------------------------------------------------------------------------------------------------------------------------------------------
+
+    void SafetyCheck_clas12ana_particles(const char *FILE, const int LINE,
+                                         const bool &clas12ana_particles, std::vector<region_part_ptr> &allParticles, const int Nf);
+
+    // PrintStepTester function ---------------------------------------------------------------------------------------------------------------------------------------------
 
     void PrintStepTester(const bool &DebuggerMode)
     {
@@ -30,7 +36,7 @@ public:
 
     // PrintErrorMessage function -------------------------------------------------------------------------------------------------------------------------------------------
 
-    void PrintErrorMessage(const std::string &ErrorMessage, const std::string &FunctionName)
+    void PrintErrorMessage(const std::string &ErrorMessage, const std::string &FunctionName = "")
     {
         std::cerr << "Error: " << ErrorMessage << std::endl;
 
@@ -42,6 +48,24 @@ public:
         {
             std::cerr << "File: " << __FILE__ << ", Line: " << __LINE__ << std::endl;
         }
+
+        std::cerr << "Aborting." << std::endl, exit(0);
+    }
+
+    void PrintErrorMessage(const char *FILE, const int LINE, const std::string &ErrorMessage, const std::string &FunctionName = "")
+    {
+        std::cerr << "Error: " << ErrorMessage << std::endl;
+
+        if (FunctionName != "")
+        {
+            std::cerr << "File: " << FILE << ", Line: " << LINE << ", Function: " << FunctionName << std::endl;
+        }
+        else
+        {
+            std::cerr << "File: " << FILE << ", Line: " << LINE << std::endl;
+        }
+
+        std::cerr << "Aborting." << std::endl, exit(0);
     }
 };
 

@@ -2718,79 +2718,6 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                  directories.Momentum_Directory_map["Analysis_plots_momentum_pFDpCD_Directory"], "07b_P_tot_minus_q_vs_q_pFDpCD",
                                                  Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
 
-    //    hPlot2D hP_tot_minus_q_vs_q_S1_pFDpCD = hPlot2D("pFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S1",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 0#leqP_{tot}<0.5 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_pFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_pFDpCD_S1",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S2_pFDpCD = hPlot2D("pFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S2",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 0.5#leqP_{tot}<1.0 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_pFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_pFDpCD_S2",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S3_pFDpCD = hPlot2D("pFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S3",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 1.0#leqP_{tot}<1.5 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_pFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_pFDpCD_S3",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S4_pFDpCD = hPlot2D("pFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S4",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 1.5#leqP_{tot}<2.0 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_pFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_pFDpCD_S4",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S5_pFDpCD = hPlot2D("pFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S5",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 2.0#leqP_{tot}<2.5 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_pFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_pFDpCD_S5",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S6_pFDpCD = hPlot2D("pFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S6",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 2.5#leqP_{tot}<3.0 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_pFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_pFDpCD_S6",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S7_pFDpCD = hPlot2D("pFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S7",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 3.0#leqP_{tot}<3.5 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_pFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_pFDpCD_S7",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S8_pFDpCD = hPlot2D("pFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S8",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 3.5#leqP_{tot}<4.0 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_pFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_pFDpCD_S8",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S9_pFDpCD = hPlot2D("pFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S9",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 4.0#leqP_{tot}<4.5 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_pFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_pFDpCD_S9",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S10_pFDpCD = hPlot2D("pFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S10",
-    //                                                     "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 4.5#leqP_{tot}<5.0 [GeV/C]",
-    //                                                     "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                     directories.Momentum_Directory_map["Analysis_plots_momentum_pFDpCD_Directory"],
-    //                                                     "08_P_tot_minus_q_vs_q_pFDpCD_S10",
-    //                                                     Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S11_pFDpCD = hPlot2D("pFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S11",
-    //                                                     "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 5.0#leqP_{tot}<5.5 [GeV/C]",
-    //                                                     "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                     directories.Momentum_Directory_map["Analysis_plots_momentum_pFDpCD_Directory"],
-    //                                                     "08_P_tot_minus_q_vs_q_pFDpCD_S11",
-    //                                                     Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S12_pFDpCD = hPlot2D("pFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S12",
-    //                                                     "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 5.5#leqP_{tot}<6.0 [GeV/C]",
-    //                                                     "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                     directories.Momentum_Directory_map["Analysis_plots_momentum_pFDpCD_Directory"],
-    //                                                     "08_P_tot_minus_q_vs_q_pFDpCD_S12",
-    //                                                     Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-
     // Total and Relative nucleon momenta (nFDpCD)
     hPlot1D hP_tot_nFDpCD = hPlot1D("nFDpCD", "", "Total nucleon momentum (3-vector)", "Total nucleon 3-momentum", "|#vec{P}_{tot}| = |#vec{P}_{nL} + #vec{P}_{nR}| [GeV/c]",
                                     directories.Momentum_Directory_map["Analysis_plots_momentum_nFDpCD_Directory"], "02a_P_tot_nFDpCD", Momentum_lboundary, Momentum_uboundary,
@@ -2831,79 +2758,6 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                  "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
                                                  directories.Momentum_Directory_map["Analysis_plots_momentum_nFDpCD_Directory"], "07b_P_tot_minus_q_vs_q_nFDpCD",
                                                  Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-
-    //    hPlot2D hP_tot_minus_q_vs_q_S1_nFDpCD = hPlot2D("nFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S1",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 0#leqP_{tot}<0.5 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_nFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_nFDpCD_S1",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S2_nFDpCD = hPlot2D("nFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S2",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 0.5#leqP_{tot}<1.0 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_nFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_nFDpCD_S2",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S3_nFDpCD = hPlot2D("nFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S3",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 1.0#leqP_{tot}<1.5 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_nFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_nFDpCD_S3",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S4_nFDpCD = hPlot2D("nFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S4",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 1.5#leqP_{tot}<2.0 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_nFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_nFDpCD_S4",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S5_nFDpCD = hPlot2D("nFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S5",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 2.0#leqP_{tot}<2.5 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_nFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_nFDpCD_S5",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S6_nFDpCD = hPlot2D("nFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S6",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 2.5#leqP_{tot}<3.0 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_nFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_nFDpCD_S6",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S7_nFDpCD = hPlot2D("nFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S7",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 3.0#leqP_{tot}<3.5 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_nFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_nFDpCD_S7",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S8_nFDpCD = hPlot2D("nFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S8",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 3.5#leqP_{tot}<4.0 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_nFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_nFDpCD_S8",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S9_nFDpCD = hPlot2D("nFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S9",
-    //                                                    "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 4.0#leqP_{tot}<4.5 [GeV/C]",
-    //                                                    "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                    directories.Momentum_Directory_map["Analysis_plots_momentum_nFDpCD_Directory"],
-    //                                                    "08_P_tot_minus_q_vs_q_nFDpCD_S9",
-    //                                                    Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S10_nFDpCD = hPlot2D("nFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S10",
-    //                                                     "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 4.5#leqP_{tot}<5.0 [GeV/C]",
-    //                                                     "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                     directories.Momentum_Directory_map["Analysis_plots_momentum_nFDpCD_Directory"],
-    //                                                     "08_P_tot_minus_q_vs_q_nFDpCD_S10",
-    //                                                     Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S11_nFDpCD = hPlot2D("nFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S11",
-    //                                                     "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 5.0#leqP_{tot}<5.5 [GeV/C]",
-    //                                                     "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                     directories.Momentum_Directory_map["Analysis_plots_momentum_nFDpCD_Directory"],
-    //                                                     "08_P_tot_minus_q_vs_q_nFDpCD_S11",
-    //                                                     Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
-    //    hPlot2D hP_tot_minus_q_vs_q_S12_nFDpCD = hPlot2D("nFDpCD", "", "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| S12",
-    //                                                     "|#vec{P}_{tot} - #vec{q}| vs. |#vec{q}| for 5.5#leqP_{tot}<6.0 [GeV/C]",
-    //                                                     "|#vec{q}| [GeV/c]", "|#vec{P}_{tot} - #vec{q}| = |#vec{P}_{nL} + #vec{P}_{nR}- #vec{q}| [GeV/c]",
-    //                                                     directories.Momentum_Directory_map["Analysis_plots_momentum_nFDpCD_Directory"],
-    //                                                     "08_P_tot_minus_q_vs_q_nFDpCD_S12",
-    //                                                     Momentum_lboundary, Momentum_uboundary, Momentum_lboundary, Momentum_uboundary, numTH2Dbins, numTH2Dbins);
 
     // Leading and recoil nucleon momentum plots (pFDpCD)
     hPlot1D hP_pL_pFDpCD = hPlot1D("pFDpCD", "", "Leading proton momentum", "Leading proton momentum", "P_{pL} [GeV/c]",
@@ -10726,14 +10580,12 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         // Setting up event selection
         /* set up basic event selection: */
-        bool single_electron = (Electron_ind.size() == 1); // one electron above momentum threshold
-        bool no_carged_Kaons = ((Nkp == 0) && (Nkm == 0)); // no charged Kaons whatsoever
-        bool no_carged_pions = ((Piplus_ind.size() == 0) &&
-                                (Piminus_ind.size() == 0)); // no charged Pions above momentum threshold
-        bool no_deuterons = (Nd == 0);                      // no Deuterons whatsoever
+        bool single_electron = (Electron_ind.size() == 1);                              // one electron above momentum threshold
+        bool no_carged_Kaons = ((Nkp == 0) && (Nkm == 0));                              // no charged Kaons whatsoever
+        bool no_carged_pions = ((Piplus_ind.size() == 0) && (Piminus_ind.size() == 0)); // no charged Pions above momentum threshold
+        bool no_deuterons = (Nd == 0);                                                  // no Deuterons whatsoever
 
-        bool basic_event_selection = (single_electron && no_carged_Kaons && no_carged_pions && no_deuterons &&
-                                      (Enable_FD_photons || (PhotonsFD_ind.size() == 0)));
+        bool basic_event_selection = (single_electron && no_carged_Kaons && no_carged_pions && no_deuterons && (Enable_FD_photons || (PhotonsFD_ind.size() == 0)));
 
         double Weight = 1;
 
@@ -10768,10 +10620,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
         // Safety check for clas12ana particles
         /* Safety check that allParticles.size(), Nf are the same */
-        if ((clas12ana_particles) && (allParticles.size() != Nf))
-        {
-            cout << "\033[33m\n\nallParticles.size() is different than Nf! Exiting...\n\n", exit(0);
-        }
+        debugger.SafetyCheck(__FILE__, __LINE__, clas12ana_particles, allParticles, Nf + 1);
+        // if ((clas12ana_particles) && (allParticles.size() != Nf))
+        // {
+        //     cout << "\033[33m\n\nallParticles.size() is different than Nf! Exiting...\n\n", exit(0);
+        // }
 
         // Safety checks for FD protons
         for (int i = 0; i < Protons_ind.size(); i++)
