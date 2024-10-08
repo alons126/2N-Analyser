@@ -12044,7 +12044,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                         /* Fill TL electron acceptance maps */
 
                         // Safety checks for TL electrons (AMaps & WMaps)
-                        SafetyCheck_AMaps_Truth_electrons(__FILE__, __LINE__, particlePDGtmp, inFD_AMaps);
+                        CodeDebugger.SafetyCheck_AMaps_Truth_electrons(__FILE__, __LINE__, particlePDGtmp, inFD_AMaps);
 
                         Electron_TL_Momentum = Particle_TL_Momentum;
                         Electron_TL_Theta = Particle_TL_Theta;
@@ -12119,7 +12119,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 { // if id. TL leading neutron
 
                     // Safety checks for TL neutrons (AMaps & WMaps)
-                    CodeDebugger.SafetyCheck_AMaps_Truth_neutrons(__FILE__, __LINE__, particlePDGtmp, inFD_AMaps);
+                    CodeDebugger.SafetyCheck_AMaps_Truth_neutrons(__FILE__, __LINE__, particlePDGtmp, inFD);
 
                     bool FD_Theta_Cut_TL_neutrons = (Particle_TL_Theta <= FD_nucleon_theta_cut.GetUpperCut());
                     bool FD_Momentum_Cut_TL_neutrons = ((Particle_TL_Momentum <= FD_nucleon_momentum_cut.GetUpperCut()) &&
@@ -12389,7 +12389,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         /* Safety check that we are looking at 1e cut. */
 
         // Check that we do have only one electron:
-        CodeDebugger.SafetyCheck_1e_cut_electron(__FILE__, __LINE__, electrons);
+        CodeDebugger.SafetyCheck_1e_cut_electron(__FILE__, __LINE__, electrons, Electron_ind);
 
         // events counts (1e cut)
         ++num_of_events_with_exactly_1e; // logging #(events) w/ exactly 1e (after beta cut)

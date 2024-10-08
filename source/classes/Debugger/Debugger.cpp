@@ -237,7 +237,7 @@ void Debugger::SafetyCheck_one_good_electron(const char *FILE, const int LINE,
 // SafetyCheck_one_good_electron function ------------------------------------------------------------------------------------------------------------------------------------------------
 
 void Debugger::SafetyCheck_1e_cut_electron(const char *FILE, const int LINE,
-                                           std::vector<region_part_ptr> &electrons)
+                                           std::vector<region_part_ptr> &electrons, const vector<int> &Electron_ind)
 {
     if (electrons.size() != 1)
     {

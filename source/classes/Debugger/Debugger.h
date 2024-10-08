@@ -47,10 +47,10 @@ public:
     // SafetyCheck_AMaps function ------------------------------------------------------------------------------------------------------------------------------------------------
 
     void SafetyCheck_AMaps_Truth_electrons(const char *FILE, const int LINE,
-                                          const int &particlePDGtmp, const bool &inFD_AMaps);
+                                           const int &particlePDGtmp, const bool &inFD_AMaps);
 
     void SafetyCheck_AMaps_Truth_protons(const char *FILE, const int LINE,
-                                          const int &particlePDGtmp, const bool &inFD_AMaps);
+                                         const int &particlePDGtmp, const bool &inFD_AMaps);
 
     void SafetyCheck_AMaps_Truth_neutrons(const char *FILE, const int LINE,
                                           const int &particlePDGtmp, const bool &inFD_AMaps);
@@ -58,12 +58,12 @@ public:
     // SafetyCheck_one_good_electron function ------------------------------------------------------------------------------------------------------------------------------------------------
 
     void SafetyCheck_one_good_electron(const char *FILE, const int LINE,
-                                             std::vector<region_part_ptr> &electrons);
+                                       std::vector<region_part_ptr> &electrons);
 
     // SafetyCheck_1e_cut_electron function ------------------------------------------------------------------------------------------------------------------------------------------------
 
     void SafetyCheck_1e_cut_electron(const char *FILE, const int LINE,
-                                             std::vector<region_part_ptr> &electrons);
+                                     std::vector<region_part_ptr> &electrons, const vector<int> &Electron_ind);
 
     // PrintStepTester function ---------------------------------------------------------------------------------------------------------------------------------------------
 
