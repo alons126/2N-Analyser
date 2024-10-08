@@ -301,6 +301,7 @@ void Debugger::SafetyCheck_basic_event_selection(const char *FILE, const int LIN
     {
         PrintErrorMessage(FILE, LINE, (FinaleState + ": Piplus_ind.size() is different than 0!"), "");
     }
+
     if (Piminus_ind.size() != 0)
     {
         PrintErrorMessage(FILE, LINE, (FinaleState + ": Piminus_ind.size() is different than 0!"), "");
@@ -356,6 +357,7 @@ void Debugger::SafetyCheck_1n(const char *FILE, const int LINE,
     {
         PrintErrorMessage(FILE, LINE, "1n: Electron is not in the FD!", "");
     }
+
     if (n_1n->getRegion() != FD)
     {
         PrintErrorMessage(FILE, LINE, "1n: nFD is not in the FD!", "");
@@ -391,6 +393,7 @@ void Debugger::SafetyCheck_1n(const char *FILE, const int LINE,
         {
             PrintErrorMessage(FILE, LINE, "1n: a neutron have been found with a PCAL hit!", "");
         }
+
         if (!((allParticles[i]->par()->getPid() == 2112) || (allParticles[i]->par()->getPid() == 22)))
         {
             PrintErrorMessage(FILE, LINE, ("1n: A neutron PDG is not 2112 or 22 (" + to_string(allParticles[i]->par()->getPid()) + ")!"), "");
@@ -404,6 +407,7 @@ void Debugger::SafetyCheck_1n(const char *FILE, const int LINE,
         {
             PrintErrorMessage(FILE, LINE, "1n: a photon have been found without a PCAL hit!", "");
         }
+
         if (allParticles[i]->par()->getPid() != 22)
         {
             PrintErrorMessage(FILE, LINE, ("1n: A photon PDG is not 2112 or 22 (" + to_string(allParticles[i]->par()->getPid()) + ")!"), "");
@@ -417,18 +421,22 @@ void Debugger::SafetyCheck_1n(const char *FILE, const int LINE,
     {
         PrintErrorMessage(FILE, LINE, "1n: neutron is not in FD!", "");
     }
+
     if (!((NeutronPDG == 22) || (NeutronPDG == 2112)))
     {
         PrintErrorMessage(FILE, LINE, ("1n: neutral PDG is not 2112 or 22 (" + to_string(NeutronPDG) + ")!"), "");
     }
+
     if (NeutronInPCAL_1n)
     {
         PrintErrorMessage(FILE, LINE, "1n: neutron hit in PCAL!", "");
     }
+
     if (!(NeutronInECIN_1n || NeutronInECOUT_1n))
     {
         PrintErrorMessage(FILE, LINE, "1n: no neutron hit in ECIN or ECOUT!", "");
     }
+
     if (!(!NeutronInPCAL_1n && (NeutronInECIN_1n || NeutronInECOUT_1n)))
     {
         PrintErrorMessage(FILE, LINE, "1n: not neutron by definition!", "");
