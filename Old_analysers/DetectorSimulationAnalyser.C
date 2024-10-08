@@ -14388,10 +14388,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             bool NeutronInECOUT_1n = (n_1n->cal(clas12::ECOUT)->getDetector() == 7); // ECOUT hit
             auto n_detlayer_1n = NeutronInPCAL_1n ? clas12::PCAL : NeutronInECIN_1n ? clas12::ECIN
                                                                                     : clas12::ECOUT; // determine the earliest layer of the neutral hit
+            
             /* Safety check that we are looking at 1n */
             CodeDebugger.SafetyCheck_basic_event_selection(__FILE__, __LINE__, "1n", Kplus, Kminus, Piplus_ind, Piminus_ind, Electron_ind, deuterons);
-            CodeDebugger.SafetyCheck_1n(__FILE__, __LINE__, NeutronsFD_ind, e_1n, n_1n, Enable_FD_photons, PhotonsFD_ind, ES_by_leading_FDneutron, pid,
-                                        allParticles, NeutronsFD_ind_mom_max, apply_nucleon_cuts, NeutronInPCAL_1n, NeutronInECIN_1n, NeutronInECOUT_1n, n_detlayer_1n);
+            CodeDebugger.SafetyCheck_1n(__FILE__, __LINE__, NeutronsFD_ind, e_1n, n_1n, Enable_FD_photons, PhotonsFD_ind, ES_by_leading_FDneutron, pid, allParticles,
+                                        NeutronsFD_ind_mom_max, apply_nucleon_cuts, NeutronInPCAL_1n, NeutronInECIN_1n, NeutronInECOUT_1n, n_detlayer_1n);
 
             // Setting 1n analysis variables
             double NeutronMomBKC_1n = pid.GetFDNeutronP(n_1n, apply_nucleon_cuts); // neutron momentum before shift for kin cuts
