@@ -14383,6 +14383,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             region_part_ptr e_1n = electrons[Electron_ind.at(0)];
             region_part_ptr n_1n = allParticles[n_ind_1n]; // neutron with the largest momentum magnitude
 
+            bool NeutronInPCAL_1n = (n_1n->cal(clas12::PCAL)->getDetector() == 7);   // PCAL hit
+            bool NeutronInECIN_1n = (n_1n->cal(clas12::ECIN)->getDetector() == 7);   // ECIN hit
+            bool NeutronInECOUT_1n = (n_1n->cal(clas12::ECOUT)->getDetector() == 7); // ECOUT hit
+            auto n_detlayer_1n = NeutronInPCAL_1n ? clas12::PCAL : NeutronInECIN_1n ? clas12::ECIN
+                                                                                    : clas12::ECOUT; // determine the earliest layer of the neutral hit
             /* Safety check that we are looking at 1n */
             CodeDebugger.SafetyCheck_basic_event_selection(__FILE__, __LINE__, "1n", Kplus, Kminus, Piplus_ind, Piminus_ind, Electron_ind, deuterons);
             CodeDebugger.SafetyCheck_1n(__FILE__, __LINE__, NeutronsFD_ind, e_1n, n_1n, Enable_FD_photons, PhotonsFD_ind, ES_by_leading_FDneutron, pid,
