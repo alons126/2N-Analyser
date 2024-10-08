@@ -21,7 +21,7 @@
 #include "../hPlots/hPlot1D.h"
 #include "../hPlots/hPlot2D.h"
 #include "../../functions/AngleCalc/CalcdPhi.h"
-//#include "../MomentumResolution/MomentumResolution.cpp"
+#include "../MomentumResolution/MomentumResolution.cpp"
 
 using namespace std;
 using namespace clas12;
