@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+#include "../DSCuts/DSCuts.h"
+
 using namespace std;
 
 class Debugger
