@@ -115,19 +115,19 @@ void Debugger::SafetyCheck_Truth_leading_FD_neutron(const char *FILE, const int 
         {
             cout << "\033[33m\nTL_IDed_Leading_nFD_momentum = " << TL_IDed_Leading_nFD_momentum << "\n\033[0m";
             cout << "\033[33mLeading_TL_FDNeutron_Momentum = " << Leading_TL_FDNeutron_Momentum << "\n\033[0m";
-            cout << "\033[33m\n\nLeading TL nFD check: momentum magnitude inconsistent! Exiting...\n\n", exit(0);
+            PrintErrorMessage(FILE, LINE, "Leading TL nFD check: momentum magnitude inconsistent!", "");
         }
 
         if ((TL_NeutronsFD_mom_ind.size() > 0) && (TL_IDed_Leading_nFD_ind == -1))
         {
-            cout << "\033[33m\n\nLeading TL nFD check: leading was not assigned! Exiting...\n\n", exit(0);
+            PrintErrorMessage(FILE, LINE, "Leading TL nFD check: leading was not assigned!", "");
         }
 
         if (TL_NeutronsFD_mom_ind.size() == 1)
         {
             if (TL_NeutronsFD_mom_ind.at(0) != TL_IDed_Leading_nFD_ind)
             {
-                cout << "\033[33m\n\nLeading TL nFD check: leading was assigned incorrectly! Exiting...\n\n", exit(0);
+                PrintErrorMessage(FILE, LINE, "Leading TL nFD check: leading was assigned incorrectly!", "");
             }
         }
         else if (TL_NeutronsFD_mom_ind.size() > 1)
@@ -142,7 +142,7 @@ void Debugger::SafetyCheck_Truth_leading_FD_neutron(const char *FILE, const int 
 
                 if (dMomentum < 0)
                 {
-                    cout << "\033[33m\n\nLeading TL nFD check: assigned nFD is not the leading! Exiting...\n\n", exit(0);
+                    PrintErrorMessage(FILE, LINE, "Leading TL nFD check: assigned nFD is not the leading!", "");
                 }
             }
         }
@@ -166,7 +166,6 @@ void Debugger::SafetyCheck_FD_neutron(const char *FILE, const int LINE,
             cout << "\033[33mReco_Neutron_Momentum = " << Reco_Neutron_Momentum << "\n\033[0m";
             cout << "\033[33mn_mom_th.GetUpperCutConst() = " << n_mom_th.GetUpperCutConst() << "\n\033[0m";
             cout << "\033[33mn_mom_th.GetLowerCutConst() = " << n_mom_th.GetLowerCutConst() << "\n\033[0m";
-            cout << "\033[33m\n\nFD neutron check: there are FD neutrons outside momentum th. range! Exiting...\n\n", exit(0);
             PrintErrorMessage(FILE, LINE, "FD neutron check: there are FD neutrons outside momentum th. range!", "");
         }
 
@@ -177,5 +176,49 @@ void Debugger::SafetyCheck_FD_neutron(const char *FILE, const int LINE,
                 PrintErrorMessage(FILE, LINE, "FD neutron check: duplicated FD neutrons!", "");
             }
         }
+    }
+}
+
+// SafetyCheck_AMaps function ------------------------------------------------------------------------------------------------------------------------------------------------
+
+void Debugger::SafetyCheck_AMaps_Truth_electrons(const char *FILE, const int LINE,
+                                                const int &particlePDGtmp, const bool &inFD_AMaps)
+{
+    if (particlePDGtmp != 11)
+    {
+        PrintErrorMessage(FILE, LINE, "TL electrons check (AMaps & WMaps): TL electron PGD is invalid (" + to_string(particlePDGtmp) + ")!", "");
+    }
+
+    if (!inFD_AMaps)
+    {
+        PrintErrorMessage(FILE, LINE, "TL electrons check (AMaps & WMaps): TL electron is not in FD!", "");
+    }
+}
+
+void Debugger::SafetyCheck_AMaps_Truth_protons(const char *FILE, const int LINE,
+                                              const int &particlePDGtmp, const bool &inFD_AMaps)
+{
+    if (particlePDGtmp != 2212)
+    {
+        PrintErrorMessage(FILE, LINE, "TL protons check (AMaps & WMaps): TL proton PGD is invalid (" + to_string(particlePDGtmp) + ")!", "");
+    }
+
+    if (!inFD_AMaps)
+    {
+        PrintErrorMessage(FILE, LINE, "TL protons check (AMaps & WMaps): TL proton is not in FD!", "");
+    }
+}
+
+void Debugger::SafetyCheck_AMaps_Truth_neutrons(const char *FILE, const int LINE,
+                                              const int &particlePDGtmp, const bool &inFD_AMaps)
+{
+    if (particlePDGtmp != 2112)
+    {
+        PrintErrorMessage(FILE, LINE, "TL neutrons check (AMaps & WMaps): TL neutron PGD is invalid (" + to_string(particlePDGtmp) + ")!", "");
+    }
+
+    if (!inFD_AMaps)
+    {
+        PrintErrorMessage(FILE, LINE, "TL neutrons check (AMaps & WMaps): TL neutron is not in FD!", "");
     }
 }

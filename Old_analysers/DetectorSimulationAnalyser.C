@@ -12044,15 +12044,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                         /* Fill TL electron acceptance maps */
 
                         // Safety checks for TL electrons (AMaps & WMaps)
-                        if (particlePDGtmp != 11)
-                        {
-                            cout << "\033[33m\n\nTL electrons check (AMaps & WMaps): TL electron PGD is invalid (" << particlePDGtmp << ")! Exiting...\n\n", exit(0);
-                        }
-
-                        if (!inFD_AMaps)
-                        {
-                            cout << "\033[33m\n\nTL electrons check (AMaps & WMaps): TL electron is not in FD! Exiting...\n\n", exit(0);
-                        }
+                        SafetyCheck_AMaps_Truth_electrons(__FILE__, __LINE__, particlePDGtmp, inFD_AMaps);
 
                         Electron_TL_Momentum = Particle_TL_Momentum;
                         Electron_TL_Theta = Particle_TL_Theta;
@@ -12072,22 +12064,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                     {
                         /* Fill all TL FD proton acceptance maps */
 
-                        if ((Particle_TL_Momentum <= TL_p_mom_cuts.GetUpperCut()) &&
-                            (Particle_TL_Momentum >= TL_p_mom_cuts.GetLowerCut()))
+                        if ((Particle_TL_Momentum <= TL_p_mom_cuts.GetUpperCut()) && (Particle_TL_Momentum >= TL_p_mom_cuts.GetLowerCut()))
                         { // if id. TL proton
 
                             // Safety checks for TL protons (AMaps & WMaps)
-                            if (particlePDGtmp != 2212)
-                            {
-                                cout << "\033[33m\n\nTL protons check (AMaps & WMaps): TL proton PGD is invalid (" << particlePDGtmp
-                                     << ")! Exiting...\n\n",
-                                    exit(0);
-                            }
-
-                            if (!inFD_AMaps)
-                            {
-                                cout << "\033[33m\n\nTL protons check (AMaps & WMaps): TL proton is not in FD! Exiting...\n\n", exit(0);
-                            }
+                            CodeDebugger.SafetyCheck_AMaps_Truth_protons(__FILE__, __LINE__, particlePDGtmp, inFD_AMaps);
 
                             bool FD_Theta_Cut_TL_protons = (Particle_TL_Theta <= FD_nucleon_theta_cut.GetUpperCut());
                             bool FD_Momentum_Cut_TL_protons = ((Particle_TL_Momentum <= FD_nucleon_momentum_cut.GetUpperCut()) &&
@@ -12134,22 +12115,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 bool inFD = ((Particle_TL_Theta >= ThetaFD.GetLowerCut()) && (Particle_TL_Theta <= ThetaFD.GetUpperCut()));
                 bool inCD = ((Particle_TL_Theta > ThetaCD.GetLowerCut()) && (Particle_TL_Theta <= ThetaCD.GetUpperCut()));
 
-                if ((Particle_TL_Momentum <= TL_n_mom_cuts.GetUpperCut()) &&
-                    (Particle_TL_Momentum >= TL_n_mom_cuts.GetLowerCut()))
+                if ((Particle_TL_Momentum <= TL_n_mom_cuts.GetUpperCut()) && (Particle_TL_Momentum >= TL_n_mom_cuts.GetLowerCut()))
                 { // if id. TL leading neutron
 
                     // Safety checks for TL neutrons (AMaps & WMaps)
-                    if (particlePDGtmp != 2112)
-                    {
-                        cout << "\033[33m\n\nTL neutrons check (AMaps & WMaps): TL neutron PGD is invalid (" << particlePDGtmp
-                             << ")! Exiting...\n\n",
-                            exit(0);
-                    }
-
-                    if (!inFD)
-                    {
-                        cout << "\033[33m\n\nTL neutrons check (AMaps & WMaps): TL neutron is not in FD! Exiting...\n\n", exit(0);
-                    }
+                    CodeDebugger.SafetyCheck_AMaps_Truth_neutrons(__FILE__, __LINE__, particlePDGtmp, inFD_AMaps);
 
                     bool FD_Theta_Cut_TL_neutrons = (Particle_TL_Theta <= FD_nucleon_theta_cut.GetUpperCut());
                     bool FD_Momentum_Cut_TL_neutrons = ((Particle_TL_Momentum <= FD_nucleon_momentum_cut.GetUpperCut()) &&

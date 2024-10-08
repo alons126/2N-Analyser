@@ -44,6 +44,17 @@ public:
                                 const bool &apply_nucleon_cuts, std::vector<region_part_ptr> &allParticles, const DSCuts &n_mom_th,
                                 vector<int> &NeutronsFD_ind, ParticleID &pid);
 
+    // SafetyCheck_AMaps function ------------------------------------------------------------------------------------------------------------------------------------------------
+
+    void SafetyCheck_AMaps_Truth_electrons(const char *FILE, const int LINE,
+                                          const int &particlePDGtmp, const bool &inFD_AMaps);
+
+    void SafetyCheck_AMaps_Truth_protons(const char *FILE, const int LINE,
+                                          const int &particlePDGtmp, const bool &inFD_AMaps);
+
+    void SafetyCheck_AMaps_Truth_neutrons(const char *FILE, const int LINE,
+                                          const int &particlePDGtmp, const bool &inFD_AMaps);
+
     // PrintStepTester function ---------------------------------------------------------------------------------------------------------------------------------------------
 
     void PrintStepTester(const bool &DebuggerMode)
