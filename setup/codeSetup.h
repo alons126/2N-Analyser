@@ -216,25 +216,25 @@ void ConfigSampleChain()
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    /* Uniform electron tester sample @ 4GeV */
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_Tester_e_1e";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    AnalyseFile = AnalyseFileDir + "*.hipo";
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
+    // /* Uniform electron tester sample @ 4GeV */
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_Tester_e_1e";
+    // AnalyseFileSample = "reconhipo";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "*.hipo";
+    // AnalyseFilePath_v.push_back(AnalyseFilePath);
+    // AnalyseFileSample_v.push_back(AnalyseFileSample);
+    // AnalyseFileDir_v.push_back(AnalyseFileDir);
+    // AnalyseFile_v.push_back(AnalyseFile);
 
-    /* Uniform electron tester sample @ 6GeV */
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_Tester_e_1e";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    AnalyseFile = AnalyseFileDir + "*.hipo";
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
+    // /* Uniform electron tester sample @ 6GeV */
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_Tester_e_1e";
+    // AnalyseFileSample = "reconhipo";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "*.hipo";
+    // AnalyseFilePath_v.push_back(AnalyseFilePath);
+    // AnalyseFileSample_v.push_back(AnalyseFileSample);
+    // AnalyseFileDir_v.push_back(AnalyseFileDir);
+    // AnalyseFile_v.push_back(AnalyseFile);
 
     // Uniform samples --------------------------------------------------------------------------------------------------------------------------------------------------
 
