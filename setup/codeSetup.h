@@ -311,7 +311,7 @@ void ConfigSampleChain()
 
     /* Uniform samples @ 6GeV */
 
-    Uniform 1e @ 6GeV:
+    // Uniform 1e @ 6GeV:
     // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV-binaryFields-test/OutPut_1e";
     // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV-TorusSymmetric-test/OutPut_1e";
     // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV-torus_plus1-test/OutPut_1e";
@@ -320,7 +320,7 @@ void ConfigSampleChain()
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all files
     AnalyseFilePath_v.push_back(AnalyseFilePath);
     AnalyseFileSample_v.push_back(AnalyseFileSample);
     AnalyseFileDir_v.push_back(AnalyseFileDir);
@@ -332,7 +332,7 @@ void ConfigSampleChain()
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_ep_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all files
     AnalyseFilePath_v.push_back(AnalyseFilePath);
     AnalyseFileSample_v.push_back(AnalyseFileSample);
     AnalyseFileDir_v.push_back(AnalyseFileDir);
@@ -344,7 +344,7 @@ void ConfigSampleChain()
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_en_sample_5986MeV_1000_torus-1.0.hipo"; // 1 file
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all files
     AnalyseFilePath_v.push_back(AnalyseFilePath);
     AnalyseFileSample_v.push_back(AnalyseFileSample);
     AnalyseFileDir_v.push_back(AnalyseFileDir);
