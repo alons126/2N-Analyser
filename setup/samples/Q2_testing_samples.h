@@ -5,10 +5,10 @@
 
 #pragma region G18 Q2 4GeV
 
-/* G18 Q2 4GeV */
-void Config_G18_4GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v, std::vector<std::string> &AnalyseFileSample_v,
-                                     std::vector<std::string> &AnalyseFileDir_v, std::vector<std::string> &AnalyseFile_v,
-                                     std::string &AnalyseFilePath, std::string &AnalyseFileSample, std::string &AnalyseFileDir, std::string &AnalyseFile)
+/* C12 G18 varing Q2 4GeV */
+void Config_C12_G18_4GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v, std::vector<std::string> &AnalyseFileSample_v,
+                                         std::vector<std::string> &AnalyseFileDir_v, std::vector<std::string> &AnalyseFile_v,
+                                         std::string &AnalyseFilePath, std::string &AnalyseFileSample, std::string &AnalyseFileDir, std::string &AnalyseFile)
 {
     AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/4029MeV/Q2_0_02";
     AnalyseFileSample = "reconhipo";
