@@ -3,7 +3,7 @@
 #ifndef Q2_TESTING_SAMPLES
 #define Q2_TESTING_SAMPLES
 
-#pragma region C12 G18 varing Q2 4GeV
+#pragma region C12 varing Q2 4GeV
 
 /* C12 G18 varing Q2 4GeV */
 void Config_C12_G18_4GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v, std::vector<std::string> &AnalyseFileSample_v,
@@ -401,9 +401,8 @@ void Config_C12_G18_4GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePa
     AnalyseFile_v.push_back(AnalyseFile);
 }
 
-#pragma endregion
 
-/* C12 G18 varing Q2 4GeV */
+/* C12 SuSa varing Q2 4GeV */
 void Config_C12_SuSa_4GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v, std::vector<std::string> &AnalyseFileSample_v,
                                           std::vector<std::string> &AnalyseFileDir_v, std::vector<std::string> &AnalyseFile_v,
                                           std::string &AnalyseFilePath, std::string &AnalyseFileSample, std::string &AnalyseFileDir, std::string &AnalyseFile)
@@ -799,12 +798,16 @@ void Config_C12_SuSa_4GeV_Q2_test_samples(std::vector<std::string> &AnalyseFileP
     AnalyseFile_v.push_back(AnalyseFile);
 }
 
-/* G18 Q2 6GeV */
-void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v, std::vector<std::string> &AnalyseFileSample_v,
-                                     std::vector<std::string> &AnalyseFileDir_v, std::vector<std::string> &AnalyseFile_v,
-                                     std::string &AnalyseFilePath, std::string &AnalyseFileSample, std::string &AnalyseFileDir, std::string &AnalyseFile)
+#pragma endregion
+
+#pragma region Ar40 varing Q2 6GeV
+
+/* Ar40 G18 varing Q2 6GeV */
+void Config_Ar40_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v, std::vector<std::string> &AnalyseFileSample_v,
+                                          std::vector<std::string> &AnalyseFileDir_v, std::vector<std::string> &AnalyseFile_v,
+                                          std::string &AnalyseFilePath, std::string &AnalyseFileSample, std::string &AnalyseFileDir, std::string &AnalyseFile)
 {
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_40";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_40";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -814,7 +817,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_41";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_41";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -824,7 +827,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_42";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_42";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -834,7 +837,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_43";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_43";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -844,7 +847,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_44";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_44";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -854,7 +857,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_45";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_45";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -864,7 +867,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_46";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_46";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -874,7 +877,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_47";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_47";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -884,7 +887,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_48";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_48";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -894,7 +897,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_49";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_49";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -904,7 +907,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_50";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_50";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -914,7 +917,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_51";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_51";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -924,7 +927,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_52";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_52";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -934,7 +937,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_53";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_53";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -944,7 +947,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_54";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_54";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -954,7 +957,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_55";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_55";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -964,7 +967,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_56";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_56";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -974,7 +977,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_57";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_57";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -984,7 +987,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_58";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_58";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -994,7 +997,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_59";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_59";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1004,7 +1007,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_60";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_60";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1014,7 +1017,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_61";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_61";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1024,7 +1027,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_62";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_62";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1034,7 +1037,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_63";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_63";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1044,7 +1047,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_64";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_64";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1054,7 +1057,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_65";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_65";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1064,7 +1067,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_66";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_66";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1074,7 +1077,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_67";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_67";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1084,7 +1087,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_68";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_68";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1094,7 +1097,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_69";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_69";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1104,7 +1107,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_70";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_70";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1114,7 +1117,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_71";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_71";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1124,7 +1127,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_72";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_72";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1134,7 +1137,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_73";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_73";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1144,7 +1147,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_74";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_74";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1154,7 +1157,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_75";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_75";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1164,7 +1167,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_76";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_76";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1174,7 +1177,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_77";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_77";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1184,7 +1187,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_78";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_78";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1194,7 +1197,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_79";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_79";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1204,7 +1207,7 @@ void Config_G18_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_80";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_80";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1220,7 +1223,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
                                       std::vector<std::string> &AnalyseFileDir_v, std::vector<std::string> &AnalyseFile_v,
                                       std::string &AnalyseFilePath, std::string &AnalyseFileSample, std::string &AnalyseFileDir, std::string &AnalyseFile)
 {
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_40";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_40";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1230,7 +1233,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_41";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_41";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1240,7 +1243,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_42";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_42";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1250,7 +1253,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_43";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_43";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1260,7 +1263,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_44";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_44";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1270,7 +1273,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_45";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_45";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1280,7 +1283,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_46";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_46";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1290,7 +1293,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_47";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_47";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1300,7 +1303,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_48";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_48";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1310,7 +1313,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_49";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_49";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1320,7 +1323,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_50";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_50";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1330,7 +1333,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_51";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_51";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1340,7 +1343,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_52";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_52";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1350,7 +1353,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_53";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_53";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1360,7 +1363,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_54";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_54";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1370,7 +1373,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_55";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_55";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1380,7 +1383,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_56";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_56";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1390,7 +1393,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_57";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_57";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1400,7 +1403,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_58";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_58";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1410,7 +1413,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_59";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_59";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1420,7 +1423,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_60";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_60";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1430,7 +1433,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_61";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_61";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1440,7 +1443,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_62";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_62";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1450,7 +1453,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_63";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_63";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1460,7 +1463,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_64";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_64";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1470,7 +1473,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_65";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_65";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1480,7 +1483,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_66";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_66";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1490,7 +1493,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_67";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_67";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1500,7 +1503,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_68";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_68";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1510,7 +1513,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_69";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_69";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1520,7 +1523,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_70";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_70";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1530,7 +1533,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_71";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_71";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1540,7 +1543,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_72";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_72";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1550,7 +1553,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_73";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_73";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1560,7 +1563,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_74";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_74";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1570,7 +1573,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_75";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_75";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1580,7 +1583,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_76";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_76";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1590,7 +1593,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_77";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_77";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1600,7 +1603,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_78";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_78";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1610,7 +1613,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_79";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_79";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
@@ -1620,7 +1623,7 @@ void Config_SuSa_6GeV_Q2_test_samples(std::vector<std::string> &AnalyseFilePath_
     AnalyseFileDir_v.push_back(AnalyseFileDir);
     AnalyseFile_v.push_back(AnalyseFile);
 
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_80";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_80";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
