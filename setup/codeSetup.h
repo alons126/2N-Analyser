@@ -358,11 +358,11 @@ void ConfigSampleChain()
     // /* C12 SuSa varing Q2 4GeV */
     // Config_C12_SuSa_4GeV_Q2_test_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
 
-    /* Ar40 G18 varing Q2 6GeV */
-    Config_Ar40_G18_6GeV_Q2_test_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
+    // /* Ar40 G18 varing Q2 6GeV */
+    // Config_Ar40_G18_6GeV_Q2_test_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
 
-    // /* Ar40 SuSa varing Q2 6GeV */
-    // Config_Ar40_SuSa_6GeV_Q2_test_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
+    /* Ar40 SuSa varing Q2 6GeV */
+    Config_Ar40_SuSa_6GeV_Q2_test_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
 
     // ==================================================================================================================================================================
     // Old simulation files for local runs
