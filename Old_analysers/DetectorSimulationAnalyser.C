@@ -175,7 +175,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     /* Settings that allow to disable/enable every cut individually */
 
     // clas12ana cuts ---------------------------------------------------------------------------------------------------------------------------------------------------
-    bool apply_cuts = true;                 // master ON/OFF switch for applying cuts
+    bool apply_cuts = false;                 // master ON/OFF switch for applying cuts
     bool clas12ana_particles = true;         // TODO: move form here!
     bool only_preselection_cuts = false;     // keep as false for regular runs!
     bool only_electron_quality_cuts = false; // keep as false for regular runs!
@@ -1409,22 +1409,22 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                            numTH1Dbins);
     hVz_Proton_1e_cut_FD.SetLogScalePlot(Log_scale_Vz_plots);
     hPlot2D hVz_Proton_vs_P_p_1e_cut_FD = hPlot2D("1e cut", "FD", "V_{z}^{p} vs. P_{p}", "V_{z}^{p} vs. P_{p}", "P_{p} [GeV/c]", "V_{z}^{p} [cm]",
-                                                  directories.Vertex_Directory_map["Vertex_Proton_1e_cut_Vtx_Directory"], "04_Vz_Proton_vs_P_p_1e_cut_FD",
+                                                  directories.Vertex_Directory_map["Vertex_Proton_1e_cut_Vtx_Directory"], "04a_Vz_Proton_vs_P_p_1e_cut_FD",
                                                   Momentum_lboundary, Momentum_uboundary, Vertex_lboundary_FD, Vertex_uboundary_FD, numTH2Dbins, numTH2Dbins);
     hPlot2D hVz_Proton_vs_Theta_p_1e_cut_FD = hPlot2D("1e cut", "FD", "V_{z}^{p} vs. #theta_{p}", "V_{z}^{p} vs. #theta_{p}", "#theta_{p} [#circ]", "V_{z}^{p} [cm]",
-                                                      directories.Vertex_Directory_map["Vertex_Proton_1e_cut_Vtx_Directory"], "05_Vz_Proton_vs_Theta_p_1e_cut_FD",
+                                                      directories.Vertex_Directory_map["Vertex_Proton_1e_cut_Vtx_Directory"], "05a_Vz_Proton_vs_Theta_p_1e_cut_FD",
                                                       Theta_lboundary_FD, Theta_uboundary_FD, Vertex_lboundary_FD, Vertex_uboundary_FD, numTH2Dbins, numTH2Dbins);
     hPlot2D hVz_Proton_vs_Phi_p_1e_cut_FD = hPlot2D("1e cut", "FD", "V_{z}^{p} vs. #phi_{p}", "V_{z}^{p} vs. #theta_{p}", "#phi_{p} [#circ]", "V_{z}^{p} [cm]",
-                                                    directories.Vertex_Directory_map["Vertex_Proton_1e_cut_Vtx_Directory"], "06_Vz_Proton_vs_Phi_p_1e_cut_FD",
+                                                    directories.Vertex_Directory_map["Vertex_Proton_1e_cut_Vtx_Directory"], "06a_Vz_Proton_vs_Phi_p_1e_cut_FD",
                                                     Phi_lboundary, Phi_uboundary, Vertex_lboundary_FD, Vertex_uboundary_FD, numTH2Dbins, numTH2Dbins);
     hPlot2D hVz_Proton_vs_P_p_1e_cut_CD = hPlot2D("1e cut", "CD", "V_{z}^{p} vs. P_{p}", "V_{z}^{p} vs. P_{p}", "P_{p} [GeV/c]", "V_{z}^{p} [cm]",
-                                                  directories.Vertex_Directory_map["Vertex_Proton_1e_cut_Vtx_Directory"], "04_Vz_Proton_vs_P_p_1e_cut_CD",
+                                                  directories.Vertex_Directory_map["Vertex_Proton_1e_cut_Vtx_Directory"], "04b_Vz_Proton_vs_P_p_1e_cut_CD",
                                                   Momentum_lboundary, Momentum_uboundary, Vertex_lboundary_CD, Vertex_uboundary_CD, numTH2Dbins, numTH2Dbins);
     hPlot2D hVz_Proton_vs_Theta_p_1e_cut_CD = hPlot2D("1e cut", "CD", "V_{z}^{p} vs. #theta_{p}", "V_{z}^{p} vs. #theta_{p}", "#theta_{p} [#circ]", "V_{z}^{p} [cm]",
-                                                      directories.Vertex_Directory_map["Vertex_Proton_1e_cut_Vtx_Directory"], "05_Vz_Proton_vs_Theta_p_1e_cut_CD",
+                                                      directories.Vertex_Directory_map["Vertex_Proton_1e_cut_Vtx_Directory"], "05b_Vz_Proton_vs_Theta_p_1e_cut_CD",
                                                       Theta_lboundary_CD, Theta_uboundary_CD, Vertex_lboundary_CD, Vertex_uboundary_CD, numTH2Dbins, numTH2Dbins);
     hPlot2D hVz_Proton_vs_Phi_p_1e_cut_CD = hPlot2D("1e cut", "CD", "V_{z}^{p} vs. #phi_{p}", "V_{z}^{p} vs. #theta_{p}", "#phi_{p} [#circ]", "V_{z}^{p} [cm]",
-                                                    directories.Vertex_Directory_map["Vertex_Proton_1e_cut_Vtx_Directory"], "06_Vz_Proton_vs_Phi_p_1e_cut_CD",
+                                                    directories.Vertex_Directory_map["Vertex_Proton_1e_cut_Vtx_Directory"], "06b_Vz_Proton_vs_Phi_p_1e_cut_CD",
                                                     Phi_lboundary, Phi_uboundary, Vertex_lboundary_CD, Vertex_uboundary_CD, numTH2Dbins, numTH2Dbins);
 
     hPlot1D hVx_Kplus_1e_cut_CD = hPlot1D("1e cut", "CD", "V_{x}^{K^{+}}", "V_{x}^{K^{+}} histogram", "V_{x}^{K^{+}} [cm]",

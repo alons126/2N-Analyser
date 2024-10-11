@@ -1779,21 +1779,30 @@ void ExperimentParameters::ConfigureVz_cuts(const string &sn)
         {
             if (sn == "Uniform_1e_sample_2070MeV")
             {
-                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -10., 0.);
-                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -10., 0.);
-                Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -5., -1.);
+                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -6., 0.);
+                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -6., 0.);
+                Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -6., 0.);
+                // Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -10., 0.);
+                // Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -10., 0.);
+                // Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -5., -1.);
             }
             else if (sn == "Uniform_ep_sample_2070MeV")
             {
-                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -10., 0.);
-                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -10., 0.);
+                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -6., 0.);
+                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -6., 0.);
                 Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -5., -1.);
+                // Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -10., 0.);
+                // Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -10., 0.);
+                // Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -5., -1.);
             }
             else if (sn == "Uniform_en_sample_2070MeV")
             {
-                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -10., 0.);
-                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -10., 0.);
-                Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -5., -1.);
+                Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -6., 0.);
+                Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -6., 0.);
+                Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -6., 0.);
+                // Vz_cuts = DSCuts("Vertex z component", "", "", "1e cut", 0, -10., 0.);
+                // Vz_cuts_FD = DSCuts("Vertex z component", "FD", "", "1e cut", 0, -10., 0.);
+                // Vz_cuts_CD = DSCuts("Vertex z component", "CD", "", "1e cut", 0, -5., -1.);
             }
         }
         else if (findSubstring(sn, "4029MeV"))
