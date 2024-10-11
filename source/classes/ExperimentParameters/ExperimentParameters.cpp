@@ -695,7 +695,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
             }
             else if (findSubstring(AnalyseFilePath, "5986MeV"))
             {
-                if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_40")
+                if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_40")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_40)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -703,7 +703,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_40_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_41")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_41")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_41)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -711,7 +711,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_41_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_42")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_42")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_42)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -719,7 +719,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_42_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_43")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_43")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_43)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -727,7 +727,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_43_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_44")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_44")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_44)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -735,7 +735,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_44_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_45")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_45")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_45)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -743,7 +743,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_45_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_46")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_46")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_46)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -751,7 +751,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_46_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_47")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_47")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_47)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -759,7 +759,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_47_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_48")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_48")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_48)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -767,7 +767,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_48_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_49")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_49")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_49)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -775,7 +775,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_49_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_50")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_50")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_50)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -783,7 +783,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_50_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_51")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_51")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_51)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -791,7 +791,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_51_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_52")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_52")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_52)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -799,7 +799,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_52_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_53")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_53")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_53)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -807,7 +807,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_53_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_54")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_54")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_54)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -815,7 +815,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_54_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_55")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_55")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_55)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -823,7 +823,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_55_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_56")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_56")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_56)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -831,7 +831,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_56_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_57")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_57")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_57)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -839,7 +839,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_57_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_58")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_58")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_58)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -847,7 +847,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_58_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_59")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_59")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_59)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -855,7 +855,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_59_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_60")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_60")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_60)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -863,7 +863,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_60_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_61")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_61")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_61)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -871,7 +871,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_61_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_62")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_62")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_62)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -879,7 +879,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_62_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_63")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_63")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_63)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -887,7 +887,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_63_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_64")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_64")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_64)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -895,7 +895,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_64_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_65")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_65")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_65)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -903,7 +903,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_65_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_66")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_66")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_66)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -911,7 +911,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_66_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_67")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_67")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_67)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -919,7 +919,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_67_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_68")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_68")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_68)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -927,7 +927,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_68_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_69")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_69")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_69)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -935,7 +935,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_69_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_70")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_70")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_70)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -943,7 +943,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_70_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_71")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_71")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_71)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -951,7 +951,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_71_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_72")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_72")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_72)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -959,7 +959,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_72_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_73")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_73")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_73)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -967,7 +967,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_73_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_74")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_74")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_74)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -975,7 +975,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_74_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_75")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_75")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_75)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -983,7 +983,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_75_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_76")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_76")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_76)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -991,7 +991,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_76_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_77")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_77")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_77)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -999,7 +999,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_77_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_78")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_78")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_78)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1007,7 +1007,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_78_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_79")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_79")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_79)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1015,7 +1015,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_G18_Q2_0_79_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_80")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/G18_10a_00_000/Q2_th_test_samples/5986MeV/Q2_0_80")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_80)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1344,7 +1344,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
             }
             else if (findSubstring(AnalyseFilePath, "5986MeV"))
             {
-                if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_40")
+                if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_40")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_40)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1352,7 +1352,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_40_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_41")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_41")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_41)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1360,7 +1360,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_41_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_42")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_42")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_42)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1368,7 +1368,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_42_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_43")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_43")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_43)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1376,7 +1376,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_43_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_44")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_44")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_44)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1384,7 +1384,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_44_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_45")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_45")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_45)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1392,7 +1392,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_45_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_46")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_46")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_46)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1400,7 +1400,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_46_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_47")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_47")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_47)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1408,7 +1408,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_47_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_48")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_48")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_48)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1416,7 +1416,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_48_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_49")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_49")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_49)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1424,7 +1424,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_49_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_50")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_50")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_50)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1432,7 +1432,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_50_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_51")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_51")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_51)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1440,7 +1440,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_51_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_52")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_52")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_52)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1448,7 +1448,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_52_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_53")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_53")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_53)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1456,7 +1456,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_53_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_54")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_54")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_54)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1464,7 +1464,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_54_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_55")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_55")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_55)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1472,7 +1472,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_55_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_56")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_56")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_56)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1480,7 +1480,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_56_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_57")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_57")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_57)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1488,7 +1488,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_57_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_58")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_58")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_58)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1496,7 +1496,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_58_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_59")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_59")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_59)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1504,7 +1504,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_59_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_60")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_60")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_60)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1512,7 +1512,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_60_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_61")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_61")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_61)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1520,7 +1520,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_61_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_62")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_62")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_62)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1528,7 +1528,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_62_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_63")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_63")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_63)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1536,7 +1536,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_63_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_64")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_64")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_64)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1544,7 +1544,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_64_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_65")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_65")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_65)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1552,7 +1552,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_65_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_66")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_66")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_66)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1560,7 +1560,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_66_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_67")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_67")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_67)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1568,7 +1568,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_67_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_68")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_68")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_68)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1576,7 +1576,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_68_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_69")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_69")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_69)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1584,7 +1584,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_69_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_70")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_70")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_70)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1592,7 +1592,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_70_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_71")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_71")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_71)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1600,7 +1600,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_71_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_72")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_72")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_72)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1608,7 +1608,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_72_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_73")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_73")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_73)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1616,7 +1616,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_73_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_74")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_74")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_74)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1624,7 +1624,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_74_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_75")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_75")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_75)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1632,7 +1632,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_75_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_76")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_76")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_76)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1640,7 +1640,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_76_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_77")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_77")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_77)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1648,7 +1648,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_77_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_78")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_78")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_78)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1656,7 +1656,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_78_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_79")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_79")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_79)
                     if (AnalyseFileSample == "reconhipo")
                     {
@@ -1664,7 +1664,7 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                         sName = "C12_simulation_SuSa_Q2_0_79_6GeV";
                     }
                 }
-                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/C12/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_80")
+                else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/2N_Analysis_Reco_Samples/Ar40/GEM21_11a_00_000/Q2_th_test_samples/5986MeV/Q2_0_80")
                 { // C, simulation, 6GeV, ifarm (Q2 study; Q2_0_80)
                     if (AnalyseFileSample == "reconhipo")
                     {
