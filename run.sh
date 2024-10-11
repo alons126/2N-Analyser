@@ -1,5 +1,7 @@
 #!/bin/bash
-
+echo ""
+git pull
+echo ""
 echo "- Re-pulling repository -----------------------------------------------"
 echo ""
 git reset --hard
