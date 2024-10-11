@@ -1555,13 +1555,13 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                             numTH1Dbins);
     hdVz_Proton_FD_1e_cut.SetLogScalePlot(Log_scale_dVz_plots);
     hPlot2D hdVz_Proton_vs_P_p_1e_cut_FD = hPlot2D("1e cut", "FD", "dV^{p}_{z} vs. P_{p}", "dV^{p}_{z} vs. P_{p}", "P_{p} [GeV/c]", "dV^{p}_{z} [cm]",
-                                                   directories.Vertex_Directory_map["Vertex_corr_Proton_1e_cut_Vtx_Directory"], "04_dVz_Proton_vs_P_p_1e_cut_FD",
+                                                   directories.Vertex_Directory_map["Vertex_corr_Proton_1e_cut_Vtx_Directory"], "04a_dVz_Proton_vs_P_p_1e_cut_FD",
                                                    Momentum_lboundary, Momentum_uboundary, dV_lboundary_FD, dV_uboundary_FD, numTH2Dbins, numTH2Dbins);
     hPlot2D hdVz_Proton_vs_Theta_p_1e_cut_FD = hPlot2D("1e cut", "FD", "dV^{p}_{z} vs. #theta_{p}", "dV^{p}_{z} vs. #theta_{p}", "#theta_{p} [#circ]", "dV^{p}_{z} [cm]",
-                                                       directories.Vertex_Directory_map["Vertex_corr_Proton_1e_cut_Vtx_Directory"], "05_dVz_Proton_vs_Theta_p_1e_cut_FD",
+                                                       directories.Vertex_Directory_map["Vertex_corr_Proton_1e_cut_Vtx_Directory"], "05a_dVz_Proton_vs_Theta_p_1e_cut_FD",
                                                        Theta_lboundary_FD, Theta_uboundary_FD, dV_lboundary_FD, dV_uboundary_FD, numTH2Dbins, numTH2Dbins);
     hPlot2D hdVz_Proton_vs_Phi_p_1e_cut_FD = hPlot2D("1e cut", "FD", "dV^{p}_{z} vs. #phi_{p}", "dV^{p}_{z} vs. #theta_{p}", "#phi_{p} [#circ]", "dV^{p}_{z} [cm]",
-                                                     directories.Vertex_Directory_map["Vertex_corr_Proton_1e_cut_Vtx_Directory"], "06_dVz_Proton_vs_Phi_p_1e_cut_FD",
+                                                     directories.Vertex_Directory_map["Vertex_corr_Proton_1e_cut_Vtx_Directory"], "06a_dVz_Proton_vs_Phi_p_1e_cut_FD",
                                                      Phi_lboundary, Phi_uboundary, dV_lboundary_FD, dV_uboundary_FD, numTH2Dbins, numTH2Dbins);
 
     hPlot1D hdVx_Proton_CD_1e_cut = hPlot1D("1e cut", "CD", "Vertex corr. dV^{p}_{x}", "Vertex correlation dV^{p}_{x}=V^{p}_{x}-V^{e}_{x}", "dV^{p}_{x} [cm]",
@@ -1574,6 +1574,15 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                             directories.Vertex_Directory_map["Vertex_corr_Proton_1e_cut_Vtx_Directory"], "03_dVz_d", dV_lboundary_CD, dV_uboundary_CD,
                                             numTH1Dbins);
     hdVz_Proton_CD_1e_cut.SetLogScalePlot(Log_scale_dVz_plots);
+    hPlot2D hdVz_Proton_vs_P_p_1e_cut_CD = hPlot2D("1e cut", "CD", "dV^{p}_{z} vs. P_{p}", "dV^{p}_{z} vs. P_{p}", "P_{p} [GeV/c]", "dV^{p}_{z} [cm]",
+                                                   directories.Vertex_Directory_map["Vertex_corr_Proton_1e_cut_Vtx_Directory"], "04b_dVz_Proton_vs_P_p_1e_cut_CD",
+                                                   Momentum_lboundary, Momentum_uboundary, dV_lboundary_CD, dV_uboundary_CD, numTH2Dbins, numTH2Dbins);
+    hPlot2D hdVz_Proton_vs_Theta_p_1e_cut_CD = hPlot2D("1e cut", "CD", "dV^{p}_{z} vs. #theta_{p}", "dV^{p}_{z} vs. #theta_{p}", "#theta_{p} [#circ]", "dV^{p}_{z} [cm]",
+                                                       directories.Vertex_Directory_map["Vertex_corr_Proton_1e_cut_Vtx_Directory"], "05b_dVz_Proton_vs_Theta_p_1e_cut_CD",
+                                                       Theta_lboundary_CD, Theta_uboundary_CD, dV_lboundary_CD, dV_uboundary_CD, numTH2Dbins, numTH2Dbins);
+    hPlot2D hdVz_Proton_vs_Phi_p_1e_cut_CD = hPlot2D("1e cut", "CD", "dV^{p}_{z} vs. #phi_{p}", "dV^{p}_{z} vs. #theta_{p}", "#phi_{p} [#circ]", "dV^{p}_{z} [cm]",
+                                                     directories.Vertex_Directory_map["Vertex_corr_Proton_1e_cut_Vtx_Directory"], "06b_dVz_Proton_vs_Phi_p_1e_cut_CD",
+                                                     Phi_lboundary, Phi_uboundary, dV_lboundary_CD, dV_uboundary_CD, numTH2Dbins, numTH2Dbins);
 
     hPlot1D hdVx_Kplus_FD_1e_cut = hPlot1D("1e cut", "FD", "Vertex corr. dV^{K^{+}}_{x}", "Vertex correlation dV^{K^{+}}_{x}=V^{K^{+}}_{x}-V^{e}_{x}", "dV^{K^{+}}_{x} [cm]",
                                            directories.Vertex_Directory_map["Vertex_corr_Kplus_1e_cut_Vtx_Directory"], "01_dVx_Kplus", dV_lboundary_FD, dV_uboundary_FD,
@@ -12802,6 +12811,9 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 hdVx_Proton_CD_1e_cut.hFill(p->par()->getVx() - electrons[0]->par()->getVx(), Weight);
                 hdVy_Proton_CD_1e_cut.hFill(p->par()->getVy() - electrons[0]->par()->getVy(), Weight);
                 hdVz_Proton_CD_1e_cut.hFill(p->par()->getVz() - electrons[0]->par()->getVz(), Weight);
+                hdVz_Proton_vs_P_p_1e_cut_CD.hFill(p->getP(), p->par()->getVz() - electrons[0]->par()->getVz(), Weight);
+                hdVz_Proton_vs_Theta_p_1e_cut_CD.hFill(p->getTheta() * 180.0 / pi, p->par()->getVz() - electrons[0]->par()->getVz(), Weight);
+                hdVz_Proton_vs_Phi_p_1e_cut_CD.hFill(p->getPhi() * 180.0 / pi, p->par()->getVz() - electrons[0]->par()->getVz(), Weight);
 
                 hBeta_vs_P_1e_cut_Protons_Only_CD.hFill(p->getP(), p->par()->getBeta(), Weight);
                 hBeta_vs_P_positive_part_1e_cut_CD.hFill(p->getP(), p->par()->getBeta(), Weight);
@@ -18439,15 +18451,19 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         //  dV plots ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
         // dV plots (1e cut, CD & FD)
-        hdVx_Proton_CD_1e_cut.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
         hdVx_Proton_FD_1e_cut.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
-        hdVy_Proton_CD_1e_cut.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
         hdVy_Proton_FD_1e_cut.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
-        hdVz_Proton_CD_1e_cut.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., dVz_cuts_CD.GetLowerCut(), dVz_cuts_CD.GetUpperCut(), 0, false);
         hdVz_Proton_FD_1e_cut.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., dVz_cuts_FD.GetLowerCut(), dVz_cuts_FD.GetUpperCut(), 0, false);
         hdVz_Proton_vs_P_p_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
         hdVz_Proton_vs_Theta_p_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
         hdVz_Proton_vs_Phi_p_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
+
+        hdVx_Proton_CD_1e_cut.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
+        hdVy_Proton_CD_1e_cut.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
+        hdVz_Proton_CD_1e_cut.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., dVz_cuts_CD.GetLowerCut(), dVz_cuts_CD.GetUpperCut(), 0, false);
+        hdVz_Proton_vs_P_p_1e_cut_CD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
+        hdVz_Proton_vs_Theta_p_1e_cut_CD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
+        hdVz_Proton_vs_Phi_p_1e_cut_CD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
 
         hdVx_Kplus_CD_1e_cut.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
         hdVx_Kplus_FD_1e_cut.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);

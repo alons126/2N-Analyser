@@ -49,12 +49,12 @@
 					"label": "Config new samples - Vz cuts"
 				},
 				{
-					"line": 1965,
+					"line": 1974,
 					"column": 6,
 					"label": "Config new samples - dVz cuts"
 				},
 				{
-					"line": 2189,
+					"line": 2207,
 					"column": 0,
 					"label": "Config new samples - AddToHipoChain"
 				}
