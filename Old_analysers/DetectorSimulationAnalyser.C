@@ -175,7 +175,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     /* Settings that allow to disable/enable every cut individually */
 
     // clas12ana cuts ---------------------------------------------------------------------------------------------------------------------------------------------------
-    bool apply_cuts = true;                 // master ON/OFF switch for applying cuts
+    bool apply_cuts = false;                 // master ON/OFF switch for applying cuts
     bool clas12ana_particles = true;         // TODO: move form here!
     bool only_preselection_cuts = false;     // keep as false for regular runs!
     bool only_electron_quality_cuts = false; // keep as false for regular runs!
@@ -1417,6 +1417,15 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     hPlot2D hVz_Proton_vs_Phi_p_1e_cut_FD = hPlot2D("1e cut", "FD", "V_{z}^{p} vs. #phi_{p}", "V_{z}^{p} vs. #theta_{p}", "#phi_{p} [#circ]", "V_{z}^{p} [cm]",
                                                     directories.Vertex_Directory_map["Vertex_Proton_1e_cut_Vtx_Directory"], "06_Vz_Proton_vs_Phi_p_1e_cut_FD",
                                                     Phi_lboundary, Phi_uboundary, Vertex_lboundary_FD, Vertex_uboundary_FD, numTH2Dbins, numTH2Dbins);
+    hPlot2D hVz_Proton_vs_P_p_1e_cut_CD = hPlot2D("1e cut", "CD", "V_{z}^{p} vs. P_{p}", "V_{z}^{p} vs. P_{p}", "P_{p} [GeV/c]", "V_{z}^{p} [cm]",
+                                                  directories.Vertex_Directory_map["Vertex_Proton_1e_cut_Vtx_Directory"], "04_Vz_Proton_vs_P_p_1e_cut_CD",
+                                                  Momentum_lboundary, Momentum_uboundary, Vertex_lboundary_CD, Vertex_uboundary_CD, numTH2Dbins, numTH2Dbins);
+    hPlot2D hVz_Proton_vs_Theta_p_1e_cut_CD = hPlot2D("1e cut", "CD", "V_{z}^{p} vs. #theta_{p}", "V_{z}^{p} vs. #theta_{p}", "#theta_{p} [#circ]", "V_{z}^{p} [cm]",
+                                                      directories.Vertex_Directory_map["Vertex_Proton_1e_cut_Vtx_Directory"], "05_Vz_Proton_vs_Theta_p_1e_cut_CD",
+                                                      Theta_lboundary_CD, Theta_uboundary_CD, Vertex_lboundary_CD, Vertex_uboundary_CD, numTH2Dbins, numTH2Dbins);
+    hPlot2D hVz_Proton_vs_Phi_p_1e_cut_CD = hPlot2D("1e cut", "CD", "V_{z}^{p} vs. #phi_{p}", "V_{z}^{p} vs. #theta_{p}", "#phi_{p} [#circ]", "V_{z}^{p} [cm]",
+                                                    directories.Vertex_Directory_map["Vertex_Proton_1e_cut_Vtx_Directory"], "06_Vz_Proton_vs_Phi_p_1e_cut_CD",
+                                                    Phi_lboundary, Phi_uboundary, Vertex_lboundary_CD, Vertex_uboundary_CD, numTH2Dbins, numTH2Dbins);
 
     hPlot1D hVx_Kplus_1e_cut_CD = hPlot1D("1e cut", "CD", "V_{x}^{K^{+}}", "V_{x}^{K^{+}} histogram", "V_{x}^{K^{+}} [cm]",
                                           directories.Vertex_Directory_map["Vertex_Kplus_1e_cut_Vtx_Directory"], "01_Kplus_Vx", Vertex_lboundary_CD, Vertex_uboundary_CD,
@@ -12807,6 +12816,9 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 hVx_Proton_1e_cut_CD.hFill(p->par()->getVx(), Weight);
                 hVy_Proton_1e_cut_CD.hFill(p->par()->getVy(), Weight);
                 hVz_Proton_1e_cut_CD.hFill(p->par()->getVz(), Weight);
+                hVz_Proton_vs_P_p_1e_cut_CD.hFill(p->getP(), p->par()->getVz(), Weight);
+                hVz_Proton_vs_Theta_p_1e_cut_CD.hFill(p->getTheta() * 180.0 / pi, p->par()->getVz(), Weight);
+                hVz_Proton_vs_Phi_p_1e_cut_CD.hFill(p->getPhi() * 180.0 / pi, p->par()->getVz(), Weight);
 
                 hdVx_Proton_CD_1e_cut.hFill(p->par()->getVx() - electrons[0]->par()->getVx(), Weight);
                 hdVy_Proton_CD_1e_cut.hFill(p->par()->getVy() - electrons[0]->par()->getVy(), Weight);
@@ -18403,15 +18415,19 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         hVz_Electron_vs_Theta_e_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
         hVz_Electron_vs_Phi_e_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
 
-        hVx_Proton_1e_cut_CD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
         hVx_Proton_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
-        hVy_Proton_1e_cut_CD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
         hVy_Proton_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
-        hVz_Proton_1e_cut_CD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., Vz_cut_CD.GetLowerCut(), Vz_cut_CD.GetUpperCut(), 0, false);
         hVz_Proton_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., Vz_cut_FD.GetLowerCut(), Vz_cut_FD.GetUpperCut(), 0, false);
         hVz_Proton_vs_P_p_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
         hVz_Proton_vs_Theta_p_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
         hVz_Proton_vs_Phi_p_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
+        
+        hVx_Proton_1e_cut_CD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
+        hVy_Proton_1e_cut_CD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
+        hVz_Proton_1e_cut_CD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., Vz_cut_CD.GetLowerCut(), Vz_cut_CD.GetUpperCut(), 0, false);
+        hVz_Proton_vs_P_p_1e_cut_CD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
+        hVz_Proton_vs_Theta_p_1e_cut_CD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
+        hVz_Proton_vs_Phi_p_1e_cut_CD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, true);
 
         hVx_Kplus_1e_cut_CD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
         hVx_Kplus_1e_cut_FD.hDrawAndSave(SampleName, c1, plots, Histogram_OutPDF, norm_Vertex_plots, true, 1., 9999, 9999, 0, false);
