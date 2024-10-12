@@ -4,7 +4,7 @@
 			"path": "setup/codeSetup.h",
 			"bookmarks": [
 				{
-					"line": 85,
+					"line": 88,
 					"column": 0,
 					"label": "Running sample"
 				}
@@ -14,7 +14,7 @@
 			"path": "source/classes/Settings/CustomPlotsDirectory.h",
 			"bookmarks": [
 				{
-					"line": 32,
+					"line": 33,
 					"column": 34,
 					"label": "Out folder name extension"
 				}

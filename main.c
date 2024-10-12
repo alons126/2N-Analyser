@@ -15,21 +15,21 @@ int main()
 
     for (int i = 0; i < AnalyseFilePath_v.size(); i++)
     {
+        std::string AnalyseFilePath0 = AnalyseFilePath_v.at(i);
+        std::string AnalyseFileSample0 = AnalyseFileSample_v.at(i);
+        std::string AnalyseFileDir0 = AnalyseFileDir_v.at(i);
+        std::string AnalyseFile0 = AnalyseFile_v.at(i);
 
-        AnalyseFilePath = AnalyseFilePath_v.at(i);
-        AnalyseFileSample = AnalyseFileSample_v.at(i);
-        AnalyseFileDir = AnalyseFileDir_v.at(i);
-        AnalyseFile = AnalyseFile_v.at(i);
+        std::string FileType = AnalyseFile_v.at(i).substr(AnalyseFile_v.at(i).find_last_of(".") + 1);
 
-        string FileType = AnalyseFile_v.at(i).substr(AnalyseFile_v.at(i).find_last_of(".") + 1);
-
-        cout << "\nAnalyseFilePath:\t" << AnalyseFilePath << "\n";
-        cout << "\nAnalyseFileSample:\t" << AnalyseFileSample << "\n";
-        cout << "\nAnalyseFile:\t" << AnalyseFile << "\n\n";
+        cout << "\nAnalyseFilePath:\t" << AnalyseFilePath0 << "\n";
+        cout << "AnalyseFileSample:\t" << AnalyseFileSample0 << "\n";
+        cout << "AnalyseFileDir:\t" << AnalyseFileDir0 << "\n";
+        cout << "AnalyseFile:\t" << AnalyseFile0 << "\n\n";
 
         cout << "FileType:\t" << FileType << "\n";
 
-        DataAnalyser Analysis(FileType, AnalyseFilePath, AnalyseFileSample, AnalyseFile);
+        DataAnalyser Analysis(FileType, AnalyseFilePath0, AnalyseFileSample0, AnalyseFile0);
         std::string AnalyserMode = Analysis.ConfigureAnalyserMode(FileType);
 
         cout << "Analyser mode:\t'" << AnalyserMode << "'\n";

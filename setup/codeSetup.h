@@ -79,6 +79,9 @@ Debugger CodeDebugger;
 std::vector<std::string> AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v;
 std::string AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile;
 
+// TODO: get rid of:
+// std::string &AnalyseFilePath, std::string &AnalyseFileSample, std::string &AnalyseFileDir, std::string &AnalyseFile
+
 // file_name definition -------------------------------------------------------------------------------------------------------------------------------------------------
 
 // std::string file_name = "12C_2222GeV_GTEST19_10b_00_000";

@@ -49,10 +49,14 @@ void Config_Uniform_1e_2GeV_samples(std::vector<std::string> &AnalyseFilePath_v,
                                     std::vector<std::string> &AnalyseFileDir_v, std::vector<std::string> &AnalyseFile_v,
                                     std::string &AnalyseFilePath, std::string &AnalyseFileSample, std::string &AnalyseFileDir, std::string &AnalyseFile)
 {
-    AnalyseFilePath_v.push_back("lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_1e");
-    AnalyseFileSample_v.push_back("reconhipo");
-    AnalyseFileDir_v.push_back("/" + AnalyseFilePath + "/" + AnalyseFileSample + "/");
-    AnalyseFile_v.push_back(AnalyseFileDir + "*.hipo"); // all files
+    std::string AnalyseFilePath0 = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_1e";
+    std::string AnalyseFileSample0 = "reconhipo";
+    std::string AnalyseFileDir0 = "/" + AnalyseFilePath0 + "/" + AnalyseFileSample0 + "/";
+    std::string AnalyseFile0 = AnalyseFileDir0 + "*.hipo"; // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath0);
+    AnalyseFileSample_v.push_back(AnalyseFileSample0);
+    AnalyseFileDir_v.push_back(AnalyseFileDir0);
+    AnalyseFile_v.push_back(AnalyseFile0);
     // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_1e";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
@@ -68,10 +72,14 @@ void Config_Uniform_en_2GeV_samples(std::vector<std::string> &AnalyseFilePath_v,
                                     std::vector<std::string> &AnalyseFileDir_v, std::vector<std::string> &AnalyseFile_v,
                                     std::string &AnalyseFilePath, std::string &AnalyseFileSample, std::string &AnalyseFileDir, std::string &AnalyseFile)
 {
-    AnalyseFilePath_v.push_back("lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_en");
-    AnalyseFileSample_v.push_back("reconhipo");
-    AnalyseFileDir_v.push_back("/" + AnalyseFilePath + "/" + AnalyseFileSample + "/");
-    AnalyseFile_v.push_back(AnalyseFileDir + "*.hipo"); // all files
+    std::string AnalyseFilePath0 = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_en";
+    std::string AnalyseFileSample0 = "reconhipo";
+    std::string AnalyseFileDir0 = "/" + AnalyseFilePath0 + "/" + AnalyseFileSample0 + "/";
+    std::string AnalyseFile0 = AnalyseFileDir0 + "*.hipo"; // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath0);
+    AnalyseFileSample_v.push_back(AnalyseFileSample0);
+    AnalyseFileDir_v.push_back(AnalyseFileDir0);
+    AnalyseFile_v.push_back(AnalyseFile0);
     // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_en";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
@@ -87,10 +95,14 @@ void Config_Uniform_ep_2GeV_samples(std::vector<std::string> &AnalyseFilePath_v,
                                     std::vector<std::string> &AnalyseFileDir_v, std::vector<std::string> &AnalyseFile_v,
                                     std::string &AnalyseFilePath, std::string &AnalyseFileSample, std::string &AnalyseFileDir, std::string &AnalyseFile)
 {
-    AnalyseFilePath_v.push_back("lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_ep");
-    AnalyseFileSample_v.push_back("reconhipo");
-    AnalyseFileDir_v.push_back("/" + AnalyseFilePath + "/" + AnalyseFileSample + "/");
-    AnalyseFile_v.push_back(AnalyseFileDir + "*.hipo"); // all files
+    std::string AnalyseFilePath0 = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_ep";
+    std::string AnalyseFileSample0 = "reconhipo";
+    std::string AnalyseFileDir0 = "/" + AnalyseFilePath0 + "/" + AnalyseFileSample0 + "/";
+    std::string AnalyseFile0 = AnalyseFileDir0 + "*.hipo"; // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath0);
+    AnalyseFileSample_v.push_back(AnalyseFileSample0);
+    AnalyseFileDir_v.push_back(AnalyseFileDir0);
+    AnalyseFile_v.push_back(AnalyseFile0);
     // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_ep";
     // AnalyseFileSample = "reconhipo";
     // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
@@ -110,14 +122,22 @@ void Config_Uniform_1e_4GeV_samples(std::vector<std::string> &AnalyseFilePath_v,
                                     std::vector<std::string> &AnalyseFileDir_v, std::vector<std::string> &AnalyseFile_v,
                                     std::string &AnalyseFilePath, std::string &AnalyseFileSample, std::string &AnalyseFileDir, std::string &AnalyseFile)
 {
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_1e";
-    AnalyseFileSample = "reconhipo";
-    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
-    AnalyseFilePath_v.push_back(AnalyseFilePath);
-    AnalyseFileSample_v.push_back(AnalyseFileSample);
-    AnalyseFileDir_v.push_back(AnalyseFileDir);
-    AnalyseFile_v.push_back(AnalyseFile);
+    std::string AnalyseFilePath0= "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_1e";
+    std::string AnalyseFileSample0 = "reconhipo";
+    std::string AnalyseFileDir0 = "/" + AnalyseFilePath0+ "/" + AnalyseFileSample0 + "/";
+    std::string AnalyseFile0 = AnalyseFileDir0 + "*.hipo";                                             // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath0);
+    AnalyseFileSample_v.push_back(AnalyseFileSample0);
+    AnalyseFileDir_v.push_back(AnalyseFileDir0);
+    AnalyseFile_v.push_back(AnalyseFile0);
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_1e";
+    // AnalyseFileSample = "reconhipo";
+    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "*.hipo";                                             // all files
+    // AnalyseFilePath_v.push_back(AnalyseFilePath);
+    // AnalyseFileSample_v.push_back(AnalyseFileSample);
+    // AnalyseFileDir_v.push_back(AnalyseFileDir);
+    // AnalyseFile_v.push_back(AnalyseFile);
 }
 
 /* Uniform en @ 4GeV */
