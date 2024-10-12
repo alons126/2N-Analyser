@@ -129,7 +129,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     const bool ES_by_leading_FDneutron = true;
 
     /* Acceptance maps setup */
-    bool Generate_AMaps = false; // Generate acceptance maps
+    bool Generate_AMaps = true; // Generate acceptance maps
     bool AMaps_calc_with_one_reco_electron = true;
     const string P_e_bin_profile = "uniform_P_e_bins";     // {reformat_e_bins , varying_P_e_bins , uniform_P_e_bins, equi_inverted_P_e}
     const string P_nuc_bin_profile = "uniform_P_nuc_bins"; // {equi_inverted_P_nuc , varying_P_nuc_bins , uniform_P_nuc_bins}
