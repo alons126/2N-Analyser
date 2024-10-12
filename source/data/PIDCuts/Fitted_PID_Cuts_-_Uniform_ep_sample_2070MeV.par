@@ -5,9 +5,9 @@
 # Cuts are fitted for - Uniform_ep_sample_2070MeV
 
 # pid cuts by detector (pid:mean:sigma) - sigma_CD=3;sigma_FD=3:
-pid_cuts		2212:0:9999:CD
-pid_cuts		2212:0.0286411:4.91454:FD
-pid_cuts		211:4.69582:14.3546:CD
-pid_cuts		211:4.45603:17.6542:FD
-pid_cuts		-211:0:9999:CD
-pid_cuts		-211:-6.51613:21.6255:FD
+pid_cuts		2212:0.61344:4.2689:CD
+pid_cuts		2212:0.0347463:5.81302:FD
+pid_cuts		211:-2.60258:5.62866:CD
+pid_cuts		211:3.51618:12.41:FD
+pid_cuts		-211:0.187839:9.59829:CD
+pid_cuts		-211:-0.609239:5.08632:FD

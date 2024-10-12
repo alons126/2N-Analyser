@@ -238,40 +238,40 @@ void ConfigSampleChain()
 
     // Uniform samples --------------------------------------------------------------------------------------------------------------------------------------------------
 
-    // /* Uniform samples @ 2GeV */
+    /* Uniform samples @ 2GeV */
 
-    // // Uniform 1e @ 2GeV:
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_1e";
-    // AnalyseFileSample = "reconhipo";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    // Uniform 1e @ 2GeV:
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_1e";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_1e_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
-    // // Uniform ep @ 2GeV:
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_ep";
-    // AnalyseFileSample = "reconhipo";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // // AnalyseFile = AnalyseFileDir + "recon_Uniform_ep_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    // Uniform ep @ 2GeV:
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_ep";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_ep_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
-    // // Uniform en @ 2GeV:
-    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_en";
-    // AnalyseFileSample = "reconhipo";
-    // AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
-    // // AnalyseFile = AnalyseFileDir + "recon_Uniform_en_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
-    // AnalyseFile = AnalyseFileDir + "*.hipo"; // all files
-    // AnalyseFilePath_v.push_back(AnalyseFilePath);
-    // AnalyseFileSample_v.push_back(AnalyseFileSample);
-    // AnalyseFileDir_v.push_back(AnalyseFileDir);
-    // AnalyseFile_v.push_back(AnalyseFile);
+    // Uniform en @ 2GeV:
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_en";
+    AnalyseFileSample = "reconhipo";
+    AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
+    // AnalyseFile = AnalyseFileDir + "recon_Uniform_en_sample_2070MeV_1000_torus0.5.hipo"; // 1 file
+    AnalyseFile = AnalyseFileDir + "*.hipo"; // all files
+    AnalyseFilePath_v.push_back(AnalyseFilePath);
+    AnalyseFileSample_v.push_back(AnalyseFileSample);
+    AnalyseFileDir_v.push_back(AnalyseFileDir);
+    AnalyseFile_v.push_back(AnalyseFile);
 
     // /* Uniform samples @ 4GeV */
 
@@ -358,11 +358,11 @@ void ConfigSampleChain()
     // /* C12 SuSa varing Q2 4GeV */
     // Config_C12_SuSa_4GeV_Q2_test_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
 
-    /* Ar40 G18 varing Q2 6GeV */
-    Config_Ar40_G18_6GeV_Q2_test_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
+    // /* Ar40 G18 varing Q2 6GeV */
+    // Config_Ar40_G18_6GeV_Q2_test_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
 
-    /* Ar40 SuSa varing Q2 6GeV */
-    Config_Ar40_SuSa_6GeV_Q2_test_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
+    // /* Ar40 SuSa varing Q2 6GeV */
+    // Config_Ar40_SuSa_6GeV_Q2_test_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
 
     // ==================================================================================================================================================================
     // Old simulation files for local runs
