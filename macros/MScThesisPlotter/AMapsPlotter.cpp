@@ -4,6 +4,7 @@
 #include <TCanvas.h>
 
 #include "../../source/functions/GeneralFunctions.h"
+#include "CombineHistogramsToGif.cpp"
 
 #if Independent2Ddraw
 #include "Histofinder2D.cpp"
@@ -224,6 +225,9 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
     Sep_canv->cd()->SetGrid();
     Sep_canv->cd()->SetBottomMargin(0.14), Sep_canv->cd()->SetLeftMargin(0.18), Sep_canv->cd()->SetRightMargin(0.12);
 
+    string SliceVariant0;
+    std::vector<TH2D *> Histograms2D;
+
     if (ParticleNameShort1 == "e" && findSubstring(filename, "Uniform_1e"))
     {
         // Open the ROOT file containing histograms
@@ -315,17 +319,18 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
                     }
-                    else
-                    {
-                        TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
-                        TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
-                    }
+                    // else
+                    // {
+                    //     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
+                    //     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
+                    // }
 
                     string SliceVariant1, SliceVariant2, TitleInitial2Replace, TitleInitial2Replacment;
 
                     if (findSubstring(Histogram2DTempName, "TL ") && !findSubstring(Histogram2DTempName, "/TL"))
                     {
                         SliceVariant1 = "TL";
+                        SliceVariant0 = "TL";
 
                         TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
                         TitleInitial2Replacment = "#theta_{" + ParticleNameShort1 + "} vs. #phi_{" + ParticleNameShort1 + "}" + " of " + SliceVariant1 + " " +
@@ -336,6 +341,7 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                     else if (findSubstring(Histogram2DTempName, "Reco "))
                     {
                         SliceVariant1 = "Reco", SliceVariant2 = "reco";
+                        SliceVariant0 = "Reco";
 
                         TitleInitial2Replace = SliceVariant1 + " P_{" + ParticleNameShort1 + "} bin for";
                         TitleInitial2Replacment = "#theta_{" + ParticleNameShort1 + "} vs. #phi_{" + ParticleNameShort1 + "}" + " of " + SliceVariant2 + " " +
@@ -343,10 +349,10 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
 
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, TitleInitial2Replace, TitleInitial2Replacment);
                     }
-                    else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") &&
-                             !findSubstring(Histogram2DTempName, " AMaps "))
+                    else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") && !findSubstring(Histogram2DTempName, " AMaps "))
                     {
                         SliceVariant1 = "#epsilon_{eff}^{" + ParticleNameShort1 + "}";
+                        SliceVariant0 = "Ratio";
 
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel,
                                      "Reco/TL ratio",
@@ -355,6 +361,7 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                     else if (findSubstring(Histogram2DTempName, " AMap "))
                     {
                         SliceVariant1 = "reco", SliceVariant2 = "Filtered";
+                        SliceVariant0 = "AMaps";
 
                         TitleInitial2Replace = ParticleNameLong1 + " AMap for";
                         TitleInitial2Replacment = SliceVariant2 + " #theta_{" + ParticleNameShort1 + "} vs. #phi_{" + ParticleNameShort1 + "}" + " of " + SliceVariant1 +
@@ -373,6 +380,7 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
                         Sep_canv->SaveAs((Sep_TL_e_OutputPath + "/" + to_string(HistogramCounter) + "_TL_e_Slice_" + to_string(HistogramCounter) + ".png").c_str());
+                        Histograms2D.push_back(Histogram2DTemp);
                         Sep_canv->Clear();
                     }
                     else if (findSubstring(Histogram2DTempName, "Reco "))
@@ -381,6 +389,7 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
                         Sep_canv->SaveAs((Sep_Reco_e_OutputPath + "/" + to_string(HistogramCounter) + "_Reco_e_Slice_" + to_string(HistogramCounter) + ".png").c_str());
+                        Histograms2D.push_back(Histogram2DTemp);
                         Sep_canv->Clear();
                     }
                     else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") && !findSubstring(Histogram2DTempName, " AMaps "))
@@ -389,6 +398,7 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
                         Sep_canv->SaveAs((Sep_Ratio_e_OutputPath + "/" + to_string(HistogramCounter) + "_Ratio_e_Slice_" + to_string(HistogramCounter) + ".png").c_str());
+                        Histograms2D.push_back(Histogram2DTemp);
                         Sep_canv->Clear();
                     }
                     else if (findSubstring(Histogram2DTempName, " AMap "))
@@ -397,6 +407,7 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
                         Sep_canv->SaveAs((Sep_AMaps_e_OutputPath + "/" + to_string(HistogramCounter) + "_AMaps_e_Slice_" + to_string(HistogramCounter) + ".png").c_str());
+                        Histograms2D.push_back(Histogram2DTemp);
                         Sep_canv->Clear();
                     }
                 }
@@ -431,11 +442,11 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
                     }
-                    else
-                    {
-                        TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
-                        TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
-                    }
+                    // else
+                    // {
+                    //     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
+                    //     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
+                    // }
 
                     string SliceVariant1, SliceVariant2, TitleInitial2Replace, TitleInitial2Replacment;
 
@@ -532,6 +543,8 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                 break;
             }
         }
+
+        CombineHistogramsToGif(Sep_canv, Histograms2D, 1000 * 1.5, 750 * 1.5, OutputPath, SliceVariant0 + "_" + ParticleNameShort1 + "_GIF.gif", SliceVariant0, "50", "0");
 
         delete canvas;
         delete file;
@@ -633,11 +646,11 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
                     }
-                    else
-                    {
-                        TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
-                        TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
-                    }
+                    // else
+                    // {
+                    //     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
+                    //     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
+                    // }
 
                     string SliceVariant1, SliceVariant2, TitleInitial2Replace, TitleInitial2Replacment;
 
@@ -688,6 +701,7 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
                         Sep_canv->SaveAs((Sep_TL_p_OutputPath + "/" + to_string(HistogramCounter) + "_TL_p_Slice_" + to_string(HistogramCounter) + ".png").c_str());
+                        Histograms2D.push_back(Histogram2DTemp);
                         Sep_canv->Clear();
                     }
                     else if (findSubstring(Histogram2DTempName, "Reco "))
@@ -696,6 +710,7 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
                         Sep_canv->SaveAs((Sep_Reco_p_OutputPath + "/" + to_string(HistogramCounter) + "_Reco_p_Slice_" + to_string(HistogramCounter) + ".png").c_str());
+                        Histograms2D.push_back(Histogram2DTemp);
                         Sep_canv->Clear();
                     }
                     else if (findSubstring(Histogram2DTempName, "Reco/TL ratio") && !findSubstring(Histogram2DTempName, " AMaps "))
@@ -704,6 +719,7 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
                         Sep_canv->SaveAs((Sep_Ratio_p_OutputPath + "/" + to_string(HistogramCounter) + "_Ratio_p_Slice_" + to_string(HistogramCounter) + ".png").c_str());
+                        Histograms2D.push_back(Histogram2DTemp);
                         Sep_canv->Clear();
                     }
                     else if (findSubstring(Histogram2DTempName, " AMap "))
@@ -712,6 +728,7 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         Histogram2DTemp->Draw("colz"), gPad->Update();
                         Histogram2DTemp->SetStats(0);
                         Sep_canv->SaveAs((Sep_AMaps_p_OutputPath + "/" + to_string(HistogramCounter) + "_AMaps_p_Slice_" + to_string(HistogramCounter) + ".png").c_str());
+                        Histograms2D.push_back(Histogram2DTemp);
                         Sep_canv->Clear();
                     }
                 }
@@ -746,11 +763,11 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
                         TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
                     }
-                    else
-                    {
-                        TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
-                        TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
-                    }
+                    // else
+                    // {
+                    //     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "[GeV/c]", "[GeV]");
+                    //     TitleAligner(Histogram2DTemp, Histogram2DTemp_Title, Histogram2DTemp_xLabel, Histogram2DTemp_yLabel, "#leq6.00 [GeV]", "#leq5.986 [GeV]");
+                    // }
 
                     string SliceVariant1, SliceVariant2, TitleInitial2Replace, TitleInitial2Replacment;
 
@@ -847,6 +864,8 @@ void plotHistograms(const char *filename, const string &ParticleNameShort1, cons
                 break;
             }
         }
+
+        CombineHistogramsToGif(Sep_canv, Histograms2D, 1000 * 1.5, 750 * 1.5, OutputPath, SliceVariant0 + "_" + ParticleNameShort1 + "_GIF.gif", SliceVariant0, "50", "0");
 
         delete canvas;
         delete file;

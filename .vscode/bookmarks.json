@@ -4,7 +4,7 @@
 			"path": "setup/codeSetup.h",
 			"bookmarks": [
 				{
-					"line": 83,
+					"line": 85,
 					"column": 0,
 					"label": "Running sample"
 				}
@@ -64,33 +64,38 @@
 			"path": "macros/MScThesisPlotter/MScThesisPlotter.cpp",
 			"bookmarks": [
 				{
-					"line": 54,
+					"line": 52,
 					"column": 25,
 					"label": "MScThesisPlotter"
 				},
 				{
-					"line": 59,
+					"line": 57,
 					"column": 31,
 					"label": ""
 				},
 				{
-					"line": 84,
+					"line": 82,
 					"column": 37,
 					"label": ""
 				},
 				{
-					"line": 108,
+					"line": 106,
 					"column": 42,
 					"label": ""
 				},
 				{
-					"line": 127,
+					"line": 125,
 					"column": 38,
 					"label": ""
 				},
 				{
-					"line": 168,
+					"line": 166,
 					"column": 37,
+					"label": ""
+				},
+				{
+					"line": 186,
+					"column": 43,
 					"label": ""
 				},
 				{
@@ -99,27 +104,22 @@
 					"label": ""
 				},
 				{
-					"line": 190,
-					"column": 43,
-					"label": ""
-				},
-				{
-					"line": 206,
+					"line": 204,
 					"column": 50,
 					"label": ""
 				},
 				{
-					"line": 217,
+					"line": 215,
 					"column": 43,
 					"label": ""
 				},
 				{
-					"line": 230,
+					"line": 228,
 					"column": 46,
 					"label": ""
 				},
 				{
-					"line": 311,
+					"line": 309,
 					"column": 34,
 					"label": ""
 				}
