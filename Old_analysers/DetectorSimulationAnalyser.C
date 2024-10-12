@@ -1075,7 +1075,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
 
     /* Set Bins by case */
-    int NumberNucOfMomSlices = 20, NumberElecOfMomSlices = 20, HistElectronSliceNumOfXBins = 100, HistNucSliceNumOfXBins = 100;
+    int NumberNucOfMomSlices = 20, NumberElecOfMomSlices = 20, HistElectronSliceNumOfXBins = 125, HistNucSliceNumOfXBins = 125;
 
     AMaps aMaps, wMaps;
     // TODO: UPDATE AMaps loading constructor electron histogram's number of bins
