@@ -1051,8 +1051,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     else if (is6GeVSample)
     {
-        // Q2_uboundary_FD = 1.5;
-        Q2_uboundary_FD = 5;
+        Q2_uboundary_FD = 1.5;
+        // Q2_uboundary_FD = 5;
     }
 
     /* TKI boundries */
@@ -21277,7 +21277,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         // Q2 plots (1e cut, FD)
         double Q2_1e_cut_integral = hQ2_1e_cut->Integral();
 
-        histPlotter1D(c1, hQ2_1e_cut, norm_Momentum_transfer_plots, true, Q2_1e_cut_integral, "Q^{2} Histogram", "1e cut", 0.06, 0.0425, 0.0425, plots, Histogram_OutPDF, 2, false, true,
+        // histPlotter1D(c1, hQ2_1e_cut, norm_Momentum_transfer_plots, true, Q2_1e_cut_integral, "Q^{2} Histogram", "1e cut", 0.06, 0.0425, 0.0425, plots, Histogram_OutPDF, 2, false, true,
+        histPlotter1D(c1, hQ2_1e_cut, norm_Momentum_transfer_plots, true, Q2_1e_cut_integral, "Q^{2} Histogram", "1e cut", 0.06, 0.0425, 0.0425, plots, Histogram_OutPDF, 2, true, false,
                       sQ2_1e_cut, "01_Q2_1e_cut", hQ2_1e_cut_Dir, "FD", kBlue, true, true, true);
         histPlotter1D(c1, hQ2_QEL_1e_cut, norm_Momentum_transfer_plots, true, Q2_1e_cut_integral, "Q^{2} Histogram", "QE Only, 1e cut", 0.06, 0.0425, 0.0425, plots, Histogram_OutPDF, 2,
                       false, true, sQ2_1e_cut, "01a_Q2_QEL_1e_cut", hQ2_1e_cut_Dir, "FD", kBlue, true, true, true);
