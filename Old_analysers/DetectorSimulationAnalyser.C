@@ -194,7 +194,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     bool apply_Electron_beta_cut = true;     // Electron beta cut
 
     /* Chi2 cuts (= PID cuts) */
-    bool apply_chi2_cuts_1e_cut = true;
+    bool apply_chi2_cuts_1e_cut = false;
 
     // My analysis cuts ---------------------------------------------------------------------------------------------------------------------------------------------------
     /* Nucleon cuts */
