@@ -1051,7 +1051,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
     else if (is6GeVSample)
     {
-        Q2_uboundary_FD = 1.5;
+        Q2_uboundary_FD = 1.;
+        // Q2_uboundary_FD = 1.5;
         // Q2_uboundary_FD = 5;
     }
 
