@@ -71,6 +71,7 @@
         "truthlevelanalyser.c": "cpp",
         "memory": "cpp",
         "print": "cpp",
-        "process_events.C": "cpp"
+        "process_events.C": "cpp",
+        "dataanalyser.h": "c"
     }
 }
