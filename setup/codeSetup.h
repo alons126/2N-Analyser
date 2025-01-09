@@ -211,25 +211,25 @@ void ConfigSampleChain()
 
     // Electron tester samples ------------------------------------------------------------------------------------------------------------------------------------------
 
-    /* Uniform electron tester samples */
-    Config_Uniform_tester_e_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
+    // /* Uniform electron tester samples */
+    // Config_Uniform_tester_e_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
 
     // Uniform samples --------------------------------------------------------------------------------------------------------------------------------------------------
 
-    // /* Uniform samples @ 2GeV */
-    // Config_Uniform_1e_2GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
-    // Config_Uniform_en_2GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
-    // Config_Uniform_ep_2GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
+    /* Uniform samples @ 2GeV */
+    Config_Uniform_1e_2GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
+    Config_Uniform_en_2GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
+    Config_Uniform_ep_2GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
 
-    // /* Uniform samples @ 4GeV */
-    // Config_Uniform_1e_4GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
-    // Config_Uniform_en_4GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
-    // Config_Uniform_ep_4GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
+    /* Uniform samples @ 4GeV */
+    Config_Uniform_1e_4GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
+    Config_Uniform_en_4GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
+    Config_Uniform_ep_4GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
 
-    // /* Uniform samples @ 6GeV */
-    // Config_Uniform_1e_6GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
-    // Config_Uniform_en_6GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
-    // Config_Uniform_ep_6GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
+    /* Uniform samples @ 6GeV */
+    Config_Uniform_1e_6GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
+    Config_Uniform_en_6GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
+    Config_Uniform_ep_6GeV_samples(AnalyseFilePath_v, AnalyseFileSample_v, AnalyseFileDir_v, AnalyseFile_v, AnalyseFilePath, AnalyseFileSample, AnalyseFileDir, AnalyseFile);
 
     // Small Q2 test samples --------------------------------------------------------------------------------------------------------------------------------------------
 
