@@ -28,7 +28,7 @@ private:
 
     string Added_PreStatuses, Added_Statuses;
 
-    string Global_Run_Status = "ChainRunV6_R1";
+    string Global_Run_Status = "ChainRunV7_R1";
 
 public:
     // Default constructor ---------------------------------------------------------------------------------------------------------------------------------------------

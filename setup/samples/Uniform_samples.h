@@ -10,7 +10,8 @@ void Config_Uniform_tester_e_samples(std::vector<std::string> &AnalyseFilePath_v
                                      std::string &AnalyseFilePath, std::string &AnalyseFileSample, std::string &AnalyseFileDir, std::string &AnalyseFile)
 {
     /* Uniform electron tester sample @ 2GeV */
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_Tester_e_1e";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_Tester_e_Tester_e";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_Tester_e_1e";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     AnalyseFile = AnalyseFileDir + "*.hipo";
@@ -20,7 +21,8 @@ void Config_Uniform_tester_e_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFile_v.push_back(AnalyseFile);
 
     /* Uniform electron tester sample @ 4GeV */
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_Tester_e_1e";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_Tester_e_Tester_e";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_Tester_e_1e";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     AnalyseFile = AnalyseFileDir + "*.hipo";
@@ -30,7 +32,8 @@ void Config_Uniform_tester_e_samples(std::vector<std::string> &AnalyseFilePath_v
     AnalyseFile_v.push_back(AnalyseFile);
 
     /* Uniform electron tester sample @ 6GeV */
-    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_Tester_e_1e";
+    AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_Tester_e_Tester_e";
+    // AnalyseFilePath = "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_Tester_e_1e";
     AnalyseFileSample = "reconhipo";
     AnalyseFileDir = "/" + AnalyseFilePath + "/" + AnalyseFileSample + "/";
     AnalyseFile = AnalyseFileDir + "*.hipo";
