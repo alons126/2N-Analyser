@@ -69,9 +69,11 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
 
     if (findSubstring(AnalyseFilePath, "Uniform_e-p-n_samples"))
     { // Uniform samples
-        if (findSubstring(AnalyseFilePath, "OutPut_Tester_e_1e"))
+        if (findSubstring(AnalyseFilePath, "OutPut_Tester_e_Tester_e"))
+        // if (findSubstring(AnalyseFilePath, "OutPut_Tester_e_1e"))
         { // Electron tester samples
-            if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_Tester_e_1e")
+            if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_Tester_e_Tester_e")
+            // if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/2070MeV/OutPut_Tester_e_1e")
             { // Uniform, simulation, 2GeV, ifarm
                 if (AnalyseFileSample == "reconhipo")
                 {
@@ -79,7 +81,8 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                     sName = "Uniform_sample_e_tester_2070MeV";
                 }
             }
-            else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_Tester_e_1e")
+            else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_Tester_e_Tester_e")
+            // else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/4029MeV/OutPut_Tester_e_1e")
             { // Uniform, simulation, 4GeV, ifarm
                 if (AnalyseFileSample == "reconhipo")
                 {
@@ -87,7 +90,8 @@ string ExperimentParameters::ConfigureSampleName(const string &AnalyseFilePath, 
                     sName = "Uniform_sample_e_tester_4029MeV";
                 }
             }
-            else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_Tester_e_1e")
+            else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_Tester_e_Tester_e")
+            // else if (AnalyseFilePath == "lustre24/expphy/volatile/clas12/asportes/2N_Analysis_Reco/Uniform_e-p-n_samples/5986MeV/OutPut_Tester_e_1e")
             { // Uniform, simulation, 6GeV, ifarm
                 if (AnalyseFileSample == "reconhipo")
                 {
