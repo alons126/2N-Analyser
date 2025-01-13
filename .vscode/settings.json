@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.gcard": "xml",
         "DetectorSimulationAnalyser.C": "cpp",
         "new": "cpp",
         "string": "cpp",
@@ -72,6 +73,7 @@
         "memory": "cpp",
         "print": "cpp",
         "process_events.C": "cpp",
-        "dataanalyser.h": "c"
+        "dataanalyser.h": "c",
+        "format": "cpp"
     }
 }

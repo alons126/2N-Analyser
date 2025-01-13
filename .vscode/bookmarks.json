@@ -149,13 +149,33 @@
 			"path": "Old_analysers/DetectorSimulationAnalyser.C",
 			"bookmarks": [
 				{
-					"line": 12171,
+					"line": 10752,
+					"column": 8,
+					"label": "FOR nFD eff test!"
+				},
+				{
+					"line": 12173,
 					"column": 75,
 					"label": "FOR nFD eff test!"
 				},
 				{
-					"line": 13742,
+					"line": 12196,
+					"column": 74,
+					"label": "FOR nFD eff test!"
+				},
+				{
+					"line": 13747,
 					"column": 66,
+					"label": "FOR nFD eff test!"
+				},
+				{
+					"line": 13774,
+					"column": 121,
+					"label": "FOR nFD eff test!"
+				},
+				{
+					"line": 13778,
+					"column": 97,
 					"label": "FOR nFD eff test!"
 				}
 			]

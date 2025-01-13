@@ -10750,7 +10750,9 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         bool TL_Event_Selection_inclusive = true;
         bool TL_Event_Selection_1p = true, TL_Event_Selection_1n = true, TL_Event_Selection_pFDpCD = true, TL_Event_Selection_nFDpCD = true;
 
-        if (calculate_truth_level && (!TL_plots_only_for_NC || apply_nucleon_cuts) && isMC)
+        double TL_nFD_mom, TL_nFD_theta, TL_nFD_phi // FOR nFD eff test!
+
+            if (calculate_truth_level && (!TL_plots_only_for_NC || apply_nucleon_cuts) && isMC)
         { // run only for CLAS12 simulation & AFTER beta fit
             auto mcpbank = c12->mcparts();
             const Int_t Ngen = mcpbank->getRows();
@@ -12191,6 +12193,9 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
 
                     // Safety checks for TL neutrons (AMaps & WMaps)
                     CodeDebugger.SafetyCheck_AMaps_Truth_neutrons(__FILE__, __LINE__, particlePDGtmp, inFD);
+
+                    TL_nFD_theta = Particle_TL_Theta; // FOR nFD eff test!
+                    TL_nFD_phi = Particle_TL_Phi;     // FOR nFD eff test!
 
                     hTL_P_nFD_AMaps.hFill(Particle_TL_Momentum, Weight);
                     hTL_P_nFD_vs_TL_Theta_nFD_AMap.hFill(Particle_TL_Momentum, Particle_TL_Theta, Weight);
@@ -13767,8 +13772,11 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                         if ((Mom_neut_1e_cut <= n_mom_th.GetUpperCut()) && (Mom_neut_1e_cut >= n_mom_th.GetLowerCut()))
                         { // if id. reco leading neutron
 
+                            bool GoodTLMatch_AMaps = ((fabs(TL_nFD_theta - Theta_neut_1e_cut) < 2.) && (fabs(TL_nFD_phi - Phi_neut_1e_cut) < 5.)); // FOR nFD eff test!
+
                             // if neutron passes ECAL veto:
-                            if (NeutronPassVeto_1e_cut)
+                            // if (NeutronPassVeto_1e_cut) 
+                            if (NeutronPassVeto_1e_cut && GoodTLMatch_AMaps) // FOR nFD eff test!
                             {
                                 hReco_P_nFD_AMaps.hFill(Mom_neut_1e_cut, Weight);
                                 hNeutronAMapBC.hFill(Phi_neut_1e_cut, Theta_neut_1e_cut, Weight);
