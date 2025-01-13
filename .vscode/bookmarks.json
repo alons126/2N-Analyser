@@ -144,6 +144,21 @@
 					"label": "HistPlotter2D"
 				}
 			]
+		},
+		{
+			"path": "Old_analysers/DetectorSimulationAnalyser.C",
+			"bookmarks": [
+				{
+					"line": 12171,
+					"column": 75,
+					"label": "FOR nFD eff test!"
+				},
+				{
+					"line": 13742,
+					"column": 66,
+					"label": "FOR nFD eff test!"
+				}
+			]
 		}
 	]
 }
