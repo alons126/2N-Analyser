@@ -10750,9 +10750,9 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         bool TL_Event_Selection_inclusive = true;
         bool TL_Event_Selection_1p = true, TL_Event_Selection_1n = true, TL_Event_Selection_pFDpCD = true, TL_Event_Selection_nFDpCD = true;
 
-        double TL_nFD_mom, TL_nFD_theta, TL_nFD_phi // FOR nFD eff test!
+        double TL_nFD_mom, TL_nFD_theta, TL_nFD_phi; // FOR nFD eff test!
 
-            if (calculate_truth_level && (!TL_plots_only_for_NC || apply_nucleon_cuts) && isMC)
+        if (calculate_truth_level && (!TL_plots_only_for_NC || apply_nucleon_cuts) && isMC)
         { // run only for CLAS12 simulation & AFTER beta fit
             auto mcpbank = c12->mcparts();
             const Int_t Ngen = mcpbank->getRows();
@@ -13775,7 +13775,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                             bool GoodTLMatch_AMaps = ((fabs(TL_nFD_theta - Theta_neut_1e_cut) < 2.) && (fabs(TL_nFD_phi - Phi_neut_1e_cut) < 5.)); // FOR nFD eff test!
 
                             // if neutron passes ECAL veto:
-                            // if (NeutronPassVeto_1e_cut) 
+                            // if (NeutronPassVeto_1e_cut)
                             if (NeutronPassVeto_1e_cut && GoodTLMatch_AMaps) // FOR nFD eff test!
                             {
                                 hReco_P_nFD_AMaps.hFill(Mom_neut_1e_cut, Weight);
