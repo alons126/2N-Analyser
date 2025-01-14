@@ -13772,7 +13772,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                         if ((Mom_neut_1e_cut <= n_mom_th.GetUpperCut()) && (Mom_neut_1e_cut >= n_mom_th.GetLowerCut()))
                         { // if id. reco leading neutron
 
-                            bool GoodTLMatch_AMaps = ((fabs(TL_nFD_theta - Theta_neut_1e_cut) < 2.) && (fabs(TL_nFD_phi - Phi_neut_1e_cut) < 5.)); // FOR nFD eff test!
+                            bool GoodTLMatch_AMaps = ((fabs(TL_nFD_theta - Theta_neut_1e_cut) < 2.) && (fabs(CalcdPhi(TL_nFD_phi - Phi_neut_1e_cut)) < 5.)); // FOR nFD eff test!
 
                             // if neutron passes ECAL veto:
                             // if (NeutronPassVeto_1e_cut)
