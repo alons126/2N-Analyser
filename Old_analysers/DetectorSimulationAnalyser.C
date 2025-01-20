@@ -13769,7 +13769,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                         double Theta_neut_1e_cut = allParticles[NeutronsFD_ind_mom_max]->getTheta() * 180.0 / pi;
                         double Phi_neut_1e_cut = allParticles[NeutronsFD_ind_mom_max]->getPhi() * 180.0 / pi;
 
-                        if ((Mom_neut_1e_cut <= n_mom_th.GetUpperCut()) && (Mom_neut_1e_cut >= n_mom_th.GetLowerCut()))
+                        if ((Mom_neut_1e_cut <= n_mom_th.GetUpperCut()) && (Mom_neut_1e_cut >= beamE)) // FOR nFD eff test!
+                        // if ((Mom_neut_1e_cut <= n_mom_th.GetUpperCut()) && (Mom_neut_1e_cut >= n_mom_th.GetLowerCut()))
                         { // if id. reco leading neutron
 
                             bool GoodTLMatch_AMaps = ((fabs(TL_nFD_theta - Theta_neut_1e_cut) < 2.) && (fabs(CalcdPhi(TL_nFD_phi - Phi_neut_1e_cut)) < 5.)); // FOR nFD eff test!
