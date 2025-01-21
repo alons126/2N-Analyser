@@ -15120,8 +15120,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             } // end of for loop over TL particles
 
             // Fill leading FD neutron acceptance maps
-            if (
-            // if ((TL_NeutronsFD_mom_ind.size() == 1) && // FOR nFD eff test!
+            // if (
+            if ((TL_NeutronsFD_mom_ind.size() == 1) && // FOR nFD eff test!
                 Generate_Nucleon_AMaps && TL_Event_Selection_1e_cut_AMaps && (!AMaps_calc_with_one_reco_electron || (electrons.size() == 1)) &&
                 ES_by_leading_FDneutron && ((TL_IDed_Leading_nFD_ind != -1) && (TL_IDed_Leading_nFD_momentum > 0))) {
                 /* Fill leading TL FD neutron acceptance maps */
@@ -16453,8 +16453,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             }
 
             // Filling neurton reco. Acceptance maps
-            if (
-            // if (NeutronsFD_ind.size() == 1 && // FOR nFD eff test!
+            // if (
+            if (NeutronsFD_ind.size() == 1 && // FOR nFD eff test!
                 ES_by_leading_FDneutron) {
                 if (NeutronsFD_ind_mom_max != -1) {
                     // if NeutronsFD_ind_mom_max == -1, there are no neutrons above momentum th. in the event
