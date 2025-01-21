@@ -16489,8 +16489,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                           fabs(CalcdPhi(TL_nFD_phi - Phi_neut_1e_cut)) < 5.)); // FOR nFD eff test!
 
                             // if neutron passes ECAL veto:
-                            if (NeutronPassVeto_1e_cut)
-                            // if (NeutronPassVeto_1e_cut && GoodTLMatch_AMaps) // FOR nFD eff test!
+                            // if (NeutronPassVeto_1e_cut)
+                            if (NeutronPassVeto_1e_cut && GoodTLMatch_AMaps) // FOR nFD eff test!
                             {
                                 hReco_P_nFD_AMaps.hFill(Mom_neut_1e_cut, Weight);
                                 hNeutronAMapBC.hFill(Phi_neut_1e_cut, Theta_neut_1e_cut, Weight);
