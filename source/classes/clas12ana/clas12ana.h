@@ -77,9 +77,13 @@ public:
 
     void setDCEdgeCuts(bool flag = true) { f_DCEdgeCuts = flag; };
 
+    void set_e_DCEdgeCuts(bool flag = true) { f_e_DCEdgeCuts = flag; };
+
     void setEcalEdgeCuts(bool flag = true) { f_ecalEdgeCuts = flag; };
 
     void setPidCuts(bool flag = true) { f_pidCuts = flag; };
+
+    void set_e_VertexCuts(bool flag = true) { f_e_vertexCuts = flag; };
 
     void setVertexCuts(bool flag = true) { f_vertexCuts = flag; };
 
@@ -329,8 +333,10 @@ private:
     bool f_ecalSFCuts = false;
     bool f_ecalPCuts = false;
     bool f_ecalEdgeCuts = false;
+    bool f_e_DCEdgeCuts = false;
     bool f_DCEdgeCuts = false;
     bool f_pidCuts = false;
+    bool f_e_vertexCuts = false;
     bool f_vertexCuts = false;
     bool f_corr_vertexCuts = false;
 
@@ -684,11 +690,13 @@ void clas12ana::Run(const std::unique_ptr<clas12::clas12reader> &c12)
         { // HTCC Nphe cuts (my addition)
             el = electrons_det.erase(el);
         }
-        else if (!checkVertex(*el) && f_vertexCuts)
+        else if (!checkVertex(*el) && f_e_vertexCuts)
+        // else if (!checkVertex(*el) && f_vertexCuts)
         { // Vertex cut
             el = electrons_det.erase(el);
         }
-        else if (!DCEdgeCuts(*el) && f_DCEdgeCuts)
+        else if (!DCEdgeCuts(*el) && f_e_DCEdgeCuts)
+        // else if (!DCEdgeCuts(*el) && f_DCEdgeCuts)
         { // DC edge cut
             el = electrons_det.erase(el);
         }
