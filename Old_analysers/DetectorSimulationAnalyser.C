@@ -126,7 +126,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     const bool ES_by_leading_FDneutron = true;
 
     /* Acceptance maps setup */
-    bool Generate_Electron_AMaps = true; // Generate electron acceptance maps
+    bool Generate_Electron_AMaps = false; // Generate electron acceptance maps
     bool Generate_Nucleon_AMaps = true; // Generate nucleon acceptance maps
     bool Generate_WMaps = true; // Generate efficiency maps
     bool AMaps_calc_with_one_reco_electron = true;
