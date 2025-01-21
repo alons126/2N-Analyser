@@ -335,7 +335,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     settings.ConfigureStatuses(apply_cuts, clas12ana_particles, only_preselection_cuts, apply_chi2_cuts_1e_cut, only_electron_quality_cuts,
                                apply_nucleon_cuts,
                                Enable_FD_photons, apply_nucleon_SmearAndCorr, apply_kinematical_cuts, apply_kinematical_weights, apply_fiducial_cuts,
-                               Generate_AMaps,
+                               (Generate_Electron_AMaps || Generate_Nucleon_AMaps),
                                plot_and_fit_MomRes, VaryingDelta, Calculate_momResS2, Run_with_momResS2, momRes_test, Rec_wTL_ES,
                                ZoomIn_On_mom_th_plots);
     settings.SetPaths(WorkingDirectory, SampleName, run_plots_path, apply_cuts, apply_chi2_cuts_1e_cut, apply_nucleon_cuts);
@@ -15418,7 +15418,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         // Fill momentum threshold plots (1e cut, CD & FD)
         if (!Rec_wTL_ES || TL_Event_Selection_inclusive) {
             for (auto &e: electrons) {
-                bool e_Pass_FC = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Electron", e->getP(), e->getTheta() * 180.0 / pi,
+                bool e_Pass_FC = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Electron", e->getP(), e->getTheta() * 180.0 / pi,
                                                           e->getPhi() * 180.0 / pi);
 
                 if (!apply_fiducial_cuts || e_Pass_FC) {
@@ -15430,7 +15430,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             // All protons BPID (CD & FD)
             for (auto &i: All_gProtons_ind) {
                 if (protons[i]->getRegion() == FD) {
-                    bool p_Pass_FC = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Proton", protons[i]->getP(),
+                    bool p_Pass_FC = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Proton", protons[i]->getP(),
                                                               protons[i]->getTheta() * 180.0 / pi,
                                                               protons[i]->getPhi() * 180.0 / pi, Calc_eff_overlapping_FC);
 
@@ -15453,7 +15453,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 double NeutronTheta_1e_cut = allParticles[NeutronsFD_ind_max]->getTheta() * 180.0 / pi;
                 double NeutronPhi_1e_cut = allParticles[NeutronsFD_ind_max]->getPhi() * 180.0 / pi;
 
-                bool n_Pass_FC = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Neutron", NeutronMomentum_1e_cut, NeutronTheta_1e_cut,
+                bool n_Pass_FC = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Neutron", NeutronMomentum_1e_cut, NeutronTheta_1e_cut,
                                                           NeutronPhi_1e_cut,
                                                           Calc_eff_overlapping_FC);
                 bool NeutronPassVeto_Test = pid.NeutronECAL_Cut_Veto(allParticles, electrons, beamE, NeutronsFD_ind_max,
@@ -15473,7 +15473,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 double NeutronTheta_1e_cut = allParticles[i]->getTheta() * 180.0 / pi;
                 double NeutronPhi_1e_cut = allParticles[i]->getPhi() * 180.0 / pi;
 
-                bool n_Pass_FC = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Neutron", NeutronMomentum_1e_cut, NeutronTheta_1e_cut,
+                bool n_Pass_FC = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Neutron", NeutronMomentum_1e_cut, NeutronTheta_1e_cut,
                                                           NeutronPhi_1e_cut,
                                                           Calc_eff_overlapping_FC);
                 bool NeutronPassVeto_Test = pid.NeutronECAL_Cut_Veto(allParticles, electrons, beamE, i, Neutron_veto_cut.GetLowerCut());
@@ -15493,7 +15493,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 double NeutronTheta_1e_cut = allParticles[NeutronsFD_ind_mom_max]->getTheta() * 180.0 / pi;
                 double NeutronPhi_1e_cut = allParticles[NeutronsFD_ind_mom_max]->getPhi() * 180.0 / pi;
 
-                bool n_Pass_FC = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Neutron", NeutronMomentum_1e_cut, NeutronTheta_1e_cut,
+                bool n_Pass_FC = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Neutron", NeutronMomentum_1e_cut, NeutronTheta_1e_cut,
                                                           NeutronPhi_1e_cut,
                                                           Calc_eff_overlapping_FC);
                 bool NeutronPassVeto_Test = pid.NeutronECAL_Cut_Veto(allParticles, electrons, beamE, NeutronsFD_ind_mom_max,
@@ -15513,7 +15513,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                 double NeutronTheta_1e_cut = allParticles[i]->getTheta() * 180.0 / pi;
                 double NeutronPhi_1e_cut = allParticles[i]->getPhi() * 180.0 / pi;
 
-                bool n_Pass_FC = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Neutron", NeutronMomentum_1e_cut, NeutronTheta_1e_cut,
+                bool n_Pass_FC = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Neutron", NeutronMomentum_1e_cut, NeutronTheta_1e_cut,
                                                           NeutronPhi_1e_cut,
                                                           Calc_eff_overlapping_FC);
                 bool NeutronPassVeto_Test = pid.NeutronECAL_Cut_Veto(allParticles, electrons, beamE, i, Neutron_veto_cut.GetLowerCut());
@@ -16667,9 +16667,9 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             bool FD_Theta_Cut_1p = ((P_p_1p_3v.Theta() * 180.0 / pi) <= FD_nucleon_theta_cut.GetUpperCut());
             bool FD_Momentum_Cut_1p = ((P_p_1p_3v.Mag() <= FD_nucleon_momentum_cut.GetUpperCut()) &&
                                        (P_p_1p_3v.Mag() >= FD_nucleon_momentum_cut.GetLowerCut())); // Momentum kin cut after proton smearing
-            bool e_withinFC_1p = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Electron", P_e_1p_3v.Mag(), P_e_1p_3v.Theta() * 180.0 / pi,
+            bool e_withinFC_1p = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Electron", P_e_1p_3v.Mag(), P_e_1p_3v.Theta() * 180.0 / pi,
                                                           P_e_1p_3v.Phi() * 180.0 / pi);
-            bool p_withinFC_1p = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Proton", ProtonMomBKC_1p, P_p_1p_3v.Theta() * 180.0 / pi,
+            bool p_withinFC_1p = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Proton", ProtonMomBKC_1p, P_p_1p_3v.Theta() * 180.0 / pi,
                                                           P_p_1p_3v.Phi() * 180.0 / pi,
                                                           Calc_eff_overlapping_FC);
 
@@ -17061,9 +17061,9 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                         // pRes good Proton cuts
                         bool pRes_TL_Pass_PIDCut = (pid_pRes == 2212);
 
-                        bool Reco_InFD = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Proton", RecoProtonP, RecoProtonTheta, RecoProtonPhi,
+                        bool Reco_InFD = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Proton", RecoProtonP, RecoProtonTheta, RecoProtonPhi,
                                                                   false);
-                        bool TL_InFD = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Proton", TLProtonP, TLProtonTheta, TLProtonPhi, false);
+                        bool TL_InFD = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Proton", TLProtonP, TLProtonTheta, TLProtonPhi, false);
                         bool pRes_Pass_FiducialCuts = (Reco_InFD && TL_InFD);
 
                         bool Reco_Theta_kinCut = (RecoProtonTheta <= FD_nucleon_theta_cut.GetUpperCut());
@@ -17282,9 +17282,9 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             bool FD_Momentum_Cut_AS_1n = ((P_n_1n_3v.Mag() <= FD_nucleon_momentum_cut.GetUpperCut()) &&
                                           (P_n_1n_3v.Mag() >= FD_nucleon_momentum_cut.GetLowerCut()));
             // Additional momentum kin cut after neutron shifting
-            bool e_withinFC_1n = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Electron", P_e_1n_3v.Mag(), P_e_1n_3v.Theta() * 180.0 / pi,
+            bool e_withinFC_1n = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Electron", P_e_1n_3v.Mag(), P_e_1n_3v.Theta() * 180.0 / pi,
                                                           P_e_1n_3v.Phi() * 180.0 / pi);
-            bool n_withinFC_1n = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Neutron", P_n_1n_3v.Mag(), P_n_1n_3v.Theta() * 180.0 / pi,
+            bool n_withinFC_1n = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Neutron", P_n_1n_3v.Mag(), P_n_1n_3v.Theta() * 180.0 / pi,
                                                           P_n_1n_3v.Phi() * 180.0 / pi,
                                                           Calc_eff_overlapping_FC);
 
@@ -17930,9 +17930,9 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                         // nRes good neutron cuts
                         bool nRes_TL_Pass_PIDCut = (pid_nRes == 2112);
 
-                        bool Reco_InFD = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Neutron", RecoNeutronP, RecoNeutronTheta, RecoNeutronPhi,
+                        bool Reco_InFD = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Neutron", RecoNeutronP, RecoNeutronTheta, RecoNeutronPhi,
                                                                   false);
-                        bool TL_InFD = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Neutron", TLNeutronP, TLNeutronTheta, TLNeutronPhi, false);
+                        bool TL_InFD = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Neutron", TLNeutronP, TLNeutronTheta, TLNeutronPhi, false);
                         bool nRes_Pass_FiducialCuts = (Reco_InFD && TL_InFD);
 
                         bool Reco_Theta_kinCut = (RecoNeutronTheta <= FD_nucleon_theta_cut.GetUpperCut());
@@ -18887,10 +18887,10 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             bool FD_Momentum_Cut_pFDpCD = ((P_pFD_pFDpCD_3v.Mag() <= FD_nucleon_momentum_cut.GetUpperCut()) &&
                                            (P_pFD_pFDpCD_3v.Mag() >= FD_nucleon_momentum_cut.GetLowerCut()));
             // Momentum kin cut after proton smearing
-            bool e_withinFC_pFDpCD = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Electron", P_e_pFDpCD_3v.Mag(),
+            bool e_withinFC_pFDpCD = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Electron", P_e_pFDpCD_3v.Mag(),
                                                               P_e_pFDpCD_3v.Theta() * 180.0 / pi,
                                                               P_e_pFDpCD_3v.Phi() * 180.0 / pi);
-            bool pFD_withinFC_pFDpCD = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Proton", ProtonMomBKC_pFDpCD,
+            bool pFD_withinFC_pFDpCD = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Proton", ProtonMomBKC_pFDpCD,
                                                                 P_pFD_pFDpCD_3v.Theta() * 180.0 / pi,
                                                                 P_pFD_pFDpCD_3v.Phi() * 180.0 / pi, Calc_eff_overlapping_FC);
 
@@ -19774,10 +19774,10 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             bool FD_Momentum_Cut_AS_nFDpCD = ((P_nFD_nFDpCD_3v.Mag() <= FD_nucleon_momentum_cut.GetUpperCut()) &&
                                               (P_nFD_nFDpCD_3v.Mag() >= FD_nucleon_momentum_cut.GetLowerCut()));
             // Additional momentum kin cut after neutron shifting
-            bool e_withinFC_nFDpCD = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Electron", P_e_nFDpCD_3v.Mag(),
+            bool e_withinFC_nFDpCD = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Electron", P_e_nFDpCD_3v.Mag(),
                                                               P_e_nFDpCD_3v.Theta() * 180.0 / pi,
                                                               P_e_nFDpCD_3v.Phi() * 180.0 / pi);
-            bool nFD_withinFC_nFDpCD = aMaps_master.IsInFDQuery(Generate_AMaps, ThetaFD, "Neutron", P_nFD_nFDpCD_3v.Mag(),
+            bool nFD_withinFC_nFDpCD = aMaps_master.IsInFDQuery((Generate_Electron_AMaps || Generate_Nucleon_AMaps), ThetaFD, "Neutron", P_nFD_nFDpCD_3v.Mag(),
                                                                 P_nFD_nFDpCD_3v.Theta() * 180.0 / pi,
                                                                 P_nFD_nFDpCD_3v.Phi() * 180.0 / pi, Calc_eff_overlapping_FC);
 
@@ -28034,7 +28034,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     myLogFile << "ES_by_leading_FDneutron = " << BoolToString(ES_by_leading_FDneutron) << "\n\n";
 
     myLogFile << "-- AMaps settings ---------------------------------------------------------\n";
-    myLogFile << "Generate_AMaps = " << BoolToString(Generate_AMaps) << "\n";
+    myLogFile << "Generate_Electron_AMaps = " << BoolToString(Generate_Electron_AMaps) << "\n";
+    myLogFile << "Generate_Nucleon_AMaps = " << BoolToString(Generate_Nucleon_AMaps) << "\n";
     myLogFile << "Generate_WMaps = " << BoolToString(Generate_WMaps) << "\n";
     myLogFile << "AMaps_calc_with_one_reco_electron = " << BoolToString(AMaps_calc_with_one_reco_electron) << "\n";
     myLogFile << "P_e_bin_profile = " << P_e_bin_profile << "\n";
