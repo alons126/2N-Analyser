@@ -28,8 +28,6 @@ scp -r asportes@ftp.jlab.org:/w/hallb-scshelf2102/clas12/asportes/recon_c12_6gev
 #include "../source/classes/ParticleID/ParticleID.cpp"
 #endif
 
-#include <c++/v1/iostream>
-
 #include "../source/classes/Settings/Settings.cpp"
 #include "../source/classes/TLCuts/TLCuts.cpp"
 #include "../source/functions/AngleCalc/GetBinFromAng.h"
