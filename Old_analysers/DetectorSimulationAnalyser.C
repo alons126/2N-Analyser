@@ -1080,10 +1080,6 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     // TODO: UPDATE AMaps loading constructor electron histogram's number of bins
 
     if (Generate_Electron_AMaps || Generate_Nucleon_AMaps) {
-        if (Generate_Electron_AMaps) { cout << "\033[33m\n\nGenerating electron AMaps\n\n\033[0m"; }
-
-        if (Generate_Nucleon_AMaps) { cout << "\033[33m\n\nGenerating nucleon AMaps\n\n\033[0m"; }
-
         aMaps_master = AMaps(SampleName, P_e_bin_profile, P_nuc_bin_profile, beamE, "AMaps",
                              directories.AMaps_Directory_map["AMaps_1e_cut_Directory"],
                              NumberNucOfMomSlices, NumberElecOfMomSlices, HistNucSliceNumOfXBins, HistNucSliceNumOfXBins, HistElectronSliceNumOfXBins,
@@ -1102,6 +1098,10 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     }
 
     cout << "\033[33m done.\n\n\033[0m";
+
+    if (Generate_Electron_AMaps) { cout << "\033[33m\n\nGenerating electron AMaps\n\n\033[0m"; }
+
+    if (Generate_Nucleon_AMaps) { cout << "\033[33m\n\nGenerating nucleon AMaps\n\n\033[0m"; }
 
     // Acceptance correction data -------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -15124,8 +15124,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             } // end of for loop over TL particles
 
             // Fill leading FD neutron acceptance maps
-            if (
-            // if ((TL_NeutronsFD_mom_ind.size() == 1) && // FOR nFD eff test!
+            // if (
+            if ((TL_NeutronsFD_mom_ind.size() == 1) && // FOR nFD eff test!
                 Generate_Nucleon_AMaps && TL_Event_Selection_1e_cut_AMaps && (!AMaps_calc_with_one_reco_electron || (electrons.size() == 1)) &&
                 ES_by_leading_FDneutron && ((TL_IDed_Leading_nFD_ind != -1) && (TL_IDed_Leading_nFD_momentum > 0))) {
                 /* Fill leading TL FD neutron acceptance maps */
@@ -16463,8 +16463,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             }
 
             // Filling neurton reco. Acceptance maps
-            if (
-            // if (NeutronsFD_ind.size() == 1 && // FOR nFD eff test!
+            // if (
+            if (NeutronsFD_ind.size() == 1 && // FOR nFD eff test!
                 ES_by_leading_FDneutron) {
                 if (NeutronsFD_ind_mom_max != -1) {
                     // if NeutronsFD_ind_mom_max == -1, there are no neutrons above momentum th. in the event
