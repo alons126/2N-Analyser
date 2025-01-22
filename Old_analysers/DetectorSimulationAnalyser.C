@@ -242,7 +242,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             apply_ECAL_P_cuts = false;
             apply_ECAL_fiducial_cuts = apply_Electron_beta_cut = true;
 
-            apply_chi2_cuts_1e_cut = true;
+            apply_chi2_cuts_1e_cut = false;
         }
     }
 
@@ -375,7 +375,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
     cout << "\033[33mapply_Vz_e_cuts:\t\t\t" << BoolToString(apply_Vz_e_cuts) << "\n\033[0m";
     cout << "\033[33mapply_Vz_cuts:\t\t\t" << BoolToString(apply_Vz_cuts) << "\n\033[0m";
     cout << "\033[33mapply_dVz_cuts:\t\t\t" << BoolToString(apply_dVz_cuts) << "\n\033[0m";
-    cout << "\033[33mapply_DC_e_fiducial_cuts:\t\t" << BoolToString(apply_DC_e_fiducial_cuts) << "\n\n\033[0m";
+    cout << "\033[33mapply_DC_e_fiducial_cuts:\t\t" << BoolToString(apply_DC_e_fiducial_cuts) << "\n\033[0m";
     cout << "\033[33mapply_DC_fiducial_cuts:\t\t" << BoolToString(apply_DC_fiducial_cuts) << "\n\n\033[0m";
 
     cout << "\033[33mapply_electron_quality_cuts:\t" << BoolToString(apply_electron_quality_cuts) << "\n\033[0m";
@@ -15120,8 +15120,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             } // end of for loop over TL particles
 
             // Fill leading FD neutron acceptance maps
-            if (
-            // if ((TL_NeutronsFD_mom_ind.size() == 1) && // FOR nFD eff test!
+            // if (
+            if ((TL_NeutronsFD_mom_ind.size() == 1) && // FOR nFD eff test!
                 Generate_Nucleon_AMaps && TL_Event_Selection_1e_cut_AMaps && (!AMaps_calc_with_one_reco_electron || (electrons.size() == 1)) &&
                 ES_by_leading_FDneutron && ((TL_IDed_Leading_nFD_ind != -1) && (TL_IDed_Leading_nFD_momentum > 0))) {
                 /* Fill leading TL FD neutron acceptance maps */
@@ -16453,8 +16453,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             }
 
             // Filling neurton reco. Acceptance maps
-            if (
-            // if (NeutronsFD_ind.size() == 1 && // FOR nFD eff test!
+            // if (
+            if (NeutronsFD_ind.size() == 1 && // FOR nFD eff test!
                 ES_by_leading_FDneutron) {
                 if (NeutronsFD_ind_mom_max != -1) {
                     // if NeutronsFD_ind_mom_max == -1, there are no neutrons above momentum th. in the event
