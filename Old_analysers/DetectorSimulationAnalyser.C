@@ -165,7 +165,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         Generate_Electron_AMaps = false;
     }
 
-    if (Generate_Nucleon_AMaps && (!findSubstring(SampleName, "Uniform_ep")) || !findSubstring(SampleName, "Uniform_en")) {
+    if (Generate_Nucleon_AMaps && (!findSubstring(SampleName, "Uniform_ep")) && !findSubstring(SampleName, "Uniform_en")) {
         Generate_Nucleon_AMaps = false;
     }
 
@@ -811,7 +811,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         Efficiency_plots = TL_after_Acceptance_Maps_plots = false;
     }
 
-    if (!Generate_Electron_AMaps || !Generate_Nucleon_AMaps) {
+    if (!Generate_Electron_AMaps && !Generate_Nucleon_AMaps) {
         AMaps_plots = false;
     }
 
@@ -1065,7 +1065,7 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
         Generate_WMaps = false;
     }
 
-    if (!Generate_Electron_AMaps || !Generate_Nucleon_AMaps) {
+    if (!Generate_Electron_AMaps && !Generate_Nucleon_AMaps) {
         AMaps_plots = false;
     }
 
@@ -15120,8 +15120,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             } // end of for loop over TL particles
 
             // Fill leading FD neutron acceptance maps
-            // if (
-            if ((TL_NeutronsFD_mom_ind.size() == 1) && // FOR nFD eff test!
+            if (
+            // if ((TL_NeutronsFD_mom_ind.size() == 1) && // FOR nFD eff test!
                 Generate_Nucleon_AMaps && TL_Event_Selection_1e_cut_AMaps && (!AMaps_calc_with_one_reco_electron || (electrons.size() == 1)) &&
                 ES_by_leading_FDneutron && ((TL_IDed_Leading_nFD_ind != -1) && (TL_IDed_Leading_nFD_momentum > 0))) {
                 /* Fill leading TL FD neutron acceptance maps */
@@ -16453,8 +16453,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
             }
 
             // Filling neurton reco. Acceptance maps
-            // if (
-            if (NeutronsFD_ind.size() == 1 && // FOR nFD eff test!
+            if (
+            // if (NeutronsFD_ind.size() == 1 && // FOR nFD eff test!
                 ES_by_leading_FDneutron) {
                 if (NeutronsFD_ind_mom_max != -1) {
                     // if NeutronsFD_ind_mom_max == -1, there are no neutrons above momentum th. in the event
@@ -16489,8 +16489,8 @@ void EventAnalyser(const string &AnalyseFilePath, const string &AnalyseFileSampl
                                                           fabs(CalcdPhi(TL_nFD_phi - Phi_neut_1e_cut)) < 5.)); // FOR nFD eff test!
 
                             // if neutron passes ECAL veto:
-                            // if (NeutronPassVeto_1e_cut)
-                            if (NeutronPassVeto_1e_cut && GoodTLMatch_AMaps) // FOR nFD eff test!
+                            if (NeutronPassVeto_1e_cut)
+                            // if (NeutronPassVeto_1e_cut && GoodTLMatch_AMaps) // FOR nFD eff test!
                             {
                                 hReco_P_nFD_AMaps.hFill(Mom_neut_1e_cut, Weight);
                                 hNeutronAMapBC.hFill(Phi_neut_1e_cut, Theta_neut_1e_cut, Weight);
